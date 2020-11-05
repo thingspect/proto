@@ -1,0 +1,37 @@
+syntax = "proto3";
+package mqtt;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/thingspect/api/go/mqtt";
+
+message Datapoint {
+  // Device attribute.
+  string attr = 1;
+
+  // Attribute value.
+  oneof val_oneof {
+    // Integer value, 64-bit.
+    sint64 int_val = 2;
+
+    // Float value, 64-bit.
+    double fl64_val = 3;
+
+    // String value.
+    string str_val = 4;
+
+    // Boolean value.
+    bool bool_val = 5;
+  }
+
+  // Attribute map value. Will be ignored if another value is present.
+  map<string, string> map_val = 16;
+
+  // Timestamp.
+  google.protobuf.Timestamp ts = 6;
+}
+
+message Data {
+  // Datapoint array.
+  repeated Datapoint data = 1;
+}
