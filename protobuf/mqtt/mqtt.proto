@@ -27,11 +27,14 @@ message Datapoint {
   // Attribute map value. Will be ignored if another value is present.
   map<string, string> map_val = 16;
 
-  // Timestamp.
+  // Timestamp. If not present, the current time will be used.
   google.protobuf.Timestamp ts = 6;
 }
 
 message Data {
   // Datapoint array.
   repeated Datapoint data = 1;
+
+  // Authentication token.
+  string token = 2;
 }
