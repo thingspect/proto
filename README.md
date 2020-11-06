@@ -15,6 +15,14 @@ Documentation: https://pkg.go.dev/github.com/thingspect/api/go
 go get -u github.com/thingspect/api/go
 ```
 
+### Python
+
+Documentation: https://pypi.org/project/thingspect-api
+
+```
+pip install thingspect-api
+```
+
 ## Building
 
 These instructions require
