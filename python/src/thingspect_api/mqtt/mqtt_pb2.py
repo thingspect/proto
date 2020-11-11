@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z!github.com/thingspect/api/go/mqtt',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0fmqtt/mqtt.proto\x12\x04mqtt\x1a\x1fgoogle/protobuf/timestamp.proto\"\xf9\x01\n\tDatapoint\x12\x0c\n\x04\x61ttr\x18\x01 \x01(\t\x12\x11\n\x07int_val\x18\x02 \x01(\x12H\x00\x12\x12\n\x08\x66l64_val\x18\x03 \x01(\x01H\x00\x12\x11\n\x07str_val\x18\x04 \x01(\tH\x00\x12\x12\n\x08\x62ool_val\x18\x05 \x01(\x08H\x00\x12,\n\x07map_val\x18\x10 \x03(\x0b\x32\x1b.mqtt.Datapoint.MapValEntry\x12&\n\x02ts\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x1a-\n\x0bMapValEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x0b\n\tval_oneof\"4\n\x04\x44\x61ta\x12\x1d\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x0f.mqtt.Datapoint\x12\r\n\x05token\x18\x02 \x01(\tB#Z!github.com/thingspect/api/go/mqttb\x06proto3'
+  serialized_pb=b'\n\x0fmqtt/mqtt.proto\x12\x04mqtt\x1a\x1fgoogle/protobuf/timestamp.proto\"\x92\x02\n\tDatapoint\x12\x17\n\x07uniq_id\x18\x01 \x01(\tR\x06uniqID\x12\x0c\n\x04\x61ttr\x18\x02 \x01(\t\x12\x11\n\x07int_val\x18\x03 \x01(\x12H\x00\x12\x12\n\x08\x66l64_val\x18\x04 \x01(\x01H\x00\x12\x11\n\x07str_val\x18\x05 \x01(\tH\x00\x12\x12\n\x08\x62ool_val\x18\x06 \x01(\x08H\x00\x12,\n\x07map_val\x18\x10 \x03(\x0b\x32\x1b.mqtt.Datapoint.MapValEntry\x12&\n\x02ts\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x1a-\n\x0bMapValEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x0b\n\tval_oneof\"4\n\x04\x44\x61ta\x12\x1d\n\x04\x64\x61ta\x18\x01 \x03(\x0b\x32\x0f.mqtt.Datapoint\x12\r\n\x05token\x18\x02 \x01(\tB#Z!github.com/thingspect/api/go/mqttb\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -61,8 +61,8 @@ _DATAPOINT_MAPVALENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=250,
-  serialized_end=295,
+  serialized_start=275,
+  serialized_end=320,
 )
 
 _DATAPOINT = _descriptor.Descriptor(
@@ -74,50 +74,57 @@ _DATAPOINT = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='attr', full_name='mqtt.Datapoint.attr', index=0,
+      name='uniq_id', full_name='mqtt.Datapoint.uniq_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='uniqID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='attr', full_name='mqtt.Datapoint.attr', index=1,
+      number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='int_val', full_name='mqtt.Datapoint.int_val', index=1,
-      number=2, type=18, cpp_type=2, label=1,
+      name='int_val', full_name='mqtt.Datapoint.int_val', index=2,
+      number=3, type=18, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='fl64_val', full_name='mqtt.Datapoint.fl64_val', index=2,
-      number=3, type=1, cpp_type=5, label=1,
+      name='fl64_val', full_name='mqtt.Datapoint.fl64_val', index=3,
+      number=4, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='str_val', full_name='mqtt.Datapoint.str_val', index=3,
-      number=4, type=9, cpp_type=9, label=1,
+      name='str_val', full_name='mqtt.Datapoint.str_val', index=4,
+      number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='bool_val', full_name='mqtt.Datapoint.bool_val', index=4,
-      number=5, type=8, cpp_type=7, label=1,
+      name='bool_val', full_name='mqtt.Datapoint.bool_val', index=5,
+      number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='map_val', full_name='mqtt.Datapoint.map_val', index=5,
+      name='map_val', full_name='mqtt.Datapoint.map_val', index=6,
       number=16, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ts', full_name='mqtt.Datapoint.ts', index=6,
-      number=6, type=11, cpp_type=10, label=1,
+      name='ts', full_name='mqtt.Datapoint.ts', index=7,
+      number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -140,7 +147,7 @@ _DATAPOINT = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=59,
-  serialized_end=308,
+  serialized_end=333,
 )
 
 
@@ -178,8 +185,8 @@ _DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=310,
-  serialized_end=362,
+  serialized_start=335,
+  serialized_end=387,
 )
 
 _DATAPOINT_MAPVALENTRY.containing_type = _DATAPOINT
