@@ -26,7 +26,7 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-type Datapoint struct {
+type DataPoint struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -38,19 +38,19 @@ type Datapoint struct {
 	// Attribute value.
 	//
 	// Types that are assignable to ValOneof:
-	//	*Datapoint_IntVal
-	//	*Datapoint_Fl64Val
-	//	*Datapoint_StrVal
-	//	*Datapoint_BoolVal
-	ValOneof isDatapoint_ValOneof `protobuf_oneof:"val_oneof"`
+	//	*DataPoint_IntVal
+	//	*DataPoint_Fl64Val
+	//	*DataPoint_StrVal
+	//	*DataPoint_BoolVal
+	ValOneof isDataPoint_ValOneof `protobuf_oneof:"val_oneof"`
 	// Attribute map value. Will be ignored if another value is present.
 	MapVal map[string]string `protobuf:"bytes,16,rep,name=map_val,json=mapVal,proto3" json:"map_val,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
 	// Timestamp. If not present, the current time will be used.
 	Ts *timestamp.Timestamp `protobuf:"bytes,7,opt,name=ts,proto3" json:"ts,omitempty"`
 }
 
-func (x *Datapoint) Reset() {
-	*x = Datapoint{}
+func (x *DataPoint) Reset() {
+	*x = DataPoint{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_mqtt_mqtt_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -58,13 +58,13 @@ func (x *Datapoint) Reset() {
 	}
 }
 
-func (x *Datapoint) String() string {
+func (x *DataPoint) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*Datapoint) ProtoMessage() {}
+func (*DataPoint) ProtoMessage() {}
 
-func (x *Datapoint) ProtoReflect() protoreflect.Message {
+func (x *DataPoint) ProtoReflect() protoreflect.Message {
 	mi := &file_mqtt_mqtt_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -76,119 +76,119 @@ func (x *Datapoint) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use Datapoint.ProtoReflect.Descriptor instead.
-func (*Datapoint) Descriptor() ([]byte, []int) {
+// Deprecated: Use DataPoint.ProtoReflect.Descriptor instead.
+func (*DataPoint) Descriptor() ([]byte, []int) {
 	return file_mqtt_mqtt_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *Datapoint) GetUniqId() string {
+func (x *DataPoint) GetUniqId() string {
 	if x != nil {
 		return x.UniqId
 	}
 	return ""
 }
 
-func (x *Datapoint) GetAttr() string {
+func (x *DataPoint) GetAttr() string {
 	if x != nil {
 		return x.Attr
 	}
 	return ""
 }
 
-func (m *Datapoint) GetValOneof() isDatapoint_ValOneof {
+func (m *DataPoint) GetValOneof() isDataPoint_ValOneof {
 	if m != nil {
 		return m.ValOneof
 	}
 	return nil
 }
 
-func (x *Datapoint) GetIntVal() int64 {
-	if x, ok := x.GetValOneof().(*Datapoint_IntVal); ok {
+func (x *DataPoint) GetIntVal() int64 {
+	if x, ok := x.GetValOneof().(*DataPoint_IntVal); ok {
 		return x.IntVal
 	}
 	return 0
 }
 
-func (x *Datapoint) GetFl64Val() float64 {
-	if x, ok := x.GetValOneof().(*Datapoint_Fl64Val); ok {
+func (x *DataPoint) GetFl64Val() float64 {
+	if x, ok := x.GetValOneof().(*DataPoint_Fl64Val); ok {
 		return x.Fl64Val
 	}
 	return 0
 }
 
-func (x *Datapoint) GetStrVal() string {
-	if x, ok := x.GetValOneof().(*Datapoint_StrVal); ok {
+func (x *DataPoint) GetStrVal() string {
+	if x, ok := x.GetValOneof().(*DataPoint_StrVal); ok {
 		return x.StrVal
 	}
 	return ""
 }
 
-func (x *Datapoint) GetBoolVal() bool {
-	if x, ok := x.GetValOneof().(*Datapoint_BoolVal); ok {
+func (x *DataPoint) GetBoolVal() bool {
+	if x, ok := x.GetValOneof().(*DataPoint_BoolVal); ok {
 		return x.BoolVal
 	}
 	return false
 }
 
-func (x *Datapoint) GetMapVal() map[string]string {
+func (x *DataPoint) GetMapVal() map[string]string {
 	if x != nil {
 		return x.MapVal
 	}
 	return nil
 }
 
-func (x *Datapoint) GetTs() *timestamp.Timestamp {
+func (x *DataPoint) GetTs() *timestamp.Timestamp {
 	if x != nil {
 		return x.Ts
 	}
 	return nil
 }
 
-type isDatapoint_ValOneof interface {
-	isDatapoint_ValOneof()
+type isDataPoint_ValOneof interface {
+	isDataPoint_ValOneof()
 }
 
-type Datapoint_IntVal struct {
+type DataPoint_IntVal struct {
 	// Integer value, 64-bit.
 	IntVal int64 `protobuf:"zigzag64,3,opt,name=int_val,json=intVal,proto3,oneof"`
 }
 
-type Datapoint_Fl64Val struct {
+type DataPoint_Fl64Val struct {
 	// Float value, 64-bit.
 	Fl64Val float64 `protobuf:"fixed64,4,opt,name=fl64_val,json=fl64Val,proto3,oneof"`
 }
 
-type Datapoint_StrVal struct {
+type DataPoint_StrVal struct {
 	// String value.
 	StrVal string `protobuf:"bytes,5,opt,name=str_val,json=strVal,proto3,oneof"`
 }
 
-type Datapoint_BoolVal struct {
+type DataPoint_BoolVal struct {
 	// Boolean value.
 	BoolVal bool `protobuf:"varint,6,opt,name=bool_val,json=boolVal,proto3,oneof"`
 }
 
-func (*Datapoint_IntVal) isDatapoint_ValOneof() {}
+func (*DataPoint_IntVal) isDataPoint_ValOneof() {}
 
-func (*Datapoint_Fl64Val) isDatapoint_ValOneof() {}
+func (*DataPoint_Fl64Val) isDataPoint_ValOneof() {}
 
-func (*Datapoint_StrVal) isDatapoint_ValOneof() {}
+func (*DataPoint_StrVal) isDataPoint_ValOneof() {}
 
-func (*Datapoint_BoolVal) isDatapoint_ValOneof() {}
+func (*DataPoint_BoolVal) isDataPoint_ValOneof() {}
 
-type Data struct {
+type Payload struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Datapoint array.
-	Data []*Datapoint `protobuf:"bytes,1,rep,name=data,proto3" json:"data,omitempty"`
+	// DataPoint array.
+	Points []*DataPoint `protobuf:"bytes,1,rep,name=points,proto3" json:"points,omitempty"`
 	// Authentication token.
 	Token string `protobuf:"bytes,2,opt,name=token,proto3" json:"token,omitempty"`
 }
 
-func (x *Data) Reset() {
-	*x = Data{}
+func (x *Payload) Reset() {
+	*x = Payload{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_mqtt_mqtt_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -196,13 +196,13 @@ func (x *Data) Reset() {
 	}
 }
 
-func (x *Data) String() string {
+func (x *Payload) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*Data) ProtoMessage() {}
+func (*Payload) ProtoMessage() {}
 
-func (x *Data) ProtoReflect() protoreflect.Message {
+func (x *Payload) ProtoReflect() protoreflect.Message {
 	mi := &file_mqtt_mqtt_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -214,19 +214,19 @@ func (x *Data) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use Data.ProtoReflect.Descriptor instead.
-func (*Data) Descriptor() ([]byte, []int) {
+// Deprecated: Use Payload.ProtoReflect.Descriptor instead.
+func (*Payload) Descriptor() ([]byte, []int) {
 	return file_mqtt_mqtt_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *Data) GetData() []*Datapoint {
+func (x *Payload) GetPoints() []*DataPoint {
 	if x != nil {
-		return x.Data
+		return x.Points
 	}
 	return nil
 }
 
-func (x *Data) GetToken() string {
+func (x *Payload) GetToken() string {
 	if x != nil {
 		return x.Token
 	}
@@ -240,7 +240,7 @@ var file_mqtt_mqtt_proto_rawDesc = []byte{
 	0x6f, 0x12, 0x04, 0x6d, 0x71, 0x74, 0x74, 0x1a, 0x1f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f,
 	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x74, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61,
 	0x6d, 0x70, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0xd2, 0x02, 0x0a, 0x09, 0x44, 0x61, 0x74,
-	0x61, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x6e, 0x69, 0x71, 0x5f, 0x69,
+	0x61, 0x50, 0x6f, 0x69, 0x6e, 0x74, 0x12, 0x17, 0x0a, 0x07, 0x75, 0x6e, 0x69, 0x71, 0x5f, 0x69,
 	0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x75, 0x6e, 0x69, 0x71, 0x49, 0x44, 0x12,
 	0x12, 0x0a, 0x04, 0x61, 0x74, 0x74, 0x72, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x61,
 	0x74, 0x74, 0x72, 0x12, 0x19, 0x0a, 0x07, 0x69, 0x6e, 0x74, 0x5f, 0x76, 0x61, 0x6c, 0x18, 0x03,
@@ -252,7 +252,7 @@ var file_mqtt_mqtt_proto_rawDesc = []byte{
 	0x61, 0x6c, 0x18, 0x06, 0x20, 0x01, 0x28, 0x08, 0x48, 0x00, 0x52, 0x07, 0x62, 0x6f, 0x6f, 0x6c,
 	0x56, 0x61, 0x6c, 0x12, 0x34, 0x0a, 0x07, 0x6d, 0x61, 0x70, 0x5f, 0x76, 0x61, 0x6c, 0x18, 0x10,
 	0x20, 0x03, 0x28, 0x0b, 0x32, 0x1b, 0x2e, 0x6d, 0x71, 0x74, 0x74, 0x2e, 0x44, 0x61, 0x74, 0x61,
-	0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x4d, 0x61, 0x70, 0x56, 0x61, 0x6c, 0x45, 0x6e, 0x74, 0x72,
+	0x50, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x4d, 0x61, 0x70, 0x56, 0x61, 0x6c, 0x45, 0x6e, 0x74, 0x72,
 	0x79, 0x52, 0x06, 0x6d, 0x61, 0x70, 0x56, 0x61, 0x6c, 0x12, 0x2a, 0x0a, 0x02, 0x74, 0x73, 0x18,
 	0x07, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70,
 	0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d,
@@ -260,14 +260,15 @@ var file_mqtt_mqtt_proto_rawDesc = []byte{
 	0x6e, 0x74, 0x72, 0x79, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28,
 	0x09, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18,
 	0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x3a, 0x02, 0x38, 0x01,
-	0x42, 0x0b, 0x0a, 0x09, 0x76, 0x61, 0x6c, 0x5f, 0x6f, 0x6e, 0x65, 0x6f, 0x66, 0x22, 0x41, 0x0a,
-	0x04, 0x44, 0x61, 0x74, 0x61, 0x12, 0x23, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x01, 0x20,
-	0x03, 0x28, 0x0b, 0x32, 0x0f, 0x2e, 0x6d, 0x71, 0x74, 0x74, 0x2e, 0x44, 0x61, 0x74, 0x61, 0x70,
-	0x6f, 0x69, 0x6e, 0x74, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x6f,
-	0x6b, 0x65, 0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e,
-	0x42, 0x23, 0x5a, 0x21, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x74,
-	0x68, 0x69, 0x6e, 0x67, 0x73, 0x70, 0x65, 0x63, 0x74, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x67, 0x6f,
-	0x2f, 0x6d, 0x71, 0x74, 0x74, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x42, 0x0b, 0x0a, 0x09, 0x76, 0x61, 0x6c, 0x5f, 0x6f, 0x6e, 0x65, 0x6f, 0x66, 0x22, 0x48, 0x0a,
+	0x07, 0x50, 0x61, 0x79, 0x6c, 0x6f, 0x61, 0x64, 0x12, 0x27, 0x0a, 0x06, 0x70, 0x6f, 0x69, 0x6e,
+	0x74, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x0f, 0x2e, 0x6d, 0x71, 0x74, 0x74, 0x2e,
+	0x44, 0x61, 0x74, 0x61, 0x50, 0x6f, 0x69, 0x6e, 0x74, 0x52, 0x06, 0x70, 0x6f, 0x69, 0x6e, 0x74,
+	0x73, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x42, 0x23, 0x5a, 0x21, 0x67, 0x69, 0x74, 0x68, 0x75,
+	0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x74, 0x68, 0x69, 0x6e, 0x67, 0x73, 0x70, 0x65, 0x63, 0x74,
+	0x2f, 0x61, 0x70, 0x69, 0x2f, 0x67, 0x6f, 0x2f, 0x6d, 0x71, 0x74, 0x74, 0x62, 0x06, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -284,15 +285,15 @@ func file_mqtt_mqtt_proto_rawDescGZIP() []byte {
 
 var file_mqtt_mqtt_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_mqtt_mqtt_proto_goTypes = []interface{}{
-	(*Datapoint)(nil),           // 0: mqtt.Datapoint
-	(*Data)(nil),                // 1: mqtt.Data
-	nil,                         // 2: mqtt.Datapoint.MapValEntry
+	(*DataPoint)(nil),           // 0: mqtt.DataPoint
+	(*Payload)(nil),             // 1: mqtt.Payload
+	nil,                         // 2: mqtt.DataPoint.MapValEntry
 	(*timestamp.Timestamp)(nil), // 3: google.protobuf.Timestamp
 }
 var file_mqtt_mqtt_proto_depIdxs = []int32{
-	2, // 0: mqtt.Datapoint.map_val:type_name -> mqtt.Datapoint.MapValEntry
-	3, // 1: mqtt.Datapoint.ts:type_name -> google.protobuf.Timestamp
-	0, // 2: mqtt.Data.data:type_name -> mqtt.Datapoint
+	2, // 0: mqtt.DataPoint.map_val:type_name -> mqtt.DataPoint.MapValEntry
+	3, // 1: mqtt.DataPoint.ts:type_name -> google.protobuf.Timestamp
+	0, // 2: mqtt.Payload.points:type_name -> mqtt.DataPoint
 	3, // [3:3] is the sub-list for method output_type
 	3, // [3:3] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name
@@ -307,7 +308,7 @@ func file_mqtt_mqtt_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_mqtt_mqtt_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Datapoint); i {
+			switch v := v.(*DataPoint); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -319,7 +320,7 @@ func file_mqtt_mqtt_proto_init() {
 			}
 		}
 		file_mqtt_mqtt_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Data); i {
+			switch v := v.(*Payload); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -332,10 +333,10 @@ func file_mqtt_mqtt_proto_init() {
 		}
 	}
 	file_mqtt_mqtt_proto_msgTypes[0].OneofWrappers = []interface{}{
-		(*Datapoint_IntVal)(nil),
-		(*Datapoint_Fl64Val)(nil),
-		(*Datapoint_StrVal)(nil),
-		(*Datapoint_BoolVal)(nil),
+		(*DataPoint_IntVal)(nil),
+		(*DataPoint_Fl64Val)(nil),
+		(*DataPoint_StrVal)(nil),
+		(*DataPoint_BoolVal)(nil),
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
