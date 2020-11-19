@@ -5,7 +5,7 @@ import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/thingspect/api/go/mqtt";
 
-message Datapoint {
+message DataPoint {
   // Device unique ID. Will be ignore if provided as part of the topic.
   string uniq_id = 1 [json_name = "uniqID"];
 
@@ -34,9 +34,9 @@ message Datapoint {
   google.protobuf.Timestamp ts = 7;
 }
 
-message Data {
-  // Datapoint array.
-  repeated Datapoint data = 1;
+message Payload {
+  // DataPoint array.
+  repeated DataPoint points = 1;
 
   // Authentication token.
   string token = 2;
