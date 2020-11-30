@@ -6,7 +6,7 @@ import "google/protobuf/timestamp.proto";
 option go_package = "github.com/thingspect/api/go/mqtt";
 
 message DataPoint {
-  // Device unique ID. Will be ignore if provided as part of the topic.
+  // Device unique ID. Will be ignored if provided as part of the topic.
   string uniq_id = 1 [json_name = "uniqID"];
 
   // Device attribute.
@@ -32,12 +32,17 @@ message DataPoint {
 
   // Timestamp. If not present, the current time will be used.
   google.protobuf.Timestamp ts = 7;
+
+  // Authentication token (UUID). Will be ignored if provided as part of the
+  // Payload.
+  string token = 8;
 }
 
 message Payload {
   // DataPoint array.
   repeated DataPoint points = 1;
 
-  // Authentication token.
+  // Authentication token (UUID). If all DataPoints pertain to the same UniqID,
+  // the token can be provided a single time here.
   string token = 2;
 }

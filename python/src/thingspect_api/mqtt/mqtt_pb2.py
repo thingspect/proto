@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z!github.com/thingspect/api/go/mqtt',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0fmqtt/mqtt.proto\x12\x04mqtt\x1a\x1fgoogle/protobuf/timestamp.proto\"\x92\x02\n\tDataPoint\x12\x17\n\x07uniq_id\x18\x01 \x01(\tR\x06uniqID\x12\x0c\n\x04\x61ttr\x18\x02 \x01(\t\x12\x11\n\x07int_val\x18\x03 \x01(\x12H\x00\x12\x12\n\x08\x66l64_val\x18\x04 \x01(\x01H\x00\x12\x11\n\x07str_val\x18\x05 \x01(\tH\x00\x12\x12\n\x08\x62ool_val\x18\x06 \x01(\x08H\x00\x12,\n\x07map_val\x18\x10 \x03(\x0b\x32\x1b.mqtt.DataPoint.MapValEntry\x12&\n\x02ts\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x1a-\n\x0bMapValEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x0b\n\tval_oneof\"9\n\x07Payload\x12\x1f\n\x06points\x18\x01 \x03(\x0b\x32\x0f.mqtt.DataPoint\x12\r\n\x05token\x18\x02 \x01(\tB#Z!github.com/thingspect/api/go/mqttb\x06proto3'
+  serialized_pb=b'\n\x0fmqtt/mqtt.proto\x12\x04mqtt\x1a\x1fgoogle/protobuf/timestamp.proto\"\xa1\x02\n\tDataPoint\x12\x17\n\x07uniq_id\x18\x01 \x01(\tR\x06uniqID\x12\x0c\n\x04\x61ttr\x18\x02 \x01(\t\x12\x11\n\x07int_val\x18\x03 \x01(\x12H\x00\x12\x12\n\x08\x66l64_val\x18\x04 \x01(\x01H\x00\x12\x11\n\x07str_val\x18\x05 \x01(\tH\x00\x12\x12\n\x08\x62ool_val\x18\x06 \x01(\x08H\x00\x12,\n\x07map_val\x18\x10 \x03(\x0b\x32\x1b.mqtt.DataPoint.MapValEntry\x12&\n\x02ts\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\r\n\x05token\x18\x08 \x01(\t\x1a-\n\x0bMapValEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x0b\n\tval_oneof\"9\n\x07Payload\x12\x1f\n\x06points\x18\x01 \x03(\x0b\x32\x0f.mqtt.DataPoint\x12\r\n\x05token\x18\x02 \x01(\tB#Z!github.com/thingspect/api/go/mqttb\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -61,8 +61,8 @@ _DATAPOINT_MAPVALENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=275,
-  serialized_end=320,
+  serialized_start=290,
+  serialized_end=335,
 )
 
 _DATAPOINT = _descriptor.Descriptor(
@@ -129,6 +129,13 @@ _DATAPOINT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='token', full_name='mqtt.DataPoint.token', index=8,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -147,7 +154,7 @@ _DATAPOINT = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=59,
-  serialized_end=333,
+  serialized_end=348,
 )
 
 
@@ -185,8 +192,8 @@ _PAYLOAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=335,
-  serialized_end=392,
+  serialized_start=350,
+  serialized_end=407,
 )
 
 _DATAPOINT_MAPVALENTRY.containing_type = _DATAPOINT
