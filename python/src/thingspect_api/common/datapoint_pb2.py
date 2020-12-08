@@ -20,50 +20,12 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z#github.com/thingspect/api/go/common',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x16\x63ommon/datapoint.proto\x12\x06\x63ommon\x1a\x1fgoogle/protobuf/timestamp.proto\"\xb8\x02\n\tDataPoint\x12\x17\n\x07uniq_id\x18\x01 \x01(\tR\x06uniqID\x12\x0c\n\x04\x61ttr\x18\x02 \x01(\t\x12\x11\n\x07int_val\x18\x03 \x01(\x12H\x00\x12\x12\n\x08\x66l64_val\x18\x04 \x01(\x01H\x00\x12\x11\n\x07str_val\x18\x05 \x01(\tH\x00\x12\x12\n\x08\x62ool_val\x18\x06 \x01(\x08H\x00\x12\x13\n\tbytes_val\x18\x10 \x01(\x0cH\x00\x12.\n\x07map_val\x18\x11 \x03(\x0b\x32\x1d.common.DataPoint.MapValEntry\x12&\n\x02ts\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\r\n\x05token\x18\x08 \x01(\t\x1a-\n\x0bMapValEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x0b\n\tval_oneofB%Z#github.com/thingspect/api/go/commonb\x06proto3'
+  serialized_pb=b'\n\x16\x63ommon/datapoint.proto\x12\x06\x63ommon\x1a\x1fgoogle/protobuf/timestamp.proto\"\xeb\x01\n\tDataPoint\x12\x17\n\x07uniq_id\x18\x01 \x01(\tR\x06uniqID\x12\x0c\n\x04\x61ttr\x18\x02 \x01(\t\x12\x11\n\x07int_val\x18\x03 \x01(\x12H\x00\x12\x12\n\x08\x66l64_val\x18\x04 \x01(\x01H\x00\x12\x11\n\x07str_val\x18\x05 \x01(\tH\x00\x12\x12\n\x08\x62ool_val\x18\x06 \x01(\x08H\x00\x12\x13\n\tbytes_val\x18\x10 \x01(\x0cH\x00\x12&\n\x02ts\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\r\n\x05token\x18\x08 \x01(\t\x12\x10\n\x08trace_id\x18\t \x01(\tB\x0b\n\tval_oneofB%Z#github.com/thingspect/api/go/commonb\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
 
 
-
-_DATAPOINT_MAPVALENTRY = _descriptor.Descriptor(
-  name='MapValEntry',
-  full_name='common.DataPoint.MapValEntry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='key', full_name='common.DataPoint.MapValEntry.key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='common.DataPoint.MapValEntry.value', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=b'8\001',
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=322,
-  serialized_end=367,
-)
 
 _DATAPOINT = _descriptor.Descriptor(
   name='DataPoint',
@@ -123,22 +85,22 @@ _DATAPOINT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='map_val', full_name='common.DataPoint.map_val', index=7,
-      number=17, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='ts', full_name='common.DataPoint.ts', index=8,
+      name='ts', full_name='common.DataPoint.ts', index=7,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='token', full_name='common.DataPoint.token', index=9,
+      name='token', full_name='common.DataPoint.token', index=8,
       number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='trace_id', full_name='common.DataPoint.trace_id', index=9,
+      number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -146,7 +108,7 @@ _DATAPOINT = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_DATAPOINT_MAPVALENTRY, ],
+  nested_types=[],
   enum_types=[
   ],
   serialized_options=None,
@@ -161,11 +123,9 @@ _DATAPOINT = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=68,
-  serialized_end=380,
+  serialized_end=303,
 )
 
-_DATAPOINT_MAPVALENTRY.containing_type = _DATAPOINT
-_DATAPOINT.fields_by_name['map_val'].message_type = _DATAPOINT_MAPVALENTRY
 _DATAPOINT.fields_by_name['ts'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _DATAPOINT.oneofs_by_name['val_oneof'].fields.append(
   _DATAPOINT.fields_by_name['int_val'])
@@ -186,21 +146,12 @@ DESCRIPTOR.message_types_by_name['DataPoint'] = _DATAPOINT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 DataPoint = _reflection.GeneratedProtocolMessageType('DataPoint', (_message.Message,), {
-
-  'MapValEntry' : _reflection.GeneratedProtocolMessageType('MapValEntry', (_message.Message,), {
-    'DESCRIPTOR' : _DATAPOINT_MAPVALENTRY,
-    '__module__' : 'common.datapoint_pb2'
-    # @@protoc_insertion_point(class_scope:common.DataPoint.MapValEntry)
-    })
-  ,
   'DESCRIPTOR' : _DATAPOINT,
   '__module__' : 'common.datapoint_pb2'
   # @@protoc_insertion_point(class_scope:common.DataPoint)
   })
 _sym_db.RegisterMessage(DataPoint)
-_sym_db.RegisterMessage(DataPoint.MapValEntry)
 
 
 DESCRIPTOR._options = None
-_DATAPOINT_MAPVALENTRY._options = None
 # @@protoc_insertion_point(module_scope)
