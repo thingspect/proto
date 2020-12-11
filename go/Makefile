@@ -15,4 +15,4 @@ mqtt:
 
 mod:
 	echo 'module github.com/thingspect/api/go' > go.mod
-	go get -u ./... && go mod tidy
+	go get -t -u ./... && go mod tidy -v
