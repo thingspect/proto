@@ -1,6 +1,6 @@
-.PHONY: generate deps common mqtt mod
+.PHONY: generate deps common mqtt api mod
 
-generate: deps common mqtt mod
+generate: deps common mqtt api mod
 
 deps:
 	GO111MODULE=on go get github.com/golang/protobuf/protoc-gen-go
@@ -12,6 +12,10 @@ common:
 mqtt:
 	protoc -I=../protobuf --go_out=. --go_opt=paths=source_relative \
 	mqtt/mqtt.proto
+
+api:
+	protoc -I=../protobuf --go_out=. --go_opt=paths=source_relative \
+	api/user.proto
 
 mod:
 	echo 'module github.com/thingspect/api/go' > go.mod

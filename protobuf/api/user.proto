@@ -1,0 +1,26 @@
+syntax = "proto3";
+package api;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/thingspect/api/go/api";
+
+message User {
+  // User ID (UUID).
+  string id = 1;
+
+  // Organization ID (UUID).
+  string org_id = 2 [json_name = "orgID"];
+
+  // User email.
+  string email = 3;
+
+  // Set to true to disable the user.
+  bool is_disabled = 4;
+
+  // User creation timestamp.
+  google.protobuf.Timestamp created_at = 5;
+
+  // User modification timestamp.
+  google.protobuf.Timestamp updated_at = 6;
+}

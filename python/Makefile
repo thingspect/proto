@@ -1,6 +1,6 @@
-.PHONY: generate deps common mqtt
+.PHONY: generate deps common mqtt api
 
-generate: deps common mqtt
+generate: deps common mqtt api
 
 deps:
 	pip install grpcio-tools
@@ -12,3 +12,7 @@ common:
 mqtt:
 	python -m grpc_tools.protoc -I=../protobuf --python_out=src/thingspect_api \
 	mqtt/mqtt.proto
+
+api:
+	python -m grpc_tools.protoc -I=../protobuf --python_out=src/thingspect_api \
+	api/user.proto
