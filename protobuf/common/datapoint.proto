@@ -5,6 +5,7 @@ import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/thingspect/api/go/common";
 
+// DataPoint represents a data point as stored in the database.
 message DataPoint {
   // Device unique ID. Will be ignored during data ingest if provided as part of
   // the topic.
