@@ -5,6 +5,7 @@ import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/thingspect/api/go/api";
 
+// User represents a user as stored in the database.
 message User {
   // User ID (UUID).
   string id = 1;

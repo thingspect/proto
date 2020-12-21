@@ -5,6 +5,8 @@ import "common/datapoint.proto";
 
 option go_package = "github.com/thingspect/api/go/mqtt";
 
+// Payload represents an array of one or more data points and an authentication
+// token.
 message Payload {
   // Data point array.
   repeated common.DataPoint points = 1;

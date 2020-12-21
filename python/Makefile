@@ -15,6 +15,6 @@ mqtt:
 
 api:
 	python -m grpc_tools.protoc -I=../protobuf --python_out=src/thingspect_api \
-	api/device.proto
+	--grpc_python_out=src/thingspect_api api/device.proto
 	python -m grpc_tools.protoc -I=../protobuf --python_out=src/thingspect_api \
 	api/user.proto
