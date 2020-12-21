@@ -15,6 +15,8 @@ mqtt:
 
 api:
 	protoc -I=../protobuf --go_out=. --go_opt=paths=source_relative \
+	api/device.proto
+	protoc -I=../protobuf --go_out=. --go_opt=paths=source_relative \
 	api/user.proto
 
 mod:

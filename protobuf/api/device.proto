@@ -1,0 +1,29 @@
+syntax = "proto3";
+package api;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/thingspect/api/go/api";
+
+message Device {
+  // Device ID (UUID).
+  string id = 1;
+
+  // Organization ID (UUID).
+  string org_id = 2 [json_name = "orgID"];
+
+  // Device unique ID.
+  string uniq_id = 3 [json_name = "uniqID"];
+
+  // Set to true to disable the device.
+  bool is_disabled = 4;
+
+  // Authentication token (UUID).
+  string token = 5;
+
+  // Device creation timestamp.
+  google.protobuf.Timestamp created_at = 6;
+
+  // Device modification timestamp.
+  google.protobuf.Timestamp updated_at = 7;
+}
