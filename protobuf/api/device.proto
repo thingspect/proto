@@ -102,6 +102,9 @@ message ListDeviceRequest {
 
 	// Offset to start the results.
 	int32 offset = 2;
+
+  // Organization ID (UUID). Temporary pending authentication.
+  string org_id = 3 [json_name = "orgID"];
 }
 
 message ListDeviceResponse {
