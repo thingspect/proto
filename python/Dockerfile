@@ -3,5 +3,7 @@ FROM python:3.9
 
 RUN pip list --outdated --format freeze|cut -d = -f 1|xargs -n 1 -r pip \
 install -U
+RUN git clone --depth=1 https://github.com/grpc-ecosystem/grpc-gateway.git \
+/tmp/grpc-gateway
 
 WORKDIR /api
