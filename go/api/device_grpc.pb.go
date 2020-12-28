@@ -128,7 +128,7 @@ type UnsafeDeviceServiceServer interface {
 	mustEmbedUnimplementedDeviceServiceServer()
 }
 
-func RegisterDeviceServiceServer(s grpc.ServiceRegistrar, srv DeviceServiceServer) {
+func RegisterDeviceServiceServer(s *grpc.Server, srv DeviceServiceServer) {
 	s.RegisterService(&_DeviceService_serviceDesc, srv)
 }
 

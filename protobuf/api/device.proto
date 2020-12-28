@@ -3,25 +3,48 @@ package api;
 
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
+import "google/api/annotations.proto";
 
 option go_package = "github.com/thingspect/api/go/api";
 
 // DeviceService contains functions to query and modify devices.
 service DeviceService {
   // Create creates a device.
-  rpc Create(CreateDeviceRequest) returns (CreateDeviceResponse) {}
+  rpc Create(CreateDeviceRequest) returns (CreateDeviceResponse) {
+    option (google.api.http) = {
+      post: "/v1/devices"
+      body: "*"
+    };
+  }
 
   // Read retrieves a device by ID.
-  rpc Read(ReadDeviceRequest) returns (ReadDeviceResponse) {}
+  rpc Read(ReadDeviceRequest) returns (ReadDeviceResponse) {
+    option (google.api.http) = {
+      get: "/v1/devices/{id}"
+    };
+  }
 
   // Update updates a device.
-  rpc Update(UpdateDeviceRequest) returns (UpdateDeviceResponse) {}
+  rpc Update(UpdateDeviceRequest) returns (UpdateDeviceResponse) {
+    option (google.api.http) = {
+      put: "/v1/devices/{device.id}"
+      body: "*"
+    };
+  }
 
   // Delete deletes a device by ID.
-  rpc Delete(DeleteDeviceRequest) returns (google.protobuf.Empty) {}
+  rpc Delete(DeleteDeviceRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      delete: "/v1/devices/{id}"
+    };
+  }
 
   // List retrieves all devices.
-  rpc List(ListDeviceRequest) returns (ListDeviceResponse) {}
+  rpc List(ListDeviceRequest) returns (ListDeviceResponse) {
+    option (google.api.http) = {
+      get: "/v1/devices"
+    };
+  }
 }
 
 // Device represents a device as stored in the database.
