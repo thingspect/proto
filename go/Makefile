@@ -33,4 +33,5 @@ mod:
 
 openapi:
 	protoc -I=../protobuf -I=/tmp/grpc-gateway/third_party/googleapis \
-	--openapiv2_out=../openapi --openapiv2_opt=allow_merge=true api/device.proto
+	--openapiv2_out=../openapi \
+	--openapiv2_opt=allow_merge=true,merge_file_name=atlas api/device.proto
