@@ -9,7 +9,7 @@ option go_package = "github.com/thingspect/api/go/api";
 
 // DeviceService contains functions to query and modify devices.
 service DeviceService {
-  // Create creates a device.
+  // Create a device.
   rpc Create(CreateDeviceRequest) returns (CreateDeviceResponse) {
     option (google.api.http) = {
       post: "/v1/devices"
@@ -17,14 +17,14 @@ service DeviceService {
     };
   }
 
-  // Read retrieves a device by ID.
+  // Read a device by ID.
   rpc Read(ReadDeviceRequest) returns (ReadDeviceResponse) {
     option (google.api.http) = {
       get: "/v1/devices/{id}"
     };
   }
 
-  // Update updates a device.
+  // Update a device.
   rpc Update(UpdateDeviceRequest) returns (UpdateDeviceResponse) {
     option (google.api.http) = {
       put: "/v1/devices/{device.id}"
@@ -32,14 +32,14 @@ service DeviceService {
     };
   }
 
-  // Delete deletes a device by ID.
+  // Delete a device by ID.
   rpc Delete(DeleteDeviceRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       delete: "/v1/devices/{id}"
     };
   }
 
-  // List retrieves all devices.
+  // List all devices.
   rpc List(ListDeviceRequest) returns (ListDeviceResponse) {
     option (google.api.http) = {
       get: "/v1/devices"

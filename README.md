@@ -3,7 +3,7 @@
 This repository contains the
 [Protobuf](https://developers.google.com/protocol-buffers/) and
 [gRPC](https://grpc.io/) API definitions for the
-[Thingspect](http://thingspect.com) Atlas platform.
+[Thingspect](https://www.thingspect.com/) Atlas platform.
 
 ## Getting Started
 

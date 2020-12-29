@@ -13,7 +13,7 @@
   "paths": {
     "/v1/devices": {
       "get": {
-        "summary": "List retrieves all devices.",
+        "summary": "List all devices.",
         "operationId": "DeviceService_List",
         "responses": {
           "200": {
@@ -59,7 +59,7 @@
         ]
       },
       "post": {
-        "summary": "Create creates a device.",
+        "summary": "Create a device.",
         "operationId": "DeviceService_Create",
         "responses": {
           "200": {
@@ -92,7 +92,7 @@
     },
     "/v1/devices/{device.id}": {
       "put": {
-        "summary": "Update updates a device.",
+        "summary": "Update a device.",
         "operationId": "DeviceService_Update",
         "responses": {
           "200": {
@@ -132,7 +132,7 @@
     },
     "/v1/devices/{id}": {
       "get": {
-        "summary": "Read retrieves a device by ID.",
+        "summary": "Read a device by ID.",
         "operationId": "DeviceService_Read",
         "responses": {
           "200": {
@@ -169,7 +169,7 @@
         ]
       },
       "delete": {
-        "summary": "Delete deletes a device by ID.",
+        "summary": "Delete a device by ID.",
         "operationId": "DeviceService_Delete",
         "responses": {
           "200": {
