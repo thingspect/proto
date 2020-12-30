@@ -1,0 +1,39 @@
+syntax = "proto3";
+package api;
+
+import "google/protobuf/timestamp.proto";
+import "google/api/annotations.proto";
+
+option go_package = "github.com/thingspect/api/go/api";
+
+// SessionService contains functions to create sessions and keys.
+service SessionService {
+  // Log in a user.
+  rpc Login(LoginRequest) returns (LoginResponse) {
+    option (google.api.http) = {
+      post: "/v1/sessions/login"
+      body: "*"
+    };
+  }
+}
+
+// LoginRequest is sent to log in a user.
+message LoginRequest {
+  // Email of the user to log in.
+  string email = 1;
+
+  // Organization name of the user to log in.
+  string org_name = 2;
+
+  // Password of the user to log in.
+  string password = 3;
+}
+
+// LoginResponse is sent in response to a user login.
+message LoginResponse {
+  // Token to be used for subsequent non-login service calls.
+  string token = 1;
+
+  // Token expiration timestamp.
+  google.protobuf.Timestamp expires_at = 2;
+}
