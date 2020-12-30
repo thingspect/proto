@@ -17,7 +17,6 @@ api:
 	python -m grpc_tools.protoc -I=../protobuf \
 	-I=/tmp/grpc-gateway/third_party/googleapis \
 	--python_out=src/thingspect_api --grpc_python_out=src/thingspect_api \
-	api/device.proto
-
-	python -m grpc_tools.protoc -I=../protobuf --python_out=src/thingspect_api \
+	api/device.proto \
+	api/session.proto \
 	api/user.proto
