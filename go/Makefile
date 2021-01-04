@@ -18,7 +18,8 @@ mqtt:
 	mqtt/mqtt.proto
 
 api:
-	protoc -I=../protobuf -I=/tmp/grpc-gateway/third_party/googleapis \
+	protoc -I=../protobuf -I=/tmp/grpc-gateway \
+	-I=/tmp/grpc-gateway/third_party/googleapis \
 	--go_out=. --go_opt=paths=source_relative \
 	--go-grpc_out=. --go-grpc_opt=paths=source_relative \
 	--grpc-gateway_out=. --grpc-gateway_opt=paths=source_relative \
@@ -32,9 +33,10 @@ mod:
 	go mod tidy -v
 
 openapi:
-	protoc -I=../protobuf -I=/tmp/grpc-gateway/third_party/googleapis \
-	--openapiv2_out=../openapi \
+	protoc -I=../protobuf -I=/tmp/grpc-gateway \
+	-I=/tmp/grpc-gateway/third_party/googleapis --openapiv2_out=../openapi \
 	--openapiv2_opt=allow_merge=true,merge_file_name=atlas \
+	api/openapi.proto \
 	api/device.proto \
 	api/session.proto \
 	api/user.proto
