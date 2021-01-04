@@ -13,6 +13,7 @@ _sym_db = _symbol_database.Default()
 
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from protoc_gen_openapiv2.options import annotations_pb2 as protoc__gen__openapiv2_dot_options_dot_annotations__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11\x61pi/session.proto\x12\x03\x61pi\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cgoogle/api/annotations.proto\"A\n\x0cLoginRequest\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x10\n\x08org_name\x18\x02 \x01(\t\x12\x10\n\x08password\x18\x03 \x01(\t\"N\n\rLoginResponse\x12\r\n\x05token\x18\x01 \x01(\t\x12.\n\nexpires_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp2_\n\x0eSessionService\x12M\n\x05Login\x12\x11.api.LoginRequest\x1a\x12.api.LoginResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x12/v1/sessions/login:\x01*B\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x11\x61pi/session.proto\x12\x03\x61pi\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cgoogle/api/annotations.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\"A\n\x0cLoginRequest\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x10\n\x08org_name\x18\x02 \x01(\t\x12\x10\n\x08password\x18\x03 \x01(\t\"N\n\rLoginResponse\x12\r\n\x05token\x18\x01 \x01(\t\x12.\n\nexpires_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp2d\n\x0eSessionService\x12R\n\x05Login\x12\x11.api.LoginRequest\x1a\x12.api.LoginResponse\"\"\x82\xd3\xe4\x93\x02\x17\"\x12/v1/sessions/login:\x01*\x92\x41\x02\x62\x00\x42\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
-  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,])
 
 
 
@@ -69,8 +70,8 @@ _LOGINREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=89,
-  serialized_end=154,
+  serialized_start=137,
+  serialized_end=202,
 )
 
 
@@ -108,8 +109,8 @@ _LOGINRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=156,
-  serialized_end=234,
+  serialized_start=204,
+  serialized_end=282,
 )
 
 _LOGINRESPONSE.fields_by_name['expires_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
@@ -141,8 +142,8 @@ _SESSIONSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=236,
-  serialized_end=331,
+  serialized_start=284,
+  serialized_end=384,
   methods=[
   _descriptor.MethodDescriptor(
     name='Login',
@@ -151,7 +152,7 @@ _SESSIONSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_LOGINREQUEST,
     output_type=_LOGINRESPONSE,
-    serialized_options=b'\202\323\344\223\002\027\"\022/v1/sessions/login:\001*',
+    serialized_options=b'\202\323\344\223\002\027\"\022/v1/sessions/login:\001*\222A\002b\000',
     create_key=_descriptor._internal_create_key,
   ),
 ])
