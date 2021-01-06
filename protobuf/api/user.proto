@@ -2,6 +2,7 @@ syntax = "proto3";
 package api;
 
 import "google/protobuf/timestamp.proto";
+import "google/api/field_behavior.proto";
 
 option go_package = "github.com/thingspect/api/go/api";
 
@@ -11,17 +12,17 @@ message User {
   string id = 1;
 
   // Organization ID (UUID).
-  string org_id = 2 [json_name = "orgID"];
+  string org_id = 2 [json_name = "orgID", (google.api.field_behavior) = OUTPUT_ONLY];
 
   // User email.
-  string email = 3;
+  string email = 3 [(google.api.field_behavior) = REQUIRED];
 
   // Set to true to disable the user.
   bool is_disabled = 4;
 
   // User creation timestamp.
-  google.protobuf.Timestamp created_at = 5;
+  google.protobuf.Timestamp created_at = 5 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // User modification timestamp.
-  google.protobuf.Timestamp updated_at = 6;
+  google.protobuf.Timestamp updated_at = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
 }

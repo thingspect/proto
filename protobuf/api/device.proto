@@ -4,6 +4,7 @@ package api;
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
 import "google/api/annotations.proto";
+import "google/api/field_behavior.proto";
 
 option go_package = "github.com/thingspect/api/go/api";
 
@@ -53,10 +54,10 @@ message Device {
   string id = 1;
 
   // Organization ID (UUID).
-  string org_id = 2 [json_name = "orgID"];
+  string org_id = 2 [json_name = "orgID", (google.api.field_behavior) = OUTPUT_ONLY];
 
   // Device unique ID.
-  string uniq_id = 3 [json_name = "uniqID"];
+  string uniq_id = 3 [json_name = "uniqID", (google.api.field_behavior) = REQUIRED];
 
   // Set to true to disable the device.
   bool is_disabled = 4;
@@ -65,16 +66,16 @@ message Device {
   string token = 5;
 
   // Device creation timestamp.
-  google.protobuf.Timestamp created_at = 6;
+  google.protobuf.Timestamp created_at = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Device modification timestamp.
-  google.protobuf.Timestamp updated_at = 7;
+  google.protobuf.Timestamp updated_at = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
 }
 
 // CreateDeviceRequest is sent to create a device.
 message CreateDeviceRequest {
   // Device message to create.
-  Device device = 1;
+  Device device = 1 [(google.api.field_behavior) = REQUIRED];
 }
 
 // CreateDeviceResponse is sent in response to a device creation.
@@ -86,10 +87,7 @@ message CreateDeviceResponse {
 // ReadDeviceRequest is sent to read a device.
 message ReadDeviceRequest {
   // Device ID (UUID) to read.
-  string id = 1;
-
-  // Organization ID (UUID). Temporary pending authentication.
-  string org_id = 2 [json_name = "orgID"];
+  string id = 1 [(google.api.field_behavior) = REQUIRED];
 }
 
 // ReadDeviceResponse is sent in response to a device read.
@@ -101,7 +99,7 @@ message ReadDeviceResponse {
 // UpdateDeviceRequest is sent to update a device.
 message UpdateDeviceRequest {
   // Device message to update.
-  Device device = 1;
+  Device device = 1 [(google.api.field_behavior) = REQUIRED];
 }
 
 // UpdateDeviceResponse is sent in response to a device update.
@@ -113,10 +111,7 @@ message UpdateDeviceResponse {
 // DeleteDeviceRequest is sent to delete a device.
 message DeleteDeviceRequest {
   // Device ID (UUID) to delete.
-  string id = 1;
-
-  // Organization ID (UUID). Temporary pending authentication.
-  string org_id = 2 [json_name = "orgID"];
+  string id = 1 [(google.api.field_behavior) = REQUIRED];
 }
 
 message ListDeviceRequest {
@@ -125,9 +120,6 @@ message ListDeviceRequest {
 
 	// Offset to start the results.
 	int32 offset = 2;
-
-  // Organization ID (UUID). Temporary pending authentication.
-  string org_id = 3 [json_name = "orgID"];
 }
 
 message ListDeviceResponse {
