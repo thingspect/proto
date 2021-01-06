@@ -116,11 +116,73 @@
           },
           {
             "name": "body",
+            "description": "Device message to update.",
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/apiUpdateDeviceRequest"
+              "$ref": "#/definitions/apiDevice"
             }
+          },
+          {
+            "name": "updateMask",
+            "description": "Fields to update. Automatically populated by a PATCH request. If not present, a full resource update is performed.",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
+          }
+        ],
+        "tags": [
+          "DeviceService"
+        ]
+      },
+      "patch": {
+        "summary": "Update a device.",
+        "operationId": "DeviceService_Update2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/apiUpdateDeviceResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "device.id",
+            "description": "Device ID (UUID).",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "description": "Device message to update.",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/apiDevice"
+            }
+          },
+          {
+            "name": "updateMask",
+            "description": "Fields to update. Automatically populated by a PATCH request. If not present, a full resource update is performed.",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
@@ -341,16 +403,6 @@
         }
       },
       "description": "ReadDeviceResponse is sent in response to a device read."
-    },
-    "apiUpdateDeviceRequest": {
-      "type": "object",
-      "properties": {
-        "device": {
-          "$ref": "#/definitions/apiDevice",
-          "description": "Device message to update."
-        }
-      },
-      "description": "UpdateDeviceRequest is sent to update a device."
     },
     "apiUpdateDeviceResponse": {
       "type": "object",

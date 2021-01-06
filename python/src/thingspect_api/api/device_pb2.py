@@ -13,6 +13,7 @@ _sym_db = _symbol_database.Default()
 
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
 
@@ -23,9 +24,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10\x61pi/device.proto\x12\x03\x61pi\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\"\xdc\x01\n\x06\x44\x65vice\x12\n\n\x02id\x18\x01 \x01(\t\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x1c\n\x07uniq_id\x18\x03 \x01(\tB\x03\xe0\x41\x02R\x06uniqID\x12\x13\n\x0bis_disabled\x18\x04 \x01(\x08\x12\r\n\x05token\x18\x05 \x01(\t\x12\x33\n\ncreated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"7\n\x13\x43reateDeviceRequest\x12 \n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.DeviceB\x03\xe0\x41\x02\"3\n\x14\x43reateDeviceResponse\x12\x1b\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.Device\"$\n\x11ReadDeviceRequest\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x02\"1\n\x12ReadDeviceResponse\x12\x1b\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.Device\"7\n\x13UpdateDeviceRequest\x12 \n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.DeviceB\x03\xe0\x41\x02\"3\n\x14UpdateDeviceResponse\x12\x1b\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.Device\"&\n\x13\x44\x65leteDeviceRequest\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x02\"2\n\x11ListDeviceRequest\x12\r\n\x05limit\x18\x01 \x01(\x05\x12\x0e\n\x06offset\x18\x02 \x01(\x05\"A\n\x12ListDeviceResponse\x12\r\n\x05total\x18\x01 \x01(\x05\x12\x1c\n\x07\x64\x65vices\x18\x02 \x03(\x0b\x32\x0b.api.Device2\xc0\x03\n\rDeviceService\x12U\n\x06\x43reate\x12\x18.api.CreateDeviceRequest\x1a\x19.api.CreateDeviceResponse\"\x16\x82\xd3\xe4\x93\x02\x10\"\x0b/v1/devices:\x01*\x12Q\n\x04Read\x12\x16.api.ReadDeviceRequest\x1a\x17.api.ReadDeviceResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/devices/{id}\x12\x61\n\x06Update\x12\x18.api.UpdateDeviceRequest\x1a\x19.api.UpdateDeviceResponse\"\"\x82\xd3\xe4\x93\x02\x1c\x1a\x17/v1/devices/{device.id}:\x01*\x12T\n\x06\x44\x65lete\x12\x18.api.DeleteDeviceRequest\x1a\x16.google.protobuf.Empty\"\x18\x82\xd3\xe4\x93\x02\x12*\x10/v1/devices/{id}\x12L\n\x04List\x12\x16.api.ListDeviceRequest\x1a\x17.api.ListDeviceResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/devicesB\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x10\x61pi/device.proto\x12\x03\x61pi\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\"\xdc\x01\n\x06\x44\x65vice\x12\n\n\x02id\x18\x01 \x01(\t\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x1c\n\x07uniq_id\x18\x03 \x01(\tB\x03\xe0\x41\x02R\x06uniqID\x12\x13\n\x0bis_disabled\x18\x04 \x01(\x08\x12\r\n\x05token\x18\x05 \x01(\t\x12\x33\n\ncreated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"7\n\x13\x43reateDeviceRequest\x12 \n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.DeviceB\x03\xe0\x41\x02\"3\n\x14\x43reateDeviceResponse\x12\x1b\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.Device\"$\n\x11ReadDeviceRequest\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x02\"1\n\x12ReadDeviceResponse\x12\x1b\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.Device\"h\n\x13UpdateDeviceRequest\x12 \n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.DeviceB\x03\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"3\n\x14UpdateDeviceResponse\x12\x1b\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.Device\"&\n\x13\x44\x65leteDeviceRequest\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x02\"2\n\x11ListDeviceRequest\x12\r\n\x05limit\x18\x01 \x01(\x05\x12\x0e\n\x06offset\x18\x02 \x01(\x05\"A\n\x12ListDeviceResponse\x12\r\n\x05total\x18\x01 \x01(\x05\x12\x1c\n\x07\x64\x65vices\x18\x02 \x03(\x0b\x32\x0b.api.Device2\xe9\x03\n\rDeviceService\x12U\n\x06\x43reate\x12\x18.api.CreateDeviceRequest\x1a\x19.api.CreateDeviceResponse\"\x16\x82\xd3\xe4\x93\x02\x10\"\x0b/v1/devices:\x01*\x12Q\n\x04Read\x12\x16.api.ReadDeviceRequest\x1a\x17.api.ReadDeviceResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/devices/{id}\x12\x89\x01\n\x06Update\x12\x18.api.UpdateDeviceRequest\x1a\x19.api.UpdateDeviceResponse\"J\x82\xd3\xe4\x93\x02\x44\x1a\x17/v1/devices/{device.id}:\x06\x64\x65viceZ!2\x17/v1/devices/{device.id}:\x06\x64\x65vice\x12T\n\x06\x44\x65lete\x12\x18.api.DeleteDeviceRequest\x1a\x16.google.protobuf.Empty\"\x18\x82\xd3\xe4\x93\x02\x12*\x10/v1/devices/{id}\x12L\n\x04List\x12\x16.api.ListDeviceRequest\x1a\x17.api.ListDeviceResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/devicesB\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
-  dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,])
 
 
 
@@ -99,8 +100,8 @@ _DEVICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=151,
-  serialized_end=371,
+  serialized_start=185,
+  serialized_end=405,
 )
 
 
@@ -131,8 +132,8 @@ _CREATEDEVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=373,
-  serialized_end=428,
+  serialized_start=407,
+  serialized_end=462,
 )
 
 
@@ -163,8 +164,8 @@ _CREATEDEVICERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=430,
-  serialized_end=481,
+  serialized_start=464,
+  serialized_end=515,
 )
 
 
@@ -195,8 +196,8 @@ _READDEVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=483,
-  serialized_end=519,
+  serialized_start=517,
+  serialized_end=553,
 )
 
 
@@ -227,8 +228,8 @@ _READDEVICERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=521,
-  serialized_end=570,
+  serialized_start=555,
+  serialized_end=604,
 )
 
 
@@ -247,6 +248,13 @@ _UPDATEDEVICEREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='update_mask', full_name='api.UpdateDeviceRequest.update_mask', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -259,8 +267,8 @@ _UPDATEDEVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=572,
-  serialized_end=627,
+  serialized_start=606,
+  serialized_end=710,
 )
 
 
@@ -291,8 +299,8 @@ _UPDATEDEVICERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=629,
-  serialized_end=680,
+  serialized_start=712,
+  serialized_end=763,
 )
 
 
@@ -323,8 +331,8 @@ _DELETEDEVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=682,
-  serialized_end=720,
+  serialized_start=765,
+  serialized_end=803,
 )
 
 
@@ -362,8 +370,8 @@ _LISTDEVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=722,
-  serialized_end=772,
+  serialized_start=805,
+  serialized_end=855,
 )
 
 
@@ -401,8 +409,8 @@ _LISTDEVICERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=774,
-  serialized_end=839,
+  serialized_start=857,
+  serialized_end=922,
 )
 
 _DEVICE.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
@@ -411,6 +419,7 @@ _CREATEDEVICEREQUEST.fields_by_name['device'].message_type = _DEVICE
 _CREATEDEVICERESPONSE.fields_by_name['device'].message_type = _DEVICE
 _READDEVICERESPONSE.fields_by_name['device'].message_type = _DEVICE
 _UPDATEDEVICEREQUEST.fields_by_name['device'].message_type = _DEVICE
+_UPDATEDEVICEREQUEST.fields_by_name['update_mask'].message_type = google_dot_protobuf_dot_field__mask__pb2._FIELDMASK
 _UPDATEDEVICERESPONSE.fields_by_name['device'].message_type = _DEVICE
 _LISTDEVICERESPONSE.fields_by_name['devices'].message_type = _DEVICE
 DESCRIPTOR.message_types_by_name['Device'] = _DEVICE
@@ -513,8 +522,8 @@ _DEVICESERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=842,
-  serialized_end=1290,
+  serialized_start=925,
+  serialized_end=1414,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',
@@ -543,7 +552,7 @@ _DEVICESERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_UPDATEDEVICEREQUEST,
     output_type=_UPDATEDEVICERESPONSE,
-    serialized_options=b'\202\323\344\223\002\034\032\027/v1/devices/{device.id}:\001*',
+    serialized_options=b'\202\323\344\223\002D\032\027/v1/devices/{device.id}:\006deviceZ!2\027/v1/devices/{device.id}:\006device',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(

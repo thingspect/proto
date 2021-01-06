@@ -3,6 +3,7 @@ package api;
 
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
+import "google/protobuf/field_mask.proto";
 import "google/api/annotations.proto";
 import "google/api/field_behavior.proto";
 
@@ -29,7 +30,11 @@ service DeviceService {
   rpc Update(UpdateDeviceRequest) returns (UpdateDeviceResponse) {
     option (google.api.http) = {
       put: "/v1/devices/{device.id}"
-      body: "*"
+      body: "device"
+      additional_bindings {
+        patch: "/v1/devices/{device.id}"
+        body: "device"
+      }
     };
   }
 
@@ -100,6 +105,9 @@ message ReadDeviceResponse {
 message UpdateDeviceRequest {
   // Device message to update.
   Device device = 1 [(google.api.field_behavior) = REQUIRED];
+
+  // Fields to update. Automatically populated by a PATCH request. If not present, a full resource update is performed.
+  google.protobuf.FieldMask update_mask = 2;
 }
 
 // UpdateDeviceResponse is sent in response to a device update.
