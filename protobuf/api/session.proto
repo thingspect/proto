@@ -3,6 +3,7 @@ package api;
 
 import "google/protobuf/timestamp.proto";
 import "google/api/annotations.proto";
+import "google/api/field_behavior.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 
 option go_package = "github.com/thingspect/api/go/api";
@@ -24,13 +25,13 @@ service SessionService {
 // LoginRequest is sent to log in a user.
 message LoginRequest {
   // Email of the user to log in.
-  string email = 1;
+  string email = 1 [(google.api.field_behavior) = REQUIRED];
 
   // Organization name of the user to log in.
-  string org_name = 2;
+  string org_name = 2 [(google.api.field_behavior) = REQUIRED];
 
   // Password of the user to log in.
-  string password = 3;
+  string password = 3 [(google.api.field_behavior) = REQUIRED];
 }
 
 // LoginResponse is sent in response to a user login.
