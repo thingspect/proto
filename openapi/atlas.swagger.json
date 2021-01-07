@@ -323,9 +323,9 @@
           "type": "string",
           "description": "Device unique ID."
         },
-        "isDisabled": {
-          "type": "boolean",
-          "description": "Set to true to disable the device."
+        "status": {
+          "$ref": "#/definitions/commonStatus",
+          "description": "Device status."
         },
         "token": {
           "type": "string",
@@ -340,10 +340,6 @@
           "type": "string",
           "format": "date-time",
           "description": "Device modification timestamp."
-        },
-        "status": {
-          "$ref": "#/definitions/commonStatus",
-          "description": "Device status."
         }
       },
       "description": "Device represents a device as stored in the database."
