@@ -57,7 +57,7 @@ service DeviceService {
 // Device represents a device as stored in the database.
 message Device {
   // Device ID (UUID).
-  string id = 1;
+  string id = 1 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Organization ID (UUID).
   string org_id = 2 [json_name = "orgID", (google.api.field_behavior) = OUTPUT_ONLY];
