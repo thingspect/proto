@@ -10,12 +10,14 @@ deps:
 	github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2
 
 common:
-	protoc -I=../protobuf --go_out=. --go_opt=paths=source_relative \
+	protoc -I=../protobuf -I=/tmp/googleapis \
+	--go_out=. --go_opt=paths=source_relative \
 	common/datapoint.proto \
 	common/status.proto
 
 mqtt:
-	protoc -I=../protobuf --go_out=. --go_opt=paths=source_relative \
+	protoc -I=../protobuf -I=/tmp/googleapis \
+	--go_out=. --go_opt=paths=source_relative \
 	mqtt/mqtt.proto
 
 api:

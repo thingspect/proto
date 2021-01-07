@@ -12,6 +12,7 @@ _sym_db = _symbol_database.Default()
 
 
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z#github.com/thingspect/api/go/common',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x16\x63ommon/datapoint.proto\x12\x06\x63ommon\x1a\x1fgoogle/protobuf/timestamp.proto\"\xeb\x01\n\tDataPoint\x12\x17\n\x07uniq_id\x18\x01 \x01(\tR\x06uniqID\x12\x0c\n\x04\x61ttr\x18\x02 \x01(\t\x12\x11\n\x07int_val\x18\x03 \x01(\x12H\x00\x12\x12\n\x08\x66l64_val\x18\x04 \x01(\x01H\x00\x12\x11\n\x07str_val\x18\x05 \x01(\tH\x00\x12\x12\n\x08\x62ool_val\x18\x06 \x01(\x08H\x00\x12\x13\n\tbytes_val\x18\x10 \x01(\x0cH\x00\x12&\n\x02ts\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\r\n\x05token\x18\x08 \x01(\t\x12\x10\n\x08trace_id\x18\t \x01(\tB\x0b\n\tval_oneofB%Z#github.com/thingspect/api/go/commonb\x06proto3'
+  serialized_pb=b'\n\x16\x63ommon/datapoint.proto\x12\x06\x63ommon\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1fgoogle/api/field_behavior.proto\"\xfa\x01\n\tDataPoint\x12\x1c\n\x07uniq_id\x18\x01 \x01(\tB\x03\xe0\x41\x02R\x06uniqID\x12\x11\n\x04\x61ttr\x18\x02 \x01(\tB\x03\xe0\x41\x02\x12\x11\n\x07int_val\x18\x03 \x01(\x12H\x00\x12\x12\n\x08\x66l64_val\x18\x04 \x01(\x01H\x00\x12\x11\n\x07str_val\x18\x05 \x01(\tH\x00\x12\x12\n\x08\x62ool_val\x18\x06 \x01(\x08H\x00\x12\x13\n\tbytes_val\x18\x10 \x01(\x0cH\x00\x12&\n\x02ts\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\r\n\x05token\x18\x08 \x01(\t\x12\x15\n\x08trace_id\x18\t \x01(\tB\x03\xe0\x41\x03\x42\x0b\n\tval_oneofB%Z#github.com/thingspect/api/go/commonb\x06proto3'
   ,
-  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,])
 
 
 
@@ -41,14 +42,14 @@ _DATAPOINT = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='uniqID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\340A\002', json_name='uniqID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='attr', full_name='common.DataPoint.attr', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='int_val', full_name='common.DataPoint.int_val', index=2,
       number=3, type=18, cpp_type=2, label=1,
@@ -104,7 +105,7 @@ _DATAPOINT = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -122,8 +123,8 @@ _DATAPOINT = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=68,
-  serialized_end=303,
+  serialized_start=101,
+  serialized_end=351,
 )
 
 _DATAPOINT.fields_by_name['ts'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
@@ -154,4 +155,7 @@ _sym_db.RegisterMessage(DataPoint)
 
 
 DESCRIPTOR._options = None
+_DATAPOINT.fields_by_name['uniq_id']._options = None
+_DATAPOINT.fields_by_name['attr']._options = None
+_DATAPOINT.fields_by_name['trace_id']._options = None
 # @@protoc_insertion_point(module_scope)
