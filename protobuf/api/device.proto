@@ -7,6 +7,7 @@ import "google/protobuf/timestamp.proto";
 import "google/protobuf/field_mask.proto";
 import "google/api/annotations.proto";
 import "google/api/field_behavior.proto";
+import "validate/validate.proto";
 
 option go_package = "github.com/thingspect/api/go/api";
 
@@ -63,10 +64,10 @@ message Device {
   string org_id = 2 [json_name = "orgID", (google.api.field_behavior) = OUTPUT_ONLY];
 
   // Device unique ID.
-  string uniq_id = 3 [json_name = "uniqID", (google.api.field_behavior) = REQUIRED];
+  string uniq_id = 3 [json_name = "uniqID", (validate.rules).string = {min_len: 5, max_len: 40}, (google.api.field_behavior) = REQUIRED];
 
   // Device status.
-  common.Status status = 4 [(google.api.field_behavior) = REQUIRED];
+  common.Status status = 4 [(validate.rules).enum = {in: [1,2]}, (google.api.field_behavior) = REQUIRED];
 
   // Authentication token (UUID).
   string token = 5;
@@ -81,7 +82,7 @@ message Device {
 // CreateDeviceRequest is sent to create a device.
 message CreateDeviceRequest {
   // Device message to create.
-  Device device = 1 [(google.api.field_behavior) = REQUIRED];
+  Device device = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 }
 
 // CreateDeviceResponse is sent in response to a device creation.
@@ -93,7 +94,7 @@ message CreateDeviceResponse {
 // ReadDeviceRequest is sent to read a device.
 message ReadDeviceRequest {
   // Device ID (UUID) to read.
-  string id = 1 [(google.api.field_behavior) = REQUIRED];
+  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
 }
 
 // ReadDeviceResponse is sent in response to a device read.
@@ -105,7 +106,7 @@ message ReadDeviceResponse {
 // UpdateDeviceRequest is sent to update a device.
 message UpdateDeviceRequest {
   // Device message to update.
-  Device device = 1 [(google.api.field_behavior) = REQUIRED];
+  Device device = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 
   // Fields to update. Automatically populated by a PATCH request. If not present, a full resource update is performed.
   google.protobuf.FieldMask update_mask = 2;
@@ -120,7 +121,7 @@ message UpdateDeviceResponse {
 // DeleteDeviceRequest is sent to delete a device.
 message DeleteDeviceRequest {
   // Device ID (UUID) to delete.
-  string id = 1 [(google.api.field_behavior) = REQUIRED];
+  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
 }
 
 message ListDeviceRequest {

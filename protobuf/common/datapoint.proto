@@ -3,6 +3,7 @@ package common;
 
 import "google/protobuf/timestamp.proto";
 import "google/api/field_behavior.proto";
+import "validate/validate.proto";
 
 option go_package = "github.com/thingspect/api/go/common";
 
@@ -10,13 +11,15 @@ option go_package = "github.com/thingspect/api/go/common";
 message DataPoint {
   // Device unique ID. Will be ignored during data ingest if provided as part of
   // the topic.
-  string uniq_id = 1 [json_name = "uniqID", (google.api.field_behavior) = REQUIRED];
+  string uniq_id = 1 [json_name = "uniqID", (validate.rules).string = {min_len: 5, max_len: 40}, (google.api.field_behavior) = REQUIRED];
 
   // Device attribute.
-  string attr = 2 [(google.api.field_behavior) = REQUIRED];
+  string attr = 2 [(validate.rules).string.max_len = 40, (google.api.field_behavior) = REQUIRED];
 
   // Attribute value.
   oneof val_oneof {
+    option (validate.required) = true;
+
     // Integer value, 64-bit.
     sint64 int_val = 3;
 
