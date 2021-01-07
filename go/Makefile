@@ -11,7 +11,8 @@ deps:
 
 common:
 	protoc -I=../protobuf --go_out=. --go_opt=paths=source_relative \
-	common/datapoint.proto
+	common/datapoint.proto \
+	common/status.proto
 
 mqtt:
 	protoc -I=../protobuf --go_out=. --go_opt=paths=source_relative \

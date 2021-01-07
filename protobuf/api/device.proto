@@ -1,6 +1,7 @@
 syntax = "proto3";
 package api;
 
+import "common/status.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/field_mask.proto";
@@ -75,6 +76,9 @@ message Device {
 
   // Device modification timestamp.
   google.protobuf.Timestamp updated_at = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
+
+  // Device status.
+  common.Status status = 8 [(google.api.field_behavior) = REQUIRED];
 }
 
 // CreateDeviceRequest is sent to create a device.
