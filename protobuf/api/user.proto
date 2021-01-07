@@ -18,15 +18,12 @@ message User {
   // User email.
   string email = 3 [(google.api.field_behavior) = REQUIRED];
 
-  // Set to true to disable the user.
-  bool is_disabled = 4;
+  // User status.
+  common.Status status = 4 [(google.api.field_behavior) = REQUIRED];
 
   // User creation timestamp.
   google.protobuf.Timestamp created_at = 5 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // User modification timestamp.
   google.protobuf.Timestamp updated_at = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
-
-  // Device status.
-  common.Status status = 7;
 }

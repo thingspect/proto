@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0e\x61pi/user.proto\x12\x03\x61pi\x1a\x13\x63ommon/status.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1fgoogle/api/field_behavior.proto\"\xe1\x01\n\x04User\x12\n\n\x02id\x18\x01 \x01(\t\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x12\n\x05\x65mail\x18\x03 \x01(\tB\x03\xe0\x41\x02\x12\x13\n\x0bis_disabled\x18\x04 \x01(\x08\x12\x33\n\ncreated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x1e\n\x06status\x18\x07 \x01(\x0e\x32\x0e.common.StatusB\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x0e\x61pi/user.proto\x12\x03\x61pi\x1a\x13\x63ommon/status.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1fgoogle/api/field_behavior.proto\"\xd1\x01\n\x04User\x12\n\n\x02id\x18\x01 \x01(\t\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x12\n\x05\x65mail\x18\x03 \x01(\tB\x03\xe0\x41\x02\x12#\n\x06status\x18\x04 \x01(\x0e\x32\x0e.common.StatusB\x03\xe0\x41\x02\x12\x33\n\ncreated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x42\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
   dependencies=[common_dot_status__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,])
 
@@ -59,12 +59,12 @@ _USER = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=b'\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='is_disabled', full_name='api.User.is_disabled', index=3,
-      number=4, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='status', full_name='api.User.status', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='created_at', full_name='api.User.created_at', index=4,
       number=5, type=11, cpp_type=10, label=1,
@@ -79,13 +79,6 @@ _USER = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='status', full_name='api.User.status', index=6,
-      number=7, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -99,12 +92,12 @@ _USER = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=111,
-  serialized_end=336,
+  serialized_end=320,
 )
 
+_USER.fields_by_name['status'].enum_type = common_dot_status__pb2._STATUS
 _USER.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _USER.fields_by_name['updated_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_USER.fields_by_name['status'].enum_type = common_dot_status__pb2._STATUS
 DESCRIPTOR.message_types_by_name['User'] = _USER
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -119,6 +112,7 @@ _sym_db.RegisterMessage(User)
 DESCRIPTOR._options = None
 _USER.fields_by_name['org_id']._options = None
 _USER.fields_by_name['email']._options = None
+_USER.fields_by_name['status']._options = None
 _USER.fields_by_name['created_at']._options = None
 _USER.fields_by_name['updated_at']._options = None
 # @@protoc_insertion_point(module_scope)

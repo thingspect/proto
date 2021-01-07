@@ -65,8 +65,8 @@ message Device {
   // Device unique ID.
   string uniq_id = 3 [json_name = "uniqID", (google.api.field_behavior) = REQUIRED];
 
-  // Set to true to disable the device.
-  bool is_disabled = 4;
+  // Device status.
+  common.Status status = 4 [(google.api.field_behavior) = REQUIRED];
 
   // Authentication token (UUID).
   string token = 5;
@@ -76,9 +76,6 @@ message Device {
 
   // Device modification timestamp.
   google.protobuf.Timestamp updated_at = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
-
-  // Device status.
-  common.Status status = 8 [(google.api.field_behavior) = REQUIRED];
 }
 
 // CreateDeviceRequest is sent to create a device.
