@@ -84,10 +84,14 @@
         "parameters": [
           {
             "name": "body",
+            "description": "Device message to create.",
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/apiCreateDeviceRequest"
+              "$ref": "#/definitions/apiDevice",
+              "required": [
+                "device"
+              ]
             }
           }
         ],
@@ -294,22 +298,6 @@
     }
   },
   "definitions": {
-    "apiCreateDeviceRequest": {
-      "type": "object",
-      "properties": {
-        "device": {
-          "$ref": "#/definitions/apiDevice",
-          "description": "Device message to create.",
-          "required": [
-            "device"
-          ]
-        }
-      },
-      "description": "CreateDeviceRequest is sent to create a device.",
-      "required": [
-        "device"
-      ]
-    },
     "apiCreateDeviceResponse": {
       "type": "object",
       "properties": {
