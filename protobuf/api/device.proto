@@ -126,10 +126,10 @@ message DeleteDeviceRequest {
 
 message ListDeviceRequest {
   // Number of devices to retrieve in a single page. Defaults to 100 if not specified.
-  int32 page_size = 2 [(validate.rules).int32.lte = 250];
+  int32 page_size = 1 [(validate.rules).int32 = {gte:0, lte: 250}];
 
   // Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.
-  string page_token = 3;
+  string page_token = 2;
 }
 
 message ListDeviceResponse {
@@ -137,11 +137,11 @@ message ListDeviceResponse {
   repeated Device devices = 1;
 
   // Pagination token used to retrieve the next page of results. Not returned for the last page.
-  string next_page_token = 3;
+  string next_page_token = 2;
 
   // Pagination token used to retrieve the previous page of results. Not returned for the first page.
-  string prev_page_token = 4;
+  string prev_page_token = 3;
 
   // Total number of devices available.
-  int32 total_size = 2;
+  int32 total_size = 4;
 }

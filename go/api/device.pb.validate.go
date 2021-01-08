@@ -732,10 +732,10 @@ func (m *ListDeviceRequest) Validate() error {
 		return nil
 	}
 
-	if m.GetPageSize() > 250 {
+	if val := m.GetPageSize(); val < 0 || val > 250 {
 		return ListDeviceRequestValidationError{
 			field:  "PageSize",
-			reason: "value must be less than or equal to 250",
+			reason: "value must be inside range [0, 250]",
 		}
 	}
 
