@@ -17,7 +17,7 @@ service DeviceService {
   rpc Create(CreateDeviceRequest) returns (CreateDeviceResponse) {
     option (google.api.http) = {
       post: "/v1/devices"
-      body: "*"
+      body: "device"
     };
   }
 
