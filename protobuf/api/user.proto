@@ -2,11 +2,66 @@ syntax = "proto3";
 package api;
 
 import "common/status.proto";
+import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
+import "google/protobuf/field_mask.proto";
+import "google/api/annotations.proto";
 import "google/api/field_behavior.proto";
 import "validate/validate.proto";
 
 option go_package = "github.com/thingspect/api/go/api";
+
+// UserService contains functions to query and modify users.
+service UserService {
+  // Create a user.
+  rpc Create(CreateUserRequest) returns (CreateUserResponse) {
+    option (google.api.http) = {
+      post: "/v1/users"
+      body: "user"
+    };
+  }
+
+  // Read a user by ID.
+  rpc Read(ReadUserRequest) returns (ReadUserResponse) {
+    option (google.api.http) = {
+      get: "/v1/users/{id}"
+    };
+  }
+
+  // Update a user.
+  rpc Update(UpdateUserRequest) returns (UpdateUserResponse) {
+    option (google.api.http) = {
+      put: "/v1/users/{user.id}"
+      body: "user"
+      additional_bindings {
+        patch: "/v1/users/{user.id}"
+        body: "user"
+      }
+    };
+  }
+
+  // Update a user's password.
+  rpc UpdatePassword(UpdateUserPasswordRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      put: "/v1/users/{id}/password"
+      body: "*"
+    };
+  }
+
+  // Delete a user by ID.
+  rpc Delete(DeleteUserRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      delete: "/v1/users/{id}"
+    };
+  }
+
+  // List all users.
+  rpc List(ListUserRequest) returns (ListUserResponse) {
+    option (google.api.http) = {
+      get: "/v1/users"
+    };
+  }
+}
 
 // User represents a user as stored in the database.
 message User {
@@ -27,4 +82,80 @@ message User {
 
   // User modification timestamp.
   google.protobuf.Timestamp updated_at = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
+}
+
+// CreateUserRequest is sent to create a user.
+message CreateUserRequest {
+  // User message to create.
+  User user = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+}
+
+// CreateUserResponse is sent in response to a user creation.
+message CreateUserResponse {
+  // Created user message.
+  User user = 1;
+}
+
+// ReadUserRequest is sent to read a user.
+message ReadUserRequest {
+  // User ID (UUID) to read.
+  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
+}
+
+// ReadUserResponse is sent in response to a user read.
+message ReadUserResponse {
+  // Read user message.
+  User user = 1;
+}
+
+// UpdateUserRequest is sent to update a user.
+message UpdateUserRequest {
+  // User message to update.
+  User user = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+
+  // Fields to update. Automatically populated by a PATCH request. If not present, a full resource update is performed.
+  google.protobuf.FieldMask update_mask = 2;
+}
+
+// UpdateUserResponse is sent in response to a user update.
+message UpdateUserResponse {
+  // Updated user message.
+  User user = 1;
+}
+
+// UpdateUserPasswordRequest is sent to update a user's password.
+message UpdateUserPasswordRequest {
+  // User ID (UUID) to update password.
+  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
+
+  // User password to update.
+  string password = 2 [(validate.rules).string.min_len = 10, (google.api.field_behavior) = REQUIRED];
+}
+
+// DeleteUserRequest is sent to delete a user.
+message DeleteUserRequest {
+  // User ID (UUID) to delete.
+  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
+}
+
+message ListUserRequest {
+  // Number of users to retrieve in a single page. Defaults to 100 if not specified.
+  int32 page_size = 1 [(validate.rules).int32 = {gte:0, lte: 250}];
+
+  // Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.
+  string page_token = 2;
+}
+
+message ListUserResponse {
+  // User array.
+  repeated User users = 1;
+
+  // Pagination token used to retrieve the next page of results. Not returned for the last page.
+  string next_page_token = 2;
+
+  // Pagination token used to retrieve the previous page of results. Not returned for the first page.
+  string prev_page_token = 3;
+
+  // Total number of users available.
+  int32 total_size = 4;
 }

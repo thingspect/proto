@@ -2,3 +2,240 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
+from api import user_pb2 as api_dot_user__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+
+
+class UserServiceStub(object):
+    """UserService contains functions to query and modify users.
+    """
+
+    def __init__(self, channel):
+        """Constructor.
+
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.Create = channel.unary_unary(
+                '/api.UserService/Create',
+                request_serializer=api_dot_user__pb2.CreateUserRequest.SerializeToString,
+                response_deserializer=api_dot_user__pb2.CreateUserResponse.FromString,
+                )
+        self.Read = channel.unary_unary(
+                '/api.UserService/Read',
+                request_serializer=api_dot_user__pb2.ReadUserRequest.SerializeToString,
+                response_deserializer=api_dot_user__pb2.ReadUserResponse.FromString,
+                )
+        self.Update = channel.unary_unary(
+                '/api.UserService/Update',
+                request_serializer=api_dot_user__pb2.UpdateUserRequest.SerializeToString,
+                response_deserializer=api_dot_user__pb2.UpdateUserResponse.FromString,
+                )
+        self.UpdatePassword = channel.unary_unary(
+                '/api.UserService/UpdatePassword',
+                request_serializer=api_dot_user__pb2.UpdateUserPasswordRequest.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
+        self.Delete = channel.unary_unary(
+                '/api.UserService/Delete',
+                request_serializer=api_dot_user__pb2.DeleteUserRequest.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
+        self.List = channel.unary_unary(
+                '/api.UserService/List',
+                request_serializer=api_dot_user__pb2.ListUserRequest.SerializeToString,
+                response_deserializer=api_dot_user__pb2.ListUserResponse.FromString,
+                )
+
+
+class UserServiceServicer(object):
+    """UserService contains functions to query and modify users.
+    """
+
+    def Create(self, request, context):
+        """Create a user.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def Read(self, request, context):
+        """Read a user by ID.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def Update(self, request, context):
+        """Update a user.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def UpdatePassword(self, request, context):
+        """Update a user's password.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def Delete(self, request, context):
+        """Delete a user by ID.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def List(self, request, context):
+        """List all users.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+
+def add_UserServiceServicer_to_server(servicer, server):
+    rpc_method_handlers = {
+            'Create': grpc.unary_unary_rpc_method_handler(
+                    servicer.Create,
+                    request_deserializer=api_dot_user__pb2.CreateUserRequest.FromString,
+                    response_serializer=api_dot_user__pb2.CreateUserResponse.SerializeToString,
+            ),
+            'Read': grpc.unary_unary_rpc_method_handler(
+                    servicer.Read,
+                    request_deserializer=api_dot_user__pb2.ReadUserRequest.FromString,
+                    response_serializer=api_dot_user__pb2.ReadUserResponse.SerializeToString,
+            ),
+            'Update': grpc.unary_unary_rpc_method_handler(
+                    servicer.Update,
+                    request_deserializer=api_dot_user__pb2.UpdateUserRequest.FromString,
+                    response_serializer=api_dot_user__pb2.UpdateUserResponse.SerializeToString,
+            ),
+            'UpdatePassword': grpc.unary_unary_rpc_method_handler(
+                    servicer.UpdatePassword,
+                    request_deserializer=api_dot_user__pb2.UpdateUserPasswordRequest.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ),
+            'Delete': grpc.unary_unary_rpc_method_handler(
+                    servicer.Delete,
+                    request_deserializer=api_dot_user__pb2.DeleteUserRequest.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ),
+            'List': grpc.unary_unary_rpc_method_handler(
+                    servicer.List,
+                    request_deserializer=api_dot_user__pb2.ListUserRequest.FromString,
+                    response_serializer=api_dot_user__pb2.ListUserResponse.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'api.UserService', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+
+
+ # This class is part of an EXPERIMENTAL API.
+class UserService(object):
+    """UserService contains functions to query and modify users.
+    """
+
+    @staticmethod
+    def Create(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/api.UserService/Create',
+            api_dot_user__pb2.CreateUserRequest.SerializeToString,
+            api_dot_user__pb2.CreateUserResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def Read(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/api.UserService/Read',
+            api_dot_user__pb2.ReadUserRequest.SerializeToString,
+            api_dot_user__pb2.ReadUserResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def Update(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/api.UserService/Update',
+            api_dot_user__pb2.UpdateUserRequest.SerializeToString,
+            api_dot_user__pb2.UpdateUserResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def UpdatePassword(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/api.UserService/UpdatePassword',
+            api_dot_user__pb2.UpdateUserPasswordRequest.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def Delete(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/api.UserService/Delete',
+            api_dot_user__pb2.DeleteUserRequest.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def List(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/api.UserService/List',
+            api_dot_user__pb2.ListUserRequest.SerializeToString,
+            api_dot_user__pb2.ListUserResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
