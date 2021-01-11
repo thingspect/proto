@@ -12,7 +12,10 @@ _sym_db = _symbol_database.Default()
 
 
 from common import status_pb2 as common_dot_status__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
 from validate import validate_pb2 as validate_dot_validate__pb2
 
@@ -23,9 +26,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0e\x61pi/user.proto\x12\x03\x61pi\x1a\x13\x63ommon/status.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x17validate/validate.proto\"\xe7\x01\n\x04User\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x19\n\x05\x65mail\x18\x03 \x01(\tB\n\xfa\x42\x04r\x02`\x01\xe0\x41\x02\x12-\n\x06status\x18\x04 \x01(\x0e\x32\x0e.common.StatusB\r\xfa\x42\x07\x82\x01\x04\x18\x01\x18\x02\xe0\x41\x02\x12\x33\n\ncreated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x42\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x0e\x61pi/user.proto\x12\x03\x61pi\x1a\x13\x63ommon/status.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x17validate/validate.proto\"\xe7\x01\n\x04User\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x19\n\x05\x65mail\x18\x03 \x01(\tB\n\xfa\x42\x04r\x02`\x01\xe0\x41\x02\x12-\n\x06status\x18\x04 \x01(\x0e\x32\x0e.common.StatusB\r\xfa\x42\x07\x82\x01\x04\x18\x01\x18\x02\xe0\x41\x02\x12\x33\n\ncreated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"9\n\x11\x43reateUserRequest\x12$\n\x04user\x18\x01 \x01(\x0b\x32\t.api.UserB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"-\n\x12\x43reateUserResponse\x12\x17\n\x04user\x18\x01 \x01(\x0b\x32\t.api.User\"*\n\x0fReadUserRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"+\n\x10ReadUserResponse\x12\x17\n\x04user\x18\x01 \x01(\x0b\x32\t.api.User\"j\n\x11UpdateUserRequest\x12$\n\x04user\x18\x01 \x01(\x0b\x32\t.api.UserB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"-\n\x12UpdateUserResponse\x12\x17\n\x04user\x18\x01 \x01(\x0b\x32\t.api.User\"R\n\x19UpdateUserPasswordRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\x12\x1c\n\x08password\x18\x02 \x01(\tB\n\xfa\x42\x04r\x02\x10\n\xe0\x41\x02\",\n\x11\x44\x65leteUserRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"D\n\x0fListUserRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"r\n\x10ListUserResponse\x12\x18\n\x05users\x18\x01 \x03(\x0b\x32\t.api.User\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x17\n\x0fprev_page_token\x18\x03 \x01(\t\x12\x12\n\ntotal_size\x18\x04 \x01(\x05\x32\xb1\x04\n\x0bUserService\x12R\n\x06\x43reate\x12\x16.api.CreateUserRequest\x1a\x17.api.CreateUserResponse\"\x17\x82\xd3\xe4\x93\x02\x11\"\t/v1/users:\x04user\x12K\n\x04Read\x12\x14.api.ReadUserRequest\x1a\x15.api.ReadUserResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/users/{id}\x12y\n\x06Update\x12\x16.api.UpdateUserRequest\x1a\x17.api.UpdateUserResponse\">\x82\xd3\xe4\x93\x02\x38\x1a\x13/v1/users/{user.id}:\x04userZ\x1b\x32\x13/v1/users/{user.id}:\x04user\x12l\n\x0eUpdatePassword\x12\x1e.api.UpdateUserPasswordRequest\x1a\x16.google.protobuf.Empty\"\"\x82\xd3\xe4\x93\x02\x1c\x1a\x17/v1/users/{id}/password:\x01*\x12P\n\x06\x44\x65lete\x12\x16.api.DeleteUserRequest\x1a\x16.google.protobuf.Empty\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/users/{id}\x12\x46\n\x04List\x12\x14.api.ListUserRequest\x1a\x15.api.ListUserResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\x12\t/v1/usersB\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
-  dependencies=[common_dot_status__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
+  dependencies=[common_dot_status__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
 
 
@@ -92,14 +95,393 @@ _USER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=136,
-  serialized_end=367,
+  serialized_start=229,
+  serialized_end=460,
+)
+
+
+_CREATEUSERREQUEST = _descriptor.Descriptor(
+  name='CreateUserRequest',
+  full_name='api.CreateUserRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user', full_name='api.CreateUserRequest.user', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005\212\001\002\020\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=462,
+  serialized_end=519,
+)
+
+
+_CREATEUSERRESPONSE = _descriptor.Descriptor(
+  name='CreateUserResponse',
+  full_name='api.CreateUserResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user', full_name='api.CreateUserResponse.user', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=521,
+  serialized_end=566,
+)
+
+
+_READUSERREQUEST = _descriptor.Descriptor(
+  name='ReadUserRequest',
+  full_name='api.ReadUserRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='api.ReadUserRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005r\003\260\001\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=568,
+  serialized_end=610,
+)
+
+
+_READUSERRESPONSE = _descriptor.Descriptor(
+  name='ReadUserResponse',
+  full_name='api.ReadUserResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user', full_name='api.ReadUserResponse.user', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=612,
+  serialized_end=655,
+)
+
+
+_UPDATEUSERREQUEST = _descriptor.Descriptor(
+  name='UpdateUserRequest',
+  full_name='api.UpdateUserRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user', full_name='api.UpdateUserRequest.user', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005\212\001\002\020\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='update_mask', full_name='api.UpdateUserRequest.update_mask', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=657,
+  serialized_end=763,
+)
+
+
+_UPDATEUSERRESPONSE = _descriptor.Descriptor(
+  name='UpdateUserResponse',
+  full_name='api.UpdateUserResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user', full_name='api.UpdateUserResponse.user', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=765,
+  serialized_end=810,
+)
+
+
+_UPDATEUSERPASSWORDREQUEST = _descriptor.Descriptor(
+  name='UpdateUserPasswordRequest',
+  full_name='api.UpdateUserPasswordRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='api.UpdateUserPasswordRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005r\003\260\001\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='password', full_name='api.UpdateUserPasswordRequest.password', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\004r\002\020\n\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=812,
+  serialized_end=894,
+)
+
+
+_DELETEUSERREQUEST = _descriptor.Descriptor(
+  name='DeleteUserRequest',
+  full_name='api.DeleteUserRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='api.DeleteUserRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005r\003\260\001\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=896,
+  serialized_end=940,
+)
+
+
+_LISTUSERREQUEST = _descriptor.Descriptor(
+  name='ListUserRequest',
+  full_name='api.ListUserRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='page_size', full_name='api.ListUserRequest.page_size', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\007\032\005\030\372\001(\000', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='page_token', full_name='api.ListUserRequest.page_token', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=942,
+  serialized_end=1010,
+)
+
+
+_LISTUSERRESPONSE = _descriptor.Descriptor(
+  name='ListUserResponse',
+  full_name='api.ListUserResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='users', full_name='api.ListUserResponse.users', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='next_page_token', full_name='api.ListUserResponse.next_page_token', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='prev_page_token', full_name='api.ListUserResponse.prev_page_token', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='total_size', full_name='api.ListUserResponse.total_size', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1012,
+  serialized_end=1126,
 )
 
 _USER.fields_by_name['status'].enum_type = common_dot_status__pb2._STATUS
 _USER.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _USER.fields_by_name['updated_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_CREATEUSERREQUEST.fields_by_name['user'].message_type = _USER
+_CREATEUSERRESPONSE.fields_by_name['user'].message_type = _USER
+_READUSERRESPONSE.fields_by_name['user'].message_type = _USER
+_UPDATEUSERREQUEST.fields_by_name['user'].message_type = _USER
+_UPDATEUSERREQUEST.fields_by_name['update_mask'].message_type = google_dot_protobuf_dot_field__mask__pb2._FIELDMASK
+_UPDATEUSERRESPONSE.fields_by_name['user'].message_type = _USER
+_LISTUSERRESPONSE.fields_by_name['users'].message_type = _USER
 DESCRIPTOR.message_types_by_name['User'] = _USER
+DESCRIPTOR.message_types_by_name['CreateUserRequest'] = _CREATEUSERREQUEST
+DESCRIPTOR.message_types_by_name['CreateUserResponse'] = _CREATEUSERRESPONSE
+DESCRIPTOR.message_types_by_name['ReadUserRequest'] = _READUSERREQUEST
+DESCRIPTOR.message_types_by_name['ReadUserResponse'] = _READUSERRESPONSE
+DESCRIPTOR.message_types_by_name['UpdateUserRequest'] = _UPDATEUSERREQUEST
+DESCRIPTOR.message_types_by_name['UpdateUserResponse'] = _UPDATEUSERRESPONSE
+DESCRIPTOR.message_types_by_name['UpdateUserPasswordRequest'] = _UPDATEUSERPASSWORDREQUEST
+DESCRIPTOR.message_types_by_name['DeleteUserRequest'] = _DELETEUSERREQUEST
+DESCRIPTOR.message_types_by_name['ListUserRequest'] = _LISTUSERREQUEST
+DESCRIPTOR.message_types_by_name['ListUserResponse'] = _LISTUSERRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), {
@@ -109,6 +491,76 @@ User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), {
   })
 _sym_db.RegisterMessage(User)
 
+CreateUserRequest = _reflection.GeneratedProtocolMessageType('CreateUserRequest', (_message.Message,), {
+  'DESCRIPTOR' : _CREATEUSERREQUEST,
+  '__module__' : 'api.user_pb2'
+  # @@protoc_insertion_point(class_scope:api.CreateUserRequest)
+  })
+_sym_db.RegisterMessage(CreateUserRequest)
+
+CreateUserResponse = _reflection.GeneratedProtocolMessageType('CreateUserResponse', (_message.Message,), {
+  'DESCRIPTOR' : _CREATEUSERRESPONSE,
+  '__module__' : 'api.user_pb2'
+  # @@protoc_insertion_point(class_scope:api.CreateUserResponse)
+  })
+_sym_db.RegisterMessage(CreateUserResponse)
+
+ReadUserRequest = _reflection.GeneratedProtocolMessageType('ReadUserRequest', (_message.Message,), {
+  'DESCRIPTOR' : _READUSERREQUEST,
+  '__module__' : 'api.user_pb2'
+  # @@protoc_insertion_point(class_scope:api.ReadUserRequest)
+  })
+_sym_db.RegisterMessage(ReadUserRequest)
+
+ReadUserResponse = _reflection.GeneratedProtocolMessageType('ReadUserResponse', (_message.Message,), {
+  'DESCRIPTOR' : _READUSERRESPONSE,
+  '__module__' : 'api.user_pb2'
+  # @@protoc_insertion_point(class_scope:api.ReadUserResponse)
+  })
+_sym_db.RegisterMessage(ReadUserResponse)
+
+UpdateUserRequest = _reflection.GeneratedProtocolMessageType('UpdateUserRequest', (_message.Message,), {
+  'DESCRIPTOR' : _UPDATEUSERREQUEST,
+  '__module__' : 'api.user_pb2'
+  # @@protoc_insertion_point(class_scope:api.UpdateUserRequest)
+  })
+_sym_db.RegisterMessage(UpdateUserRequest)
+
+UpdateUserResponse = _reflection.GeneratedProtocolMessageType('UpdateUserResponse', (_message.Message,), {
+  'DESCRIPTOR' : _UPDATEUSERRESPONSE,
+  '__module__' : 'api.user_pb2'
+  # @@protoc_insertion_point(class_scope:api.UpdateUserResponse)
+  })
+_sym_db.RegisterMessage(UpdateUserResponse)
+
+UpdateUserPasswordRequest = _reflection.GeneratedProtocolMessageType('UpdateUserPasswordRequest', (_message.Message,), {
+  'DESCRIPTOR' : _UPDATEUSERPASSWORDREQUEST,
+  '__module__' : 'api.user_pb2'
+  # @@protoc_insertion_point(class_scope:api.UpdateUserPasswordRequest)
+  })
+_sym_db.RegisterMessage(UpdateUserPasswordRequest)
+
+DeleteUserRequest = _reflection.GeneratedProtocolMessageType('DeleteUserRequest', (_message.Message,), {
+  'DESCRIPTOR' : _DELETEUSERREQUEST,
+  '__module__' : 'api.user_pb2'
+  # @@protoc_insertion_point(class_scope:api.DeleteUserRequest)
+  })
+_sym_db.RegisterMessage(DeleteUserRequest)
+
+ListUserRequest = _reflection.GeneratedProtocolMessageType('ListUserRequest', (_message.Message,), {
+  'DESCRIPTOR' : _LISTUSERREQUEST,
+  '__module__' : 'api.user_pb2'
+  # @@protoc_insertion_point(class_scope:api.ListUserRequest)
+  })
+_sym_db.RegisterMessage(ListUserRequest)
+
+ListUserResponse = _reflection.GeneratedProtocolMessageType('ListUserResponse', (_message.Message,), {
+  'DESCRIPTOR' : _LISTUSERRESPONSE,
+  '__module__' : 'api.user_pb2'
+  # @@protoc_insertion_point(class_scope:api.ListUserResponse)
+  })
+_sym_db.RegisterMessage(ListUserResponse)
+
 
 DESCRIPTOR._options = None
 _USER.fields_by_name['id']._options = None
@@ -117,4 +569,87 @@ _USER.fields_by_name['email']._options = None
 _USER.fields_by_name['status']._options = None
 _USER.fields_by_name['created_at']._options = None
 _USER.fields_by_name['updated_at']._options = None
+_CREATEUSERREQUEST.fields_by_name['user']._options = None
+_READUSERREQUEST.fields_by_name['id']._options = None
+_UPDATEUSERREQUEST.fields_by_name['user']._options = None
+_UPDATEUSERPASSWORDREQUEST.fields_by_name['id']._options = None
+_UPDATEUSERPASSWORDREQUEST.fields_by_name['password']._options = None
+_DELETEUSERREQUEST.fields_by_name['id']._options = None
+_LISTUSERREQUEST.fields_by_name['page_size']._options = None
+
+_USERSERVICE = _descriptor.ServiceDescriptor(
+  name='UserService',
+  full_name='api.UserService',
+  file=DESCRIPTOR,
+  index=0,
+  serialized_options=None,
+  create_key=_descriptor._internal_create_key,
+  serialized_start=1129,
+  serialized_end=1690,
+  methods=[
+  _descriptor.MethodDescriptor(
+    name='Create',
+    full_name='api.UserService.Create',
+    index=0,
+    containing_service=None,
+    input_type=_CREATEUSERREQUEST,
+    output_type=_CREATEUSERRESPONSE,
+    serialized_options=b'\202\323\344\223\002\021\"\t/v1/users:\004user',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='Read',
+    full_name='api.UserService.Read',
+    index=1,
+    containing_service=None,
+    input_type=_READUSERREQUEST,
+    output_type=_READUSERRESPONSE,
+    serialized_options=b'\202\323\344\223\002\020\022\016/v1/users/{id}',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='Update',
+    full_name='api.UserService.Update',
+    index=2,
+    containing_service=None,
+    input_type=_UPDATEUSERREQUEST,
+    output_type=_UPDATEUSERRESPONSE,
+    serialized_options=b'\202\323\344\223\0028\032\023/v1/users/{user.id}:\004userZ\0332\023/v1/users/{user.id}:\004user',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='UpdatePassword',
+    full_name='api.UserService.UpdatePassword',
+    index=3,
+    containing_service=None,
+    input_type=_UPDATEUSERPASSWORDREQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    serialized_options=b'\202\323\344\223\002\034\032\027/v1/users/{id}/password:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='Delete',
+    full_name='api.UserService.Delete',
+    index=4,
+    containing_service=None,
+    input_type=_DELETEUSERREQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    serialized_options=b'\202\323\344\223\002\020*\016/v1/users/{id}',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='List',
+    full_name='api.UserService.List',
+    index=5,
+    containing_service=None,
+    input_type=_LISTUSERREQUEST,
+    output_type=_LISTUSERRESPONSE,
+    serialized_options=b'\202\323\344\223\002\013\022\t/v1/users',
+    create_key=_descriptor._internal_create_key,
+  ),
+])
+_sym_db.RegisterServiceDescriptor(_USERSERVICE)
+
+DESCRIPTOR.services_by_name['UserService'] = _USERSERVICE
+
 # @@protoc_insertion_point(module_scope)
