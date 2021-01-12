@@ -780,9 +780,7 @@
         "id": {
           "type": "string",
           "description": "User ID (UUID) to update password.",
-          "required": [
-            "id"
-          ]
+          "readOnly": true
         },
         "password": {
           "type": "string",
@@ -794,7 +792,6 @@
       },
       "description": "UpdateUserPasswordRequest is sent to update a user's password.",
       "required": [
-        "id",
         "password"
       ]
     },

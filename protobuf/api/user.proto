@@ -126,7 +126,7 @@ message UpdateUserResponse {
 // UpdateUserPasswordRequest is sent to update a user's password.
 message UpdateUserPasswordRequest {
   // User ID (UUID) to update password.
-  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
+  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = OUTPUT_ONLY];
 
   // User password to update.
   string password = 2 [(validate.rules).string.min_len = 10, (google.api.field_behavior) = REQUIRED];
