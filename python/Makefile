@@ -21,5 +21,6 @@ api:
 	-I=/tmp/grpc-gateway -I=/tmp/pgv \
 	--python_out=src/thingspect_api --grpc_python_out=src/thingspect_api \
 	api/device.proto \
+	api/datapoint.proto \
 	api/session.proto \
 	api/user.proto

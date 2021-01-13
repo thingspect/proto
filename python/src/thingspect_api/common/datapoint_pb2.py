@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z#github.com/thingspect/api/go/common',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x16\x63ommon/datapoint.proto\x12\x06\x63ommon\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x17validate/validate.proto\"\x8f\x02\n\tDataPoint\x12%\n\x07uniq_id\x18\x01 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18(\xe0\x41\x02R\x06uniqID\x12\x18\n\x04\x61ttr\x18\x02 \x01(\tB\n\xfa\x42\x04r\x02\x18(\xe0\x41\x02\x12\x11\n\x07int_val\x18\x03 \x01(\x12H\x00\x12\x12\n\x08\x66l64_val\x18\x04 \x01(\x01H\x00\x12\x11\n\x07str_val\x18\x05 \x01(\tH\x00\x12\x12\n\x08\x62ool_val\x18\x06 \x01(\x08H\x00\x12\x13\n\tbytes_val\x18\x10 \x01(\x0cH\x00\x12&\n\x02ts\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\r\n\x05token\x18\x08 \x01(\t\x12\x15\n\x08trace_id\x18\t \x01(\tB\x03\xe0\x41\x03\x42\x10\n\tval_oneof\x12\x03\xf8\x42\x01\x42%Z#github.com/thingspect/api/go/commonb\x06proto3'
+  serialized_pb=b'\n\x16\x63ommon/datapoint.proto\x12\x06\x63ommon\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x17validate/validate.proto\"\x94\x02\n\tDataPoint\x12%\n\x07uniq_id\x18\x01 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18(\xe0\x41\x02R\x06uniqID\x12\x18\n\x04\x61ttr\x18\x02 \x01(\tB\n\xfa\x42\x04r\x02\x18(\xe0\x41\x02\x12\x11\n\x07int_val\x18\x03 \x01(\x12H\x00\x12\x12\n\x08\x66l64_val\x18\x04 \x01(\x01H\x00\x12\x11\n\x07str_val\x18\x05 \x01(\tH\x00\x12\x12\n\x08\x62ool_val\x18\x06 \x01(\x08H\x00\x12\x13\n\tbytes_val\x18\x10 \x01(\x0cH\x00\x12&\n\x02ts\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x12\n\x05token\x18\x08 \x01(\tB\x03\xe0\x41\x03\x12\x15\n\x08trace_id\x18\t \x01(\tB\x03\xe0\x41\x03\x42\x10\n\tval_oneof\x12\x03\xf8\x42\x01\x42%Z#github.com/thingspect/api/go/commonb\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -99,7 +99,7 @@ _DATAPOINT = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='trace_id', full_name='common.DataPoint.trace_id', index=9,
       number=9, type=9, cpp_type=9, label=1,
@@ -125,7 +125,7 @@ _DATAPOINT = _descriptor.Descriptor(
     fields=[], serialized_options=b'\370B\001'),
   ],
   serialized_start=126,
-  serialized_end=397,
+  serialized_end=402,
 )
 
 _DATAPOINT.fields_by_name['ts'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
@@ -159,5 +159,6 @@ DESCRIPTOR._options = None
 _DATAPOINT.oneofs_by_name['val_oneof']._options = None
 _DATAPOINT.fields_by_name['uniq_id']._options = None
 _DATAPOINT.fields_by_name['attr']._options = None
+_DATAPOINT.fields_by_name['token']._options = None
 _DATAPOINT.fields_by_name['trace_id']._options = None
 # @@protoc_insertion_point(module_scope)

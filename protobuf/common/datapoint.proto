@@ -9,8 +9,7 @@ option go_package = "github.com/thingspect/api/go/common";
 
 // DataPoint represents a data point as stored in the database.
 message DataPoint {
-  // Device unique ID. Will be ignored during data ingest if provided as part of
-  // the topic.
+  // Device unique ID. Will be ignored during MQTT ingest if provided as part of the topic. Required for API publish.
   string uniq_id = 1 [json_name = "uniqID", (validate.rules).string = {min_len: 5, max_len: 40}, (google.api.field_behavior) = REQUIRED];
 
   // Device attribute.
@@ -36,15 +35,12 @@ message DataPoint {
     bytes bytes_val = 16;
   }
 
-  // Timestamp. If not present during data ingest, the current time will be
-  // used.
+  // Timestamp. If not present during MQTT ingest or API publish, the current time will be used.
   google.protobuf.Timestamp ts = 7;
 
-  // Authentication token (UUID). Only used during data ingest. Will be ignored
-  // if provided as part of the Payload message.
-  string token = 8;
+  // Authentication token (UUID). Only used during MQTT ingest. Will be ignored if provided as part of the Payload message.
+  string token = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
 
-  // Trace ID (UUID). Assigned by the platform, will be ignored if provided
-  // during data ingest.
+  // Trace ID (UUID). Assigned by the platform, will be ignored if provided during MQTT ingest or API publish.
   string trace_id = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
 }
