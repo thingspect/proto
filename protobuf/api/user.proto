@@ -138,6 +138,7 @@ message DeleteUserRequest {
   string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
 }
 
+// ListUserRequest is sent to list users.
 message ListUserRequest {
   // Number of users to retrieve in a single page. Defaults to 100 if not specified.
   int32 page_size = 1 [(validate.rules).int32 = {gte:0, lte: 250}];
@@ -146,6 +147,7 @@ message ListUserRequest {
   string page_token = 2;
 }
 
+// ListUserResponse is sent in response to a user list.
 message ListUserResponse {
   // User array.
   repeated User users = 1;
