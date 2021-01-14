@@ -124,6 +124,7 @@ message DeleteDeviceRequest {
   string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
 }
 
+// ListDeviceRequest is sent to list devices.
 message ListDeviceRequest {
   // Number of devices to retrieve in a single page. Defaults to 100 if not specified.
   int32 page_size = 1 [(validate.rules).int32 = {gte:0, lte: 250}];
@@ -132,6 +133,7 @@ message ListDeviceRequest {
   string page_token = 2;
 }
 
+// ListDeviceResponse is sent in response to a device list.
 message ListDeviceResponse {
   // Device array.
   repeated Device devices = 1;
