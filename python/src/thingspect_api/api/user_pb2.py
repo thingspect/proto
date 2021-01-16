@@ -17,6 +17,7 @@ from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__
 from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from protoc_gen_openapiv2.options import annotations_pb2 as protoc__gen__openapiv2_dot_options_dot_annotations__pb2
 from validate import validate_pb2 as validate_dot_validate__pb2
 
 
@@ -26,9 +27,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0e\x61pi/user.proto\x12\x03\x61pi\x1a\x13\x63ommon/status.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x17validate/validate.proto\"\xe7\x01\n\x04User\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x19\n\x05\x65mail\x18\x03 \x01(\tB\n\xfa\x42\x04r\x02`\x01\xe0\x41\x02\x12-\n\x06status\x18\x04 \x01(\x0e\x32\x0e.common.StatusB\r\xfa\x42\x07\x82\x01\x04\x18\x01\x18\x02\xe0\x41\x02\x12\x33\n\ncreated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"9\n\x11\x43reateUserRequest\x12$\n\x04user\x18\x01 \x01(\x0b\x32\t.api.UserB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"-\n\x12\x43reateUserResponse\x12\x17\n\x04user\x18\x01 \x01(\x0b\x32\t.api.User\"*\n\x0fReadUserRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"+\n\x10ReadUserResponse\x12\x17\n\x04user\x18\x01 \x01(\x0b\x32\t.api.User\"j\n\x11UpdateUserRequest\x12$\n\x04user\x18\x01 \x01(\x0b\x32\t.api.UserB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"-\n\x12UpdateUserResponse\x12\x17\n\x04user\x18\x01 \x01(\x0b\x32\t.api.User\"R\n\x19UpdateUserPasswordRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x03\x12\x1c\n\x08password\x18\x02 \x01(\tB\n\xfa\x42\x04r\x02\x10\n\xe0\x41\x02\",\n\x11\x44\x65leteUserRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"D\n\x0fListUserRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"r\n\x10ListUserResponse\x12\x18\n\x05users\x18\x01 \x03(\x0b\x32\t.api.User\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x17\n\x0fprev_page_token\x18\x03 \x01(\t\x12\x12\n\ntotal_size\x18\x04 \x01(\x05\x32\xb1\x04\n\x0bUserService\x12R\n\x06\x43reate\x12\x16.api.CreateUserRequest\x1a\x17.api.CreateUserResponse\"\x17\x82\xd3\xe4\x93\x02\x11\"\t/v1/users:\x04user\x12K\n\x04Read\x12\x14.api.ReadUserRequest\x1a\x15.api.ReadUserResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/users/{id}\x12y\n\x06Update\x12\x16.api.UpdateUserRequest\x1a\x17.api.UpdateUserResponse\">\x82\xd3\xe4\x93\x02\x38\x1a\x13/v1/users/{user.id}:\x04userZ\x1b\x32\x13/v1/users/{user.id}:\x04user\x12l\n\x0eUpdatePassword\x12\x1e.api.UpdateUserPasswordRequest\x1a\x16.google.protobuf.Empty\"\"\x82\xd3\xe4\x93\x02\x1c\x1a\x17/v1/users/{id}/password:\x01*\x12P\n\x06\x44\x65lete\x12\x16.api.DeleteUserRequest\x1a\x16.google.protobuf.Empty\"\x16\x82\xd3\xe4\x93\x02\x10*\x0e/v1/users/{id}\x12\x46\n\x04List\x12\x14.api.ListUserRequest\x1a\x15.api.ListUserResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\x12\t/v1/usersB\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x0e\x61pi/user.proto\x12\x03\x61pi\x1a\x13\x63ommon/status.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\xe7\x01\n\x04User\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x19\n\x05\x65mail\x18\x03 \x01(\tB\n\xfa\x42\x04r\x02`\x01\xe0\x41\x02\x12-\n\x06status\x18\x04 \x01(\x0e\x32\x0e.common.StatusB\r\xfa\x42\x07\x82\x01\x04\x18\x01\x18\x02\xe0\x41\x02\x12\x33\n\ncreated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"9\n\x11\x43reateUserRequest\x12$\n\x04user\x18\x01 \x01(\x0b\x32\t.api.UserB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"-\n\x12\x43reateUserResponse\x12\x17\n\x04user\x18\x01 \x01(\x0b\x32\t.api.User\"*\n\x0fReadUserRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"+\n\x10ReadUserResponse\x12\x17\n\x04user\x18\x01 \x01(\x0b\x32\t.api.User\"j\n\x11UpdateUserRequest\x12$\n\x04user\x18\x01 \x01(\x0b\x32\t.api.UserB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"-\n\x12UpdateUserResponse\x12\x17\n\x04user\x18\x01 \x01(\x0b\x32\t.api.User\"R\n\x19UpdateUserPasswordRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x03\x12\x1c\n\x08password\x18\x02 \x01(\tB\n\xfa\x42\x04r\x02\x10\n\xe0\x41\x02\",\n\x11\x44\x65leteUserRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"D\n\x0fListUserRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"r\n\x10ListUserResponse\x12\x18\n\x05users\x18\x01 \x03(\x0b\x32\t.api.User\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x17\n\x0fprev_page_token\x18\x03 \x01(\t\x12\x12\n\ntotal_size\x18\x04 \x01(\x05\x32\x99\x05\n\x0bUserService\x12\x93\x01\n\x06\x43reate\x12\x16.api.CreateUserRequest\x1a\x17.api.CreateUserResponse\"X\x82\xd3\xe4\x93\x02\x11\"\t/v1/users:\x04user\x92\x41>J<\n\x03\x32\x30\x31\x12\x35\n\x16\x41 successful response.\x12\x1b\n\x19\x1a\x17.api.CreateUserResponse\x12K\n\x04Read\x12\x14.api.ReadUserRequest\x1a\x15.api.ReadUserResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/users/{id}\x12y\n\x06Update\x12\x16.api.UpdateUserRequest\x1a\x17.api.UpdateUserResponse\">\x82\xd3\xe4\x93\x02\x38\x1a\x13/v1/users/{user.id}:\x04userZ\x1b\x32\x13/v1/users/{user.id}:\x04user\x12l\n\x0eUpdatePassword\x12\x1e.api.UpdateUserPasswordRequest\x1a\x16.google.protobuf.Empty\"\"\x82\xd3\xe4\x93\x02\x1c\x1a\x17/v1/users/{id}/password:\x01*\x12v\n\x06\x44\x65lete\x12\x16.api.DeleteUserRequest\x1a\x16.google.protobuf.Empty\"<\x82\xd3\xe4\x93\x02\x10*\x0e/v1/users/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x46\n\x04List\x12\x14.api.ListUserRequest\x1a\x15.api.ListUserResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\x12\t/v1/usersB\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
-  dependencies=[common_dot_status__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
+  dependencies=[common_dot_status__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
 
 
@@ -95,8 +96,8 @@ _USER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=229,
-  serialized_end=460,
+  serialized_start=277,
+  serialized_end=508,
 )
 
 
@@ -127,8 +128,8 @@ _CREATEUSERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=462,
-  serialized_end=519,
+  serialized_start=510,
+  serialized_end=567,
 )
 
 
@@ -159,8 +160,8 @@ _CREATEUSERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=521,
-  serialized_end=566,
+  serialized_start=569,
+  serialized_end=614,
 )
 
 
@@ -191,8 +192,8 @@ _READUSERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=568,
-  serialized_end=610,
+  serialized_start=616,
+  serialized_end=658,
 )
 
 
@@ -223,8 +224,8 @@ _READUSERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=612,
-  serialized_end=655,
+  serialized_start=660,
+  serialized_end=703,
 )
 
 
@@ -262,8 +263,8 @@ _UPDATEUSERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=657,
-  serialized_end=763,
+  serialized_start=705,
+  serialized_end=811,
 )
 
 
@@ -294,8 +295,8 @@ _UPDATEUSERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=765,
-  serialized_end=810,
+  serialized_start=813,
+  serialized_end=858,
 )
 
 
@@ -333,8 +334,8 @@ _UPDATEUSERPASSWORDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=812,
-  serialized_end=894,
+  serialized_start=860,
+  serialized_end=942,
 )
 
 
@@ -365,8 +366,8 @@ _DELETEUSERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=896,
-  serialized_end=940,
+  serialized_start=944,
+  serialized_end=988,
 )
 
 
@@ -404,8 +405,8 @@ _LISTUSERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=942,
-  serialized_end=1010,
+  serialized_start=990,
+  serialized_end=1058,
 )
 
 
@@ -457,8 +458,8 @@ _LISTUSERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1012,
-  serialized_end=1126,
+  serialized_start=1060,
+  serialized_end=1174,
 )
 
 _USER.fields_by_name['status'].enum_type = common_dot_status__pb2._STATUS
@@ -584,8 +585,8 @@ _USERSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1129,
-  serialized_end=1690,
+  serialized_start=1177,
+  serialized_end=1842,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',
@@ -594,7 +595,7 @@ _USERSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_CREATEUSERREQUEST,
     output_type=_CREATEUSERRESPONSE,
-    serialized_options=b'\202\323\344\223\002\021\"\t/v1/users:\004user',
+    serialized_options=b'\202\323\344\223\002\021\"\t/v1/users:\004user\222A>J<\n\003201\0225\n\026A successful response.\022\033\n\031\032\027.api.CreateUserResponse',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
@@ -634,7 +635,7 @@ _USERSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_DELETEUSERREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
-    serialized_options=b'\202\323\344\223\002\020*\016/v1/users/{id}',
+    serialized_options=b'\202\323\344\223\002\020*\016/v1/users/{id}\222A#J!\n\003204\022\032\n\026A successful response.\022\000',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
