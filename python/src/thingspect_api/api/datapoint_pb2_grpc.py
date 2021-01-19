@@ -16,15 +16,15 @@ class DataPointServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.Publish = channel.unary_unary(
-                '/api.DataPointService/Publish',
-                request_serializer=api_dot_datapoint__pb2.PublishDataPointRequest.SerializeToString,
+        self.PublishDataPoints = channel.unary_unary(
+                '/api.DataPointService/PublishDataPoints',
+                request_serializer=api_dot_datapoint__pb2.PublishDataPointsRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
-        self.Latest = channel.unary_unary(
-                '/api.DataPointService/Latest',
-                request_serializer=api_dot_datapoint__pb2.LatestDataPointRequest.SerializeToString,
-                response_deserializer=api_dot_datapoint__pb2.LatestDataPointResponse.FromString,
+        self.LatestDataPoints = channel.unary_unary(
+                '/api.DataPointService/LatestDataPoints',
+                request_serializer=api_dot_datapoint__pb2.LatestDataPointsRequest.SerializeToString,
+                response_deserializer=api_dot_datapoint__pb2.LatestDataPointsResponse.FromString,
                 )
 
 
@@ -32,14 +32,14 @@ class DataPointServiceServicer(object):
     """DataPointService contains functions to create and query data points.
     """
 
-    def Publish(self, request, context):
+    def PublishDataPoints(self, request, context):
         """Publish data points.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def Latest(self, request, context):
+    def LatestDataPoints(self, request, context):
         """List latest data point for each of a device's attributes.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -49,15 +49,15 @@ class DataPointServiceServicer(object):
 
 def add_DataPointServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Publish': grpc.unary_unary_rpc_method_handler(
-                    servicer.Publish,
-                    request_deserializer=api_dot_datapoint__pb2.PublishDataPointRequest.FromString,
+            'PublishDataPoints': grpc.unary_unary_rpc_method_handler(
+                    servicer.PublishDataPoints,
+                    request_deserializer=api_dot_datapoint__pb2.PublishDataPointsRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
-            'Latest': grpc.unary_unary_rpc_method_handler(
-                    servicer.Latest,
-                    request_deserializer=api_dot_datapoint__pb2.LatestDataPointRequest.FromString,
-                    response_serializer=api_dot_datapoint__pb2.LatestDataPointResponse.SerializeToString,
+            'LatestDataPoints': grpc.unary_unary_rpc_method_handler(
+                    servicer.LatestDataPoints,
+                    request_deserializer=api_dot_datapoint__pb2.LatestDataPointsRequest.FromString,
+                    response_serializer=api_dot_datapoint__pb2.LatestDataPointsResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -71,7 +71,7 @@ class DataPointService(object):
     """
 
     @staticmethod
-    def Publish(request,
+    def PublishDataPoints(request,
             target,
             options=(),
             channel_credentials=None,
@@ -81,14 +81,14 @@ class DataPointService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.DataPointService/Publish',
-            api_dot_datapoint__pb2.PublishDataPointRequest.SerializeToString,
+        return grpc.experimental.unary_unary(request, target, '/api.DataPointService/PublishDataPoints',
+            api_dot_datapoint__pb2.PublishDataPointsRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def Latest(request,
+    def LatestDataPoints(request,
             target,
             options=(),
             channel_credentials=None,
@@ -98,8 +98,8 @@ class DataPointService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.DataPointService/Latest',
-            api_dot_datapoint__pb2.LatestDataPointRequest.SerializeToString,
-            api_dot_datapoint__pb2.LatestDataPointResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/api.DataPointService/LatestDataPoints',
+            api_dot_datapoint__pb2.LatestDataPointsRequest.SerializeToString,
+            api_dot_datapoint__pb2.LatestDataPointsResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

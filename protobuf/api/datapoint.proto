@@ -13,7 +13,7 @@ option go_package = "github.com/thingspect/api/go/api";
 // DataPointService contains functions to create and query data points.
 service DataPointService {
   // Publish data points.
-  rpc Publish(PublishDataPointRequest) returns (google.protobuf.Empty) {
+  rpc PublishDataPoints(PublishDataPointsRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1/datapoints"
       body: "*"
@@ -30,21 +30,21 @@ service DataPointService {
   }
 
   // List latest data point for each of a device's attributes.
-  rpc Latest(LatestDataPointRequest) returns (LatestDataPointResponse) {
+  rpc LatestDataPoints(LatestDataPointsRequest) returns (LatestDataPointsResponse) {
     option (google.api.http) = {
       get: "/v1/datapoints/latest"
     };
   }
 }
 
-// PublishDataPointRequest is sent to publish data points.
-message PublishDataPointRequest {
+// PublishDataPointsRequest is sent to publish data points.
+message PublishDataPointsRequest {
   // Data point array to publish.
   repeated common.DataPoint points = 1 [(validate.rules).repeated.min_items = 1, (google.api.field_behavior) = REQUIRED];
 }
 
-// LatestDataPointRequest is sent to list latest device data points.
-message LatestDataPointRequest {
+// LatestDataPointsRequest is sent to list latest device data points.
+message LatestDataPointsRequest {
   // Identifier.
   oneof id_oneof {
     option (validate.required) = true;
@@ -57,8 +57,8 @@ message LatestDataPointRequest {
   }
 }
 
-// LatestDataPointResponse is sent in response to a device latest list.
-message LatestDataPointResponse {
+// LatestDataPointsResponse is sent in response to a device latest list.
+message LatestDataPointsResponse {
   // Data point array.
   repeated common.DataPoint points = 1;
 }
