@@ -16,30 +16,30 @@ class DeviceServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.Create = channel.unary_unary(
-                '/api.DeviceService/Create',
+        self.CreateDevice = channel.unary_unary(
+                '/api.DeviceService/CreateDevice',
                 request_serializer=api_dot_device__pb2.CreateDeviceRequest.SerializeToString,
-                response_deserializer=api_dot_device__pb2.CreateDeviceResponse.FromString,
+                response_deserializer=api_dot_device__pb2.Device.FromString,
                 )
-        self.Read = channel.unary_unary(
-                '/api.DeviceService/Read',
-                request_serializer=api_dot_device__pb2.ReadDeviceRequest.SerializeToString,
-                response_deserializer=api_dot_device__pb2.ReadDeviceResponse.FromString,
+        self.GetDevice = channel.unary_unary(
+                '/api.DeviceService/GetDevice',
+                request_serializer=api_dot_device__pb2.GetDeviceRequest.SerializeToString,
+                response_deserializer=api_dot_device__pb2.Device.FromString,
                 )
-        self.Update = channel.unary_unary(
-                '/api.DeviceService/Update',
+        self.UpdateDevice = channel.unary_unary(
+                '/api.DeviceService/UpdateDevice',
                 request_serializer=api_dot_device__pb2.UpdateDeviceRequest.SerializeToString,
-                response_deserializer=api_dot_device__pb2.UpdateDeviceResponse.FromString,
+                response_deserializer=api_dot_device__pb2.Device.FromString,
                 )
-        self.Delete = channel.unary_unary(
-                '/api.DeviceService/Delete',
+        self.DeleteDevice = channel.unary_unary(
+                '/api.DeviceService/DeleteDevice',
                 request_serializer=api_dot_device__pb2.DeleteDeviceRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
-        self.List = channel.unary_unary(
-                '/api.DeviceService/List',
-                request_serializer=api_dot_device__pb2.ListDeviceRequest.SerializeToString,
-                response_deserializer=api_dot_device__pb2.ListDeviceResponse.FromString,
+        self.ListDevices = channel.unary_unary(
+                '/api.DeviceService/ListDevices',
+                request_serializer=api_dot_device__pb2.ListDevicesRequest.SerializeToString,
+                response_deserializer=api_dot_device__pb2.ListDevicesResponse.FromString,
                 )
 
 
@@ -47,35 +47,35 @@ class DeviceServiceServicer(object):
     """DeviceService contains functions to query and modify devices.
     """
 
-    def Create(self, request, context):
+    def CreateDevice(self, request, context):
         """Create a device.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def Read(self, request, context):
-        """Read a device by ID.
+    def GetDevice(self, request, context):
+        """Get a device by ID.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def Update(self, request, context):
+    def UpdateDevice(self, request, context):
         """Update a device.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def Delete(self, request, context):
+    def DeleteDevice(self, request, context):
         """Delete a device by ID.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def List(self, request, context):
+    def ListDevices(self, request, context):
         """List all devices.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -85,30 +85,30 @@ class DeviceServiceServicer(object):
 
 def add_DeviceServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Create': grpc.unary_unary_rpc_method_handler(
-                    servicer.Create,
+            'CreateDevice': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateDevice,
                     request_deserializer=api_dot_device__pb2.CreateDeviceRequest.FromString,
-                    response_serializer=api_dot_device__pb2.CreateDeviceResponse.SerializeToString,
+                    response_serializer=api_dot_device__pb2.Device.SerializeToString,
             ),
-            'Read': grpc.unary_unary_rpc_method_handler(
-                    servicer.Read,
-                    request_deserializer=api_dot_device__pb2.ReadDeviceRequest.FromString,
-                    response_serializer=api_dot_device__pb2.ReadDeviceResponse.SerializeToString,
+            'GetDevice': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetDevice,
+                    request_deserializer=api_dot_device__pb2.GetDeviceRequest.FromString,
+                    response_serializer=api_dot_device__pb2.Device.SerializeToString,
             ),
-            'Update': grpc.unary_unary_rpc_method_handler(
-                    servicer.Update,
+            'UpdateDevice': grpc.unary_unary_rpc_method_handler(
+                    servicer.UpdateDevice,
                     request_deserializer=api_dot_device__pb2.UpdateDeviceRequest.FromString,
-                    response_serializer=api_dot_device__pb2.UpdateDeviceResponse.SerializeToString,
+                    response_serializer=api_dot_device__pb2.Device.SerializeToString,
             ),
-            'Delete': grpc.unary_unary_rpc_method_handler(
-                    servicer.Delete,
+            'DeleteDevice': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteDevice,
                     request_deserializer=api_dot_device__pb2.DeleteDeviceRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
-            'List': grpc.unary_unary_rpc_method_handler(
-                    servicer.List,
-                    request_deserializer=api_dot_device__pb2.ListDeviceRequest.FromString,
-                    response_serializer=api_dot_device__pb2.ListDeviceResponse.SerializeToString,
+            'ListDevices': grpc.unary_unary_rpc_method_handler(
+                    servicer.ListDevices,
+                    request_deserializer=api_dot_device__pb2.ListDevicesRequest.FromString,
+                    response_serializer=api_dot_device__pb2.ListDevicesResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -122,7 +122,7 @@ class DeviceService(object):
     """
 
     @staticmethod
-    def Create(request,
+    def CreateDevice(request,
             target,
             options=(),
             channel_credentials=None,
@@ -132,14 +132,14 @@ class DeviceService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.DeviceService/Create',
+        return grpc.experimental.unary_unary(request, target, '/api.DeviceService/CreateDevice',
             api_dot_device__pb2.CreateDeviceRequest.SerializeToString,
-            api_dot_device__pb2.CreateDeviceResponse.FromString,
+            api_dot_device__pb2.Device.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def Read(request,
+    def GetDevice(request,
             target,
             options=(),
             channel_credentials=None,
@@ -149,14 +149,14 @@ class DeviceService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.DeviceService/Read',
-            api_dot_device__pb2.ReadDeviceRequest.SerializeToString,
-            api_dot_device__pb2.ReadDeviceResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/api.DeviceService/GetDevice',
+            api_dot_device__pb2.GetDeviceRequest.SerializeToString,
+            api_dot_device__pb2.Device.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def Update(request,
+    def UpdateDevice(request,
             target,
             options=(),
             channel_credentials=None,
@@ -166,14 +166,14 @@ class DeviceService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.DeviceService/Update',
+        return grpc.experimental.unary_unary(request, target, '/api.DeviceService/UpdateDevice',
             api_dot_device__pb2.UpdateDeviceRequest.SerializeToString,
-            api_dot_device__pb2.UpdateDeviceResponse.FromString,
+            api_dot_device__pb2.Device.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def Delete(request,
+    def DeleteDevice(request,
             target,
             options=(),
             channel_credentials=None,
@@ -183,14 +183,14 @@ class DeviceService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.DeviceService/Delete',
+        return grpc.experimental.unary_unary(request, target, '/api.DeviceService/DeleteDevice',
             api_dot_device__pb2.DeleteDeviceRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def List(request,
+    def ListDevices(request,
             target,
             options=(),
             channel_credentials=None,
@@ -200,8 +200,8 @@ class DeviceService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.DeviceService/List',
-            api_dot_device__pb2.ListDeviceRequest.SerializeToString,
-            api_dot_device__pb2.ListDeviceResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/api.DeviceService/ListDevices',
+            api_dot_device__pb2.ListDevicesRequest.SerializeToString,
+            api_dot_device__pb2.ListDevicesResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

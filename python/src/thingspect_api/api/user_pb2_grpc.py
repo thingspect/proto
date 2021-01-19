@@ -16,35 +16,35 @@ class UserServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.Create = channel.unary_unary(
-                '/api.UserService/Create',
+        self.CreateUser = channel.unary_unary(
+                '/api.UserService/CreateUser',
                 request_serializer=api_dot_user__pb2.CreateUserRequest.SerializeToString,
-                response_deserializer=api_dot_user__pb2.CreateUserResponse.FromString,
+                response_deserializer=api_dot_user__pb2.User.FromString,
                 )
-        self.Read = channel.unary_unary(
-                '/api.UserService/Read',
-                request_serializer=api_dot_user__pb2.ReadUserRequest.SerializeToString,
-                response_deserializer=api_dot_user__pb2.ReadUserResponse.FromString,
+        self.GetUser = channel.unary_unary(
+                '/api.UserService/GetUser',
+                request_serializer=api_dot_user__pb2.GetUserRequest.SerializeToString,
+                response_deserializer=api_dot_user__pb2.User.FromString,
                 )
-        self.Update = channel.unary_unary(
-                '/api.UserService/Update',
+        self.UpdateUser = channel.unary_unary(
+                '/api.UserService/UpdateUser',
                 request_serializer=api_dot_user__pb2.UpdateUserRequest.SerializeToString,
-                response_deserializer=api_dot_user__pb2.UpdateUserResponse.FromString,
+                response_deserializer=api_dot_user__pb2.User.FromString,
                 )
-        self.UpdatePassword = channel.unary_unary(
-                '/api.UserService/UpdatePassword',
+        self.UpdateUserPassword = channel.unary_unary(
+                '/api.UserService/UpdateUserPassword',
                 request_serializer=api_dot_user__pb2.UpdateUserPasswordRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
-        self.Delete = channel.unary_unary(
-                '/api.UserService/Delete',
+        self.DeleteUser = channel.unary_unary(
+                '/api.UserService/DeleteUser',
                 request_serializer=api_dot_user__pb2.DeleteUserRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
-        self.List = channel.unary_unary(
-                '/api.UserService/List',
-                request_serializer=api_dot_user__pb2.ListUserRequest.SerializeToString,
-                response_deserializer=api_dot_user__pb2.ListUserResponse.FromString,
+        self.ListUsers = channel.unary_unary(
+                '/api.UserService/ListUsers',
+                request_serializer=api_dot_user__pb2.ListUsersRequest.SerializeToString,
+                response_deserializer=api_dot_user__pb2.ListUsersResponse.FromString,
                 )
 
 
@@ -52,42 +52,42 @@ class UserServiceServicer(object):
     """UserService contains functions to query and modify users.
     """
 
-    def Create(self, request, context):
+    def CreateUser(self, request, context):
         """Create a user.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def Read(self, request, context):
-        """Read a user by ID.
+    def GetUser(self, request, context):
+        """Get a user by ID.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def Update(self, request, context):
+    def UpdateUser(self, request, context):
         """Update a user.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def UpdatePassword(self, request, context):
+    def UpdateUserPassword(self, request, context):
         """Update a user's password.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def Delete(self, request, context):
+    def DeleteUser(self, request, context):
         """Delete a user by ID.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def List(self, request, context):
+    def ListUsers(self, request, context):
         """List all users.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -97,35 +97,35 @@ class UserServiceServicer(object):
 
 def add_UserServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Create': grpc.unary_unary_rpc_method_handler(
-                    servicer.Create,
+            'CreateUser': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateUser,
                     request_deserializer=api_dot_user__pb2.CreateUserRequest.FromString,
-                    response_serializer=api_dot_user__pb2.CreateUserResponse.SerializeToString,
+                    response_serializer=api_dot_user__pb2.User.SerializeToString,
             ),
-            'Read': grpc.unary_unary_rpc_method_handler(
-                    servicer.Read,
-                    request_deserializer=api_dot_user__pb2.ReadUserRequest.FromString,
-                    response_serializer=api_dot_user__pb2.ReadUserResponse.SerializeToString,
+            'GetUser': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetUser,
+                    request_deserializer=api_dot_user__pb2.GetUserRequest.FromString,
+                    response_serializer=api_dot_user__pb2.User.SerializeToString,
             ),
-            'Update': grpc.unary_unary_rpc_method_handler(
-                    servicer.Update,
+            'UpdateUser': grpc.unary_unary_rpc_method_handler(
+                    servicer.UpdateUser,
                     request_deserializer=api_dot_user__pb2.UpdateUserRequest.FromString,
-                    response_serializer=api_dot_user__pb2.UpdateUserResponse.SerializeToString,
+                    response_serializer=api_dot_user__pb2.User.SerializeToString,
             ),
-            'UpdatePassword': grpc.unary_unary_rpc_method_handler(
-                    servicer.UpdatePassword,
+            'UpdateUserPassword': grpc.unary_unary_rpc_method_handler(
+                    servicer.UpdateUserPassword,
                     request_deserializer=api_dot_user__pb2.UpdateUserPasswordRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
-            'Delete': grpc.unary_unary_rpc_method_handler(
-                    servicer.Delete,
+            'DeleteUser': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteUser,
                     request_deserializer=api_dot_user__pb2.DeleteUserRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
-            'List': grpc.unary_unary_rpc_method_handler(
-                    servicer.List,
-                    request_deserializer=api_dot_user__pb2.ListUserRequest.FromString,
-                    response_serializer=api_dot_user__pb2.ListUserResponse.SerializeToString,
+            'ListUsers': grpc.unary_unary_rpc_method_handler(
+                    servicer.ListUsers,
+                    request_deserializer=api_dot_user__pb2.ListUsersRequest.FromString,
+                    response_serializer=api_dot_user__pb2.ListUsersResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -139,7 +139,7 @@ class UserService(object):
     """
 
     @staticmethod
-    def Create(request,
+    def CreateUser(request,
             target,
             options=(),
             channel_credentials=None,
@@ -149,14 +149,14 @@ class UserService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.UserService/Create',
+        return grpc.experimental.unary_unary(request, target, '/api.UserService/CreateUser',
             api_dot_user__pb2.CreateUserRequest.SerializeToString,
-            api_dot_user__pb2.CreateUserResponse.FromString,
+            api_dot_user__pb2.User.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def Read(request,
+    def GetUser(request,
             target,
             options=(),
             channel_credentials=None,
@@ -166,14 +166,14 @@ class UserService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.UserService/Read',
-            api_dot_user__pb2.ReadUserRequest.SerializeToString,
-            api_dot_user__pb2.ReadUserResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/api.UserService/GetUser',
+            api_dot_user__pb2.GetUserRequest.SerializeToString,
+            api_dot_user__pb2.User.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def Update(request,
+    def UpdateUser(request,
             target,
             options=(),
             channel_credentials=None,
@@ -183,14 +183,14 @@ class UserService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.UserService/Update',
+        return grpc.experimental.unary_unary(request, target, '/api.UserService/UpdateUser',
             api_dot_user__pb2.UpdateUserRequest.SerializeToString,
-            api_dot_user__pb2.UpdateUserResponse.FromString,
+            api_dot_user__pb2.User.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def UpdatePassword(request,
+    def UpdateUserPassword(request,
             target,
             options=(),
             channel_credentials=None,
@@ -200,14 +200,14 @@ class UserService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.UserService/UpdatePassword',
+        return grpc.experimental.unary_unary(request, target, '/api.UserService/UpdateUserPassword',
             api_dot_user__pb2.UpdateUserPasswordRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def Delete(request,
+    def DeleteUser(request,
             target,
             options=(),
             channel_credentials=None,
@@ -217,14 +217,14 @@ class UserService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.UserService/Delete',
+        return grpc.experimental.unary_unary(request, target, '/api.UserService/DeleteUser',
             api_dot_user__pb2.DeleteUserRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def List(request,
+    def ListUsers(request,
             target,
             options=(),
             channel_credentials=None,
@@ -234,8 +234,8 @@ class UserService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.UserService/List',
-            api_dot_user__pb2.ListUserRequest.SerializeToString,
-            api_dot_user__pb2.ListUserResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/api.UserService/ListUsers',
+            api_dot_user__pb2.ListUsersRequest.SerializeToString,
+            api_dot_user__pb2.ListUsersResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

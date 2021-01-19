@@ -27,7 +27,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10\x61pi/device.proto\x12\x03\x61pi\x1a\x13\x63ommon/status.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\x84\x02\n\x06\x44\x65vice\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12%\n\x07uniq_id\x18\x03 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18(\xe0\x41\x02R\x06uniqID\x12-\n\x06status\x18\x04 \x01(\x0e\x32\x0e.common.StatusB\r\xfa\x42\x07\x82\x01\x04\x18\x01\x18\x02\xe0\x41\x02\x12\r\n\x05token\x18\x05 \x01(\t\x12\x33\n\ncreated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"?\n\x13\x43reateDeviceRequest\x12(\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"3\n\x14\x43reateDeviceResponse\x12\x1b\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.Device\",\n\x11ReadDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"1\n\x12ReadDeviceResponse\x12\x1b\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.Device\"p\n\x13UpdateDeviceRequest\x12(\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"3\n\x14UpdateDeviceResponse\x12\x1b\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.Device\".\n\x13\x44\x65leteDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"F\n\x11ListDeviceRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"x\n\x12ListDeviceResponse\x12\x1c\n\x07\x64\x65vices\x18\x01 \x03(\x0b\x32\x0b.api.Device\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x17\n\x0fprev_page_token\x18\x03 \x01(\t\x12\x12\n\ntotal_size\x18\x04 \x01(\x05\x32\xd8\x04\n\rDeviceService\x12\x9d\x01\n\x06\x43reate\x12\x18.api.CreateDeviceRequest\x1a\x19.api.CreateDeviceResponse\"^\x82\xd3\xe4\x93\x02\x15\"\x0b/v1/devices:\x06\x64\x65vice\x92\x41@J>\n\x03\x32\x30\x31\x12\x37\n\x16\x41 successful response.\x12\x1d\n\x1b\x1a\x19.api.CreateDeviceResponse\x12Q\n\x04Read\x12\x16.api.ReadDeviceRequest\x1a\x17.api.ReadDeviceResponse\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/devices/{id}\x12\x89\x01\n\x06Update\x12\x18.api.UpdateDeviceRequest\x1a\x19.api.UpdateDeviceResponse\"J\x82\xd3\xe4\x93\x02\x44\x1a\x17/v1/devices/{device.id}:\x06\x64\x65viceZ!2\x17/v1/devices/{device.id}:\x06\x64\x65vice\x12z\n\x06\x44\x65lete\x12\x18.api.DeleteDeviceRequest\x1a\x16.google.protobuf.Empty\">\x82\xd3\xe4\x93\x02\x12*\x10/v1/devices/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12L\n\x04List\x12\x16.api.ListDeviceRequest\x1a\x17.api.ListDeviceResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/devicesB\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x10\x61pi/device.proto\x12\x03\x61pi\x1a\x13\x63ommon/status.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\x84\x02\n\x06\x44\x65vice\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12%\n\x07uniq_id\x18\x03 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18(\xe0\x41\x02R\x06uniqID\x12-\n\x06status\x18\x04 \x01(\x0e\x32\x0e.common.StatusB\r\xfa\x42\x07\x82\x01\x04\x18\x01\x18\x02\xe0\x41\x02\x12\r\n\x05token\x18\x05 \x01(\t\x12\x33\n\ncreated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"?\n\x13\x43reateDeviceRequest\x12(\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"+\n\x10GetDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"p\n\x13UpdateDeviceRequest\x12(\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\".\n\x13\x44\x65leteDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"G\n\x12ListDevicesRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"y\n\x13ListDevicesResponse\x12\x1c\n\x07\x64\x65vices\x18\x01 \x03(\x0b\x32\x0b.api.Device\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x17\n\x0fprev_page_token\x18\x03 \x01(\t\x12\x12\n\ntotal_size\x18\x04 \x01(\x05\x32\xc2\x04\n\rDeviceService\x12\x87\x01\n\x0c\x43reateDevice\x12\x18.api.CreateDeviceRequest\x1a\x0b.api.Device\"P\x82\xd3\xe4\x93\x02\x15\"\x0b/v1/devices:\x06\x64\x65vice\x92\x41\x32J0\n\x03\x32\x30\x31\x12)\n\x16\x41 successful response.\x12\x0f\n\r\x1a\x0b.api.Device\x12I\n\tGetDevice\x12\x15.api.GetDeviceRequest\x1a\x0b.api.Device\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/devices/{id}\x12\x81\x01\n\x0cUpdateDevice\x12\x18.api.UpdateDeviceRequest\x1a\x0b.api.Device\"J\x82\xd3\xe4\x93\x02\x44\x1a\x17/v1/devices/{device.id}:\x06\x64\x65viceZ!2\x17/v1/devices/{device.id}:\x06\x64\x65vice\x12\x80\x01\n\x0c\x44\x65leteDevice\x12\x18.api.DeleteDeviceRequest\x1a\x16.google.protobuf.Empty\">\x82\xd3\xe4\x93\x02\x12*\x10/v1/devices/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12U\n\x0bListDevices\x12\x17.api.ListDevicesRequest\x1a\x18.api.ListDevicesResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/devicesB\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
   dependencies=[common_dot_status__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -140,48 +140,16 @@ _CREATEDEVICEREQUEST = _descriptor.Descriptor(
 )
 
 
-_CREATEDEVICERESPONSE = _descriptor.Descriptor(
-  name='CreateDeviceResponse',
-  full_name='api.CreateDeviceResponse',
+_GETDEVICEREQUEST = _descriptor.Descriptor(
+  name='GetDeviceRequest',
+  full_name='api.GetDeviceRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='device', full_name='api.CreateDeviceResponse.device', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=606,
-  serialized_end=657,
-)
-
-
-_READDEVICEREQUEST = _descriptor.Descriptor(
-  name='ReadDeviceRequest',
-  full_name='api.ReadDeviceRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='api.ReadDeviceRequest.id', index=0,
+      name='id', full_name='api.GetDeviceRequest.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -199,40 +167,8 @@ _READDEVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=659,
-  serialized_end=703,
-)
-
-
-_READDEVICERESPONSE = _descriptor.Descriptor(
-  name='ReadDeviceResponse',
-  full_name='api.ReadDeviceResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='device', full_name='api.ReadDeviceResponse.device', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=705,
-  serialized_end=754,
+  serialized_start=606,
+  serialized_end=649,
 )
 
 
@@ -270,40 +206,8 @@ _UPDATEDEVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=756,
-  serialized_end=868,
-)
-
-
-_UPDATEDEVICERESPONSE = _descriptor.Descriptor(
-  name='UpdateDeviceResponse',
-  full_name='api.UpdateDeviceResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='device', full_name='api.UpdateDeviceResponse.device', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=870,
-  serialized_end=921,
+  serialized_start=651,
+  serialized_end=763,
 )
 
 
@@ -334,28 +238,28 @@ _DELETEDEVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=923,
-  serialized_end=969,
+  serialized_start=765,
+  serialized_end=811,
 )
 
 
-_LISTDEVICEREQUEST = _descriptor.Descriptor(
-  name='ListDeviceRequest',
-  full_name='api.ListDeviceRequest',
+_LISTDEVICESREQUEST = _descriptor.Descriptor(
+  name='ListDevicesRequest',
+  full_name='api.ListDevicesRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='page_size', full_name='api.ListDeviceRequest.page_size', index=0,
+      name='page_size', full_name='api.ListDevicesRequest.page_size', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\372B\007\032\005\030\372\001(\000', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='page_token', full_name='api.ListDeviceRequest.page_token', index=1,
+      name='page_token', full_name='api.ListDevicesRequest.page_token', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -373,42 +277,42 @@ _LISTDEVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=971,
-  serialized_end=1041,
+  serialized_start=813,
+  serialized_end=884,
 )
 
 
-_LISTDEVICERESPONSE = _descriptor.Descriptor(
-  name='ListDeviceResponse',
-  full_name='api.ListDeviceResponse',
+_LISTDEVICESRESPONSE = _descriptor.Descriptor(
+  name='ListDevicesResponse',
+  full_name='api.ListDevicesResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='devices', full_name='api.ListDeviceResponse.devices', index=0,
+      name='devices', full_name='api.ListDevicesResponse.devices', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='next_page_token', full_name='api.ListDeviceResponse.next_page_token', index=1,
+      name='next_page_token', full_name='api.ListDevicesResponse.next_page_token', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='prev_page_token', full_name='api.ListDeviceResponse.prev_page_token', index=2,
+      name='prev_page_token', full_name='api.ListDevicesResponse.prev_page_token', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='total_size', full_name='api.ListDeviceResponse.total_size', index=3,
+      name='total_size', full_name='api.ListDevicesResponse.total_size', index=3,
       number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -426,30 +330,24 @@ _LISTDEVICERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1043,
-  serialized_end=1163,
+  serialized_start=886,
+  serialized_end=1007,
 )
 
 _DEVICE.fields_by_name['status'].enum_type = common_dot_status__pb2._STATUS
 _DEVICE.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _DEVICE.fields_by_name['updated_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _CREATEDEVICEREQUEST.fields_by_name['device'].message_type = _DEVICE
-_CREATEDEVICERESPONSE.fields_by_name['device'].message_type = _DEVICE
-_READDEVICERESPONSE.fields_by_name['device'].message_type = _DEVICE
 _UPDATEDEVICEREQUEST.fields_by_name['device'].message_type = _DEVICE
 _UPDATEDEVICEREQUEST.fields_by_name['update_mask'].message_type = google_dot_protobuf_dot_field__mask__pb2._FIELDMASK
-_UPDATEDEVICERESPONSE.fields_by_name['device'].message_type = _DEVICE
-_LISTDEVICERESPONSE.fields_by_name['devices'].message_type = _DEVICE
+_LISTDEVICESRESPONSE.fields_by_name['devices'].message_type = _DEVICE
 DESCRIPTOR.message_types_by_name['Device'] = _DEVICE
 DESCRIPTOR.message_types_by_name['CreateDeviceRequest'] = _CREATEDEVICEREQUEST
-DESCRIPTOR.message_types_by_name['CreateDeviceResponse'] = _CREATEDEVICERESPONSE
-DESCRIPTOR.message_types_by_name['ReadDeviceRequest'] = _READDEVICEREQUEST
-DESCRIPTOR.message_types_by_name['ReadDeviceResponse'] = _READDEVICERESPONSE
+DESCRIPTOR.message_types_by_name['GetDeviceRequest'] = _GETDEVICEREQUEST
 DESCRIPTOR.message_types_by_name['UpdateDeviceRequest'] = _UPDATEDEVICEREQUEST
-DESCRIPTOR.message_types_by_name['UpdateDeviceResponse'] = _UPDATEDEVICERESPONSE
 DESCRIPTOR.message_types_by_name['DeleteDeviceRequest'] = _DELETEDEVICEREQUEST
-DESCRIPTOR.message_types_by_name['ListDeviceRequest'] = _LISTDEVICEREQUEST
-DESCRIPTOR.message_types_by_name['ListDeviceResponse'] = _LISTDEVICERESPONSE
+DESCRIPTOR.message_types_by_name['ListDevicesRequest'] = _LISTDEVICESREQUEST
+DESCRIPTOR.message_types_by_name['ListDevicesResponse'] = _LISTDEVICESRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Device = _reflection.GeneratedProtocolMessageType('Device', (_message.Message,), {
@@ -466,26 +364,12 @@ CreateDeviceRequest = _reflection.GeneratedProtocolMessageType('CreateDeviceRequ
   })
 _sym_db.RegisterMessage(CreateDeviceRequest)
 
-CreateDeviceResponse = _reflection.GeneratedProtocolMessageType('CreateDeviceResponse', (_message.Message,), {
-  'DESCRIPTOR' : _CREATEDEVICERESPONSE,
+GetDeviceRequest = _reflection.GeneratedProtocolMessageType('GetDeviceRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETDEVICEREQUEST,
   '__module__' : 'api.device_pb2'
-  # @@protoc_insertion_point(class_scope:api.CreateDeviceResponse)
+  # @@protoc_insertion_point(class_scope:api.GetDeviceRequest)
   })
-_sym_db.RegisterMessage(CreateDeviceResponse)
-
-ReadDeviceRequest = _reflection.GeneratedProtocolMessageType('ReadDeviceRequest', (_message.Message,), {
-  'DESCRIPTOR' : _READDEVICEREQUEST,
-  '__module__' : 'api.device_pb2'
-  # @@protoc_insertion_point(class_scope:api.ReadDeviceRequest)
-  })
-_sym_db.RegisterMessage(ReadDeviceRequest)
-
-ReadDeviceResponse = _reflection.GeneratedProtocolMessageType('ReadDeviceResponse', (_message.Message,), {
-  'DESCRIPTOR' : _READDEVICERESPONSE,
-  '__module__' : 'api.device_pb2'
-  # @@protoc_insertion_point(class_scope:api.ReadDeviceResponse)
-  })
-_sym_db.RegisterMessage(ReadDeviceResponse)
+_sym_db.RegisterMessage(GetDeviceRequest)
 
 UpdateDeviceRequest = _reflection.GeneratedProtocolMessageType('UpdateDeviceRequest', (_message.Message,), {
   'DESCRIPTOR' : _UPDATEDEVICEREQUEST,
@@ -494,13 +378,6 @@ UpdateDeviceRequest = _reflection.GeneratedProtocolMessageType('UpdateDeviceRequ
   })
 _sym_db.RegisterMessage(UpdateDeviceRequest)
 
-UpdateDeviceResponse = _reflection.GeneratedProtocolMessageType('UpdateDeviceResponse', (_message.Message,), {
-  'DESCRIPTOR' : _UPDATEDEVICERESPONSE,
-  '__module__' : 'api.device_pb2'
-  # @@protoc_insertion_point(class_scope:api.UpdateDeviceResponse)
-  })
-_sym_db.RegisterMessage(UpdateDeviceResponse)
-
 DeleteDeviceRequest = _reflection.GeneratedProtocolMessageType('DeleteDeviceRequest', (_message.Message,), {
   'DESCRIPTOR' : _DELETEDEVICEREQUEST,
   '__module__' : 'api.device_pb2'
@@ -508,19 +385,19 @@ DeleteDeviceRequest = _reflection.GeneratedProtocolMessageType('DeleteDeviceRequ
   })
 _sym_db.RegisterMessage(DeleteDeviceRequest)
 
-ListDeviceRequest = _reflection.GeneratedProtocolMessageType('ListDeviceRequest', (_message.Message,), {
-  'DESCRIPTOR' : _LISTDEVICEREQUEST,
+ListDevicesRequest = _reflection.GeneratedProtocolMessageType('ListDevicesRequest', (_message.Message,), {
+  'DESCRIPTOR' : _LISTDEVICESREQUEST,
   '__module__' : 'api.device_pb2'
-  # @@protoc_insertion_point(class_scope:api.ListDeviceRequest)
+  # @@protoc_insertion_point(class_scope:api.ListDevicesRequest)
   })
-_sym_db.RegisterMessage(ListDeviceRequest)
+_sym_db.RegisterMessage(ListDevicesRequest)
 
-ListDeviceResponse = _reflection.GeneratedProtocolMessageType('ListDeviceResponse', (_message.Message,), {
-  'DESCRIPTOR' : _LISTDEVICERESPONSE,
+ListDevicesResponse = _reflection.GeneratedProtocolMessageType('ListDevicesResponse', (_message.Message,), {
+  'DESCRIPTOR' : _LISTDEVICESRESPONSE,
   '__module__' : 'api.device_pb2'
-  # @@protoc_insertion_point(class_scope:api.ListDeviceResponse)
+  # @@protoc_insertion_point(class_scope:api.ListDevicesResponse)
   })
-_sym_db.RegisterMessage(ListDeviceResponse)
+_sym_db.RegisterMessage(ListDevicesResponse)
 
 
 DESCRIPTOR._options = None
@@ -531,10 +408,10 @@ _DEVICE.fields_by_name['status']._options = None
 _DEVICE.fields_by_name['created_at']._options = None
 _DEVICE.fields_by_name['updated_at']._options = None
 _CREATEDEVICEREQUEST.fields_by_name['device']._options = None
-_READDEVICEREQUEST.fields_by_name['id']._options = None
+_GETDEVICEREQUEST.fields_by_name['id']._options = None
 _UPDATEDEVICEREQUEST.fields_by_name['device']._options = None
 _DELETEDEVICEREQUEST.fields_by_name['id']._options = None
-_LISTDEVICEREQUEST.fields_by_name['page_size']._options = None
+_LISTDEVICESREQUEST.fields_by_name['page_size']._options = None
 
 _DEVICESERVICE = _descriptor.ServiceDescriptor(
   name='DeviceService',
@@ -543,42 +420,42 @@ _DEVICESERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1166,
-  serialized_end=1766,
+  serialized_start=1010,
+  serialized_end=1588,
   methods=[
   _descriptor.MethodDescriptor(
-    name='Create',
-    full_name='api.DeviceService.Create',
+    name='CreateDevice',
+    full_name='api.DeviceService.CreateDevice',
     index=0,
     containing_service=None,
     input_type=_CREATEDEVICEREQUEST,
-    output_type=_CREATEDEVICERESPONSE,
-    serialized_options=b'\202\323\344\223\002\025\"\013/v1/devices:\006device\222A@J>\n\003201\0227\n\026A successful response.\022\035\n\033\032\031.api.CreateDeviceResponse',
+    output_type=_DEVICE,
+    serialized_options=b'\202\323\344\223\002\025\"\013/v1/devices:\006device\222A2J0\n\003201\022)\n\026A successful response.\022\017\n\r\032\013.api.Device',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
-    name='Read',
-    full_name='api.DeviceService.Read',
+    name='GetDevice',
+    full_name='api.DeviceService.GetDevice',
     index=1,
     containing_service=None,
-    input_type=_READDEVICEREQUEST,
-    output_type=_READDEVICERESPONSE,
+    input_type=_GETDEVICEREQUEST,
+    output_type=_DEVICE,
     serialized_options=b'\202\323\344\223\002\022\022\020/v1/devices/{id}',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
-    name='Update',
-    full_name='api.DeviceService.Update',
+    name='UpdateDevice',
+    full_name='api.DeviceService.UpdateDevice',
     index=2,
     containing_service=None,
     input_type=_UPDATEDEVICEREQUEST,
-    output_type=_UPDATEDEVICERESPONSE,
+    output_type=_DEVICE,
     serialized_options=b'\202\323\344\223\002D\032\027/v1/devices/{device.id}:\006deviceZ!2\027/v1/devices/{device.id}:\006device',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
-    name='Delete',
-    full_name='api.DeviceService.Delete',
+    name='DeleteDevice',
+    full_name='api.DeviceService.DeleteDevice',
     index=3,
     containing_service=None,
     input_type=_DELETEDEVICEREQUEST,
@@ -587,12 +464,12 @@ _DEVICESERVICE = _descriptor.ServiceDescriptor(
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
-    name='List',
-    full_name='api.DeviceService.List',
+    name='ListDevices',
+    full_name='api.DeviceService.ListDevices',
     index=4,
     containing_service=None,
-    input_type=_LISTDEVICEREQUEST,
-    output_type=_LISTDEVICERESPONSE,
+    input_type=_LISTDEVICESREQUEST,
+    output_type=_LISTDEVICESRESPONSE,
     serialized_options=b'\202\323\344\223\002\r\022\013/v1/devices',
     create_key=_descriptor._internal_create_key,
   ),

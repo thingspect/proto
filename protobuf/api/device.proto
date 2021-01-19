@@ -15,7 +15,7 @@ option go_package = "github.com/thingspect/api/go/api";
 // DeviceService contains functions to query and modify devices.
 service DeviceService {
   // Create a device.
-  rpc Create(CreateDeviceRequest) returns (CreateDeviceResponse) {
+  rpc CreateDevice(CreateDeviceRequest) returns (Device) {
     option (google.api.http) = {
       post: "/v1/devices"
       body: "device"
@@ -27,7 +27,7 @@ service DeviceService {
           description: "A successful response."
           schema: {
             json_schema: {
-              ref: ".api.CreateDeviceResponse"
+              ref: ".api.Device"
             }
           }
         }
@@ -35,15 +35,15 @@ service DeviceService {
     };
   }
 
-  // Read a device by ID.
-  rpc Read(ReadDeviceRequest) returns (ReadDeviceResponse) {
+  // Get a device by ID.
+  rpc GetDevice(GetDeviceRequest) returns (Device) {
     option (google.api.http) = {
       get: "/v1/devices/{id}"
     };
   }
 
   // Update a device.
-  rpc Update(UpdateDeviceRequest) returns (UpdateDeviceResponse) {
+  rpc UpdateDevice(UpdateDeviceRequest) returns (Device) {
     option (google.api.http) = {
       put: "/v1/devices/{device.id}"
       body: "device"
@@ -55,7 +55,7 @@ service DeviceService {
   }
 
   // Delete a device by ID.
-  rpc Delete(DeleteDeviceRequest) returns (google.protobuf.Empty) {
+  rpc DeleteDevice(DeleteDeviceRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       delete: "/v1/devices/{id}"
     };
@@ -71,7 +71,7 @@ service DeviceService {
   }
 
   // List all devices.
-  rpc List(ListDeviceRequest) returns (ListDeviceResponse) {
+  rpc ListDevices(ListDevicesRequest) returns (ListDevicesResponse) {
     option (google.api.http) = {
       get: "/v1/devices"
     };
@@ -108,22 +108,10 @@ message CreateDeviceRequest {
   Device device = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 }
 
-// CreateDeviceResponse is sent in response to a device creation.
-message CreateDeviceResponse {
-  // Created device message.
-  Device device = 1;
-}
-
-// ReadDeviceRequest is sent to read a device.
-message ReadDeviceRequest {
-  // Device ID (UUID) to read.
+// GetDeviceRequest is sent to get a device.
+message GetDeviceRequest {
+  // Device ID (UUID) to get.
   string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
-}
-
-// ReadDeviceResponse is sent in response to a device read.
-message ReadDeviceResponse {
-  // Read device message.
-  Device device = 1;
 }
 
 // UpdateDeviceRequest is sent to update a device.
@@ -135,29 +123,23 @@ message UpdateDeviceRequest {
   google.protobuf.FieldMask update_mask = 2;
 }
 
-// UpdateDeviceResponse is sent in response to a device update.
-message UpdateDeviceResponse {
-  // Updated device message.
-  Device device = 1;
-}
-
 // DeleteDeviceRequest is sent to delete a device.
 message DeleteDeviceRequest {
   // Device ID (UUID) to delete.
   string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
 }
 
-// ListDeviceRequest is sent to list devices.
-message ListDeviceRequest {
-  // Number of devices to retrieve in a single page. Defaults to 100 if not specified.
+// ListDevicesRequest is sent to list devices.
+message ListDevicesRequest {
+  // Number of devices to retrieve in a single page. Defaults to 50 if not specified.
   int32 page_size = 1 [(validate.rules).int32 = {gte:0, lte: 250}];
 
   // Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.
   string page_token = 2;
 }
 
-// ListDeviceResponse is sent in response to a device list.
-message ListDeviceResponse {
+// ListDevicesResponse is sent in response to a device list.
+message ListDevicesResponse {
   // Device array.
   repeated Device devices = 1;
 
