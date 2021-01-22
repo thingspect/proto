@@ -30,7 +30,7 @@ service DataPointService {
     };
   }
 
-  // List all data points within a time range.
+  // List all data points within a [end, start) time range in descending timestamp order.
   rpc ListDataPoints(ListDataPointsRequest) returns (ListDataPointsResponse) {
     option (google.api.http) = {
       get: "/v1/datapoints"
@@ -51,7 +51,7 @@ message PublishDataPointsRequest {
   repeated common.DataPoint points = 1 [(validate.rules).repeated.min_items = 1, (google.api.field_behavior) = REQUIRED];
 }
 
-// ListDataPointsRequest is sent to list device data points within a time range.
+// ListDataPointsRequest is sent to list device data points within a [end, start) time range in descending timestamp order.
 message ListDataPointsRequest {
   // Identifier.
   oneof id_oneof {
@@ -67,11 +67,11 @@ message ListDataPointsRequest {
   // Device attribute. If not specified, all attributes are returned.
   string attr = 3 [(validate.rules).string = {min_len: 0, max_len: 40}];
 
-  // Data points range start time. Defaults to end_time - 24 hours if not specified. Maximum supported time range is 90 days.
-  google.protobuf.Timestamp start_time = 4;
-
   // Data points range end time. Defaults to current time if not specified. Maximum supported time range is 90 days.
-  google.protobuf.Timestamp end_time = 5;
+  google.protobuf.Timestamp end_time = 4;
+
+  // Data points range start time. Defaults to end_time - 24 hours if not specified or after end_time. Maximum supported time range is 90 days.
+  google.protobuf.Timestamp start_time = 5;
 }
 
 // ListDataPointsResponse is sent in response to a device data points list.

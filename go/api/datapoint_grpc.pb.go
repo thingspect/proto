@@ -21,7 +21,7 @@ const _ = grpc.SupportPackageIsVersion7
 type DataPointServiceClient interface {
 	// Publish data points.
 	PublishDataPoints(ctx context.Context, in *PublishDataPointsRequest, opts ...grpc.CallOption) (*empty.Empty, error)
-	// List all data points within a time range.
+	// List all data points within a [end, start) time range in descending timestamp order.
 	ListDataPoints(ctx context.Context, in *ListDataPointsRequest, opts ...grpc.CallOption) (*ListDataPointsResponse, error)
 	// List latest data point for each of a device's attributes.
 	LatestDataPoints(ctx context.Context, in *LatestDataPointsRequest, opts ...grpc.CallOption) (*LatestDataPointsResponse, error)
@@ -68,7 +68,7 @@ func (c *dataPointServiceClient) LatestDataPoints(ctx context.Context, in *Lates
 type DataPointServiceServer interface {
 	// Publish data points.
 	PublishDataPoints(context.Context, *PublishDataPointsRequest) (*empty.Empty, error)
-	// List all data points within a time range.
+	// List all data points within a [end, start) time range in descending timestamp order.
 	ListDataPoints(context.Context, *ListDataPointsRequest) (*ListDataPointsResponse, error)
 	// List latest data point for each of a device's attributes.
 	LatestDataPoints(context.Context, *LatestDataPointsRequest) (*LatestDataPointsResponse, error)
