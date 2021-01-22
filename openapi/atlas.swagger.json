@@ -85,21 +85,6 @@
             "required": false,
             "type": "string",
             "format": "date-time"
-          },
-          {
-            "name": "pageSize",
-            "description": "Number of data points to retrieve in a single page. Defaults to 50 if not specified, with a maximum of 1000.",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "pageToken",
-            "description": "Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.",
-            "in": "query",
-            "required": false,
-            "type": "string"
           }
         ],
         "tags": [
@@ -823,19 +808,6 @@
             "$ref": "#/definitions/commonDataPoint"
           },
           "description": "Data point array, ordered by descending created_at timestamp."
-        },
-        "nextPageToken": {
-          "type": "string",
-          "description": "Pagination token used to retrieve the next page of results. Not returned for the last page."
-        },
-        "prevPageToken": {
-          "type": "string",
-          "description": "Pagination token used to retrieve the previous page of results. Not returned for the first page."
-        },
-        "totalSize": {
-          "type": "integer",
-          "format": "int32",
-          "description": "Total number of data points available for this time range."
         }
       },
       "description": "ListDataPointsResponse is sent in response to a device data points list."

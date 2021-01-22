@@ -160,15 +160,6 @@ func (m *ListDataPointsRequest) Validate() error {
 		}
 	}
 
-	if val := m.GetPageSize(); val < 0 || val > 1000 {
-		return ListDataPointsRequestValidationError{
-			field:  "PageSize",
-			reason: "value must be inside range [0, 1000]",
-		}
-	}
-
-	// no validation rules for PageToken
-
 	switch m.IdOneof.(type) {
 
 	case *ListDataPointsRequest_UniqId:
@@ -266,12 +257,6 @@ func (m *ListDataPointsResponse) Validate() error {
 		}
 
 	}
-
-	// no validation rules for NextPageToken
-
-	// no validation rules for PrevPageToken
-
-	// no validation rules for TotalSize
 
 	return nil
 }
