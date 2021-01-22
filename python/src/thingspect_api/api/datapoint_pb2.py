@@ -26,7 +26,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13\x61pi/datapoint.proto\x12\x03\x61pi\x1a\x16\x63ommon/datapoint.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"J\n\x18PublishDataPointsRequest\x12.\n\x06points\x18\x01 \x03(\x0b\x32\x11.common.DataPointB\x0b\xfa\x42\x05\x92\x01\x02\x08\x01\xe0\x41\x02\"\xd3\x01\n\x15ListDataPointsRequest\x12\x19\n\x07uniq_id\x18\x01 \x01(\tH\x00R\x06uniqID\x12\x17\n\x06\x64\x65v_id\x18\x02 \x01(\tH\x00R\x05\x64\x65vID\x12\x17\n\x04\x61ttr\x18\x03 \x01(\tB\t\xfa\x42\x06r\x04\x10\x00\x18(\x12.\n\nstart_time\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x0f\n\x08id_oneof\x12\x03\xf8\x42\x01\";\n\x16ListDataPointsResponse\x12!\n\x06points\x18\x01 \x03(\x0b\x32\x11.common.DataPoint\"^\n\x17LatestDataPointsRequest\x12\x19\n\x07uniq_id\x18\x01 \x01(\tH\x00R\x06uniqID\x12\x17\n\x06\x64\x65v_id\x18\x02 \x01(\tH\x00R\x05\x64\x65vIDB\x0f\n\x08id_oneof\x12\x03\xf8\x42\x01\"=\n\x18LatestDataPointsResponse\x12!\n\x06points\x18\x01 \x03(\x0b\x32\x11.common.DataPoint2\xf3\x02\n\x10\x44\x61taPointService\x12\x8b\x01\n\x11PublishDataPoints\x12\x1d.api.PublishDataPointsRequest\x1a\x16.google.protobuf.Empty\"?\x82\xd3\xe4\x93\x02\x13\"\x0e/v1/datapoints:\x01*\x92\x41#J!\n\x03\x32\x30\x32\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x61\n\x0eListDataPoints\x12\x1a.api.ListDataPointsRequest\x1a\x1b.api.ListDataPointsResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/datapoints\x12n\n\x10LatestDataPoints\x12\x1c.api.LatestDataPointsRequest\x1a\x1d.api.LatestDataPointsResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/v1/datapoints/latestB\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x13\x61pi/datapoint.proto\x12\x03\x61pi\x1a\x16\x63ommon/datapoint.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"J\n\x18PublishDataPointsRequest\x12.\n\x06points\x18\x01 \x03(\x0b\x32\x11.common.DataPointB\x0b\xfa\x42\x05\x92\x01\x02\x08\x01\xe0\x41\x02\"\xd3\x01\n\x15ListDataPointsRequest\x12\x19\n\x07uniq_id\x18\x01 \x01(\tH\x00R\x06uniqID\x12\x17\n\x06\x64\x65v_id\x18\x02 \x01(\tH\x00R\x05\x64\x65vID\x12\x17\n\x04\x61ttr\x18\x03 \x01(\tB\t\xfa\x42\x06r\x04\x10\x00\x18(\x12,\n\x08\x65nd_time\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12.\n\nstart_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x0f\n\x08id_oneof\x12\x03\xf8\x42\x01\";\n\x16ListDataPointsResponse\x12!\n\x06points\x18\x01 \x03(\x0b\x32\x11.common.DataPoint\"^\n\x17LatestDataPointsRequest\x12\x19\n\x07uniq_id\x18\x01 \x01(\tH\x00R\x06uniqID\x12\x17\n\x06\x64\x65v_id\x18\x02 \x01(\tH\x00R\x05\x64\x65vIDB\x0f\n\x08id_oneof\x12\x03\xf8\x42\x01\"=\n\x18LatestDataPointsResponse\x12!\n\x06points\x18\x01 \x03(\x0b\x32\x11.common.DataPoint2\xf3\x02\n\x10\x44\x61taPointService\x12\x8b\x01\n\x11PublishDataPoints\x12\x1d.api.PublishDataPointsRequest\x1a\x16.google.protobuf.Empty\"?\x82\xd3\xe4\x93\x02\x13\"\x0e/v1/datapoints:\x01*\x92\x41#J!\n\x03\x32\x30\x32\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x61\n\x0eListDataPoints\x12\x1a.api.ListDataPointsRequest\x1a\x1b.api.ListDataPointsResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/datapoints\x12n\n\x10LatestDataPoints\x12\x1c.api.LatestDataPointsRequest\x1a\x1d.api.LatestDataPointsResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/v1/datapoints/latestB\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
   dependencies=[common_dot_datapoint__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -95,14 +95,14 @@ _LISTDATAPOINTSREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=b'\372B\006r\004\020\000\030(', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='start_time', full_name='api.ListDataPointsRequest.start_time', index=3,
+      name='end_time', full_name='api.ListDataPointsRequest.end_time', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='end_time', full_name='api.ListDataPointsRequest.end_time', index=4,
+      name='start_time', full_name='api.ListDataPointsRequest.start_time', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -238,8 +238,8 @@ _LATESTDATAPOINTSRESPONSE = _descriptor.Descriptor(
 )
 
 _PUBLISHDATAPOINTSREQUEST.fields_by_name['points'].message_type = common_dot_datapoint__pb2._DATAPOINT
-_LISTDATAPOINTSREQUEST.fields_by_name['start_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _LISTDATAPOINTSREQUEST.fields_by_name['end_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_LISTDATAPOINTSREQUEST.fields_by_name['start_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _LISTDATAPOINTSREQUEST.oneofs_by_name['id_oneof'].fields.append(
   _LISTDATAPOINTSREQUEST.fields_by_name['uniq_id'])
 _LISTDATAPOINTSREQUEST.fields_by_name['uniq_id'].containing_oneof = _LISTDATAPOINTSREQUEST.oneofs_by_name['id_oneof']

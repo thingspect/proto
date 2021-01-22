@@ -140,20 +140,20 @@ func (m *ListDataPointsRequest) Validate() error {
 		}
 	}
 
-	if v, ok := interface{}(m.GetStartTime()).(interface{ Validate() error }); ok {
+	if v, ok := interface{}(m.GetEndTime()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return ListDataPointsRequestValidationError{
-				field:  "StartTime",
+				field:  "EndTime",
 				reason: "embedded message failed validation",
 				cause:  err,
 			}
 		}
 	}
 
-	if v, ok := interface{}(m.GetEndTime()).(interface{ Validate() error }); ok {
+	if v, ok := interface{}(m.GetStartTime()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return ListDataPointsRequestValidationError{
-				field:  "EndTime",
+				field:  "StartTime",
 				reason: "embedded message failed validation",
 				cause:  err,
 			}

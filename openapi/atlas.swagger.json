@@ -32,7 +32,7 @@
   "paths": {
     "/v1/datapoints": {
       "get": {
-        "summary": "List all data points within a time range.",
+        "summary": "List all data points within a [end, start) time range in descending timestamp order.",
         "operationId": "DataPointService_ListDataPoints",
         "responses": {
           "200": {
@@ -71,16 +71,16 @@
             "type": "string"
           },
           {
-            "name": "startTime",
-            "description": "Data points range start time. Defaults to end_time - 24 hours if not specified. Maximum supported time range is 90 days.",
+            "name": "endTime",
+            "description": "Data points range end time. Defaults to current time if not specified. Maximum supported time range is 90 days.",
             "in": "query",
             "required": false,
             "type": "string",
             "format": "date-time"
           },
           {
-            "name": "endTime",
-            "description": "Data points range end time. Defaults to current time if not specified. Maximum supported time range is 90 days.",
+            "name": "startTime",
+            "description": "Data points range start time. Defaults to end_time - 24 hours if not specified or after end_time. Maximum supported time range is 90 days.",
             "in": "query",
             "required": false,
             "type": "string",
