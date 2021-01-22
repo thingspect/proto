@@ -26,7 +26,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13\x61pi/datapoint.proto\x12\x03\x61pi\x1a\x16\x63ommon/datapoint.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"J\n\x18PublishDataPointsRequest\x12.\n\x06points\x18\x01 \x03(\x0b\x32\x11.common.DataPointB\x0b\xfa\x42\x05\x92\x01\x02\x08\x01\xe0\x41\x02\"\x86\x02\n\x15ListDataPointsRequest\x12\x19\n\x07uniq_id\x18\x01 \x01(\tH\x00R\x06uniqID\x12\x17\n\x06\x64\x65v_id\x18\x02 \x01(\tH\x00R\x05\x64\x65vID\x12\x17\n\x04\x61ttr\x18\x03 \x01(\tB\t\xfa\x42\x06r\x04\x10\x00\x18(\x12.\n\nstart_time\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1d\n\tpage_size\x18\x06 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xe8\x07(\x00\x12\x12\n\npage_token\x18\x07 \x01(\tB\x0f\n\x08id_oneof\x12\x03\xf8\x42\x01\"\x81\x01\n\x16ListDataPointsResponse\x12!\n\x06points\x18\x01 \x03(\x0b\x32\x11.common.DataPoint\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x17\n\x0fprev_page_token\x18\x03 \x01(\t\x12\x12\n\ntotal_size\x18\x04 \x01(\x05\"^\n\x17LatestDataPointsRequest\x12\x19\n\x07uniq_id\x18\x01 \x01(\tH\x00R\x06uniqID\x12\x17\n\x06\x64\x65v_id\x18\x02 \x01(\tH\x00R\x05\x64\x65vIDB\x0f\n\x08id_oneof\x12\x03\xf8\x42\x01\"=\n\x18LatestDataPointsResponse\x12!\n\x06points\x18\x01 \x03(\x0b\x32\x11.common.DataPoint2\xf3\x02\n\x10\x44\x61taPointService\x12\x8b\x01\n\x11PublishDataPoints\x12\x1d.api.PublishDataPointsRequest\x1a\x16.google.protobuf.Empty\"?\x82\xd3\xe4\x93\x02\x13\"\x0e/v1/datapoints:\x01*\x92\x41#J!\n\x03\x32\x30\x32\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x61\n\x0eListDataPoints\x12\x1a.api.ListDataPointsRequest\x1a\x1b.api.ListDataPointsResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/datapoints\x12n\n\x10LatestDataPoints\x12\x1c.api.LatestDataPointsRequest\x1a\x1d.api.LatestDataPointsResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/v1/datapoints/latestB\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x13\x61pi/datapoint.proto\x12\x03\x61pi\x1a\x16\x63ommon/datapoint.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"J\n\x18PublishDataPointsRequest\x12.\n\x06points\x18\x01 \x03(\x0b\x32\x11.common.DataPointB\x0b\xfa\x42\x05\x92\x01\x02\x08\x01\xe0\x41\x02\"\xd3\x01\n\x15ListDataPointsRequest\x12\x19\n\x07uniq_id\x18\x01 \x01(\tH\x00R\x06uniqID\x12\x17\n\x06\x64\x65v_id\x18\x02 \x01(\tH\x00R\x05\x64\x65vID\x12\x17\n\x04\x61ttr\x18\x03 \x01(\tB\t\xfa\x42\x06r\x04\x10\x00\x18(\x12.\n\nstart_time\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x0f\n\x08id_oneof\x12\x03\xf8\x42\x01\";\n\x16ListDataPointsResponse\x12!\n\x06points\x18\x01 \x03(\x0b\x32\x11.common.DataPoint\"^\n\x17LatestDataPointsRequest\x12\x19\n\x07uniq_id\x18\x01 \x01(\tH\x00R\x06uniqID\x12\x17\n\x06\x64\x65v_id\x18\x02 \x01(\tH\x00R\x05\x64\x65vIDB\x0f\n\x08id_oneof\x12\x03\xf8\x42\x01\"=\n\x18LatestDataPointsResponse\x12!\n\x06points\x18\x01 \x03(\x0b\x32\x11.common.DataPoint2\xf3\x02\n\x10\x44\x61taPointService\x12\x8b\x01\n\x11PublishDataPoints\x12\x1d.api.PublishDataPointsRequest\x1a\x16.google.protobuf.Empty\"?\x82\xd3\xe4\x93\x02\x13\"\x0e/v1/datapoints:\x01*\x92\x41#J!\n\x03\x32\x30\x32\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x61\n\x0eListDataPoints\x12\x1a.api.ListDataPointsRequest\x1a\x1b.api.ListDataPointsResponse\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/datapoints\x12n\n\x10LatestDataPoints\x12\x1c.api.LatestDataPointsRequest\x1a\x1d.api.LatestDataPointsResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/v1/datapoints/latestB\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
   dependencies=[common_dot_datapoint__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -108,20 +108,6 @@ _LISTDATAPOINTSREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='page_size', full_name='api.ListDataPointsRequest.page_size', index=5,
-      number=6, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=b'\372B\007\032\005\030\350\007(\000', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='page_token', full_name='api.ListDataPointsRequest.page_token', index=6,
-      number=7, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -140,7 +126,7 @@ _LISTDATAPOINTSREQUEST = _descriptor.Descriptor(
     fields=[], serialized_options=b'\370B\001'),
   ],
   serialized_start=327,
-  serialized_end=589,
+  serialized_end=538,
 )
 
 
@@ -159,27 +145,6 @@ _LISTDATAPOINTSRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='next_page_token', full_name='api.ListDataPointsResponse.next_page_token', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='prev_page_token', full_name='api.ListDataPointsResponse.prev_page_token', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='total_size', full_name='api.ListDataPointsResponse.total_size', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -192,8 +157,8 @@ _LISTDATAPOINTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=592,
-  serialized_end=721,
+  serialized_start=540,
+  serialized_end=599,
 )
 
 
@@ -236,8 +201,8 @@ _LATESTDATAPOINTSREQUEST = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[], serialized_options=b'\370B\001'),
   ],
-  serialized_start=723,
-  serialized_end=817,
+  serialized_start=601,
+  serialized_end=695,
 )
 
 
@@ -268,8 +233,8 @@ _LATESTDATAPOINTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=819,
-  serialized_end=880,
+  serialized_start=697,
+  serialized_end=758,
 )
 
 _PUBLISHDATAPOINTSREQUEST.fields_by_name['points'].message_type = common_dot_datapoint__pb2._DATAPOINT
@@ -336,7 +301,6 @@ DESCRIPTOR._options = None
 _PUBLISHDATAPOINTSREQUEST.fields_by_name['points']._options = None
 _LISTDATAPOINTSREQUEST.oneofs_by_name['id_oneof']._options = None
 _LISTDATAPOINTSREQUEST.fields_by_name['attr']._options = None
-_LISTDATAPOINTSREQUEST.fields_by_name['page_size']._options = None
 _LATESTDATAPOINTSREQUEST.oneofs_by_name['id_oneof']._options = None
 
 _DATAPOINTSERVICE = _descriptor.ServiceDescriptor(
@@ -346,8 +310,8 @@ _DATAPOINTSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=883,
-  serialized_end=1254,
+  serialized_start=761,
+  serialized_end=1132,
   methods=[
   _descriptor.MethodDescriptor(
     name='PublishDataPoints',
