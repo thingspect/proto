@@ -14,8 +14,7 @@ common:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
 	--go_out=. --go_opt=paths=source_relative \
 	--validate_out=. --validate_opt=lang=go,paths=source_relative \
-	common/datapoint.proto \
-	common/status.proto
+	common/datapoint.proto
 
 mqtt:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
@@ -31,6 +30,7 @@ api:
 	api/device.proto \
 	api/datapoint.proto \
 	api/session.proto \
+	api/status.proto \
 	api/user.proto
 
 mod:
@@ -46,4 +46,5 @@ openapi:
 	api/device.proto \
 	api/datapoint.proto \
 	api/session.proto \
+	api/status.proto \
 	api/user.proto
