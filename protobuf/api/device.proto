@@ -1,7 +1,7 @@
 syntax = "proto3";
 package api;
 
-import "common/status.proto";
+import "api/status.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/field_mask.proto";
@@ -90,7 +90,7 @@ message Device {
   string uniq_id = 3 [json_name = "uniqID", (validate.rules).string = {min_len: 5, max_len: 40}, (google.api.field_behavior) = REQUIRED];
 
   // Device status.
-  common.Status status = 4 [(validate.rules).enum = {in: [1,2]}, (google.api.field_behavior) = REQUIRED];
+  Status status = 4 [(validate.rules).enum = {in: [3,6]}, (google.api.field_behavior) = REQUIRED];
 
   // Authentication token (UUID).
   string token = 5;

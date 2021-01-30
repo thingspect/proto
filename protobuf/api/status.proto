@@ -1,7 +1,7 @@
 syntax = "proto3";
-package common;
+package api;
 
-option go_package = "github.com/thingspect/api/go/common";
+option go_package = "github.com/thingspect/api/go/api";
 
 // Status represents the status of a message.
 enum Status {
@@ -9,8 +9,8 @@ enum Status {
   STATUS_UNSPECIFIED = 0;
 
   // Message subject is active.
-  ACTIVE = 1;
+  ACTIVE = 3;
 
   // Message subject is disabled.
-  DISABLED = 2;
+  DISABLED = 6;
 }

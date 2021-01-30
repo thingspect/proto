@@ -8,8 +8,7 @@ deps:
 common:
 	python -m grpc_tools.protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
 	--python_out=src/thingspect_api \
-	common/datapoint.proto \
-	common/status.proto
+	common/datapoint.proto
 
 mqtt:
 	python -m grpc_tools.protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
@@ -23,4 +22,5 @@ api:
 	api/device.proto \
 	api/datapoint.proto \
 	api/session.proto \
+	api/status.proto \
 	api/user.proto
