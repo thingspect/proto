@@ -1,0 +1,25 @@
+syntax = "proto3";
+package common;
+
+option go_package = "github.com/thingspect/api/go/common";
+
+// Role represents the role of a user.
+enum Role {
+  // Role is not specified.
+  ROLE_UNSPECIFIED = 0;
+
+  // Contacts are not allowed to log in to the system, but can receive and respond to alerts from their organization.
+  CONTACT = 3;
+
+  // Viewers can only read resources in their organization, but can update their own user.
+  VIEWER = 6;
+
+  // Builders can read and modify resources in their organization, but can only update their own user.
+  BUILDER = 9;
+
+  // Admins can read and modify anything in their organization, including creating users of an equal or lesser role.
+  ADMIN = 12;
+
+  // System admins can create organizations and modify anything in their organization.
+  SYS_ADMIN = 15;
+}
