@@ -1,0 +1,23 @@
+syntax = "proto3";
+package api;
+
+import "google/protobuf/timestamp.proto";
+import "google/api/field_behavior.proto";
+import "validate/validate.proto";
+
+option go_package = "github.com/thingspect/api/go/api";
+
+// Org represents an organization as stored in the database.
+message Org {
+  // Organization ID (UUID).
+  string id = 1 [(google.api.field_behavior) = OUTPUT_ONLY];
+
+  // Organization name.
+  string name = 2 [(validate.rules).string = {min_len: 5, max_len: 40}, (google.api.field_behavior) = REQUIRED];
+
+  // Organization creation timestamp.
+  google.protobuf.Timestamp created_at = 3 [(google.api.field_behavior) = OUTPUT_ONLY];
+
+  // Organization modification timestamp.
+  google.protobuf.Timestamp updated_at = 4 [(google.api.field_behavior) = OUTPUT_ONLY];
+}

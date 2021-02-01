@@ -22,6 +22,7 @@ api:
 	--python_out=src/thingspect_api --grpc_python_out=src/thingspect_api \
 	api/device.proto \
 	api/datapoint.proto \
+	api/org.proto \
 	api/session.proto \
 	api/status.proto \
 	api/user.proto
