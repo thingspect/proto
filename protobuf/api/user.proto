@@ -2,6 +2,7 @@ syntax = "proto3";
 package api;
 
 import "api/status.proto";
+import "common/role.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/field_mask.proto";
@@ -97,14 +98,17 @@ message User {
   // User email.
   string email = 3 [(validate.rules).string.email = true, (google.api.field_behavior) = REQUIRED];
 
+  // User role.
+  common.Role role = 4 [(validate.rules).enum = {in: [3,6,9,12,15]}, (google.api.field_behavior) = REQUIRED];
+
   // User status.
-  Status status = 4 [(validate.rules).enum = {in: [3,6]}, (google.api.field_behavior) = REQUIRED];
+  Status status = 5 [(validate.rules).enum = {in: [3,6]}, (google.api.field_behavior) = REQUIRED];
 
   // User creation timestamp.
-  google.protobuf.Timestamp created_at = 5 [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp created_at = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // User modification timestamp.
-  google.protobuf.Timestamp updated_at = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp updated_at = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
 }
 
 // CreateUserRequest is sent to create a user.
