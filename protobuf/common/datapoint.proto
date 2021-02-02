@@ -9,7 +9,7 @@ option go_package = "github.com/thingspect/api/go/common";
 
 // DataPoint represents a data point as stored in the database.
 message DataPoint {
-  // Device unique ID. Will be ignored during MQTT ingest if provided as part of the topic. Required for API publish.
+  // Device unique ID. Ignored during MQTT ingest if provided as part of the topic. Required for API publish.
   string uniq_id = 1 [json_name = "uniqID", (validate.rules).string = {min_len: 5, max_len: 40}, (google.api.field_behavior) = REQUIRED];
 
   // Device attribute.
@@ -19,8 +19,8 @@ message DataPoint {
   oneof val_oneof {
     option (validate.required) = true;
 
-    // Integer value, 64-bit.
-    sint64 int_val = 3;
+    // Integer value, 32-bit.
+    sint32 int_val = 3;
 
     // Float value, 64-bit.
     double fl64_val = 4;
@@ -31,7 +31,7 @@ message DataPoint {
     // Boolean value.
     bool bool_val = 6;
 
-    // Bytes value.
+    // Bytes value. When used with JSON, the value will be represented as a base64 string.
     bytes bytes_val = 16;
   }
 
