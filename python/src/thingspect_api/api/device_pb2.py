@@ -27,7 +27,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10\x61pi/device.proto\x12\x03\x61pi\x1a\x10\x61pi/status.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\x81\x02\n\x06\x44\x65vice\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12%\n\x07uniq_id\x18\x03 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18(\xe0\x41\x02R\x06uniqID\x12*\n\x06status\x18\x04 \x01(\x0e\x32\x0b.api.StatusB\r\xfa\x42\x07\x82\x01\x04\x18\x03\x18\x06\xe0\x41\x02\x12\r\n\x05token\x18\x05 \x01(\t\x12\x33\n\ncreated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"?\n\x13\x43reateDeviceRequest\x12(\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"+\n\x10GetDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"p\n\x13UpdateDeviceRequest\x12(\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\".\n\x13\x44\x65leteDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"G\n\x12ListDevicesRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"y\n\x13ListDevicesResponse\x12\x1c\n\x07\x64\x65vices\x18\x01 \x03(\x0b\x32\x0b.api.Device\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x17\n\x0fprev_page_token\x18\x03 \x01(\t\x12\x12\n\ntotal_size\x18\x04 \x01(\x05\x32\xc2\x04\n\rDeviceService\x12\x87\x01\n\x0c\x43reateDevice\x12\x18.api.CreateDeviceRequest\x1a\x0b.api.Device\"P\x82\xd3\xe4\x93\x02\x15\"\x0b/v1/devices:\x06\x64\x65vice\x92\x41\x32J0\n\x03\x32\x30\x31\x12)\n\x16\x41 successful response.\x12\x0f\n\r\x1a\x0b.api.Device\x12I\n\tGetDevice\x12\x15.api.GetDeviceRequest\x1a\x0b.api.Device\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/devices/{id}\x12\x81\x01\n\x0cUpdateDevice\x12\x18.api.UpdateDeviceRequest\x1a\x0b.api.Device\"J\x82\xd3\xe4\x93\x02\x44\x1a\x17/v1/devices/{device.id}:\x06\x64\x65viceZ!2\x17/v1/devices/{device.id}:\x06\x64\x65vice\x12\x80\x01\n\x0c\x44\x65leteDevice\x12\x18.api.DeleteDeviceRequest\x1a\x16.google.protobuf.Empty\">\x82\xd3\xe4\x93\x02\x12*\x10/v1/devices/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12U\n\x0bListDevices\x12\x17.api.ListDevicesRequest\x1a\x18.api.ListDevicesResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/devicesB\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x10\x61pi/device.proto\x12\x03\x61pi\x1a\x10\x61pi/status.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\x81\x02\n\x06\x44\x65vice\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12%\n\x07uniq_id\x18\x03 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18(\xe0\x41\x02R\x06uniqID\x12*\n\x06status\x18\x04 \x01(\x0e\x32\x0b.api.StatusB\r\xfa\x42\x07\x82\x01\x04\x18\x03\x18\x06\xe0\x41\x02\x12\r\n\x05token\x18\x05 \x01(\t\x12\x33\n\ncreated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"?\n\x13\x43reateDeviceRequest\x12(\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"+\n\x10GetDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"p\n\x13UpdateDeviceRequest\x12(\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\".\n\x13\x44\x65leteDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"G\n\x12ListDevicesRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"`\n\x13ListDevicesResponse\x12\x1c\n\x07\x64\x65vices\x18\x01 \x03(\x0b\x32\x0b.api.Device\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\x32\xc2\x04\n\rDeviceService\x12\x87\x01\n\x0c\x43reateDevice\x12\x18.api.CreateDeviceRequest\x1a\x0b.api.Device\"P\x82\xd3\xe4\x93\x02\x15\"\x0b/v1/devices:\x06\x64\x65vice\x92\x41\x32J0\n\x03\x32\x30\x31\x12)\n\x16\x41 successful response.\x12\x0f\n\r\x1a\x0b.api.Device\x12I\n\tGetDevice\x12\x15.api.GetDeviceRequest\x1a\x0b.api.Device\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/devices/{id}\x12\x81\x01\n\x0cUpdateDevice\x12\x18.api.UpdateDeviceRequest\x1a\x0b.api.Device\"J\x82\xd3\xe4\x93\x02\x44\x1a\x17/v1/devices/{device.id}:\x06\x64\x65viceZ!2\x17/v1/devices/{device.id}:\x06\x64\x65vice\x12\x80\x01\n\x0c\x44\x65leteDevice\x12\x18.api.DeleteDeviceRequest\x1a\x16.google.protobuf.Empty\">\x82\xd3\xe4\x93\x02\x12*\x10/v1/devices/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12U\n\x0bListDevices\x12\x17.api.ListDevicesRequest\x1a\x18.api.ListDevicesResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/devicesB\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
   dependencies=[api_dot_status__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -305,15 +305,8 @@ _LISTDEVICESRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='prev_page_token', full_name='api.ListDevicesResponse.prev_page_token', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='total_size', full_name='api.ListDevicesResponse.total_size', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      name='total_size', full_name='api.ListDevicesResponse.total_size', index=2,
+      number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -331,7 +324,7 @@ _LISTDEVICESRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=880,
-  serialized_end=1001,
+  serialized_end=976,
 )
 
 _DEVICE.fields_by_name['status'].enum_type = api_dot_status__pb2._STATUS
@@ -420,8 +413,8 @@ _DEVICESERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1004,
-  serialized_end=1582,
+  serialized_start=979,
+  serialized_end=1557,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateDevice',

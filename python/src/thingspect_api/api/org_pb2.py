@@ -26,7 +26,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\rapi/org.proto\x12\x03\x61pi\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\x9c\x01\n\x03Org\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x04name\x18\x02 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18(\xe0\x41\x02\x12\x33\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"6\n\x10\x43reateOrgRequest\x12\"\n\x03org\x18\x01 \x01(\x0b\x32\x08.api.OrgB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"(\n\rGetOrgRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"g\n\x10UpdateOrgRequest\x12\"\n\x03org\x18\x01 \x01(\x0b\x32\x08.api.OrgB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"+\n\x10\x44\x65leteOrgRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"D\n\x0fListOrgsRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"p\n\x10ListOrgsResponse\x12\x16\n\x04orgs\x18\x01 \x03(\x0b\x32\x08.api.Org\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x17\n\x0fprev_page_token\x18\x03 \x01(\t\x12\x12\n\ntotal_size\x18\x04 \x01(\x05\x32\xa5\x04\n\nOrgService\x12~\n\tCreateOrg\x12\x15.api.CreateOrgRequest\x1a\x08.api.Org\"P\x82\xd3\xe4\x93\x02\x18\"\x11/v1/organizations:\x03org\x92\x41/J-\n\x03\x32\x30\x31\x12&\n\x16\x41 successful response.\x12\x0c\n\n\x1a\x08.api.Org\x12\x46\n\x06GetOrg\x12\x12.api.GetOrgRequest\x1a\x08.api.Org\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/v1/organizations/{id}\x12x\n\tUpdateOrg\x12\x15.api.UpdateOrgRequest\x1a\x08.api.Org\"J\x82\xd3\xe4\x93\x02\x44\x1a\x1a/v1/organizations/{org.id}:\x03orgZ!2\x1a/v1/organizations/{org.id}:\x03org\x12\x80\x01\n\tDeleteOrg\x12\x15.api.DeleteOrgRequest\x1a\x16.google.protobuf.Empty\"D\x82\xd3\xe4\x93\x02\x18*\x16/v1/organizations/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12R\n\x08ListOrgs\x12\x14.api.ListOrgsRequest\x1a\x15.api.ListOrgsResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/organizationsB\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\rapi/org.proto\x12\x03\x61pi\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\x9c\x01\n\x03Org\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x04name\x18\x02 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18(\xe0\x41\x02\x12\x33\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"6\n\x10\x43reateOrgRequest\x12\"\n\x03org\x18\x01 \x01(\x0b\x32\x08.api.OrgB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"(\n\rGetOrgRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"g\n\x10UpdateOrgRequest\x12\"\n\x03org\x18\x01 \x01(\x0b\x32\x08.api.OrgB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"+\n\x10\x44\x65leteOrgRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"D\n\x0fListOrgsRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"W\n\x10ListOrgsResponse\x12\x16\n\x04orgs\x18\x01 \x03(\x0b\x32\x08.api.Org\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\x32\xa5\x04\n\nOrgService\x12~\n\tCreateOrg\x12\x15.api.CreateOrgRequest\x1a\x08.api.Org\"P\x82\xd3\xe4\x93\x02\x18\"\x11/v1/organizations:\x03org\x92\x41/J-\n\x03\x32\x30\x31\x12&\n\x16\x41 successful response.\x12\x0c\n\n\x1a\x08.api.Org\x12\x46\n\x06GetOrg\x12\x12.api.GetOrgRequest\x1a\x08.api.Org\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/v1/organizations/{id}\x12x\n\tUpdateOrg\x12\x15.api.UpdateOrgRequest\x1a\x08.api.Org\"J\x82\xd3\xe4\x93\x02\x44\x1a\x1a/v1/organizations/{org.id}:\x03orgZ!2\x1a/v1/organizations/{org.id}:\x03org\x12\x80\x01\n\tDeleteOrg\x12\x15.api.DeleteOrgRequest\x1a\x16.google.protobuf.Empty\"D\x82\xd3\xe4\x93\x02\x18*\x16/v1/organizations/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12R\n\x08ListOrgs\x12\x14.api.ListOrgsRequest\x1a\x15.api.ListOrgsResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/organizationsB\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -283,15 +283,8 @@ _LISTORGSRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='prev_page_token', full_name='api.ListOrgsResponse.prev_page_token', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='total_size', full_name='api.ListOrgsResponse.total_size', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      name='total_size', full_name='api.ListOrgsResponse.total_size', index=2,
+      number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -309,7 +302,7 @@ _LISTORGSRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=731,
-  serialized_end=843,
+  serialized_end=818,
 )
 
 _ORG.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
@@ -395,8 +388,8 @@ _ORGSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=846,
-  serialized_end=1395,
+  serialized_start=821,
+  serialized_end=1370,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateOrg',
