@@ -28,6 +28,7 @@ api:
 	--go-grpc_out=. --go-grpc_opt=paths=source_relative \
 	--grpc-gateway_out=. --grpc-gateway_opt=paths=source_relative \
 	--validate_out=. --validate_opt=lang=go,paths=source_relative \
+	api/decoder.proto \
 	api/device.proto \
 	api/datapoint.proto \
 	api/org.proto \
@@ -45,6 +46,7 @@ openapi:
 	--openapiv2_out=../openapi \
 	--openapiv2_opt=allow_merge=true,merge_file_name=atlas \
 	api/openapi.proto \
+	api/decoder.proto \
 	api/device.proto \
 	api/datapoint.proto \
 	api/org.proto \

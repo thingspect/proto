@@ -2,6 +2,7 @@ syntax = "proto3";
 package api;
 
 import "api/status.proto";
+import "api/decoder.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/field_mask.proto";
@@ -95,11 +96,14 @@ message Device {
   // Authentication token (UUID).
   string token = 5;
 
+  // Device data payload decoder.
+  Decoder decoder = 6;
+
   // Device creation timestamp.
-  google.protobuf.Timestamp created_at = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp created_at = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Device modification timestamp.
-  google.protobuf.Timestamp updated_at = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp updated_at = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
 }
 
 // CreateDeviceRequest is sent to create a device.
