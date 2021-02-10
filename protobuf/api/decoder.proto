@@ -1,0 +1,19 @@
+syntax = "proto3";
+package api;
+
+option go_package = "github.com/thingspect/api/go/api";
+
+// Decoder represents the data payload decoder for a device.
+enum Decoder {
+  // Payloads will be passed through without decoding. Appropriate for devices that do not use decoders (MQTT, API, etc.).
+  RAW = 0;
+
+  // LoRaWAN gateway. Acts as a pass-through in the absence of device data payloads.
+  GATEWAY = 1;
+
+  // Radio Bridge Door/Window sensor with V1 firmware.
+  RADIO_BRIDGE_DOOR_V1 = 2;
+
+  // Radio Bridge Door/Window sensor with V2 firmware.
+  RADIO_BRIDGE_DOOR_V2 = 3;
+}
