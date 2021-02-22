@@ -16,16 +16,16 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='common/role.proto',
-  package='common',
+  package='thingspect.common',
   syntax='proto3',
   serialized_options=b'Z#github.com/thingspect/api/go/common',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11\x63ommon/role.proto\x12\x06\x63ommon*\\\n\x04Role\x12\x14\n\x10ROLE_UNSPECIFIED\x10\x00\x12\x0b\n\x07\x43ONTACT\x10\x03\x12\n\n\x06VIEWER\x10\x06\x12\x0b\n\x07\x42UILDER\x10\t\x12\t\n\x05\x41\x44MIN\x10\x0c\x12\r\n\tSYS_ADMIN\x10\x0f\x42%Z#github.com/thingspect/api/go/commonb\x06proto3'
+  serialized_pb=b'\n\x11\x63ommon/role.proto\x12\x11thingspect.common*\\\n\x04Role\x12\x14\n\x10ROLE_UNSPECIFIED\x10\x00\x12\x0b\n\x07\x43ONTACT\x10\x03\x12\n\n\x06VIEWER\x10\x06\x12\x0b\n\x07\x42UILDER\x10\t\x12\t\n\x05\x41\x44MIN\x10\x0c\x12\r\n\tSYS_ADMIN\x10\x0f\x42%Z#github.com/thingspect/api/go/commonb\x06proto3'
 )
 
 _ROLE = _descriptor.EnumDescriptor(
   name='Role',
-  full_name='common.Role',
+  full_name='thingspect.common.Role',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -63,8 +63,8 @@ _ROLE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=29,
-  serialized_end=121,
+  serialized_start=40,
+  serialized_end=132,
 )
 _sym_db.RegisterEnumDescriptor(_ROLE)
 

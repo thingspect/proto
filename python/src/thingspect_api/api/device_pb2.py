@@ -24,11 +24,11 @@ from validate import validate_pb2 as validate_dot_validate__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='api/device.proto',
-  package='api',
+  package='thingspect.api',
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10\x61pi/device.proto\x12\x03\x61pi\x1a\x10\x61pi/status.proto\x1a\x11\x61pi/decoder.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\xa0\x02\n\x06\x44\x65vice\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12%\n\x07uniq_id\x18\x03 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18(\xe0\x41\x02R\x06uniqID\x12*\n\x06status\x18\x04 \x01(\x0e\x32\x0b.api.StatusB\r\xfa\x42\x07\x82\x01\x04\x18\x03\x18\x06\xe0\x41\x02\x12\r\n\x05token\x18\x05 \x01(\t\x12\x1d\n\x07\x64\x65\x63oder\x18\x06 \x01(\x0e\x32\x0c.api.Decoder\x12\x33\n\ncreated_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x08 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"?\n\x13\x43reateDeviceRequest\x12(\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"+\n\x10GetDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"p\n\x13UpdateDeviceRequest\x12(\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x0b.api.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\".\n\x13\x44\x65leteDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"G\n\x12ListDevicesRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"`\n\x13ListDevicesResponse\x12\x1c\n\x07\x64\x65vices\x18\x01 \x03(\x0b\x32\x0b.api.Device\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\x32\xc2\x04\n\rDeviceService\x12\x87\x01\n\x0c\x43reateDevice\x12\x18.api.CreateDeviceRequest\x1a\x0b.api.Device\"P\x82\xd3\xe4\x93\x02\x15\"\x0b/v1/devices:\x06\x64\x65vice\x92\x41\x32J0\n\x03\x32\x30\x31\x12)\n\x16\x41 successful response.\x12\x0f\n\r\x1a\x0b.api.Device\x12I\n\tGetDevice\x12\x15.api.GetDeviceRequest\x1a\x0b.api.Device\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/devices/{id}\x12\x81\x01\n\x0cUpdateDevice\x12\x18.api.UpdateDeviceRequest\x1a\x0b.api.Device\"J\x82\xd3\xe4\x93\x02\x44\x1a\x17/v1/devices/{device.id}:\x06\x64\x65viceZ!2\x17/v1/devices/{device.id}:\x06\x64\x65vice\x12\x80\x01\n\x0c\x44\x65leteDevice\x12\x18.api.DeleteDeviceRequest\x1a\x16.google.protobuf.Empty\">\x82\xd3\xe4\x93\x02\x12*\x10/v1/devices/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12U\n\x0bListDevices\x12\x17.api.ListDevicesRequest\x1a\x18.api.ListDevicesResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/devicesB\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x10\x61pi/device.proto\x12\x0ethingspect.api\x1a\x10\x61pi/status.proto\x1a\x11\x61pi/decoder.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\xb6\x02\n\x06\x44\x65vice\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12%\n\x07uniq_id\x18\x03 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18(\xe0\x41\x02R\x06uniqID\x12\x35\n\x06status\x18\x04 \x01(\x0e\x32\x16.thingspect.api.StatusB\r\xfa\x42\x07\x82\x01\x04\x18\x03\x18\x06\xe0\x41\x02\x12\r\n\x05token\x18\x05 \x01(\t\x12(\n\x07\x64\x65\x63oder\x18\x06 \x01(\x0e\x32\x17.thingspect.api.Decoder\x12\x33\n\ncreated_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x08 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"J\n\x13\x43reateDeviceRequest\x12\x33\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x16.thingspect.api.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"\xf4\x02\n\x1a\x43reateDeviceLoRaWANRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x03\x12q\n\x14gateway_lorawan_type\x18\x02 \x01(\x0b\x32=.thingspect.api.CreateDeviceLoRaWANRequest.GatewayLoRaWANTypeH\x00R\x12gatewayLoRaWANType\x12n\n\x13\x64\x65vice_lorawan_type\x18\x03 \x01(\x0b\x32<.thingspect.api.CreateDeviceLoRaWANRequest.DeviceLoRaWANTypeH\x00R\x11\x64\x65viceLoRaWANType\x1a\x14\n\x12GatewayLoRaWANType\x1a\x31\n\x11\x44\x65viceLoRaWANType\x12\x1c\n\x07\x61pp_key\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\x98\x01 \xe0\x41\x02\x42\x11\n\ntype_oneof\x12\x03\xf8\x42\x01\"+\n\x10GetDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"{\n\x13UpdateDeviceRequest\x12\x33\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x16.thingspect.api.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"5\n\x1a\x44\x65leteDeviceLoRaWANRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\".\n\x13\x44\x65leteDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"G\n\x12ListDevicesRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"k\n\x13ListDevicesResponse\x12\'\n\x07\x64\x65vices\x18\x01 \x03(\x0b\x32\x16.thingspect.api.Device\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\x32\xfb\x07\n\rDeviceService\x12\xa8\x01\n\x0c\x43reateDevice\x12#.thingspect.api.CreateDeviceRequest\x1a\x16.thingspect.api.Device\"[\x82\xd3\xe4\x93\x02\x15\"\x0b/v1/devices:\x06\x64\x65vice\x92\x41=J;\n\x03\x32\x30\x31\x12\x34\n\x16\x41 successful response.\x12\x1a\n\x18\x1a\x16.thingspect.api.Device\x12\xa4\x01\n\x13\x43reateDeviceLoRaWAN\x12*.thingspect.api.CreateDeviceLoRaWANRequest\x1a\x16.google.protobuf.Empty\"I\x82\xd3\xe4\x93\x02\x1d\"\x18/v1/devices/{id}/lorawan:\x01*\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12_\n\tGetDevice\x12 .thingspect.api.GetDeviceRequest\x1a\x16.thingspect.api.Device\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/devices/{id}\x12\x97\x01\n\x0cUpdateDevice\x12#.thingspect.api.UpdateDeviceRequest\x1a\x16.thingspect.api.Device\"J\x82\xd3\xe4\x93\x02\x44\x1a\x17/v1/devices/{device.id}:\x06\x64\x65viceZ!2\x17/v1/devices/{device.id}:\x06\x64\x65vice\x12\xa1\x01\n\x13\x44\x65leteDeviceLoRaWAN\x12*.thingspect.api.DeleteDeviceLoRaWANRequest\x1a\x16.google.protobuf.Empty\"F\x82\xd3\xe4\x93\x02\x1a*\x18/v1/devices/{id}/lorawan\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x8b\x01\n\x0c\x44\x65leteDevice\x12#.thingspect.api.DeleteDeviceRequest\x1a\x16.google.protobuf.Empty\">\x82\xd3\xe4\x93\x02\x12*\x10/v1/devices/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12k\n\x0bListDevices\x12\".thingspect.api.ListDevicesRequest\x1a#.thingspect.api.ListDevicesResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/devicesB\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
   dependencies=[api_dot_status__pb2.DESCRIPTOR,api_dot_decoder__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -37,63 +37,63 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _DEVICE = _descriptor.Descriptor(
   name='Device',
-  full_name='api.Device',
+  full_name='thingspect.api.Device',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='api.Device.id', index=0,
+      name='id', full_name='thingspect.api.Device.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='org_id', full_name='api.Device.org_id', index=1,
+      name='org_id', full_name='thingspect.api.Device.org_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\340A\003', json_name='orgID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='uniq_id', full_name='api.Device.uniq_id', index=2,
+      name='uniq_id', full_name='thingspect.api.Device.uniq_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\372B\006r\004\020\005\030(\340A\002', json_name='uniqID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='status', full_name='api.Device.status', index=3,
+      name='status', full_name='thingspect.api.Device.status', index=3,
       number=4, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\372B\007\202\001\004\030\003\030\006\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='token', full_name='api.Device.token', index=4,
+      name='token', full_name='thingspect.api.Device.token', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='decoder', full_name='api.Device.decoder', index=5,
+      name='decoder', full_name='thingspect.api.Device.decoder', index=5,
       number=6, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='created_at', full_name='api.Device.created_at', index=6,
+      name='created_at', full_name='thingspect.api.Device.created_at', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='updated_at', full_name='api.Device.updated_at', index=7,
+      name='updated_at', full_name='thingspect.api.Device.updated_at', index=7,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -111,21 +111,21 @@ _DEVICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=295,
-  serialized_end=583,
+  serialized_start=306,
+  serialized_end=616,
 )
 
 
 _CREATEDEVICEREQUEST = _descriptor.Descriptor(
   name='CreateDeviceRequest',
-  full_name='api.CreateDeviceRequest',
+  full_name='thingspect.api.CreateDeviceRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='device', full_name='api.CreateDeviceRequest.device', index=0,
+      name='device', full_name='thingspect.api.CreateDeviceRequest.device', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -143,21 +143,127 @@ _CREATEDEVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=585,
-  serialized_end=648,
+  serialized_start=618,
+  serialized_end=692,
 )
 
 
-_GETDEVICEREQUEST = _descriptor.Descriptor(
-  name='GetDeviceRequest',
-  full_name='api.GetDeviceRequest',
+_CREATEDEVICELORAWANREQUEST_GATEWAYLORAWANTYPE = _descriptor.Descriptor(
+  name='GatewayLoRaWANType',
+  full_name='thingspect.api.CreateDeviceLoRaWANRequest.GatewayLoRaWANType',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=977,
+  serialized_end=997,
+)
+
+_CREATEDEVICELORAWANREQUEST_DEVICELORAWANTYPE = _descriptor.Descriptor(
+  name='DeviceLoRaWANType',
+  full_name='thingspect.api.CreateDeviceLoRaWANRequest.DeviceLoRaWANType',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='api.GetDeviceRequest.id', index=0,
+      name='app_key', full_name='thingspect.api.CreateDeviceLoRaWANRequest.DeviceLoRaWANType.app_key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005r\003\230\001 \340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=999,
+  serialized_end=1048,
+)
+
+_CREATEDEVICELORAWANREQUEST = _descriptor.Descriptor(
+  name='CreateDeviceLoRaWANRequest',
+  full_name='thingspect.api.CreateDeviceLoRaWANRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='thingspect.api.CreateDeviceLoRaWANRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005r\003\260\001\001\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='gateway_lorawan_type', full_name='thingspect.api.CreateDeviceLoRaWANRequest.gateway_lorawan_type', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='gatewayLoRaWANType', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='device_lorawan_type', full_name='thingspect.api.CreateDeviceLoRaWANRequest.device_lorawan_type', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='deviceLoRaWANType', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_CREATEDEVICELORAWANREQUEST_GATEWAYLORAWANTYPE, _CREATEDEVICELORAWANREQUEST_DEVICELORAWANTYPE, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='type_oneof', full_name='thingspect.api.CreateDeviceLoRaWANRequest.type_oneof',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[], serialized_options=b'\370B\001'),
+  ],
+  serialized_start=695,
+  serialized_end=1067,
+)
+
+
+_GETDEVICEREQUEST = _descriptor.Descriptor(
+  name='GetDeviceRequest',
+  full_name='thingspect.api.GetDeviceRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='thingspect.api.GetDeviceRequest.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -175,28 +281,28 @@ _GETDEVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=650,
-  serialized_end=693,
+  serialized_start=1069,
+  serialized_end=1112,
 )
 
 
 _UPDATEDEVICEREQUEST = _descriptor.Descriptor(
   name='UpdateDeviceRequest',
-  full_name='api.UpdateDeviceRequest',
+  full_name='thingspect.api.UpdateDeviceRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='device', full_name='api.UpdateDeviceRequest.device', index=0,
+      name='device', full_name='thingspect.api.UpdateDeviceRequest.device', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\372B\005\212\001\002\020\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='update_mask', full_name='api.UpdateDeviceRequest.update_mask', index=1,
+      name='update_mask', full_name='thingspect.api.UpdateDeviceRequest.update_mask', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -214,21 +320,21 @@ _UPDATEDEVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=695,
-  serialized_end=807,
+  serialized_start=1114,
+  serialized_end=1237,
 )
 
 
-_DELETEDEVICEREQUEST = _descriptor.Descriptor(
-  name='DeleteDeviceRequest',
-  full_name='api.DeleteDeviceRequest',
+_DELETEDEVICELORAWANREQUEST = _descriptor.Descriptor(
+  name='DeleteDeviceLoRaWANRequest',
+  full_name='thingspect.api.DeleteDeviceLoRaWANRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='api.DeleteDeviceRequest.id', index=0,
+      name='id', full_name='thingspect.api.DeleteDeviceLoRaWANRequest.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -246,28 +352,60 @@ _DELETEDEVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=809,
-  serialized_end=855,
+  serialized_start=1239,
+  serialized_end=1292,
 )
 
 
-_LISTDEVICESREQUEST = _descriptor.Descriptor(
-  name='ListDevicesRequest',
-  full_name='api.ListDevicesRequest',
+_DELETEDEVICEREQUEST = _descriptor.Descriptor(
+  name='DeleteDeviceRequest',
+  full_name='thingspect.api.DeleteDeviceRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='page_size', full_name='api.ListDevicesRequest.page_size', index=0,
+      name='id', full_name='thingspect.api.DeleteDeviceRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005r\003\260\001\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1294,
+  serialized_end=1340,
+)
+
+
+_LISTDEVICESREQUEST = _descriptor.Descriptor(
+  name='ListDevicesRequest',
+  full_name='thingspect.api.ListDevicesRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='page_size', full_name='thingspect.api.ListDevicesRequest.page_size', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\372B\007\032\005\030\372\001(\000', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='page_token', full_name='api.ListDevicesRequest.page_token', index=1,
+      name='page_token', full_name='thingspect.api.ListDevicesRequest.page_token', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -285,35 +423,35 @@ _LISTDEVICESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=857,
-  serialized_end=928,
+  serialized_start=1342,
+  serialized_end=1413,
 )
 
 
 _LISTDEVICESRESPONSE = _descriptor.Descriptor(
   name='ListDevicesResponse',
-  full_name='api.ListDevicesResponse',
+  full_name='thingspect.api.ListDevicesResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='devices', full_name='api.ListDevicesResponse.devices', index=0,
+      name='devices', full_name='thingspect.api.ListDevicesResponse.devices', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='next_page_token', full_name='api.ListDevicesResponse.next_page_token', index=1,
+      name='next_page_token', full_name='thingspect.api.ListDevicesResponse.next_page_token', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='total_size', full_name='api.ListDevicesResponse.total_size', index=2,
+      name='total_size', full_name='thingspect.api.ListDevicesResponse.total_size', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -331,8 +469,8 @@ _LISTDEVICESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=930,
-  serialized_end=1026,
+  serialized_start=1415,
+  serialized_end=1522,
 )
 
 _DEVICE.fields_by_name['status'].enum_type = api_dot_status__pb2._STATUS
@@ -340,13 +478,25 @@ _DEVICE.fields_by_name['decoder'].enum_type = api_dot_decoder__pb2._DECODER
 _DEVICE.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _DEVICE.fields_by_name['updated_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _CREATEDEVICEREQUEST.fields_by_name['device'].message_type = _DEVICE
+_CREATEDEVICELORAWANREQUEST_GATEWAYLORAWANTYPE.containing_type = _CREATEDEVICELORAWANREQUEST
+_CREATEDEVICELORAWANREQUEST_DEVICELORAWANTYPE.containing_type = _CREATEDEVICELORAWANREQUEST
+_CREATEDEVICELORAWANREQUEST.fields_by_name['gateway_lorawan_type'].message_type = _CREATEDEVICELORAWANREQUEST_GATEWAYLORAWANTYPE
+_CREATEDEVICELORAWANREQUEST.fields_by_name['device_lorawan_type'].message_type = _CREATEDEVICELORAWANREQUEST_DEVICELORAWANTYPE
+_CREATEDEVICELORAWANREQUEST.oneofs_by_name['type_oneof'].fields.append(
+  _CREATEDEVICELORAWANREQUEST.fields_by_name['gateway_lorawan_type'])
+_CREATEDEVICELORAWANREQUEST.fields_by_name['gateway_lorawan_type'].containing_oneof = _CREATEDEVICELORAWANREQUEST.oneofs_by_name['type_oneof']
+_CREATEDEVICELORAWANREQUEST.oneofs_by_name['type_oneof'].fields.append(
+  _CREATEDEVICELORAWANREQUEST.fields_by_name['device_lorawan_type'])
+_CREATEDEVICELORAWANREQUEST.fields_by_name['device_lorawan_type'].containing_oneof = _CREATEDEVICELORAWANREQUEST.oneofs_by_name['type_oneof']
 _UPDATEDEVICEREQUEST.fields_by_name['device'].message_type = _DEVICE
 _UPDATEDEVICEREQUEST.fields_by_name['update_mask'].message_type = google_dot_protobuf_dot_field__mask__pb2._FIELDMASK
 _LISTDEVICESRESPONSE.fields_by_name['devices'].message_type = _DEVICE
 DESCRIPTOR.message_types_by_name['Device'] = _DEVICE
 DESCRIPTOR.message_types_by_name['CreateDeviceRequest'] = _CREATEDEVICEREQUEST
+DESCRIPTOR.message_types_by_name['CreateDeviceLoRaWANRequest'] = _CREATEDEVICELORAWANREQUEST
 DESCRIPTOR.message_types_by_name['GetDeviceRequest'] = _GETDEVICEREQUEST
 DESCRIPTOR.message_types_by_name['UpdateDeviceRequest'] = _UPDATEDEVICEREQUEST
+DESCRIPTOR.message_types_by_name['DeleteDeviceLoRaWANRequest'] = _DELETEDEVICELORAWANREQUEST
 DESCRIPTOR.message_types_by_name['DeleteDeviceRequest'] = _DELETEDEVICEREQUEST
 DESCRIPTOR.message_types_by_name['ListDevicesRequest'] = _LISTDEVICESREQUEST
 DESCRIPTOR.message_types_by_name['ListDevicesResponse'] = _LISTDEVICESRESPONSE
@@ -355,49 +505,79 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 Device = _reflection.GeneratedProtocolMessageType('Device', (_message.Message,), {
   'DESCRIPTOR' : _DEVICE,
   '__module__' : 'api.device_pb2'
-  # @@protoc_insertion_point(class_scope:api.Device)
+  # @@protoc_insertion_point(class_scope:thingspect.api.Device)
   })
 _sym_db.RegisterMessage(Device)
 
 CreateDeviceRequest = _reflection.GeneratedProtocolMessageType('CreateDeviceRequest', (_message.Message,), {
   'DESCRIPTOR' : _CREATEDEVICEREQUEST,
   '__module__' : 'api.device_pb2'
-  # @@protoc_insertion_point(class_scope:api.CreateDeviceRequest)
+  # @@protoc_insertion_point(class_scope:thingspect.api.CreateDeviceRequest)
   })
 _sym_db.RegisterMessage(CreateDeviceRequest)
+
+CreateDeviceLoRaWANRequest = _reflection.GeneratedProtocolMessageType('CreateDeviceLoRaWANRequest', (_message.Message,), {
+
+  'GatewayLoRaWANType' : _reflection.GeneratedProtocolMessageType('GatewayLoRaWANType', (_message.Message,), {
+    'DESCRIPTOR' : _CREATEDEVICELORAWANREQUEST_GATEWAYLORAWANTYPE,
+    '__module__' : 'api.device_pb2'
+    # @@protoc_insertion_point(class_scope:thingspect.api.CreateDeviceLoRaWANRequest.GatewayLoRaWANType)
+    })
+  ,
+
+  'DeviceLoRaWANType' : _reflection.GeneratedProtocolMessageType('DeviceLoRaWANType', (_message.Message,), {
+    'DESCRIPTOR' : _CREATEDEVICELORAWANREQUEST_DEVICELORAWANTYPE,
+    '__module__' : 'api.device_pb2'
+    # @@protoc_insertion_point(class_scope:thingspect.api.CreateDeviceLoRaWANRequest.DeviceLoRaWANType)
+    })
+  ,
+  'DESCRIPTOR' : _CREATEDEVICELORAWANREQUEST,
+  '__module__' : 'api.device_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.CreateDeviceLoRaWANRequest)
+  })
+_sym_db.RegisterMessage(CreateDeviceLoRaWANRequest)
+_sym_db.RegisterMessage(CreateDeviceLoRaWANRequest.GatewayLoRaWANType)
+_sym_db.RegisterMessage(CreateDeviceLoRaWANRequest.DeviceLoRaWANType)
 
 GetDeviceRequest = _reflection.GeneratedProtocolMessageType('GetDeviceRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETDEVICEREQUEST,
   '__module__' : 'api.device_pb2'
-  # @@protoc_insertion_point(class_scope:api.GetDeviceRequest)
+  # @@protoc_insertion_point(class_scope:thingspect.api.GetDeviceRequest)
   })
 _sym_db.RegisterMessage(GetDeviceRequest)
 
 UpdateDeviceRequest = _reflection.GeneratedProtocolMessageType('UpdateDeviceRequest', (_message.Message,), {
   'DESCRIPTOR' : _UPDATEDEVICEREQUEST,
   '__module__' : 'api.device_pb2'
-  # @@protoc_insertion_point(class_scope:api.UpdateDeviceRequest)
+  # @@protoc_insertion_point(class_scope:thingspect.api.UpdateDeviceRequest)
   })
 _sym_db.RegisterMessage(UpdateDeviceRequest)
+
+DeleteDeviceLoRaWANRequest = _reflection.GeneratedProtocolMessageType('DeleteDeviceLoRaWANRequest', (_message.Message,), {
+  'DESCRIPTOR' : _DELETEDEVICELORAWANREQUEST,
+  '__module__' : 'api.device_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.DeleteDeviceLoRaWANRequest)
+  })
+_sym_db.RegisterMessage(DeleteDeviceLoRaWANRequest)
 
 DeleteDeviceRequest = _reflection.GeneratedProtocolMessageType('DeleteDeviceRequest', (_message.Message,), {
   'DESCRIPTOR' : _DELETEDEVICEREQUEST,
   '__module__' : 'api.device_pb2'
-  # @@protoc_insertion_point(class_scope:api.DeleteDeviceRequest)
+  # @@protoc_insertion_point(class_scope:thingspect.api.DeleteDeviceRequest)
   })
 _sym_db.RegisterMessage(DeleteDeviceRequest)
 
 ListDevicesRequest = _reflection.GeneratedProtocolMessageType('ListDevicesRequest', (_message.Message,), {
   'DESCRIPTOR' : _LISTDEVICESREQUEST,
   '__module__' : 'api.device_pb2'
-  # @@protoc_insertion_point(class_scope:api.ListDevicesRequest)
+  # @@protoc_insertion_point(class_scope:thingspect.api.ListDevicesRequest)
   })
 _sym_db.RegisterMessage(ListDevicesRequest)
 
 ListDevicesResponse = _reflection.GeneratedProtocolMessageType('ListDevicesResponse', (_message.Message,), {
   'DESCRIPTOR' : _LISTDEVICESRESPONSE,
   '__module__' : 'api.device_pb2'
-  # @@protoc_insertion_point(class_scope:api.ListDevicesResponse)
+  # @@protoc_insertion_point(class_scope:thingspect.api.ListDevicesResponse)
   })
 _sym_db.RegisterMessage(ListDevicesResponse)
 
@@ -410,35 +590,49 @@ _DEVICE.fields_by_name['status']._options = None
 _DEVICE.fields_by_name['created_at']._options = None
 _DEVICE.fields_by_name['updated_at']._options = None
 _CREATEDEVICEREQUEST.fields_by_name['device']._options = None
+_CREATEDEVICELORAWANREQUEST_DEVICELORAWANTYPE.fields_by_name['app_key']._options = None
+_CREATEDEVICELORAWANREQUEST.oneofs_by_name['type_oneof']._options = None
+_CREATEDEVICELORAWANREQUEST.fields_by_name['id']._options = None
 _GETDEVICEREQUEST.fields_by_name['id']._options = None
 _UPDATEDEVICEREQUEST.fields_by_name['device']._options = None
+_DELETEDEVICELORAWANREQUEST.fields_by_name['id']._options = None
 _DELETEDEVICEREQUEST.fields_by_name['id']._options = None
 _LISTDEVICESREQUEST.fields_by_name['page_size']._options = None
 
 _DEVICESERVICE = _descriptor.ServiceDescriptor(
   name='DeviceService',
-  full_name='api.DeviceService',
+  full_name='thingspect.api.DeviceService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1029,
-  serialized_end=1607,
+  serialized_start=1525,
+  serialized_end=2544,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateDevice',
-    full_name='api.DeviceService.CreateDevice',
+    full_name='thingspect.api.DeviceService.CreateDevice',
     index=0,
     containing_service=None,
     input_type=_CREATEDEVICEREQUEST,
     output_type=_DEVICE,
-    serialized_options=b'\202\323\344\223\002\025\"\013/v1/devices:\006device\222A2J0\n\003201\022)\n\026A successful response.\022\017\n\r\032\013.api.Device',
+    serialized_options=b'\202\323\344\223\002\025\"\013/v1/devices:\006device\222A=J;\n\003201\0224\n\026A successful response.\022\032\n\030\032\026.thingspect.api.Device',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='CreateDeviceLoRaWAN',
+    full_name='thingspect.api.DeviceService.CreateDeviceLoRaWAN',
+    index=1,
+    containing_service=None,
+    input_type=_CREATEDEVICELORAWANREQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    serialized_options=b'\202\323\344\223\002\035\"\030/v1/devices/{id}/lorawan:\001*\222A#J!\n\003204\022\032\n\026A successful response.\022\000',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='GetDevice',
-    full_name='api.DeviceService.GetDevice',
-    index=1,
+    full_name='thingspect.api.DeviceService.GetDevice',
+    index=2,
     containing_service=None,
     input_type=_GETDEVICEREQUEST,
     output_type=_DEVICE,
@@ -447,8 +641,8 @@ _DEVICESERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='UpdateDevice',
-    full_name='api.DeviceService.UpdateDevice',
-    index=2,
+    full_name='thingspect.api.DeviceService.UpdateDevice',
+    index=3,
     containing_service=None,
     input_type=_UPDATEDEVICEREQUEST,
     output_type=_DEVICE,
@@ -456,9 +650,19 @@ _DEVICESERVICE = _descriptor.ServiceDescriptor(
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
+    name='DeleteDeviceLoRaWAN',
+    full_name='thingspect.api.DeviceService.DeleteDeviceLoRaWAN',
+    index=4,
+    containing_service=None,
+    input_type=_DELETEDEVICELORAWANREQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    serialized_options=b'\202\323\344\223\002\032*\030/v1/devices/{id}/lorawan\222A#J!\n\003204\022\032\n\026A successful response.\022\000',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
     name='DeleteDevice',
-    full_name='api.DeviceService.DeleteDevice',
-    index=3,
+    full_name='thingspect.api.DeviceService.DeleteDevice',
+    index=5,
     containing_service=None,
     input_type=_DELETEDEVICEREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -467,8 +671,8 @@ _DEVICESERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='ListDevices',
-    full_name='api.DeviceService.ListDevices',
-    index=4,
+    full_name='thingspect.api.DeviceService.ListDevices',
+    index=6,
     containing_service=None,
     input_type=_LISTDEVICESREQUEST,
     output_type=_LISTDEVICESRESPONSE,

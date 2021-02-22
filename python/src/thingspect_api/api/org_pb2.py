@@ -22,11 +22,11 @@ from validate import validate_pb2 as validate_dot_validate__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='api/org.proto',
-  package='api',
+  package='thingspect.api',
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\rapi/org.proto\x12\x03\x61pi\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\x9c\x01\n\x03Org\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x04name\x18\x02 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18(\xe0\x41\x02\x12\x33\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"6\n\x10\x43reateOrgRequest\x12\"\n\x03org\x18\x01 \x01(\x0b\x32\x08.api.OrgB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"(\n\rGetOrgRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"g\n\x10UpdateOrgRequest\x12\"\n\x03org\x18\x01 \x01(\x0b\x32\x08.api.OrgB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"+\n\x10\x44\x65leteOrgRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"D\n\x0fListOrgsRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"W\n\x10ListOrgsResponse\x12\x16\n\x04orgs\x18\x01 \x03(\x0b\x32\x08.api.Org\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\x32\xa5\x04\n\nOrgService\x12~\n\tCreateOrg\x12\x15.api.CreateOrgRequest\x1a\x08.api.Org\"P\x82\xd3\xe4\x93\x02\x18\"\x11/v1/organizations:\x03org\x92\x41/J-\n\x03\x32\x30\x31\x12&\n\x16\x41 successful response.\x12\x0c\n\n\x1a\x08.api.Org\x12\x46\n\x06GetOrg\x12\x12.api.GetOrgRequest\x1a\x08.api.Org\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/v1/organizations/{id}\x12x\n\tUpdateOrg\x12\x15.api.UpdateOrgRequest\x1a\x08.api.Org\"J\x82\xd3\xe4\x93\x02\x44\x1a\x1a/v1/organizations/{org.id}:\x03orgZ!2\x1a/v1/organizations/{org.id}:\x03org\x12\x80\x01\n\tDeleteOrg\x12\x15.api.DeleteOrgRequest\x1a\x16.google.protobuf.Empty\"D\x82\xd3\xe4\x93\x02\x18*\x16/v1/organizations/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12R\n\x08ListOrgs\x12\x14.api.ListOrgsRequest\x1a\x15.api.ListOrgsResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/organizationsB\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\rapi/org.proto\x12\x0ethingspect.api\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\x9c\x01\n\x03Org\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x04name\x18\x02 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18(\xe0\x41\x02\x12\x33\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"A\n\x10\x43reateOrgRequest\x12-\n\x03org\x18\x01 \x01(\x0b\x32\x13.thingspect.api.OrgB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"(\n\rGetOrgRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"r\n\x10UpdateOrgRequest\x12-\n\x03org\x18\x01 \x01(\x0b\x32\x13.thingspect.api.OrgB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"+\n\x10\x44\x65leteOrgRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"D\n\x0fListOrgsRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"b\n\x10ListOrgsResponse\x12!\n\x04orgs\x18\x01 \x03(\x0b\x32\x13.thingspect.api.Org\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\x32\x95\x05\n\nOrgService\x12\x9f\x01\n\tCreateOrg\x12 .thingspect.api.CreateOrgRequest\x1a\x13.thingspect.api.Org\"[\x82\xd3\xe4\x93\x02\x18\"\x11/v1/organizations:\x03org\x92\x41:J8\n\x03\x32\x30\x31\x12\x31\n\x16\x41 successful response.\x12\x17\n\x15\x1a\x13.thingspect.api.Org\x12\\\n\x06GetOrg\x12\x1d.thingspect.api.GetOrgRequest\x1a\x13.thingspect.api.Org\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/v1/organizations/{id}\x12\x8e\x01\n\tUpdateOrg\x12 .thingspect.api.UpdateOrgRequest\x1a\x13.thingspect.api.Org\"J\x82\xd3\xe4\x93\x02\x44\x1a\x1a/v1/organizations/{org.id}:\x03orgZ!2\x1a/v1/organizations/{org.id}:\x03org\x12\x8b\x01\n\tDeleteOrg\x12 .thingspect.api.DeleteOrgRequest\x1a\x16.google.protobuf.Empty\"D\x82\xd3\xe4\x93\x02\x18*\x16/v1/organizations/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12h\n\x08ListOrgs\x12\x1f.thingspect.api.ListOrgsRequest\x1a .thingspect.api.ListOrgsResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/organizationsB\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -35,35 +35,35 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _ORG = _descriptor.Descriptor(
   name='Org',
-  full_name='api.Org',
+  full_name='thingspect.api.Org',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='api.Org.id', index=0,
+      name='id', full_name='thingspect.api.Org.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='name', full_name='api.Org.name', index=1,
+      name='name', full_name='thingspect.api.Org.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\372B\006r\004\020\005\030(\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='created_at', full_name='api.Org.created_at', index=2,
+      name='created_at', full_name='thingspect.api.Org.created_at', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='updated_at', full_name='api.Org.updated_at', index=3,
+      name='updated_at', full_name='thingspect.api.Org.updated_at', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -81,21 +81,21 @@ _ORG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=255,
-  serialized_end=411,
+  serialized_start=266,
+  serialized_end=422,
 )
 
 
 _CREATEORGREQUEST = _descriptor.Descriptor(
   name='CreateOrgRequest',
-  full_name='api.CreateOrgRequest',
+  full_name='thingspect.api.CreateOrgRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='org', full_name='api.CreateOrgRequest.org', index=0,
+      name='org', full_name='thingspect.api.CreateOrgRequest.org', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -113,21 +113,21 @@ _CREATEORGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=413,
-  serialized_end=467,
+  serialized_start=424,
+  serialized_end=489,
 )
 
 
 _GETORGREQUEST = _descriptor.Descriptor(
   name='GetOrgRequest',
-  full_name='api.GetOrgRequest',
+  full_name='thingspect.api.GetOrgRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='api.GetOrgRequest.id', index=0,
+      name='id', full_name='thingspect.api.GetOrgRequest.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -145,28 +145,28 @@ _GETORGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=469,
-  serialized_end=509,
+  serialized_start=491,
+  serialized_end=531,
 )
 
 
 _UPDATEORGREQUEST = _descriptor.Descriptor(
   name='UpdateOrgRequest',
-  full_name='api.UpdateOrgRequest',
+  full_name='thingspect.api.UpdateOrgRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='org', full_name='api.UpdateOrgRequest.org', index=0,
+      name='org', full_name='thingspect.api.UpdateOrgRequest.org', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\372B\005\212\001\002\020\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='update_mask', full_name='api.UpdateOrgRequest.update_mask', index=1,
+      name='update_mask', full_name='thingspect.api.UpdateOrgRequest.update_mask', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -184,21 +184,21 @@ _UPDATEORGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=511,
-  serialized_end=614,
+  serialized_start=533,
+  serialized_end=647,
 )
 
 
 _DELETEORGREQUEST = _descriptor.Descriptor(
   name='DeleteOrgRequest',
-  full_name='api.DeleteOrgRequest',
+  full_name='thingspect.api.DeleteOrgRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='api.DeleteOrgRequest.id', index=0,
+      name='id', full_name='thingspect.api.DeleteOrgRequest.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -216,28 +216,28 @@ _DELETEORGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=616,
-  serialized_end=659,
+  serialized_start=649,
+  serialized_end=692,
 )
 
 
 _LISTORGSREQUEST = _descriptor.Descriptor(
   name='ListOrgsRequest',
-  full_name='api.ListOrgsRequest',
+  full_name='thingspect.api.ListOrgsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='page_size', full_name='api.ListOrgsRequest.page_size', index=0,
+      name='page_size', full_name='thingspect.api.ListOrgsRequest.page_size', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\372B\007\032\005\030\372\001(\000', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='page_token', full_name='api.ListOrgsRequest.page_token', index=1,
+      name='page_token', full_name='thingspect.api.ListOrgsRequest.page_token', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -255,35 +255,35 @@ _LISTORGSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=661,
-  serialized_end=729,
+  serialized_start=694,
+  serialized_end=762,
 )
 
 
 _LISTORGSRESPONSE = _descriptor.Descriptor(
   name='ListOrgsResponse',
-  full_name='api.ListOrgsResponse',
+  full_name='thingspect.api.ListOrgsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='orgs', full_name='api.ListOrgsResponse.orgs', index=0,
+      name='orgs', full_name='thingspect.api.ListOrgsResponse.orgs', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='next_page_token', full_name='api.ListOrgsResponse.next_page_token', index=1,
+      name='next_page_token', full_name='thingspect.api.ListOrgsResponse.next_page_token', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='total_size', full_name='api.ListOrgsResponse.total_size', index=2,
+      name='total_size', full_name='thingspect.api.ListOrgsResponse.total_size', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -301,8 +301,8 @@ _LISTORGSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=731,
-  serialized_end=818,
+  serialized_start=764,
+  serialized_end=862,
 )
 
 _ORG.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
@@ -323,49 +323,49 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 Org = _reflection.GeneratedProtocolMessageType('Org', (_message.Message,), {
   'DESCRIPTOR' : _ORG,
   '__module__' : 'api.org_pb2'
-  # @@protoc_insertion_point(class_scope:api.Org)
+  # @@protoc_insertion_point(class_scope:thingspect.api.Org)
   })
 _sym_db.RegisterMessage(Org)
 
 CreateOrgRequest = _reflection.GeneratedProtocolMessageType('CreateOrgRequest', (_message.Message,), {
   'DESCRIPTOR' : _CREATEORGREQUEST,
   '__module__' : 'api.org_pb2'
-  # @@protoc_insertion_point(class_scope:api.CreateOrgRequest)
+  # @@protoc_insertion_point(class_scope:thingspect.api.CreateOrgRequest)
   })
 _sym_db.RegisterMessage(CreateOrgRequest)
 
 GetOrgRequest = _reflection.GeneratedProtocolMessageType('GetOrgRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETORGREQUEST,
   '__module__' : 'api.org_pb2'
-  # @@protoc_insertion_point(class_scope:api.GetOrgRequest)
+  # @@protoc_insertion_point(class_scope:thingspect.api.GetOrgRequest)
   })
 _sym_db.RegisterMessage(GetOrgRequest)
 
 UpdateOrgRequest = _reflection.GeneratedProtocolMessageType('UpdateOrgRequest', (_message.Message,), {
   'DESCRIPTOR' : _UPDATEORGREQUEST,
   '__module__' : 'api.org_pb2'
-  # @@protoc_insertion_point(class_scope:api.UpdateOrgRequest)
+  # @@protoc_insertion_point(class_scope:thingspect.api.UpdateOrgRequest)
   })
 _sym_db.RegisterMessage(UpdateOrgRequest)
 
 DeleteOrgRequest = _reflection.GeneratedProtocolMessageType('DeleteOrgRequest', (_message.Message,), {
   'DESCRIPTOR' : _DELETEORGREQUEST,
   '__module__' : 'api.org_pb2'
-  # @@protoc_insertion_point(class_scope:api.DeleteOrgRequest)
+  # @@protoc_insertion_point(class_scope:thingspect.api.DeleteOrgRequest)
   })
 _sym_db.RegisterMessage(DeleteOrgRequest)
 
 ListOrgsRequest = _reflection.GeneratedProtocolMessageType('ListOrgsRequest', (_message.Message,), {
   'DESCRIPTOR' : _LISTORGSREQUEST,
   '__module__' : 'api.org_pb2'
-  # @@protoc_insertion_point(class_scope:api.ListOrgsRequest)
+  # @@protoc_insertion_point(class_scope:thingspect.api.ListOrgsRequest)
   })
 _sym_db.RegisterMessage(ListOrgsRequest)
 
 ListOrgsResponse = _reflection.GeneratedProtocolMessageType('ListOrgsResponse', (_message.Message,), {
   'DESCRIPTOR' : _LISTORGSRESPONSE,
   '__module__' : 'api.org_pb2'
-  # @@protoc_insertion_point(class_scope:api.ListOrgsResponse)
+  # @@protoc_insertion_point(class_scope:thingspect.api.ListOrgsResponse)
   })
 _sym_db.RegisterMessage(ListOrgsResponse)
 
@@ -383,27 +383,27 @@ _LISTORGSREQUEST.fields_by_name['page_size']._options = None
 
 _ORGSERVICE = _descriptor.ServiceDescriptor(
   name='OrgService',
-  full_name='api.OrgService',
+  full_name='thingspect.api.OrgService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=821,
-  serialized_end=1370,
+  serialized_start=865,
+  serialized_end=1526,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateOrg',
-    full_name='api.OrgService.CreateOrg',
+    full_name='thingspect.api.OrgService.CreateOrg',
     index=0,
     containing_service=None,
     input_type=_CREATEORGREQUEST,
     output_type=_ORG,
-    serialized_options=b'\202\323\344\223\002\030\"\021/v1/organizations:\003org\222A/J-\n\003201\022&\n\026A successful response.\022\014\n\n\032\010.api.Org',
+    serialized_options=b'\202\323\344\223\002\030\"\021/v1/organizations:\003org\222A:J8\n\003201\0221\n\026A successful response.\022\027\n\025\032\023.thingspect.api.Org',
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='GetOrg',
-    full_name='api.OrgService.GetOrg',
+    full_name='thingspect.api.OrgService.GetOrg',
     index=1,
     containing_service=None,
     input_type=_GETORGREQUEST,
@@ -413,7 +413,7 @@ _ORGSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='UpdateOrg',
-    full_name='api.OrgService.UpdateOrg',
+    full_name='thingspect.api.OrgService.UpdateOrg',
     index=2,
     containing_service=None,
     input_type=_UPDATEORGREQUEST,
@@ -423,7 +423,7 @@ _ORGSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='DeleteOrg',
-    full_name='api.OrgService.DeleteOrg',
+    full_name='thingspect.api.OrgService.DeleteOrg',
     index=3,
     containing_service=None,
     input_type=_DELETEORGREQUEST,
@@ -433,7 +433,7 @@ _ORGSERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='ListOrgs',
-    full_name='api.OrgService.ListOrgs',
+    full_name='thingspect.api.OrgService.ListOrgs',
     index=4,
     containing_service=None,
     input_type=_LISTORGSREQUEST,

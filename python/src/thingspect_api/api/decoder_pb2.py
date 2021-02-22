@@ -16,16 +16,16 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='api/decoder.proto',
-  package='api',
+  package='thingspect.api',
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11\x61pi/decoder.proto\x12\x03\x61pi*S\n\x07\x44\x65\x63oder\x12\x07\n\x03RAW\x10\x00\x12\x0b\n\x07GATEWAY\x10\x01\x12\x18\n\x14RADIO_BRIDGE_DOOR_V1\x10\x02\x12\x18\n\x14RADIO_BRIDGE_DOOR_V2\x10\x03\x42\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x11\x61pi/decoder.proto\x12\x0ethingspect.api*S\n\x07\x44\x65\x63oder\x12\x07\n\x03RAW\x10\x00\x12\x0b\n\x07GATEWAY\x10\x01\x12\x18\n\x14RADIO_BRIDGE_DOOR_V1\x10\x02\x12\x18\n\x14RADIO_BRIDGE_DOOR_V2\x10\x03\x42\"Z github.com/thingspect/api/go/apib\x06proto3'
 )
 
 _DECODER = _descriptor.EnumDescriptor(
   name='Decoder',
-  full_name='api.Decoder',
+  full_name='thingspect.api.Decoder',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -53,8 +53,8 @@ _DECODER = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=26,
-  serialized_end=109,
+  serialized_start=37,
+  serialized_end=120,
 )
 _sym_db.RegisterEnumDescriptor(_DECODER)
 

@@ -1,5 +1,5 @@
 syntax = "proto3";
-package common;
+package thingspect.common;
 
 import "google/protobuf/timestamp.proto";
 import "google/api/field_behavior.proto";

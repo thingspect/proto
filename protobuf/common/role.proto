@@ -1,5 +1,5 @@
 syntax = "proto3";
-package common;
+package thingspect.common;
 
 option go_package = "github.com/thingspect/api/go/common";
 
