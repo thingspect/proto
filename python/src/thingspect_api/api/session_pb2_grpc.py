@@ -16,7 +16,7 @@ class SessionServiceStub(object):
             channel: A grpc.Channel.
         """
         self.Login = channel.unary_unary(
-                '/api.SessionService/Login',
+                '/thingspect.api.SessionService/Login',
                 request_serializer=api_dot_session__pb2.LoginRequest.SerializeToString,
                 response_deserializer=api_dot_session__pb2.LoginResponse.FromString,
                 )
@@ -43,7 +43,7 @@ def add_SessionServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'api.SessionService', rpc_method_handlers)
+            'thingspect.api.SessionService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -63,7 +63,7 @@ class SessionService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.SessionService/Login',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.SessionService/Login',
             api_dot_session__pb2.LoginRequest.SerializeToString,
             api_dot_session__pb2.LoginResponse.FromString,
             options, channel_credentials,

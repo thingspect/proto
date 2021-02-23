@@ -17,27 +17,27 @@ class OrgServiceStub(object):
             channel: A grpc.Channel.
         """
         self.CreateOrg = channel.unary_unary(
-                '/api.OrgService/CreateOrg',
+                '/thingspect.api.OrgService/CreateOrg',
                 request_serializer=api_dot_org__pb2.CreateOrgRequest.SerializeToString,
                 response_deserializer=api_dot_org__pb2.Org.FromString,
                 )
         self.GetOrg = channel.unary_unary(
-                '/api.OrgService/GetOrg',
+                '/thingspect.api.OrgService/GetOrg',
                 request_serializer=api_dot_org__pb2.GetOrgRequest.SerializeToString,
                 response_deserializer=api_dot_org__pb2.Org.FromString,
                 )
         self.UpdateOrg = channel.unary_unary(
-                '/api.OrgService/UpdateOrg',
+                '/thingspect.api.OrgService/UpdateOrg',
                 request_serializer=api_dot_org__pb2.UpdateOrgRequest.SerializeToString,
                 response_deserializer=api_dot_org__pb2.Org.FromString,
                 )
         self.DeleteOrg = channel.unary_unary(
-                '/api.OrgService/DeleteOrg',
+                '/thingspect.api.OrgService/DeleteOrg',
                 request_serializer=api_dot_org__pb2.DeleteOrgRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
         self.ListOrgs = channel.unary_unary(
-                '/api.OrgService/ListOrgs',
+                '/thingspect.api.OrgService/ListOrgs',
                 request_serializer=api_dot_org__pb2.ListOrgsRequest.SerializeToString,
                 response_deserializer=api_dot_org__pb2.ListOrgsResponse.FromString,
                 )
@@ -112,7 +112,7 @@ def add_OrgServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'api.OrgService', rpc_method_handlers)
+            'thingspect.api.OrgService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -132,7 +132,7 @@ class OrgService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.OrgService/CreateOrg',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.OrgService/CreateOrg',
             api_dot_org__pb2.CreateOrgRequest.SerializeToString,
             api_dot_org__pb2.Org.FromString,
             options, channel_credentials,
@@ -149,7 +149,7 @@ class OrgService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.OrgService/GetOrg',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.OrgService/GetOrg',
             api_dot_org__pb2.GetOrgRequest.SerializeToString,
             api_dot_org__pb2.Org.FromString,
             options, channel_credentials,
@@ -166,7 +166,7 @@ class OrgService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.OrgService/UpdateOrg',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.OrgService/UpdateOrg',
             api_dot_org__pb2.UpdateOrgRequest.SerializeToString,
             api_dot_org__pb2.Org.FromString,
             options, channel_credentials,
@@ -183,7 +183,7 @@ class OrgService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.OrgService/DeleteOrg',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.OrgService/DeleteOrg',
             api_dot_org__pb2.DeleteOrgRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
@@ -200,7 +200,7 @@ class OrgService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.OrgService/ListOrgs',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.OrgService/ListOrgs',
             api_dot_org__pb2.ListOrgsRequest.SerializeToString,
             api_dot_org__pb2.ListOrgsResponse.FromString,
             options, channel_credentials,

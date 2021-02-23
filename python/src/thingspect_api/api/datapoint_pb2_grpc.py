@@ -17,17 +17,17 @@ class DataPointServiceStub(object):
             channel: A grpc.Channel.
         """
         self.PublishDataPoints = channel.unary_unary(
-                '/api.DataPointService/PublishDataPoints',
+                '/thingspect.api.DataPointService/PublishDataPoints',
                 request_serializer=api_dot_datapoint__pb2.PublishDataPointsRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
         self.ListDataPoints = channel.unary_unary(
-                '/api.DataPointService/ListDataPoints',
+                '/thingspect.api.DataPointService/ListDataPoints',
                 request_serializer=api_dot_datapoint__pb2.ListDataPointsRequest.SerializeToString,
                 response_deserializer=api_dot_datapoint__pb2.ListDataPointsResponse.FromString,
                 )
         self.LatestDataPoints = channel.unary_unary(
-                '/api.DataPointService/LatestDataPoints',
+                '/thingspect.api.DataPointService/LatestDataPoints',
                 request_serializer=api_dot_datapoint__pb2.LatestDataPointsRequest.SerializeToString,
                 response_deserializer=api_dot_datapoint__pb2.LatestDataPointsResponse.FromString,
                 )
@@ -78,7 +78,7 @@ def add_DataPointServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'api.DataPointService', rpc_method_handlers)
+            'thingspect.api.DataPointService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -98,7 +98,7 @@ class DataPointService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.DataPointService/PublishDataPoints',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.DataPointService/PublishDataPoints',
             api_dot_datapoint__pb2.PublishDataPointsRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
@@ -115,7 +115,7 @@ class DataPointService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.DataPointService/ListDataPoints',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.DataPointService/ListDataPoints',
             api_dot_datapoint__pb2.ListDataPointsRequest.SerializeToString,
             api_dot_datapoint__pb2.ListDataPointsResponse.FromString,
             options, channel_credentials,
@@ -132,7 +132,7 @@ class DataPointService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.DataPointService/LatestDataPoints',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.DataPointService/LatestDataPoints',
             api_dot_datapoint__pb2.LatestDataPointsRequest.SerializeToString,
             api_dot_datapoint__pb2.LatestDataPointsResponse.FromString,
             options, channel_credentials,

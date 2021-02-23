@@ -1,5 +1,5 @@
 syntax = "proto3";
-package api;
+package thingspect.api;
 
 import "api/status.proto";
 import "common/role.proto";
@@ -28,7 +28,7 @@ service UserService {
           description: "A successful response."
           schema: {
             json_schema: {
-              ref: ".api.User"
+              ref: ".thingspect.api.User"
             }
           }
         }

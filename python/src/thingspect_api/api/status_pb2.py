@@ -16,16 +16,16 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='api/status.proto',
-  package='api',
+  package='thingspect.api',
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10\x61pi/status.proto\x12\x03\x61pi*:\n\x06Status\x12\x16\n\x12STATUS_UNSPECIFIED\x10\x00\x12\n\n\x06\x41\x43TIVE\x10\x03\x12\x0c\n\x08\x44ISABLED\x10\x06\x42\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x10\x61pi/status.proto\x12\x0ethingspect.api*:\n\x06Status\x12\x16\n\x12STATUS_UNSPECIFIED\x10\x00\x12\n\n\x06\x41\x43TIVE\x10\x03\x12\x0c\n\x08\x44ISABLED\x10\x06\x42\"Z github.com/thingspect/api/go/apib\x06proto3'
 )
 
 _STATUS = _descriptor.EnumDescriptor(
   name='Status',
-  full_name='api.Status',
+  full_name='thingspect.api.Status',
   filename=None,
   file=DESCRIPTOR,
   create_key=_descriptor._internal_create_key,
@@ -48,8 +48,8 @@ _STATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=25,
-  serialized_end=83,
+  serialized_start=36,
+  serialized_end=94,
 )
 _sym_db.RegisterEnumDescriptor(_STATUS)
 

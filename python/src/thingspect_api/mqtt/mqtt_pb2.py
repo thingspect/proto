@@ -16,11 +16,11 @@ from common import datapoint_pb2 as common_dot_datapoint__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='mqtt/mqtt.proto',
-  package='mqtt',
+  package='thingspect.mqtt',
   syntax='proto3',
   serialized_options=b'Z!github.com/thingspect/api/go/mqtt',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0fmqtt/mqtt.proto\x12\x04mqtt\x1a\x16\x63ommon/datapoint.proto\";\n\x07Payload\x12!\n\x06points\x18\x01 \x03(\x0b\x32\x11.common.DataPoint\x12\r\n\x05token\x18\x02 \x01(\tB#Z!github.com/thingspect/api/go/mqttb\x06proto3'
+  serialized_pb=b'\n\x0fmqtt/mqtt.proto\x12\x0fthingspect.mqtt\x1a\x16\x63ommon/datapoint.proto\"F\n\x07Payload\x12,\n\x06points\x18\x01 \x03(\x0b\x32\x1c.thingspect.common.DataPoint\x12\r\n\x05token\x18\x02 \x01(\tB#Z!github.com/thingspect/api/go/mqttb\x06proto3'
   ,
   dependencies=[common_dot_datapoint__pb2.DESCRIPTOR,])
 
@@ -29,21 +29,21 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _PAYLOAD = _descriptor.Descriptor(
   name='Payload',
-  full_name='mqtt.Payload',
+  full_name='thingspect.mqtt.Payload',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='points', full_name='mqtt.Payload.points', index=0,
+      name='points', full_name='thingspect.mqtt.Payload.points', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='token', full_name='mqtt.Payload.token', index=1,
+      name='token', full_name='thingspect.mqtt.Payload.token', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -61,8 +61,8 @@ _PAYLOAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=49,
-  serialized_end=108,
+  serialized_start=60,
+  serialized_end=130,
 )
 
 _PAYLOAD.fields_by_name['points'].message_type = common_dot_datapoint__pb2._DATAPOINT
@@ -72,7 +72,7 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 Payload = _reflection.GeneratedProtocolMessageType('Payload', (_message.Message,), {
   'DESCRIPTOR' : _PAYLOAD,
   '__module__' : 'mqtt.mqtt_pb2'
-  # @@protoc_insertion_point(class_scope:mqtt.Payload)
+  # @@protoc_insertion_point(class_scope:thingspect.mqtt.Payload)
   })
 _sym_db.RegisterMessage(Payload)
 

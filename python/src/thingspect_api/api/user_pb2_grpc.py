@@ -17,32 +17,32 @@ class UserServiceStub(object):
             channel: A grpc.Channel.
         """
         self.CreateUser = channel.unary_unary(
-                '/api.UserService/CreateUser',
+                '/thingspect.api.UserService/CreateUser',
                 request_serializer=api_dot_user__pb2.CreateUserRequest.SerializeToString,
                 response_deserializer=api_dot_user__pb2.User.FromString,
                 )
         self.GetUser = channel.unary_unary(
-                '/api.UserService/GetUser',
+                '/thingspect.api.UserService/GetUser',
                 request_serializer=api_dot_user__pb2.GetUserRequest.SerializeToString,
                 response_deserializer=api_dot_user__pb2.User.FromString,
                 )
         self.UpdateUser = channel.unary_unary(
-                '/api.UserService/UpdateUser',
+                '/thingspect.api.UserService/UpdateUser',
                 request_serializer=api_dot_user__pb2.UpdateUserRequest.SerializeToString,
                 response_deserializer=api_dot_user__pb2.User.FromString,
                 )
         self.UpdateUserPassword = channel.unary_unary(
-                '/api.UserService/UpdateUserPassword',
+                '/thingspect.api.UserService/UpdateUserPassword',
                 request_serializer=api_dot_user__pb2.UpdateUserPasswordRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
         self.DeleteUser = channel.unary_unary(
-                '/api.UserService/DeleteUser',
+                '/thingspect.api.UserService/DeleteUser',
                 request_serializer=api_dot_user__pb2.DeleteUserRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
         self.ListUsers = channel.unary_unary(
-                '/api.UserService/ListUsers',
+                '/thingspect.api.UserService/ListUsers',
                 request_serializer=api_dot_user__pb2.ListUsersRequest.SerializeToString,
                 response_deserializer=api_dot_user__pb2.ListUsersResponse.FromString,
                 )
@@ -129,7 +129,7 @@ def add_UserServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'api.UserService', rpc_method_handlers)
+            'thingspect.api.UserService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -149,7 +149,7 @@ class UserService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.UserService/CreateUser',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.UserService/CreateUser',
             api_dot_user__pb2.CreateUserRequest.SerializeToString,
             api_dot_user__pb2.User.FromString,
             options, channel_credentials,
@@ -166,7 +166,7 @@ class UserService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.UserService/GetUser',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.UserService/GetUser',
             api_dot_user__pb2.GetUserRequest.SerializeToString,
             api_dot_user__pb2.User.FromString,
             options, channel_credentials,
@@ -183,7 +183,7 @@ class UserService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.UserService/UpdateUser',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.UserService/UpdateUser',
             api_dot_user__pb2.UpdateUserRequest.SerializeToString,
             api_dot_user__pb2.User.FromString,
             options, channel_credentials,
@@ -200,7 +200,7 @@ class UserService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.UserService/UpdateUserPassword',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.UserService/UpdateUserPassword',
             api_dot_user__pb2.UpdateUserPasswordRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
@@ -217,7 +217,7 @@ class UserService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.UserService/DeleteUser',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.UserService/DeleteUser',
             api_dot_user__pb2.DeleteUserRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
@@ -234,7 +234,7 @@ class UserService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/api.UserService/ListUsers',
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.UserService/ListUsers',
             api_dot_user__pb2.ListUsersRequest.SerializeToString,
             api_dot_user__pb2.ListUsersResponse.FromString,
             options, channel_credentials,

@@ -1,5 +1,5 @@
 syntax = "proto3";
-package api;
+package thingspect.api;
 
 import "api/status.proto";
 import "api/decoder.proto";
@@ -28,9 +28,26 @@ service DeviceService {
           description: "A successful response."
           schema: {
             json_schema: {
-              ref: ".api.Device"
+              ref: ".thingspect.api.Device"
             }
           }
+        }
+      }
+    };
+  }
+
+  // Add LoRaWAN configuration to a device.
+  rpc CreateDeviceLoRaWAN(CreateDeviceLoRaWANRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1/devices/{id}/lorawan"
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      responses: {
+        key: "204"
+        value: {
+          description: "A successful response."
+          schema: {}
         }
       }
     };
@@ -51,6 +68,22 @@ service DeviceService {
       additional_bindings {
         patch: "/v1/devices/{device.id}"
         body: "device"
+      }
+    };
+  }
+
+  // Remove LoRaWAN configuration from a device.
+  rpc DeleteDeviceLoRaWAN(DeleteDeviceLoRaWANRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      delete: "/v1/devices/{id}/lorawan"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      responses: {
+        key: "204"
+        value: {
+          description: "A successful response."
+          schema: {}
+        }
       }
     };
   }
@@ -112,6 +145,32 @@ message CreateDeviceRequest {
   Device device = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 }
 
+// CreateDeviceLoRaWANRequest is sent to add LoRaWAN configuration to a device.
+message CreateDeviceLoRaWANRequest {
+  // GatewayLoRaWANType is sent to add LoRaWAN gateway configuration.
+  message GatewayLoRaWANType {}
+
+  // DeviceLoRaWANType is sent to add LoRaWAN device configuration.
+  message DeviceLoRaWANType {
+    // Device LoRaWAN 1.0.x application key.
+    string app_key = 1 [(validate.rules).string.len = 32, (google.api.field_behavior) = REQUIRED];
+  }
+
+  // Device ID (UUID) to add LoRaWAN configuration.
+  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = OUTPUT_ONLY];
+
+  // LoRaWAN configuration type.
+  oneof type_oneof {
+    option (validate.required) = true;
+
+    // Gateway LoRaWAN configuration type.
+    GatewayLoRaWANType gateway_lorawan_type = 2 [json_name = "gatewayLoRaWANType"];
+
+    // Device LoRaWAN configuration type.
+    DeviceLoRaWANType device_lorawan_type = 3 [json_name = "deviceLoRaWANType"];
+  }
+}
+
 // GetDeviceRequest is sent to get a device.
 message GetDeviceRequest {
   // Device ID (UUID) to get.
@@ -125,6 +184,12 @@ message UpdateDeviceRequest {
 
   // Fields to update. Automatically populated by a PATCH request. If not present, a full resource update is performed.
   google.protobuf.FieldMask update_mask = 2;
+}
+
+// DeleteDeviceLoRaWANRequest is sent to remove LoRaWAN configuration from a device.
+message DeleteDeviceLoRaWANRequest {
+  // Device ID (UUID) to remove LoRaWAN configuration.
+  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
 }
 
 // DeleteDeviceRequest is sent to delete a device.
