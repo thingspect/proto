@@ -3,12 +3,13 @@
 generate: deps common mqtt api mod openapi
 
 deps:
-	echo 'module github.com/thingspect/api/go' > go.mod
-	go get google.golang.org/protobuf/cmd/protoc-gen-go \
-	google.golang.org/grpc/cmd/protoc-gen-go-grpc \
-	github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway \
-	github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2 \
-	github.com/envoyproxy/protoc-gen-validate
+	go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+	go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+	go install \
+	github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@latest
+	go install \
+	github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2@latest
+	go install github.com/envoyproxy/protoc-gen-validate@latest
 
 common:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
