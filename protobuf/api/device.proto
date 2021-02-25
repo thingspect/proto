@@ -123,20 +123,26 @@ message Device {
   // Device unique ID.
   string uniq_id = 3 [json_name = "uniqID", (validate.rules).string = {min_len: 5, max_len: 40}, (google.api.field_behavior) = REQUIRED];
 
-  // Device status.
-  Status status = 4 [(validate.rules).enum = {in: [3,6]}, (google.api.field_behavior) = REQUIRED];
+  // Device name.
+  string name = 4 [(validate.rules).string = {min_len: 5, max_len: 80}, (google.api.field_behavior) = REQUIRED];
 
-  // Authentication token (UUID).
-  string token = 5;
+  // Device status.
+  Status status = 5 [(validate.rules).enum = {in: [3,6]}, (google.api.field_behavior) = REQUIRED];
+
+  // Authentication token (UUID). Will be generated at creation time, but can be updated afterward.
+  string token = 6;
 
   // Device data payload decoder.
-  Decoder decoder = 6;
+  Decoder decoder = 7;
+
+  // Device tags. Nested tags should be delimited by '/'.
+  repeated string tags = 8 [(validate.rules).repeated.unique = true, (validate.rules).repeated.items.string.max_len = 255];
 
   // Device creation timestamp.
-  google.protobuf.Timestamp created_at = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp created_at = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Device modification timestamp.
-  google.protobuf.Timestamp updated_at = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp updated_at = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
 }
 
 // CreateDeviceRequest is sent to create a device.
@@ -205,6 +211,9 @@ message ListDevicesRequest {
 
   // Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.
   string page_token = 2;
+
+  // Filter devices by specified tag.
+  string tag = 3;
 }
 
 // ListDevicesResponse is sent in response to a device list.

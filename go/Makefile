@@ -21,7 +21,7 @@ common:
 mqtt:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
 	--go_out=. --go_opt=paths=source_relative \
-	mqtt/mqtt.proto
+	mqtt/payload.proto
 
 api:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/grpc-gateway -I=/tmp/pgv \
@@ -35,6 +35,7 @@ api:
 	api/org.proto \
 	api/session.proto \
 	api/status.proto \
+	api/tag.proto \
 	api/user.proto
 
 mod:
@@ -53,4 +54,5 @@ openapi:
 	api/org.proto \
 	api/session.proto \
 	api/status.proto \
+	api/tag.proto \
 	api/user.proto
