@@ -1,0 +1,25 @@
+syntax = "proto3";
+package thingspect.api;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/thingspect/api/go/api";
+
+// TagService contains functions to query tags.
+service TagService {
+  // List all tags.
+  rpc ListTags(ListTagsRequest) returns (ListTagsResponse) {
+    option (google.api.http) = {
+      get: "/v1/tags"
+    };
+  }
+}
+
+// ListTagsRequest is sent to list tags.
+message ListTagsRequest {}
+
+// ListTagsResponse is sent in response to a tag list.
+message ListTagsResponse {
+  // Tag array, ordered by ascending name.
+  repeated string tags = 1;
+}

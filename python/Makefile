@@ -14,7 +14,7 @@ common:
 mqtt:
 	python -m grpc_tools.protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
 	--python_out=src/thingspect_api \
-	mqtt/mqtt.proto
+	mqtt/payload.proto
 
 api:
 	python -m grpc_tools.protoc -I=../protobuf -I=/tmp/googleapis \
@@ -26,4 +26,5 @@ api:
 	api/org.proto \
 	api/session.proto \
 	api/status.proto \
+	api/tag.proto \
 	api/user.proto
