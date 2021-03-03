@@ -24,6 +24,7 @@ api:
 	api/device.proto \
 	api/datapoint.proto \
 	api/org.proto \
+	api/rule.proto \
 	api/session.proto \
 	api/status.proto \
 	api/tag.proto \
