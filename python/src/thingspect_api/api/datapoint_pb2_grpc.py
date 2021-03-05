@@ -45,14 +45,14 @@ class DataPointServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ListDataPoints(self, request, context):
-        """List all data points within a [end, start) time range in descending timestamp order.
+        """List all data points for a device in a [end, start) time range, in descending timestamp order.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def LatestDataPoints(self, request, context):
-        """List latest data point for each of a device's attributes.
+        """List the latest data point for each of a device's attributes.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

@@ -1,0 +1,24 @@
+syntax = "proto3";
+package thingspect.api;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/thingspect/api/go/api";
+
+// Event represents an event as stored in the database.
+message Event {
+  // Organization ID (UUID).
+  string org_id = 1 [json_name = "orgID"];
+
+  // Rule ID (UUID).
+  string rule_id = 2 [json_name = "ruleID"];
+
+  // Device unique ID.
+  string uniq_id = 3 [json_name = "uniqID"];
+
+  // Event creation timestamp.
+  google.protobuf.Timestamp created_at = 4;
+
+  // Trace ID (UUID).
+  string trace_id = 5;
+}

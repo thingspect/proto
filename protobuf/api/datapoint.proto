@@ -30,14 +30,14 @@ service DataPointService {
     };
   }
 
-  // List all data points within a [end, start) time range in descending timestamp order.
+  // List all data points for a device in a [end, start) time range, in descending timestamp order.
   rpc ListDataPoints(ListDataPointsRequest) returns (ListDataPointsResponse) {
     option (google.api.http) = {
       get: "/v1/datapoints"
     };
   }
 
-  // List latest data point for each of a device's attributes.
+  // List the latest data point for each of a device's attributes.
   rpc LatestDataPoints(LatestDataPointsRequest) returns (LatestDataPointsResponse) {
     option (google.api.http) = {
       get: "/v1/datapoints/latest"
@@ -57,10 +57,10 @@ message ListDataPointsRequest {
   oneof id_oneof {
     option (validate.required) = true;
 
-    // Device unique ID.
+    // Device unique ID. Either unique ID or device ID must be provided.
     string uniq_id = 1 [json_name = "uniqID"];
 
-    // Device ID (UUID).
+    // Device ID (UUID). Either unique ID or device ID must be provided.
     string dev_id = 2 [json_name = "devID"];
   }
 
@@ -86,10 +86,10 @@ message LatestDataPointsRequest {
   oneof id_oneof {
     option (validate.required) = true;
 
-    // Device unique ID.
+    // Device unique ID. Either unique ID or device ID must be provided.
     string uniq_id = 1 [json_name = "uniqID"];
 
-    // Device ID (UUID).
+    // Device ID (UUID). Either unique ID or device ID must be provided.
     string dev_id = 2 [json_name = "devID"];
   }
 }

@@ -1,10 +1,8 @@
 syntax = "proto3";
 package thingspect.api;
 
-import "api/status.proto";
-import "api/decoder.proto";
+import "common/device.proto";
 import "google/protobuf/empty.proto";
-import "google/protobuf/timestamp.proto";
 import "google/protobuf/field_mask.proto";
 import "google/api/annotations.proto";
 import "google/api/field_behavior.proto";
@@ -16,7 +14,7 @@ option go_package = "github.com/thingspect/api/go/api";
 // DeviceService contains functions to query and modify devices.
 service DeviceService {
   // Create a device.
-  rpc CreateDevice(CreateDeviceRequest) returns (Device) {
+  rpc CreateDevice(CreateDeviceRequest) returns (common.Device) {
     option (google.api.http) = {
       post: "/v1/devices"
       body: "device"
@@ -28,7 +26,7 @@ service DeviceService {
           description: "A successful response."
           schema: {
             json_schema: {
-              ref: ".thingspect.api.Device"
+              ref: ".thingspect.common.Device"
             }
           }
         }
@@ -54,14 +52,14 @@ service DeviceService {
   }
 
   // Get a device by ID.
-  rpc GetDevice(GetDeviceRequest) returns (Device) {
+  rpc GetDevice(GetDeviceRequest) returns (common.Device) {
     option (google.api.http) = {
       get: "/v1/devices/{id}"
     };
   }
 
   // Update a device.
-  rpc UpdateDevice(UpdateDeviceRequest) returns (Device) {
+  rpc UpdateDevice(UpdateDeviceRequest) returns (common.Device) {
     option (google.api.http) = {
       put: "/v1/devices/{device.id}"
       body: "device"
@@ -112,43 +110,10 @@ service DeviceService {
   }
 }
 
-// Device represents a device as stored in the database.
-message Device {
-  // Device ID (UUID).
-  string id = 1 [(google.api.field_behavior) = OUTPUT_ONLY];
-
-  // Organization ID (UUID).
-  string org_id = 2 [json_name = "orgID", (google.api.field_behavior) = OUTPUT_ONLY];
-
-  // Device unique ID.
-  string uniq_id = 3 [json_name = "uniqID", (validate.rules).string = {min_len: 5, max_len: 40}, (google.api.field_behavior) = REQUIRED];
-
-  // Device name.
-  string name = 4 [(validate.rules).string = {min_len: 5, max_len: 80}, (google.api.field_behavior) = REQUIRED];
-
-  // Device status.
-  Status status = 5 [(validate.rules).enum = {in: [3,6]}, (google.api.field_behavior) = REQUIRED];
-
-  // Authentication token (UUID). Will be generated at creation time, but can be updated afterward.
-  string token = 6;
-
-  // Device data payload decoder.
-  Decoder decoder = 7;
-
-  // Device tags. Nested tags should be delimited by '/'.
-  repeated string tags = 8 [(validate.rules).repeated.unique = true, (validate.rules).repeated.items.string.max_len = 255];
-
-  // Device creation timestamp.
-  google.protobuf.Timestamp created_at = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
-
-  // Device modification timestamp.
-  google.protobuf.Timestamp updated_at = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
-}
-
 // CreateDeviceRequest is sent to create a device.
 message CreateDeviceRequest {
   // Device message to create.
-  Device device = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+  common.Device device = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 }
 
 // CreateDeviceLoRaWANRequest is sent to add LoRaWAN configuration to a device.
@@ -186,7 +151,7 @@ message GetDeviceRequest {
 // UpdateDeviceRequest is sent to update a device.
 message UpdateDeviceRequest {
   // Device message to update.
-  Device device = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+  common.Device device = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 
   // Fields to update. Automatically populated by a PATCH request. If not present, a full resource update is performed.
   google.protobuf.FieldMask update_mask = 2;
@@ -219,7 +184,7 @@ message ListDevicesRequest {
 // ListDevicesResponse is sent in response to a device list.
 message ListDevicesResponse {
   // Device array, ordered by ascending created_at timestamp.
-  repeated Device devices = 1;
+  repeated common.Device devices = 1;
 
   // Pagination token used to retrieve the next page of results. Not returned for the last page.
   string next_page_token = 2;
