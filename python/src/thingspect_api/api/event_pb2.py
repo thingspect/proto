@@ -12,6 +12,8 @@ _sym_db = _symbol_database.Default()
 
 
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from validate import validate_pb2 as validate_dot_validate__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0f\x61pi/event.proto\x12\x0ethingspect.api\x1a\x1fgoogle/protobuf/timestamp.proto\"\x92\x01\n\x05\x45vent\x12\x15\n\x06org_id\x18\x01 \x01(\tR\x05orgID\x12\x17\n\x07rule_id\x18\x02 \x01(\tR\x06ruleID\x12\x17\n\x07uniq_id\x18\x03 \x01(\tR\x06uniqID\x12.\n\ncreated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x10\n\x08trace_id\x18\x05 \x01(\tB\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x0f\x61pi/event.proto\x12\x0ethingspect.api\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x17validate/validate.proto\"\x92\x01\n\x05\x45vent\x12\x15\n\x06org_id\x18\x01 \x01(\tR\x05orgID\x12\x17\n\x07rule_id\x18\x02 \x01(\tR\x06ruleID\x12\x17\n\x07uniq_id\x18\x03 \x01(\tR\x06uniqID\x12.\n\ncreated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x10\n\x08trace_id\x18\x05 \x01(\t\"\xcf\x01\n\x11ListEventsRequest\x12\x19\n\x07uniq_id\x18\x01 \x01(\tH\x00R\x06uniqID\x12\x17\n\x06\x64\x65v_id\x18\x02 \x01(\tH\x00R\x05\x64\x65vID\x12\x17\n\x07rule_id\x18\x03 \x01(\tR\x06ruleID\x12,\n\x08\x65nd_time\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12.\n\nstart_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x0f\n\x08id_oneof\x12\x03\xf8\x42\x01\";\n\x12ListEventsResponse\x12%\n\x06\x65vents\x18\x01 \x03(\x0b\x32\x15.thingspect.api.Event\".\n\x13LatestEventsRequest\x12\x17\n\x07rule_id\x18\x01 \x01(\tR\x06ruleID\"=\n\x14LatestEventsResponse\x12%\n\x06\x65vents\x18\x01 \x03(\x0b\x32\x15.thingspect.api.Event2\xed\x01\n\x0c\x45ventService\x12g\n\nListEvents\x12!.thingspect.api.ListEventsRequest\x1a\".thingspect.api.ListEventsResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\x12\n/v1/events\x12t\n\x0cLatestEvents\x12#.thingspect.api.LatestEventsRequest\x1a$.thingspect.api.LatestEventsResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/events/latestB\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
-  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
 
 
@@ -82,12 +84,187 @@ _EVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=69,
-  serialized_end=215,
+  serialized_start=124,
+  serialized_end=270,
+)
+
+
+_LISTEVENTSREQUEST = _descriptor.Descriptor(
+  name='ListEventsRequest',
+  full_name='thingspect.api.ListEventsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uniq_id', full_name='thingspect.api.ListEventsRequest.uniq_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='uniqID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='dev_id', full_name='thingspect.api.ListEventsRequest.dev_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='devID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rule_id', full_name='thingspect.api.ListEventsRequest.rule_id', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='ruleID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='end_time', full_name='thingspect.api.ListEventsRequest.end_time', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='start_time', full_name='thingspect.api.ListEventsRequest.start_time', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='id_oneof', full_name='thingspect.api.ListEventsRequest.id_oneof',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[], serialized_options=b'\370B\001'),
+  ],
+  serialized_start=273,
+  serialized_end=480,
+)
+
+
+_LISTEVENTSRESPONSE = _descriptor.Descriptor(
+  name='ListEventsResponse',
+  full_name='thingspect.api.ListEventsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='events', full_name='thingspect.api.ListEventsResponse.events', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=482,
+  serialized_end=541,
+)
+
+
+_LATESTEVENTSREQUEST = _descriptor.Descriptor(
+  name='LatestEventsRequest',
+  full_name='thingspect.api.LatestEventsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='rule_id', full_name='thingspect.api.LatestEventsRequest.rule_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='ruleID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=543,
+  serialized_end=589,
+)
+
+
+_LATESTEVENTSRESPONSE = _descriptor.Descriptor(
+  name='LatestEventsResponse',
+  full_name='thingspect.api.LatestEventsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='events', full_name='thingspect.api.LatestEventsResponse.events', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=591,
+  serialized_end=652,
 )
 
 _EVENT.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_LISTEVENTSREQUEST.fields_by_name['end_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_LISTEVENTSREQUEST.fields_by_name['start_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_LISTEVENTSREQUEST.oneofs_by_name['id_oneof'].fields.append(
+  _LISTEVENTSREQUEST.fields_by_name['uniq_id'])
+_LISTEVENTSREQUEST.fields_by_name['uniq_id'].containing_oneof = _LISTEVENTSREQUEST.oneofs_by_name['id_oneof']
+_LISTEVENTSREQUEST.oneofs_by_name['id_oneof'].fields.append(
+  _LISTEVENTSREQUEST.fields_by_name['dev_id'])
+_LISTEVENTSREQUEST.fields_by_name['dev_id'].containing_oneof = _LISTEVENTSREQUEST.oneofs_by_name['id_oneof']
+_LISTEVENTSRESPONSE.fields_by_name['events'].message_type = _EVENT
+_LATESTEVENTSRESPONSE.fields_by_name['events'].message_type = _EVENT
 DESCRIPTOR.message_types_by_name['Event'] = _EVENT
+DESCRIPTOR.message_types_by_name['ListEventsRequest'] = _LISTEVENTSREQUEST
+DESCRIPTOR.message_types_by_name['ListEventsResponse'] = _LISTEVENTSRESPONSE
+DESCRIPTOR.message_types_by_name['LatestEventsRequest'] = _LATESTEVENTSREQUEST
+DESCRIPTOR.message_types_by_name['LatestEventsResponse'] = _LATESTEVENTSRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Event = _reflection.GeneratedProtocolMessageType('Event', (_message.Message,), {
@@ -97,6 +274,71 @@ Event = _reflection.GeneratedProtocolMessageType('Event', (_message.Message,), {
   })
 _sym_db.RegisterMessage(Event)
 
+ListEventsRequest = _reflection.GeneratedProtocolMessageType('ListEventsRequest', (_message.Message,), {
+  'DESCRIPTOR' : _LISTEVENTSREQUEST,
+  '__module__' : 'api.event_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.ListEventsRequest)
+  })
+_sym_db.RegisterMessage(ListEventsRequest)
+
+ListEventsResponse = _reflection.GeneratedProtocolMessageType('ListEventsResponse', (_message.Message,), {
+  'DESCRIPTOR' : _LISTEVENTSRESPONSE,
+  '__module__' : 'api.event_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.ListEventsResponse)
+  })
+_sym_db.RegisterMessage(ListEventsResponse)
+
+LatestEventsRequest = _reflection.GeneratedProtocolMessageType('LatestEventsRequest', (_message.Message,), {
+  'DESCRIPTOR' : _LATESTEVENTSREQUEST,
+  '__module__' : 'api.event_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.LatestEventsRequest)
+  })
+_sym_db.RegisterMessage(LatestEventsRequest)
+
+LatestEventsResponse = _reflection.GeneratedProtocolMessageType('LatestEventsResponse', (_message.Message,), {
+  'DESCRIPTOR' : _LATESTEVENTSRESPONSE,
+  '__module__' : 'api.event_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.LatestEventsResponse)
+  })
+_sym_db.RegisterMessage(LatestEventsResponse)
+
 
 DESCRIPTOR._options = None
+_LISTEVENTSREQUEST.oneofs_by_name['id_oneof']._options = None
+
+_EVENTSERVICE = _descriptor.ServiceDescriptor(
+  name='EventService',
+  full_name='thingspect.api.EventService',
+  file=DESCRIPTOR,
+  index=0,
+  serialized_options=None,
+  create_key=_descriptor._internal_create_key,
+  serialized_start=655,
+  serialized_end=892,
+  methods=[
+  _descriptor.MethodDescriptor(
+    name='ListEvents',
+    full_name='thingspect.api.EventService.ListEvents',
+    index=0,
+    containing_service=None,
+    input_type=_LISTEVENTSREQUEST,
+    output_type=_LISTEVENTSRESPONSE,
+    serialized_options=b'\202\323\344\223\002\014\022\n/v1/events',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='LatestEvents',
+    full_name='thingspect.api.EventService.LatestEvents',
+    index=1,
+    containing_service=None,
+    input_type=_LATESTEVENTSREQUEST,
+    output_type=_LATESTEVENTSRESPONSE,
+    serialized_options=b'\202\323\344\223\002\023\022\021/v1/events/latest',
+    create_key=_descriptor._internal_create_key,
+  ),
+])
+_sym_db.RegisterServiceDescriptor(_EVENTSERVICE)
+
+DESCRIPTOR.services_by_name['EventService'] = _EVENTSERVICE
+
 # @@protoc_insertion_point(module_scope)

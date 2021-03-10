@@ -2,8 +2,27 @@ syntax = "proto3";
 package thingspect.api;
 
 import "google/protobuf/timestamp.proto";
+import "google/api/annotations.proto";
+import "validate/validate.proto";
 
 option go_package = "github.com/thingspect/api/go/api";
+
+// EventService contains functions to query events.
+service EventService {
+  // List all events for a device in a [end, start) time range, in descending timestamp order.
+  rpc ListEvents(ListEventsRequest) returns (ListEventsResponse) {
+    option (google.api.http) = {
+      get: "/v1/events"
+    };
+  }
+
+  // List the latest event for each of an organization's devices.
+  rpc LatestEvents(LatestEventsRequest) returns (LatestEventsResponse) {
+    option (google.api.http) = {
+      get: "/v1/events/latest"
+    };
+  }
+}
 
 // Event represents an event as stored in the database.
 message Event {
@@ -21,4 +40,45 @@ message Event {
 
   // Trace ID (UUID).
   string trace_id = 5;
+}
+
+// ListEventsRequest is sent to list device events in a [end, start) time range, in descending timestamp order.
+message ListEventsRequest {
+  // Identifier.
+  oneof id_oneof {
+    option (validate.required) = true;
+
+    // Device unique ID. Either unique ID or device ID must be provided.
+    string uniq_id = 1 [json_name = "uniqID"];
+
+    // Device ID (UUID). Either unique ID or device ID must be provided.
+    string dev_id = 2 [json_name = "devID"];
+  }
+
+  // Rule ID (UUID). If not specified, all rules are included.
+  string rule_id = 3 [json_name = "ruleID"];
+
+  // Events range end time. Defaults to current time if not specified. Maximum supported time range is 90 days.
+  google.protobuf.Timestamp end_time = 4;
+
+  // Events range start time. Defaults to end_time - 24 hours if not specified or after end_time. Maximum supported time range is 90 days.
+  google.protobuf.Timestamp start_time = 5;
+}
+
+// ListEventsResponse is sent in response to a device events list.
+message ListEventsResponse {
+  // Event array, ordered by descending created_at timestamp.
+  repeated Event events = 1;
+}
+
+// LatestEventsRequest is sent to list latest organization events.
+message LatestEventsRequest {
+  // Rule ID (UUID). If not specified, all rules are included.
+  string rule_id = 1 [json_name = "ruleID"];
+}
+
+// LatestEventsResponse is sent in response to an organization latest list.
+message LatestEventsResponse {
+  // Event array, ordered by descending created_at timestamp.
+  repeated Event events = 1;
 }
