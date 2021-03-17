@@ -101,10 +101,10 @@ message Rule {
   // Rule status.
   common.Status status = 4 [(validate.rules).enum = {in: [3,6]}, (google.api.field_behavior) = REQUIRED];
 
-  // Device tag that the rule applies to.
-  string tag = 5 [(validate.rules).string.max_len = 255, (google.api.field_behavior) = REQUIRED];
+  // Device tag to which the rule applies.
+  string device_tag = 5 [(validate.rules).string.max_len = 255, (google.api.field_behavior) = REQUIRED];
 
-  // Device attribute that the rule applies to.
+  // Device and data point attribute to which the rule applies.
   string attr = 6 [(validate.rules).string.max_len = 40, (google.api.field_behavior) = REQUIRED];
 
   // Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://github.com/antonmedv/expr/blob/master/docs/Language-Definition.md).
