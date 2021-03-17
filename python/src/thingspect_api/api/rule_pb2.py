@@ -28,7 +28,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0e\x61pi/rule.proto\x12\x0ethingspect.api\x1a\x13\x63ommon/status.proto\x1a\x16\x63ommon/datapoint.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\xc2\x02\n\x04Rule\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x1a\n\x04name\x18\x03 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18P\xe0\x41\x02\x12\x38\n\x06status\x18\x04 \x01(\x0e\x32\x19.thingspect.common.StatusB\r\xfa\x42\x07\x82\x01\x04\x18\x03\x18\x06\xe0\x41\x02\x12\x18\n\x03tag\x18\x05 \x01(\tB\x0b\xfa\x42\x05r\x03\x18\xff\x01\xe0\x41\x02\x12\x18\n\x04\x61ttr\x18\x06 \x01(\tB\n\xfa\x42\x04r\x02\x18(\xe0\x41\x02\x12\x19\n\x04\x65xpr\x18\x07 \x01(\tB\x0b\xfa\x42\x05r\x03\x18\x80\x08\xe0\x41\x02\x12\x33\n\ncreated_at\x18\x08 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\t \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"D\n\x11\x43reateRuleRequest\x12/\n\x04rule\x18\x01 \x01(\x0b\x32\x14.thingspect.api.RuleB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\")\n\x0eGetRuleRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"u\n\x11UpdateRuleRequest\x12/\n\x04rule\x18\x01 \x01(\x0b\x32\x14.thingspect.api.RuleB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\",\n\x11\x44\x65leteRuleRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"E\n\x10ListRulesRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"e\n\x11ListRulesResponse\x12#\n\x05rules\x18\x01 \x03(\x0b\x32\x14.thingspect.api.Rule\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\"|\n\x0fTestRuleRequest\x12\x38\n\x05point\x18\x01 \x01(\x0b\x32\x1c.thingspect.common.DataPointB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x04rule\x18\x02 \x01(\x0b\x32\x14.thingspect.api.RuleB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"\"\n\x10TestRuleResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\x32\xe4\x05\n\x0bRuleService\x12\x9c\x01\n\nCreateRule\x12!.thingspect.api.CreateRuleRequest\x1a\x14.thingspect.api.Rule\"U\x82\xd3\xe4\x93\x02\x11\"\t/v1/rules:\x04rule\x92\x41;J9\n\x03\x32\x30\x31\x12\x32\n\x16\x41 successful response.\x12\x18\n\x16\x1a\x14.thingspect.api.Rule\x12W\n\x07GetRule\x12\x1e.thingspect.api.GetRuleRequest\x1a\x14.thingspect.api.Rule\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/rules/{id}\x12\x85\x01\n\nUpdateRule\x12!.thingspect.api.UpdateRuleRequest\x1a\x14.thingspect.api.Rule\">\x82\xd3\xe4\x93\x02\x38\x1a\x13/v1/rules/{rule.id}:\x04ruleZ\x1b\x32\x13/v1/rules/{rule.id}:\x04rule\x12\x85\x01\n\nDeleteRule\x12!.thingspect.api.DeleteRuleRequest\x1a\x16.google.protobuf.Empty\"<\x82\xd3\xe4\x93\x02\x10*\x0e/v1/rules/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x63\n\tListRules\x12 .thingspect.api.ListRulesRequest\x1a!.thingspect.api.ListRulesResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\x12\t/v1/rules\x12h\n\x08TestRule\x12\x1f.thingspect.api.TestRuleRequest\x1a .thingspect.api.TestRuleResponse\"\x19\x82\xd3\xe4\x93\x02\x13\"\x0e/v1/rules/test:\x01*B\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x0e\x61pi/rule.proto\x12\x0ethingspect.api\x1a\x13\x63ommon/status.proto\x1a\x16\x63ommon/datapoint.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\xc9\x02\n\x04Rule\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x1a\n\x04name\x18\x03 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18P\xe0\x41\x02\x12\x38\n\x06status\x18\x04 \x01(\x0e\x32\x19.thingspect.common.StatusB\r\xfa\x42\x07\x82\x01\x04\x18\x03\x18\x06\xe0\x41\x02\x12\x1f\n\ndevice_tag\x18\x05 \x01(\tB\x0b\xfa\x42\x05r\x03\x18\xff\x01\xe0\x41\x02\x12\x18\n\x04\x61ttr\x18\x06 \x01(\tB\n\xfa\x42\x04r\x02\x18(\xe0\x41\x02\x12\x19\n\x04\x65xpr\x18\x07 \x01(\tB\x0b\xfa\x42\x05r\x03\x18\x80\x08\xe0\x41\x02\x12\x33\n\ncreated_at\x18\x08 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\t \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"D\n\x11\x43reateRuleRequest\x12/\n\x04rule\x18\x01 \x01(\x0b\x32\x14.thingspect.api.RuleB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\")\n\x0eGetRuleRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"u\n\x11UpdateRuleRequest\x12/\n\x04rule\x18\x01 \x01(\x0b\x32\x14.thingspect.api.RuleB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\",\n\x11\x44\x65leteRuleRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"E\n\x10ListRulesRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"e\n\x11ListRulesResponse\x12#\n\x05rules\x18\x01 \x03(\x0b\x32\x14.thingspect.api.Rule\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\"|\n\x0fTestRuleRequest\x12\x38\n\x05point\x18\x01 \x01(\x0b\x32\x1c.thingspect.common.DataPointB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x04rule\x18\x02 \x01(\x0b\x32\x14.thingspect.api.RuleB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"\"\n\x10TestRuleResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\x32\xe4\x05\n\x0bRuleService\x12\x9c\x01\n\nCreateRule\x12!.thingspect.api.CreateRuleRequest\x1a\x14.thingspect.api.Rule\"U\x82\xd3\xe4\x93\x02\x11\"\t/v1/rules:\x04rule\x92\x41;J9\n\x03\x32\x30\x31\x12\x32\n\x16\x41 successful response.\x12\x18\n\x16\x1a\x14.thingspect.api.Rule\x12W\n\x07GetRule\x12\x1e.thingspect.api.GetRuleRequest\x1a\x14.thingspect.api.Rule\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/rules/{id}\x12\x85\x01\n\nUpdateRule\x12!.thingspect.api.UpdateRuleRequest\x1a\x14.thingspect.api.Rule\">\x82\xd3\xe4\x93\x02\x38\x1a\x13/v1/rules/{rule.id}:\x04ruleZ\x1b\x32\x13/v1/rules/{rule.id}:\x04rule\x12\x85\x01\n\nDeleteRule\x12!.thingspect.api.DeleteRuleRequest\x1a\x16.google.protobuf.Empty\"<\x82\xd3\xe4\x93\x02\x10*\x0e/v1/rules/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x63\n\tListRules\x12 .thingspect.api.ListRulesRequest\x1a!.thingspect.api.ListRulesResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\x12\t/v1/rules\x12h\n\x08TestRule\x12\x1f.thingspect.api.TestRuleRequest\x1a .thingspect.api.TestRuleResponse\"\x19\x82\xd3\xe4\x93\x02\x13\"\x0e/v1/rules/test:\x01*B\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
   dependencies=[common_dot_status__pb2.DESCRIPTOR,common_dot_datapoint__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -72,7 +72,7 @@ _RULE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=b'\372B\007\202\001\004\030\003\030\006\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='tag', full_name='thingspect.api.Rule.tag', index=4,
+      name='device_tag', full_name='thingspect.api.Rule.device_tag', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -119,7 +119,7 @@ _RULE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=312,
-  serialized_end=634,
+  serialized_end=641,
 )
 
 
@@ -150,8 +150,8 @@ _CREATERULEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=636,
-  serialized_end=704,
+  serialized_start=643,
+  serialized_end=711,
 )
 
 
@@ -182,8 +182,8 @@ _GETRULEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=706,
-  serialized_end=747,
+  serialized_start=713,
+  serialized_end=754,
 )
 
 
@@ -221,8 +221,8 @@ _UPDATERULEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=749,
-  serialized_end=866,
+  serialized_start=756,
+  serialized_end=873,
 )
 
 
@@ -253,8 +253,8 @@ _DELETERULEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=868,
-  serialized_end=912,
+  serialized_start=875,
+  serialized_end=919,
 )
 
 
@@ -292,8 +292,8 @@ _LISTRULESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=914,
-  serialized_end=983,
+  serialized_start=921,
+  serialized_end=990,
 )
 
 
@@ -338,8 +338,8 @@ _LISTRULESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=985,
-  serialized_end=1086,
+  serialized_start=992,
+  serialized_end=1093,
 )
 
 
@@ -377,8 +377,8 @@ _TESTRULEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1088,
-  serialized_end=1212,
+  serialized_start=1095,
+  serialized_end=1219,
 )
 
 
@@ -409,8 +409,8 @@ _TESTRULERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1214,
-  serialized_end=1248,
+  serialized_start=1221,
+  serialized_end=1255,
 )
 
 _RULE.fields_by_name['status'].enum_type = common_dot_status__pb2._STATUS
@@ -502,7 +502,7 @@ _RULE.fields_by_name['id']._options = None
 _RULE.fields_by_name['org_id']._options = None
 _RULE.fields_by_name['name']._options = None
 _RULE.fields_by_name['status']._options = None
-_RULE.fields_by_name['tag']._options = None
+_RULE.fields_by_name['device_tag']._options = None
 _RULE.fields_by_name['attr']._options = None
 _RULE.fields_by_name['expr']._options = None
 _RULE.fields_by_name['created_at']._options = None
@@ -522,8 +522,8 @@ _RULESERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1251,
-  serialized_end=1991,
+  serialized_start=1258,
+  serialized_end=1998,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateRule',

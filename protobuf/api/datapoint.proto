@@ -61,7 +61,7 @@ message ListDataPointsRequest {
     string uniq_id = 1 [json_name = "uniqID"];
 
     // Device ID (UUID). Either unique ID or device ID must be provided.
-    string dev_id = 2 [json_name = "devID"];
+    string device_id = 2 [json_name = "deviceID"];
   }
 
   // Device attribute. If not specified, all attributes are included.
@@ -90,7 +90,7 @@ message LatestDataPointsRequest {
     string uniq_id = 1 [json_name = "uniqID"];
 
     // Device ID (UUID). Either unique ID or device ID must be provided.
-    string dev_id = 2 [json_name = "devID"];
+    string device_id = 2 [json_name = "deviceID"];
   }
 }
 

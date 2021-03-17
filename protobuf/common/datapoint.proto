@@ -31,7 +31,7 @@ message DataPoint {
     // Boolean value.
     bool bool_val = 6;
 
-    // Bytes value. When used with JSON, the value will be represented as a base64 string.
+    // Bytes value. When used in JSON, the value will be represented as a base64 string.
     bytes bytes_val = 16;
   }
 

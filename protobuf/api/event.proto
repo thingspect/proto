@@ -52,7 +52,7 @@ message ListEventsRequest {
     string uniq_id = 1 [json_name = "uniqID"];
 
     // Device ID (UUID). Either unique ID or device ID must be provided.
-    string dev_id = 2 [json_name = "devID"];
+    string device_id = 2 [json_name = "deviceID"];
   }
 
   // Rule ID (UUID). If not specified, all rules are included.
