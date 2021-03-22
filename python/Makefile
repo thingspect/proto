@@ -12,6 +12,7 @@ common:
 	common/decoder.proto \
 	common/device.proto \
 	common/role.proto \
+	common/rule.proto \
 	common/status.proto
 
 mqtt:
