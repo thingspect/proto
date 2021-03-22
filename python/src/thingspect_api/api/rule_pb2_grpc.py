@@ -3,6 +3,7 @@
 import grpc
 
 from api import rule_pb2 as api_dot_rule__pb2
+from common import rule_pb2 as common_dot_rule__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
@@ -19,17 +20,17 @@ class RuleServiceStub(object):
         self.CreateRule = channel.unary_unary(
                 '/thingspect.api.RuleService/CreateRule',
                 request_serializer=api_dot_rule__pb2.CreateRuleRequest.SerializeToString,
-                response_deserializer=api_dot_rule__pb2.Rule.FromString,
+                response_deserializer=common_dot_rule__pb2.Rule.FromString,
                 )
         self.GetRule = channel.unary_unary(
                 '/thingspect.api.RuleService/GetRule',
                 request_serializer=api_dot_rule__pb2.GetRuleRequest.SerializeToString,
-                response_deserializer=api_dot_rule__pb2.Rule.FromString,
+                response_deserializer=common_dot_rule__pb2.Rule.FromString,
                 )
         self.UpdateRule = channel.unary_unary(
                 '/thingspect.api.RuleService/UpdateRule',
                 request_serializer=api_dot_rule__pb2.UpdateRuleRequest.SerializeToString,
-                response_deserializer=api_dot_rule__pb2.Rule.FromString,
+                response_deserializer=common_dot_rule__pb2.Rule.FromString,
                 )
         self.DeleteRule = channel.unary_unary(
                 '/thingspect.api.RuleService/DeleteRule',
@@ -100,17 +101,17 @@ def add_RuleServiceServicer_to_server(servicer, server):
             'CreateRule': grpc.unary_unary_rpc_method_handler(
                     servicer.CreateRule,
                     request_deserializer=api_dot_rule__pb2.CreateRuleRequest.FromString,
-                    response_serializer=api_dot_rule__pb2.Rule.SerializeToString,
+                    response_serializer=common_dot_rule__pb2.Rule.SerializeToString,
             ),
             'GetRule': grpc.unary_unary_rpc_method_handler(
                     servicer.GetRule,
                     request_deserializer=api_dot_rule__pb2.GetRuleRequest.FromString,
-                    response_serializer=api_dot_rule__pb2.Rule.SerializeToString,
+                    response_serializer=common_dot_rule__pb2.Rule.SerializeToString,
             ),
             'UpdateRule': grpc.unary_unary_rpc_method_handler(
                     servicer.UpdateRule,
                     request_deserializer=api_dot_rule__pb2.UpdateRuleRequest.FromString,
-                    response_serializer=api_dot_rule__pb2.Rule.SerializeToString,
+                    response_serializer=common_dot_rule__pb2.Rule.SerializeToString,
             ),
             'DeleteRule': grpc.unary_unary_rpc_method_handler(
                     servicer.DeleteRule,
@@ -151,7 +152,7 @@ class RuleService(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleService/CreateRule',
             api_dot_rule__pb2.CreateRuleRequest.SerializeToString,
-            api_dot_rule__pb2.Rule.FromString,
+            common_dot_rule__pb2.Rule.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -168,7 +169,7 @@ class RuleService(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleService/GetRule',
             api_dot_rule__pb2.GetRuleRequest.SerializeToString,
-            api_dot_rule__pb2.Rule.FromString,
+            common_dot_rule__pb2.Rule.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -185,7 +186,7 @@ class RuleService(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleService/UpdateRule',
             api_dot_rule__pb2.UpdateRuleRequest.SerializeToString,
-            api_dot_rule__pb2.Rule.FromString,
+            common_dot_rule__pb2.Rule.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
