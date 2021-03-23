@@ -22,19 +22,39 @@ class RuleServiceStub(object):
                 request_serializer=api_dot_rule__pb2.CreateRuleRequest.SerializeToString,
                 response_deserializer=common_dot_rule__pb2.Rule.FromString,
                 )
+        self.CreateAlarm = channel.unary_unary(
+                '/thingspect.api.RuleService/CreateAlarm',
+                request_serializer=api_dot_rule__pb2.CreateAlarmRequest.SerializeToString,
+                response_deserializer=api_dot_rule__pb2.Alarm.FromString,
+                )
         self.GetRule = channel.unary_unary(
                 '/thingspect.api.RuleService/GetRule',
                 request_serializer=api_dot_rule__pb2.GetRuleRequest.SerializeToString,
                 response_deserializer=common_dot_rule__pb2.Rule.FromString,
+                )
+        self.GetAlarm = channel.unary_unary(
+                '/thingspect.api.RuleService/GetAlarm',
+                request_serializer=api_dot_rule__pb2.GetAlarmRequest.SerializeToString,
+                response_deserializer=api_dot_rule__pb2.Alarm.FromString,
                 )
         self.UpdateRule = channel.unary_unary(
                 '/thingspect.api.RuleService/UpdateRule',
                 request_serializer=api_dot_rule__pb2.UpdateRuleRequest.SerializeToString,
                 response_deserializer=common_dot_rule__pb2.Rule.FromString,
                 )
+        self.UpdateAlarm = channel.unary_unary(
+                '/thingspect.api.RuleService/UpdateAlarm',
+                request_serializer=api_dot_rule__pb2.UpdateAlarmRequest.SerializeToString,
+                response_deserializer=api_dot_rule__pb2.Alarm.FromString,
+                )
         self.DeleteRule = channel.unary_unary(
                 '/thingspect.api.RuleService/DeleteRule',
                 request_serializer=api_dot_rule__pb2.DeleteRuleRequest.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
+        self.DeleteAlarm = channel.unary_unary(
+                '/thingspect.api.RuleService/DeleteAlarm',
+                request_serializer=api_dot_rule__pb2.DeleteAlarmRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
         self.ListRules = channel.unary_unary(
@@ -42,10 +62,20 @@ class RuleServiceStub(object):
                 request_serializer=api_dot_rule__pb2.ListRulesRequest.SerializeToString,
                 response_deserializer=api_dot_rule__pb2.ListRulesResponse.FromString,
                 )
+        self.ListAlarms = channel.unary_unary(
+                '/thingspect.api.RuleService/ListAlarms',
+                request_serializer=api_dot_rule__pb2.ListAlarmsRequest.SerializeToString,
+                response_deserializer=api_dot_rule__pb2.ListAlarmsResponse.FromString,
+                )
         self.TestRule = channel.unary_unary(
                 '/thingspect.api.RuleService/TestRule',
                 request_serializer=api_dot_rule__pb2.TestRuleRequest.SerializeToString,
                 response_deserializer=api_dot_rule__pb2.TestRuleResponse.FromString,
+                )
+        self.TestAlarm = channel.unary_unary(
+                '/thingspect.api.RuleService/TestAlarm',
+                request_serializer=api_dot_rule__pb2.TestAlarmRequest.SerializeToString,
+                response_deserializer=api_dot_rule__pb2.TestAlarmResponse.FromString,
                 )
 
 
@@ -60,8 +90,22 @@ class RuleServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def CreateAlarm(self, request, context):
+        """Create an alarm. Alarms define how alerts are generated.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def GetRule(self, request, context):
         """Get a rule by ID. Rules define how events are generated.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetAlarm(self, request, context):
+        """Get an alarm by ID. Alarms define how alerts are generated.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -74,8 +118,22 @@ class RuleServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def UpdateAlarm(self, request, context):
+        """Update an alarm. Alarms define how alerts are generated.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def DeleteRule(self, request, context):
         """Delete a rule by ID. Rules define how events are generated.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def DeleteAlarm(self, request, context):
+        """Delete an alarm by ID. Alarms define how alerts are generated.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -88,8 +146,22 @@ class RuleServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def ListAlarms(self, request, context):
+        """List alarms. Alarms define how alerts are generated.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def TestRule(self, request, context):
         """Test a rule. Rules define how events are generated.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def TestAlarm(self, request, context):
+        """Test an alarm. Alarms define how alerts are generated.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -103,19 +175,39 @@ def add_RuleServiceServicer_to_server(servicer, server):
                     request_deserializer=api_dot_rule__pb2.CreateRuleRequest.FromString,
                     response_serializer=common_dot_rule__pb2.Rule.SerializeToString,
             ),
+            'CreateAlarm': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateAlarm,
+                    request_deserializer=api_dot_rule__pb2.CreateAlarmRequest.FromString,
+                    response_serializer=api_dot_rule__pb2.Alarm.SerializeToString,
+            ),
             'GetRule': grpc.unary_unary_rpc_method_handler(
                     servicer.GetRule,
                     request_deserializer=api_dot_rule__pb2.GetRuleRequest.FromString,
                     response_serializer=common_dot_rule__pb2.Rule.SerializeToString,
+            ),
+            'GetAlarm': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetAlarm,
+                    request_deserializer=api_dot_rule__pb2.GetAlarmRequest.FromString,
+                    response_serializer=api_dot_rule__pb2.Alarm.SerializeToString,
             ),
             'UpdateRule': grpc.unary_unary_rpc_method_handler(
                     servicer.UpdateRule,
                     request_deserializer=api_dot_rule__pb2.UpdateRuleRequest.FromString,
                     response_serializer=common_dot_rule__pb2.Rule.SerializeToString,
             ),
+            'UpdateAlarm': grpc.unary_unary_rpc_method_handler(
+                    servicer.UpdateAlarm,
+                    request_deserializer=api_dot_rule__pb2.UpdateAlarmRequest.FromString,
+                    response_serializer=api_dot_rule__pb2.Alarm.SerializeToString,
+            ),
             'DeleteRule': grpc.unary_unary_rpc_method_handler(
                     servicer.DeleteRule,
                     request_deserializer=api_dot_rule__pb2.DeleteRuleRequest.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ),
+            'DeleteAlarm': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteAlarm,
+                    request_deserializer=api_dot_rule__pb2.DeleteAlarmRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
             'ListRules': grpc.unary_unary_rpc_method_handler(
@@ -123,10 +215,20 @@ def add_RuleServiceServicer_to_server(servicer, server):
                     request_deserializer=api_dot_rule__pb2.ListRulesRequest.FromString,
                     response_serializer=api_dot_rule__pb2.ListRulesResponse.SerializeToString,
             ),
+            'ListAlarms': grpc.unary_unary_rpc_method_handler(
+                    servicer.ListAlarms,
+                    request_deserializer=api_dot_rule__pb2.ListAlarmsRequest.FromString,
+                    response_serializer=api_dot_rule__pb2.ListAlarmsResponse.SerializeToString,
+            ),
             'TestRule': grpc.unary_unary_rpc_method_handler(
                     servicer.TestRule,
                     request_deserializer=api_dot_rule__pb2.TestRuleRequest.FromString,
                     response_serializer=api_dot_rule__pb2.TestRuleResponse.SerializeToString,
+            ),
+            'TestAlarm': grpc.unary_unary_rpc_method_handler(
+                    servicer.TestAlarm,
+                    request_deserializer=api_dot_rule__pb2.TestAlarmRequest.FromString,
+                    response_serializer=api_dot_rule__pb2.TestAlarmResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -157,6 +259,23 @@ class RuleService(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
+    def CreateAlarm(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleService/CreateAlarm',
+            api_dot_rule__pb2.CreateAlarmRequest.SerializeToString,
+            api_dot_rule__pb2.Alarm.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
     def GetRule(request,
             target,
             options=(),
@@ -170,6 +289,23 @@ class RuleService(object):
         return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleService/GetRule',
             api_dot_rule__pb2.GetRuleRequest.SerializeToString,
             common_dot_rule__pb2.Rule.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetAlarm(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleService/GetAlarm',
+            api_dot_rule__pb2.GetAlarmRequest.SerializeToString,
+            api_dot_rule__pb2.Alarm.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -191,6 +327,23 @@ class RuleService(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
+    def UpdateAlarm(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleService/UpdateAlarm',
+            api_dot_rule__pb2.UpdateAlarmRequest.SerializeToString,
+            api_dot_rule__pb2.Alarm.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
     def DeleteRule(request,
             target,
             options=(),
@@ -203,6 +356,23 @@ class RuleService(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleService/DeleteRule',
             api_dot_rule__pb2.DeleteRuleRequest.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def DeleteAlarm(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleService/DeleteAlarm',
+            api_dot_rule__pb2.DeleteAlarmRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
@@ -225,6 +395,23 @@ class RuleService(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
+    def ListAlarms(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleService/ListAlarms',
+            api_dot_rule__pb2.ListAlarmsRequest.SerializeToString,
+            api_dot_rule__pb2.ListAlarmsResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
     def TestRule(request,
             target,
             options=(),
@@ -238,5 +425,22 @@ class RuleService(object):
         return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleService/TestRule',
             api_dot_rule__pb2.TestRuleRequest.SerializeToString,
             api_dot_rule__pb2.TestRuleResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TestAlarm(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleService/TestAlarm',
+            api_dot_rule__pb2.TestAlarmRequest.SerializeToString,
+            api_dot_rule__pb2.TestAlarmResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
