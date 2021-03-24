@@ -24,6 +24,7 @@ api:
 	python -m grpc_tools.protoc -I=../protobuf -I=/tmp/googleapis \
 	-I=/tmp/grpc-gateway -I=/tmp/pgv \
 	--python_out=src/thingspect_api --grpc_python_out=src/thingspect_api \
+	api/alert.proto \
 	api/datapoint.proto \
 	api/device.proto \
 	api/event.proto \

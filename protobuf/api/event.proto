@@ -29,11 +29,11 @@ message Event {
   // Organization ID (UUID).
   string org_id = 1 [json_name = "orgID"];
 
-  // Rule ID (UUID).
-  string rule_id = 2 [json_name = "ruleID"];
-
   // Device unique ID.
-  string uniq_id = 3 [json_name = "uniqID"];
+  string uniq_id = 2 [json_name = "uniqID"];
+
+  // Rule ID (UUID).
+  string rule_id = 3 [json_name = "ruleID"];
 
   // Event creation timestamp.
   google.protobuf.Timestamp created_at = 4;
@@ -44,7 +44,7 @@ message Event {
 
 // ListEventsRequest is sent to list device events in a [end, start) time range, in descending timestamp order.
 message ListEventsRequest {
-  // Identifier.
+  // Device identifier.
   oneof id_oneof {
     option (validate.required) = true;
 

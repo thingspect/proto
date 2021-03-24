@@ -53,7 +53,7 @@ message PublishDataPointsRequest {
 
 // ListDataPointsRequest is sent to list device data points in a [end, start) time range, in descending timestamp order.
 message ListDataPointsRequest {
-  // Identifier.
+  // Device identifier.
   oneof id_oneof {
     option (validate.required) = true;
 
@@ -82,7 +82,7 @@ message ListDataPointsResponse {
 
 // LatestDataPointsRequest is sent to list latest device data points.
 message LatestDataPointsRequest {
-  // Identifier.
+  // Device identifier.
   oneof id_oneof {
     option (validate.required) = true;
 

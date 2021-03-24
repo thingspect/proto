@@ -1,0 +1,27 @@
+syntax = "proto3";
+package thingspect.api;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/thingspect/api/go/api";
+
+// Alert represents an alert as stored in the database.
+message Alert {
+  // Organization ID (UUID).
+  string org_id = 1 [json_name = "orgID"];
+
+  // Device unique ID.
+  string uniq_id = 2 [json_name = "uniqID"];
+
+  // Alarm ID (UUID).
+  string alarm_id = 3 [json_name = "alarmID"];
+
+  // User ID (UUID).
+  string user_id = 4 [json_name = "userID"];
+
+  // Alert creation timestamp.
+  google.protobuf.Timestamp created_at = 5;
+
+  // Trace ID (UUID).
+  string trace_id = 6;
+}
