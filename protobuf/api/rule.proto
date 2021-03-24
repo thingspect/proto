@@ -3,7 +3,10 @@ package thingspect.api;
 
 import "common/rule.proto";
 import "common/datapoint.proto";
+import "common/status.proto";
+import "common/device.proto";
 import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
 import "google/protobuf/field_mask.proto";
 import "google/api/annotations.proto";
 import "google/api/field_behavior.proto";
@@ -35,10 +38,38 @@ service RuleService {
     };
   }
 
+  // Create an alarm. Alarms define how alerts are generated.
+  rpc CreateAlarm(CreateAlarmRequest) returns (Alarm) {
+    option (google.api.http) = {
+      post: "/v1/rules/{alarm.rule_id}/alarms"
+      body: "alarm"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      responses: {
+        key: "201"
+        value: {
+          description: "A successful response."
+          schema: {
+            json_schema: {
+              ref: ".thingspect.api.Alarm"
+            }
+          }
+        }
+      }
+    };
+  }
+
   // Get a rule by ID. Rules define how events are generated.
   rpc GetRule(GetRuleRequest) returns (common.Rule) {
     option (google.api.http) = {
       get: "/v1/rules/{id}"
+    };
+  }
+
+  // Get an alarm by ID. Alarms define how alerts are generated.
+  rpc GetAlarm(GetAlarmRequest) returns (Alarm) {
+    option (google.api.http) = {
+      get: "/v1/rules/{rule_id}/alarms/{id}"
     };
   }
 
@@ -50,6 +81,18 @@ service RuleService {
       additional_bindings {
         patch: "/v1/rules/{rule.id}"
         body: "rule"
+      }
+    };
+  }
+
+  // Update an alarm. Alarms define how alerts are generated.
+  rpc UpdateAlarm(UpdateAlarmRequest) returns (Alarm) {
+    option (google.api.http) = {
+      put: "/v1/rules/{alarm.rule_id}/alarms/{alarm.id}"
+      body: "alarm"
+      additional_bindings {
+        patch: "/v1/rules/{alarm.rule_id}/alarms/{alarm.id}"
+        body: "alarm"
       }
     };
   }
@@ -70,6 +113,22 @@ service RuleService {
     };
   }
 
+  // Delete an alarm by ID. Alarms define how alerts are generated.
+  rpc DeleteAlarm(DeleteAlarmRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      delete: "/v1/rules/{rule_id}/alarms/{id}"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      responses: {
+        key: "204"
+        value: {
+          description: "A successful response."
+          schema: {}
+        }
+      }
+    };
+  }
+
   // List all rules. Rules define how events are generated.
   rpc ListRules(ListRulesRequest) returns (ListRulesResponse) {
     option (google.api.http) = {
@@ -77,10 +136,28 @@ service RuleService {
     };
   }
 
+  // List alarms. Alarms define how alerts are generated.
+  rpc ListAlarms(ListAlarmsRequest) returns (ListAlarmsResponse) {
+    option (google.api.http) = {
+      get: "/v1/rules/{rule_id}/alarms"
+      additional_bindings {
+        get: "/v1/rules/alarms"
+      }
+    };
+  }
+
   // Test a rule. Rules define how events are generated.
   rpc TestRule(TestRuleRequest) returns (TestRuleResponse) {
     option (google.api.http) = {
       post: "/v1/rules/test"
+      body: "*"
+    };
+  }
+
+  // Test an alarm. Alarms define how alerts are generated.
+  rpc TestAlarm(TestAlarmRequest) returns (TestAlarmResponse) {
+    option (google.api.http) = {
+      post: "/v1/rules/alarms/test"
       body: "*"
     };
   }
@@ -116,7 +193,7 @@ message DeleteRuleRequest {
 // ListRulesRequest is sent to list rules.
 message ListRulesRequest {
   // Number of rules to retrieve in a single page. Defaults to 50 if not specified, with a maximum of 250.
-  int32 page_size = 1 [(validate.rules).int32 = {gte:0, lte: 250}];
+  int32 page_size = 1 [(validate.rules).int32 = {gte: 0, lte: 250}];
 
   // Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.
   string page_token = 2;
@@ -147,4 +224,118 @@ message TestRuleRequest {
 message TestRuleResponse {
   // Result of the rule evaluation.
   bool result = 1;
+}
+
+// Alarm represents an alarm as stored in the database.
+message Alarm {
+  // Alarm ID (UUID).
+  string id = 1 [(google.api.field_behavior) = OUTPUT_ONLY];
+
+  // Organization ID (UUID).
+  string org_id = 2 [json_name = "orgID", (google.api.field_behavior) = OUTPUT_ONLY];
+
+  // Rule ID (UUID).
+  string rule_id = 3 [json_name = "ruleID", (google.api.field_behavior) = OUTPUT_ONLY];
+
+  // Alarm name.
+  string name = 4 [(validate.rules).string = {min_len: 5, max_len: 80}, (google.api.field_behavior) = REQUIRED];
+
+  // Alarm status.
+  common.Status status = 5 [(validate.rules).enum = {in: [3,6]}, (google.api.field_behavior) = REQUIRED];
+
+  // User tags to whom alerts are sent.
+  repeated string user_tags = 6 [(validate.rules).repeated = {min_items: 1, unique: true}, (validate.rules).repeated.items.string.max_len = 255, (google.api.field_behavior) = REQUIRED];
+
+  // Alarm subject template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
+  string subject_template = 7 [(validate.rules).string.max_len = 1024, (google.api.field_behavior) = REQUIRED];
+
+  // Alarm body template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
+  string body_template = 8 [(validate.rules).string.max_len = 4096, (google.api.field_behavior) = REQUIRED];
+
+  // Alarm repeat interval, in minutes. Duration after which a duplicate event, if not previously cleared, will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
+  int32 repeat_interval = 9 [(validate.rules).int32 = {gte: 1, lte: 20160}, (google.api.field_behavior) = REQUIRED];
+
+  // Alarm creation timestamp.
+  google.protobuf.Timestamp created_at = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
+
+  // Alarm modification timestamp.
+  google.protobuf.Timestamp updated_at = 11 [(google.api.field_behavior) = OUTPUT_ONLY];
+}
+
+// CreateAlarmRequest is sent to create an alarm.
+message CreateAlarmRequest {
+  // Alarm message to create.
+  Alarm alarm = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+}
+
+// GetAlarmRequest is sent to get an alarm.
+message GetAlarmRequest {
+  // Alarm ID (UUID) to get.
+  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
+
+  // Rule ID (UUID).
+  string rule_id = 2 [json_name = "ruleID", (validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
+}
+
+// UpdateAlarmRequest is sent to update an alarm.
+message UpdateAlarmRequest {
+  // Alarm message to update.
+  Alarm alarm = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+
+  // Fields to update. Automatically populated by a PATCH request. If not present, a full resource update is performed.
+  google.protobuf.FieldMask update_mask = 2;
+}
+
+// DeleteAlarmRequest is sent to delete an alarm.
+message DeleteAlarmRequest {
+  // Alarm ID (UUID) to delete.
+  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
+
+  // Rule ID (UUID).
+  string rule_id = 2 [json_name = "ruleID", (validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
+}
+
+// ListAlarmsRequest is sent to list alarms.
+message ListAlarmsRequest {
+  // Number of alarms to retrieve in a single page. Defaults to 50 if not specified, with a maximum of 250.
+  int32 page_size = 1 [(validate.rules).int32 = {gte: 0, lte: 250}];
+
+  // Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.
+  string page_token = 2;
+
+  // Rule ID (UUID). If not specified, all rules are included.
+  string rule_id = 3 [json_name = "ruleID"];
+}
+
+// ListAlarmsResponse is sent in response to an alarm list.
+message ListAlarmsResponse {
+  // Alarm array, ordered by ascending created_at timestamp.
+  repeated Alarm alarms = 1;
+
+  // Pagination token used to retrieve the next page of results. Not returned for the last page.
+  string next_page_token = 2;
+
+  // Total number of alarms available.
+  int32 total_size = 3;
+}
+
+// TestAlarmRequest is sent to test an alarm.
+message TestAlarmRequest {
+  // Data point to test against an alarm.
+  common.DataPoint point = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+
+  // Rule to test against an alarm.
+  common.Rule rule = 2 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+
+  // Device to test against an alarm.
+  common.Device device = 3 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+
+  // Alarm message to test.
+  Alarm alarm = 4 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+}
+
+// TestAlarmResponse is sent in response to an alarm test.
+message TestAlarmResponse {
+  // Result of the alarm generation. Subjects and bodies will be concatenated with ' - '.
+  string result = 1;
 }

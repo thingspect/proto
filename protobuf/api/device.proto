@@ -172,12 +172,12 @@ message DeleteDeviceRequest {
 // ListDevicesRequest is sent to list devices.
 message ListDevicesRequest {
   // Number of devices to retrieve in a single page. Defaults to 50 if not specified, with a maximum of 250.
-  int32 page_size = 1 [(validate.rules).int32 = {gte:0, lte: 250}];
+  int32 page_size = 1 [(validate.rules).int32 = {gte: 0, lte: 250}];
 
   // Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.
   string page_token = 2;
 
-  // Filter devices by specified tag.
+  // Device tag. If not specified, all tags are included.
   string tag = 3;
 }
 

@@ -13,7 +13,10 @@ _sym_db = _symbol_database.Default()
 
 from common import rule_pb2 as common_dot_rule__pb2
 from common import datapoint_pb2 as common_dot_datapoint__pb2
+from common import status_pb2 as common_dot_status__pb2
+from common import device_pb2 as common_dot_device__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
@@ -27,9 +30,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0e\x61pi/rule.proto\x12\x0ethingspect.api\x1a\x11\x63ommon/rule.proto\x1a\x16\x63ommon/datapoint.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"G\n\x11\x43reateRuleRequest\x12\x32\n\x04rule\x18\x01 \x01(\x0b\x32\x17.thingspect.common.RuleB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\")\n\x0eGetRuleRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"x\n\x11UpdateRuleRequest\x12\x32\n\x04rule\x18\x01 \x01(\x0b\x32\x17.thingspect.common.RuleB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\",\n\x11\x44\x65leteRuleRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"E\n\x10ListRulesRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"h\n\x11ListRulesResponse\x12&\n\x05rules\x18\x01 \x03(\x0b\x32\x17.thingspect.common.Rule\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\"\x7f\n\x0fTestRuleRequest\x12\x38\n\x05point\x18\x01 \x01(\x0b\x32\x1c.thingspect.common.DataPointB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12\x32\n\x04rule\x18\x02 \x01(\x0b\x32\x17.thingspect.common.RuleB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"\"\n\x10TestRuleResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\x32\xf0\x05\n\x0bRuleService\x12\xa2\x01\n\nCreateRule\x12!.thingspect.api.CreateRuleRequest\x1a\x17.thingspect.common.Rule\"X\x82\xd3\xe4\x93\x02\x11\"\t/v1/rules:\x04rule\x92\x41>J<\n\x03\x32\x30\x31\x12\x35\n\x16\x41 successful response.\x12\x1b\n\x19\x1a\x17.thingspect.common.Rule\x12Z\n\x07GetRule\x12\x1e.thingspect.api.GetRuleRequest\x1a\x17.thingspect.common.Rule\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/rules/{id}\x12\x88\x01\n\nUpdateRule\x12!.thingspect.api.UpdateRuleRequest\x1a\x17.thingspect.common.Rule\">\x82\xd3\xe4\x93\x02\x38\x1a\x13/v1/rules/{rule.id}:\x04ruleZ\x1b\x32\x13/v1/rules/{rule.id}:\x04rule\x12\x85\x01\n\nDeleteRule\x12!.thingspect.api.DeleteRuleRequest\x1a\x16.google.protobuf.Empty\"<\x82\xd3\xe4\x93\x02\x10*\x0e/v1/rules/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x63\n\tListRules\x12 .thingspect.api.ListRulesRequest\x1a!.thingspect.api.ListRulesResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\x12\t/v1/rules\x12h\n\x08TestRule\x12\x1f.thingspect.api.TestRuleRequest\x1a .thingspect.api.TestRuleResponse\"\x19\x82\xd3\xe4\x93\x02\x13\"\x0e/v1/rules/test:\x01*B\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x0e\x61pi/rule.proto\x12\x0ethingspect.api\x1a\x11\x63ommon/rule.proto\x1a\x16\x63ommon/datapoint.proto\x1a\x13\x63ommon/status.proto\x1a\x13\x63ommon/device.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"G\n\x11\x43reateRuleRequest\x12\x32\n\x04rule\x18\x01 \x01(\x0b\x32\x17.thingspect.common.RuleB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\")\n\x0eGetRuleRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"x\n\x11UpdateRuleRequest\x12\x32\n\x04rule\x18\x01 \x01(\x0b\x32\x17.thingspect.common.RuleB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\",\n\x11\x44\x65leteRuleRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"E\n\x10ListRulesRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\"h\n\x11ListRulesResponse\x12&\n\x05rules\x18\x01 \x03(\x0b\x32\x17.thingspect.common.Rule\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\"\x7f\n\x0fTestRuleRequest\x12\x38\n\x05point\x18\x01 \x01(\x0b\x32\x1c.thingspect.common.DataPointB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12\x32\n\x04rule\x18\x02 \x01(\x0b\x32\x17.thingspect.common.RuleB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"\"\n\x10TestRuleResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\"\xb5\x03\n\x05\x41larm\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x1c\n\x07rule_id\x18\x03 \x01(\tB\x03\xe0\x41\x03R\x06ruleID\x12\x1a\n\x04name\x18\x04 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18P\xe0\x41\x02\x12\x38\n\x06status\x18\x05 \x01(\x0e\x32\x19.thingspect.common.StatusB\r\xfa\x42\x07\x82\x01\x04\x18\x03\x18\x06\xe0\x41\x02\x12-\n\tuser_tags\x18\x06 \x03(\tB\x1a\xfa\x42\x07\x92\x01\x04\x08\x01\x18\x01\xfa\x42\n\x92\x01\x07\"\x05r\x03\x18\xff\x01\xe0\x41\x02\x12%\n\x10subject_template\x18\x07 \x01(\tB\x0b\xfa\x42\x05r\x03\x18\x80\x08\xe0\x41\x02\x12\"\n\rbody_template\x18\x08 \x01(\tB\x0b\xfa\x42\x05r\x03\x18\x80 \xe0\x41\x02\x12\'\n\x0frepeat_interval\x18\t \x01(\x05\x42\x0e\xfa\x42\x08\x1a\x06\x18\xc0\x9d\x01(\x01\xe0\x41\x02\x12\x33\n\ncreated_at\x18\n \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\x0b \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"G\n\x12\x43reateAlarmRequest\x12\x31\n\x05\x61larm\x18\x01 \x01(\x0b\x32\x15.thingspect.api.AlarmB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"P\n\x0fGetAlarmRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\x12$\n\x07rule_id\x18\x02 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02R\x06ruleID\"x\n\x12UpdateAlarmRequest\x12\x31\n\x05\x61larm\x18\x01 \x01(\x0b\x32\x15.thingspect.api.AlarmB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"S\n\x12\x44\x65leteAlarmRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\x12$\n\x07rule_id\x18\x02 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02R\x06ruleID\"_\n\x11ListAlarmsRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\x12\x17\n\x07rule_id\x18\x03 \x01(\tR\x06ruleID\"h\n\x12ListAlarmsResponse\x12%\n\x06\x61larms\x18\x01 \x03(\x0b\x32\x15.thingspect.api.Alarm\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\"\xeb\x01\n\x10TestAlarmRequest\x12\x38\n\x05point\x18\x01 \x01(\x0b\x32\x1c.thingspect.common.DataPointB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12\x32\n\x04rule\x18\x02 \x01(\x0b\x32\x17.thingspect.common.RuleB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12\x36\n\x06\x64\x65vice\x18\x03 \x01(\x0b\x32\x19.thingspect.common.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12\x31\n\x05\x61larm\x18\x04 \x01(\x0b\x32\x15.thingspect.api.AlarmB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"#\n\x11TestAlarmResponse\x12\x0e\n\x06result\x18\x01 \x01(\t2\xf2\x0c\n\x0bRuleService\x12\xa2\x01\n\nCreateRule\x12!.thingspect.api.CreateRuleRequest\x1a\x17.thingspect.common.Rule\"X\x82\xd3\xe4\x93\x02\x11\"\t/v1/rules:\x04rule\x92\x41>J<\n\x03\x32\x30\x31\x12\x35\n\x16\x41 successful response.\x12\x1b\n\x19\x1a\x17.thingspect.common.Rule\x12\xb8\x01\n\x0b\x43reateAlarm\x12\".thingspect.api.CreateAlarmRequest\x1a\x15.thingspect.api.Alarm\"n\x82\xd3\xe4\x93\x02)\" /v1/rules/{alarm.rule_id}/alarms:\x05\x61larm\x92\x41<J:\n\x03\x32\x30\x31\x12\x33\n\x16\x41 successful response.\x12\x19\n\x17\x1a\x15.thingspect.api.Alarm\x12Z\n\x07GetRule\x12\x1e.thingspect.api.GetRuleRequest\x1a\x17.thingspect.common.Rule\"\x16\x82\xd3\xe4\x93\x02\x10\x12\x0e/v1/rules/{id}\x12k\n\x08GetAlarm\x12\x1f.thingspect.api.GetAlarmRequest\x1a\x15.thingspect.api.Alarm\"\'\x82\xd3\xe4\x93\x02!\x12\x1f/v1/rules/{rule_id}/alarms/{id}\x12\x88\x01\n\nUpdateRule\x12!.thingspect.api.UpdateRuleRequest\x1a\x17.thingspect.common.Rule\">\x82\xd3\xe4\x93\x02\x38\x1a\x13/v1/rules/{rule.id}:\x04ruleZ\x1b\x32\x13/v1/rules/{rule.id}:\x04rule\x12\xba\x01\n\x0bUpdateAlarm\x12\".thingspect.api.UpdateAlarmRequest\x1a\x15.thingspect.api.Alarm\"p\x82\xd3\xe4\x93\x02j\x1a+/v1/rules/{alarm.rule_id}/alarms/{alarm.id}:\x05\x61larmZ42+/v1/rules/{alarm.rule_id}/alarms/{alarm.id}:\x05\x61larm\x12\x85\x01\n\nDeleteRule\x12!.thingspect.api.DeleteRuleRequest\x1a\x16.google.protobuf.Empty\"<\x82\xd3\xe4\x93\x02\x10*\x0e/v1/rules/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x98\x01\n\x0b\x44\x65leteAlarm\x12\".thingspect.api.DeleteAlarmRequest\x1a\x16.google.protobuf.Empty\"M\x82\xd3\xe4\x93\x02!*\x1f/v1/rules/{rule_id}/alarms/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x63\n\tListRules\x12 .thingspect.api.ListRulesRequest\x1a!.thingspect.api.ListRulesResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\x12\t/v1/rules\x12\x8b\x01\n\nListAlarms\x12!.thingspect.api.ListAlarmsRequest\x1a\".thingspect.api.ListAlarmsResponse\"6\x82\xd3\xe4\x93\x02\x30\x12\x1a/v1/rules/{rule_id}/alarmsZ\x12\x12\x10/v1/rules/alarms\x12h\n\x08TestRule\x12\x1f.thingspect.api.TestRuleRequest\x1a .thingspect.api.TestRuleResponse\"\x19\x82\xd3\xe4\x93\x02\x13\"\x0e/v1/rules/test:\x01*\x12r\n\tTestAlarm\x12 .thingspect.api.TestAlarmRequest\x1a!.thingspect.api.TestAlarmResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1/rules/alarms/test:\x01*B\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
-  dependencies=[common_dot_rule__pb2.DESCRIPTOR,common_dot_datapoint__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
+  dependencies=[common_dot_rule__pb2.DESCRIPTOR,common_dot_datapoint__pb2.DESCRIPTOR,common_dot_status__pb2.DESCRIPTOR,common_dot_device__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
 
 
@@ -61,8 +64,8 @@ _CREATERULEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=276,
-  serialized_end=347,
+  serialized_start=351,
+  serialized_end=422,
 )
 
 
@@ -93,8 +96,8 @@ _GETRULEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=349,
-  serialized_end=390,
+  serialized_start=424,
+  serialized_end=465,
 )
 
 
@@ -132,8 +135,8 @@ _UPDATERULEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=392,
-  serialized_end=512,
+  serialized_start=467,
+  serialized_end=587,
 )
 
 
@@ -164,8 +167,8 @@ _DELETERULEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=514,
-  serialized_end=558,
+  serialized_start=589,
+  serialized_end=633,
 )
 
 
@@ -203,8 +206,8 @@ _LISTRULESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=560,
-  serialized_end=629,
+  serialized_start=635,
+  serialized_end=704,
 )
 
 
@@ -249,8 +252,8 @@ _LISTRULESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=631,
-  serialized_end=735,
+  serialized_start=706,
+  serialized_end=810,
 )
 
 
@@ -288,8 +291,8 @@ _TESTRULEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=737,
-  serialized_end=864,
+  serialized_start=812,
+  serialized_end=939,
 )
 
 
@@ -320,8 +323,436 @@ _TESTRULERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=866,
-  serialized_end=900,
+  serialized_start=941,
+  serialized_end=975,
+)
+
+
+_ALARM = _descriptor.Descriptor(
+  name='Alarm',
+  full_name='thingspect.api.Alarm',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='thingspect.api.Alarm.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='org_id', full_name='thingspect.api.Alarm.org_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\340A\003', json_name='orgID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rule_id', full_name='thingspect.api.Alarm.rule_id', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\340A\003', json_name='ruleID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='thingspect.api.Alarm.name', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\006r\004\020\005\030P\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='thingspect.api.Alarm.status', index=4,
+      number=5, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\007\202\001\004\030\003\030\006\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='user_tags', full_name='thingspect.api.Alarm.user_tags', index=5,
+      number=6, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\007\222\001\004\010\001\030\001\372B\n\222\001\007\"\005r\003\030\377\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='subject_template', full_name='thingspect.api.Alarm.subject_template', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005r\003\030\200\010\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='body_template', full_name='thingspect.api.Alarm.body_template', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005r\003\030\200 \340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='repeat_interval', full_name='thingspect.api.Alarm.repeat_interval', index=8,
+      number=9, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\010\032\006\030\300\235\001(\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='created_at', full_name='thingspect.api.Alarm.created_at', index=9,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='updated_at', full_name='thingspect.api.Alarm.updated_at', index=10,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=978,
+  serialized_end=1415,
+)
+
+
+_CREATEALARMREQUEST = _descriptor.Descriptor(
+  name='CreateAlarmRequest',
+  full_name='thingspect.api.CreateAlarmRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='alarm', full_name='thingspect.api.CreateAlarmRequest.alarm', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005\212\001\002\020\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1417,
+  serialized_end=1488,
+)
+
+
+_GETALARMREQUEST = _descriptor.Descriptor(
+  name='GetAlarmRequest',
+  full_name='thingspect.api.GetAlarmRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='thingspect.api.GetAlarmRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005r\003\260\001\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rule_id', full_name='thingspect.api.GetAlarmRequest.rule_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005r\003\260\001\001\340A\002', json_name='ruleID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1490,
+  serialized_end=1570,
+)
+
+
+_UPDATEALARMREQUEST = _descriptor.Descriptor(
+  name='UpdateAlarmRequest',
+  full_name='thingspect.api.UpdateAlarmRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='alarm', full_name='thingspect.api.UpdateAlarmRequest.alarm', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005\212\001\002\020\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='update_mask', full_name='thingspect.api.UpdateAlarmRequest.update_mask', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1572,
+  serialized_end=1692,
+)
+
+
+_DELETEALARMREQUEST = _descriptor.Descriptor(
+  name='DeleteAlarmRequest',
+  full_name='thingspect.api.DeleteAlarmRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='thingspect.api.DeleteAlarmRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005r\003\260\001\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rule_id', full_name='thingspect.api.DeleteAlarmRequest.rule_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005r\003\260\001\001\340A\002', json_name='ruleID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1694,
+  serialized_end=1777,
+)
+
+
+_LISTALARMSREQUEST = _descriptor.Descriptor(
+  name='ListAlarmsRequest',
+  full_name='thingspect.api.ListAlarmsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='page_size', full_name='thingspect.api.ListAlarmsRequest.page_size', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\007\032\005\030\372\001(\000', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='page_token', full_name='thingspect.api.ListAlarmsRequest.page_token', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rule_id', full_name='thingspect.api.ListAlarmsRequest.rule_id', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='ruleID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1779,
+  serialized_end=1874,
+)
+
+
+_LISTALARMSRESPONSE = _descriptor.Descriptor(
+  name='ListAlarmsResponse',
+  full_name='thingspect.api.ListAlarmsResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='alarms', full_name='thingspect.api.ListAlarmsResponse.alarms', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='next_page_token', full_name='thingspect.api.ListAlarmsResponse.next_page_token', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='total_size', full_name='thingspect.api.ListAlarmsResponse.total_size', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1876,
+  serialized_end=1980,
+)
+
+
+_TESTALARMREQUEST = _descriptor.Descriptor(
+  name='TestAlarmRequest',
+  full_name='thingspect.api.TestAlarmRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='point', full_name='thingspect.api.TestAlarmRequest.point', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005\212\001\002\020\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='rule', full_name='thingspect.api.TestAlarmRequest.rule', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005\212\001\002\020\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='device', full_name='thingspect.api.TestAlarmRequest.device', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005\212\001\002\020\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='alarm', full_name='thingspect.api.TestAlarmRequest.alarm', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005\212\001\002\020\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1983,
+  serialized_end=2218,
+)
+
+
+_TESTALARMRESPONSE = _descriptor.Descriptor(
+  name='TestAlarmResponse',
+  full_name='thingspect.api.TestAlarmResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='thingspect.api.TestAlarmResponse.result', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2220,
+  serialized_end=2255,
 )
 
 _CREATERULEREQUEST.fields_by_name['rule'].message_type = common_dot_rule__pb2._RULE
@@ -330,6 +761,17 @@ _UPDATERULEREQUEST.fields_by_name['update_mask'].message_type = google_dot_proto
 _LISTRULESRESPONSE.fields_by_name['rules'].message_type = common_dot_rule__pb2._RULE
 _TESTRULEREQUEST.fields_by_name['point'].message_type = common_dot_datapoint__pb2._DATAPOINT
 _TESTRULEREQUEST.fields_by_name['rule'].message_type = common_dot_rule__pb2._RULE
+_ALARM.fields_by_name['status'].enum_type = common_dot_status__pb2._STATUS
+_ALARM.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_ALARM.fields_by_name['updated_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_CREATEALARMREQUEST.fields_by_name['alarm'].message_type = _ALARM
+_UPDATEALARMREQUEST.fields_by_name['alarm'].message_type = _ALARM
+_UPDATEALARMREQUEST.fields_by_name['update_mask'].message_type = google_dot_protobuf_dot_field__mask__pb2._FIELDMASK
+_LISTALARMSRESPONSE.fields_by_name['alarms'].message_type = _ALARM
+_TESTALARMREQUEST.fields_by_name['point'].message_type = common_dot_datapoint__pb2._DATAPOINT
+_TESTALARMREQUEST.fields_by_name['rule'].message_type = common_dot_rule__pb2._RULE
+_TESTALARMREQUEST.fields_by_name['device'].message_type = common_dot_device__pb2._DEVICE
+_TESTALARMREQUEST.fields_by_name['alarm'].message_type = _ALARM
 DESCRIPTOR.message_types_by_name['CreateRuleRequest'] = _CREATERULEREQUEST
 DESCRIPTOR.message_types_by_name['GetRuleRequest'] = _GETRULEREQUEST
 DESCRIPTOR.message_types_by_name['UpdateRuleRequest'] = _UPDATERULEREQUEST
@@ -338,6 +780,15 @@ DESCRIPTOR.message_types_by_name['ListRulesRequest'] = _LISTRULESREQUEST
 DESCRIPTOR.message_types_by_name['ListRulesResponse'] = _LISTRULESRESPONSE
 DESCRIPTOR.message_types_by_name['TestRuleRequest'] = _TESTRULEREQUEST
 DESCRIPTOR.message_types_by_name['TestRuleResponse'] = _TESTRULERESPONSE
+DESCRIPTOR.message_types_by_name['Alarm'] = _ALARM
+DESCRIPTOR.message_types_by_name['CreateAlarmRequest'] = _CREATEALARMREQUEST
+DESCRIPTOR.message_types_by_name['GetAlarmRequest'] = _GETALARMREQUEST
+DESCRIPTOR.message_types_by_name['UpdateAlarmRequest'] = _UPDATEALARMREQUEST
+DESCRIPTOR.message_types_by_name['DeleteAlarmRequest'] = _DELETEALARMREQUEST
+DESCRIPTOR.message_types_by_name['ListAlarmsRequest'] = _LISTALARMSREQUEST
+DESCRIPTOR.message_types_by_name['ListAlarmsResponse'] = _LISTALARMSRESPONSE
+DESCRIPTOR.message_types_by_name['TestAlarmRequest'] = _TESTALARMREQUEST
+DESCRIPTOR.message_types_by_name['TestAlarmResponse'] = _TESTALARMRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 CreateRuleRequest = _reflection.GeneratedProtocolMessageType('CreateRuleRequest', (_message.Message,), {
@@ -396,6 +847,69 @@ TestRuleResponse = _reflection.GeneratedProtocolMessageType('TestRuleResponse', 
   })
 _sym_db.RegisterMessage(TestRuleResponse)
 
+Alarm = _reflection.GeneratedProtocolMessageType('Alarm', (_message.Message,), {
+  'DESCRIPTOR' : _ALARM,
+  '__module__' : 'api.rule_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.Alarm)
+  })
+_sym_db.RegisterMessage(Alarm)
+
+CreateAlarmRequest = _reflection.GeneratedProtocolMessageType('CreateAlarmRequest', (_message.Message,), {
+  'DESCRIPTOR' : _CREATEALARMREQUEST,
+  '__module__' : 'api.rule_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.CreateAlarmRequest)
+  })
+_sym_db.RegisterMessage(CreateAlarmRequest)
+
+GetAlarmRequest = _reflection.GeneratedProtocolMessageType('GetAlarmRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETALARMREQUEST,
+  '__module__' : 'api.rule_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.GetAlarmRequest)
+  })
+_sym_db.RegisterMessage(GetAlarmRequest)
+
+UpdateAlarmRequest = _reflection.GeneratedProtocolMessageType('UpdateAlarmRequest', (_message.Message,), {
+  'DESCRIPTOR' : _UPDATEALARMREQUEST,
+  '__module__' : 'api.rule_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.UpdateAlarmRequest)
+  })
+_sym_db.RegisterMessage(UpdateAlarmRequest)
+
+DeleteAlarmRequest = _reflection.GeneratedProtocolMessageType('DeleteAlarmRequest', (_message.Message,), {
+  'DESCRIPTOR' : _DELETEALARMREQUEST,
+  '__module__' : 'api.rule_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.DeleteAlarmRequest)
+  })
+_sym_db.RegisterMessage(DeleteAlarmRequest)
+
+ListAlarmsRequest = _reflection.GeneratedProtocolMessageType('ListAlarmsRequest', (_message.Message,), {
+  'DESCRIPTOR' : _LISTALARMSREQUEST,
+  '__module__' : 'api.rule_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.ListAlarmsRequest)
+  })
+_sym_db.RegisterMessage(ListAlarmsRequest)
+
+ListAlarmsResponse = _reflection.GeneratedProtocolMessageType('ListAlarmsResponse', (_message.Message,), {
+  'DESCRIPTOR' : _LISTALARMSRESPONSE,
+  '__module__' : 'api.rule_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.ListAlarmsResponse)
+  })
+_sym_db.RegisterMessage(ListAlarmsResponse)
+
+TestAlarmRequest = _reflection.GeneratedProtocolMessageType('TestAlarmRequest', (_message.Message,), {
+  'DESCRIPTOR' : _TESTALARMREQUEST,
+  '__module__' : 'api.rule_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.TestAlarmRequest)
+  })
+_sym_db.RegisterMessage(TestAlarmRequest)
+
+TestAlarmResponse = _reflection.GeneratedProtocolMessageType('TestAlarmResponse', (_message.Message,), {
+  'DESCRIPTOR' : _TESTALARMRESPONSE,
+  '__module__' : 'api.rule_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.TestAlarmResponse)
+  })
+_sym_db.RegisterMessage(TestAlarmResponse)
+
 
 DESCRIPTOR._options = None
 _CREATERULEREQUEST.fields_by_name['rule']._options = None
@@ -405,6 +919,28 @@ _DELETERULEREQUEST.fields_by_name['id']._options = None
 _LISTRULESREQUEST.fields_by_name['page_size']._options = None
 _TESTRULEREQUEST.fields_by_name['point']._options = None
 _TESTRULEREQUEST.fields_by_name['rule']._options = None
+_ALARM.fields_by_name['id']._options = None
+_ALARM.fields_by_name['org_id']._options = None
+_ALARM.fields_by_name['rule_id']._options = None
+_ALARM.fields_by_name['name']._options = None
+_ALARM.fields_by_name['status']._options = None
+_ALARM.fields_by_name['user_tags']._options = None
+_ALARM.fields_by_name['subject_template']._options = None
+_ALARM.fields_by_name['body_template']._options = None
+_ALARM.fields_by_name['repeat_interval']._options = None
+_ALARM.fields_by_name['created_at']._options = None
+_ALARM.fields_by_name['updated_at']._options = None
+_CREATEALARMREQUEST.fields_by_name['alarm']._options = None
+_GETALARMREQUEST.fields_by_name['id']._options = None
+_GETALARMREQUEST.fields_by_name['rule_id']._options = None
+_UPDATEALARMREQUEST.fields_by_name['alarm']._options = None
+_DELETEALARMREQUEST.fields_by_name['id']._options = None
+_DELETEALARMREQUEST.fields_by_name['rule_id']._options = None
+_LISTALARMSREQUEST.fields_by_name['page_size']._options = None
+_TESTALARMREQUEST.fields_by_name['point']._options = None
+_TESTALARMREQUEST.fields_by_name['rule']._options = None
+_TESTALARMREQUEST.fields_by_name['device']._options = None
+_TESTALARMREQUEST.fields_by_name['alarm']._options = None
 
 _RULESERVICE = _descriptor.ServiceDescriptor(
   name='RuleService',
@@ -413,8 +949,8 @@ _RULESERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=903,
-  serialized_end=1655,
+  serialized_start=2258,
+  serialized_end=3908,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateRule',
@@ -427,9 +963,19 @@ _RULESERVICE = _descriptor.ServiceDescriptor(
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
+    name='CreateAlarm',
+    full_name='thingspect.api.RuleService.CreateAlarm',
+    index=1,
+    containing_service=None,
+    input_type=_CREATEALARMREQUEST,
+    output_type=_ALARM,
+    serialized_options=b'\202\323\344\223\002)\" /v1/rules/{alarm.rule_id}/alarms:\005alarm\222A<J:\n\003201\0223\n\026A successful response.\022\031\n\027\032\025.thingspect.api.Alarm',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
     name='GetRule',
     full_name='thingspect.api.RuleService.GetRule',
-    index=1,
+    index=2,
     containing_service=None,
     input_type=_GETRULEREQUEST,
     output_type=common_dot_rule__pb2._RULE,
@@ -437,9 +983,19 @@ _RULESERVICE = _descriptor.ServiceDescriptor(
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
+    name='GetAlarm',
+    full_name='thingspect.api.RuleService.GetAlarm',
+    index=3,
+    containing_service=None,
+    input_type=_GETALARMREQUEST,
+    output_type=_ALARM,
+    serialized_options=b'\202\323\344\223\002!\022\037/v1/rules/{rule_id}/alarms/{id}',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
     name='UpdateRule',
     full_name='thingspect.api.RuleService.UpdateRule',
-    index=2,
+    index=4,
     containing_service=None,
     input_type=_UPDATERULEREQUEST,
     output_type=common_dot_rule__pb2._RULE,
@@ -447,9 +1003,19 @@ _RULESERVICE = _descriptor.ServiceDescriptor(
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
+    name='UpdateAlarm',
+    full_name='thingspect.api.RuleService.UpdateAlarm',
+    index=5,
+    containing_service=None,
+    input_type=_UPDATEALARMREQUEST,
+    output_type=_ALARM,
+    serialized_options=b'\202\323\344\223\002j\032+/v1/rules/{alarm.rule_id}/alarms/{alarm.id}:\005alarmZ42+/v1/rules/{alarm.rule_id}/alarms/{alarm.id}:\005alarm',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
     name='DeleteRule',
     full_name='thingspect.api.RuleService.DeleteRule',
-    index=3,
+    index=6,
     containing_service=None,
     input_type=_DELETERULEREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -457,9 +1023,19 @@ _RULESERVICE = _descriptor.ServiceDescriptor(
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
+    name='DeleteAlarm',
+    full_name='thingspect.api.RuleService.DeleteAlarm',
+    index=7,
+    containing_service=None,
+    input_type=_DELETEALARMREQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    serialized_options=b'\202\323\344\223\002!*\037/v1/rules/{rule_id}/alarms/{id}\222A#J!\n\003204\022\032\n\026A successful response.\022\000',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
     name='ListRules',
     full_name='thingspect.api.RuleService.ListRules',
-    index=4,
+    index=8,
     containing_service=None,
     input_type=_LISTRULESREQUEST,
     output_type=_LISTRULESRESPONSE,
@@ -467,13 +1043,33 @@ _RULESERVICE = _descriptor.ServiceDescriptor(
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
+    name='ListAlarms',
+    full_name='thingspect.api.RuleService.ListAlarms',
+    index=9,
+    containing_service=None,
+    input_type=_LISTALARMSREQUEST,
+    output_type=_LISTALARMSRESPONSE,
+    serialized_options=b'\202\323\344\223\0020\022\032/v1/rules/{rule_id}/alarmsZ\022\022\020/v1/rules/alarms',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
     name='TestRule',
     full_name='thingspect.api.RuleService.TestRule',
-    index=5,
+    index=10,
     containing_service=None,
     input_type=_TESTRULEREQUEST,
     output_type=_TESTRULERESPONSE,
     serialized_options=b'\202\323\344\223\002\023\"\016/v1/rules/test:\001*',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='TestAlarm',
+    full_name='thingspect.api.RuleService.TestAlarm',
+    index=11,
+    containing_service=None,
+    input_type=_TESTALARMREQUEST,
+    output_type=_TESTALARMRESPONSE,
+    serialized_options=b'\202\323\344\223\002\032\"\025/v1/rules/alarms/test:\001*',
     create_key=_descriptor._internal_create_key,
   ),
 ])
