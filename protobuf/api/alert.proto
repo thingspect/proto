@@ -2,8 +2,19 @@ syntax = "proto3";
 package thingspect.api;
 
 import "google/protobuf/timestamp.proto";
+import "google/api/annotations.proto";
 
 option go_package = "github.com/thingspect/api/go/api";
+
+// AlertService contains functions to query alerts.
+service AlertService {
+  // List all alerts for a device, alarm, and/or user in a [end, start) time range, in descending timestamp order.
+  rpc ListAlerts(ListAlertsRequest) returns (ListAlertsResponse) {
+    option (google.api.http) = {
+      get: "/v1/alerts"
+    };
+  }
+}
 
 // Alert represents an alert as stored in the database.
 message Alert {
@@ -24,4 +35,34 @@ message Alert {
 
   // Trace ID (UUID).
   string trace_id = 6;
+}
+
+// ListAlertsRequest is sent to list device, alarm, and/or user alerts in a [end, start) time range, in descending timestamp order.
+message ListAlertsRequest {
+  // Device identifier.
+  oneof id_oneof {
+    // Device unique ID. If neither unique ID nor device ID are specified, all devices are included.
+    string uniq_id = 1 [json_name = "uniqID"];
+
+    // Device ID (UUID). If neither unique ID nor device ID are specified, all devices are included.
+    string device_id = 2 [json_name = "deviceID"];
+  }
+
+  // Alarm ID (UUID). If not specified, all alarms are included.
+  string alarm_id = 3 [json_name = "alarmID"];
+
+  // User ID (UUID). If not specified, all users are included.
+  string user_id = 4 [json_name = "userID"];
+
+  // Alerts range end time. Defaults to current time if not specified. Maximum supported time range is 90 days.
+  google.protobuf.Timestamp end_time = 5;
+
+  // Alerts range start time. Defaults to end_time - 24 hours if not specified or after end_time. Maximum supported time range is 90 days.
+  google.protobuf.Timestamp start_time = 6;
+}
+
+// ListAlertsResponse is sent in response to a device alerts list.
+message ListAlertsResponse {
+  // Alert array, ordered by descending created_at timestamp.
+  repeated Alert alerts = 1;
 }
