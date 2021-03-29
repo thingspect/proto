@@ -38,7 +38,7 @@ api:
 	api/device.proto \
 	api/event.proto \
 	api/org.proto \
-	api/rule.proto \
+	api/rule_alarm.proto \
 	api/session.proto \
 	api/tag.proto \
 	api/user.proto
@@ -58,7 +58,7 @@ openapi:
 	api/device.proto \
 	api/event.proto \
 	api/org.proto \
-	api/rule.proto \
+	api/rule_alarm.proto \
 	api/session.proto \
 	api/tag.proto \
 	api/user.proto

@@ -15,8 +15,8 @@ import "validate/validate.proto";
 
 option go_package = "github.com/thingspect/api/go/api";
 
-// RuleService contains functions to query and modify rules.
-service RuleService {
+// RuleAlarmService contains functions to query and modify rules.
+service RuleAlarmService {
   // Create a rule. Rules define how events are generated.
   rpc CreateRule(CreateRuleRequest) returns (common.Rule) {
     option (google.api.http) = {
