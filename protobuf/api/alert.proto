@@ -16,6 +16,18 @@ service AlertService {
   }
 }
 
+// AlertStatus represents the status of an alert.
+enum AlertStatus {
+  // Alert status is not specified.
+  ALERT_STATUS_UNSPECIFIED = 0;
+
+  // Alert was successfully sent.
+  SENT = 1;
+
+  // Alert encountered an error.
+  ERROR = 2;
+}
+
 // Alert represents an alert as stored in the database.
 message Alert {
   // Organization ID (UUID).
@@ -30,11 +42,17 @@ message Alert {
   // User ID (UUID).
   string user_id = 4 [json_name = "userID"];
 
+  // Alert status.
+  AlertStatus status = 5;
+
+  // Error message. This field will be empty if no error was encountered.
+  string error = 6;
+
   // Alert creation timestamp.
-  google.protobuf.Timestamp created_at = 5;
+  google.protobuf.Timestamp created_at = 7;
 
   // Trace ID (UUID).
-  string trace_id = 6;
+  string trace_id = 8;
 }
 
 // ListAlertsRequest is sent to list device, alarm, and/or user alerts in a [end, start) time range, in descending timestamp order.
