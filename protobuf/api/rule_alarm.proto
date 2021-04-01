@@ -226,6 +226,15 @@ message TestRuleResponse {
   bool result = 1;
 }
 
+// AlarmType represents the type of alarm.
+enum AlarmType {
+  // Alarm type is not specified.
+  ALARM_TYPE_UNSPECIFIED = 0;
+
+  // Push notification via mobile application.
+  APP = 1;
+}
+
 // Alarm represents an alarm as stored in the database.
 message Alarm {
   // Alarm ID (UUID).
@@ -243,23 +252,26 @@ message Alarm {
   // Alarm status.
   common.Status status = 5 [(validate.rules).enum = {in: [3,6]}, (google.api.field_behavior) = REQUIRED];
 
+  // Alarm type.
+  AlarmType type = 6 [(validate.rules).enum = {in: [1]}, (google.api.field_behavior) = REQUIRED];
+
   // User tags to whom alerts are sent.
-  repeated string user_tags = 6 [(validate.rules).repeated = {min_items: 1, unique: true}, (validate.rules).repeated.items.string.max_len = 255, (google.api.field_behavior) = REQUIRED];
+  repeated string user_tags = 7 [(validate.rules).repeated = {min_items: 1, unique: true}, (validate.rules).repeated.items.string.max_len = 255, (google.api.field_behavior) = REQUIRED];
 
   // Alarm subject template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
-  string subject_template = 7 [(validate.rules).string.max_len = 1024, (google.api.field_behavior) = REQUIRED];
+  string subject_template = 8 [(validate.rules).string.max_len = 1024, (google.api.field_behavior) = REQUIRED];
 
   // Alarm body template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
-  string body_template = 8 [(validate.rules).string.max_len = 4096, (google.api.field_behavior) = REQUIRED];
+  string body_template = 9 [(validate.rules).string.max_len = 4096, (google.api.field_behavior) = REQUIRED];
 
   // Alarm repeat interval, in minutes. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
-  int32 repeat_interval = 9 [(validate.rules).int32 = {gte: 1, lte: 20160}, (google.api.field_behavior) = REQUIRED];
+  int32 repeat_interval = 10 [(validate.rules).int32 = {gte: 1, lte: 20160}, (google.api.field_behavior) = REQUIRED];
 
   // Alarm creation timestamp.
-  google.protobuf.Timestamp created_at = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp created_at = 11 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Alarm modification timestamp.
-  google.protobuf.Timestamp updated_at = 11 [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp updated_at = 12 [(google.api.field_behavior) = OUTPUT_ONLY];
 }
 
 // CreateAlarmRequest is sent to create an alarm.

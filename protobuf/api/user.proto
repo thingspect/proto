@@ -107,11 +107,14 @@ message User {
   // User tags. Nested tags should be delimited by '/'.
   repeated string tags = 6 [(validate.rules).repeated.unique = true, (validate.rules).repeated.items.string.max_len = 255];
 
+  // Mobile application user key.
+  string app_key = 7 [(validate.rules).string = {min_len: 0, max_len: 80}];
+
   // User creation timestamp.
-  google.protobuf.Timestamp created_at = 7 [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp created_at = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // User modification timestamp.
-  google.protobuf.Timestamp updated_at = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp updated_at = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
 }
 
 // CreateUserRequest is sent to create a user.
