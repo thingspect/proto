@@ -26,7 +26,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x10\x61pi/device.proto\x12\x0ethingspect.api\x1a\x13\x63ommon/device.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"M\n\x13\x43reateDeviceRequest\x12\x36\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.thingspect.common.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"\xf4\x02\n\x1a\x43reateDeviceLoRaWANRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x03\x12q\n\x14gateway_lorawan_type\x18\x02 \x01(\x0b\x32=.thingspect.api.CreateDeviceLoRaWANRequest.GatewayLoRaWANTypeH\x00R\x12gatewayLoRaWANType\x12n\n\x13\x64\x65vice_lorawan_type\x18\x03 \x01(\x0b\x32<.thingspect.api.CreateDeviceLoRaWANRequest.DeviceLoRaWANTypeH\x00R\x11\x64\x65viceLoRaWANType\x1a\x14\n\x12GatewayLoRaWANType\x1a\x31\n\x11\x44\x65viceLoRaWANType\x12\x1c\n\x07\x61pp_key\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\x98\x01 \xe0\x41\x02\x42\x11\n\ntype_oneof\x12\x03\xf8\x42\x01\"+\n\x10GetDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"~\n\x13UpdateDeviceRequest\x12\x36\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.thingspect.common.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"5\n\x1a\x44\x65leteDeviceLoRaWANRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\".\n\x13\x44\x65leteDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"T\n\x12ListDevicesRequest\x12\x1d\n\tpage_size\x18\x01 \x01(\x05\x42\n\xfa\x42\x07\x1a\x05\x18\xfa\x01(\x00\x12\x12\n\npage_token\x18\x02 \x01(\t\x12\x0b\n\x03tag\x18\x03 \x01(\t\"n\n\x13ListDevicesResponse\x12*\n\x07\x64\x65vices\x18\x01 \x03(\x0b\x32\x19.thingspect.common.Device\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\x32\x87\x08\n\rDeviceService\x12\xae\x01\n\x0c\x43reateDevice\x12#.thingspect.api.CreateDeviceRequest\x1a\x19.thingspect.common.Device\"^\x82\xd3\xe4\x93\x02\x15\"\x0b/v1/devices:\x06\x64\x65vice\x92\x41@J>\n\x03\x32\x30\x31\x12\x37\n\x16\x41 successful response.\x12\x1d\n\x1b\x1a\x19.thingspect.common.Device\x12\xa4\x01\n\x13\x43reateDeviceLoRaWAN\x12*.thingspect.api.CreateDeviceLoRaWANRequest\x1a\x16.google.protobuf.Empty\"I\x82\xd3\xe4\x93\x02\x1d\"\x18/v1/devices/{id}/lorawan:\x01*\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x62\n\tGetDevice\x12 .thingspect.api.GetDeviceRequest\x1a\x19.thingspect.common.Device\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/devices/{id}\x12\x9a\x01\n\x0cUpdateDevice\x12#.thingspect.api.UpdateDeviceRequest\x1a\x19.thingspect.common.Device\"J\x82\xd3\xe4\x93\x02\x44\x1a\x17/v1/devices/{device.id}:\x06\x64\x65viceZ!2\x17/v1/devices/{device.id}:\x06\x64\x65vice\x12\xa1\x01\n\x13\x44\x65leteDeviceLoRaWAN\x12*.thingspect.api.DeleteDeviceLoRaWANRequest\x1a\x16.google.protobuf.Empty\"F\x82\xd3\xe4\x93\x02\x1a*\x18/v1/devices/{id}/lorawan\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x8b\x01\n\x0c\x44\x65leteDevice\x12#.thingspect.api.DeleteDeviceRequest\x1a\x16.google.protobuf.Empty\">\x82\xd3\xe4\x93\x02\x12*\x10/v1/devices/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12k\n\x0bListDevices\x12\".thingspect.api.ListDevicesRequest\x1a#.thingspect.api.ListDevicesResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/devicesB\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x10\x61pi/device.proto\x12\x0ethingspect.api\x1a\x13\x63ommon/device.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"M\n\x13\x43reateDeviceRequest\x12\x36\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.thingspect.common.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"\xf4\x02\n\x1a\x43reateDeviceLoRaWANRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x03\x12q\n\x14gateway_lorawan_type\x18\x02 \x01(\x0b\x32=.thingspect.api.CreateDeviceLoRaWANRequest.GatewayLoRaWANTypeH\x00R\x12gatewayLoRaWANType\x12n\n\x13\x64\x65vice_lorawan_type\x18\x03 \x01(\x0b\x32<.thingspect.api.CreateDeviceLoRaWANRequest.DeviceLoRaWANTypeH\x00R\x11\x64\x65viceLoRaWANType\x1a\x14\n\x12GatewayLoRaWANType\x1a\x31\n\x11\x44\x65viceLoRaWANType\x12\x1c\n\x07\x61pp_key\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\x98\x01 \xe0\x41\x02\x42\x11\n\ntype_oneof\x12\x03\xf8\x42\x01\"+\n\x10GetDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"~\n\x13UpdateDeviceRequest\x12\x36\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x19.thingspect.common.DeviceB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"5\n\x1a\x44\x65leteDeviceLoRaWANRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\".\n\x13\x44\x65leteDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"\\\n\x12ListDevicesRequest\x12\x1b\n\tpage_size\x18\x01 \x01(\x05\x42\x08\xfa\x42\x05\x1a\x03\x18\xfa\x01\x12\x12\n\npage_token\x18\x02 \x01(\t\x12\x15\n\x03tag\x18\x03 \x01(\tB\x08\xfa\x42\x05r\x03\x18\xff\x01\"n\n\x13ListDevicesResponse\x12*\n\x07\x64\x65vices\x18\x01 \x03(\x0b\x32\x19.thingspect.common.Device\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\x32\x87\x08\n\rDeviceService\x12\xae\x01\n\x0c\x43reateDevice\x12#.thingspect.api.CreateDeviceRequest\x1a\x19.thingspect.common.Device\"^\x82\xd3\xe4\x93\x02\x15\"\x0b/v1/devices:\x06\x64\x65vice\x92\x41@J>\n\x03\x32\x30\x31\x12\x37\n\x16\x41 successful response.\x12\x1d\n\x1b\x1a\x19.thingspect.common.Device\x12\xa4\x01\n\x13\x43reateDeviceLoRaWAN\x12*.thingspect.api.CreateDeviceLoRaWANRequest\x1a\x16.google.protobuf.Empty\"I\x82\xd3\xe4\x93\x02\x1d\"\x18/v1/devices/{id}/lorawan:\x01*\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x62\n\tGetDevice\x12 .thingspect.api.GetDeviceRequest\x1a\x19.thingspect.common.Device\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/devices/{id}\x12\x9a\x01\n\x0cUpdateDevice\x12#.thingspect.api.UpdateDeviceRequest\x1a\x19.thingspect.common.Device\"J\x82\xd3\xe4\x93\x02\x44\x1a\x17/v1/devices/{device.id}:\x06\x64\x65viceZ!2\x17/v1/devices/{device.id}:\x06\x64\x65vice\x12\xa1\x01\n\x13\x44\x65leteDeviceLoRaWAN\x12*.thingspect.api.DeleteDeviceLoRaWANRequest\x1a\x16.google.protobuf.Empty\"F\x82\xd3\xe4\x93\x02\x1a*\x18/v1/devices/{id}/lorawan\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12\x8b\x01\n\x0c\x44\x65leteDevice\x12#.thingspect.api.DeleteDeviceRequest\x1a\x16.google.protobuf.Empty\">\x82\xd3\xe4\x93\x02\x12*\x10/v1/devices/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12k\n\x0bListDevices\x12\".thingspect.api.ListDevicesRequest\x1a#.thingspect.api.ListDevicesResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/devicesB\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
   dependencies=[common_dot_device__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -320,7 +320,7 @@ _LISTDEVICESREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=b'\372B\007\032\005\030\372\001(\000', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372B\005\032\003\030\372\001', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='page_token', full_name='thingspect.api.ListDevicesRequest.page_token', index=1,
       number=2, type=9, cpp_type=9, label=1,
@@ -334,7 +334,7 @@ _LISTDEVICESREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372B\005r\003\030\377\001', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -348,7 +348,7 @@ _LISTDEVICESREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=986,
-  serialized_end=1070,
+  serialized_end=1078,
 )
 
 
@@ -393,8 +393,8 @@ _LISTDEVICESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1072,
-  serialized_end=1182,
+  serialized_start=1080,
+  serialized_end=1190,
 )
 
 _CREATEDEVICEREQUEST.fields_by_name['device'].message_type = common_dot_device__pb2._DEVICE
@@ -504,6 +504,7 @@ _UPDATEDEVICEREQUEST.fields_by_name['device']._options = None
 _DELETEDEVICELORAWANREQUEST.fields_by_name['id']._options = None
 _DELETEDEVICEREQUEST.fields_by_name['id']._options = None
 _LISTDEVICESREQUEST.fields_by_name['page_size']._options = None
+_LISTDEVICESREQUEST.fields_by_name['tag']._options = None
 
 _DEVICESERVICE = _descriptor.ServiceDescriptor(
   name='DeviceService',
@@ -512,8 +513,8 @@ _DEVICESERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1185,
-  serialized_end=2216,
+  serialized_start=1193,
+  serialized_end=2224,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateDevice',

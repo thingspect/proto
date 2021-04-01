@@ -61,11 +61,11 @@ message ListDataPointsRequest {
     string uniq_id = 1 [json_name = "uniqID"];
 
     // Device ID (UUID). Either unique ID or device ID must be provided.
-    string device_id = 2 [json_name = "deviceID"];
+    string device_id = 2 [json_name = "deviceID", (validate.rules).string = {ignore_empty: true, uuid: true}];
   }
 
   // Device attribute. If not specified, all attributes are included.
-  string attr = 3 [(validate.rules).string = {min_len: 0, max_len: 40}];
+  string attr = 3 [(validate.rules).string.max_len = 40];
 
   // Data points range end time. Defaults to current time if not specified. Maximum supported time range is 90 days.
   google.protobuf.Timestamp end_time = 4;
@@ -90,7 +90,7 @@ message LatestDataPointsRequest {
     string uniq_id = 1 [json_name = "uniqID"];
 
     // Device ID (UUID). Either unique ID or device ID must be provided.
-    string device_id = 2 [json_name = "deviceID"];
+    string device_id = 2 [json_name = "deviceID", (validate.rules).string = {ignore_empty: true, uuid: true}];
   }
 }
 

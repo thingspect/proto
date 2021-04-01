@@ -17,19 +17,19 @@ message Rule {
   string org_id = 2 [json_name = "orgID", (google.api.field_behavior) = OUTPUT_ONLY];
 
   // Rule name.
-  string name = 3 [(validate.rules).string = {min_len: 5, max_len: 80}, (google.api.field_behavior) = REQUIRED];
+  string name = 3 [(validate.rules).string = {min_len: 5, max_len: 80}];
 
   // Rule status.
-  common.Status status = 4 [(validate.rules).enum = {in: [3,6]}, (google.api.field_behavior) = REQUIRED];
+  common.Status status = 4 [(validate.rules).enum = {in: [3,6]}];
 
   // Device tag to which the rule applies.
-  string device_tag = 5 [(validate.rules).string.max_len = 255, (google.api.field_behavior) = REQUIRED];
+  string device_tag = 5 [(validate.rules).string.max_len = 255];
 
   // Device and data point attribute to which the rule applies.
-  string attr = 6 [(validate.rules).string.max_len = 40, (google.api.field_behavior) = REQUIRED];
+  string attr = 6 [(validate.rules).string.max_len = 40];
 
   // Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://github.com/antonmedv/expr/blob/master/docs/Language-Definition.md).
-  string expr = 7 [(validate.rules).string.max_len = 1024, (google.api.field_behavior) = REQUIRED];
+  string expr = 7 [(validate.rules).string.max_len = 1024];
 
   // Rule creation timestamp.
   google.protobuf.Timestamp created_at = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
