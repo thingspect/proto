@@ -52,11 +52,11 @@ message ListEventsRequest {
     string uniq_id = 1 [json_name = "uniqID"];
 
     // Device ID (UUID). Either unique ID or device ID must be provided.
-    string device_id = 2 [json_name = "deviceID"];
+    string device_id = 2 [json_name = "deviceID", (validate.rules).string = {ignore_empty: true, uuid: true}];
   }
 
   // Rule ID (UUID). If not specified, all rules are included.
-  string rule_id = 3 [json_name = "ruleID"];
+  string rule_id = 3 [json_name = "ruleID", (validate.rules).string = {ignore_empty: true, uuid: true}];
 
   // Events range end time. Defaults to current time if not specified. Maximum supported time range is 90 days.
   google.protobuf.Timestamp end_time = 4;
@@ -74,7 +74,7 @@ message ListEventsResponse {
 // LatestEventsRequest is sent to list latest organization events.
 message LatestEventsRequest {
   // Rule ID (UUID). If not specified, all rules are included.
-  string rule_id = 1 [json_name = "ruleID"];
+  string rule_id = 1 [json_name = "ruleID", (validate.rules).string = {ignore_empty: true, uuid: true}];
 }
 
 // LatestEventsResponse is sent in response to an organization latest list.

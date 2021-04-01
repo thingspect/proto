@@ -18,16 +18,16 @@ message Device {
   string org_id = 2 [json_name = "orgID", (google.api.field_behavior) = OUTPUT_ONLY];
 
   // Device unique ID.
-  string uniq_id = 3 [json_name = "uniqID", (validate.rules).string = {min_len: 5, max_len: 40}, (google.api.field_behavior) = REQUIRED];
+  string uniq_id = 3 [json_name = "uniqID", (validate.rules).string = {min_len: 5, max_len: 40}];
 
   // Device name.
-  string name = 4 [(validate.rules).string = {min_len: 5, max_len: 80}, (google.api.field_behavior) = REQUIRED];
+  string name = 4 [(validate.rules).string = {min_len: 5, max_len: 80}];
 
   // Device status.
-  Status status = 5 [(validate.rules).enum = {in: [3,6]}, (google.api.field_behavior) = REQUIRED];
+  Status status = 5 [(validate.rules).enum = {in: [3,6]}];
 
   // Authentication token (UUID). Will be generated at creation time, but can be updated afterward.
-  string token = 6;
+  string token = 6 [(validate.rules).string = {ignore_empty: true, uuid: true}];
 
   // Device data payload decoder.
   Decoder decoder = 7;

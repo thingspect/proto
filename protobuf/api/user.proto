@@ -96,19 +96,19 @@ message User {
   string org_id = 2 [json_name = "orgID", (google.api.field_behavior) = OUTPUT_ONLY];
 
   // User email.
-  string email = 3 [(validate.rules).string.email = true, (google.api.field_behavior) = REQUIRED];
+  string email = 3 [(validate.rules).string.email = true];
 
   // User role.
-  common.Role role = 4 [(validate.rules).enum = {in: [3,6,9,12,15]}, (google.api.field_behavior) = REQUIRED];
+  common.Role role = 4 [(validate.rules).enum = {in: [3,6,9,12,15]}];
 
   // User status.
-  common.Status status = 5 [(validate.rules).enum = {in: [3,6]}, (google.api.field_behavior) = REQUIRED];
+  common.Status status = 5 [(validate.rules).enum = {in: [3,6]}];
 
   // User tags. Nested tags should be delimited by '/'.
   repeated string tags = 6 [(validate.rules).repeated.unique = true, (validate.rules).repeated.items.string.max_len = 255];
 
   // Mobile application user key.
-  string app_key = 7 [(validate.rules).string = {min_len: 0, max_len: 80}];
+  string app_key = 7 [(validate.rules).string.max_len = 80];
 
   // User creation timestamp.
   google.protobuf.Timestamp created_at = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
@@ -156,13 +156,13 @@ message DeleteUserRequest {
 // ListUsersRequest is sent to list users.
 message ListUsersRequest {
   // Number of users to retrieve in a single page. Defaults to 50 if not specified, with a maximum of 250.
-  int32 page_size = 1 [(validate.rules).int32 = {gte: 0, lte: 250}];
+  int32 page_size = 1 [(validate.rules).int32.lte = 250];
 
   // Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.
   string page_token = 2;
 
   // User tag. If not specified, all tags are included.
-  string tag = 3;
+  string tag = 3 [(validate.rules).string.max_len = 255];
 }
 
 // ListUsersResponse is sent in response to a user list.

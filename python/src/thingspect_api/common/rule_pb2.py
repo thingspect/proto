@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z#github.com/thingspect/api/go/common',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11\x63ommon/rule.proto\x12\x11thingspect.common\x1a\x13\x63ommon/status.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x17validate/validate.proto\"\xc9\x02\n\x04Rule\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x1a\n\x04name\x18\x03 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18P\xe0\x41\x02\x12\x38\n\x06status\x18\x04 \x01(\x0e\x32\x19.thingspect.common.StatusB\r\xfa\x42\x07\x82\x01\x04\x18\x03\x18\x06\xe0\x41\x02\x12\x1f\n\ndevice_tag\x18\x05 \x01(\tB\x0b\xfa\x42\x05r\x03\x18\xff\x01\xe0\x41\x02\x12\x18\n\x04\x61ttr\x18\x06 \x01(\tB\n\xfa\x42\x04r\x02\x18(\xe0\x41\x02\x12\x19\n\x04\x65xpr\x18\x07 \x01(\tB\x0b\xfa\x42\x05r\x03\x18\x80\x08\xe0\x41\x02\x12\x33\n\ncreated_at\x18\x08 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\t \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x42%Z#github.com/thingspect/api/go/commonb\x06proto3'
+  serialized_pb=b'\n\x11\x63ommon/rule.proto\x12\x11thingspect.common\x1a\x13\x63ommon/status.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x17validate/validate.proto\"\xba\x02\n\x04Rule\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x17\n\x04name\x18\x03 \x01(\tB\t\xfa\x42\x06r\x04\x10\x05\x18P\x12\x35\n\x06status\x18\x04 \x01(\x0e\x32\x19.thingspect.common.StatusB\n\xfa\x42\x07\x82\x01\x04\x18\x03\x18\x06\x12\x1c\n\ndevice_tag\x18\x05 \x01(\tB\x08\xfa\x42\x05r\x03\x18\xff\x01\x12\x15\n\x04\x61ttr\x18\x06 \x01(\tB\x07\xfa\x42\x04r\x02\x18(\x12\x16\n\x04\x65xpr\x18\x07 \x01(\tB\x08\xfa\x42\x05r\x03\x18\x80\x08\x12\x33\n\ncreated_at\x18\x08 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\t \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x42%Z#github.com/thingspect/api/go/commonb\x06proto3'
   ,
   dependencies=[common_dot_status__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -58,35 +58,35 @@ _RULE = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=b'\372B\006r\004\020\005\030P\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372B\006r\004\020\005\030P', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='status', full_name='thingspect.common.Rule.status', index=3,
       number=4, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=b'\372B\007\202\001\004\030\003\030\006\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372B\007\202\001\004\030\003\030\006', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='device_tag', full_name='thingspect.common.Rule.device_tag', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=b'\372B\005r\003\030\377\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372B\005r\003\030\377\001', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='attr', full_name='thingspect.common.Rule.attr', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=b'\372B\004r\002\030(\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372B\004r\002\030(', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='expr', full_name='thingspect.common.Rule.expr', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=b'\372B\005r\003\030\200\010\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372B\005r\003\030\200\010', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='created_at', full_name='thingspect.common.Rule.created_at', index=7,
       number=8, type=11, cpp_type=10, label=1,
@@ -114,7 +114,7 @@ _RULE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=153,
-  serialized_end=482,
+  serialized_end=467,
 )
 
 _RULE.fields_by_name['status'].enum_type = common_dot_status__pb2._STATUS
