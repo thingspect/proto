@@ -24,7 +24,7 @@ message Device {
   string name = 4 [(validate.rules).string = {min_len: 5, max_len: 80}];
 
   // Device status.
-  Status status = 5 [(validate.rules).enum = {in: [3,6]}];
+  Status status = 5 [(validate.rules).enum = {in: [3, 6]}];
 
   // Authentication token (UUID). Will be generated at creation time, but can be updated afterward.
   string token = 6 [(validate.rules).string = {ignore_empty: true, uuid: true}];
