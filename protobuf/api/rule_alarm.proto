@@ -236,6 +236,9 @@ enum AlarmType {
 
   // SMS notification.
   SMS = 2;
+
+  // Email notification.
+  EMAIL = 3;
 }
 
 // Alarm represents an alarm as stored in the database.
@@ -256,7 +259,7 @@ message Alarm {
   common.Status status = 5 [(validate.rules).enum = {in: [3, 6]}];
 
   // Alarm type.
-  AlarmType type = 6 [(validate.rules).enum = {in: [1, 2]}];
+  AlarmType type = 6 [(validate.rules).enum = {in: [1, 2, 3]}];
 
   // User tags to whom alerts are sent.
   repeated string user_tags = 7 [(validate.rules).repeated = {min_items: 1, unique: true}, (validate.rules).repeated.items.string.max_len = 255];
