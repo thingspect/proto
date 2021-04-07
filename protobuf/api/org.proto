@@ -85,11 +85,17 @@ message Org {
   // Organization name.
   string name = 2 [(validate.rules).string = {min_len: 5, max_len: 40}];
 
+  // Organization display name. Used anywhere the organization is shown to a user, including web sites and alert sender fields.
+  string display_name = 3 [(validate.rules).string = {min_len: 5, max_len: 80}];
+
+  // Organization email. Used as the 'From' address in email alerts.
+  string email = 4 [(validate.rules).string.email = true];
+
   // Organization creation timestamp.
-  google.protobuf.Timestamp created_at = 3 [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp created_at = 5 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // Organization modification timestamp.
-  google.protobuf.Timestamp updated_at = 4 [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp updated_at = 6 [(google.api.field_behavior) = OUTPUT_ONLY];
 }
 
 // CreateOrgRequest is sent to create an organization.
