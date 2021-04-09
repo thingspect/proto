@@ -11,10 +11,13 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from common import role_pb2 as common_dot_role__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
 from protoc_gen_openapiv2.options import annotations_pb2 as protoc__gen__openapiv2_dot_options_dot_annotations__pb2
+from validate import validate_pb2 as validate_dot_validate__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -23,9 +26,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z github.com/thingspect/api/go/api',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11\x61pi/session.proto\x12\x0ethingspect.api\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\"P\n\x0cLoginRequest\x12\x12\n\x05\x65mail\x18\x01 \x01(\tB\x03\xe0\x41\x02\x12\x15\n\x08org_name\x18\x02 \x01(\tB\x03\xe0\x41\x02\x12\x15\n\x08password\x18\x03 \x01(\tB\x03\xe0\x41\x02\"N\n\rLoginResponse\x12\r\n\x05token\x18\x01 \x01(\t\x12.\n\nexpires_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp2z\n\x0eSessionService\x12h\n\x05Login\x12\x1c.thingspect.api.LoginRequest\x1a\x1d.thingspect.api.LoginResponse\"\"\x82\xd3\xe4\x93\x02\x17\"\x12/v1/sessions/login:\x01*\x92\x41\x02\x62\x00\x42\"Z github.com/thingspect/api/go/apib\x06proto3'
+  serialized_pb=b'\n\x11\x61pi/session.proto\x12\x0ethingspect.api\x1a\x11\x63ommon/role.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"P\n\x0cLoginRequest\x12\x12\n\x05\x65mail\x18\x01 \x01(\tB\x03\xe0\x41\x02\x12\x15\n\x08org_name\x18\x02 \x01(\tB\x03\xe0\x41\x02\x12\x15\n\x08password\x18\x03 \x01(\tB\x03\xe0\x41\x02\"N\n\rLoginResponse\x12\r\n\x05token\x18\x01 \x01(\t\x12.\n\nexpires_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\xbf\x01\n\x03Key\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x1a\n\x04name\x18\x03 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18P\xe0\x41\x02\x12:\n\x04role\x18\x04 \x01(\x0e\x32\x17.thingspect.common.RoleB\x13\xfa\x42\r\x82\x01\n\x18\x03\x18\x06\x18\t\x18\x0c\x18\x0f\xe0\x41\x02\x12\x33\n\ncreated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"A\n\x10\x43reateKeyRequest\x12-\n\x03key\x18\x01 \x01(\x0b\x32\x13.thingspect.api.KeyB\x0b\xfa\x42\x05\x8a\x01\x02\x10\x01\xe0\x41\x02\"D\n\x11\x43reateKeyResponse\x12 \n\x03key\x18\x01 \x01(\x0b\x32\x13.thingspect.api.Key\x12\r\n\x05token\x18\x02 \x01(\t\"+\n\x10\x44\x65leteKeyRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xfa\x42\x05r\x03\xb0\x01\x01\xe0\x41\x02\"B\n\x0fListKeysRequest\x12\x1b\n\tpage_size\x18\x01 \x01(\x05\x42\x08\xfa\x42\x05\x1a\x03\x18\xfa\x01\x12\x12\n\npage_token\x18\x02 \x01(\t\"b\n\x10ListKeysResponse\x12!\n\x04keys\x18\x01 \x03(\x0b\x32\x13.thingspect.api.Key\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\x32\xa2\x04\n\x0eSessionService\x12h\n\x05Login\x12\x1c.thingspect.api.LoginRequest\x1a\x1d.thingspect.api.LoginResponse\"\"\x82\xd3\xe4\x93\x02\x17\"\x12/v1/sessions/login:\x01*\x92\x41\x02\x62\x00\x12\xad\x01\n\tCreateKey\x12 .thingspect.api.CreateKeyRequest\x1a!.thingspect.api.CreateKeyResponse\"[\x82\xd3\xe4\x93\x02\x18\"\x11/v1/sessions/keys:\x03key\x92\x41:J8\n\x03\x32\x30\x31\x12\x31\n\x16\x41 successful response.\x12\x17\n\x15\x1a\x13.thingspect.api.Key\x12\x8b\x01\n\tDeleteKey\x12 .thingspect.api.DeleteKeyRequest\x1a\x16.google.protobuf.Empty\"D\x82\xd3\xe4\x93\x02\x18*\x16/v1/sessions/keys/{id}\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x12h\n\x08ListKeys\x12\x1f.thingspect.api.ListKeysRequest\x1a .thingspect.api.ListKeysResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/sessions/keysB\"Z github.com/thingspect/api/go/apib\x06proto3'
   ,
-  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,])
+  dependencies=[common_dot_role__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,protoc__gen__openapiv2_dot_options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
 
 
@@ -71,8 +74,8 @@ _LOGINREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=181,
-  serialized_end=261,
+  serialized_start=254,
+  serialized_end=334,
 )
 
 
@@ -110,13 +113,272 @@ _LOGINRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=263,
-  serialized_end=341,
+  serialized_start=336,
+  serialized_end=414,
+)
+
+
+_KEY = _descriptor.Descriptor(
+  name='Key',
+  full_name='thingspect.api.Key',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='thingspect.api.Key.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='org_id', full_name='thingspect.api.Key.org_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\340A\003', json_name='orgID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='thingspect.api.Key.name', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\006r\004\020\005\030P\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='role', full_name='thingspect.api.Key.role', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\r\202\001\n\030\003\030\006\030\t\030\014\030\017\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='created_at', full_name='thingspect.api.Key.created_at', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=417,
+  serialized_end=608,
+)
+
+
+_CREATEKEYREQUEST = _descriptor.Descriptor(
+  name='CreateKeyRequest',
+  full_name='thingspect.api.CreateKeyRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='thingspect.api.CreateKeyRequest.key', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005\212\001\002\020\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=610,
+  serialized_end=675,
+)
+
+
+_CREATEKEYRESPONSE = _descriptor.Descriptor(
+  name='CreateKeyResponse',
+  full_name='thingspect.api.CreateKeyResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='thingspect.api.CreateKeyResponse.key', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='token', full_name='thingspect.api.CreateKeyResponse.token', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=677,
+  serialized_end=745,
+)
+
+
+_DELETEKEYREQUEST = _descriptor.Descriptor(
+  name='DeleteKeyRequest',
+  full_name='thingspect.api.DeleteKeyRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='thingspect.api.DeleteKeyRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005r\003\260\001\001\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=747,
+  serialized_end=790,
+)
+
+
+_LISTKEYSREQUEST = _descriptor.Descriptor(
+  name='ListKeysRequest',
+  full_name='thingspect.api.ListKeysRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='page_size', full_name='thingspect.api.ListKeysRequest.page_size', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\372B\005\032\003\030\372\001', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='page_token', full_name='thingspect.api.ListKeysRequest.page_token', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=792,
+  serialized_end=858,
+)
+
+
+_LISTKEYSRESPONSE = _descriptor.Descriptor(
+  name='ListKeysResponse',
+  full_name='thingspect.api.ListKeysResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='keys', full_name='thingspect.api.ListKeysResponse.keys', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='next_page_token', full_name='thingspect.api.ListKeysResponse.next_page_token', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='total_size', full_name='thingspect.api.ListKeysResponse.total_size', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=860,
+  serialized_end=958,
 )
 
 _LOGINRESPONSE.fields_by_name['expires_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_KEY.fields_by_name['role'].enum_type = common_dot_role__pb2._ROLE
+_KEY.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_CREATEKEYREQUEST.fields_by_name['key'].message_type = _KEY
+_CREATEKEYRESPONSE.fields_by_name['key'].message_type = _KEY
+_LISTKEYSRESPONSE.fields_by_name['keys'].message_type = _KEY
 DESCRIPTOR.message_types_by_name['LoginRequest'] = _LOGINREQUEST
 DESCRIPTOR.message_types_by_name['LoginResponse'] = _LOGINRESPONSE
+DESCRIPTOR.message_types_by_name['Key'] = _KEY
+DESCRIPTOR.message_types_by_name['CreateKeyRequest'] = _CREATEKEYREQUEST
+DESCRIPTOR.message_types_by_name['CreateKeyResponse'] = _CREATEKEYRESPONSE
+DESCRIPTOR.message_types_by_name['DeleteKeyRequest'] = _DELETEKEYREQUEST
+DESCRIPTOR.message_types_by_name['ListKeysRequest'] = _LISTKEYSREQUEST
+DESCRIPTOR.message_types_by_name['ListKeysResponse'] = _LISTKEYSRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 LoginRequest = _reflection.GeneratedProtocolMessageType('LoginRequest', (_message.Message,), {
@@ -133,11 +395,61 @@ LoginResponse = _reflection.GeneratedProtocolMessageType('LoginResponse', (_mess
   })
 _sym_db.RegisterMessage(LoginResponse)
 
+Key = _reflection.GeneratedProtocolMessageType('Key', (_message.Message,), {
+  'DESCRIPTOR' : _KEY,
+  '__module__' : 'api.session_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.Key)
+  })
+_sym_db.RegisterMessage(Key)
+
+CreateKeyRequest = _reflection.GeneratedProtocolMessageType('CreateKeyRequest', (_message.Message,), {
+  'DESCRIPTOR' : _CREATEKEYREQUEST,
+  '__module__' : 'api.session_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.CreateKeyRequest)
+  })
+_sym_db.RegisterMessage(CreateKeyRequest)
+
+CreateKeyResponse = _reflection.GeneratedProtocolMessageType('CreateKeyResponse', (_message.Message,), {
+  'DESCRIPTOR' : _CREATEKEYRESPONSE,
+  '__module__' : 'api.session_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.CreateKeyResponse)
+  })
+_sym_db.RegisterMessage(CreateKeyResponse)
+
+DeleteKeyRequest = _reflection.GeneratedProtocolMessageType('DeleteKeyRequest', (_message.Message,), {
+  'DESCRIPTOR' : _DELETEKEYREQUEST,
+  '__module__' : 'api.session_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.DeleteKeyRequest)
+  })
+_sym_db.RegisterMessage(DeleteKeyRequest)
+
+ListKeysRequest = _reflection.GeneratedProtocolMessageType('ListKeysRequest', (_message.Message,), {
+  'DESCRIPTOR' : _LISTKEYSREQUEST,
+  '__module__' : 'api.session_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.ListKeysRequest)
+  })
+_sym_db.RegisterMessage(ListKeysRequest)
+
+ListKeysResponse = _reflection.GeneratedProtocolMessageType('ListKeysResponse', (_message.Message,), {
+  'DESCRIPTOR' : _LISTKEYSRESPONSE,
+  '__module__' : 'api.session_pb2'
+  # @@protoc_insertion_point(class_scope:thingspect.api.ListKeysResponse)
+  })
+_sym_db.RegisterMessage(ListKeysResponse)
+
 
 DESCRIPTOR._options = None
 _LOGINREQUEST.fields_by_name['email']._options = None
 _LOGINREQUEST.fields_by_name['org_name']._options = None
 _LOGINREQUEST.fields_by_name['password']._options = None
+_KEY.fields_by_name['id']._options = None
+_KEY.fields_by_name['org_id']._options = None
+_KEY.fields_by_name['name']._options = None
+_KEY.fields_by_name['role']._options = None
+_KEY.fields_by_name['created_at']._options = None
+_CREATEKEYREQUEST.fields_by_name['key']._options = None
+_DELETEKEYREQUEST.fields_by_name['id']._options = None
+_LISTKEYSREQUEST.fields_by_name['page_size']._options = None
 
 _SESSIONSERVICE = _descriptor.ServiceDescriptor(
   name='SessionService',
@@ -146,8 +458,8 @@ _SESSIONSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=343,
-  serialized_end=465,
+  serialized_start=961,
+  serialized_end=1507,
   methods=[
   _descriptor.MethodDescriptor(
     name='Login',
@@ -157,6 +469,36 @@ _SESSIONSERVICE = _descriptor.ServiceDescriptor(
     input_type=_LOGINREQUEST,
     output_type=_LOGINRESPONSE,
     serialized_options=b'\202\323\344\223\002\027\"\022/v1/sessions/login:\001*\222A\002b\000',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='CreateKey',
+    full_name='thingspect.api.SessionService.CreateKey',
+    index=1,
+    containing_service=None,
+    input_type=_CREATEKEYREQUEST,
+    output_type=_CREATEKEYRESPONSE,
+    serialized_options=b'\202\323\344\223\002\030\"\021/v1/sessions/keys:\003key\222A:J8\n\003201\0221\n\026A successful response.\022\027\n\025\032\023.thingspect.api.Key',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='DeleteKey',
+    full_name='thingspect.api.SessionService.DeleteKey',
+    index=2,
+    containing_service=None,
+    input_type=_DELETEKEYREQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    serialized_options=b'\202\323\344\223\002\030*\026/v1/sessions/keys/{id}\222A#J!\n\003204\022\032\n\026A successful response.\022\000',
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='ListKeys',
+    full_name='thingspect.api.SessionService.ListKeys',
+    index=3,
+    containing_service=None,
+    input_type=_LISTKEYSREQUEST,
+    output_type=_LISTKEYSRESPONSE,
+    serialized_options=b'\202\323\344\223\002\023\022\021/v1/sessions/keys',
     create_key=_descriptor._internal_create_key,
   ),
 ])

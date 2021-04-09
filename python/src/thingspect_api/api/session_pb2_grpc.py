@@ -3,6 +3,7 @@
 import grpc
 
 from api import session_pb2 as api_dot_session__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
 class SessionServiceStub(object):
@@ -20,6 +21,21 @@ class SessionServiceStub(object):
                 request_serializer=api_dot_session__pb2.LoginRequest.SerializeToString,
                 response_deserializer=api_dot_session__pb2.LoginResponse.FromString,
                 )
+        self.CreateKey = channel.unary_unary(
+                '/thingspect.api.SessionService/CreateKey',
+                request_serializer=api_dot_session__pb2.CreateKeyRequest.SerializeToString,
+                response_deserializer=api_dot_session__pb2.CreateKeyResponse.FromString,
+                )
+        self.DeleteKey = channel.unary_unary(
+                '/thingspect.api.SessionService/DeleteKey',
+                request_serializer=api_dot_session__pb2.DeleteKeyRequest.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
+        self.ListKeys = channel.unary_unary(
+                '/thingspect.api.SessionService/ListKeys',
+                request_serializer=api_dot_session__pb2.ListKeysRequest.SerializeToString,
+                response_deserializer=api_dot_session__pb2.ListKeysResponse.FromString,
+                )
 
 
 class SessionServiceServicer(object):
@@ -33,6 +49,27 @@ class SessionServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def CreateKey(self, request, context):
+        """Create an API key.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def DeleteKey(self, request, context):
+        """Delete an API key by ID.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ListKeys(self, request, context):
+        """List all API keys.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_SessionServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -40,6 +77,21 @@ def add_SessionServiceServicer_to_server(servicer, server):
                     servicer.Login,
                     request_deserializer=api_dot_session__pb2.LoginRequest.FromString,
                     response_serializer=api_dot_session__pb2.LoginResponse.SerializeToString,
+            ),
+            'CreateKey': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateKey,
+                    request_deserializer=api_dot_session__pb2.CreateKeyRequest.FromString,
+                    response_serializer=api_dot_session__pb2.CreateKeyResponse.SerializeToString,
+            ),
+            'DeleteKey': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteKey,
+                    request_deserializer=api_dot_session__pb2.DeleteKeyRequest.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ),
+            'ListKeys': grpc.unary_unary_rpc_method_handler(
+                    servicer.ListKeys,
+                    request_deserializer=api_dot_session__pb2.ListKeysRequest.FromString,
+                    response_serializer=api_dot_session__pb2.ListKeysResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -66,5 +118,56 @@ class SessionService(object):
         return grpc.experimental.unary_unary(request, target, '/thingspect.api.SessionService/Login',
             api_dot_session__pb2.LoginRequest.SerializeToString,
             api_dot_session__pb2.LoginResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def CreateKey(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.SessionService/CreateKey',
+            api_dot_session__pb2.CreateKeyRequest.SerializeToString,
+            api_dot_session__pb2.CreateKeyResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def DeleteKey(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.SessionService/DeleteKey',
+            api_dot_session__pb2.DeleteKeyRequest.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def ListKeys(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/thingspect.api.SessionService/ListKeys',
+            api_dot_session__pb2.ListKeysRequest.SerializeToString,
+            api_dot_session__pb2.ListKeysResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
