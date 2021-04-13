@@ -95,29 +95,32 @@ message User {
   // Organization ID (UUID).
   string org_id = 2 [json_name = "orgID", (google.api.field_behavior) = OUTPUT_ONLY];
 
+  // User name.
+  string name = 3 [(validate.rules).string = {min_len: 5, max_len: 80}];
+
   // User email.
-  string email = 3 [(validate.rules).string.email = true];
+  string email = 4 [(validate.rules).string.email = true];
 
   // User phone number. If specified, must be in valid [E.164](https://www.twilio.com/docs/glossary/what-e164) format.
-  string phone = 4 [(validate.rules).string.max_len = 16];
+  string phone = 5 [(validate.rules).string.max_len = 16];
 
   // User role.
-  common.Role role = 5 [(validate.rules).enum = {in: [3, 6, 9, 12, 15]}];
+  common.Role role = 6 [(validate.rules).enum = {in: [3, 6, 9, 12, 15]}];
 
   // User status.
-  common.Status status = 6 [(validate.rules).enum = {in: [3, 6]}];
+  common.Status status = 7 [(validate.rules).enum = {in: [3, 6]}];
 
   // User tags. Nested tags should be delimited by '/'.
-  repeated string tags = 7 [(validate.rules).repeated.unique = true, (validate.rules).repeated.items.string.max_len = 255];
+  repeated string tags = 8 [(validate.rules).repeated.unique = true, (validate.rules).repeated.items.string.max_len = 255];
 
   // Mobile application user key.
-  string app_key = 8 [(validate.rules).string.max_len = 80];
+  string app_key = 9 [(validate.rules).string.max_len = 80];
 
   // User creation timestamp.
-  google.protobuf.Timestamp created_at = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp created_at = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
 
   // User modification timestamp.
-  google.protobuf.Timestamp updated_at = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
+  google.protobuf.Timestamp updated_at = 11 [(google.api.field_behavior) = OUTPUT_ONLY];
 }
 
 // CreateUserRequest is sent to create a user.
