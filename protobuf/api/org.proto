@@ -69,7 +69,7 @@ service OrgService {
     };
   }
 
-  // List all orgs.
+  // List all organizations.
   rpc ListOrgs(ListOrgsRequest) returns (ListOrgsResponse) {
     option (google.api.http) = {
       get: "/v1/organizations"
@@ -142,6 +142,6 @@ message ListOrgsResponse {
   // Pagination token used to retrieve the next page of results. Not returned for the last page.
   string next_page_token = 2;
 
-  // Total number of orgs available.
+  // Total number of organizations available.
   int32 total_size = 3;
 }

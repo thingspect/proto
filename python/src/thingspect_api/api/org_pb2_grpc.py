@@ -76,7 +76,7 @@ class OrgServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ListOrgs(self, request, context):
-        """List all orgs.
+        """List all organizations.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

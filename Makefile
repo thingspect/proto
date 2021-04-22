@@ -11,3 +11,4 @@ go:
 clean:
 	find . -name '*.pb*.go' -type f|xargs rm -v
 	find . -name '*_pb2*.py' -type f|xargs rm -v
+	rm -fv openapi/atlas.swagger.json
