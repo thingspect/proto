@@ -15,7 +15,7 @@ import "validate/validate.proto";
 
 option go_package = "github.com/thingspect/api/go/api";
 
-// RuleAlarmService contains functions to query and modify rules.
+// RuleAlarmService contains functions to query and modify rules and alarms.
 service RuleAlarmService {
   // Create a rule. Rules define how events are generated.
   rpc CreateRule(CreateRuleRequest) returns (common.Rule) {
@@ -226,7 +226,7 @@ message TestRuleResponse {
   bool result = 1;
 }
 
-// AlarmType represents the type of alarm.
+// AlarmType represents the type of an alarm.
 enum AlarmType {
   // Alarm type is not specified.
   ALARM_TYPE_UNSPECIFIED = 0;
