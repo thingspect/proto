@@ -8,7 +8,7 @@ from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
 class RuleAlarmServiceStub(object):
-    """RuleAlarmService contains functions to query and modify rules.
+    """RuleAlarmService contains functions to query and modify rules and alarms.
     """
 
     def __init__(self, channel):
@@ -80,7 +80,7 @@ class RuleAlarmServiceStub(object):
 
 
 class RuleAlarmServiceServicer(object):
-    """RuleAlarmService contains functions to query and modify rules.
+    """RuleAlarmService contains functions to query and modify rules and alarms.
     """
 
     def CreateRule(self, request, context):
@@ -238,7 +238,7 @@ def add_RuleAlarmServiceServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class RuleAlarmService(object):
-    """RuleAlarmService contains functions to query and modify rules.
+    """RuleAlarmService contains functions to query and modify rules and alarms.
     """
 
     @staticmethod
