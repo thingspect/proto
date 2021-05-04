@@ -27,7 +27,8 @@ pip install thingspect-api
 ## Building
 
 These instructions require
-[Docker](https://docs.docker.com/get-started/overview/).
+[Docker](https://docs.docker.com/get-started/overview/) and
+[Docker Compose](https://docs.docker.com/compose/) to be installed.
 
 ```
 make
