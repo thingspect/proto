@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z#github.com/thingspect/api/go/common',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11\x63ommon/role.proto\x12\x11thingspect.common*\\\n\x04Role\x12\x14\n\x10ROLE_UNSPECIFIED\x10\x00\x12\x0b\n\x07\x43ONTACT\x10\x03\x12\n\n\x06VIEWER\x10\x06\x12\x0b\n\x07\x42UILDER\x10\t\x12\t\n\x05\x41\x44MIN\x10\x0c\x12\r\n\tSYS_ADMIN\x10\x0f\x42%Z#github.com/thingspect/api/go/commonb\x06proto3'
+  serialized_pb=b'\n\x11\x63ommon/role.proto\x12\x11thingspect.common*k\n\x04Role\x12\x14\n\x10ROLE_UNSPECIFIED\x10\x00\x12\x0b\n\x07\x43ONTACT\x10\x03\x12\n\n\x06VIEWER\x10\x06\x12\r\n\tPUBLISHER\x10\x07\x12\x0b\n\x07\x42UILDER\x10\t\x12\t\n\x05\x41\x44MIN\x10\x0c\x12\r\n\tSYS_ADMIN\x10\x0f\x42%Z#github.com/thingspect/api/go/commonb\x06proto3'
 )
 
 _ROLE = _descriptor.EnumDescriptor(
@@ -46,17 +46,22 @@ _ROLE = _descriptor.EnumDescriptor(
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='BUILDER', index=3, number=9,
+      name='PUBLISHER', index=3, number=7,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='ADMIN', index=4, number=12,
+      name='BUILDER', index=4, number=9,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='SYS_ADMIN', index=5, number=15,
+      name='ADMIN', index=5, number=12,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='SYS_ADMIN', index=6, number=15,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
@@ -64,7 +69,7 @@ _ROLE = _descriptor.EnumDescriptor(
   containing_type=None,
   serialized_options=None,
   serialized_start=40,
-  serialized_end=132,
+  serialized_end=147,
 )
 _sym_db.RegisterEnumDescriptor(_ROLE)
 
@@ -72,6 +77,7 @@ Role = enum_type_wrapper.EnumTypeWrapper(_ROLE)
 ROLE_UNSPECIFIED = 0
 CONTACT = 3
 VIEWER = 6
+PUBLISHER = 7
 BUILDER = 9
 ADMIN = 12
 SYS_ADMIN = 15
