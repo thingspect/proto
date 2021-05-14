@@ -14,6 +14,9 @@ enum Role {
   // Viewers can only read resources in their organization, but can update their own user.
   VIEWER = 6;
 
+  // Publishers can publish data points, but otherwise can only read resources in their organization.
+  PUBLISHER = 7;
+
   // Builders can read and modify resources in their organization, but can only update their own user.
   BUILDER = 9;
 

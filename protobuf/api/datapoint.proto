@@ -45,7 +45,7 @@ service DataPointService {
   }
 }
 
-// PublishDataPointsRequest is sent to publish data points.
+// PublishDataPointsRequest is sent to publish data points. The publisher role is recommended for programmatic use of this endpoint.
 message PublishDataPointsRequest {
   // Data point array to publish.
   repeated common.DataPoint points = 1 [(validate.rules).repeated.min_items = 1, (google.api.field_behavior) = REQUIRED];
