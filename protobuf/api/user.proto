@@ -79,7 +79,7 @@ service UserService {
     };
   }
 
-  // List all users.
+  // List users.
   rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {
     option (google.api.http) = {
       get: "/v1/users"
@@ -173,7 +173,7 @@ message ListUsersRequest {
 
 // ListUsersResponse is sent in response to a user list.
 message ListUsersResponse {
-  // User array, ordered by ascending created_at timestamp.
+  // User array, ordered by ascending created_at timestamp. The completeness of the array will depend on whether the request was made by an admin user, non-admin user, or API key.
   repeated User users = 1;
 
   // Pagination token used to retrieve the next page of results. Not returned for the last page.

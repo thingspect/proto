@@ -90,7 +90,7 @@ message LoginResponse {
   google.protobuf.Timestamp expires_at = 2;
 }
 
-// Key represents an API key as stored in the database.
+// Key represents an API key as stored in the database. API keys are not tied to a specific user.
 message Key {
   // Key ID (UUID).
   string id = 1 [(google.api.field_behavior) = OUTPUT_ONLY];

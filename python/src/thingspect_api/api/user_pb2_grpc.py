@@ -88,7 +88,7 @@ class UserServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ListUsers(self, request, context):
-        """List all users.
+        """List users.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
