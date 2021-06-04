@@ -7,7 +7,7 @@ option go_package = "github.com/thingspect/api/go/api";
 
 // TagService contains functions to query tags.
 service TagService {
-  // List all tags.
+  // List all tags. Tags are applied to devices and users.
   rpc ListTags(ListTagsRequest) returns (ListTagsResponse) {
     option (google.api.http) = {
       get: "/v1/tags"

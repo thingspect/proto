@@ -32,14 +32,14 @@ class EventServiceServicer(object):
     """
 
     def ListEvents(self, request, context):
-        """List all events for a device in a [end, start) time range, in descending timestamp order.
+        """List all events for a device in a [end, start) time range, in descending timestamp order. Events are generated based on rules.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def LatestEvents(self, request, context):
-        """List the latest event for each of an organization's devices.
+        """List the latest event for each of an organization's devices. Events are generated based on rules.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

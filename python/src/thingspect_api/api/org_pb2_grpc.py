@@ -48,35 +48,35 @@ class OrgServiceServicer(object):
     """
 
     def CreateOrg(self, request, context):
-        """Create an organization.
+        """Create an organization. An organization is the top level resource and contains users, devices, rules, and all derived resources.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetOrg(self, request, context):
-        """Get an organization by ID.
+        """Get an organization by ID. An organization is the top level resource and contains users, devices, rules, and all derived resources.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def UpdateOrg(self, request, context):
-        """Update an organization.
+        """Update an organization. An organization is the top level resource and contains users, devices, rules, and all derived resources.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def DeleteOrg(self, request, context):
-        """Delete an organization by ID.
+        """Delete an organization by ID. An organization is the top level resource and contains users, devices, rules, and all derived resources.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListOrgs(self, request, context):
-        """List all organizations.
+        """List all organizations. An organization is the top level resource and contains users, devices, rules, and all derived resources.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

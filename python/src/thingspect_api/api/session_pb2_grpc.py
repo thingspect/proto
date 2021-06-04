@@ -43,28 +43,28 @@ class SessionServiceServicer(object):
     """
 
     def Login(self, request, context):
-        """Log in a user.
+        """Log in a user. Login tokens are time-limited and accompanied by an expiration.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateKey(self, request, context):
-        """Create an API key.
+        """Create an API key. API keys are persistent and do not expire until revoked.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def DeleteKey(self, request, context):
-        """Delete an API key by ID.
+        """Delete an API key by ID. API keys are persistent and do not expire until revoked.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListKeys(self, request, context):
-        """List all API keys.
+        """List all API keys. API keys are persistent and do not expire until revoked.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

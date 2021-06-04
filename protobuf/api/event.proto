@@ -9,14 +9,14 @@ option go_package = "github.com/thingspect/api/go/api";
 
 // EventService contains functions to query events.
 service EventService {
-  // List all events for a device in a [end, start) time range, in descending timestamp order.
+  // List all events for a device in a [end, start) time range, in descending timestamp order. Events are generated based on rules.
   rpc ListEvents(ListEventsRequest) returns (ListEventsResponse) {
     option (google.api.http) = {
       get: "/v1/events"
     };
   }
 
-  // List the latest event for each of an organization's devices.
+  // List the latest event for each of an organization's devices. Events are generated based on rules.
   rpc LatestEvents(LatestEventsRequest) returns (LatestEventsResponse) {
     option (google.api.http) = {
       get: "/v1/events/latest"
