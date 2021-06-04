@@ -15,7 +15,7 @@ option go_package = "github.com/thingspect/api/go/api";
 
 // UserService contains functions to query and modify users.
 service UserService {
-  // Create a user.
+  // Create a user. Users can log in to and interact with the Atlas API and Thingspect website, based on the limits of their role.
   rpc CreateUser(CreateUserRequest) returns (User) {
     option (google.api.http) = {
       post: "/v1/users"
@@ -36,14 +36,14 @@ service UserService {
     };
   }
 
-  // Get a user by ID.
+  // Get a user by ID. Users can log in to and interact with the Atlas API and Thingspect website, based on the limits of their role.
   rpc GetUser(GetUserRequest) returns (User) {
     option (google.api.http) = {
       get: "/v1/users/{id}"
     };
   }
 
-  // Update a user.
+  // Update a user. Users can log in to and interact with the Atlas API and Thingspect website, based on the limits of their role.
   rpc UpdateUser(UpdateUserRequest) returns (User) {
     option (google.api.http) = {
       put: "/v1/users/{user.id}"
@@ -55,7 +55,7 @@ service UserService {
     };
   }
 
-  // Update a user's password.
+  // Update a user's password. Passwords are checked against NIST password guidelines.
   rpc UpdateUserPassword(UpdateUserPasswordRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       put: "/v1/users/{id}/password"
@@ -63,7 +63,7 @@ service UserService {
     };
   }
 
-  // Delete a user by ID.
+  // Delete a user by ID. Users can log in to and interact with the Atlas API and Thingspect website, based on the limits of their role.
   rpc DeleteUser(DeleteUserRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       delete: "/v1/users/{id}"
@@ -79,7 +79,7 @@ service UserService {
     };
   }
 
-  // List users.
+  // List users. Users can log in to and interact with the Atlas API and Thingspect website, based on the limits of their role.
   rpc ListUsers(ListUsersRequest) returns (ListUsersResponse) {
     option (google.api.http) = {
       get: "/v1/users"

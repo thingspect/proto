@@ -53,42 +53,42 @@ class UserServiceServicer(object):
     """
 
     def CreateUser(self, request, context):
-        """Create a user.
+        """Create a user. Users can log in to and interact with the Atlas API and Thingspect website, based on the limits of their role.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetUser(self, request, context):
-        """Get a user by ID.
+        """Get a user by ID. Users can log in to and interact with the Atlas API and Thingspect website, based on the limits of their role.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def UpdateUser(self, request, context):
-        """Update a user.
+        """Update a user. Users can log in to and interact with the Atlas API and Thingspect website, based on the limits of their role.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def UpdateUserPassword(self, request, context):
-        """Update a user's password.
+        """Update a user's password. Passwords are checked against NIST password guidelines.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def DeleteUser(self, request, context):
-        """Delete a user by ID.
+        """Delete a user by ID. Users can log in to and interact with the Atlas API and Thingspect website, based on the limits of their role.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListUsers(self, request, context):
-        """List users.
+        """List users. Users can log in to and interact with the Atlas API and Thingspect website, based on the limits of their role.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

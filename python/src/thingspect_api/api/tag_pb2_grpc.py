@@ -27,7 +27,7 @@ class TagServiceServicer(object):
     """
 
     def ListTags(self, request, context):
-        """List all tags.
+        """List all tags. Tags are applied to devices and users.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

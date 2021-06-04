@@ -13,7 +13,7 @@ option go_package = "github.com/thingspect/api/go/api";
 
 // SessionService contains functions to create sessions and keys.
 service SessionService {
-  // Log in a user.
+  // Log in a user. Login tokens are time-limited and accompanied by an expiration.
   rpc Login(LoginRequest) returns (LoginResponse) {
     option (google.api.http) = {
       post: "/v1/sessions/login"
@@ -24,7 +24,7 @@ service SessionService {
     };
   }
 
-  // Create an API key.
+  // Create an API key. API keys are persistent and do not expire until revoked.
   rpc CreateKey(CreateKeyRequest) returns (CreateKeyResponse) {
     option (google.api.http) = {
       post: "/v1/sessions/keys"
@@ -37,7 +37,7 @@ service SessionService {
           description: "A successful response."
           schema: {
             json_schema: {
-              ref: ".thingspect.api.Key"
+              ref: ".thingspect.api.CreateKeyResponse"
             }
           }
         }
@@ -45,7 +45,7 @@ service SessionService {
     };
   }
 
-  // Delete an API key by ID.
+  // Delete an API key by ID. API keys are persistent and do not expire until revoked.
   rpc DeleteKey(DeleteKeyRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       delete: "/v1/sessions/keys/{id}"
@@ -61,7 +61,7 @@ service SessionService {
     };
   }
 
-  // List all API keys.
+  // List all API keys. API keys are persistent and do not expire until revoked.
   rpc ListKeys(ListKeysRequest) returns (ListKeysResponse) {
     option (google.api.http) = {
       get: "/v1/sessions/keys"
