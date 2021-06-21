@@ -13,3 +13,5 @@ Documentation: https://pkg.go.dev/github.com/thingspect/api/go
 ```
 go get -u github.com/thingspect/api/go
 ```
+
+Example gRPC code: `go/example/`
