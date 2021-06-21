@@ -3,11 +3,11 @@
 generate: deps common mqtt api
 
 deps:
-	pip install grpcio-tools
+	gem install grpc-tools
 
 common:
-	python -m grpc_tools.protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
-	--python_out=. \
+	grpc_tools_ruby_protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
+	--ruby_out=. \
 	common/datapoint.proto \
 	common/decoder.proto \
 	common/device.proto \
@@ -16,13 +16,13 @@ common:
 	common/status.proto
 
 mqtt:
-	python -m grpc_tools.protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
-	--python_out=. \
+	grpc_tools_ruby_protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
+	--ruby_out=. \
 	mqtt/payload.proto
 
 api:
-	python -m grpc_tools.protoc -I=../protobuf -I=/tmp/googleapis \
-	-I=/tmp/grpc-gateway -I=/tmp/pgv --python_out=. --grpc_python_out=. \
+	grpc_tools_ruby_protoc -I=../protobuf -I=/tmp/googleapis \
+	-I=/tmp/grpc-gateway -I=/tmp/pgv --ruby_out=. --grpc_out=. \
 	api/alert.proto \
 	api/datapoint.proto \
 	api/device.proto \

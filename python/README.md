@@ -8,34 +8,7 @@ on the Google [API Design Guide](https://cloud.google.com/apis/design).
 
 ## Getting Started
 
-### Go
-
-Documentation: https://pkg.go.dev/github.com/thingspect/api/go
-
-```
-go get -u github.com/thingspect/api/go
-```
-
-### Python
-
 The Python package can be copied locally from this repository or regenerated
 using the Protobuf definitions. See the
 [gRPC Python quick start](https://grpc.io/docs/languages/python/quickstart/) for
 more information.
-
-### Ruby
-
-The Ruby package can be copied locally from this repository or regenerated using
-the Protobuf definitions. See the
-[gRPC Ruby quick start](https://grpc.io/docs/languages/ruby/quickstart/) for
-more information.
-
-## Building
-
-These instructions require
-[Docker](https://docs.docker.com/get-started/overview/) and
-[Docker Compose](https://docs.docker.com/compose/) to be installed.
-
-```
-make
-```

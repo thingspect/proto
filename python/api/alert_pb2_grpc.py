@@ -27,7 +27,7 @@ class AlertServiceServicer(object):
     """
 
     def ListAlerts(self, request, context):
-        """List all alerts for a device, alarm, and/or user in a [end, start) time range, in descending timestamp order. Alerts are generated based on alarms.
+        """List all alerts for a device, alarm, and/or user in an [end, start) time range, in descending timestamp order. Alerts are generated based on alarms.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

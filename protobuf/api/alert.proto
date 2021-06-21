@@ -9,7 +9,7 @@ option go_package = "github.com/thingspect/api/go/api";
 
 // AlertService contains functions to query alerts.
 service AlertService {
-  // List all alerts for a device, alarm, and/or user in a [end, start) time range, in descending timestamp order. Alerts are generated based on alarms.
+  // List all alerts for a device, alarm, and/or user in an [end, start) time range, in descending timestamp order. Alerts are generated based on alarms.
   rpc ListAlerts(ListAlertsRequest) returns (ListAlertsResponse) {
     option (google.api.http) = {
       get: "/v1/alerts"
@@ -56,7 +56,7 @@ message Alert {
   string trace_id = 8;
 }
 
-// ListAlertsRequest is sent to list device, alarm, and/or user alerts in a [end, start) time range, in descending timestamp order.
+// ListAlertsRequest is sent to list device, alarm, and/or user alerts in an [end, start) time range, in descending timestamp order.
 message ListAlertsRequest {
   // Device identifier.
   oneof id_oneof {
