@@ -150,7 +150,7 @@ message UpdateUserPasswordRequest {
   string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = OUTPUT_ONLY];
 
   // User password to update.
-  string password = 2 [(validate.rules).string.min_len = 10, (google.api.field_behavior) = REQUIRED];
+  string password = 2 [(validate.rules).string = {min_len: 10, max_len: 100}, (google.api.field_behavior) = REQUIRED];
 }
 
 // DeleteUserRequest is sent to delete a user.
