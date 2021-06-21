@@ -20,3 +20,5 @@
 
 ### Thingspect ###
 /protobuf/api/openapi.proto
+/go/example/login/login
+/go/example/publish/publish
