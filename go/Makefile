@@ -51,7 +51,7 @@ mod:
 openapi:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/grpc-gateway -I=/tmp/pgv \
 	--openapiv2_out=../openapi \
-	--openapiv2_opt=allow_merge=true,merge_file_name=atlas \
+	--openapiv2_opt=allow_merge=true,merge_file_name=atlas,openapi_naming_strategy=simple \
 	api/openapi.proto \
 	api/alert.proto \
 	api/datapoint.proto \
