@@ -11,8 +11,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("common/device.proto", :syntax => :proto3) do
     add_message "thingspect.common.Device" do
       optional :id, :string, 1
-      optional :org_id, :string, 2
-      optional :uniq_id, :string, 3
+      optional :org_id, :string, 2, json_name: "orgID"
+      optional :uniq_id, :string, 3, json_name: "uniqID"
       optional :name, :string, 4
       optional :status, :enum, 5, "thingspect.common.Status"
       optional :token, :string, 6

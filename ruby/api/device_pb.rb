@@ -17,8 +17,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "thingspect.api.CreateDeviceLoRaWANRequest" do
       optional :id, :string, 1
       oneof :type_oneof do
-        optional :gateway_lorawan_type, :message, 2, "thingspect.api.CreateDeviceLoRaWANRequest.GatewayLoRaWANType"
-        optional :device_lorawan_type, :message, 3, "thingspect.api.CreateDeviceLoRaWANRequest.DeviceLoRaWANType"
+        optional :gateway_lorawan_type, :message, 2, "thingspect.api.CreateDeviceLoRaWANRequest.GatewayLoRaWANType", json_name: "gatewayLoRaWANType"
+        optional :device_lorawan_type, :message, 3, "thingspect.api.CreateDeviceLoRaWANRequest.DeviceLoRaWANType", json_name: "deviceLoRaWANType"
       end
     end
     add_message "thingspect.api.CreateDeviceLoRaWANRequest.GatewayLoRaWANType" do

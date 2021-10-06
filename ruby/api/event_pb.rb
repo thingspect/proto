@@ -8,26 +8,26 @@ require 'google/api/annotations_pb'
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("api/event.proto", :syntax => :proto3) do
     add_message "thingspect.api.Event" do
-      optional :org_id, :string, 1
-      optional :uniq_id, :string, 2
-      optional :rule_id, :string, 3
+      optional :org_id, :string, 1, json_name: "orgID"
+      optional :uniq_id, :string, 2, json_name: "uniqID"
+      optional :rule_id, :string, 3, json_name: "ruleID"
       optional :created_at, :message, 4, "google.protobuf.Timestamp"
       optional :trace_id, :string, 5
     end
     add_message "thingspect.api.ListEventsRequest" do
-      optional :rule_id, :string, 3
+      optional :rule_id, :string, 3, json_name: "ruleID"
       optional :end_time, :message, 4, "google.protobuf.Timestamp"
       optional :start_time, :message, 5, "google.protobuf.Timestamp"
       oneof :id_oneof do
-        optional :uniq_id, :string, 1
-        optional :device_id, :string, 2
+        optional :uniq_id, :string, 1, json_name: "uniqID"
+        optional :device_id, :string, 2, json_name: "deviceID"
       end
     end
     add_message "thingspect.api.ListEventsResponse" do
       repeated :events, :message, 1, "thingspect.api.Event"
     end
     add_message "thingspect.api.LatestEventsRequest" do
-      optional :rule_id, :string, 1
+      optional :rule_id, :string, 1, json_name: "ruleID"
     end
     add_message "thingspect.api.LatestEventsResponse" do
       repeated :events, :message, 1, "thingspect.api.Event"

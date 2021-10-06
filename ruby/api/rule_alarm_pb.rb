@@ -46,8 +46,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "thingspect.api.Alarm" do
       optional :id, :string, 1
-      optional :org_id, :string, 2
-      optional :rule_id, :string, 3
+      optional :org_id, :string, 2, json_name: "orgID"
+      optional :rule_id, :string, 3, json_name: "ruleID"
       optional :name, :string, 4
       optional :status, :enum, 5, "thingspect.common.Status"
       optional :type, :enum, 6, "thingspect.api.AlarmType"
@@ -63,7 +63,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "thingspect.api.GetAlarmRequest" do
       optional :id, :string, 1
-      optional :rule_id, :string, 2
+      optional :rule_id, :string, 2, json_name: "ruleID"
     end
     add_message "thingspect.api.UpdateAlarmRequest" do
       optional :alarm, :message, 1, "thingspect.api.Alarm"
@@ -71,12 +71,12 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "thingspect.api.DeleteAlarmRequest" do
       optional :id, :string, 1
-      optional :rule_id, :string, 2
+      optional :rule_id, :string, 2, json_name: "ruleID"
     end
     add_message "thingspect.api.ListAlarmsRequest" do
       optional :page_size, :int32, 1
       optional :page_token, :string, 2
-      optional :rule_id, :string, 3
+      optional :rule_id, :string, 3, json_name: "ruleID"
     end
     add_message "thingspect.api.ListAlarmsResponse" do
       repeated :alarms, :message, 1, "thingspect.api.Alarm"

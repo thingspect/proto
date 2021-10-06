@@ -8,23 +8,23 @@ require 'google/api/annotations_pb'
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("api/alert.proto", :syntax => :proto3) do
     add_message "thingspect.api.Alert" do
-      optional :org_id, :string, 1
-      optional :uniq_id, :string, 2
-      optional :alarm_id, :string, 3
-      optional :user_id, :string, 4
+      optional :org_id, :string, 1, json_name: "orgID"
+      optional :uniq_id, :string, 2, json_name: "uniqID"
+      optional :alarm_id, :string, 3, json_name: "alarmID"
+      optional :user_id, :string, 4, json_name: "userID"
       optional :status, :enum, 5, "thingspect.api.AlertStatus"
       optional :error, :string, 6
       optional :created_at, :message, 7, "google.protobuf.Timestamp"
       optional :trace_id, :string, 8
     end
     add_message "thingspect.api.ListAlertsRequest" do
-      optional :alarm_id, :string, 3
-      optional :user_id, :string, 4
+      optional :alarm_id, :string, 3, json_name: "alarmID"
+      optional :user_id, :string, 4, json_name: "userID"
       optional :end_time, :message, 5, "google.protobuf.Timestamp"
       optional :start_time, :message, 6, "google.protobuf.Timestamp"
       oneof :id_oneof do
-        optional :uniq_id, :string, 1
-        optional :device_id, :string, 2
+        optional :uniq_id, :string, 1, json_name: "uniqID"
+        optional :device_id, :string, 2, json_name: "deviceID"
       end
     end
     add_message "thingspect.api.ListAlertsResponse" do

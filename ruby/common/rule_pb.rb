@@ -10,7 +10,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("common/rule.proto", :syntax => :proto3) do
     add_message "thingspect.common.Rule" do
       optional :id, :string, 1
-      optional :org_id, :string, 2
+      optional :org_id, :string, 2, json_name: "orgID"
       optional :name, :string, 3
       optional :status, :enum, 4, "thingspect.common.Status"
       optional :device_tag, :string, 5
