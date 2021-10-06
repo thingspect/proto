@@ -19,8 +19,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :end_time, :message, 4, "google.protobuf.Timestamp"
       optional :start_time, :message, 5, "google.protobuf.Timestamp"
       oneof :id_oneof do
-        optional :uniq_id, :string, 1
-        optional :device_id, :string, 2
+        optional :uniq_id, :string, 1, json_name: "uniqID"
+        optional :device_id, :string, 2, json_name: "deviceID"
       end
     end
     add_message "thingspect.api.ListDataPointsResponse" do
@@ -28,8 +28,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "thingspect.api.LatestDataPointsRequest" do
       oneof :id_oneof do
-        optional :uniq_id, :string, 1
-        optional :device_id, :string, 2
+        optional :uniq_id, :string, 1, json_name: "uniqID"
+        optional :device_id, :string, 2, json_name: "deviceID"
       end
     end
     add_message "thingspect.api.LatestDataPointsResponse" do

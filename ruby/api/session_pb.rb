@@ -22,7 +22,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "thingspect.api.Key" do
       optional :id, :string, 1
-      optional :org_id, :string, 2
+      optional :org_id, :string, 2, json_name: "orgID"
       optional :name, :string, 3
       optional :role, :enum, 4, "thingspect.common.Role"
       optional :created_at, :message, 5, "google.protobuf.Timestamp"

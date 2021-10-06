@@ -8,7 +8,7 @@ require 'google/api/field_behavior_pb'
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("common/datapoint.proto", :syntax => :proto3) do
     add_message "thingspect.common.DataPoint" do
-      optional :uniq_id, :string, 1
+      optional :uniq_id, :string, 1, json_name: "uniqID"
       optional :attr, :string, 2
       optional :ts, :message, 7, "google.protobuf.Timestamp"
       optional :token, :string, 8
