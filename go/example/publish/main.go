@@ -97,7 +97,7 @@ func main() {
 	sessCli = api.NewSessionServiceClient(loginConn)
 	createKey, err := sessCli.CreateKey(ctx, &api.CreateKeyRequest{
 		Key: &api.Key{
-			Name: flag.Arg(1) + "-example", Role: common.Role_BUILDER,
+			Name: flag.Arg(1) + "-example", Role: api.Role_BUILDER,
 		},
 	})
 	checkErr(err)
@@ -119,9 +119,9 @@ func main() {
 	// Create a device.
 	devCli := api.NewDeviceServiceClient(keyConn)
 	createDevice, err := devCli.CreateDevice(ctx, &api.CreateDeviceRequest{
-		Device: &common.Device{
+		Device: &api.Device{
 			UniqId: flag.Arg(1) + "-example", Name: flag.Arg(1) + " Example",
-			Status: common.Status_ACTIVE, Tags: []string{"example"},
+			Status: api.Status_ACTIVE, Tags: []string{"example"},
 		},
 	})
 	checkErr(err)

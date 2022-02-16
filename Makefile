@@ -1,6 +1,6 @@
 .PHONY: generate version go tag clean
 
-VERSION = 0.1.8
+VERSION = 0.1.9
 
 generate: version
 	docker compose build --no-cache --pull
@@ -20,12 +20,12 @@ tag:
 	git tag -s v$(VERSION) -m "Version $(VERSION)"
 	git tag -s go/v$(VERSION) -m "Version $(VERSION)"
 	git push --tags
+# List may fail if repo is private
 	go list -m github.com/ownmfa/api/go@v$(VERSION)
 
 clean:
 	find . -name '*.pb*.go' -type f|xargs rm -v
 	find . -name '*_pb2*.py' -type f|xargs rm -v
-	find . -name '*_pb.rb' -type f|xargs rm -v
 	rm -fv openapi/atlas.swagger.json
 	rm -fv go/example/login/login
 	rm -fv go/example/publish/publish

@@ -1,8 +1,9 @@
 syntax = "proto3";
 package thingspect.api;
 
-import "common/device.proto";
+import "api/status.proto";
 import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
 import "google/protobuf/field_mask.proto";
 import "google/api/annotations.proto";
 import "google/api/field_behavior.proto";
@@ -14,7 +15,7 @@ option go_package = "github.com/thingspect/api/go/api";
 // DeviceService contains functions to query and modify devices.
 service DeviceService {
   // Create a device. Devices are used to generate data points.
-  rpc CreateDevice(CreateDeviceRequest) returns (common.Device) {
+  rpc CreateDevice(CreateDeviceRequest) returns (api.Device) {
     option (google.api.http) = {
       post: "/v1/devices"
       body: "device"
@@ -26,7 +27,7 @@ service DeviceService {
           description: "A successful response."
           schema: {
             json_schema: {
-              ref: ".thingspect.common.Device"
+              ref: ".thingspect.api.Device"
             }
           }
         }
@@ -52,14 +53,14 @@ service DeviceService {
   }
 
   // Get a device by ID. Devices are used to generate data points.
-  rpc GetDevice(GetDeviceRequest) returns (common.Device) {
+  rpc GetDevice(GetDeviceRequest) returns (api.Device) {
     option (google.api.http) = {
       get: "/v1/devices/{id}"
     };
   }
 
   // Update a device. Devices are used to generate data points.
-  rpc UpdateDevice(UpdateDeviceRequest) returns (common.Device) {
+  rpc UpdateDevice(UpdateDeviceRequest) returns (api.Device) {
     option (google.api.http) = {
       put: "/v1/devices/{device.id}"
       body: "device"
@@ -110,10 +111,58 @@ service DeviceService {
   }
 }
 
+// Decoder represents the data payload decoder for a device.
+enum Decoder {
+  // Payloads will be passed through without decoding. Appropriate for devices that do not use decoders (MQTT, API, etc.).
+  RAW = 0;
+
+  // LoRaWAN gateway. Acts as a pass-through in the absence of device data payloads.
+  GATEWAY = 1;
+
+  // Radio Bridge Door/Window sensor with V1 firmware.
+  RADIO_BRIDGE_DOOR_V1 = 2;
+
+  // Radio Bridge Door/Window sensor with V2 firmware.
+  RADIO_BRIDGE_DOOR_V2 = 3;
+}
+
+// Device represents a device as stored in the database.
+message Device {
+  // Device ID (UUID).
+  string id = 1 [(google.api.field_behavior) = OUTPUT_ONLY];
+
+  // Organization ID (UUID).
+  string org_id = 2 [json_name = "orgID", (google.api.field_behavior) = OUTPUT_ONLY];
+
+  // Device unique ID.
+  string uniq_id = 3 [json_name = "uniqID", (validate.rules).string = {min_len: 5, max_len: 40}];
+
+  // Device name.
+  string name = 4 [(validate.rules).string = {min_len: 5, max_len: 80}];
+
+  // Device status.
+  Status status = 5 [(validate.rules).enum = {in: [3, 6]}];
+
+  // Authentication token (UUID). Will be generated at creation time, but can be updated afterward.
+  string token = 6 [(validate.rules).string = {ignore_empty: true, uuid: true}];
+
+  // Device data payload decoder.
+  Decoder decoder = 7;
+
+  // Device tags. Nested tags should be delimited by '/'.
+  repeated string tags = 8 [(validate.rules).repeated.unique = true, (validate.rules).repeated.items.string.max_len = 255];
+
+  // Device creation timestamp.
+  google.protobuf.Timestamp created_at = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
+
+  // Device modification timestamp.
+  google.protobuf.Timestamp updated_at = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
+}
+
 // CreateDeviceRequest is sent to create a device.
 message CreateDeviceRequest {
   // Device message to create.
-  common.Device device = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+  Device device = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 }
 
 // CreateDeviceLoRaWANRequest is sent to add LoRaWAN configuration to a device.
@@ -151,7 +200,7 @@ message GetDeviceRequest {
 // UpdateDeviceRequest is sent to update a device.
 message UpdateDeviceRequest {
   // Device message to update.
-  common.Device device = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+  Device device = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 
   // Fields to update. Automatically populated by a PATCH request. If not present, a full resource update is performed.
   google.protobuf.FieldMask update_mask = 2;
@@ -184,7 +233,7 @@ message ListDevicesRequest {
 // ListDevicesResponse is sent in response to a device list.
 message ListDevicesResponse {
   // Device array, ordered by ascending created_at timestamp.
-  repeated common.Device devices = 1;
+  repeated Device devices = 1;
 
   // Pagination token used to retrieve the next page of results. Not returned for the last page.
   string next_page_token = 2;

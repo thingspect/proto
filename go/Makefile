@@ -9,20 +9,13 @@ deps:
 	github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@latest
 	go install \
 	github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2@latest
-# Regression in protoc-gen-validate template/go/file.go
-# https://github.com/envoyproxy/protoc-gen-validate/issues/552
-	go install github.com/envoyproxy/protoc-gen-validate@v0.6.2
+	go install github.com/envoyproxy/protoc-gen-validate@latest
 
 common:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
 	--go_out=. --go_opt=paths=source_relative \
 	--validate_out=. --validate_opt=lang=go,paths=source_relative \
-	common/datapoint.proto \
-	common/decoder.proto \
-	common/device.proto \
-	common/role.proto \
-	common/rule.proto \
-	common/status.proto
+	common/datapoint.proto
 
 mqtt:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
@@ -40,8 +33,10 @@ api:
 	api/device.proto \
 	api/event.proto \
 	api/org.proto \
+	api/role.proto \
 	api/rule_alarm.proto \
 	api/session.proto \
+	api/status.proto \
 	api/tag.proto \
 	api/user.proto
 

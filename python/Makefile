@@ -8,12 +8,7 @@ deps:
 common:
 	python -m grpc_tools.protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
 	--python_out=. \
-	common/datapoint.proto \
-	common/decoder.proto \
-	common/device.proto \
-	common/role.proto \
-	common/rule.proto \
-	common/status.proto
+	common/datapoint.proto
 
 mqtt:
 	python -m grpc_tools.protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
@@ -28,7 +23,9 @@ api:
 	api/device.proto \
 	api/event.proto \
 	api/org.proto \
+	api/role.proto \
 	api/rule_alarm.proto \
 	api/session.proto \
+	api/status.proto \
 	api/tag.proto \
 	api/user.proto
