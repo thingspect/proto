@@ -1,7 +1,7 @@
 syntax = "proto3";
-package thingspect.common;
+package thingspect.api;
 
-option go_package = "github.com/thingspect/api/go/common";
+option go_package = "github.com/thingspect/api/go/api";
 
 // Role represents the role of a user.
 enum Role {

@@ -1,8 +1,8 @@
 syntax = "proto3";
 package thingspect.api;
 
-import "common/status.proto";
-import "common/role.proto";
+import "api/role.proto";
+import "api/status.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/field_mask.proto";
@@ -105,10 +105,10 @@ message User {
   string phone = 5 [(validate.rules).string.max_len = 16];
 
   // User role.
-  common.Role role = 6 [(validate.rules).enum = {in: [3, 6, 7, 9, 12, 15]}];
+  Role role = 6 [(validate.rules).enum = {in: [3, 6, 7, 9, 12, 15]}];
 
   // User status.
-  common.Status status = 7 [(validate.rules).enum = {in: [3, 6]}];
+  Status status = 7 [(validate.rules).enum = {in: [3, 6]}];
 
   // User tags. Nested tags should be delimited by '/'.
   repeated string tags = 8 [(validate.rules).repeated.unique = true, (validate.rules).repeated.items.string.max_len = 255];

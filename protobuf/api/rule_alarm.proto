@@ -1,10 +1,9 @@
 syntax = "proto3";
 package thingspect.api;
 
-import "common/rule.proto";
+import "api/device.proto";
+import "api/status.proto";
 import "common/datapoint.proto";
-import "common/status.proto";
-import "common/device.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/field_mask.proto";
@@ -18,7 +17,7 @@ option go_package = "github.com/thingspect/api/go/api";
 // RuleAlarmService contains functions to query and modify rules and alarms.
 service RuleAlarmService {
   // Create a rule. Rules define how events are generated.
-  rpc CreateRule(CreateRuleRequest) returns (common.Rule) {
+  rpc CreateRule(CreateRuleRequest) returns (api.Rule) {
     option (google.api.http) = {
       post: "/v1/rules"
       body: "rule"
@@ -30,7 +29,7 @@ service RuleAlarmService {
           description: "A successful response."
           schema: {
             json_schema: {
-              ref: ".thingspect.common.Rule"
+              ref: ".thingspect.api.Rule"
             }
           }
         }
@@ -60,7 +59,7 @@ service RuleAlarmService {
   }
 
   // Get a rule by ID. Rules define how events are generated.
-  rpc GetRule(GetRuleRequest) returns (common.Rule) {
+  rpc GetRule(GetRuleRequest) returns (api.Rule) {
     option (google.api.http) = {
       get: "/v1/rules/{id}"
     };
@@ -74,7 +73,7 @@ service RuleAlarmService {
   }
 
   // Update a rule. Rules define how events are generated.
-  rpc UpdateRule(UpdateRuleRequest) returns (common.Rule) {
+  rpc UpdateRule(UpdateRuleRequest) returns (api.Rule) {
     option (google.api.http) = {
       put: "/v1/rules/{rule.id}"
       body: "rule"
@@ -163,10 +162,40 @@ service RuleAlarmService {
   }
 }
 
+// Rule represents a rule as stored in the database.
+message Rule {
+  // Rule ID (UUID).
+  string id = 1 [(google.api.field_behavior) = OUTPUT_ONLY];
+
+  // Organization ID (UUID).
+  string org_id = 2 [json_name = "orgID", (google.api.field_behavior) = OUTPUT_ONLY];
+
+  // Rule name.
+  string name = 3 [(validate.rules).string = {min_len: 5, max_len: 80}];
+
+  // Rule status.
+  Status status = 4 [(validate.rules).enum = {in: [3, 6]}];
+
+  // Device tag to which the rule applies.
+  string device_tag = 5 [(validate.rules).string.max_len = 255];
+
+  // Device and data point attribute to which the rule applies.
+  string attr = 6 [(validate.rules).string.max_len = 40];
+
+  // Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://github.com/antonmedv/expr/blob/master/docs/Language-Definition.md).
+  string expr = 7 [(validate.rules).string.max_len = 1024];
+
+  // Rule creation timestamp.
+  google.protobuf.Timestamp created_at = 8 [(google.api.field_behavior) = OUTPUT_ONLY];
+
+  // Rule modification timestamp.
+  google.protobuf.Timestamp updated_at = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
+}
+
 // CreateRuleRequest is sent to create a rule.
 message CreateRuleRequest {
   // Rule message to create.
-  common.Rule rule = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+  Rule rule = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 }
 
 // GetRuleRequest is sent to get a rule.
@@ -178,7 +207,7 @@ message GetRuleRequest {
 // UpdateRuleRequest is sent to update a rule.
 message UpdateRuleRequest {
   // Rule message to update.
-  common.Rule rule = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+  Rule rule = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 
   // Fields to update. Automatically populated by a PATCH request. If not present, a full resource update is performed.
   google.protobuf.FieldMask update_mask = 2;
@@ -202,7 +231,7 @@ message ListRulesRequest {
 // ListRulesResponse is sent in response to a rule list.
 message ListRulesResponse {
   // Rule array, ordered by ascending created_at timestamp.
-  repeated common.Rule rules = 1;
+  repeated Rule rules = 1;
 
   // Pagination token used to retrieve the next page of results. Not returned for the last page.
   string next_page_token = 2;
@@ -217,7 +246,7 @@ message TestRuleRequest {
   common.DataPoint point = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 
   // Rule message to test.
-  common.Rule rule = 2 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+  Rule rule = 2 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 }
 
 // TestRuleResponse is sent in response to a rule test.
@@ -256,7 +285,7 @@ message Alarm {
   string name = 4 [(validate.rules).string = {min_len: 5, max_len: 80}];
 
   // Alarm status.
-  common.Status status = 5 [(validate.rules).enum = {in: [3, 6]}];
+  Status status = 5 [(validate.rules).enum = {in: [3, 6]}];
 
   // Alarm type.
   AlarmType type = 6 [(validate.rules).enum = {in: [1, 2, 3]}];
@@ -343,10 +372,10 @@ message TestAlarmRequest {
   common.DataPoint point = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 
   // Rule to test against an alarm.
-  common.Rule rule = 2 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+  Rule rule = 2 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 
   // Device to test against an alarm.
-  common.Device device = 3 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+  Device device = 3 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
 
   // Alarm message to test.
   Alarm alarm = 4 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
