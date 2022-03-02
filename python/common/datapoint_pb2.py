@@ -3,6 +3,7 @@
 # source: common/datapoint.proto
 """Generated protocol buffer code."""
 from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
@@ -16,137 +17,11 @@ from google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior_
 from validate import validate_pb2 as validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor.FileDescriptor(
-  name='common/datapoint.proto',
-  package='thingspect.common',
-  syntax='proto3',
-  serialized_options=b'Z#github.com/thingspect/api/go/common',
-  create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x16\x63ommon/datapoint.proto\x12\x11thingspect.common\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x17validate/validate.proto\"\x94\x02\n\tDataPoint\x12%\n\x07uniq_id\x18\x01 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18(\xe0\x41\x02R\x06uniqID\x12\x18\n\x04\x61ttr\x18\x02 \x01(\tB\n\xfa\x42\x04r\x02\x18(\xe0\x41\x02\x12\x11\n\x07int_val\x18\x03 \x01(\x11H\x00\x12\x12\n\x08\x66l64_val\x18\x04 \x01(\x01H\x00\x12\x11\n\x07str_val\x18\x05 \x01(\tH\x00\x12\x12\n\x08\x62ool_val\x18\x06 \x01(\x08H\x00\x12\x13\n\tbytes_val\x18\x10 \x01(\x0cH\x00\x12&\n\x02ts\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x12\n\x05token\x18\x08 \x01(\tB\x03\xe0\x41\x03\x12\x15\n\x08trace_id\x18\t \x01(\tB\x03\xe0\x41\x03\x42\x10\n\tval_oneof\x12\x03\xf8\x42\x01\x42%Z#github.com/thingspect/api/go/commonb\x06proto3'
-  ,
-  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_field__behavior__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x16\x63ommon/datapoint.proto\x12\x11thingspect.common\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x17validate/validate.proto\"\x94\x02\n\tDataPoint\x12%\n\x07uniq_id\x18\x01 \x01(\tB\x0c\xfa\x42\x06r\x04\x10\x05\x18(\xe0\x41\x02R\x06uniqID\x12\x18\n\x04\x61ttr\x18\x02 \x01(\tB\n\xfa\x42\x04r\x02\x18(\xe0\x41\x02\x12\x11\n\x07int_val\x18\x03 \x01(\x11H\x00\x12\x12\n\x08\x66l64_val\x18\x04 \x01(\x01H\x00\x12\x11\n\x07str_val\x18\x05 \x01(\tH\x00\x12\x12\n\x08\x62ool_val\x18\x06 \x01(\x08H\x00\x12\x13\n\tbytes_val\x18\x10 \x01(\x0cH\x00\x12&\n\x02ts\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x12\n\x05token\x18\x08 \x01(\tB\x03\xe0\x41\x03\x12\x15\n\x08trace_id\x18\t \x01(\tB\x03\xe0\x41\x03\x42\x10\n\tval_oneof\x12\x03\xf8\x42\x01\x42%Z#github.com/thingspect/api/go/commonb\x06proto3')
 
 
 
-
-_DATAPOINT = _descriptor.Descriptor(
-  name='DataPoint',
-  full_name='thingspect.common.DataPoint',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='uniq_id', full_name='thingspect.common.DataPoint.uniq_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=b'\372B\006r\004\020\005\030(\340A\002', json_name='uniqID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='attr', full_name='thingspect.common.DataPoint.attr', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=b'\372B\004r\002\030(\340A\002', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='int_val', full_name='thingspect.common.DataPoint.int_val', index=2,
-      number=3, type=17, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='fl64_val', full_name='thingspect.common.DataPoint.fl64_val', index=3,
-      number=4, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='str_val', full_name='thingspect.common.DataPoint.str_val', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='bool_val', full_name='thingspect.common.DataPoint.bool_val', index=5,
-      number=6, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='bytes_val', full_name='thingspect.common.DataPoint.bytes_val', index=6,
-      number=16, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"",
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='ts', full_name='thingspect.common.DataPoint.ts', index=7,
-      number=7, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='token', full_name='thingspect.common.DataPoint.token', index=8,
-      number=8, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=b'\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='trace_id', full_name='thingspect.common.DataPoint.trace_id', index=9,
-      number=9, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=b'\340A\003', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-    _descriptor.OneofDescriptor(
-      name='val_oneof', full_name='thingspect.common.DataPoint.val_oneof',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[], serialized_options=b'\370B\001'),
-  ],
-  serialized_start=137,
-  serialized_end=413,
-)
-
-_DATAPOINT.fields_by_name['ts'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_DATAPOINT.oneofs_by_name['val_oneof'].fields.append(
-  _DATAPOINT.fields_by_name['int_val'])
-_DATAPOINT.fields_by_name['int_val'].containing_oneof = _DATAPOINT.oneofs_by_name['val_oneof']
-_DATAPOINT.oneofs_by_name['val_oneof'].fields.append(
-  _DATAPOINT.fields_by_name['fl64_val'])
-_DATAPOINT.fields_by_name['fl64_val'].containing_oneof = _DATAPOINT.oneofs_by_name['val_oneof']
-_DATAPOINT.oneofs_by_name['val_oneof'].fields.append(
-  _DATAPOINT.fields_by_name['str_val'])
-_DATAPOINT.fields_by_name['str_val'].containing_oneof = _DATAPOINT.oneofs_by_name['val_oneof']
-_DATAPOINT.oneofs_by_name['val_oneof'].fields.append(
-  _DATAPOINT.fields_by_name['bool_val'])
-_DATAPOINT.fields_by_name['bool_val'].containing_oneof = _DATAPOINT.oneofs_by_name['val_oneof']
-_DATAPOINT.oneofs_by_name['val_oneof'].fields.append(
-  _DATAPOINT.fields_by_name['bytes_val'])
-_DATAPOINT.fields_by_name['bytes_val'].containing_oneof = _DATAPOINT.oneofs_by_name['val_oneof']
-DESCRIPTOR.message_types_by_name['DataPoint'] = _DATAPOINT
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
+_DATAPOINT = DESCRIPTOR.message_types_by_name['DataPoint']
 DataPoint = _reflection.GeneratedProtocolMessageType('DataPoint', (_message.Message,), {
   'DESCRIPTOR' : _DATAPOINT,
   '__module__' : 'common.datapoint_pb2'
@@ -154,11 +29,20 @@ DataPoint = _reflection.GeneratedProtocolMessageType('DataPoint', (_message.Mess
   })
 _sym_db.RegisterMessage(DataPoint)
 
+if _descriptor._USE_C_DESCRIPTORS == False:
 
-DESCRIPTOR._options = None
-_DATAPOINT.oneofs_by_name['val_oneof']._options = None
-_DATAPOINT.fields_by_name['uniq_id']._options = None
-_DATAPOINT.fields_by_name['attr']._options = None
-_DATAPOINT.fields_by_name['token']._options = None
-_DATAPOINT.fields_by_name['trace_id']._options = None
+  DESCRIPTOR._options = None
+  DESCRIPTOR._serialized_options = b'Z#github.com/thingspect/api/go/common'
+  _DATAPOINT.oneofs_by_name['val_oneof']._options = None
+  _DATAPOINT.oneofs_by_name['val_oneof']._serialized_options = b'\370B\001'
+  _DATAPOINT.fields_by_name['uniq_id']._options = None
+  _DATAPOINT.fields_by_name['uniq_id']._serialized_options = b'\372B\006r\004\020\005\030(\340A\002'
+  _DATAPOINT.fields_by_name['attr']._options = None
+  _DATAPOINT.fields_by_name['attr']._serialized_options = b'\372B\004r\002\030(\340A\002'
+  _DATAPOINT.fields_by_name['token']._options = None
+  _DATAPOINT.fields_by_name['token']._serialized_options = b'\340A\003'
+  _DATAPOINT.fields_by_name['trace_id']._options = None
+  _DATAPOINT.fields_by_name['trace_id']._serialized_options = b'\340A\003'
+  _DATAPOINT._serialized_start=137
+  _DATAPOINT._serialized_end=413
 # @@protoc_insertion_point(module_scope)

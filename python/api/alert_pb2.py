@@ -4,6 +4,7 @@
 """Generated protocol buffer code."""
 from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
@@ -17,254 +18,18 @@ from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from validate import validate_pb2 as validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor.FileDescriptor(
-  name='api/alert.proto',
-  package='thingspect.api',
-  syntax='proto3',
-  serialized_options=b'Z github.com/thingspect/api/go/api',
-  create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0f\x61pi/alert.proto\x12\x0ethingspect.api\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x17validate/validate.proto\"\xe9\x01\n\x05\x41lert\x12\x15\n\x06org_id\x18\x01 \x01(\tR\x05orgID\x12\x17\n\x07uniq_id\x18\x02 \x01(\tR\x06uniqID\x12\x19\n\x08\x61larm_id\x18\x03 \x01(\tR\x07\x61larmID\x12\x17\n\x07user_id\x18\x04 \x01(\tR\x06userID\x12+\n\x06status\x18\x05 \x01(\x0e\x32\x1b.thingspect.api.AlertStatus\x12\r\n\x05\x65rror\x18\x06 \x01(\t\x12.\n\ncreated_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x10\n\x08trace_id\x18\x08 \x01(\t\"\x92\x02\n\x11ListAlertsRequest\x12\x19\n\x07uniq_id\x18\x01 \x01(\tH\x00R\x06uniqID\x12*\n\tdevice_id\x18\x02 \x01(\tB\x0b\xfa\x42\x08r\x06\xb0\x01\x01\xd0\x01\x01H\x00R\x08\x64\x65viceID\x12&\n\x08\x61larm_id\x18\x03 \x01(\tB\x0b\xfa\x42\x08r\x06\xb0\x01\x01\xd0\x01\x01R\x07\x61larmID\x12$\n\x07user_id\x18\x04 \x01(\tB\x0b\xfa\x42\x08r\x06\xb0\x01\x01\xd0\x01\x01R\x06userID\x12,\n\x08\x65nd_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12.\n\nstart_time\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\n\n\x08id_oneof\";\n\x12ListAlertsResponse\x12%\n\x06\x61lerts\x18\x01 \x03(\x0b\x32\x15.thingspect.api.Alert*@\n\x0b\x41lertStatus\x12\x1c\n\x18\x41LERT_STATUS_UNSPECIFIED\x10\x00\x12\x08\n\x04SENT\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x32w\n\x0c\x41lertService\x12g\n\nListAlerts\x12!.thingspect.api.ListAlertsRequest\x1a\".thingspect.api.ListAlertsResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\x12\n/v1/alertsB\"Z github.com/thingspect/api/go/apib\x06proto3'
-  ,
-  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0f\x61pi/alert.proto\x12\x0ethingspect.api\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x17validate/validate.proto\"\xe9\x01\n\x05\x41lert\x12\x15\n\x06org_id\x18\x01 \x01(\tR\x05orgID\x12\x17\n\x07uniq_id\x18\x02 \x01(\tR\x06uniqID\x12\x19\n\x08\x61larm_id\x18\x03 \x01(\tR\x07\x61larmID\x12\x17\n\x07user_id\x18\x04 \x01(\tR\x06userID\x12+\n\x06status\x18\x05 \x01(\x0e\x32\x1b.thingspect.api.AlertStatus\x12\r\n\x05\x65rror\x18\x06 \x01(\t\x12.\n\ncreated_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x10\n\x08trace_id\x18\x08 \x01(\t\"\x92\x02\n\x11ListAlertsRequest\x12\x19\n\x07uniq_id\x18\x01 \x01(\tH\x00R\x06uniqID\x12*\n\tdevice_id\x18\x02 \x01(\tB\x0b\xfa\x42\x08r\x06\xb0\x01\x01\xd0\x01\x01H\x00R\x08\x64\x65viceID\x12&\n\x08\x61larm_id\x18\x03 \x01(\tB\x0b\xfa\x42\x08r\x06\xb0\x01\x01\xd0\x01\x01R\x07\x61larmID\x12$\n\x07user_id\x18\x04 \x01(\tB\x0b\xfa\x42\x08r\x06\xb0\x01\x01\xd0\x01\x01R\x06userID\x12,\n\x08\x65nd_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12.\n\nstart_time\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\n\n\x08id_oneof\";\n\x12ListAlertsResponse\x12%\n\x06\x61lerts\x18\x01 \x03(\x0b\x32\x15.thingspect.api.Alert*@\n\x0b\x41lertStatus\x12\x1c\n\x18\x41LERT_STATUS_UNSPECIFIED\x10\x00\x12\x08\n\x04SENT\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x32w\n\x0c\x41lertService\x12g\n\nListAlerts\x12!.thingspect.api.ListAlertsRequest\x1a\".thingspect.api.ListAlertsResponse\"\x12\x82\xd3\xe4\x93\x02\x0c\x12\n/v1/alertsB\"Z github.com/thingspect/api/go/apib\x06proto3')
 
-_ALERTSTATUS = _descriptor.EnumDescriptor(
-  name='AlertStatus',
-  full_name='thingspect.api.AlertStatus',
-  filename=None,
-  file=DESCRIPTOR,
-  create_key=_descriptor._internal_create_key,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='ALERT_STATUS_UNSPECIFIED', index=0, number=0,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='SENT', index=1, number=1,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR', index=2, number=2,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=697,
-  serialized_end=761,
-)
-_sym_db.RegisterEnumDescriptor(_ALERTSTATUS)
-
+_ALERTSTATUS = DESCRIPTOR.enum_types_by_name['AlertStatus']
 AlertStatus = enum_type_wrapper.EnumTypeWrapper(_ALERTSTATUS)
 ALERT_STATUS_UNSPECIFIED = 0
 SENT = 1
 ERROR = 2
 
 
-
-_ALERT = _descriptor.Descriptor(
-  name='Alert',
-  full_name='thingspect.api.Alert',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='org_id', full_name='thingspect.api.Alert.org_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='orgID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='uniq_id', full_name='thingspect.api.Alert.uniq_id', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='uniqID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='alarm_id', full_name='thingspect.api.Alert.alarm_id', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='alarmID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='user_id', full_name='thingspect.api.Alert.user_id', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='userID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='status', full_name='thingspect.api.Alert.status', index=4,
-      number=5, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='error', full_name='thingspect.api.Alert.error', index=5,
-      number=6, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='created_at', full_name='thingspect.api.Alert.created_at', index=6,
-      number=7, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='trace_id', full_name='thingspect.api.Alert.trace_id', index=7,
-      number=8, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=124,
-  serialized_end=357,
-)
-
-
-_LISTALERTSREQUEST = _descriptor.Descriptor(
-  name='ListAlertsRequest',
-  full_name='thingspect.api.ListAlertsRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='uniq_id', full_name='thingspect.api.ListAlertsRequest.uniq_id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='uniqID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='device_id', full_name='thingspect.api.ListAlertsRequest.device_id', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=b'\372B\010r\006\260\001\001\320\001\001', json_name='deviceID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='alarm_id', full_name='thingspect.api.ListAlertsRequest.alarm_id', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=b'\372B\010r\006\260\001\001\320\001\001', json_name='alarmID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='user_id', full_name='thingspect.api.ListAlertsRequest.user_id', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=b'\372B\010r\006\260\001\001\320\001\001', json_name='userID', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='end_time', full_name='thingspect.api.ListAlertsRequest.end_time', index=4,
-      number=5, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='start_time', full_name='thingspect.api.ListAlertsRequest.start_time', index=5,
-      number=6, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-    _descriptor.OneofDescriptor(
-      name='id_oneof', full_name='thingspect.api.ListAlertsRequest.id_oneof',
-      index=0, containing_type=None,
-      create_key=_descriptor._internal_create_key,
-    fields=[]),
-  ],
-  serialized_start=360,
-  serialized_end=634,
-)
-
-
-_LISTALERTSRESPONSE = _descriptor.Descriptor(
-  name='ListAlertsResponse',
-  full_name='thingspect.api.ListAlertsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='alerts', full_name='thingspect.api.ListAlertsResponse.alerts', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=636,
-  serialized_end=695,
-)
-
-_ALERT.fields_by_name['status'].enum_type = _ALERTSTATUS
-_ALERT.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_LISTALERTSREQUEST.fields_by_name['end_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_LISTALERTSREQUEST.fields_by_name['start_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_LISTALERTSREQUEST.oneofs_by_name['id_oneof'].fields.append(
-  _LISTALERTSREQUEST.fields_by_name['uniq_id'])
-_LISTALERTSREQUEST.fields_by_name['uniq_id'].containing_oneof = _LISTALERTSREQUEST.oneofs_by_name['id_oneof']
-_LISTALERTSREQUEST.oneofs_by_name['id_oneof'].fields.append(
-  _LISTALERTSREQUEST.fields_by_name['device_id'])
-_LISTALERTSREQUEST.fields_by_name['device_id'].containing_oneof = _LISTALERTSREQUEST.oneofs_by_name['id_oneof']
-_LISTALERTSRESPONSE.fields_by_name['alerts'].message_type = _ALERT
-DESCRIPTOR.message_types_by_name['Alert'] = _ALERT
-DESCRIPTOR.message_types_by_name['ListAlertsRequest'] = _LISTALERTSREQUEST
-DESCRIPTOR.message_types_by_name['ListAlertsResponse'] = _LISTALERTSRESPONSE
-DESCRIPTOR.enum_types_by_name['AlertStatus'] = _ALERTSTATUS
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
+_ALERT = DESCRIPTOR.message_types_by_name['Alert']
+_LISTALERTSREQUEST = DESCRIPTOR.message_types_by_name['ListAlertsRequest']
+_LISTALERTSRESPONSE = DESCRIPTOR.message_types_by_name['ListAlertsResponse']
 Alert = _reflection.GeneratedProtocolMessageType('Alert', (_message.Message,), {
   'DESCRIPTOR' : _ALERT,
   '__module__' : 'api.alert_pb2'
@@ -286,35 +51,27 @@ ListAlertsResponse = _reflection.GeneratedProtocolMessageType('ListAlertsRespons
   })
 _sym_db.RegisterMessage(ListAlertsResponse)
 
+_ALERTSERVICE = DESCRIPTOR.services_by_name['AlertService']
+if _descriptor._USE_C_DESCRIPTORS == False:
 
-DESCRIPTOR._options = None
-_LISTALERTSREQUEST.fields_by_name['device_id']._options = None
-_LISTALERTSREQUEST.fields_by_name['alarm_id']._options = None
-_LISTALERTSREQUEST.fields_by_name['user_id']._options = None
-
-_ALERTSERVICE = _descriptor.ServiceDescriptor(
-  name='AlertService',
-  full_name='thingspect.api.AlertService',
-  file=DESCRIPTOR,
-  index=0,
-  serialized_options=None,
-  create_key=_descriptor._internal_create_key,
-  serialized_start=763,
-  serialized_end=882,
-  methods=[
-  _descriptor.MethodDescriptor(
-    name='ListAlerts',
-    full_name='thingspect.api.AlertService.ListAlerts',
-    index=0,
-    containing_service=None,
-    input_type=_LISTALERTSREQUEST,
-    output_type=_LISTALERTSRESPONSE,
-    serialized_options=b'\202\323\344\223\002\014\022\n/v1/alerts',
-    create_key=_descriptor._internal_create_key,
-  ),
-])
-_sym_db.RegisterServiceDescriptor(_ALERTSERVICE)
-
-DESCRIPTOR.services_by_name['AlertService'] = _ALERTSERVICE
-
+  DESCRIPTOR._options = None
+  DESCRIPTOR._serialized_options = b'Z github.com/thingspect/api/go/api'
+  _LISTALERTSREQUEST.fields_by_name['device_id']._options = None
+  _LISTALERTSREQUEST.fields_by_name['device_id']._serialized_options = b'\372B\010r\006\260\001\001\320\001\001'
+  _LISTALERTSREQUEST.fields_by_name['alarm_id']._options = None
+  _LISTALERTSREQUEST.fields_by_name['alarm_id']._serialized_options = b'\372B\010r\006\260\001\001\320\001\001'
+  _LISTALERTSREQUEST.fields_by_name['user_id']._options = None
+  _LISTALERTSREQUEST.fields_by_name['user_id']._serialized_options = b'\372B\010r\006\260\001\001\320\001\001'
+  _ALERTSERVICE.methods_by_name['ListAlerts']._options = None
+  _ALERTSERVICE.methods_by_name['ListAlerts']._serialized_options = b'\202\323\344\223\002\014\022\n/v1/alerts'
+  _ALERTSTATUS._serialized_start=697
+  _ALERTSTATUS._serialized_end=761
+  _ALERT._serialized_start=124
+  _ALERT._serialized_end=357
+  _LISTALERTSREQUEST._serialized_start=360
+  _LISTALERTSREQUEST._serialized_end=634
+  _LISTALERTSRESPONSE._serialized_start=636
+  _LISTALERTSRESPONSE._serialized_end=695
+  _ALERTSERVICE._serialized_start=763
+  _ALERTSERVICE._serialized_end=882
 # @@protoc_insertion_point(module_scope)
