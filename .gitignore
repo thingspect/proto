@@ -19,6 +19,6 @@
 .DS_Store
 
 ### Thingspect ###
-/protobuf/api/openapi.proto
+/protobuf/api/thingspect_openapi.proto
 /go/example/login/login
 /go/example/publish/publish

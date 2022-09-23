@@ -15,12 +15,12 @@ common:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
 	--go_out=. --go_opt=paths=source_relative \
 	--validate_out=. --validate_opt=lang=go,paths=source_relative \
-	common/datapoint.proto
+	common/thingspect_datapoint.proto
 
 mqtt:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv \
 	--go_out=. --go_opt=paths=source_relative \
-	mqtt/payload.proto
+	mqtt/thingspect_payload.proto
 
 api:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/grpc-gateway -I=/tmp/pgv \
@@ -28,17 +28,17 @@ api:
 	--go-grpc_out=. --go-grpc_opt=paths=source_relative \
 	--grpc-gateway_out=. --grpc-gateway_opt=paths=source_relative \
 	--validate_out=. --validate_opt=lang=go,paths=source_relative \
-	api/alert.proto \
-	api/datapoint.proto \
-	api/device.proto \
-	api/event.proto \
-	api/org.proto \
-	api/role.proto \
-	api/rule_alarm.proto \
-	api/session.proto \
-	api/status.proto \
-	api/tag.proto \
-	api/user.proto
+	api/thingspect_alert.proto \
+	api/thingspect_datapoint.proto \
+	api/thingspect_device.proto \
+	api/thingspect_event.proto \
+	api/thingspect_org.proto \
+	api/thingspect_role.proto \
+	api/thingspect_rule_alarm.proto \
+	api/thingspect_session.proto \
+	api/thingspect_status.proto \
+	api/thingspect_tag.proto \
+	api/thingspect_user.proto
 
 mod:
 	echo 'module github.com/thingspect/api/go' > go.mod
@@ -49,13 +49,13 @@ openapi:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/grpc-gateway -I=/tmp/pgv \
 	--openapiv2_out=../openapi \
 	--openapiv2_opt=allow_merge=true,merge_file_name=atlas,openapi_naming_strategy=simple \
-	api/openapi.proto \
-	api/alert.proto \
-	api/datapoint.proto \
-	api/device.proto \
-	api/event.proto \
-	api/org.proto \
-	api/rule_alarm.proto \
-	api/session.proto \
-	api/tag.proto \
-	api/user.proto
+	api/thingspect_openapi.proto \
+	api/thingspect_alert.proto \
+	api/thingspect_datapoint.proto \
+	api/thingspect_device.proto \
+	api/thingspect_event.proto \
+	api/thingspect_org.proto \
+	api/thingspect_rule_alarm.proto \
+	api/thingspect_session.proto \
+	api/thingspect_tag.proto \
+	api/thingspect_user.proto
