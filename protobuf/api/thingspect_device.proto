@@ -124,6 +124,15 @@ enum Decoder {
 
   // Radio Bridge Door/Window sensor with V2 firmware.
   RADIO_BRIDGE_DOOR_V2 = 3;
+
+  // GlobalSat LS-111P CO2 sensor.
+  GLOBALSAT_CO2 = 4;
+
+  // GlobalSat LS-112P CO sensor.
+  GLOBALSAT_CO = 5;
+
+  // GlobalSat LS-113P PM2.5 sensor.
+  GLOBALSAT_PM25 = 6;
 }
 
 // Device represents a device as stored in the database.
