@@ -14,7 +14,7 @@ option go_package = "github.com/thingspect/api/go/api";
 
 // DeviceService contains functions to query and modify devices.
 service DeviceService {
-  // Create a device. Devices are used to generate data points.
+  // Create a device. Devices generate data points.
   rpc CreateDevice(CreateDeviceRequest) returns (api.Device) {
     option (google.api.http) = {
       post: "/v1/devices"
@@ -52,14 +52,14 @@ service DeviceService {
     };
   }
 
-  // Get a device by ID. Devices are used to generate data points.
+  // Get a device by ID. Devices generate data points.
   rpc GetDevice(GetDeviceRequest) returns (api.Device) {
     option (google.api.http) = {
       get: "/v1/devices/{id}"
     };
   }
 
-  // Update a device. Devices are used to generate data points.
+  // Update a device. Devices generate data points.
   rpc UpdateDevice(UpdateDeviceRequest) returns (api.Device) {
     option (google.api.http) = {
       put: "/v1/devices/{device.id}"
@@ -87,7 +87,7 @@ service DeviceService {
     };
   }
 
-  // Delete a device by ID. Devices are used to generate data points.
+  // Delete a device by ID. Devices generate data points.
   rpc DeleteDevice(DeleteDeviceRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       delete: "/v1/devices/{id}"
@@ -103,7 +103,7 @@ service DeviceService {
     };
   }
 
-  // List all devices. Devices are used to generate data points.
+  // List all devices. Devices generate data points.
   rpc ListDevices(ListDevicesRequest) returns (ListDevicesResponse) {
     option (google.api.http) = {
       get: "/v1/devices"

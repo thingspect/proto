@@ -83,84 +83,84 @@ class RuleAlarmServiceServicer(object):
     """
 
     def CreateRule(self, request, context):
-        """Create a rule. Rules define how events are generated.
+        """Create a rule. Rules generate events when conditions are met.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def CreateAlarm(self, request, context):
-        """Create an alarm. Alarms define how alerts are generated.
+        """Create an alarm. Alarms generate alerts via parent rules.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetRule(self, request, context):
-        """Get a rule by ID. Rules define how events are generated.
+        """Get a rule by ID. Rules generate events when conditions are met.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetAlarm(self, request, context):
-        """Get an alarm by ID. Alarms define how alerts are generated.
+        """Get an alarm by ID. Alarms generate alerts via parent rules.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def UpdateRule(self, request, context):
-        """Update a rule. Rules define how events are generated.
+        """Update a rule. Rules generate events when conditions are met.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def UpdateAlarm(self, request, context):
-        """Update an alarm. Alarms define how alerts are generated.
+        """Update an alarm. Alarms generate alerts via parent rules.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def DeleteRule(self, request, context):
-        """Delete a rule by ID. Rules define how events are generated.
+        """Delete a rule by ID. Rules generate events when conditions are met.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def DeleteAlarm(self, request, context):
-        """Delete an alarm by ID. Alarms define how alerts are generated.
+        """Delete an alarm by ID. Alarms generate alerts via parent rules.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListRules(self, request, context):
-        """List all rules. Rules define how events are generated.
+        """List all rules. Rules generate events when conditions are met.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListAlarms(self, request, context):
-        """List alarms. Alarms define how alerts are generated.
+        """List alarms. Alarms generate alerts via parent rules.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def TestRule(self, request, context):
-        """Test a rule. Rules define how events are generated.
+        """Test a rule. Rules generate events when conditions are met.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def TestAlarm(self, request, context):
-        """Test an alarm. Alarms define how alerts are generated.
+        """Test an alarm. Alarms generate alerts via parent rules.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

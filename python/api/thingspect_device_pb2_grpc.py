@@ -58,7 +58,7 @@ class DeviceServiceServicer(object):
     """
 
     def CreateDevice(self, request, context):
-        """Create a device. Devices are used to generate data points.
+        """Create a device. Devices generate data points.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -72,14 +72,14 @@ class DeviceServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def GetDevice(self, request, context):
-        """Get a device by ID. Devices are used to generate data points.
+        """Get a device by ID. Devices generate data points.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def UpdateDevice(self, request, context):
-        """Update a device. Devices are used to generate data points.
+        """Update a device. Devices generate data points.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -93,14 +93,14 @@ class DeviceServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def DeleteDevice(self, request, context):
-        """Delete a device by ID. Devices are used to generate data points.
+        """Delete a device by ID. Devices generate data points.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListDevices(self, request, context):
-        """List all devices. Devices are used to generate data points.
+        """List all devices. Devices generate data points.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
