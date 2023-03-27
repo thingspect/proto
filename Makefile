@@ -1,4 +1,4 @@
-.PHONY: generate version go tag clean
+.PHONY: generate version go python tag clean
 
 VERSION = 1.0.13
 
@@ -31,7 +31,8 @@ tag:
 
 clean:
 	find . -name '*.pb*.go' -type f|xargs rm -v
-	find . -name '*_pb2*.py' -type f|xargs rm -v
+	find . -name '*_pb2*.py*' -type f|xargs rm -v
 	rm -fv openapi/atlas.swagger.json
+	rm -fv protobuf/api/thingspect_openapi.proto
 	rm -fv go/example/login/login
 	rm -fv go/example/publish/publish
