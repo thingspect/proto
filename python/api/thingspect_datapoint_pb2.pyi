@@ -12,34 +12,24 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
-class LatestDataPointsRequest(_message.Message):
-    __slots__ = ["device_id", "start_time", "uniq_id"]
-    DEVICE_ID_FIELD_NUMBER: _ClassVar[int]
-    START_TIME_FIELD_NUMBER: _ClassVar[int]
-    UNIQ_ID_FIELD_NUMBER: _ClassVar[int]
-    device_id: str
-    start_time: _timestamp_pb2.Timestamp
-    uniq_id: str
-    def __init__(self, uniq_id: _Optional[str] = ..., device_id: _Optional[str] = ..., start_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
-
-class LatestDataPointsResponse(_message.Message):
+class PublishDataPointsRequest(_message.Message):
     __slots__ = ["points"]
     POINTS_FIELD_NUMBER: _ClassVar[int]
     points: _containers.RepeatedCompositeFieldContainer[_thingspect_datapoint_pb2.DataPoint]
     def __init__(self, points: _Optional[_Iterable[_Union[_thingspect_datapoint_pb2.DataPoint, _Mapping]]] = ...) -> None: ...
 
 class ListDataPointsRequest(_message.Message):
-    __slots__ = ["attr", "device_id", "end_time", "start_time", "uniq_id"]
-    ATTR_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ["uniq_id", "device_id", "attr", "end_time", "start_time"]
+    UNIQ_ID_FIELD_NUMBER: _ClassVar[int]
     DEVICE_ID_FIELD_NUMBER: _ClassVar[int]
+    ATTR_FIELD_NUMBER: _ClassVar[int]
     END_TIME_FIELD_NUMBER: _ClassVar[int]
     START_TIME_FIELD_NUMBER: _ClassVar[int]
-    UNIQ_ID_FIELD_NUMBER: _ClassVar[int]
-    attr: str
+    uniq_id: str
     device_id: str
+    attr: str
     end_time: _timestamp_pb2.Timestamp
     start_time: _timestamp_pb2.Timestamp
-    uniq_id: str
     def __init__(self, uniq_id: _Optional[str] = ..., device_id: _Optional[str] = ..., attr: _Optional[str] = ..., end_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., start_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
 
 class ListDataPointsResponse(_message.Message):
@@ -48,7 +38,17 @@ class ListDataPointsResponse(_message.Message):
     points: _containers.RepeatedCompositeFieldContainer[_thingspect_datapoint_pb2.DataPoint]
     def __init__(self, points: _Optional[_Iterable[_Union[_thingspect_datapoint_pb2.DataPoint, _Mapping]]] = ...) -> None: ...
 
-class PublishDataPointsRequest(_message.Message):
+class LatestDataPointsRequest(_message.Message):
+    __slots__ = ["uniq_id", "device_id", "start_time"]
+    UNIQ_ID_FIELD_NUMBER: _ClassVar[int]
+    DEVICE_ID_FIELD_NUMBER: _ClassVar[int]
+    START_TIME_FIELD_NUMBER: _ClassVar[int]
+    uniq_id: str
+    device_id: str
+    start_time: _timestamp_pb2.Timestamp
+    def __init__(self, uniq_id: _Optional[str] = ..., device_id: _Optional[str] = ..., start_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
+
+class LatestDataPointsResponse(_message.Message):
     __slots__ = ["points"]
     POINTS_FIELD_NUMBER: _ClassVar[int]
     points: _containers.RepeatedCompositeFieldContainer[_thingspect_datapoint_pb2.DataPoint]
