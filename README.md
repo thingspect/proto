@@ -1,6 +1,6 @@
 # Thingspect API
 
-This repository contains the API
+This repository contains the
 [Protobuf](https://developers.google.com/protocol-buffers/) and
 [gRPC](https://grpc.io/) definitions for the
 [Thingspect](http://www.thingspect.com/) Atlas platform. API design is based
