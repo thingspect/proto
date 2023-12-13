@@ -12,7 +12,7 @@ import "google/api/field_behavior.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "validate/validate.proto";
 
-option go_package = "github.com/thingspect/api/go/api";
+option go_package = "github.com/thingspect/proto/go/api";
 
 // RuleAlarmService contains functions to query and modify rules and alarms.
 service RuleAlarmService {

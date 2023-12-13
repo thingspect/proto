@@ -1,4 +1,4 @@
-# Thingspect API
+# Thingspect Proto
 
 This repository contains the
 [Protobuf](https://developers.google.com/protocol-buffers/) and

@@ -1,3 +1,4 @@
+// Package main runs the Login tool.
 package main
 
 import (
@@ -8,7 +9,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/thingspect/api/go/api"
+	"github.com/thingspect/proto/go/api"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/encoding/gzip"
