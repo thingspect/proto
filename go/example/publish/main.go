@@ -1,3 +1,4 @@
+// Package main runs the Publish tool.
 package main
 
 import (
@@ -8,8 +9,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/thingspect/api/go/api"
-	"github.com/thingspect/api/go/common"
+	"github.com/thingspect/proto/go/api"
+	"github.com/thingspect/proto/go/common"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/encoding/gzip"
@@ -22,8 +23,9 @@ type credential struct {
 
 // GetRequestMetadata returns authentication metadata and implements the
 // PerRPCCredentials interface.
-func (c *credential) GetRequestMetadata(ctx context.Context,
-	uri ...string) (map[string]string, error) {
+func (c *credential) GetRequestMetadata(_ context.Context, _ ...string) (
+	map[string]string, error,
+) {
 	return map[string]string{
 		"authorization": "Bearer " + c.token,
 	}, nil
@@ -88,7 +90,7 @@ func main() {
 		grpc.WithDefaultCallOptions(grpc.UseCompressor(gzip.Name)),
 		grpc.WithTransportCredentials(credentials.NewTLS(
 			&tls.Config{MinVersion: tls.VersionTLS12})),
-		grpc.WithPerRPCCredentials(&credential{token: login.Token}),
+		grpc.WithPerRPCCredentials(&credential{token: login.GetToken()}),
 	}
 	loginConn, err := grpc.Dial(*grpcURI, opts...)
 	checkErr(err)
@@ -111,7 +113,7 @@ func main() {
 		grpc.WithDefaultCallOptions(grpc.UseCompressor(gzip.Name)),
 		grpc.WithTransportCredentials(credentials.NewTLS(
 			&tls.Config{MinVersion: tls.VersionTLS12})),
-		grpc.WithPerRPCCredentials(&credential{token: createKey.Token}),
+		grpc.WithPerRPCCredentials(&credential{token: createKey.GetToken()}),
 	}
 	keyConn, err := grpc.Dial(*grpcURI, opts...)
 	checkErr(err)

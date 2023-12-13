@@ -41,7 +41,7 @@ api:
 	api/thingspect_user.proto
 
 mod:
-	echo 'module github.com/thingspect/api/go' > go.mod
+	echo 'module github.com/thingspect/proto/go' > go.mod
 	go get -t -u ./...
 	go mod tidy -v
 

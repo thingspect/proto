@@ -3,7 +3,7 @@ package thingspect.api;
 
 import "google/api/annotations.proto";
 
-option go_package = "github.com/thingspect/api/go/api";
+option go_package = "github.com/thingspect/proto/go/api";
 
 // TagService contains functions to query tags.
 service TagService {

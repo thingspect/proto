@@ -3,7 +3,7 @@ package thingspect.mqtt;
 
 import "common/thingspect_datapoint.proto";
 
-option go_package = "github.com/thingspect/api/go/mqtt";
+option go_package = "github.com/thingspect/proto/go/mqtt";
 
 // Payload represents an array of one or more data points and an authentication token.
 message Payload {

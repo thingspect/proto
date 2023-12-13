@@ -1,4 +1,4 @@
-module github.com/thingspect/api/go
+module github.com/thingspect/proto/go
 
 go 1.21.5
 

@@ -1,4 +1,4 @@
-# Thingspect API
+# Thingspect Proto
 
 This repository contains the
 [Protobuf](https://developers.google.com/protocol-buffers/) and
@@ -10,10 +10,10 @@ on the Google [API Design Guide](https://cloud.google.com/apis/design).
 
 ### Go
 
-Documentation: https://pkg.go.dev/github.com/thingspect/api/go
+Documentation: https://pkg.go.dev/github.com/thingspect/proto/go
 
 ```
-go get -u github.com/thingspect/api/go
+go get -u github.com/thingspect/proto/go
 ```
 
 Example gRPC code: `go/example/`
