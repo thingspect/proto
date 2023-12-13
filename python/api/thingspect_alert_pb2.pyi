@@ -10,7 +10,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class AlertStatus(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-    __slots__ = []
+    __slots__ = ()
     ALERT_STATUS_UNSPECIFIED: _ClassVar[AlertStatus]
     SENT: _ClassVar[AlertStatus]
     ERROR: _ClassVar[AlertStatus]
@@ -19,7 +19,7 @@ SENT: AlertStatus
 ERROR: AlertStatus
 
 class Alert(_message.Message):
-    __slots__ = ["org_id", "uniq_id", "alarm_id", "user_id", "status", "error", "created_at", "trace_id"]
+    __slots__ = ("org_id", "uniq_id", "alarm_id", "user_id", "status", "error", "created_at", "trace_id")
     ORG_ID_FIELD_NUMBER: _ClassVar[int]
     UNIQ_ID_FIELD_NUMBER: _ClassVar[int]
     ALARM_ID_FIELD_NUMBER: _ClassVar[int]
@@ -39,7 +39,7 @@ class Alert(_message.Message):
     def __init__(self, org_id: _Optional[str] = ..., uniq_id: _Optional[str] = ..., alarm_id: _Optional[str] = ..., user_id: _Optional[str] = ..., status: _Optional[_Union[AlertStatus, str]] = ..., error: _Optional[str] = ..., created_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., trace_id: _Optional[str] = ...) -> None: ...
 
 class ListAlertsRequest(_message.Message):
-    __slots__ = ["uniq_id", "device_id", "alarm_id", "user_id", "end_time", "start_time"]
+    __slots__ = ("uniq_id", "device_id", "alarm_id", "user_id", "end_time", "start_time")
     UNIQ_ID_FIELD_NUMBER: _ClassVar[int]
     DEVICE_ID_FIELD_NUMBER: _ClassVar[int]
     ALARM_ID_FIELD_NUMBER: _ClassVar[int]
@@ -55,7 +55,7 @@ class ListAlertsRequest(_message.Message):
     def __init__(self, uniq_id: _Optional[str] = ..., device_id: _Optional[str] = ..., alarm_id: _Optional[str] = ..., user_id: _Optional[str] = ..., end_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., start_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
 
 class ListAlertsResponse(_message.Message):
-    __slots__ = ["alerts"]
+    __slots__ = ("alerts",)
     ALERTS_FIELD_NUMBER: _ClassVar[int]
     alerts: _containers.RepeatedCompositeFieldContainer[Alert]
     def __init__(self, alerts: _Optional[_Iterable[_Union[Alert, _Mapping]]] = ...) -> None: ...

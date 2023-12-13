@@ -13,7 +13,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Org(_message.Message):
-    __slots__ = ["id", "name", "display_name", "email", "created_at", "updated_at"]
+    __slots__ = ("id", "name", "display_name", "email", "created_at", "updated_at")
     ID_FIELD_NUMBER: _ClassVar[int]
     NAME_FIELD_NUMBER: _ClassVar[int]
     DISPLAY_NAME_FIELD_NUMBER: _ClassVar[int]
@@ -29,19 +29,19 @@ class Org(_message.Message):
     def __init__(self, id: _Optional[str] = ..., name: _Optional[str] = ..., display_name: _Optional[str] = ..., email: _Optional[str] = ..., created_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., updated_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
 
 class CreateOrgRequest(_message.Message):
-    __slots__ = ["org"]
+    __slots__ = ("org",)
     ORG_FIELD_NUMBER: _ClassVar[int]
     org: Org
     def __init__(self, org: _Optional[_Union[Org, _Mapping]] = ...) -> None: ...
 
 class GetOrgRequest(_message.Message):
-    __slots__ = ["id"]
+    __slots__ = ("id",)
     ID_FIELD_NUMBER: _ClassVar[int]
     id: str
     def __init__(self, id: _Optional[str] = ...) -> None: ...
 
 class UpdateOrgRequest(_message.Message):
-    __slots__ = ["org", "update_mask"]
+    __slots__ = ("org", "update_mask")
     ORG_FIELD_NUMBER: _ClassVar[int]
     UPDATE_MASK_FIELD_NUMBER: _ClassVar[int]
     org: Org
@@ -49,13 +49,13 @@ class UpdateOrgRequest(_message.Message):
     def __init__(self, org: _Optional[_Union[Org, _Mapping]] = ..., update_mask: _Optional[_Union[_field_mask_pb2.FieldMask, _Mapping]] = ...) -> None: ...
 
 class DeleteOrgRequest(_message.Message):
-    __slots__ = ["id"]
+    __slots__ = ("id",)
     ID_FIELD_NUMBER: _ClassVar[int]
     id: str
     def __init__(self, id: _Optional[str] = ...) -> None: ...
 
 class ListOrgsRequest(_message.Message):
-    __slots__ = ["page_size", "page_token"]
+    __slots__ = ("page_size", "page_token")
     PAGE_SIZE_FIELD_NUMBER: _ClassVar[int]
     PAGE_TOKEN_FIELD_NUMBER: _ClassVar[int]
     page_size: int
@@ -63,7 +63,7 @@ class ListOrgsRequest(_message.Message):
     def __init__(self, page_size: _Optional[int] = ..., page_token: _Optional[str] = ...) -> None: ...
 
 class ListOrgsResponse(_message.Message):
-    __slots__ = ["orgs", "next_page_token", "total_size"]
+    __slots__ = ("orgs", "next_page_token", "total_size")
     ORGS_FIELD_NUMBER: _ClassVar[int]
     NEXT_PAGE_TOKEN_FIELD_NUMBER: _ClassVar[int]
     TOTAL_SIZE_FIELD_NUMBER: _ClassVar[int]
