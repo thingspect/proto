@@ -15,7 +15,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Decoder(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-    __slots__ = ()
+    __slots__ = []
     RAW: _ClassVar[Decoder]
     GATEWAY: _ClassVar[Decoder]
     RADIO_BRIDGE_DOOR_V1: _ClassVar[Decoder]
@@ -32,7 +32,7 @@ GLOBALSAT_CO: Decoder
 GLOBALSAT_PM25: Decoder
 
 class Device(_message.Message):
-    __slots__ = ("id", "org_id", "uniq_id", "name", "status", "token", "decoder", "tags", "created_at", "updated_at")
+    __slots__ = ["id", "org_id", "uniq_id", "name", "status", "token", "decoder", "tags", "created_at", "updated_at"]
     ID_FIELD_NUMBER: _ClassVar[int]
     ORG_ID_FIELD_NUMBER: _ClassVar[int]
     UNIQ_ID_FIELD_NUMBER: _ClassVar[int]
@@ -56,18 +56,18 @@ class Device(_message.Message):
     def __init__(self, id: _Optional[str] = ..., org_id: _Optional[str] = ..., uniq_id: _Optional[str] = ..., name: _Optional[str] = ..., status: _Optional[_Union[_thingspect_status_pb2.Status, str]] = ..., token: _Optional[str] = ..., decoder: _Optional[_Union[Decoder, str]] = ..., tags: _Optional[_Iterable[str]] = ..., created_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., updated_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
 
 class CreateDeviceRequest(_message.Message):
-    __slots__ = ("device",)
+    __slots__ = ["device"]
     DEVICE_FIELD_NUMBER: _ClassVar[int]
     device: Device
     def __init__(self, device: _Optional[_Union[Device, _Mapping]] = ...) -> None: ...
 
 class CreateDeviceLoRaWANRequest(_message.Message):
-    __slots__ = ("id", "gateway_lorawan_type", "device_lorawan_type")
+    __slots__ = ["id", "gateway_lorawan_type", "device_lorawan_type"]
     class GatewayLoRaWANType(_message.Message):
-        __slots__ = ()
+        __slots__ = []
         def __init__(self) -> None: ...
     class DeviceLoRaWANType(_message.Message):
-        __slots__ = ("app_key",)
+        __slots__ = ["app_key"]
         APP_KEY_FIELD_NUMBER: _ClassVar[int]
         app_key: str
         def __init__(self, app_key: _Optional[str] = ...) -> None: ...
@@ -80,13 +80,13 @@ class CreateDeviceLoRaWANRequest(_message.Message):
     def __init__(self, id: _Optional[str] = ..., gateway_lorawan_type: _Optional[_Union[CreateDeviceLoRaWANRequest.GatewayLoRaWANType, _Mapping]] = ..., device_lorawan_type: _Optional[_Union[CreateDeviceLoRaWANRequest.DeviceLoRaWANType, _Mapping]] = ...) -> None: ...
 
 class GetDeviceRequest(_message.Message):
-    __slots__ = ("id",)
+    __slots__ = ["id"]
     ID_FIELD_NUMBER: _ClassVar[int]
     id: str
     def __init__(self, id: _Optional[str] = ...) -> None: ...
 
 class UpdateDeviceRequest(_message.Message):
-    __slots__ = ("device", "update_mask")
+    __slots__ = ["device", "update_mask"]
     DEVICE_FIELD_NUMBER: _ClassVar[int]
     UPDATE_MASK_FIELD_NUMBER: _ClassVar[int]
     device: Device
@@ -94,19 +94,19 @@ class UpdateDeviceRequest(_message.Message):
     def __init__(self, device: _Optional[_Union[Device, _Mapping]] = ..., update_mask: _Optional[_Union[_field_mask_pb2.FieldMask, _Mapping]] = ...) -> None: ...
 
 class DeleteDeviceLoRaWANRequest(_message.Message):
-    __slots__ = ("id",)
+    __slots__ = ["id"]
     ID_FIELD_NUMBER: _ClassVar[int]
     id: str
     def __init__(self, id: _Optional[str] = ...) -> None: ...
 
 class DeleteDeviceRequest(_message.Message):
-    __slots__ = ("id",)
+    __slots__ = ["id"]
     ID_FIELD_NUMBER: _ClassVar[int]
     id: str
     def __init__(self, id: _Optional[str] = ...) -> None: ...
 
 class ListDevicesRequest(_message.Message):
-    __slots__ = ("page_size", "page_token", "tag")
+    __slots__ = ["page_size", "page_token", "tag"]
     PAGE_SIZE_FIELD_NUMBER: _ClassVar[int]
     PAGE_TOKEN_FIELD_NUMBER: _ClassVar[int]
     TAG_FIELD_NUMBER: _ClassVar[int]
@@ -116,7 +116,7 @@ class ListDevicesRequest(_message.Message):
     def __init__(self, page_size: _Optional[int] = ..., page_token: _Optional[str] = ..., tag: _Optional[str] = ...) -> None: ...
 
 class ListDevicesResponse(_message.Message):
-    __slots__ = ("devices", "next_page_token", "total_size")
+    __slots__ = ["devices", "next_page_token", "total_size"]
     DEVICES_FIELD_NUMBER: _ClassVar[int]
     NEXT_PAGE_TOKEN_FIELD_NUMBER: _ClassVar[int]
     TOTAL_SIZE_FIELD_NUMBER: _ClassVar[int]

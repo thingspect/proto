@@ -8,7 +8,7 @@ from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Opti
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class DataPoint(_message.Message):
-    __slots__ = ("uniq_id", "attr", "int_val", "fl64_val", "str_val", "bool_val", "bytes_val", "ts", "token", "trace_id")
+    __slots__ = ["uniq_id", "attr", "int_val", "fl64_val", "str_val", "bool_val", "bytes_val", "ts", "token", "trace_id"]
     UNIQ_ID_FIELD_NUMBER: _ClassVar[int]
     ATTR_FIELD_NUMBER: _ClassVar[int]
     INT_VAL_FIELD_NUMBER: _ClassVar[int]

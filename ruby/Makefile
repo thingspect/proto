@@ -11,8 +11,9 @@ mqtt:
 	mqtt/thingspect_payload.proto
 
 api:
-	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/grpc-gateway -I=/tmp/pgv \
-	--ruby_out=grpc:. \
+	protoc --plugin=protoc-gen-grpc=/usr/bin/grpc_ruby_plugin -I=../protobuf \
+	-I=/tmp/googleapis -I=/tmp/grpc-gateway -I=/tmp/pgv --ruby_out=. \
+	--grpc_out=. \
 	api/thingspect_alert.proto \
 	api/thingspect_datapoint.proto \
 	api/thingspect_device.proto \
