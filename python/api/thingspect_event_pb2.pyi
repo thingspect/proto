@@ -9,7 +9,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Event(_message.Message):
-    __slots__ = ("org_id", "uniq_id", "rule_id", "created_at", "trace_id")
+    __slots__ = ["org_id", "uniq_id", "rule_id", "created_at", "trace_id"]
     ORG_ID_FIELD_NUMBER: _ClassVar[int]
     UNIQ_ID_FIELD_NUMBER: _ClassVar[int]
     RULE_ID_FIELD_NUMBER: _ClassVar[int]
@@ -23,7 +23,7 @@ class Event(_message.Message):
     def __init__(self, org_id: _Optional[str] = ..., uniq_id: _Optional[str] = ..., rule_id: _Optional[str] = ..., created_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., trace_id: _Optional[str] = ...) -> None: ...
 
 class ListEventsRequest(_message.Message):
-    __slots__ = ("uniq_id", "device_id", "rule_id", "end_time", "start_time")
+    __slots__ = ["uniq_id", "device_id", "rule_id", "end_time", "start_time"]
     UNIQ_ID_FIELD_NUMBER: _ClassVar[int]
     DEVICE_ID_FIELD_NUMBER: _ClassVar[int]
     RULE_ID_FIELD_NUMBER: _ClassVar[int]
@@ -37,19 +37,19 @@ class ListEventsRequest(_message.Message):
     def __init__(self, uniq_id: _Optional[str] = ..., device_id: _Optional[str] = ..., rule_id: _Optional[str] = ..., end_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., start_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
 
 class ListEventsResponse(_message.Message):
-    __slots__ = ("events",)
+    __slots__ = ["events"]
     EVENTS_FIELD_NUMBER: _ClassVar[int]
     events: _containers.RepeatedCompositeFieldContainer[Event]
     def __init__(self, events: _Optional[_Iterable[_Union[Event, _Mapping]]] = ...) -> None: ...
 
 class LatestEventsRequest(_message.Message):
-    __slots__ = ("rule_id",)
+    __slots__ = ["rule_id"]
     RULE_ID_FIELD_NUMBER: _ClassVar[int]
     rule_id: str
     def __init__(self, rule_id: _Optional[str] = ...) -> None: ...
 
 class LatestEventsResponse(_message.Message):
-    __slots__ = ("events",)
+    __slots__ = ["events"]
     EVENTS_FIELD_NUMBER: _ClassVar[int]
     events: _containers.RepeatedCompositeFieldContainer[Event]
     def __init__(self, events: _Optional[_Iterable[_Union[Event, _Mapping]]] = ...) -> None: ...
