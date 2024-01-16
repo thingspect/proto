@@ -25,6 +25,13 @@ using the Protobuf definitions. See the
 [gRPC Python quick start](https://grpc.io/docs/languages/python/quickstart/) for
 more information.
 
+### C++
+
+The C++ package can be copied locally from this repository or regenerated
+using the Protobuf definitions. See the
+[gRPC C++ quick start](https://grpc.io/docs/languages/cpp/quickstart/) for
+more information.
+
 ### Dart
 
 The Dart package can be copied locally from this repository or regenerated

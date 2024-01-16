@@ -1,4 +1,4 @@
-.PHONY: generate version go python dart ruby tag clean
+.PHONY: generate version go python cpp dart ruby tag clean
 
 VERSION = 1.1.1
 
@@ -22,6 +22,11 @@ python: version
 	docker-compose up python
 	docker-compose down
 
+cpp: version
+	docker-compose --progress=plain build --no-cache --pull cpp
+	docker-compose up cpp
+	docker-compose down
+
 dart: version
 	docker-compose --progress=plain build --no-cache --pull dart
 	docker-compose up dart
@@ -42,6 +47,8 @@ tag:
 clean:
 	find . -name '*.pb*.go' -type f|xargs rm -v
 	find . -name '*_pb2*.py*' -type f|xargs rm -v
+	find . -name '*.pb.h' -type f|xargs rm -v
+	find . -name '*.pb.cc' -type f|xargs rm -v
 	find . -name '*.pb*.dart' -type f|xargs rm -v
 	find . -name '*_pb.rb' -type f|xargs rm -v
 	rm -fv openapi/atlas.swagger.json
