@@ -1,4 +1,4 @@
-.PHONY: generate version go python cpp dart ruby tag clean
+.PHONY: generate version go python cpp dart ruby php tag clean
 
 VERSION = 1.1.1
 
@@ -37,6 +37,11 @@ ruby: version
 	docker-compose up ruby
 	docker-compose down
 
+php: version
+	docker-compose --progress=plain build --no-cache --pull php
+	docker-compose up php
+	docker-compose down
+
 tag:
 	git tag -s v$(VERSION) -m "Version $(VERSION)"
 	git tag -s go/v$(VERSION) -m "Version $(VERSION)"
@@ -51,6 +56,7 @@ clean:
 	find . -name '*.pb.cc' -type f|xargs rm -v
 	find . -name '*.pb*.dart' -type f|xargs rm -v
 	find . -name '*_pb.rb' -type f|xargs rm -v
+	find . -name '*.php' -type f|xargs rm -v
 	rm -fv openapi/atlas.swagger.json
 	rm -fv protobuf/api/thingspect_openapi.proto
 	rm -fv go/example/login/login
