@@ -459,37 +459,38 @@ const char descriptor_table_protodef_api_2fthingspect_5fdevice_2eproto[] PROTOBU
     "en\030\002 \001(\t\022\025\n\003tag\030\003 \001(\tB\010\372B\005r\003\030\377\001\"k\n\023ListD"
     "evicesResponse\022\'\n\007devices\030\001 \003(\0132\026.things"
     "pect.api.Device\022\027\n\017next_page_token\030\002 \001(\t"
-    "\022\022\n\ntotal_size\030\003 \001(\005*\214\001\n\007Decoder\022\007\n\003RAW\020"
+    "\022\022\n\ntotal_size\030\003 \001(\005*\237\001\n\007Decoder\022\007\n\003RAW\020"
     "\000\022\013\n\007GATEWAY\020\001\022\030\n\024RADIO_BRIDGE_DOOR_V1\020\002"
     "\022\030\n\024RADIO_BRIDGE_DOOR_V2\020\003\022\021\n\rGLOBALSAT_"
     "CO2\020\004\022\020\n\014GLOBALSAT_CO\020\005\022\022\n\016GLOBALSAT_PM2"
-    "5\020\0062\373\007\n\rDeviceService\022\250\001\n\014CreateDevice\022#"
-    ".thingspect.api.CreateDeviceRequest\032\026.th"
-    "ingspect.api.Device\"[\222A=J;\n\003201\0224\n\026A suc"
-    "cessful response.\022\032\n\030\032\026.thingspect.api.D"
-    "evice\202\323\344\223\002\025\"\013/v1/devices:\006device\022\244\001\n\023Cre"
-    "ateDeviceLoRaWAN\022*.thingspect.api.Create"
-    "DeviceLoRaWANRequest\032\026.google.protobuf.E"
-    "mpty\"I\222A#J!\n\003204\022\032\n\026A successful respons"
-    "e.\022\000\202\323\344\223\002\035\"\030/v1/devices/{id}/lorawan:\001*\022"
-    "_\n\tGetDevice\022 .thingspect.api.GetDeviceR"
-    "equest\032\026.thingspect.api.Device\"\030\202\323\344\223\002\022\022\020"
-    "/v1/devices/{id}\022\227\001\n\014UpdateDevice\022#.thin"
-    "gspect.api.UpdateDeviceRequest\032\026.thingsp"
-    "ect.api.Device\"J\202\323\344\223\002D\032\027/v1/devices/{dev"
-    "ice.id}:\006deviceZ!2\027/v1/devices/{device.i"
-    "d}:\006device\022\241\001\n\023DeleteDeviceLoRaWAN\022*.thi"
-    "ngspect.api.DeleteDeviceLoRaWANRequest\032\026"
-    ".google.protobuf.Empty\"F\222A#J!\n\003204\022\032\n\026A "
-    "successful response.\022\000\202\323\344\223\002\032*\030/v1/device"
-    "s/{id}/lorawan\022\213\001\n\014DeleteDevice\022#.things"
-    "pect.api.DeleteDeviceRequest\032\026.google.pr"
-    "otobuf.Empty\">\222A#J!\n\003204\022\032\n\026A successful"
-    " response.\022\000\202\323\344\223\002\022*\020/v1/devices/{id}\022k\n\013"
-    "ListDevices\022\".thingspect.api.ListDevices"
-    "Request\032#.thingspect.api.ListDevicesResp"
-    "onse\"\023\202\323\344\223\002\r\022\013/v1/devicesB$Z\"github.com/"
-    "thingspect/proto/go/apib\006proto3"
+    "5\020\006\022\021\n\rTEKTELIC_HOME\020\0072\373\007\n\rDeviceService"
+    "\022\250\001\n\014CreateDevice\022#.thingspect.api.Creat"
+    "eDeviceRequest\032\026.thingspect.api.Device\"["
+    "\222A=J;\n\003201\0224\n\026A successful response.\022\032\n\030"
+    "\032\026.thingspect.api.Device\202\323\344\223\002\025\"\013/v1/devi"
+    "ces:\006device\022\244\001\n\023CreateDeviceLoRaWAN\022*.th"
+    "ingspect.api.CreateDeviceLoRaWANRequest\032"
+    "\026.google.protobuf.Empty\"I\222A#J!\n\003204\022\032\n\026A"
+    " successful response.\022\000\202\323\344\223\002\035\"\030/v1/devic"
+    "es/{id}/lorawan:\001*\022_\n\tGetDevice\022 .things"
+    "pect.api.GetDeviceRequest\032\026.thingspect.a"
+    "pi.Device\"\030\202\323\344\223\002\022\022\020/v1/devices/{id}\022\227\001\n\014"
+    "UpdateDevice\022#.thingspect.api.UpdateDevi"
+    "ceRequest\032\026.thingspect.api.Device\"J\202\323\344\223\002"
+    "D\032\027/v1/devices/{device.id}:\006deviceZ!2\027/v"
+    "1/devices/{device.id}:\006device\022\241\001\n\023Delete"
+    "DeviceLoRaWAN\022*.thingspect.api.DeleteDev"
+    "iceLoRaWANRequest\032\026.google.protobuf.Empt"
+    "y\"F\222A#J!\n\003204\022\032\n\026A successful response.\022"
+    "\000\202\323\344\223\002\032*\030/v1/devices/{id}/lorawan\022\213\001\n\014De"
+    "leteDevice\022#.thingspect.api.DeleteDevice"
+    "Request\032\026.google.protobuf.Empty\">\222A#J!\n\003"
+    "204\022\032\n\026A successful response.\022\000\202\323\344\223\002\022*\020/"
+    "v1/devices/{id}\022k\n\013ListDevices\022\".thingsp"
+    "ect.api.ListDevicesRequest\032#.thingspect."
+    "api.ListDevicesResponse\"\023\202\323\344\223\002\r\022\013/v1/dev"
+    "icesB$Z\"github.com/thingspect/proto/go/a"
+    "pib\006proto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_api_2fthingspect_5fdevice_2eproto_deps[8] =
     {
@@ -506,7 +507,7 @@ static ::absl::once_flag descriptor_table_api_2fthingspect_5fdevice_2eproto_once
 const ::_pbi::DescriptorTable descriptor_table_api_2fthingspect_5fdevice_2eproto = {
     false,
     false,
-    2831,
+    2850,
     descriptor_table_protodef_api_2fthingspect_5fdevice_2eproto,
     "api/thingspect_device.proto",
     &descriptor_table_api_2fthingspect_5fdevice_2eproto_once,
@@ -553,6 +554,7 @@ bool Decoder_IsValid(int value) {
     case 4:
     case 5:
     case 6:
+    case 7:
       return true;
     default:
       return false;
