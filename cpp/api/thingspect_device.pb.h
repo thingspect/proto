@@ -115,6 +115,7 @@ enum Decoder : int {
   GLOBALSAT_CO2 = 4,
   GLOBALSAT_CO = 5,
   GLOBALSAT_PM25 = 6,
+  TEKTELIC_HOME = 7,
   Decoder_INT_MIN_SENTINEL_DO_NOT_USE_ =
       std::numeric_limits<::int32_t>::min(),
   Decoder_INT_MAX_SENTINEL_DO_NOT_USE_ =
@@ -123,8 +124,8 @@ enum Decoder : int {
 
 bool Decoder_IsValid(int value);
 constexpr Decoder Decoder_MIN = static_cast<Decoder>(0);
-constexpr Decoder Decoder_MAX = static_cast<Decoder>(6);
-constexpr int Decoder_ARRAYSIZE = 6 + 1;
+constexpr Decoder Decoder_MAX = static_cast<Decoder>(7);
+constexpr int Decoder_ARRAYSIZE = 7 + 1;
 const ::google::protobuf::EnumDescriptor*
 Decoder_descriptor();
 template <typename T>
@@ -137,7 +138,7 @@ const std::string& Decoder_Name(T value) {
 template <>
 inline const std::string& Decoder_Name(Decoder value) {
   return ::google::protobuf::internal::NameOfDenseEnum<Decoder_descriptor,
-                                                 0, 6>(
+                                                 0, 7>(
       static_cast<int>(value));
 }
 inline bool Decoder_Parse(absl::string_view name, Decoder* value) {

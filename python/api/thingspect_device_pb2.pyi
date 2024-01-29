@@ -23,6 +23,7 @@ class Decoder(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     GLOBALSAT_CO2: _ClassVar[Decoder]
     GLOBALSAT_CO: _ClassVar[Decoder]
     GLOBALSAT_PM25: _ClassVar[Decoder]
+    TEKTELIC_HOME: _ClassVar[Decoder]
 RAW: Decoder
 GATEWAY: Decoder
 RADIO_BRIDGE_DOOR_V1: Decoder
@@ -30,6 +31,7 @@ RADIO_BRIDGE_DOOR_V2: Decoder
 GLOBALSAT_CO2: Decoder
 GLOBALSAT_CO: Decoder
 GLOBALSAT_PM25: Decoder
+TEKTELIC_HOME: Decoder
 
 class Device(_message.Message):
     __slots__ = ["id", "org_id", "uniq_id", "name", "status", "token", "decoder", "tags", "created_at", "updated_at"]

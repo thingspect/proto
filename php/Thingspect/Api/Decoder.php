@@ -55,6 +55,12 @@ class Decoder
      * Generated from protobuf enum <code>GLOBALSAT_PM25 = 6;</code>
      */
     const GLOBALSAT_PM25 = 6;
+    /**
+     * TEKTELIC Kona All-in-One Home Sensor.
+     *
+     * Generated from protobuf enum <code>TEKTELIC_HOME = 7;</code>
+     */
+    const TEKTELIC_HOME = 7;
 
     private static $valueToName = [
         self::RAW => 'RAW',
@@ -64,6 +70,7 @@ class Decoder
         self::GLOBALSAT_CO2 => 'GLOBALSAT_CO2',
         self::GLOBALSAT_CO => 'GLOBALSAT_CO',
         self::GLOBALSAT_PM25 => 'GLOBALSAT_PM25',
+        self::TEKTELIC_HOME => 'TEKTELIC_HOME',
     ];
 
     public static function name($value)

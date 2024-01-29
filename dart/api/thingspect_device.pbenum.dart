@@ -22,6 +22,7 @@ class Decoder extends $pb.ProtobufEnum {
   static const Decoder GLOBALSAT_CO2 = Decoder._(4, _omitEnumNames ? '' : 'GLOBALSAT_CO2');
   static const Decoder GLOBALSAT_CO = Decoder._(5, _omitEnumNames ? '' : 'GLOBALSAT_CO');
   static const Decoder GLOBALSAT_PM25 = Decoder._(6, _omitEnumNames ? '' : 'GLOBALSAT_PM25');
+  static const Decoder TEKTELIC_HOME = Decoder._(7, _omitEnumNames ? '' : 'TEKTELIC_HOME');
 
   static const $core.List<Decoder> values = <Decoder> [
     RAW,
@@ -31,6 +32,7 @@ class Decoder extends $pb.ProtobufEnum {
     GLOBALSAT_CO2,
     GLOBALSAT_CO,
     GLOBALSAT_PM25,
+    TEKTELIC_HOME,
   ];
 
   static final $core.Map<$core.int, Decoder> _byValue = $pb.ProtobufEnum.initByValue(values);

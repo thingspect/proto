@@ -24,6 +24,7 @@ const Decoder$json = {
     {'1': 'GLOBALSAT_CO2', '2': 4},
     {'1': 'GLOBALSAT_CO', '2': 5},
     {'1': 'GLOBALSAT_PM25', '2': 6},
+    {'1': 'TEKTELIC_HOME', '2': 7},
   ],
 };
 
@@ -31,7 +32,7 @@ const Decoder$json = {
 final $typed_data.Uint8List decoderDescriptor = $convert.base64Decode(
     'CgdEZWNvZGVyEgcKA1JBVxAAEgsKB0dBVEVXQVkQARIYChRSQURJT19CUklER0VfRE9PUl9WMR'
     'ACEhgKFFJBRElPX0JSSURHRV9ET09SX1YyEAMSEQoNR0xPQkFMU0FUX0NPMhAEEhAKDEdMT0JB'
-    'TFNBVF9DTxAFEhIKDkdMT0JBTFNBVF9QTTI1EAY=');
+    'TFNBVF9DTxAFEhIKDkdMT0JBTFNBVF9QTTI1EAYSEQoNVEVLVEVMSUNfSE9NRRAH');
 
 @$core.Deprecated('Use deviceDescriptor instead')
 const Device$json = {
