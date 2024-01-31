@@ -1340,7 +1340,7 @@
                 "repeatInterval": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Alarm repeat interval, in minutes. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days."
+                  "description": "Alarm repeat interval, in minutes, per device. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days."
                 },
                 "createdAt": {
                   "type": "string",
@@ -1440,7 +1440,7 @@
                 "repeatInterval": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Alarm repeat interval, in minutes. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days."
+                  "description": "Alarm repeat interval, in minutes, per device. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days."
                 },
                 "createdAt": {
                   "type": "string",
@@ -1545,7 +1545,7 @@
                 "repeatInterval": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Alarm repeat interval, in minutes. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days."
+                  "description": "Alarm repeat interval, in minutes, per device. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days."
                 },
                 "createdAt": {
                   "type": "string",
@@ -1689,7 +1689,7 @@
                 },
                 "attr": {
                   "type": "string",
-                  "description": "Device and data point attribute to which the rule applies."
+                  "description": "Data point attribute to which the rule applies."
                 },
                 "expr": {
                   "type": "string",
@@ -1775,7 +1775,7 @@
                 },
                 "attr": {
                   "type": "string",
-                  "description": "Device and data point attribute to which the rule applies."
+                  "description": "Data point attribute to which the rule applies."
                 },
                 "expr": {
                   "type": "string",
@@ -2542,7 +2542,7 @@
         "repeatInterval": {
           "type": "integer",
           "format": "int32",
-          "description": "Alarm repeat interval, in minutes. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days."
+          "description": "Alarm repeat interval, in minutes, per device. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days."
         },
         "createdAt": {
           "type": "string",
@@ -3212,7 +3212,7 @@
         },
         "attr": {
           "type": "string",
-          "description": "Device and data point attribute to which the rule applies."
+          "description": "Data point attribute to which the rule applies."
         },
         "expr": {
           "type": "string",

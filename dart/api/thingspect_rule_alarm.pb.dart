@@ -153,7 +153,7 @@ class Rule extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearDeviceTag() => clearField(5);
 
-  /// Device and data point attribute to which the rule applies.
+  /// Data point attribute to which the rule applies.
   @$pb.TagNumber(6)
   $core.String get attr => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -873,7 +873,7 @@ class Alarm extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearBodyTemplate() => clearField(9);
 
-  /// Alarm repeat interval, in minutes. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
+  /// Alarm repeat interval, in minutes, per device. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
   @$pb.TagNumber(10)
   $core.int get repeatInterval => $_getIZ(9);
   @$pb.TagNumber(10)

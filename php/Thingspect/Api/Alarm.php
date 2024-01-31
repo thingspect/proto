@@ -70,7 +70,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
      */
     protected $body_template = '';
     /**
-     * Alarm repeat interval, in minutes. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
+     * Alarm repeat interval, in minutes, per device. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
      *
      * Generated from protobuf field <code>int32 repeat_interval = 10 [(.validate.rules) = {</code>
      */
@@ -113,7 +113,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
      *     @type string $body_template
      *           Alarm body template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
      *     @type int $repeat_interval
-     *           Alarm repeat interval, in minutes. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
+     *           Alarm repeat interval, in minutes, per device. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
      *     @type \Google\Protobuf\Timestamp $created_at
      *           Alarm creation timestamp.
      *     @type \Google\Protobuf\Timestamp $updated_at
@@ -360,7 +360,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Alarm repeat interval, in minutes. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
+     * Alarm repeat interval, in minutes, per device. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
      *
      * Generated from protobuf field <code>int32 repeat_interval = 10 [(.validate.rules) = {</code>
      * @return int
@@ -371,7 +371,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Alarm repeat interval, in minutes. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
+     * Alarm repeat interval, in minutes, per device. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
      *
      * Generated from protobuf field <code>int32 repeat_interval = 10 [(.validate.rules) = {</code>
      * @param int $var

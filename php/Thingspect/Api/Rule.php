@@ -46,7 +46,7 @@ class Rule extends \Google\Protobuf\Internal\Message
      */
     protected $device_tag = '';
     /**
-     * Device and data point attribute to which the rule applies.
+     * Data point attribute to which the rule applies.
      *
      * Generated from protobuf field <code>string attr = 6 [(.validate.rules) = {</code>
      */
@@ -87,7 +87,7 @@ class Rule extends \Google\Protobuf\Internal\Message
      *     @type string $device_tag
      *           Device tag to which the rule applies.
      *     @type string $attr
-     *           Device and data point attribute to which the rule applies.
+     *           Data point attribute to which the rule applies.
      *     @type string $expr
      *           Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://github.com/expr-lang/expr/blob/master/docs/Language-Definition.md).
      *     @type \Google\Protobuf\Timestamp $created_at
@@ -232,7 +232,7 @@ class Rule extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Device and data point attribute to which the rule applies.
+     * Data point attribute to which the rule applies.
      *
      * Generated from protobuf field <code>string attr = 6 [(.validate.rules) = {</code>
      * @return string
@@ -243,7 +243,7 @@ class Rule extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Device and data point attribute to which the rule applies.
+     * Data point attribute to which the rule applies.
      *
      * Generated from protobuf field <code>string attr = 6 [(.validate.rules) = {</code>
      * @param string $var

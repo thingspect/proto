@@ -179,7 +179,7 @@ message Rule {
   // Device tag to which the rule applies.
   string device_tag = 5 [(validate.rules).string.max_len = 255];
 
-  // Device and data point attribute to which the rule applies.
+  // Data point attribute to which the rule applies.
   string attr = 6 [(validate.rules).string.max_len = 40];
 
   // Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://github.com/expr-lang/expr/blob/master/docs/Language-Definition.md).
@@ -299,7 +299,7 @@ message Alarm {
   // Alarm body template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
   string body_template = 9 [(validate.rules).string.max_len = 4096];
 
-  // Alarm repeat interval, in minutes. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
+  // Alarm repeat interval, in minutes, per device. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
   int32 repeat_interval = 10 [(validate.rules).int32 = {gte: 1, lte: 20160}];
 
   // Alarm creation timestamp.
