@@ -52,7 +52,7 @@ class Rule extends \Google\Protobuf\Internal\Message
      */
     protected $attr = '';
     /**
-     * Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://github.com/expr-lang/expr/blob/master/docs/Language-Definition.md).
+     * Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://expr-lang.org/).
      *
      * Generated from protobuf field <code>string expr = 7 [(.validate.rules) = {</code>
      */
@@ -89,7 +89,7 @@ class Rule extends \Google\Protobuf\Internal\Message
      *     @type string $attr
      *           Data point attribute to which the rule applies.
      *     @type string $expr
-     *           Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://github.com/expr-lang/expr/blob/master/docs/Language-Definition.md).
+     *           Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://expr-lang.org/).
      *     @type \Google\Protobuf\Timestamp $created_at
      *           Rule creation timestamp.
      *     @type \Google\Protobuf\Timestamp $updated_at
@@ -258,7 +258,7 @@ class Rule extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://github.com/expr-lang/expr/blob/master/docs/Language-Definition.md).
+     * Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://expr-lang.org/).
      *
      * Generated from protobuf field <code>string expr = 7 [(.validate.rules) = {</code>
      * @return string
@@ -269,7 +269,7 @@ class Rule extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://github.com/expr-lang/expr/blob/master/docs/Language-Definition.md).
+     * Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://expr-lang.org/).
      *
      * Generated from protobuf field <code>string expr = 7 [(.validate.rules) = {</code>
      * @param string $var
