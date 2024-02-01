@@ -102,7 +102,7 @@ type Rule struct {
 	DeviceTag string `protobuf:"bytes,5,opt,name=device_tag,json=deviceTag,proto3" json:"device_tag,omitempty"`
 	// Data point attribute to which the rule applies.
 	Attr string `protobuf:"bytes,6,opt,name=attr,proto3" json:"attr,omitempty"`
-	// Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://github.com/expr-lang/expr/blob/master/docs/Language-Definition.md).
+	// Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://expr-lang.org/).
 	Expr string `protobuf:"bytes,7,opt,name=expr,proto3" json:"expr,omitempty"`
 	// Rule creation timestamp.
 	CreatedAt *timestamppb.Timestamp `protobuf:"bytes,8,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`

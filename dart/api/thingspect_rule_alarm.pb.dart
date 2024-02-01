@@ -163,7 +163,7 @@ class Rule extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearAttr() => clearField(6);
 
-  /// Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://github.com/expr-lang/expr/blob/master/docs/Language-Definition.md).
+  /// Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://expr-lang.org/).
   @$pb.TagNumber(7)
   $core.String get expr => $_getSZ(6);
   @$pb.TagNumber(7)
