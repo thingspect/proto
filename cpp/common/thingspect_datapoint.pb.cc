@@ -109,15 +109,15 @@ const char descriptor_table_protodef_common_2fthingspect_5fdatapoint_2eproto[] P
     "\n!common/thingspect_datapoint.proto\022\021thi"
     "ngspect.common\032\037google/protobuf/timestam"
     "p.proto\032\037google/api/field_behavior.proto"
-    "\032\027validate/validate.proto\"\230\002\n\tDataPoint\022"
-    "&\n\007uniq_id\030\001 \001(\tB\r\342A\001\002\372B\006r\004\020\005\030(R\006uniqID\022"
-    "\031\n\004attr\030\002 \001(\tB\013\342A\001\002\372B\004r\002\030(\022\021\n\007int_val\030\003 "
-    "\001(\021H\000\022\022\n\010fl64_val\030\004 \001(\001H\000\022\021\n\007str_val\030\005 \001"
-    "(\tH\000\022\022\n\010bool_val\030\006 \001(\010H\000\022\023\n\tbytes_val\030\020 "
-    "\001(\014H\000\022&\n\002ts\030\007 \001(\0132\032.google.protobuf.Time"
-    "stamp\022\023\n\005token\030\010 \001(\tB\004\342A\001\003\022\026\n\010trace_id\030\t"
-    " \001(\tB\004\342A\001\003B\020\n\tval_oneof\022\003\370B\001B\'Z%github.c"
-    "om/thingspect/proto/go/commonb\006proto3"
+    "\032\027validate/validate.proto\"\224\002\n\tDataPoint\022"
+    "%\n\007uniq_id\030\001 \001(\tB\014\340A\002\372B\006r\004\020\005\030(R\006uniqID\022\030"
+    "\n\004attr\030\002 \001(\tB\n\340A\002\372B\004r\002\030(\022\021\n\007int_val\030\003 \001("
+    "\021H\000\022\022\n\010fl64_val\030\004 \001(\001H\000\022\021\n\007str_val\030\005 \001(\t"
+    "H\000\022\022\n\010bool_val\030\006 \001(\010H\000\022\023\n\tbytes_val\030\020 \001("
+    "\014H\000\022&\n\002ts\030\007 \001(\0132\032.google.protobuf.Timest"
+    "amp\022\022\n\005token\030\010 \001(\tB\003\340A\003\022\025\n\010trace_id\030\t \001("
+    "\tB\003\340A\003B\020\n\tval_oneof\022\003\370B\001B\'Z%github.com/t"
+    "hingspect/proto/go/commonb\006proto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_common_2fthingspect_5fdatapoint_2eproto_deps[3] =
     {
@@ -129,7 +129,7 @@ static ::absl::once_flag descriptor_table_common_2fthingspect_5fdatapoint_2eprot
 const ::_pbi::DescriptorTable descriptor_table_common_2fthingspect_5fdatapoint_2eproto = {
     false,
     false,
-    477,
+    473,
     descriptor_table_protodef_common_2fthingspect_5fdatapoint_2eproto,
     "common/thingspect_datapoint.proto",
     &descriptor_table_common_2fthingspect_5fdatapoint_2eproto_once,
