@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: api/thingspect_datapoint.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -15,6 +15,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../common/thingspect_datapoint.pb.dart' as $11;
 import '../google/protobuf/timestamp.pb.dart' as $10;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// PublishDataPointsRequest is sent to publish data points. The publisher role is recommended for programmatic use of this endpoint.
 class PublishDataPointsRequest extends $pb.GeneratedMessage {
@@ -59,7 +61,7 @@ class PublishDataPointsRequest extends $pb.GeneratedMessage {
 
   /// Data point array to publish.
   @$pb.TagNumber(1)
-  $core.List<$11.DataPoint> get points => $_getList(0);
+  $pb.PbList<$11.DataPoint> get points => $_getList(0);
 }
 
 enum ListDataPointsRequest_IdOneof {
@@ -136,7 +138,7 @@ class ListDataPointsRequest extends $pb.GeneratedMessage {
   static ListDataPointsRequest? _defaultInstance;
 
   ListDataPointsRequest_IdOneof whichIdOneof() => _ListDataPointsRequest_IdOneofByTag[$_whichOneof(0)]!;
-  void clearIdOneof() => clearField($_whichOneof(0));
+  void clearIdOneof() => $_clearField($_whichOneof(0));
 
   /// Device unique ID. Either unique ID or device ID must be provided.
   @$pb.TagNumber(1)
@@ -146,7 +148,7 @@ class ListDataPointsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasUniqId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUniqId() => clearField(1);
+  void clearUniqId() => $_clearField(1);
 
   /// Device ID (UUID). Either unique ID or device ID must be provided.
   @$pb.TagNumber(2)
@@ -156,7 +158,7 @@ class ListDataPointsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasDeviceId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDeviceId() => clearField(2);
+  void clearDeviceId() => $_clearField(2);
 
   /// Device attribute. If not specified, all attributes are included.
   @$pb.TagNumber(3)
@@ -166,17 +168,17 @@ class ListDataPointsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasAttr() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAttr() => clearField(3);
+  void clearAttr() => $_clearField(3);
 
   /// Data points range end time. Defaults to current time if not specified. Maximum supported time range is 90 days.
   @$pb.TagNumber(4)
   $10.Timestamp get endTime => $_getN(3);
   @$pb.TagNumber(4)
-  set endTime($10.Timestamp v) { setField(4, v); }
+  set endTime($10.Timestamp v) { $_setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasEndTime() => $_has(3);
   @$pb.TagNumber(4)
-  void clearEndTime() => clearField(4);
+  void clearEndTime() => $_clearField(4);
   @$pb.TagNumber(4)
   $10.Timestamp ensureEndTime() => $_ensure(3);
 
@@ -184,11 +186,11 @@ class ListDataPointsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $10.Timestamp get startTime => $_getN(4);
   @$pb.TagNumber(5)
-  set startTime($10.Timestamp v) { setField(5, v); }
+  set startTime($10.Timestamp v) { $_setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasStartTime() => $_has(4);
   @$pb.TagNumber(5)
-  void clearStartTime() => clearField(5);
+  void clearStartTime() => $_clearField(5);
   @$pb.TagNumber(5)
   $10.Timestamp ensureStartTime() => $_ensure(4);
 }
@@ -236,7 +238,7 @@ class ListDataPointsResponse extends $pb.GeneratedMessage {
 
   /// Data point array, ordered by descending created_at timestamp.
   @$pb.TagNumber(1)
-  $core.List<$11.DataPoint> get points => $_getList(0);
+  $pb.PbList<$11.DataPoint> get points => $_getList(0);
 }
 
 enum LatestDataPointsRequest_IdOneof {
@@ -303,7 +305,7 @@ class LatestDataPointsRequest extends $pb.GeneratedMessage {
   static LatestDataPointsRequest? _defaultInstance;
 
   LatestDataPointsRequest_IdOneof whichIdOneof() => _LatestDataPointsRequest_IdOneofByTag[$_whichOneof(0)]!;
-  void clearIdOneof() => clearField($_whichOneof(0));
+  void clearIdOneof() => $_clearField($_whichOneof(0));
 
   /// Device unique ID. Either unique ID or device ID must be provided.
   @$pb.TagNumber(1)
@@ -313,7 +315,7 @@ class LatestDataPointsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasUniqId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUniqId() => clearField(1);
+  void clearUniqId() => $_clearField(1);
 
   /// Device ID (UUID). Either unique ID or device ID must be provided.
   @$pb.TagNumber(2)
@@ -323,17 +325,17 @@ class LatestDataPointsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasDeviceId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDeviceId() => clearField(2);
+  void clearDeviceId() => $_clearField(2);
 
   /// Data points range start time. Defaults to now - 30 days if not specified. Maximum supported time range is 90 days.
   @$pb.TagNumber(3)
   $10.Timestamp get startTime => $_getN(2);
   @$pb.TagNumber(3)
-  set startTime($10.Timestamp v) { setField(3, v); }
+  set startTime($10.Timestamp v) { $_setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStartTime() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStartTime() => clearField(3);
+  void clearStartTime() => $_clearField(3);
   @$pb.TagNumber(3)
   $10.Timestamp ensureStartTime() => $_ensure(2);
 }
@@ -381,7 +383,7 @@ class LatestDataPointsResponse extends $pb.GeneratedMessage {
 
   /// Data point array, ordered by ascending attribute name.
   @$pb.TagNumber(1)
-  $core.List<$11.DataPoint> get points => $_getList(0);
+  $pb.PbList<$11.DataPoint> get points => $_getList(0);
 }
 
 

@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: api/thingspect_device.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -142,32 +142,32 @@ abstract class DeviceServiceBase extends $grpc.Service {
         ($3.ListDevicesResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$3.Device> createDevice_Pre($grpc.ServiceCall call, $async.Future<$3.CreateDeviceRequest> request) async {
-    return createDevice(call, await request);
+  $async.Future<$3.Device> createDevice_Pre($grpc.ServiceCall $call, $async.Future<$3.CreateDeviceRequest> $request) async {
+    return createDevice($call, await $request);
   }
 
-  $async.Future<$2.Empty> createDeviceLoRaWAN_Pre($grpc.ServiceCall call, $async.Future<$3.CreateDeviceLoRaWANRequest> request) async {
-    return createDeviceLoRaWAN(call, await request);
+  $async.Future<$2.Empty> createDeviceLoRaWAN_Pre($grpc.ServiceCall $call, $async.Future<$3.CreateDeviceLoRaWANRequest> $request) async {
+    return createDeviceLoRaWAN($call, await $request);
   }
 
-  $async.Future<$3.Device> getDevice_Pre($grpc.ServiceCall call, $async.Future<$3.GetDeviceRequest> request) async {
-    return getDevice(call, await request);
+  $async.Future<$3.Device> getDevice_Pre($grpc.ServiceCall $call, $async.Future<$3.GetDeviceRequest> $request) async {
+    return getDevice($call, await $request);
   }
 
-  $async.Future<$3.Device> updateDevice_Pre($grpc.ServiceCall call, $async.Future<$3.UpdateDeviceRequest> request) async {
-    return updateDevice(call, await request);
+  $async.Future<$3.Device> updateDevice_Pre($grpc.ServiceCall $call, $async.Future<$3.UpdateDeviceRequest> $request) async {
+    return updateDevice($call, await $request);
   }
 
-  $async.Future<$2.Empty> deleteDeviceLoRaWAN_Pre($grpc.ServiceCall call, $async.Future<$3.DeleteDeviceLoRaWANRequest> request) async {
-    return deleteDeviceLoRaWAN(call, await request);
+  $async.Future<$2.Empty> deleteDeviceLoRaWAN_Pre($grpc.ServiceCall $call, $async.Future<$3.DeleteDeviceLoRaWANRequest> $request) async {
+    return deleteDeviceLoRaWAN($call, await $request);
   }
 
-  $async.Future<$2.Empty> deleteDevice_Pre($grpc.ServiceCall call, $async.Future<$3.DeleteDeviceRequest> request) async {
-    return deleteDevice(call, await request);
+  $async.Future<$2.Empty> deleteDevice_Pre($grpc.ServiceCall $call, $async.Future<$3.DeleteDeviceRequest> $request) async {
+    return deleteDevice($call, await $request);
   }
 
-  $async.Future<$3.ListDevicesResponse> listDevices_Pre($grpc.ServiceCall call, $async.Future<$3.ListDevicesRequest> request) async {
-    return listDevices(call, await request);
+  $async.Future<$3.ListDevicesResponse> listDevices_Pre($grpc.ServiceCall $call, $async.Future<$3.ListDevicesRequest> $request) async {
+    return listDevices($call, await $request);
   }
 
   $async.Future<$3.Device> createDevice($grpc.ServiceCall call, $3.CreateDeviceRequest request);

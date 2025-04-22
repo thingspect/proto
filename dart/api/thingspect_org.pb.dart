@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: api/thingspect_org.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -15,6 +15,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../google/protobuf/field_mask.pb.dart' as $12;
 import '../google/protobuf/timestamp.pb.dart' as $10;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Org represents an organization as stored in the database.
 class Org extends $pb.GeneratedMessage {
@@ -90,7 +92,7 @@ class Org extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   /// Organization name.
   @$pb.TagNumber(2)
@@ -100,7 +102,7 @@ class Org extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearName() => clearField(2);
+  void clearName() => $_clearField(2);
 
   /// Organization display name. Used anywhere the organization is shown to a user, including web sites and alert sender fields.
   @$pb.TagNumber(3)
@@ -110,7 +112,7 @@ class Org extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasDisplayName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDisplayName() => clearField(3);
+  void clearDisplayName() => $_clearField(3);
 
   /// Organization email. Used as the 'From' address in email alerts.
   @$pb.TagNumber(4)
@@ -120,17 +122,17 @@ class Org extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasEmail() => $_has(3);
   @$pb.TagNumber(4)
-  void clearEmail() => clearField(4);
+  void clearEmail() => $_clearField(4);
 
   /// Organization creation timestamp.
   @$pb.TagNumber(5)
   $10.Timestamp get createdAt => $_getN(4);
   @$pb.TagNumber(5)
-  set createdAt($10.Timestamp v) { setField(5, v); }
+  set createdAt($10.Timestamp v) { $_setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasCreatedAt() => $_has(4);
   @$pb.TagNumber(5)
-  void clearCreatedAt() => clearField(5);
+  void clearCreatedAt() => $_clearField(5);
   @$pb.TagNumber(5)
   $10.Timestamp ensureCreatedAt() => $_ensure(4);
 
@@ -138,11 +140,11 @@ class Org extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $10.Timestamp get updatedAt => $_getN(5);
   @$pb.TagNumber(6)
-  set updatedAt($10.Timestamp v) { setField(6, v); }
+  set updatedAt($10.Timestamp v) { $_setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasUpdatedAt() => $_has(5);
   @$pb.TagNumber(6)
-  void clearUpdatedAt() => clearField(6);
+  void clearUpdatedAt() => $_clearField(6);
   @$pb.TagNumber(6)
   $10.Timestamp ensureUpdatedAt() => $_ensure(5);
 }
@@ -192,11 +194,11 @@ class CreateOrgRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Org get org => $_getN(0);
   @$pb.TagNumber(1)
-  set org(Org v) { setField(1, v); }
+  set org(Org v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasOrg() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOrg() => clearField(1);
+  void clearOrg() => $_clearField(1);
   @$pb.TagNumber(1)
   Org ensureOrg() => $_ensure(0);
 }
@@ -250,7 +252,7 @@ class GetOrgRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 }
 
 /// UpdateOrgRequest is sent to update an organization.
@@ -303,11 +305,11 @@ class UpdateOrgRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Org get org => $_getN(0);
   @$pb.TagNumber(1)
-  set org(Org v) { setField(1, v); }
+  set org(Org v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasOrg() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOrg() => clearField(1);
+  void clearOrg() => $_clearField(1);
   @$pb.TagNumber(1)
   Org ensureOrg() => $_ensure(0);
 
@@ -315,11 +317,11 @@ class UpdateOrgRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $12.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($12.FieldMask v) { setField(2, v); }
+  set updateMask($12.FieldMask v) { $_setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
+  void clearUpdateMask() => $_clearField(2);
   @$pb.TagNumber(2)
   $12.FieldMask ensureUpdateMask() => $_ensure(1);
 }
@@ -373,7 +375,7 @@ class DeleteOrgRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 }
 
 /// ListOrgsRequest is sent to list organizations.
@@ -430,7 +432,7 @@ class ListOrgsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasPageSize() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPageSize() => clearField(1);
+  void clearPageSize() => $_clearField(1);
 
   /// Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.
   @$pb.TagNumber(2)
@@ -440,7 +442,7 @@ class ListOrgsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageToken() => clearField(2);
+  void clearPageToken() => $_clearField(2);
 }
 
 /// ListOrgsResponse is sent in response to an organization list.
@@ -496,7 +498,7 @@ class ListOrgsResponse extends $pb.GeneratedMessage {
 
   /// Org array, ordered by ascending created_at timestamp.
   @$pb.TagNumber(1)
-  $core.List<Org> get orgs => $_getList(0);
+  $pb.PbList<Org> get orgs => $_getList(0);
 
   /// Pagination token used to retrieve the next page of results. Not returned for the last page.
   @$pb.TagNumber(2)
@@ -506,7 +508,7 @@ class ListOrgsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 
   /// Total number of organizations available.
   @$pb.TagNumber(3)
@@ -516,7 +518,7 @@ class ListOrgsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasTotalSize() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTotalSize() => clearField(3);
+  void clearTotalSize() => $_clearField(3);
 }
 
 

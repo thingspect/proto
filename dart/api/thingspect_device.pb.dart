@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: api/thingspect_device.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -17,6 +17,8 @@ import '../google/protobuf/field_mask.pb.dart' as $12;
 import '../google/protobuf/timestamp.pb.dart' as $10;
 import 'thingspect_device.pbenum.dart';
 import 'thingspect_status.pbenum.dart' as $13;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'thingspect_device.pbenum.dart';
 
@@ -114,7 +116,7 @@ class Device extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   /// Organization ID (UUID).
   @$pb.TagNumber(2)
@@ -124,7 +126,7 @@ class Device extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasOrgId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOrgId() => clearField(2);
+  void clearOrgId() => $_clearField(2);
 
   /// Device unique ID.
   @$pb.TagNumber(3)
@@ -134,7 +136,7 @@ class Device extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasUniqId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUniqId() => clearField(3);
+  void clearUniqId() => $_clearField(3);
 
   /// Device name.
   @$pb.TagNumber(4)
@@ -144,17 +146,17 @@ class Device extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearName() => clearField(4);
+  void clearName() => $_clearField(4);
 
   /// Device status.
   @$pb.TagNumber(5)
   $13.Status get status => $_getN(4);
   @$pb.TagNumber(5)
-  set status($13.Status v) { setField(5, v); }
+  set status($13.Status v) { $_setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasStatus() => $_has(4);
   @$pb.TagNumber(5)
-  void clearStatus() => clearField(5);
+  void clearStatus() => $_clearField(5);
 
   /// Authentication token (UUID). Will be generated at creation time, but can be updated afterward.
   @$pb.TagNumber(6)
@@ -164,31 +166,31 @@ class Device extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.bool hasToken() => $_has(5);
   @$pb.TagNumber(6)
-  void clearToken() => clearField(6);
+  void clearToken() => $_clearField(6);
 
   /// Device data payload decoder.
   @$pb.TagNumber(7)
   Decoder get decoder => $_getN(6);
   @$pb.TagNumber(7)
-  set decoder(Decoder v) { setField(7, v); }
+  set decoder(Decoder v) { $_setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasDecoder() => $_has(6);
   @$pb.TagNumber(7)
-  void clearDecoder() => clearField(7);
+  void clearDecoder() => $_clearField(7);
 
   /// Device tags. Nested tags should be delimited by '/'.
   @$pb.TagNumber(8)
-  $core.List<$core.String> get tags => $_getList(7);
+  $pb.PbList<$core.String> get tags => $_getList(7);
 
   /// Device creation timestamp.
   @$pb.TagNumber(9)
   $10.Timestamp get createdAt => $_getN(8);
   @$pb.TagNumber(9)
-  set createdAt($10.Timestamp v) { setField(9, v); }
+  set createdAt($10.Timestamp v) { $_setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasCreatedAt() => $_has(8);
   @$pb.TagNumber(9)
-  void clearCreatedAt() => clearField(9);
+  void clearCreatedAt() => $_clearField(9);
   @$pb.TagNumber(9)
   $10.Timestamp ensureCreatedAt() => $_ensure(8);
 
@@ -196,11 +198,11 @@ class Device extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $10.Timestamp get updatedAt => $_getN(9);
   @$pb.TagNumber(10)
-  set updatedAt($10.Timestamp v) { setField(10, v); }
+  set updatedAt($10.Timestamp v) { $_setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasUpdatedAt() => $_has(9);
   @$pb.TagNumber(10)
-  void clearUpdatedAt() => clearField(10);
+  void clearUpdatedAt() => $_clearField(10);
   @$pb.TagNumber(10)
   $10.Timestamp ensureUpdatedAt() => $_ensure(9);
 }
@@ -250,11 +252,11 @@ class CreateDeviceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Device get device => $_getN(0);
   @$pb.TagNumber(1)
-  set device(Device v) { setField(1, v); }
+  set device(Device v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasDevice() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDevice() => clearField(1);
+  void clearDevice() => $_clearField(1);
   @$pb.TagNumber(1)
   Device ensureDevice() => $_ensure(0);
 }
@@ -341,7 +343,7 @@ class CreateDeviceLoRaWANRequest_DeviceLoRaWANType extends $pb.GeneratedMessage 
   @$pb.TagNumber(1)
   $core.bool hasAppKey() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAppKey() => clearField(1);
+  void clearAppKey() => $_clearField(1);
 }
 
 enum CreateDeviceLoRaWANRequest_TypeOneof {
@@ -408,7 +410,7 @@ class CreateDeviceLoRaWANRequest extends $pb.GeneratedMessage {
   static CreateDeviceLoRaWANRequest? _defaultInstance;
 
   CreateDeviceLoRaWANRequest_TypeOneof whichTypeOneof() => _CreateDeviceLoRaWANRequest_TypeOneofByTag[$_whichOneof(0)]!;
-  void clearTypeOneof() => clearField($_whichOneof(0));
+  void clearTypeOneof() => $_clearField($_whichOneof(0));
 
   /// Device ID (UUID) to add LoRaWAN configuration.
   @$pb.TagNumber(1)
@@ -418,17 +420,17 @@ class CreateDeviceLoRaWANRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   /// Gateway LoRaWAN configuration type.
   @$pb.TagNumber(2)
   CreateDeviceLoRaWANRequest_GatewayLoRaWANType get gatewayLorawanType => $_getN(1);
   @$pb.TagNumber(2)
-  set gatewayLorawanType(CreateDeviceLoRaWANRequest_GatewayLoRaWANType v) { setField(2, v); }
+  set gatewayLorawanType(CreateDeviceLoRaWANRequest_GatewayLoRaWANType v) { $_setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasGatewayLorawanType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearGatewayLorawanType() => clearField(2);
+  void clearGatewayLorawanType() => $_clearField(2);
   @$pb.TagNumber(2)
   CreateDeviceLoRaWANRequest_GatewayLoRaWANType ensureGatewayLorawanType() => $_ensure(1);
 
@@ -436,11 +438,11 @@ class CreateDeviceLoRaWANRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   CreateDeviceLoRaWANRequest_DeviceLoRaWANType get deviceLorawanType => $_getN(2);
   @$pb.TagNumber(3)
-  set deviceLorawanType(CreateDeviceLoRaWANRequest_DeviceLoRaWANType v) { setField(3, v); }
+  set deviceLorawanType(CreateDeviceLoRaWANRequest_DeviceLoRaWANType v) { $_setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasDeviceLorawanType() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDeviceLorawanType() => clearField(3);
+  void clearDeviceLorawanType() => $_clearField(3);
   @$pb.TagNumber(3)
   CreateDeviceLoRaWANRequest_DeviceLoRaWANType ensureDeviceLorawanType() => $_ensure(2);
 }
@@ -494,7 +496,7 @@ class GetDeviceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 }
 
 /// UpdateDeviceRequest is sent to update a device.
@@ -547,11 +549,11 @@ class UpdateDeviceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Device get device => $_getN(0);
   @$pb.TagNumber(1)
-  set device(Device v) { setField(1, v); }
+  set device(Device v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasDevice() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDevice() => clearField(1);
+  void clearDevice() => $_clearField(1);
   @$pb.TagNumber(1)
   Device ensureDevice() => $_ensure(0);
 
@@ -559,11 +561,11 @@ class UpdateDeviceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $12.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($12.FieldMask v) { setField(2, v); }
+  set updateMask($12.FieldMask v) { $_setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
+  void clearUpdateMask() => $_clearField(2);
   @$pb.TagNumber(2)
   $12.FieldMask ensureUpdateMask() => $_ensure(1);
 }
@@ -617,7 +619,7 @@ class DeleteDeviceLoRaWANRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 }
 
 /// DeleteDeviceRequest is sent to delete a device.
@@ -669,7 +671,7 @@ class DeleteDeviceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 }
 
 /// ListDevicesRequest is sent to list devices.
@@ -731,7 +733,7 @@ class ListDevicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasPageSize() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPageSize() => clearField(1);
+  void clearPageSize() => $_clearField(1);
 
   /// Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.
   @$pb.TagNumber(2)
@@ -741,7 +743,7 @@ class ListDevicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageToken() => clearField(2);
+  void clearPageToken() => $_clearField(2);
 
   /// Device tag. If not specified, all tags are included.
   @$pb.TagNumber(3)
@@ -751,7 +753,7 @@ class ListDevicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasTag() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTag() => clearField(3);
+  void clearTag() => $_clearField(3);
 }
 
 /// ListDevicesResponse is sent in response to a device list.
@@ -807,7 +809,7 @@ class ListDevicesResponse extends $pb.GeneratedMessage {
 
   /// Device array, ordered by ascending created_at timestamp.
   @$pb.TagNumber(1)
-  $core.List<Device> get devices => $_getList(0);
+  $pb.PbList<Device> get devices => $_getList(0);
 
   /// Pagination token used to retrieve the next page of results. Not returned for the last page.
   @$pb.TagNumber(2)
@@ -817,7 +819,7 @@ class ListDevicesResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 
   /// Total number of devices available.
   @$pb.TagNumber(3)
@@ -827,7 +829,7 @@ class ListDevicesResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasTotalSize() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTotalSize() => clearField(3);
+  void clearTotalSize() => $_clearField(3);
 }
 
 

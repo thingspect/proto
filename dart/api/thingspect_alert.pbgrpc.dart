@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: api/thingspect_alert.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -51,8 +51,8 @@ abstract class AlertServiceBase extends $grpc.Service {
         ($0.ListAlertsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.ListAlertsResponse> listAlerts_Pre($grpc.ServiceCall call, $async.Future<$0.ListAlertsRequest> request) async {
-    return listAlerts(call, await request);
+  $async.Future<$0.ListAlertsResponse> listAlerts_Pre($grpc.ServiceCall $call, $async.Future<$0.ListAlertsRequest> $request) async {
+    return listAlerts($call, await $request);
   }
 
   $async.Future<$0.ListAlertsResponse> listAlerts($grpc.ServiceCall call, $0.ListAlertsRequest request);
