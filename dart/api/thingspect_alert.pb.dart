@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: api/thingspect_alert.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -15,6 +15,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../google/protobuf/timestamp.pb.dart' as $10;
 import 'thingspect_alert.pbenum.dart';
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'thingspect_alert.pbenum.dart';
 
@@ -102,7 +104,7 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasOrgId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOrgId() => clearField(1);
+  void clearOrgId() => $_clearField(1);
 
   /// Device unique ID.
   @$pb.TagNumber(2)
@@ -112,7 +114,7 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasUniqId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUniqId() => clearField(2);
+  void clearUniqId() => $_clearField(2);
 
   /// Alarm ID (UUID).
   @$pb.TagNumber(3)
@@ -122,7 +124,7 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasAlarmId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAlarmId() => clearField(3);
+  void clearAlarmId() => $_clearField(3);
 
   /// User ID (UUID).
   @$pb.TagNumber(4)
@@ -132,17 +134,17 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasUserId() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUserId() => clearField(4);
+  void clearUserId() => $_clearField(4);
 
   /// Alert status.
   @$pb.TagNumber(5)
   AlertStatus get status => $_getN(4);
   @$pb.TagNumber(5)
-  set status(AlertStatus v) { setField(5, v); }
+  set status(AlertStatus v) { $_setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasStatus() => $_has(4);
   @$pb.TagNumber(5)
-  void clearStatus() => clearField(5);
+  void clearStatus() => $_clearField(5);
 
   /// Error message. This field will be empty if no error was encountered.
   @$pb.TagNumber(6)
@@ -152,17 +154,17 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.bool hasError() => $_has(5);
   @$pb.TagNumber(6)
-  void clearError() => clearField(6);
+  void clearError() => $_clearField(6);
 
   /// Alert creation timestamp.
   @$pb.TagNumber(7)
   $10.Timestamp get createdAt => $_getN(6);
   @$pb.TagNumber(7)
-  set createdAt($10.Timestamp v) { setField(7, v); }
+  set createdAt($10.Timestamp v) { $_setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasCreatedAt() => $_has(6);
   @$pb.TagNumber(7)
-  void clearCreatedAt() => clearField(7);
+  void clearCreatedAt() => $_clearField(7);
   @$pb.TagNumber(7)
   $10.Timestamp ensureCreatedAt() => $_ensure(6);
 
@@ -174,7 +176,7 @@ class Alert extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.bool hasTraceId() => $_has(7);
   @$pb.TagNumber(8)
-  void clearTraceId() => clearField(8);
+  void clearTraceId() => $_clearField(8);
 }
 
 enum ListAlertsRequest_IdOneof {
@@ -256,7 +258,7 @@ class ListAlertsRequest extends $pb.GeneratedMessage {
   static ListAlertsRequest? _defaultInstance;
 
   ListAlertsRequest_IdOneof whichIdOneof() => _ListAlertsRequest_IdOneofByTag[$_whichOneof(0)]!;
-  void clearIdOneof() => clearField($_whichOneof(0));
+  void clearIdOneof() => $_clearField($_whichOneof(0));
 
   /// Device unique ID. If neither unique ID nor device ID are specified, all devices are included.
   @$pb.TagNumber(1)
@@ -266,7 +268,7 @@ class ListAlertsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasUniqId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUniqId() => clearField(1);
+  void clearUniqId() => $_clearField(1);
 
   /// Device ID (UUID). If neither unique ID nor device ID are specified, all devices are included.
   @$pb.TagNumber(2)
@@ -276,7 +278,7 @@ class ListAlertsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasDeviceId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDeviceId() => clearField(2);
+  void clearDeviceId() => $_clearField(2);
 
   /// Alarm ID (UUID). If not specified, all alarms are included.
   @$pb.TagNumber(3)
@@ -286,7 +288,7 @@ class ListAlertsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasAlarmId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAlarmId() => clearField(3);
+  void clearAlarmId() => $_clearField(3);
 
   /// User ID (UUID). If not specified, all users are included.
   @$pb.TagNumber(4)
@@ -296,17 +298,17 @@ class ListAlertsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasUserId() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUserId() => clearField(4);
+  void clearUserId() => $_clearField(4);
 
   /// Alerts range end time. Defaults to current time if not specified. Maximum supported time range is 90 days.
   @$pb.TagNumber(5)
   $10.Timestamp get endTime => $_getN(4);
   @$pb.TagNumber(5)
-  set endTime($10.Timestamp v) { setField(5, v); }
+  set endTime($10.Timestamp v) { $_setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasEndTime() => $_has(4);
   @$pb.TagNumber(5)
-  void clearEndTime() => clearField(5);
+  void clearEndTime() => $_clearField(5);
   @$pb.TagNumber(5)
   $10.Timestamp ensureEndTime() => $_ensure(4);
 
@@ -314,11 +316,11 @@ class ListAlertsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $10.Timestamp get startTime => $_getN(5);
   @$pb.TagNumber(6)
-  set startTime($10.Timestamp v) { setField(6, v); }
+  set startTime($10.Timestamp v) { $_setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasStartTime() => $_has(5);
   @$pb.TagNumber(6)
-  void clearStartTime() => clearField(6);
+  void clearStartTime() => $_clearField(6);
   @$pb.TagNumber(6)
   $10.Timestamp ensureStartTime() => $_ensure(5);
 }
@@ -366,7 +368,7 @@ class ListAlertsResponse extends $pb.GeneratedMessage {
 
   /// Alert array, ordered by descending created_at timestamp.
   @$pb.TagNumber(1)
-  $core.List<Alert> get alerts => $_getList(0);
+  $pb.PbList<Alert> get alerts => $_getList(0);
 }
 
 

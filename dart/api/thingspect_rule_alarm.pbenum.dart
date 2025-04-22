@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: api/thingspect_rule_alarm.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -15,9 +15,13 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 /// AlarmType represents the type of an alarm.
 class AlarmType extends $pb.ProtobufEnum {
+  /// Alarm type is not specified.
   static const AlarmType ALARM_TYPE_UNSPECIFIED = AlarmType._(0, _omitEnumNames ? '' : 'ALARM_TYPE_UNSPECIFIED');
+  /// Push notification via mobile application.
   static const AlarmType APP = AlarmType._(1, _omitEnumNames ? '' : 'APP');
+  /// SMS notification.
   static const AlarmType SMS = AlarmType._(2, _omitEnumNames ? '' : 'SMS');
+  /// Email notification.
   static const AlarmType EMAIL = AlarmType._(3, _omitEnumNames ? '' : 'EMAIL');
 
   static const $core.List<AlarmType> values = <AlarmType> [
@@ -30,7 +34,7 @@ class AlarmType extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, AlarmType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static AlarmType? valueOf($core.int value) => _byValue[value];
 
-  const AlarmType._($core.int v, $core.String n) : super(v, n);
+  const AlarmType._(super.v, super.n);
 }
 
 

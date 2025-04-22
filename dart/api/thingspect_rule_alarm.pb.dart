@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: api/thingspect_rule_alarm.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -19,6 +19,8 @@ import '../google/protobuf/timestamp.pb.dart' as $10;
 import 'thingspect_device.pb.dart' as $3;
 import 'thingspect_rule_alarm.pbenum.dart';
 import 'thingspect_status.pbenum.dart' as $13;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'thingspect_rule_alarm.pbenum.dart';
 
@@ -111,7 +113,7 @@ class Rule extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   /// Organization ID (UUID).
   @$pb.TagNumber(2)
@@ -121,7 +123,7 @@ class Rule extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasOrgId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOrgId() => clearField(2);
+  void clearOrgId() => $_clearField(2);
 
   /// Rule name.
   @$pb.TagNumber(3)
@@ -131,17 +133,17 @@ class Rule extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasName() => $_has(2);
   @$pb.TagNumber(3)
-  void clearName() => clearField(3);
+  void clearName() => $_clearField(3);
 
   /// Rule status.
   @$pb.TagNumber(4)
   $13.Status get status => $_getN(3);
   @$pb.TagNumber(4)
-  set status($13.Status v) { setField(4, v); }
+  set status($13.Status v) { $_setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasStatus() => $_has(3);
   @$pb.TagNumber(4)
-  void clearStatus() => clearField(4);
+  void clearStatus() => $_clearField(4);
 
   /// Device tag to which the rule applies.
   @$pb.TagNumber(5)
@@ -151,7 +153,7 @@ class Rule extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasDeviceTag() => $_has(4);
   @$pb.TagNumber(5)
-  void clearDeviceTag() => clearField(5);
+  void clearDeviceTag() => $_clearField(5);
 
   /// Data point attribute to which the rule applies.
   @$pb.TagNumber(6)
@@ -161,7 +163,7 @@ class Rule extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.bool hasAttr() => $_has(5);
   @$pb.TagNumber(6)
-  void clearAttr() => clearField(6);
+  void clearAttr() => $_clearField(6);
 
   /// Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://expr-lang.org/).
   @$pb.TagNumber(7)
@@ -171,17 +173,17 @@ class Rule extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.bool hasExpr() => $_has(6);
   @$pb.TagNumber(7)
-  void clearExpr() => clearField(7);
+  void clearExpr() => $_clearField(7);
 
   /// Rule creation timestamp.
   @$pb.TagNumber(8)
   $10.Timestamp get createdAt => $_getN(7);
   @$pb.TagNumber(8)
-  set createdAt($10.Timestamp v) { setField(8, v); }
+  set createdAt($10.Timestamp v) { $_setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasCreatedAt() => $_has(7);
   @$pb.TagNumber(8)
-  void clearCreatedAt() => clearField(8);
+  void clearCreatedAt() => $_clearField(8);
   @$pb.TagNumber(8)
   $10.Timestamp ensureCreatedAt() => $_ensure(7);
 
@@ -189,11 +191,11 @@ class Rule extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $10.Timestamp get updatedAt => $_getN(8);
   @$pb.TagNumber(9)
-  set updatedAt($10.Timestamp v) { setField(9, v); }
+  set updatedAt($10.Timestamp v) { $_setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasUpdatedAt() => $_has(8);
   @$pb.TagNumber(9)
-  void clearUpdatedAt() => clearField(9);
+  void clearUpdatedAt() => $_clearField(9);
   @$pb.TagNumber(9)
   $10.Timestamp ensureUpdatedAt() => $_ensure(8);
 }
@@ -243,11 +245,11 @@ class CreateRuleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Rule get rule => $_getN(0);
   @$pb.TagNumber(1)
-  set rule(Rule v) { setField(1, v); }
+  set rule(Rule v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasRule() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRule() => clearField(1);
+  void clearRule() => $_clearField(1);
   @$pb.TagNumber(1)
   Rule ensureRule() => $_ensure(0);
 }
@@ -301,7 +303,7 @@ class GetRuleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 }
 
 /// UpdateRuleRequest is sent to update a rule.
@@ -354,11 +356,11 @@ class UpdateRuleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Rule get rule => $_getN(0);
   @$pb.TagNumber(1)
-  set rule(Rule v) { setField(1, v); }
+  set rule(Rule v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasRule() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRule() => clearField(1);
+  void clearRule() => $_clearField(1);
   @$pb.TagNumber(1)
   Rule ensureRule() => $_ensure(0);
 
@@ -366,11 +368,11 @@ class UpdateRuleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $12.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($12.FieldMask v) { setField(2, v); }
+  set updateMask($12.FieldMask v) { $_setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
+  void clearUpdateMask() => $_clearField(2);
   @$pb.TagNumber(2)
   $12.FieldMask ensureUpdateMask() => $_ensure(1);
 }
@@ -424,7 +426,7 @@ class DeleteRuleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 }
 
 /// ListRulesRequest is sent to list rules.
@@ -481,7 +483,7 @@ class ListRulesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasPageSize() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPageSize() => clearField(1);
+  void clearPageSize() => $_clearField(1);
 
   /// Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.
   @$pb.TagNumber(2)
@@ -491,7 +493,7 @@ class ListRulesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageToken() => clearField(2);
+  void clearPageToken() => $_clearField(2);
 }
 
 /// ListRulesResponse is sent in response to a rule list.
@@ -547,7 +549,7 @@ class ListRulesResponse extends $pb.GeneratedMessage {
 
   /// Rule array, ordered by ascending created_at timestamp.
   @$pb.TagNumber(1)
-  $core.List<Rule> get rules => $_getList(0);
+  $pb.PbList<Rule> get rules => $_getList(0);
 
   /// Pagination token used to retrieve the next page of results. Not returned for the last page.
   @$pb.TagNumber(2)
@@ -557,7 +559,7 @@ class ListRulesResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 
   /// Total number of rules available.
   @$pb.TagNumber(3)
@@ -567,7 +569,7 @@ class ListRulesResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasTotalSize() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTotalSize() => clearField(3);
+  void clearTotalSize() => $_clearField(3);
 }
 
 /// TestRuleRequest is sent to test a rule.
@@ -620,11 +622,11 @@ class TestRuleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $11.DataPoint get point => $_getN(0);
   @$pb.TagNumber(1)
-  set point($11.DataPoint v) { setField(1, v); }
+  set point($11.DataPoint v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPoint() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPoint() => clearField(1);
+  void clearPoint() => $_clearField(1);
   @$pb.TagNumber(1)
   $11.DataPoint ensurePoint() => $_ensure(0);
 
@@ -632,11 +634,11 @@ class TestRuleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Rule get rule => $_getN(1);
   @$pb.TagNumber(2)
-  set rule(Rule v) { setField(2, v); }
+  set rule(Rule v) { $_setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasRule() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRule() => clearField(2);
+  void clearRule() => $_clearField(2);
   @$pb.TagNumber(2)
   Rule ensureRule() => $_ensure(1);
 }
@@ -690,7 +692,7 @@ class TestRuleResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasResult() => $_has(0);
   @$pb.TagNumber(1)
-  void clearResult() => clearField(1);
+  void clearResult() => $_clearField(1);
 }
 
 /// Alarm represents an alarm as stored in the database.
@@ -797,7 +799,7 @@ class Alarm extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   /// Organization ID (UUID).
   @$pb.TagNumber(2)
@@ -807,7 +809,7 @@ class Alarm extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasOrgId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearOrgId() => clearField(2);
+  void clearOrgId() => $_clearField(2);
 
   /// Rule ID (UUID).
   @$pb.TagNumber(3)
@@ -817,7 +819,7 @@ class Alarm extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasRuleId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearRuleId() => clearField(3);
+  void clearRuleId() => $_clearField(3);
 
   /// Alarm name.
   @$pb.TagNumber(4)
@@ -827,31 +829,31 @@ class Alarm extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearName() => clearField(4);
+  void clearName() => $_clearField(4);
 
   /// Alarm status.
   @$pb.TagNumber(5)
   $13.Status get status => $_getN(4);
   @$pb.TagNumber(5)
-  set status($13.Status v) { setField(5, v); }
+  set status($13.Status v) { $_setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasStatus() => $_has(4);
   @$pb.TagNumber(5)
-  void clearStatus() => clearField(5);
+  void clearStatus() => $_clearField(5);
 
   /// Alarm type.
   @$pb.TagNumber(6)
   AlarmType get type => $_getN(5);
   @$pb.TagNumber(6)
-  set type(AlarmType v) { setField(6, v); }
+  set type(AlarmType v) { $_setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasType() => $_has(5);
   @$pb.TagNumber(6)
-  void clearType() => clearField(6);
+  void clearType() => $_clearField(6);
 
   /// User tags to whom alerts are sent.
   @$pb.TagNumber(7)
-  $core.List<$core.String> get userTags => $_getList(6);
+  $pb.PbList<$core.String> get userTags => $_getList(6);
 
   /// Alarm subject template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
   @$pb.TagNumber(8)
@@ -861,7 +863,7 @@ class Alarm extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.bool hasSubjectTemplate() => $_has(7);
   @$pb.TagNumber(8)
-  void clearSubjectTemplate() => clearField(8);
+  void clearSubjectTemplate() => $_clearField(8);
 
   /// Alarm body template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
   @$pb.TagNumber(9)
@@ -871,7 +873,7 @@ class Alarm extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.bool hasBodyTemplate() => $_has(8);
   @$pb.TagNumber(9)
-  void clearBodyTemplate() => clearField(9);
+  void clearBodyTemplate() => $_clearField(9);
 
   /// Alarm repeat interval, in minutes, per device. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
   @$pb.TagNumber(10)
@@ -881,17 +883,17 @@ class Alarm extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $core.bool hasRepeatInterval() => $_has(9);
   @$pb.TagNumber(10)
-  void clearRepeatInterval() => clearField(10);
+  void clearRepeatInterval() => $_clearField(10);
 
   /// Alarm creation timestamp.
   @$pb.TagNumber(11)
   $10.Timestamp get createdAt => $_getN(10);
   @$pb.TagNumber(11)
-  set createdAt($10.Timestamp v) { setField(11, v); }
+  set createdAt($10.Timestamp v) { $_setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasCreatedAt() => $_has(10);
   @$pb.TagNumber(11)
-  void clearCreatedAt() => clearField(11);
+  void clearCreatedAt() => $_clearField(11);
   @$pb.TagNumber(11)
   $10.Timestamp ensureCreatedAt() => $_ensure(10);
 
@@ -899,11 +901,11 @@ class Alarm extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $10.Timestamp get updatedAt => $_getN(11);
   @$pb.TagNumber(12)
-  set updatedAt($10.Timestamp v) { setField(12, v); }
+  set updatedAt($10.Timestamp v) { $_setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasUpdatedAt() => $_has(11);
   @$pb.TagNumber(12)
-  void clearUpdatedAt() => clearField(12);
+  void clearUpdatedAt() => $_clearField(12);
   @$pb.TagNumber(12)
   $10.Timestamp ensureUpdatedAt() => $_ensure(11);
 }
@@ -953,11 +955,11 @@ class CreateAlarmRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Alarm get alarm => $_getN(0);
   @$pb.TagNumber(1)
-  set alarm(Alarm v) { setField(1, v); }
+  set alarm(Alarm v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAlarm() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAlarm() => clearField(1);
+  void clearAlarm() => $_clearField(1);
   @$pb.TagNumber(1)
   Alarm ensureAlarm() => $_ensure(0);
 }
@@ -1016,7 +1018,7 @@ class GetAlarmRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   /// Rule ID (UUID).
   @$pb.TagNumber(2)
@@ -1026,7 +1028,7 @@ class GetAlarmRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasRuleId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRuleId() => clearField(2);
+  void clearRuleId() => $_clearField(2);
 }
 
 /// UpdateAlarmRequest is sent to update an alarm.
@@ -1079,11 +1081,11 @@ class UpdateAlarmRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Alarm get alarm => $_getN(0);
   @$pb.TagNumber(1)
-  set alarm(Alarm v) { setField(1, v); }
+  set alarm(Alarm v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasAlarm() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAlarm() => clearField(1);
+  void clearAlarm() => $_clearField(1);
   @$pb.TagNumber(1)
   Alarm ensureAlarm() => $_ensure(0);
 
@@ -1091,11 +1093,11 @@ class UpdateAlarmRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $12.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($12.FieldMask v) { setField(2, v); }
+  set updateMask($12.FieldMask v) { $_setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUpdateMask() => clearField(2);
+  void clearUpdateMask() => $_clearField(2);
   @$pb.TagNumber(2)
   $12.FieldMask ensureUpdateMask() => $_ensure(1);
 }
@@ -1154,7 +1156,7 @@ class DeleteAlarmRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   /// Rule ID (UUID).
   @$pb.TagNumber(2)
@@ -1164,7 +1166,7 @@ class DeleteAlarmRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasRuleId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRuleId() => clearField(2);
+  void clearRuleId() => $_clearField(2);
 }
 
 /// ListAlarmsRequest is sent to list alarms.
@@ -1226,7 +1228,7 @@ class ListAlarmsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasPageSize() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPageSize() => clearField(1);
+  void clearPageSize() => $_clearField(1);
 
   /// Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.
   @$pb.TagNumber(2)
@@ -1236,7 +1238,7 @@ class ListAlarmsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPageToken() => clearField(2);
+  void clearPageToken() => $_clearField(2);
 
   /// Rule ID (UUID). If not specified, all rules are included.
   @$pb.TagNumber(3)
@@ -1246,7 +1248,7 @@ class ListAlarmsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasRuleId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearRuleId() => clearField(3);
+  void clearRuleId() => $_clearField(3);
 }
 
 /// ListAlarmsResponse is sent in response to an alarm list.
@@ -1302,7 +1304,7 @@ class ListAlarmsResponse extends $pb.GeneratedMessage {
 
   /// Alarm array, ordered by ascending created_at timestamp.
   @$pb.TagNumber(1)
-  $core.List<Alarm> get alarms => $_getList(0);
+  $pb.PbList<Alarm> get alarms => $_getList(0);
 
   /// Pagination token used to retrieve the next page of results. Not returned for the last page.
   @$pb.TagNumber(2)
@@ -1312,7 +1314,7 @@ class ListAlarmsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNextPageToken() => clearField(2);
+  void clearNextPageToken() => $_clearField(2);
 
   /// Total number of alarms available.
   @$pb.TagNumber(3)
@@ -1322,7 +1324,7 @@ class ListAlarmsResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasTotalSize() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTotalSize() => clearField(3);
+  void clearTotalSize() => $_clearField(3);
 }
 
 /// TestAlarmRequest is sent to test an alarm.
@@ -1385,11 +1387,11 @@ class TestAlarmRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $11.DataPoint get point => $_getN(0);
   @$pb.TagNumber(1)
-  set point($11.DataPoint v) { setField(1, v); }
+  set point($11.DataPoint v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPoint() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPoint() => clearField(1);
+  void clearPoint() => $_clearField(1);
   @$pb.TagNumber(1)
   $11.DataPoint ensurePoint() => $_ensure(0);
 
@@ -1397,11 +1399,11 @@ class TestAlarmRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Rule get rule => $_getN(1);
   @$pb.TagNumber(2)
-  set rule(Rule v) { setField(2, v); }
+  set rule(Rule v) { $_setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasRule() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRule() => clearField(2);
+  void clearRule() => $_clearField(2);
   @$pb.TagNumber(2)
   Rule ensureRule() => $_ensure(1);
 
@@ -1409,11 +1411,11 @@ class TestAlarmRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $3.Device get device => $_getN(2);
   @$pb.TagNumber(3)
-  set device($3.Device v) { setField(3, v); }
+  set device($3.Device v) { $_setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasDevice() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDevice() => clearField(3);
+  void clearDevice() => $_clearField(3);
   @$pb.TagNumber(3)
   $3.Device ensureDevice() => $_ensure(2);
 
@@ -1421,11 +1423,11 @@ class TestAlarmRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   Alarm get alarm => $_getN(3);
   @$pb.TagNumber(4)
-  set alarm(Alarm v) { setField(4, v); }
+  set alarm(Alarm v) { $_setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasAlarm() => $_has(3);
   @$pb.TagNumber(4)
-  void clearAlarm() => clearField(4);
+  void clearAlarm() => $_clearField(4);
   @$pb.TagNumber(4)
   Alarm ensureAlarm() => $_ensure(3);
 }
@@ -1479,7 +1481,7 @@ class TestAlarmResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasResult() => $_has(0);
   @$pb.TagNumber(1)
-  void clearResult() => clearField(1);
+  void clearResult() => $_clearField(1);
 }
 
 

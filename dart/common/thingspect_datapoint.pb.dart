@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: common/thingspect_datapoint.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,6 +14,8 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../google/protobuf/timestamp.pb.dart' as $0;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 enum DataPoint_ValOneof {
   intVal, 
@@ -120,7 +122,7 @@ class DataPoint extends $pb.GeneratedMessage {
   static DataPoint? _defaultInstance;
 
   DataPoint_ValOneof whichValOneof() => _DataPoint_ValOneofByTag[$_whichOneof(0)]!;
-  void clearValOneof() => clearField($_whichOneof(0));
+  void clearValOneof() => $_clearField($_whichOneof(0));
 
   /// Device unique ID. Ignored during MQTT ingest if provided as part of the topic. Required for API publish.
   @$pb.TagNumber(1)
@@ -130,7 +132,7 @@ class DataPoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasUniqId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUniqId() => clearField(1);
+  void clearUniqId() => $_clearField(1);
 
   /// Device attribute.
   @$pb.TagNumber(2)
@@ -140,7 +142,7 @@ class DataPoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasAttr() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAttr() => clearField(2);
+  void clearAttr() => $_clearField(2);
 
   /// Integer value, 32-bit.
   @$pb.TagNumber(3)
@@ -150,7 +152,7 @@ class DataPoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasIntVal() => $_has(2);
   @$pb.TagNumber(3)
-  void clearIntVal() => clearField(3);
+  void clearIntVal() => $_clearField(3);
 
   /// Float value, 64-bit.
   @$pb.TagNumber(4)
@@ -160,7 +162,7 @@ class DataPoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasFl64Val() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFl64Val() => clearField(4);
+  void clearFl64Val() => $_clearField(4);
 
   /// String value.
   @$pb.TagNumber(5)
@@ -170,7 +172,7 @@ class DataPoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasStrVal() => $_has(4);
   @$pb.TagNumber(5)
-  void clearStrVal() => clearField(5);
+  void clearStrVal() => $_clearField(5);
 
   /// Boolean value.
   @$pb.TagNumber(6)
@@ -180,17 +182,17 @@ class DataPoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.bool hasBoolVal() => $_has(5);
   @$pb.TagNumber(6)
-  void clearBoolVal() => clearField(6);
+  void clearBoolVal() => $_clearField(6);
 
   /// Timestamp. If not present during MQTT ingest or API publish, the current time will be used.
   @$pb.TagNumber(7)
   $0.Timestamp get ts => $_getN(6);
   @$pb.TagNumber(7)
-  set ts($0.Timestamp v) { setField(7, v); }
+  set ts($0.Timestamp v) { $_setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasTs() => $_has(6);
   @$pb.TagNumber(7)
-  void clearTs() => clearField(7);
+  void clearTs() => $_clearField(7);
   @$pb.TagNumber(7)
   $0.Timestamp ensureTs() => $_ensure(6);
 
@@ -202,7 +204,7 @@ class DataPoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.bool hasToken() => $_has(7);
   @$pb.TagNumber(8)
-  void clearToken() => clearField(8);
+  void clearToken() => $_clearField(8);
 
   /// Trace ID (UUID). Assigned by the platform, will be ignored if provided during MQTT ingest or API publish.
   @$pb.TagNumber(9)
@@ -212,7 +214,7 @@ class DataPoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.bool hasTraceId() => $_has(8);
   @$pb.TagNumber(9)
-  void clearTraceId() => clearField(9);
+  void clearTraceId() => $_clearField(9);
 
   /// Bytes value. When used in JSON, the value will be represented as a base64 string.
   @$pb.TagNumber(16)
@@ -222,7 +224,7 @@ class DataPoint extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   $core.bool hasBytesVal() => $_has(9);
   @$pb.TagNumber(16)
-  void clearBytesVal() => clearField(16);
+  void clearBytesVal() => $_clearField(16);
 }
 
 

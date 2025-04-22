@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: api/thingspect_datapoint.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -82,16 +82,16 @@ abstract class DataPointServiceBase extends $grpc.Service {
         ($1.LatestDataPointsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$2.Empty> publishDataPoints_Pre($grpc.ServiceCall call, $async.Future<$1.PublishDataPointsRequest> request) async {
-    return publishDataPoints(call, await request);
+  $async.Future<$2.Empty> publishDataPoints_Pre($grpc.ServiceCall $call, $async.Future<$1.PublishDataPointsRequest> $request) async {
+    return publishDataPoints($call, await $request);
   }
 
-  $async.Future<$1.ListDataPointsResponse> listDataPoints_Pre($grpc.ServiceCall call, $async.Future<$1.ListDataPointsRequest> request) async {
-    return listDataPoints(call, await request);
+  $async.Future<$1.ListDataPointsResponse> listDataPoints_Pre($grpc.ServiceCall $call, $async.Future<$1.ListDataPointsRequest> $request) async {
+    return listDataPoints($call, await $request);
   }
 
-  $async.Future<$1.LatestDataPointsResponse> latestDataPoints_Pre($grpc.ServiceCall call, $async.Future<$1.LatestDataPointsRequest> request) async {
-    return latestDataPoints(call, await request);
+  $async.Future<$1.LatestDataPointsResponse> latestDataPoints_Pre($grpc.ServiceCall $call, $async.Future<$1.LatestDataPointsRequest> $request) async {
+    return latestDataPoints($call, await $request);
   }
 
   $async.Future<$2.Empty> publishDataPoints($grpc.ServiceCall call, $1.PublishDataPointsRequest request);

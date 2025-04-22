@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: api/thingspect_rule_alarm.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -217,52 +217,52 @@ abstract class RuleAlarmServiceBase extends $grpc.Service {
         ($6.TestAlarmResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$6.Rule> createRule_Pre($grpc.ServiceCall call, $async.Future<$6.CreateRuleRequest> request) async {
-    return createRule(call, await request);
+  $async.Future<$6.Rule> createRule_Pre($grpc.ServiceCall $call, $async.Future<$6.CreateRuleRequest> $request) async {
+    return createRule($call, await $request);
   }
 
-  $async.Future<$6.Alarm> createAlarm_Pre($grpc.ServiceCall call, $async.Future<$6.CreateAlarmRequest> request) async {
-    return createAlarm(call, await request);
+  $async.Future<$6.Alarm> createAlarm_Pre($grpc.ServiceCall $call, $async.Future<$6.CreateAlarmRequest> $request) async {
+    return createAlarm($call, await $request);
   }
 
-  $async.Future<$6.Rule> getRule_Pre($grpc.ServiceCall call, $async.Future<$6.GetRuleRequest> request) async {
-    return getRule(call, await request);
+  $async.Future<$6.Rule> getRule_Pre($grpc.ServiceCall $call, $async.Future<$6.GetRuleRequest> $request) async {
+    return getRule($call, await $request);
   }
 
-  $async.Future<$6.Alarm> getAlarm_Pre($grpc.ServiceCall call, $async.Future<$6.GetAlarmRequest> request) async {
-    return getAlarm(call, await request);
+  $async.Future<$6.Alarm> getAlarm_Pre($grpc.ServiceCall $call, $async.Future<$6.GetAlarmRequest> $request) async {
+    return getAlarm($call, await $request);
   }
 
-  $async.Future<$6.Rule> updateRule_Pre($grpc.ServiceCall call, $async.Future<$6.UpdateRuleRequest> request) async {
-    return updateRule(call, await request);
+  $async.Future<$6.Rule> updateRule_Pre($grpc.ServiceCall $call, $async.Future<$6.UpdateRuleRequest> $request) async {
+    return updateRule($call, await $request);
   }
 
-  $async.Future<$6.Alarm> updateAlarm_Pre($grpc.ServiceCall call, $async.Future<$6.UpdateAlarmRequest> request) async {
-    return updateAlarm(call, await request);
+  $async.Future<$6.Alarm> updateAlarm_Pre($grpc.ServiceCall $call, $async.Future<$6.UpdateAlarmRequest> $request) async {
+    return updateAlarm($call, await $request);
   }
 
-  $async.Future<$2.Empty> deleteRule_Pre($grpc.ServiceCall call, $async.Future<$6.DeleteRuleRequest> request) async {
-    return deleteRule(call, await request);
+  $async.Future<$2.Empty> deleteRule_Pre($grpc.ServiceCall $call, $async.Future<$6.DeleteRuleRequest> $request) async {
+    return deleteRule($call, await $request);
   }
 
-  $async.Future<$2.Empty> deleteAlarm_Pre($grpc.ServiceCall call, $async.Future<$6.DeleteAlarmRequest> request) async {
-    return deleteAlarm(call, await request);
+  $async.Future<$2.Empty> deleteAlarm_Pre($grpc.ServiceCall $call, $async.Future<$6.DeleteAlarmRequest> $request) async {
+    return deleteAlarm($call, await $request);
   }
 
-  $async.Future<$6.ListRulesResponse> listRules_Pre($grpc.ServiceCall call, $async.Future<$6.ListRulesRequest> request) async {
-    return listRules(call, await request);
+  $async.Future<$6.ListRulesResponse> listRules_Pre($grpc.ServiceCall $call, $async.Future<$6.ListRulesRequest> $request) async {
+    return listRules($call, await $request);
   }
 
-  $async.Future<$6.ListAlarmsResponse> listAlarms_Pre($grpc.ServiceCall call, $async.Future<$6.ListAlarmsRequest> request) async {
-    return listAlarms(call, await request);
+  $async.Future<$6.ListAlarmsResponse> listAlarms_Pre($grpc.ServiceCall $call, $async.Future<$6.ListAlarmsRequest> $request) async {
+    return listAlarms($call, await $request);
   }
 
-  $async.Future<$6.TestRuleResponse> testRule_Pre($grpc.ServiceCall call, $async.Future<$6.TestRuleRequest> request) async {
-    return testRule(call, await request);
+  $async.Future<$6.TestRuleResponse> testRule_Pre($grpc.ServiceCall $call, $async.Future<$6.TestRuleRequest> $request) async {
+    return testRule($call, await $request);
   }
 
-  $async.Future<$6.TestAlarmResponse> testAlarm_Pre($grpc.ServiceCall call, $async.Future<$6.TestAlarmRequest> request) async {
-    return testAlarm(call, await request);
+  $async.Future<$6.TestAlarmResponse> testAlarm_Pre($grpc.ServiceCall $call, $async.Future<$6.TestAlarmRequest> $request) async {
+    return testAlarm($call, await $request);
   }
 
   $async.Future<$6.Rule> createRule($grpc.ServiceCall call, $6.CreateRuleRequest request);

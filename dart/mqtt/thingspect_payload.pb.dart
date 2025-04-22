@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: mqtt/thingspect_payload.proto
 //
-// @dart = 2.12
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,6 +14,8 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../common/thingspect_datapoint.pb.dart' as $0;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 /// Payload represents an array of one or more data points and an authentication token.
 class Payload extends $pb.GeneratedMessage {
@@ -63,7 +65,7 @@ class Payload extends $pb.GeneratedMessage {
 
   /// Data point array.
   @$pb.TagNumber(1)
-  $core.List<$0.DataPoint> get points => $_getList(0);
+  $pb.PbList<$0.DataPoint> get points => $_getList(0);
 
   /// Authentication token (UUID). If all data points pertain to the same UniqID, the token can be provided a single time here.
   @$pb.TagNumber(2)
@@ -73,7 +75,7 @@ class Payload extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasToken() => $_has(1);
   @$pb.TagNumber(2)
-  void clearToken() => clearField(2);
+  void clearToken() => $_clearField(2);
 }
 
 
