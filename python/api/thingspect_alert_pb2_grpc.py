@@ -19,7 +19,7 @@ class AlertServiceStub(object):
                 '/thingspect.api.AlertService/ListAlerts',
                 request_serializer=api_dot_thingspect__alert__pb2.ListAlertsRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__alert__pb2.ListAlertsResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class AlertServiceServicer(object):
@@ -45,6 +45,7 @@ def add_AlertServiceServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'thingspect.api.AlertService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('thingspect.api.AlertService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -63,8 +64,18 @@ class AlertService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.AlertService/ListAlerts',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.AlertService/ListAlerts',
             api_dot_thingspect__alert__pb2.ListAlertsRequest.SerializeToString,
             api_dot_thingspect__alert__pb2.ListAlertsResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: api/thingspect_device.proto
-//
+// Generated from api/thingspect_device.proto.
+
 // @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -42,12 +44,43 @@ const Device$json = {
     {'1': 'org_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'orgID'},
     {'1': 'uniq_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'uniqID'},
     {'1': 'name', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'name'},
-    {'1': 'status', '3': 5, '4': 1, '5': 14, '6': '.thingspect.api.Status', '8': {}, '10': 'status'},
+    {
+      '1': 'status',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.thingspect.api.Status',
+      '8': {},
+      '10': 'status'
+    },
     {'1': 'token', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'token'},
-    {'1': 'decoder', '3': 7, '4': 1, '5': 14, '6': '.thingspect.api.Decoder', '10': 'decoder'},
+    {
+      '1': 'decoder',
+      '3': 7,
+      '4': 1,
+      '5': 14,
+      '6': '.thingspect.api.Decoder',
+      '10': 'decoder'
+    },
     {'1': 'tags', '3': 8, '4': 3, '5': 9, '8': {}, '10': 'tags'},
-    {'1': 'created_at', '3': 9, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '8': {}, '10': 'createdAt'},
-    {'1': 'updated_at', '3': 10, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '8': {}, '10': 'updatedAt'},
+    {
+      '1': 'created_at',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': {},
+      '10': 'createdAt'
+    },
+    {
+      '1': 'updated_at',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': {},
+      '10': 'updatedAt'
+    },
   ],
 };
 
@@ -66,7 +99,15 @@ final $typed_data.Uint8List deviceDescriptor = $convert.base64Decode(
 const CreateDeviceRequest$json = {
   '1': 'CreateDeviceRequest',
   '2': [
-    {'1': 'device', '3': 1, '4': 1, '5': 11, '6': '.thingspect.api.Device', '8': {}, '10': 'device'},
+    {
+      '1': 'device',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.thingspect.api.Device',
+      '8': {},
+      '10': 'device'
+    },
   ],
 };
 
@@ -80,10 +121,29 @@ const CreateDeviceLoRaWANRequest$json = {
   '1': 'CreateDeviceLoRaWANRequest',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'id'},
-    {'1': 'gateway_lorawan_type', '3': 2, '4': 1, '5': 11, '6': '.thingspect.api.CreateDeviceLoRaWANRequest.GatewayLoRaWANType', '9': 0, '10': 'gatewayLoRaWANType'},
-    {'1': 'device_lorawan_type', '3': 3, '4': 1, '5': 11, '6': '.thingspect.api.CreateDeviceLoRaWANRequest.DeviceLoRaWANType', '9': 0, '10': 'deviceLoRaWANType'},
+    {
+      '1': 'gateway_lorawan_type',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.thingspect.api.CreateDeviceLoRaWANRequest.GatewayLoRaWANType',
+      '9': 0,
+      '10': 'gatewayLoRaWANType'
+    },
+    {
+      '1': 'device_lorawan_type',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.thingspect.api.CreateDeviceLoRaWANRequest.DeviceLoRaWANType',
+      '9': 0,
+      '10': 'deviceLoRaWANType'
+    },
   ],
-  '3': [CreateDeviceLoRaWANRequest_GatewayLoRaWANType$json, CreateDeviceLoRaWANRequest_DeviceLoRaWANType$json],
+  '3': [
+    CreateDeviceLoRaWANRequest_GatewayLoRaWANType$json,
+    CreateDeviceLoRaWANRequest_DeviceLoRaWANType$json
+  ],
   '8': [
     {'1': 'type_oneof', '2': {}},
   ],
@@ -128,8 +188,23 @@ final $typed_data.Uint8List getDeviceRequestDescriptor = $convert.base64Decode(
 const UpdateDeviceRequest$json = {
   '1': 'UpdateDeviceRequest',
   '2': [
-    {'1': 'device', '3': 1, '4': 1, '5': 11, '6': '.thingspect.api.Device', '8': {}, '10': 'device'},
-    {'1': 'update_mask', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
+    {
+      '1': 'device',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.thingspect.api.Device',
+      '8': {},
+      '10': 'device'
+    },
+    {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
   ],
 };
 
@@ -148,9 +223,10 @@ const DeleteDeviceLoRaWANRequest$json = {
 };
 
 /// Descriptor for `DeleteDeviceLoRaWANRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List deleteDeviceLoRaWANRequestDescriptor = $convert.base64Decode(
-    'ChpEZWxldGVEZXZpY2VMb1JhV0FOUmVxdWVzdBIbCgJpZBgBIAEoCUIL+kIFcgOwAQHgQQJSAm'
-    'lk');
+final $typed_data.Uint8List deleteDeviceLoRaWANRequestDescriptor =
+    $convert.base64Decode(
+        'ChpEZWxldGVEZXZpY2VMb1JhV0FOUmVxdWVzdBIbCgJpZBgBIAEoCUIL+kIFcgOwAQHgQQJSAm'
+        'lk');
 
 @$core.Deprecated('Use deleteDeviceRequestDescriptor instead')
 const DeleteDeviceRequest$json = {
@@ -161,8 +237,9 @@ const DeleteDeviceRequest$json = {
 };
 
 /// Descriptor for `DeleteDeviceRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List deleteDeviceRequestDescriptor = $convert.base64Decode(
-    'ChNEZWxldGVEZXZpY2VSZXF1ZXN0EhsKAmlkGAEgASgJQgv6QgVyA7ABAeBBAlICaWQ=');
+final $typed_data.Uint8List deleteDeviceRequestDescriptor =
+    $convert.base64Decode(
+        'ChNEZWxldGVEZXZpY2VSZXF1ZXN0EhsKAmlkGAEgASgJQgv6QgVyA7ABAeBBAlICaWQ=');
 
 @$core.Deprecated('Use listDevicesRequestDescriptor instead')
 const ListDevicesRequest$json = {
@@ -184,7 +261,14 @@ final $typed_data.Uint8List listDevicesRequestDescriptor = $convert.base64Decode
 const ListDevicesResponse$json = {
   '1': 'ListDevicesResponse',
   '2': [
-    {'1': 'devices', '3': 1, '4': 3, '5': 11, '6': '.thingspect.api.Device', '10': 'devices'},
+    {
+      '1': 'devices',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.thingspect.api.Device',
+      '10': 'devices'
+    },
     {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
     {'1': 'total_size', '3': 3, '4': 1, '5': 5, '10': 'totalSize'},
   ],
@@ -195,4 +279,3 @@ final $typed_data.Uint8List listDevicesResponseDescriptor = $convert.base64Decod
     'ChNMaXN0RGV2aWNlc1Jlc3BvbnNlEjAKB2RldmljZXMYASADKAsyFi50aGluZ3NwZWN0LmFwaS'
     '5EZXZpY2VSB2RldmljZXMSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2Vu'
     'Eh0KCnRvdGFsX3NpemUYAyABKAVSCXRvdGFsU2l6ZQ==');
-

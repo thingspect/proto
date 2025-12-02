@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: api/thingspect_rule_alarm.proto
-//
+// Generated from api/thingspect_rule_alarm.proto.
+
 // @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -36,12 +38,36 @@ const Rule$json = {
     {'1': 'id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'id'},
     {'1': 'org_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'orgID'},
     {'1': 'name', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'name'},
-    {'1': 'status', '3': 4, '4': 1, '5': 14, '6': '.thingspect.api.Status', '8': {}, '10': 'status'},
+    {
+      '1': 'status',
+      '3': 4,
+      '4': 1,
+      '5': 14,
+      '6': '.thingspect.api.Status',
+      '8': {},
+      '10': 'status'
+    },
     {'1': 'device_tag', '3': 5, '4': 1, '5': 9, '8': {}, '10': 'deviceTag'},
     {'1': 'attr', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'attr'},
     {'1': 'expr', '3': 7, '4': 1, '5': 9, '8': {}, '10': 'expr'},
-    {'1': 'created_at', '3': 8, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '8': {}, '10': 'createdAt'},
-    {'1': 'updated_at', '3': 9, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '8': {}, '10': 'updatedAt'},
+    {
+      '1': 'created_at',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': {},
+      '10': 'createdAt'
+    },
+    {
+      '1': 'updated_at',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': {},
+      '10': 'updatedAt'
+    },
   ],
 };
 
@@ -59,7 +85,15 @@ final $typed_data.Uint8List ruleDescriptor = $convert.base64Decode(
 const CreateRuleRequest$json = {
   '1': 'CreateRuleRequest',
   '2': [
-    {'1': 'rule', '3': 1, '4': 1, '5': 11, '6': '.thingspect.api.Rule', '8': {}, '10': 'rule'},
+    {
+      '1': 'rule',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.thingspect.api.Rule',
+      '8': {},
+      '10': 'rule'
+    },
   ],
 };
 
@@ -84,8 +118,23 @@ final $typed_data.Uint8List getRuleRequestDescriptor = $convert.base64Decode(
 const UpdateRuleRequest$json = {
   '1': 'UpdateRuleRequest',
   '2': [
-    {'1': 'rule', '3': 1, '4': 1, '5': 11, '6': '.thingspect.api.Rule', '8': {}, '10': 'rule'},
-    {'1': 'update_mask', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
+    {
+      '1': 'rule',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.thingspect.api.Rule',
+      '8': {},
+      '10': 'rule'
+    },
+    {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
   ],
 };
 
@@ -125,7 +174,14 @@ final $typed_data.Uint8List listRulesRequestDescriptor = $convert.base64Decode(
 const ListRulesResponse$json = {
   '1': 'ListRulesResponse',
   '2': [
-    {'1': 'rules', '3': 1, '4': 3, '5': 11, '6': '.thingspect.api.Rule', '10': 'rules'},
+    {
+      '1': 'rules',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.thingspect.api.Rule',
+      '10': 'rules'
+    },
     {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
     {'1': 'total_size', '3': 3, '4': 1, '5': 5, '10': 'totalSize'},
   ],
@@ -141,8 +197,24 @@ final $typed_data.Uint8List listRulesResponseDescriptor = $convert.base64Decode(
 const TestRuleRequest$json = {
   '1': 'TestRuleRequest',
   '2': [
-    {'1': 'point', '3': 1, '4': 1, '5': 11, '6': '.thingspect.common.DataPoint', '8': {}, '10': 'point'},
-    {'1': 'rule', '3': 2, '4': 1, '5': 11, '6': '.thingspect.api.Rule', '8': {}, '10': 'rule'},
+    {
+      '1': 'point',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.thingspect.common.DataPoint',
+      '8': {},
+      '10': 'point'
+    },
+    {
+      '1': 'rule',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.thingspect.api.Rule',
+      '8': {},
+      '10': 'rule'
+    },
   ],
 };
 
@@ -161,8 +233,8 @@ const TestRuleResponse$json = {
 };
 
 /// Descriptor for `TestRuleResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List testRuleResponseDescriptor = $convert.base64Decode(
-    'ChBUZXN0UnVsZVJlc3BvbnNlEhYKBnJlc3VsdBgBIAEoCFIGcmVzdWx0');
+final $typed_data.Uint8List testRuleResponseDescriptor = $convert
+    .base64Decode('ChBUZXN0UnVsZVJlc3BvbnNlEhYKBnJlc3VsdBgBIAEoCFIGcmVzdWx0');
 
 @$core.Deprecated('Use alarmDescriptor instead')
 const Alarm$json = {
@@ -172,14 +244,67 @@ const Alarm$json = {
     {'1': 'org_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'orgID'},
     {'1': 'rule_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'ruleID'},
     {'1': 'name', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'name'},
-    {'1': 'status', '3': 5, '4': 1, '5': 14, '6': '.thingspect.api.Status', '8': {}, '10': 'status'},
-    {'1': 'type', '3': 6, '4': 1, '5': 14, '6': '.thingspect.api.AlarmType', '8': {}, '10': 'type'},
+    {
+      '1': 'status',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.thingspect.api.Status',
+      '8': {},
+      '10': 'status'
+    },
+    {
+      '1': 'type',
+      '3': 6,
+      '4': 1,
+      '5': 14,
+      '6': '.thingspect.api.AlarmType',
+      '8': {},
+      '10': 'type'
+    },
     {'1': 'user_tags', '3': 7, '4': 3, '5': 9, '8': {}, '10': 'userTags'},
-    {'1': 'subject_template', '3': 8, '4': 1, '5': 9, '8': {}, '10': 'subjectTemplate'},
-    {'1': 'body_template', '3': 9, '4': 1, '5': 9, '8': {}, '10': 'bodyTemplate'},
-    {'1': 'repeat_interval', '3': 10, '4': 1, '5': 5, '8': {}, '10': 'repeatInterval'},
-    {'1': 'created_at', '3': 11, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '8': {}, '10': 'createdAt'},
-    {'1': 'updated_at', '3': 12, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '8': {}, '10': 'updatedAt'},
+    {
+      '1': 'subject_template',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'subjectTemplate'
+    },
+    {
+      '1': 'body_template',
+      '3': 9,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'bodyTemplate'
+    },
+    {
+      '1': 'repeat_interval',
+      '3': 10,
+      '4': 1,
+      '5': 5,
+      '8': {},
+      '10': 'repeatInterval'
+    },
+    {
+      '1': 'created_at',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': {},
+      '10': 'createdAt'
+    },
+    {
+      '1': 'updated_at',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': {},
+      '10': 'updatedAt'
+    },
   ],
 };
 
@@ -201,7 +326,15 @@ final $typed_data.Uint8List alarmDescriptor = $convert.base64Decode(
 const CreateAlarmRequest$json = {
   '1': 'CreateAlarmRequest',
   '2': [
-    {'1': 'alarm', '3': 1, '4': 1, '5': 11, '6': '.thingspect.api.Alarm', '8': {}, '10': 'alarm'},
+    {
+      '1': 'alarm',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.thingspect.api.Alarm',
+      '8': {},
+      '10': 'alarm'
+    },
   ],
 };
 
@@ -228,8 +361,23 @@ final $typed_data.Uint8List getAlarmRequestDescriptor = $convert.base64Decode(
 const UpdateAlarmRequest$json = {
   '1': 'UpdateAlarmRequest',
   '2': [
-    {'1': 'alarm', '3': 1, '4': 1, '5': 11, '6': '.thingspect.api.Alarm', '8': {}, '10': 'alarm'},
-    {'1': 'update_mask', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.FieldMask', '10': 'updateMask'},
+    {
+      '1': 'alarm',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.thingspect.api.Alarm',
+      '8': {},
+      '10': 'alarm'
+    },
+    {
+      '1': 'update_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'updateMask'
+    },
   ],
 };
 
@@ -273,7 +421,14 @@ final $typed_data.Uint8List listAlarmsRequestDescriptor = $convert.base64Decode(
 const ListAlarmsResponse$json = {
   '1': 'ListAlarmsResponse',
   '2': [
-    {'1': 'alarms', '3': 1, '4': 3, '5': 11, '6': '.thingspect.api.Alarm', '10': 'alarms'},
+    {
+      '1': 'alarms',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.thingspect.api.Alarm',
+      '10': 'alarms'
+    },
     {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
     {'1': 'total_size', '3': 3, '4': 1, '5': 5, '10': 'totalSize'},
   ],
@@ -289,10 +444,42 @@ final $typed_data.Uint8List listAlarmsResponseDescriptor = $convert.base64Decode
 const TestAlarmRequest$json = {
   '1': 'TestAlarmRequest',
   '2': [
-    {'1': 'point', '3': 1, '4': 1, '5': 11, '6': '.thingspect.common.DataPoint', '8': {}, '10': 'point'},
-    {'1': 'rule', '3': 2, '4': 1, '5': 11, '6': '.thingspect.api.Rule', '8': {}, '10': 'rule'},
-    {'1': 'device', '3': 3, '4': 1, '5': 11, '6': '.thingspect.api.Device', '8': {}, '10': 'device'},
-    {'1': 'alarm', '3': 4, '4': 1, '5': 11, '6': '.thingspect.api.Alarm', '8': {}, '10': 'alarm'},
+    {
+      '1': 'point',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.thingspect.common.DataPoint',
+      '8': {},
+      '10': 'point'
+    },
+    {
+      '1': 'rule',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.thingspect.api.Rule',
+      '8': {},
+      '10': 'rule'
+    },
+    {
+      '1': 'device',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.thingspect.api.Device',
+      '8': {},
+      '10': 'device'
+    },
+    {
+      '1': 'alarm',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.thingspect.api.Alarm',
+      '8': {},
+      '10': 'alarm'
+    },
   ],
 };
 
@@ -315,4 +502,3 @@ const TestAlarmResponse$json = {
 /// Descriptor for `TestAlarmResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List testAlarmResponseDescriptor = $convert.base64Decode(
     'ChFUZXN0QWxhcm1SZXNwb25zZRIWCgZyZXN1bHQYASABKAlSBnJlc3VsdA==');
-
