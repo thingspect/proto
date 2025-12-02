@@ -12,29 +12,7 @@ require 'validate/validate_pb'
 descriptor_data = "\n!common/thingspect_datapoint.proto\x12\x11thingspect.common\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x17validate/validate.proto\"\x94\x02\n\tDataPoint\x12%\n\x07uniq_id\x18\x01 \x01(\tB\x0c\xe0\x41\x02\xfa\x42\x06r\x04\x10\x05\x18(R\x06uniqID\x12\x18\n\x04\x61ttr\x18\x02 \x01(\tB\n\xe0\x41\x02\xfa\x42\x04r\x02\x18(\x12\x11\n\x07int_val\x18\x03 \x01(\x11H\x00\x12\x12\n\x08\x66l64_val\x18\x04 \x01(\x01H\x00\x12\x11\n\x07str_val\x18\x05 \x01(\tH\x00\x12\x12\n\x08\x62ool_val\x18\x06 \x01(\x08H\x00\x12\x13\n\tbytes_val\x18\x10 \x01(\x0cH\x00\x12&\n\x02ts\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x12\n\x05token\x18\x08 \x01(\tB\x03\xe0\x41\x03\x12\x15\n\x08trace_id\x18\t \x01(\tB\x03\xe0\x41\x03\x42\x10\n\tval_oneof\x12\x03\xf8\x42\x01\x42\'Z%github.com/thingspect/proto/go/commonb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
-
-begin
-  pool.add_serialized_file(descriptor_data)
-rescue TypeError => e
-  # Compatibility code: will be removed in the next major version.
-  require 'google/protobuf/descriptor_pb'
-  parsed = Google::Protobuf::FileDescriptorProto.decode(descriptor_data)
-  parsed.clear_dependency
-  serialized = parsed.class.encode(parsed)
-  file = pool.add_serialized_file(serialized)
-  warn "Warning: Protobuf detected an import path issue while loading generated file #{__FILE__}"
-  imports = [
-    ["google.protobuf.Timestamp", "google/protobuf/timestamp.proto"],
-  ]
-  imports.each do |type_name, expected_filename|
-    import_file = pool.lookup(type_name).file_descriptor
-    if import_file.name != expected_filename
-      warn "- #{file.name} imports #{expected_filename}, but that import was loaded as #{import_file.name}"
-    end
-  end
-  warn "Each proto file must use a consistent fully-qualified name."
-  warn "This will become an error in the next major version."
-end
+pool.add_serialized_file(descriptor_data)
 
 module Thingspect
   module Common

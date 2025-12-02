@@ -7,7 +7,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Payload(_message.Message):
-    __slots__ = ["points", "token"]
+    __slots__ = ("points", "token")
     POINTS_FIELD_NUMBER: _ClassVar[int]
     TOKEN_FIELD_NUMBER: _ClassVar[int]
     points: _containers.RepeatedCompositeFieldContainer[_thingspect_datapoint_pb2.DataPoint]

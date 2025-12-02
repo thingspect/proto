@@ -20,62 +20,62 @@ class RuleAlarmServiceStub(object):
                 '/thingspect.api.RuleAlarmService/CreateRule',
                 request_serializer=api_dot_thingspect__rule__alarm__pb2.CreateRuleRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__rule__alarm__pb2.Rule.FromString,
-                )
+                _registered_method=True)
         self.CreateAlarm = channel.unary_unary(
                 '/thingspect.api.RuleAlarmService/CreateAlarm',
                 request_serializer=api_dot_thingspect__rule__alarm__pb2.CreateAlarmRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__rule__alarm__pb2.Alarm.FromString,
-                )
+                _registered_method=True)
         self.GetRule = channel.unary_unary(
                 '/thingspect.api.RuleAlarmService/GetRule',
                 request_serializer=api_dot_thingspect__rule__alarm__pb2.GetRuleRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__rule__alarm__pb2.Rule.FromString,
-                )
+                _registered_method=True)
         self.GetAlarm = channel.unary_unary(
                 '/thingspect.api.RuleAlarmService/GetAlarm',
                 request_serializer=api_dot_thingspect__rule__alarm__pb2.GetAlarmRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__rule__alarm__pb2.Alarm.FromString,
-                )
+                _registered_method=True)
         self.UpdateRule = channel.unary_unary(
                 '/thingspect.api.RuleAlarmService/UpdateRule',
                 request_serializer=api_dot_thingspect__rule__alarm__pb2.UpdateRuleRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__rule__alarm__pb2.Rule.FromString,
-                )
+                _registered_method=True)
         self.UpdateAlarm = channel.unary_unary(
                 '/thingspect.api.RuleAlarmService/UpdateAlarm',
                 request_serializer=api_dot_thingspect__rule__alarm__pb2.UpdateAlarmRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__rule__alarm__pb2.Alarm.FromString,
-                )
+                _registered_method=True)
         self.DeleteRule = channel.unary_unary(
                 '/thingspect.api.RuleAlarmService/DeleteRule',
                 request_serializer=api_dot_thingspect__rule__alarm__pb2.DeleteRuleRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.DeleteAlarm = channel.unary_unary(
                 '/thingspect.api.RuleAlarmService/DeleteAlarm',
                 request_serializer=api_dot_thingspect__rule__alarm__pb2.DeleteAlarmRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.ListRules = channel.unary_unary(
                 '/thingspect.api.RuleAlarmService/ListRules',
                 request_serializer=api_dot_thingspect__rule__alarm__pb2.ListRulesRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__rule__alarm__pb2.ListRulesResponse.FromString,
-                )
+                _registered_method=True)
         self.ListAlarms = channel.unary_unary(
                 '/thingspect.api.RuleAlarmService/ListAlarms',
                 request_serializer=api_dot_thingspect__rule__alarm__pb2.ListAlarmsRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__rule__alarm__pb2.ListAlarmsResponse.FromString,
-                )
+                _registered_method=True)
         self.TestRule = channel.unary_unary(
                 '/thingspect.api.RuleAlarmService/TestRule',
                 request_serializer=api_dot_thingspect__rule__alarm__pb2.TestRuleRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__rule__alarm__pb2.TestRuleResponse.FromString,
-                )
+                _registered_method=True)
         self.TestAlarm = channel.unary_unary(
                 '/thingspect.api.RuleAlarmService/TestAlarm',
                 request_serializer=api_dot_thingspect__rule__alarm__pb2.TestAlarmRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__rule__alarm__pb2.TestAlarmResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class RuleAlarmServiceServicer(object):
@@ -233,6 +233,7 @@ def add_RuleAlarmServiceServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'thingspect.api.RuleAlarmService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('thingspect.api.RuleAlarmService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -251,11 +252,21 @@ class RuleAlarmService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleAlarmService/CreateRule',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.RuleAlarmService/CreateRule',
             api_dot_thingspect__rule__alarm__pb2.CreateRuleRequest.SerializeToString,
             api_dot_thingspect__rule__alarm__pb2.Rule.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def CreateAlarm(request,
@@ -268,11 +279,21 @@ class RuleAlarmService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleAlarmService/CreateAlarm',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.RuleAlarmService/CreateAlarm',
             api_dot_thingspect__rule__alarm__pb2.CreateAlarmRequest.SerializeToString,
             api_dot_thingspect__rule__alarm__pb2.Alarm.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def GetRule(request,
@@ -285,11 +306,21 @@ class RuleAlarmService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleAlarmService/GetRule',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.RuleAlarmService/GetRule',
             api_dot_thingspect__rule__alarm__pb2.GetRuleRequest.SerializeToString,
             api_dot_thingspect__rule__alarm__pb2.Rule.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def GetAlarm(request,
@@ -302,11 +333,21 @@ class RuleAlarmService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleAlarmService/GetAlarm',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.RuleAlarmService/GetAlarm',
             api_dot_thingspect__rule__alarm__pb2.GetAlarmRequest.SerializeToString,
             api_dot_thingspect__rule__alarm__pb2.Alarm.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def UpdateRule(request,
@@ -319,11 +360,21 @@ class RuleAlarmService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleAlarmService/UpdateRule',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.RuleAlarmService/UpdateRule',
             api_dot_thingspect__rule__alarm__pb2.UpdateRuleRequest.SerializeToString,
             api_dot_thingspect__rule__alarm__pb2.Rule.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def UpdateAlarm(request,
@@ -336,11 +387,21 @@ class RuleAlarmService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleAlarmService/UpdateAlarm',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.RuleAlarmService/UpdateAlarm',
             api_dot_thingspect__rule__alarm__pb2.UpdateAlarmRequest.SerializeToString,
             api_dot_thingspect__rule__alarm__pb2.Alarm.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def DeleteRule(request,
@@ -353,11 +414,21 @@ class RuleAlarmService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleAlarmService/DeleteRule',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.RuleAlarmService/DeleteRule',
             api_dot_thingspect__rule__alarm__pb2.DeleteRuleRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def DeleteAlarm(request,
@@ -370,11 +441,21 @@ class RuleAlarmService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleAlarmService/DeleteAlarm',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.RuleAlarmService/DeleteAlarm',
             api_dot_thingspect__rule__alarm__pb2.DeleteAlarmRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def ListRules(request,
@@ -387,11 +468,21 @@ class RuleAlarmService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleAlarmService/ListRules',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.RuleAlarmService/ListRules',
             api_dot_thingspect__rule__alarm__pb2.ListRulesRequest.SerializeToString,
             api_dot_thingspect__rule__alarm__pb2.ListRulesResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def ListAlarms(request,
@@ -404,11 +495,21 @@ class RuleAlarmService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleAlarmService/ListAlarms',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.RuleAlarmService/ListAlarms',
             api_dot_thingspect__rule__alarm__pb2.ListAlarmsRequest.SerializeToString,
             api_dot_thingspect__rule__alarm__pb2.ListAlarmsResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def TestRule(request,
@@ -421,11 +522,21 @@ class RuleAlarmService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleAlarmService/TestRule',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.RuleAlarmService/TestRule',
             api_dot_thingspect__rule__alarm__pb2.TestRuleRequest.SerializeToString,
             api_dot_thingspect__rule__alarm__pb2.TestRuleResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def TestAlarm(request,
@@ -438,8 +549,18 @@ class RuleAlarmService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.RuleAlarmService/TestAlarm',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.RuleAlarmService/TestAlarm',
             api_dot_thingspect__rule__alarm__pb2.TestAlarmRequest.SerializeToString,
             api_dot_thingspect__rule__alarm__pb2.TestAlarmResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

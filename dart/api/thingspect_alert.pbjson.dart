@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: api/thingspect_alert.proto
-//
+// Generated from api/thingspect_alert.proto.
+
 // @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -36,9 +38,23 @@ const Alert$json = {
     {'1': 'uniq_id', '3': 2, '4': 1, '5': 9, '10': 'uniqID'},
     {'1': 'alarm_id', '3': 3, '4': 1, '5': 9, '10': 'alarmID'},
     {'1': 'user_id', '3': 4, '4': 1, '5': 9, '10': 'userID'},
-    {'1': 'status', '3': 5, '4': 1, '5': 14, '6': '.thingspect.api.AlertStatus', '10': 'status'},
+    {
+      '1': 'status',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.thingspect.api.AlertStatus',
+      '10': 'status'
+    },
     {'1': 'error', '3': 6, '4': 1, '5': 9, '10': 'error'},
-    {'1': 'created_at', '3': 7, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createdAt'},
+    {
+      '1': 'created_at',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createdAt'
+    },
     {'1': 'trace_id', '3': 8, '4': 1, '5': 9, '10': 'traceId'},
   ],
 };
@@ -56,11 +72,33 @@ const ListAlertsRequest$json = {
   '1': 'ListAlertsRequest',
   '2': [
     {'1': 'uniq_id', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'uniqID'},
-    {'1': 'device_id', '3': 2, '4': 1, '5': 9, '8': {}, '9': 0, '10': 'deviceID'},
+    {
+      '1': 'device_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '9': 0,
+      '10': 'deviceID'
+    },
     {'1': 'alarm_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'alarmID'},
     {'1': 'user_id', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'userID'},
-    {'1': 'end_time', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'endTime'},
-    {'1': 'start_time', '3': 6, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'startTime'},
+    {
+      '1': 'end_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+    {
+      '1': 'start_time',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
   ],
   '8': [
     {'1': 'id_oneof'},
@@ -80,7 +118,14 @@ final $typed_data.Uint8List listAlertsRequestDescriptor = $convert.base64Decode(
 const ListAlertsResponse$json = {
   '1': 'ListAlertsResponse',
   '2': [
-    {'1': 'alerts', '3': 1, '4': 3, '5': 11, '6': '.thingspect.api.Alert', '10': 'alerts'},
+    {
+      '1': 'alerts',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.thingspect.api.Alert',
+      '10': 'alerts'
+    },
   ],
 };
 
@@ -88,4 +133,3 @@ const ListAlertsResponse$json = {
 final $typed_data.Uint8List listAlertsResponseDescriptor = $convert.base64Decode(
     'ChJMaXN0QWxlcnRzUmVzcG9uc2USLQoGYWxlcnRzGAEgAygLMhUudGhpbmdzcGVjdC5hcGkuQW'
     'xlcnRSBmFsZXJ0cw==');
-

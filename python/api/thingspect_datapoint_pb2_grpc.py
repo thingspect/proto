@@ -20,17 +20,17 @@ class DataPointServiceStub(object):
                 '/thingspect.api.DataPointService/PublishDataPoints',
                 request_serializer=api_dot_thingspect__datapoint__pb2.PublishDataPointsRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.ListDataPoints = channel.unary_unary(
                 '/thingspect.api.DataPointService/ListDataPoints',
                 request_serializer=api_dot_thingspect__datapoint__pb2.ListDataPointsRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__datapoint__pb2.ListDataPointsResponse.FromString,
-                )
+                _registered_method=True)
         self.LatestDataPoints = channel.unary_unary(
                 '/thingspect.api.DataPointService/LatestDataPoints',
                 request_serializer=api_dot_thingspect__datapoint__pb2.LatestDataPointsRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__datapoint__pb2.LatestDataPointsResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class DataPointServiceServicer(object):
@@ -80,6 +80,7 @@ def add_DataPointServiceServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'thingspect.api.DataPointService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('thingspect.api.DataPointService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -98,11 +99,21 @@ class DataPointService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.DataPointService/PublishDataPoints',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.DataPointService/PublishDataPoints',
             api_dot_thingspect__datapoint__pb2.PublishDataPointsRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def ListDataPoints(request,
@@ -115,11 +126,21 @@ class DataPointService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.DataPointService/ListDataPoints',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.DataPointService/ListDataPoints',
             api_dot_thingspect__datapoint__pb2.ListDataPointsRequest.SerializeToString,
             api_dot_thingspect__datapoint__pb2.ListDataPointsResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def LatestDataPoints(request,
@@ -132,8 +153,18 @@ class DataPointService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.DataPointService/LatestDataPoints',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.DataPointService/LatestDataPoints',
             api_dot_thingspect__datapoint__pb2.LatestDataPointsRequest.SerializeToString,
             api_dot_thingspect__datapoint__pb2.LatestDataPointsResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

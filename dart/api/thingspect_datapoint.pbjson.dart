@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: api/thingspect_datapoint.proto
-//
+// Generated from api/thingspect_datapoint.proto.
+
 // @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -17,24 +19,55 @@ import 'dart:typed_data' as $typed_data;
 const PublishDataPointsRequest$json = {
   '1': 'PublishDataPointsRequest',
   '2': [
-    {'1': 'points', '3': 1, '4': 3, '5': 11, '6': '.thingspect.common.DataPoint', '8': {}, '10': 'points'},
+    {
+      '1': 'points',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.thingspect.common.DataPoint',
+      '8': {},
+      '10': 'points'
+    },
   ],
 };
 
 /// Descriptor for `PublishDataPointsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List publishDataPointsRequestDescriptor = $convert.base64Decode(
-    'ChhQdWJsaXNoRGF0YVBvaW50c1JlcXVlc3QSQQoGcG9pbnRzGAEgAygLMhwudGhpbmdzcGVjdC'
-    '5jb21tb24uRGF0YVBvaW50Qgv6QgWSAQIIAeBBAlIGcG9pbnRz');
+final $typed_data.Uint8List publishDataPointsRequestDescriptor =
+    $convert.base64Decode(
+        'ChhQdWJsaXNoRGF0YVBvaW50c1JlcXVlc3QSQQoGcG9pbnRzGAEgAygLMhwudGhpbmdzcGVjdC'
+        '5jb21tb24uRGF0YVBvaW50Qgv6QgWSAQIIAeBBAlIGcG9pbnRz');
 
 @$core.Deprecated('Use listDataPointsRequestDescriptor instead')
 const ListDataPointsRequest$json = {
   '1': 'ListDataPointsRequest',
   '2': [
     {'1': 'uniq_id', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'uniqID'},
-    {'1': 'device_id', '3': 2, '4': 1, '5': 9, '8': {}, '9': 0, '10': 'deviceID'},
+    {
+      '1': 'device_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '9': 0,
+      '10': 'deviceID'
+    },
     {'1': 'attr', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'attr'},
-    {'1': 'end_time', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'endTime'},
-    {'1': 'start_time', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'startTime'},
+    {
+      '1': 'end_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'endTime'
+    },
+    {
+      '1': 'start_time',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
   ],
   '8': [
     {'1': 'id_oneof', '2': {}},
@@ -53,22 +86,45 @@ final $typed_data.Uint8List listDataPointsRequestDescriptor = $convert.base64Dec
 const ListDataPointsResponse$json = {
   '1': 'ListDataPointsResponse',
   '2': [
-    {'1': 'points', '3': 1, '4': 3, '5': 11, '6': '.thingspect.common.DataPoint', '10': 'points'},
+    {
+      '1': 'points',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.thingspect.common.DataPoint',
+      '10': 'points'
+    },
   ],
 };
 
 /// Descriptor for `ListDataPointsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List listDataPointsResponseDescriptor = $convert.base64Decode(
-    'ChZMaXN0RGF0YVBvaW50c1Jlc3BvbnNlEjQKBnBvaW50cxgBIAMoCzIcLnRoaW5nc3BlY3QuY2'
-    '9tbW9uLkRhdGFQb2ludFIGcG9pbnRz');
+final $typed_data.Uint8List listDataPointsResponseDescriptor =
+    $convert.base64Decode(
+        'ChZMaXN0RGF0YVBvaW50c1Jlc3BvbnNlEjQKBnBvaW50cxgBIAMoCzIcLnRoaW5nc3BlY3QuY2'
+        '9tbW9uLkRhdGFQb2ludFIGcG9pbnRz');
 
 @$core.Deprecated('Use latestDataPointsRequestDescriptor instead')
 const LatestDataPointsRequest$json = {
   '1': 'LatestDataPointsRequest',
   '2': [
     {'1': 'uniq_id', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'uniqID'},
-    {'1': 'device_id', '3': 2, '4': 1, '5': 9, '8': {}, '9': 0, '10': 'deviceID'},
-    {'1': 'start_time', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'startTime'},
+    {
+      '1': 'device_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '9': 0,
+      '10': 'deviceID'
+    },
+    {
+      '1': 'start_time',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'startTime'
+    },
   ],
   '8': [
     {'1': 'id_oneof', '2': {}},
@@ -86,12 +142,19 @@ final $typed_data.Uint8List latestDataPointsRequestDescriptor = $convert.base64D
 const LatestDataPointsResponse$json = {
   '1': 'LatestDataPointsResponse',
   '2': [
-    {'1': 'points', '3': 1, '4': 3, '5': 11, '6': '.thingspect.common.DataPoint', '10': 'points'},
+    {
+      '1': 'points',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.thingspect.common.DataPoint',
+      '10': 'points'
+    },
   ],
 };
 
 /// Descriptor for `LatestDataPointsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List latestDataPointsResponseDescriptor = $convert.base64Decode(
-    'ChhMYXRlc3REYXRhUG9pbnRzUmVzcG9uc2USNAoGcG9pbnRzGAEgAygLMhwudGhpbmdzcGVjdC'
-    '5jb21tb24uRGF0YVBvaW50UgZwb2ludHM=');
-
+final $typed_data.Uint8List latestDataPointsResponseDescriptor =
+    $convert.base64Decode(
+        'ChhMYXRlc3REYXRhUG9pbnRzUmVzcG9uc2USNAoGcG9pbnRzGAEgAygLMhwudGhpbmdzcGVjdC'
+        '5jb21tb24uRGF0YVBvaW50UgZwb2ludHM=');

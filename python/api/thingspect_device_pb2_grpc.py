@@ -20,37 +20,37 @@ class DeviceServiceStub(object):
                 '/thingspect.api.DeviceService/CreateDevice',
                 request_serializer=api_dot_thingspect__device__pb2.CreateDeviceRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__device__pb2.Device.FromString,
-                )
+                _registered_method=True)
         self.CreateDeviceLoRaWAN = channel.unary_unary(
                 '/thingspect.api.DeviceService/CreateDeviceLoRaWAN',
                 request_serializer=api_dot_thingspect__device__pb2.CreateDeviceLoRaWANRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.GetDevice = channel.unary_unary(
                 '/thingspect.api.DeviceService/GetDevice',
                 request_serializer=api_dot_thingspect__device__pb2.GetDeviceRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__device__pb2.Device.FromString,
-                )
+                _registered_method=True)
         self.UpdateDevice = channel.unary_unary(
                 '/thingspect.api.DeviceService/UpdateDevice',
                 request_serializer=api_dot_thingspect__device__pb2.UpdateDeviceRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__device__pb2.Device.FromString,
-                )
+                _registered_method=True)
         self.DeleteDeviceLoRaWAN = channel.unary_unary(
                 '/thingspect.api.DeviceService/DeleteDeviceLoRaWAN',
                 request_serializer=api_dot_thingspect__device__pb2.DeleteDeviceLoRaWANRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.DeleteDevice = channel.unary_unary(
                 '/thingspect.api.DeviceService/DeleteDevice',
                 request_serializer=api_dot_thingspect__device__pb2.DeleteDeviceRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.ListDevices = channel.unary_unary(
                 '/thingspect.api.DeviceService/ListDevices',
                 request_serializer=api_dot_thingspect__device__pb2.ListDevicesRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__device__pb2.ListDevicesResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class DeviceServiceServicer(object):
@@ -148,6 +148,7 @@ def add_DeviceServiceServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'thingspect.api.DeviceService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('thingspect.api.DeviceService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -166,11 +167,21 @@ class DeviceService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.DeviceService/CreateDevice',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.DeviceService/CreateDevice',
             api_dot_thingspect__device__pb2.CreateDeviceRequest.SerializeToString,
             api_dot_thingspect__device__pb2.Device.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def CreateDeviceLoRaWAN(request,
@@ -183,11 +194,21 @@ class DeviceService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.DeviceService/CreateDeviceLoRaWAN',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.DeviceService/CreateDeviceLoRaWAN',
             api_dot_thingspect__device__pb2.CreateDeviceLoRaWANRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def GetDevice(request,
@@ -200,11 +221,21 @@ class DeviceService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.DeviceService/GetDevice',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.DeviceService/GetDevice',
             api_dot_thingspect__device__pb2.GetDeviceRequest.SerializeToString,
             api_dot_thingspect__device__pb2.Device.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def UpdateDevice(request,
@@ -217,11 +248,21 @@ class DeviceService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.DeviceService/UpdateDevice',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.DeviceService/UpdateDevice',
             api_dot_thingspect__device__pb2.UpdateDeviceRequest.SerializeToString,
             api_dot_thingspect__device__pb2.Device.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def DeleteDeviceLoRaWAN(request,
@@ -234,11 +275,21 @@ class DeviceService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.DeviceService/DeleteDeviceLoRaWAN',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.DeviceService/DeleteDeviceLoRaWAN',
             api_dot_thingspect__device__pb2.DeleteDeviceLoRaWANRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def DeleteDevice(request,
@@ -251,11 +302,21 @@ class DeviceService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.DeviceService/DeleteDevice',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.DeviceService/DeleteDevice',
             api_dot_thingspect__device__pb2.DeleteDeviceRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def ListDevices(request,
@@ -268,8 +329,18 @@ class DeviceService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.DeviceService/ListDevices',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.DeviceService/ListDevices',
             api_dot_thingspect__device__pb2.ListDevicesRequest.SerializeToString,
             api_dot_thingspect__device__pb2.ListDevicesResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

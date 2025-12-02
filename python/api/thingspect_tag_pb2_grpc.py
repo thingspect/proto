@@ -19,7 +19,7 @@ class TagServiceStub(object):
                 '/thingspect.api.TagService/ListTags',
                 request_serializer=api_dot_thingspect__tag__pb2.ListTagsRequest.SerializeToString,
                 response_deserializer=api_dot_thingspect__tag__pb2.ListTagsResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class TagServiceServicer(object):
@@ -45,6 +45,7 @@ def add_TagServiceServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'thingspect.api.TagService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('thingspect.api.TagService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -63,8 +64,18 @@ class TagService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/thingspect.api.TagService/ListTags',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/thingspect.api.TagService/ListTags',
             api_dot_thingspect__tag__pb2.ListTagsRequest.SerializeToString,
             api_dot_thingspect__tag__pb2.ListTagsResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

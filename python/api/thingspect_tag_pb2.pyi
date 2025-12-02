@@ -7,11 +7,11 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Optional as _Op
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class ListTagsRequest(_message.Message):
-    __slots__ = []
+    __slots__ = ()
     def __init__(self) -> None: ...
 
 class ListTagsResponse(_message.Message):
-    __slots__ = ["tags"]
+    __slots__ = ("tags",)
     TAGS_FIELD_NUMBER: _ClassVar[int]
     tags: _containers.RepeatedScalarFieldContainer[str]
     def __init__(self, tags: _Optional[_Iterable[str]] = ...) -> None: ...
