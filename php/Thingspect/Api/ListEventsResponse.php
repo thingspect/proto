@@ -6,8 +6,8 @@
 namespace Thingspect\Api;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * ListEventsResponse is sent in response to a device events list.
@@ -29,7 +29,7 @@ class ListEventsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Thingspect\Api\Event>|\Google\Protobuf\Internal\RepeatedField $events
+     *     @type \Thingspect\Api\Event[] $events
      *           Event array, ordered by descending created_at timestamp.
      * }
      */
@@ -42,7 +42,7 @@ class ListEventsResponse extends \Google\Protobuf\Internal\Message
      * Event array, ordered by descending created_at timestamp.
      *
      * Generated from protobuf field <code>repeated .thingspect.api.Event events = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Thingspect\Api\Event>
      */
     public function getEvents()
     {
@@ -53,7 +53,7 @@ class ListEventsResponse extends \Google\Protobuf\Internal\Message
      * Event array, ordered by descending created_at timestamp.
      *
      * Generated from protobuf field <code>repeated .thingspect.api.Event events = 1;</code>
-     * @param array<\Thingspect\Api\Event>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Thingspect\Api\Event[] $var
      * @return $this
      */
     public function setEvents($var)

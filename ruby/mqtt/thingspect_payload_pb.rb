@@ -9,7 +9,7 @@ require 'common/thingspect_datapoint_pb'
 
 descriptor_data = "\n\x1dmqtt/thingspect_payload.proto\x12\x0fthingspect.mqtt\x1a!common/thingspect_datapoint.proto\"F\n\x07Payload\x12,\n\x06points\x18\x01 \x03(\x0b\x32\x1c.thingspect.common.DataPoint\x12\r\n\x05token\x18\x02 \x01(\tB%Z#github.com/thingspect/proto/go/mqttb\x06proto3"
 
-pool = Google::Protobuf::DescriptorPool.generated_pool
+pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
 
 module Thingspect

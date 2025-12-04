@@ -22,7 +22,7 @@ class SessionServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\LoginRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\LoginResponse>
      */
     public function Login(\Thingspect\Api\LoginRequest $argument,
       $metadata = [], $options = []) {
@@ -37,7 +37,7 @@ class SessionServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\CreateKeyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\CreateKeyResponse>
      */
     public function CreateKey(\Thingspect\Api\CreateKeyRequest $argument,
       $metadata = [], $options = []) {
@@ -52,7 +52,7 @@ class SessionServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\DeleteKeyRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function DeleteKey(\Thingspect\Api\DeleteKeyRequest $argument,
       $metadata = [], $options = []) {
@@ -67,7 +67,7 @@ class SessionServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\ListKeysRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\ListKeysResponse>
      */
     public function ListKeys(\Thingspect\Api\ListKeysRequest $argument,
       $metadata = [], $options = []) {

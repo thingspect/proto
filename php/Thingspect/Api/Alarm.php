@@ -6,8 +6,8 @@
 namespace Thingspect\Api;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Alarm represents an alarm as stored in the database.
@@ -107,7 +107,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
      *           Alarm status.
      *     @type int $type
      *           Alarm type.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $user_tags
+     *     @type string[] $user_tags
      *           User tags to whom alerts are sent.
      *     @type string $subject_template
      *           Alarm subject template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
@@ -286,7 +286,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
      * User tags to whom alerts are sent.
      *
      * Generated from protobuf field <code>repeated string user_tags = 7 [(.validate.rules) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getUserTags()
     {
@@ -297,7 +297,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
      * User tags to whom alerts are sent.
      *
      * Generated from protobuf field <code>repeated string user_tags = 7 [(.validate.rules) = {</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setUserTags($var)

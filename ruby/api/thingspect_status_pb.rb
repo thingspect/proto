@@ -7,7 +7,7 @@ require 'google/protobuf'
 
 descriptor_data = "\n\x1b\x61pi/thingspect_status.proto\x12\x0ethingspect.api*:\n\x06Status\x12\x16\n\x12STATUS_UNSPECIFIED\x10\x00\x12\n\n\x06\x41\x43TIVE\x10\x03\x12\x0c\n\x08\x44ISABLED\x10\x06\x42$Z\"github.com/thingspect/proto/go/apib\x06proto3"
 
-pool = Google::Protobuf::DescriptorPool.generated_pool
+pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
 
 module Thingspect

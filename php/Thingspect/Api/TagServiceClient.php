@@ -22,7 +22,7 @@ class TagServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\ListTagsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\ListTagsResponse>
      */
     public function ListTags(\Thingspect\Api\ListTagsRequest $argument,
       $metadata = [], $options = []) {

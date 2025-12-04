@@ -6,8 +6,8 @@
 namespace Thingspect\Api;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Device represents a device as stored in the database.
@@ -97,7 +97,7 @@ class Device extends \Google\Protobuf\Internal\Message
      *           Authentication token (UUID). Will be generated at creation time, but can be updated afterward.
      *     @type int $decoder
      *           Device data payload decoder.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $tags
+     *     @type string[] $tags
      *           Device tags. Nested tags should be delimited by '/'.
      *     @type \Google\Protobuf\Timestamp $created_at
      *           Device creation timestamp.
@@ -296,7 +296,7 @@ class Device extends \Google\Protobuf\Internal\Message
      * Device tags. Nested tags should be delimited by '/'.
      *
      * Generated from protobuf field <code>repeated string tags = 8 [(.validate.rules) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getTags()
     {
@@ -307,7 +307,7 @@ class Device extends \Google\Protobuf\Internal\Message
      * Device tags. Nested tags should be delimited by '/'.
      *
      * Generated from protobuf field <code>repeated string tags = 8 [(.validate.rules) = {</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setTags($var)

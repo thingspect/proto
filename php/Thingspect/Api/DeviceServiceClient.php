@@ -22,7 +22,7 @@ class DeviceServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\CreateDeviceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\Device>
      */
     public function CreateDevice(\Thingspect\Api\CreateDeviceRequest $argument,
       $metadata = [], $options = []) {
@@ -37,7 +37,7 @@ class DeviceServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\CreateDeviceLoRaWANRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function CreateDeviceLoRaWAN(\Thingspect\Api\CreateDeviceLoRaWANRequest $argument,
       $metadata = [], $options = []) {
@@ -52,7 +52,7 @@ class DeviceServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\GetDeviceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\Device>
      */
     public function GetDevice(\Thingspect\Api\GetDeviceRequest $argument,
       $metadata = [], $options = []) {
@@ -67,7 +67,7 @@ class DeviceServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\UpdateDeviceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\Device>
      */
     public function UpdateDevice(\Thingspect\Api\UpdateDeviceRequest $argument,
       $metadata = [], $options = []) {
@@ -82,7 +82,7 @@ class DeviceServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\DeleteDeviceLoRaWANRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function DeleteDeviceLoRaWAN(\Thingspect\Api\DeleteDeviceLoRaWANRequest $argument,
       $metadata = [], $options = []) {
@@ -97,7 +97,7 @@ class DeviceServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\DeleteDeviceRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function DeleteDevice(\Thingspect\Api\DeleteDeviceRequest $argument,
       $metadata = [], $options = []) {
@@ -112,7 +112,7 @@ class DeviceServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\ListDevicesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\ListDevicesResponse>
      */
     public function ListDevices(\Thingspect\Api\ListDevicesRequest $argument,
       $metadata = [], $options = []) {

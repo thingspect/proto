@@ -22,7 +22,7 @@ class UserServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\CreateUserRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\User>
      */
     public function CreateUser(\Thingspect\Api\CreateUserRequest $argument,
       $metadata = [], $options = []) {
@@ -37,7 +37,7 @@ class UserServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\GetUserRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\User>
      */
     public function GetUser(\Thingspect\Api\GetUserRequest $argument,
       $metadata = [], $options = []) {
@@ -52,7 +52,7 @@ class UserServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\UpdateUserRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\User>
      */
     public function UpdateUser(\Thingspect\Api\UpdateUserRequest $argument,
       $metadata = [], $options = []) {
@@ -67,7 +67,7 @@ class UserServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\UpdateUserPasswordRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function UpdateUserPassword(\Thingspect\Api\UpdateUserPasswordRequest $argument,
       $metadata = [], $options = []) {
@@ -82,7 +82,7 @@ class UserServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\DeleteUserRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function DeleteUser(\Thingspect\Api\DeleteUserRequest $argument,
       $metadata = [], $options = []) {
@@ -97,7 +97,7 @@ class UserServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\ListUsersRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\ListUsersResponse>
      */
     public function ListUsers(\Thingspect\Api\ListUsersRequest $argument,
       $metadata = [], $options = []) {

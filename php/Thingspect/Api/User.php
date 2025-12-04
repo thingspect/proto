@@ -6,8 +6,8 @@
 namespace Thingspect\Api;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * User represents a user as stored in the database.
@@ -103,7 +103,7 @@ class User extends \Google\Protobuf\Internal\Message
      *           User role.
      *     @type int $status
      *           User status.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $tags
+     *     @type string[] $tags
      *           User tags. Nested tags should be delimited by '/'.
      *     @type string $app_key
      *           Mobile application user key.
@@ -304,7 +304,7 @@ class User extends \Google\Protobuf\Internal\Message
      * User tags. Nested tags should be delimited by '/'.
      *
      * Generated from protobuf field <code>repeated string tags = 8 [(.validate.rules) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getTags()
     {
@@ -315,7 +315,7 @@ class User extends \Google\Protobuf\Internal\Message
      * User tags. Nested tags should be delimited by '/'.
      *
      * Generated from protobuf field <code>repeated string tags = 8 [(.validate.rules) = {</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setTags($var)
