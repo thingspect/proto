@@ -6,8 +6,8 @@
 namespace Thingspect\Api;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * ListRulesResponse is sent in response to a rule list.
@@ -41,7 +41,7 @@ class ListRulesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Thingspect\Api\Rule>|\Google\Protobuf\Internal\RepeatedField $rules
+     *     @type \Thingspect\Api\Rule[] $rules
      *           Rule array, ordered by ascending created_at timestamp.
      *     @type string $next_page_token
      *           Pagination token used to retrieve the next page of results. Not returned for the last page.
@@ -58,7 +58,7 @@ class ListRulesResponse extends \Google\Protobuf\Internal\Message
      * Rule array, ordered by ascending created_at timestamp.
      *
      * Generated from protobuf field <code>repeated .thingspect.api.Rule rules = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Thingspect\Api\Rule>
      */
     public function getRules()
     {
@@ -69,7 +69,7 @@ class ListRulesResponse extends \Google\Protobuf\Internal\Message
      * Rule array, ordered by ascending created_at timestamp.
      *
      * Generated from protobuf field <code>repeated .thingspect.api.Rule rules = 1;</code>
-     * @param array<\Thingspect\Api\Rule>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Thingspect\Api\Rule[] $var
      * @return $this
      */
     public function setRules($var)

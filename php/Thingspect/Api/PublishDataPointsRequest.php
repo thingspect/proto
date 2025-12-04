@@ -6,8 +6,8 @@
 namespace Thingspect\Api;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * PublishDataPointsRequest is sent to publish data points. The publisher role is recommended for programmatic use of this endpoint.
@@ -29,7 +29,7 @@ class PublishDataPointsRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Thingspect\Common\DataPoint>|\Google\Protobuf\Internal\RepeatedField $points
+     *     @type \Thingspect\Common\DataPoint[] $points
      *           Data point array to publish.
      * }
      */
@@ -42,7 +42,7 @@ class PublishDataPointsRequest extends \Google\Protobuf\Internal\Message
      * Data point array to publish.
      *
      * Generated from protobuf field <code>repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Thingspect\Common\DataPoint>
      */
     public function getPoints()
     {
@@ -53,7 +53,7 @@ class PublishDataPointsRequest extends \Google\Protobuf\Internal\Message
      * Data point array to publish.
      *
      * Generated from protobuf field <code>repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
-     * @param array<\Thingspect\Common\DataPoint>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Thingspect\Common\DataPoint[] $var
      * @return $this
      */
     public function setPoints($var)

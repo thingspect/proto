@@ -6,8 +6,8 @@
 namespace Thingspect\Api;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * ListDevicesResponse is sent in response to a device list.
@@ -41,7 +41,7 @@ class ListDevicesResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Thingspect\Api\Device>|\Google\Protobuf\Internal\RepeatedField $devices
+     *     @type \Thingspect\Api\Device[] $devices
      *           Device array, ordered by ascending created_at timestamp.
      *     @type string $next_page_token
      *           Pagination token used to retrieve the next page of results. Not returned for the last page.
@@ -58,7 +58,7 @@ class ListDevicesResponse extends \Google\Protobuf\Internal\Message
      * Device array, ordered by ascending created_at timestamp.
      *
      * Generated from protobuf field <code>repeated .thingspect.api.Device devices = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Thingspect\Api\Device>
      */
     public function getDevices()
     {
@@ -69,7 +69,7 @@ class ListDevicesResponse extends \Google\Protobuf\Internal\Message
      * Device array, ordered by ascending created_at timestamp.
      *
      * Generated from protobuf field <code>repeated .thingspect.api.Device devices = 1;</code>
-     * @param array<\Thingspect\Api\Device>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Thingspect\Api\Device[] $var
      * @return $this
      */
     public function setDevices($var)

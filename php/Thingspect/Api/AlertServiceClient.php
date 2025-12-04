@@ -22,7 +22,7 @@ class AlertServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\ListAlertsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\ListAlertsResponse>
      */
     public function ListAlerts(\Thingspect\Api\ListAlertsRequest $argument,
       $metadata = [], $options = []) {

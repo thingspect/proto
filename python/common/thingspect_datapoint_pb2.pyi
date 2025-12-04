@@ -1,9 +1,12 @@
+import datetime
+
 from google.protobuf import timestamp_pb2 as _timestamp_pb2
 from google.api import field_behavior_pb2 as _field_behavior_pb2
 from validate import validate_pb2 as _validate_pb2
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from collections.abc import Mapping as _Mapping
+from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -29,4 +32,4 @@ class DataPoint(_message.Message):
     ts: _timestamp_pb2.Timestamp
     token: str
     trace_id: str
-    def __init__(self, uniq_id: _Optional[str] = ..., attr: _Optional[str] = ..., int_val: _Optional[int] = ..., fl64_val: _Optional[float] = ..., str_val: _Optional[str] = ..., bool_val: bool = ..., bytes_val: _Optional[bytes] = ..., ts: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., token: _Optional[str] = ..., trace_id: _Optional[str] = ...) -> None: ...
+    def __init__(self, uniq_id: _Optional[str] = ..., attr: _Optional[str] = ..., int_val: _Optional[int] = ..., fl64_val: _Optional[float] = ..., str_val: _Optional[str] = ..., bool_val: bool = ..., bytes_val: _Optional[bytes] = ..., ts: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., token: _Optional[str] = ..., trace_id: _Optional[str] = ...) -> None: ...

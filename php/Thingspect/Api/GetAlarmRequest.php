@@ -6,8 +6,8 @@
 namespace Thingspect\Api;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * GetAlarmRequest is sent to get an alarm.

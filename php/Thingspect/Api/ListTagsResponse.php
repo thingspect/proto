@@ -6,8 +6,8 @@
 namespace Thingspect\Api;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * ListTagsResponse is sent in response to a tag list.
@@ -29,7 +29,7 @@ class ListTagsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $tags
+     *     @type string[] $tags
      *           Tag array, ordered by ascending name.
      * }
      */
@@ -42,7 +42,7 @@ class ListTagsResponse extends \Google\Protobuf\Internal\Message
      * Tag array, ordered by ascending name.
      *
      * Generated from protobuf field <code>repeated string tags = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getTags()
     {
@@ -53,7 +53,7 @@ class ListTagsResponse extends \Google\Protobuf\Internal\Message
      * Tag array, ordered by ascending name.
      *
      * Generated from protobuf field <code>repeated string tags = 1;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setTags($var)

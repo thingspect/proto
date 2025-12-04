@@ -6,8 +6,8 @@
 namespace Thingspect\Api;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * ListAlarmsResponse is sent in response to an alarm list.
@@ -41,7 +41,7 @@ class ListAlarmsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Thingspect\Api\Alarm>|\Google\Protobuf\Internal\RepeatedField $alarms
+     *     @type \Thingspect\Api\Alarm[] $alarms
      *           Alarm array, ordered by ascending created_at timestamp.
      *     @type string $next_page_token
      *           Pagination token used to retrieve the next page of results. Not returned for the last page.
@@ -58,7 +58,7 @@ class ListAlarmsResponse extends \Google\Protobuf\Internal\Message
      * Alarm array, ordered by ascending created_at timestamp.
      *
      * Generated from protobuf field <code>repeated .thingspect.api.Alarm alarms = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Thingspect\Api\Alarm>
      */
     public function getAlarms()
     {
@@ -69,7 +69,7 @@ class ListAlarmsResponse extends \Google\Protobuf\Internal\Message
      * Alarm array, ordered by ascending created_at timestamp.
      *
      * Generated from protobuf field <code>repeated .thingspect.api.Alarm alarms = 1;</code>
-     * @param array<\Thingspect\Api\Alarm>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Thingspect\Api\Alarm[] $var
      * @return $this
      */
     public function setAlarms($var)

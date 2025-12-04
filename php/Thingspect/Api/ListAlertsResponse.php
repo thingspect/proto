@@ -6,8 +6,8 @@
 namespace Thingspect\Api;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * ListAlertsResponse is sent in response to a device alerts list.
@@ -29,7 +29,7 @@ class ListAlertsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Thingspect\Api\Alert>|\Google\Protobuf\Internal\RepeatedField $alerts
+     *     @type \Thingspect\Api\Alert[] $alerts
      *           Alert array, ordered by descending created_at timestamp.
      * }
      */
@@ -42,7 +42,7 @@ class ListAlertsResponse extends \Google\Protobuf\Internal\Message
      * Alert array, ordered by descending created_at timestamp.
      *
      * Generated from protobuf field <code>repeated .thingspect.api.Alert alerts = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Thingspect\Api\Alert>
      */
     public function getAlerts()
     {
@@ -53,7 +53,7 @@ class ListAlertsResponse extends \Google\Protobuf\Internal\Message
      * Alert array, ordered by descending created_at timestamp.
      *
      * Generated from protobuf field <code>repeated .thingspect.api.Alert alerts = 1;</code>
-     * @param array<\Thingspect\Api\Alert>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Thingspect\Api\Alert[] $var
      * @return $this
      */
     public function setAlerts($var)

@@ -22,7 +22,7 @@ class RuleAlarmServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\CreateRuleRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\Rule>
      */
     public function CreateRule(\Thingspect\Api\CreateRuleRequest $argument,
       $metadata = [], $options = []) {
@@ -37,7 +37,7 @@ class RuleAlarmServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\CreateAlarmRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\Alarm>
      */
     public function CreateAlarm(\Thingspect\Api\CreateAlarmRequest $argument,
       $metadata = [], $options = []) {
@@ -52,7 +52,7 @@ class RuleAlarmServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\GetRuleRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\Rule>
      */
     public function GetRule(\Thingspect\Api\GetRuleRequest $argument,
       $metadata = [], $options = []) {
@@ -67,7 +67,7 @@ class RuleAlarmServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\GetAlarmRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\Alarm>
      */
     public function GetAlarm(\Thingspect\Api\GetAlarmRequest $argument,
       $metadata = [], $options = []) {
@@ -82,7 +82,7 @@ class RuleAlarmServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\UpdateRuleRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\Rule>
      */
     public function UpdateRule(\Thingspect\Api\UpdateRuleRequest $argument,
       $metadata = [], $options = []) {
@@ -97,7 +97,7 @@ class RuleAlarmServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\UpdateAlarmRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\Alarm>
      */
     public function UpdateAlarm(\Thingspect\Api\UpdateAlarmRequest $argument,
       $metadata = [], $options = []) {
@@ -112,7 +112,7 @@ class RuleAlarmServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\DeleteRuleRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function DeleteRule(\Thingspect\Api\DeleteRuleRequest $argument,
       $metadata = [], $options = []) {
@@ -127,7 +127,7 @@ class RuleAlarmServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\DeleteAlarmRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function DeleteAlarm(\Thingspect\Api\DeleteAlarmRequest $argument,
       $metadata = [], $options = []) {
@@ -142,7 +142,7 @@ class RuleAlarmServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\ListRulesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\ListRulesResponse>
      */
     public function ListRules(\Thingspect\Api\ListRulesRequest $argument,
       $metadata = [], $options = []) {
@@ -157,7 +157,7 @@ class RuleAlarmServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\ListAlarmsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\ListAlarmsResponse>
      */
     public function ListAlarms(\Thingspect\Api\ListAlarmsRequest $argument,
       $metadata = [], $options = []) {
@@ -172,7 +172,7 @@ class RuleAlarmServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\TestRuleRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\TestRuleResponse>
      */
     public function TestRule(\Thingspect\Api\TestRuleRequest $argument,
       $metadata = [], $options = []) {
@@ -187,7 +187,7 @@ class RuleAlarmServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\TestAlarmRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\TestAlarmResponse>
      */
     public function TestAlarm(\Thingspect\Api\TestAlarmRequest $argument,
       $metadata = [], $options = []) {

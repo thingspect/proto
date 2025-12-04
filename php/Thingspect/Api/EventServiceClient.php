@@ -22,7 +22,7 @@ class EventServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\ListEventsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\ListEventsResponse>
      */
     public function ListEvents(\Thingspect\Api\ListEventsRequest $argument,
       $metadata = [], $options = []) {
@@ -37,7 +37,7 @@ class EventServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\LatestEventsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\LatestEventsResponse>
      */
     public function LatestEvents(\Thingspect\Api\LatestEventsRequest $argument,
       $metadata = [], $options = []) {

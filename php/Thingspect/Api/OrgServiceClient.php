@@ -22,7 +22,7 @@ class OrgServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\CreateOrgRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\Org>
      */
     public function CreateOrg(\Thingspect\Api\CreateOrgRequest $argument,
       $metadata = [], $options = []) {
@@ -37,7 +37,7 @@ class OrgServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\GetOrgRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\Org>
      */
     public function GetOrg(\Thingspect\Api\GetOrgRequest $argument,
       $metadata = [], $options = []) {
@@ -52,7 +52,7 @@ class OrgServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\UpdateOrgRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\Org>
      */
     public function UpdateOrg(\Thingspect\Api\UpdateOrgRequest $argument,
       $metadata = [], $options = []) {
@@ -67,7 +67,7 @@ class OrgServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\DeleteOrgRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function DeleteOrg(\Thingspect\Api\DeleteOrgRequest $argument,
       $metadata = [], $options = []) {
@@ -82,7 +82,7 @@ class OrgServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\ListOrgsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\ListOrgsResponse>
      */
     public function ListOrgs(\Thingspect\Api\ListOrgsRequest $argument,
       $metadata = [], $options = []) {

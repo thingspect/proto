@@ -6,8 +6,8 @@
 namespace Thingspect\Api\CreateDeviceLoRaWANRequest;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * DeviceLoRaWANType is sent to add LoRaWAN device configuration.

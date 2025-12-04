@@ -6,8 +6,8 @@
 namespace Thingspect\Api;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * ListKeysResponse is sent in response to an API key list.
@@ -41,7 +41,7 @@ class ListKeysResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Thingspect\Api\Key>|\Google\Protobuf\Internal\RepeatedField $keys
+     *     @type \Thingspect\Api\Key[] $keys
      *           Key array, ordered by ascending created_at timestamp.
      *     @type string $next_page_token
      *           Pagination token used to retrieve the next page of results. Not returned for the last page.
@@ -58,7 +58,7 @@ class ListKeysResponse extends \Google\Protobuf\Internal\Message
      * Key array, ordered by ascending created_at timestamp.
      *
      * Generated from protobuf field <code>repeated .thingspect.api.Key keys = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Thingspect\Api\Key>
      */
     public function getKeys()
     {
@@ -69,7 +69,7 @@ class ListKeysResponse extends \Google\Protobuf\Internal\Message
      * Key array, ordered by ascending created_at timestamp.
      *
      * Generated from protobuf field <code>repeated .thingspect.api.Key keys = 1;</code>
-     * @param array<\Thingspect\Api\Key>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Thingspect\Api\Key[] $var
      * @return $this
      */
     public function setKeys($var)

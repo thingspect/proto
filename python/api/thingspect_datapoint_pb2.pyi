@@ -1,3 +1,5 @@
+import datetime
+
 from common import thingspect_datapoint_pb2 as _thingspect_datapoint_pb2
 from google.protobuf import empty_pb2 as _empty_pb2
 from google.protobuf import timestamp_pb2 as _timestamp_pb2
@@ -8,7 +10,8 @@ from validate import validate_pb2 as _validate_pb2
 from google.protobuf.internal import containers as _containers
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from collections.abc import Iterable as _Iterable, Mapping as _Mapping
+from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -30,7 +33,7 @@ class ListDataPointsRequest(_message.Message):
     attr: str
     end_time: _timestamp_pb2.Timestamp
     start_time: _timestamp_pb2.Timestamp
-    def __init__(self, uniq_id: _Optional[str] = ..., device_id: _Optional[str] = ..., attr: _Optional[str] = ..., end_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., start_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
+    def __init__(self, uniq_id: _Optional[str] = ..., device_id: _Optional[str] = ..., attr: _Optional[str] = ..., end_time: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ..., start_time: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
 
 class ListDataPointsResponse(_message.Message):
     __slots__ = ("points",)
@@ -46,7 +49,7 @@ class LatestDataPointsRequest(_message.Message):
     uniq_id: str
     device_id: str
     start_time: _timestamp_pb2.Timestamp
-    def __init__(self, uniq_id: _Optional[str] = ..., device_id: _Optional[str] = ..., start_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
+    def __init__(self, uniq_id: _Optional[str] = ..., device_id: _Optional[str] = ..., start_time: _Optional[_Union[datetime.datetime, _timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
 
 class LatestDataPointsResponse(_message.Message):
     __slots__ = ("points",)

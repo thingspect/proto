@@ -22,7 +22,7 @@ class DataPointServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\PublishDataPointsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function PublishDataPoints(\Thingspect\Api\PublishDataPointsRequest $argument,
       $metadata = [], $options = []) {
@@ -37,7 +37,7 @@ class DataPointServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\ListDataPointsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\ListDataPointsResponse>
      */
     public function ListDataPoints(\Thingspect\Api\ListDataPointsRequest $argument,
       $metadata = [], $options = []) {
@@ -52,7 +52,7 @@ class DataPointServiceClient extends \Grpc\BaseStub {
      * @param \Thingspect\Api\LatestDataPointsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Thingspect\Api\LatestDataPointsResponse>
      */
     public function LatestDataPoints(\Thingspect\Api\LatestDataPointsRequest $argument,
       $metadata = [], $options = []) {

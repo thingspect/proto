@@ -9,7 +9,7 @@ require 'google/api/annotations_pb'
 
 descriptor_data = "\n\x18\x61pi/thingspect_tag.proto\x12\x0ethingspect.api\x1a\x1cgoogle/api/annotations.proto\"\x11\n\x0fListTagsRequest\" \n\x10ListTagsResponse\x12\x0c\n\x04tags\x18\x01 \x03(\t2m\n\nTagService\x12_\n\x08ListTags\x12\x1f.thingspect.api.ListTagsRequest\x1a .thingspect.api.ListTagsResponse\"\x10\x82\xd3\xe4\x93\x02\n\x12\x08/v1/tagsB$Z\"github.com/thingspect/proto/go/apib\x06proto3"
 
-pool = Google::Protobuf::DescriptorPool.generated_pool
+pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
 
 module Thingspect

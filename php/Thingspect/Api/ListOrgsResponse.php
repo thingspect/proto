@@ -6,8 +6,8 @@
 namespace Thingspect\Api;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * ListOrgsResponse is sent in response to an organization list.
@@ -41,7 +41,7 @@ class ListOrgsResponse extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Thingspect\Api\Org>|\Google\Protobuf\Internal\RepeatedField $orgs
+     *     @type \Thingspect\Api\Org[] $orgs
      *           Org array, ordered by ascending created_at timestamp.
      *     @type string $next_page_token
      *           Pagination token used to retrieve the next page of results. Not returned for the last page.
@@ -58,7 +58,7 @@ class ListOrgsResponse extends \Google\Protobuf\Internal\Message
      * Org array, ordered by ascending created_at timestamp.
      *
      * Generated from protobuf field <code>repeated .thingspect.api.Org orgs = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Thingspect\Api\Org>
      */
     public function getOrgs()
     {
@@ -69,7 +69,7 @@ class ListOrgsResponse extends \Google\Protobuf\Internal\Message
      * Org array, ordered by ascending created_at timestamp.
      *
      * Generated from protobuf field <code>repeated .thingspect.api.Org orgs = 1;</code>
-     * @param array<\Thingspect\Api\Org>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Thingspect\Api\Org[] $var
      * @return $this
      */
     public function setOrgs($var)
