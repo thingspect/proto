@@ -57,7 +57,7 @@ clean:
 	find . -name '*.pb*.dart' -type f|xargs rm -v
 	find . -name '*_pb.rb' -type f|xargs rm -v
 	find . -name '*.php' -type f|xargs rm -v
-	rm -fv openapi/atlas.swagger.json
+	rm -fv openapi/atlas.*.json
 	rm -fv protobuf/api/thingspect_openapi.proto
 	rm -fv go/example/login/login
 	rm -fv go/example/publish/publish
