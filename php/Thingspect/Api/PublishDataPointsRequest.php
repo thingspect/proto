@@ -19,7 +19,7 @@ class PublishDataPointsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Data point array to publish.
      *
-     * Generated from protobuf field <code>repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     private $points;
 
@@ -41,7 +41,7 @@ class PublishDataPointsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Data point array to publish.
      *
-     * Generated from protobuf field <code>repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return RepeatedField<\Thingspect\Common\DataPoint>
      */
     public function getPoints()
@@ -52,7 +52,7 @@ class PublishDataPointsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Data point array to publish.
      *
-     * Generated from protobuf field <code>repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param \Thingspect\Common\DataPoint[] $var
      * @return $this
      */

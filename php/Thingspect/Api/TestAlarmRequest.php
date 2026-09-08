@@ -19,25 +19,25 @@ class TestAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Data point to test against an alarm.
      *
-     * Generated from protobuf field <code>.thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $point = null;
     /**
      * Rule to test against an alarm.
      *
-     * Generated from protobuf field <code>.thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $rule = null;
     /**
      * Device to test against an alarm.
      *
-     * Generated from protobuf field <code>.thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $device = null;
     /**
      * Alarm message to test.
      *
-     * Generated from protobuf field <code>.thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $alarm = null;
 
@@ -65,7 +65,7 @@ class TestAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Data point to test against an alarm.
      *
-     * Generated from protobuf field <code>.thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return \Thingspect\Common\DataPoint|null
      */
     public function getPoint()
@@ -86,7 +86,7 @@ class TestAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Data point to test against an alarm.
      *
-     * Generated from protobuf field <code>.thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param \Thingspect\Common\DataPoint $var
      * @return $this
      */
@@ -101,7 +101,7 @@ class TestAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule to test against an alarm.
      *
-     * Generated from protobuf field <code>.thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return \Thingspect\Api\Rule|null
      */
     public function getRule()
@@ -122,7 +122,7 @@ class TestAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule to test against an alarm.
      *
-     * Generated from protobuf field <code>.thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param \Thingspect\Api\Rule $var
      * @return $this
      */
@@ -137,7 +137,7 @@ class TestAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device to test against an alarm.
      *
-     * Generated from protobuf field <code>.thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return \Thingspect\Api\Device|null
      */
     public function getDevice()
@@ -158,7 +158,7 @@ class TestAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device to test against an alarm.
      *
-     * Generated from protobuf field <code>.thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param \Thingspect\Api\Device $var
      * @return $this
      */
@@ -173,7 +173,7 @@ class TestAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Alarm message to test.
      *
-     * Generated from protobuf field <code>.thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return \Thingspect\Api\Alarm|null
      */
     public function getAlarm()
@@ -194,7 +194,7 @@ class TestAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Alarm message to test.
      *
-     * Generated from protobuf field <code>.thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param \Thingspect\Api\Alarm $var
      * @return $this
      */

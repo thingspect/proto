@@ -31,25 +31,25 @@ class Device extends \Google\Protobuf\Internal\Message
     /**
      * Device unique ID.
      *
-     * Generated from protobuf field <code>string uniq_id = 3 [json_name = "uniqID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string uniq_id = 3 [json_name = "uniqID", (.buf.validate.field) = {</code>
      */
     protected $uniq_id = '';
     /**
      * Device name.
      *
-     * Generated from protobuf field <code>string name = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 4 [(.buf.validate.field) = {</code>
      */
     protected $name = '';
     /**
      * Device status.
      *
-     * Generated from protobuf field <code>.thingspect.api.Status status = 5 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Status status = 5 [(.buf.validate.field) = {</code>
      */
     protected $status = 0;
     /**
      * Authentication token (UUID). Will be generated at creation time, but can be updated afterward.
      *
-     * Generated from protobuf field <code>string token = 6 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string token = 6 [(.buf.validate.field) = {</code>
      */
     protected $token = '';
     /**
@@ -61,7 +61,7 @@ class Device extends \Google\Protobuf\Internal\Message
     /**
      * Device tags. Nested tags should be delimited by '/'.
      *
-     * Generated from protobuf field <code>repeated string tags = 8 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>repeated string tags = 8 [(.buf.validate.field) = {</code>
      */
     private $tags;
     /**
@@ -165,7 +165,7 @@ class Device extends \Google\Protobuf\Internal\Message
     /**
      * Device unique ID.
      *
-     * Generated from protobuf field <code>string uniq_id = 3 [json_name = "uniqID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string uniq_id = 3 [json_name = "uniqID", (.buf.validate.field) = {</code>
      * @return string
      */
     public function getUniqId()
@@ -176,7 +176,7 @@ class Device extends \Google\Protobuf\Internal\Message
     /**
      * Device unique ID.
      *
-     * Generated from protobuf field <code>string uniq_id = 3 [json_name = "uniqID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string uniq_id = 3 [json_name = "uniqID", (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -191,7 +191,7 @@ class Device extends \Google\Protobuf\Internal\Message
     /**
      * Device name.
      *
-     * Generated from protobuf field <code>string name = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 4 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getName()
@@ -202,7 +202,7 @@ class Device extends \Google\Protobuf\Internal\Message
     /**
      * Device name.
      *
-     * Generated from protobuf field <code>string name = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 4 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -217,7 +217,7 @@ class Device extends \Google\Protobuf\Internal\Message
     /**
      * Device status.
      *
-     * Generated from protobuf field <code>.thingspect.api.Status status = 5 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Status status = 5 [(.buf.validate.field) = {</code>
      * @return int
      */
     public function getStatus()
@@ -228,7 +228,7 @@ class Device extends \Google\Protobuf\Internal\Message
     /**
      * Device status.
      *
-     * Generated from protobuf field <code>.thingspect.api.Status status = 5 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Status status = 5 [(.buf.validate.field) = {</code>
      * @param int $var
      * @return $this
      */
@@ -243,7 +243,7 @@ class Device extends \Google\Protobuf\Internal\Message
     /**
      * Authentication token (UUID). Will be generated at creation time, but can be updated afterward.
      *
-     * Generated from protobuf field <code>string token = 6 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string token = 6 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getToken()
@@ -254,7 +254,7 @@ class Device extends \Google\Protobuf\Internal\Message
     /**
      * Authentication token (UUID). Will be generated at creation time, but can be updated afterward.
      *
-     * Generated from protobuf field <code>string token = 6 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string token = 6 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -295,7 +295,7 @@ class Device extends \Google\Protobuf\Internal\Message
     /**
      * Device tags. Nested tags should be delimited by '/'.
      *
-     * Generated from protobuf field <code>repeated string tags = 8 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>repeated string tags = 8 [(.buf.validate.field) = {</code>
      * @return RepeatedField<string>
      */
     public function getTags()
@@ -306,7 +306,7 @@ class Device extends \Google\Protobuf\Internal\Message
     /**
      * Device tags. Nested tags should be delimited by '/'.
      *
-     * Generated from protobuf field <code>repeated string tags = 8 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>repeated string tags = 8 [(.buf.validate.field) = {</code>
      * @param string[] $var
      * @return $this
      */

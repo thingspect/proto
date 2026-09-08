@@ -32,14 +32,14 @@
 #include "google/protobuf/unknown_field_set.h"
 #include "api/thingspect_device.pb.h"
 #include "api/thingspect_status.pb.h"
+#include "buf/validate/validate.pb.h"
 #include "common/thingspect_datapoint.pb.h"
-#include "google/protobuf/empty.pb.h"
-#include "google/protobuf/timestamp.pb.h"
-#include "google/protobuf/field_mask.pb.h"
 #include "google/api/annotations.pb.h"
 #include "google/api/field_behavior.pb.h"
+#include "google/protobuf/empty.pb.h"
+#include "google/protobuf/field_mask.pb.h"
+#include "google/protobuf/timestamp.pb.h"
 #include "protoc-gen-openapiv2/options/annotations.pb.h"
-#include "validate/validate.pb.h"
 // @@protoc_insertion_point(includes)
 
 // Must be included last.
@@ -743,7 +743,7 @@ class ListRulesRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_page_token();
 
   public:
-  // int32 page_size = 1 [(.validate.rules) = {
+  // int32 page_size = 1 [(.buf.validate.field) = {
   void clear_page_size() ;
   ::int32_t page_size() const;
   void set_page_size(::int32_t value);
@@ -952,7 +952,7 @@ class ListAlarmsRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_page_token();
 
   public:
-  // string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {
+  // string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {
   void clear_rule_id() ;
   const ::std::string& rule_id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -967,7 +967,7 @@ class ListAlarmsRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_rule_id();
 
   public:
-  // int32 page_size = 1 [(.validate.rules) = {
+  // int32 page_size = 1 [(.buf.validate.field) = {
   void clear_page_size() ;
   ::int32_t page_size() const;
   void set_page_size(::int32_t value);
@@ -1160,7 +1160,7 @@ class GetRuleRequest final : public ::google::protobuf::Message
   enum : int {
     kIdFieldNumber = 1,
   };
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_id() ;
   const ::std::string& id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1357,7 +1357,7 @@ class GetAlarmRequest final : public ::google::protobuf::Message
     kIdFieldNumber = 1,
     kRuleIdFieldNumber = 2,
   };
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_id() ;
   const ::std::string& id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1372,7 +1372,7 @@ class GetAlarmRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_id();
 
   public:
-  // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_rule_id() ;
   const ::std::string& rule_id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1569,7 +1569,7 @@ class DeleteRuleRequest final : public ::google::protobuf::Message
   enum : int {
     kIdFieldNumber = 1,
   };
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_id() ;
   const ::std::string& id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1766,7 +1766,7 @@ class DeleteAlarmRequest final : public ::google::protobuf::Message
     kIdFieldNumber = 1,
     kRuleIdFieldNumber = 2,
   };
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_id() ;
   const ::std::string& id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1781,7 +1781,7 @@ class DeleteAlarmRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_id();
 
   public:
-  // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_rule_id() ;
   const ::std::string& rule_id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -2016,7 +2016,7 @@ class Rule final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_org_id();
 
   public:
-  // string name = 3 [(.validate.rules) = {
+  // string name = 3 [(.buf.validate.field) = {
   void clear_name() ;
   const ::std::string& name() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -2031,7 +2031,7 @@ class Rule final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_name();
 
   public:
-  // string device_tag = 5 [(.validate.rules) = {
+  // string device_tag = 5 [(.buf.validate.field) = {
   void clear_device_tag() ;
   const ::std::string& device_tag() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -2046,7 +2046,7 @@ class Rule final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_device_tag();
 
   public:
-  // string attr = 6 [(.validate.rules) = {
+  // string attr = 6 [(.buf.validate.field) = {
   void clear_attr() ;
   const ::std::string& attr() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -2061,7 +2061,7 @@ class Rule final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_attr();
 
   public:
-  // string expr = 7 [(.validate.rules) = {
+  // string expr = 7 [(.buf.validate.field) = {
   void clear_expr() ;
   const ::std::string& expr() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -2106,7 +2106,7 @@ class Rule final : public ::google::protobuf::Message
   ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_updated_at();
 
   public:
-  // .thingspect.api.Status status = 4 [(.validate.rules) = {
+  // .thingspect.api.Status status = 4 [(.buf.validate.field) = {
   void clear_status() ;
   ::thingspect::api::Status status() const;
   void set_status(::thingspect::api::Status value);
@@ -2316,7 +2316,7 @@ class Alarm final : public ::google::protobuf::Message
     kTypeFieldNumber = 6,
     kRepeatIntervalFieldNumber = 10,
   };
-  // repeated string user_tags = 7 [(.validate.rules) = {
+  // repeated string user_tags = 7 [(.buf.validate.field) = {
   int user_tags_size() const;
   private:
   int _internal_user_tags_size() const;
@@ -2383,7 +2383,7 @@ class Alarm final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_rule_id();
 
   public:
-  // string name = 4 [(.validate.rules) = {
+  // string name = 4 [(.buf.validate.field) = {
   void clear_name() ;
   const ::std::string& name() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -2398,7 +2398,7 @@ class Alarm final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_name();
 
   public:
-  // string subject_template = 8 [(.validate.rules) = {
+  // string subject_template = 8 [(.buf.validate.field) = {
   void clear_subject_template() ;
   const ::std::string& subject_template() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -2413,7 +2413,7 @@ class Alarm final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_subject_template();
 
   public:
-  // string body_template = 9 [(.validate.rules) = {
+  // string body_template = 9 [(.buf.validate.field) = {
   void clear_body_template() ;
   const ::std::string& body_template() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -2458,7 +2458,7 @@ class Alarm final : public ::google::protobuf::Message
   ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_updated_at();
 
   public:
-  // .thingspect.api.Status status = 5 [(.validate.rules) = {
+  // .thingspect.api.Status status = 5 [(.buf.validate.field) = {
   void clear_status() ;
   ::thingspect::api::Status status() const;
   void set_status(::thingspect::api::Status value);
@@ -2468,7 +2468,7 @@ class Alarm final : public ::google::protobuf::Message
   void _internal_set_status(::thingspect::api::Status value);
 
   public:
-  // .thingspect.api.AlarmType type = 6 [(.validate.rules) = {
+  // .thingspect.api.AlarmType type = 6 [(.buf.validate.field) = {
   void clear_type() ;
   ::thingspect::api::AlarmType type() const;
   void set_type(::thingspect::api::AlarmType value);
@@ -2478,7 +2478,7 @@ class Alarm final : public ::google::protobuf::Message
   void _internal_set_type(::thingspect::api::AlarmType value);
 
   public:
-  // int32 repeat_interval = 10 [(.validate.rules) = {
+  // int32 repeat_interval = 10 [(.buf.validate.field) = {
   void clear_repeat_interval() ;
   ::int32_t repeat_interval() const;
   void set_repeat_interval(::int32_t value);
@@ -2681,7 +2681,7 @@ class UpdateRuleRequest final : public ::google::protobuf::Message
     kRuleFieldNumber = 1,
     kUpdateMaskFieldNumber = 2,
   };
-  // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   bool has_rule() const;
   void clear_rule() ;
   const ::thingspect::api::Rule& rule() const;
@@ -2894,7 +2894,7 @@ class UpdateAlarmRequest final : public ::google::protobuf::Message
     kAlarmFieldNumber = 1,
     kUpdateMaskFieldNumber = 2,
   };
-  // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   bool has_alarm() const;
   void clear_alarm() ;
   const ::thingspect::api::Alarm& alarm() const;
@@ -3107,7 +3107,7 @@ class TestRuleRequest final : public ::google::protobuf::Message
     kPointFieldNumber = 1,
     kRuleFieldNumber = 2,
   };
-  // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   bool has_point() const;
   void clear_point() ;
   const ::thingspect::common::DataPoint& point() const;
@@ -3122,7 +3122,7 @@ class TestRuleRequest final : public ::google::protobuf::Message
   ::thingspect::common::DataPoint* PROTOBUF_NONNULL _internal_mutable_point();
 
   public:
-  // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   bool has_rule() const;
   void clear_rule() ;
   const ::thingspect::api::Rule& rule() const;
@@ -3322,7 +3322,7 @@ class TestAlarmRequest final : public ::google::protobuf::Message
     kDeviceFieldNumber = 3,
     kAlarmFieldNumber = 4,
   };
-  // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   bool has_point() const;
   void clear_point() ;
   const ::thingspect::common::DataPoint& point() const;
@@ -3337,7 +3337,7 @@ class TestAlarmRequest final : public ::google::protobuf::Message
   ::thingspect::common::DataPoint* PROTOBUF_NONNULL _internal_mutable_point();
 
   public:
-  // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   bool has_rule() const;
   void clear_rule() ;
   const ::thingspect::api::Rule& rule() const;
@@ -3352,7 +3352,7 @@ class TestAlarmRequest final : public ::google::protobuf::Message
   ::thingspect::api::Rule* PROTOBUF_NONNULL _internal_mutable_rule();
 
   public:
-  // .thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   bool has_device() const;
   void clear_device() ;
   const ::thingspect::api::Device& device() const;
@@ -3367,7 +3367,7 @@ class TestAlarmRequest final : public ::google::protobuf::Message
   ::thingspect::api::Device* PROTOBUF_NONNULL _internal_mutable_device();
 
   public:
-  // .thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   bool has_alarm() const;
   void clear_alarm() ;
   const ::thingspect::api::Alarm& alarm() const;
@@ -4020,7 +4020,7 @@ class CreateRuleRequest final : public ::google::protobuf::Message
   enum : int {
     kRuleFieldNumber = 1,
   };
-  // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   bool has_rule() const;
   void clear_rule() ;
   const ::thingspect::api::Rule& rule() const;
@@ -4216,7 +4216,7 @@ class CreateAlarmRequest final : public ::google::protobuf::Message
   enum : int {
     kAlarmFieldNumber = 1,
   };
-  // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   bool has_alarm() const;
   void clear_alarm() ;
   const ::thingspect::api::Alarm& alarm() const;
@@ -4412,7 +4412,7 @@ inline void Rule::set_allocated_org_id(::std::string* PROTOBUF_NULLABLE value) {
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.Rule.org_id)
 }
 
-// string name = 3 [(.validate.rules) = {
+// string name = 3 [(.buf.validate.field) = {
 inline void Rule::clear_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.name_.ClearToEmpty();
@@ -4477,7 +4477,7 @@ inline void Rule::set_allocated_name(::std::string* PROTOBUF_NULLABLE value) {
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.Rule.name)
 }
 
-// .thingspect.api.Status status = 4 [(.validate.rules) = {
+// .thingspect.api.Status status = 4 [(.buf.validate.field) = {
 inline void Rule::clear_status() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.status_ = 0;
@@ -4501,7 +4501,7 @@ inline void Rule::_internal_set_status(::thingspect::api::Status value) {
   _impl_.status_ = value;
 }
 
-// string device_tag = 5 [(.validate.rules) = {
+// string device_tag = 5 [(.buf.validate.field) = {
 inline void Rule::clear_device_tag() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.device_tag_.ClearToEmpty();
@@ -4566,7 +4566,7 @@ inline void Rule::set_allocated_device_tag(::std::string* PROTOBUF_NULLABLE valu
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.Rule.device_tag)
 }
 
-// string attr = 6 [(.validate.rules) = {
+// string attr = 6 [(.buf.validate.field) = {
 inline void Rule::clear_attr() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.attr_.ClearToEmpty();
@@ -4631,7 +4631,7 @@ inline void Rule::set_allocated_attr(::std::string* PROTOBUF_NULLABLE value) {
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.Rule.attr)
 }
 
-// string expr = 7 [(.validate.rules) = {
+// string expr = 7 [(.buf.validate.field) = {
 inline void Rule::clear_expr() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.expr_.ClearToEmpty();
@@ -4886,7 +4886,7 @@ inline void Rule::set_allocated_updated_at(::google::protobuf::Timestamp* PROTOB
 
 // CreateRuleRequest
 
-// .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline bool CreateRuleRequest::has_rule() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.rule_ != nullptr);
@@ -4988,7 +4988,7 @@ inline void CreateRuleRequest::set_allocated_rule(::thingspect::api::Rule* PROTO
 
 // GetRuleRequest
 
-// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void GetRuleRequest::clear_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.id_.ClearToEmpty();
@@ -5057,7 +5057,7 @@ inline void GetRuleRequest::set_allocated_id(::std::string* PROTOBUF_NULLABLE va
 
 // UpdateRuleRequest
 
-// .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline bool UpdateRuleRequest::has_rule() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.rule_ != nullptr);
@@ -5252,7 +5252,7 @@ inline void UpdateRuleRequest::set_allocated_update_mask(::google::protobuf::Fie
 
 // DeleteRuleRequest
 
-// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void DeleteRuleRequest::clear_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.id_.ClearToEmpty();
@@ -5321,7 +5321,7 @@ inline void DeleteRuleRequest::set_allocated_id(::std::string* PROTOBUF_NULLABLE
 
 // ListRulesRequest
 
-// int32 page_size = 1 [(.validate.rules) = {
+// int32 page_size = 1 [(.buf.validate.field) = {
 inline void ListRulesRequest::clear_page_size() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.page_size_ = 0;
@@ -5557,7 +5557,7 @@ inline void ListRulesResponse::_internal_set_total_size(::int32_t value) {
 
 // TestRuleRequest
 
-// .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline bool TestRuleRequest::has_point() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.point_ != nullptr);
@@ -5650,7 +5650,7 @@ inline void TestRuleRequest::set_allocated_point(::thingspect::common::DataPoint
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.TestRuleRequest.point)
 }
 
-// .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline bool TestRuleRequest::has_rule() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.rule_ != nullptr);
@@ -5975,7 +5975,7 @@ inline void Alarm::set_allocated_rule_id(::std::string* PROTOBUF_NULLABLE value)
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.Alarm.rule_id)
 }
 
-// string name = 4 [(.validate.rules) = {
+// string name = 4 [(.buf.validate.field) = {
 inline void Alarm::clear_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.name_.ClearToEmpty();
@@ -6040,7 +6040,7 @@ inline void Alarm::set_allocated_name(::std::string* PROTOBUF_NULLABLE value) {
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.Alarm.name)
 }
 
-// .thingspect.api.Status status = 5 [(.validate.rules) = {
+// .thingspect.api.Status status = 5 [(.buf.validate.field) = {
 inline void Alarm::clear_status() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.status_ = 0;
@@ -6064,7 +6064,7 @@ inline void Alarm::_internal_set_status(::thingspect::api::Status value) {
   _impl_.status_ = value;
 }
 
-// .thingspect.api.AlarmType type = 6 [(.validate.rules) = {
+// .thingspect.api.AlarmType type = 6 [(.buf.validate.field) = {
 inline void Alarm::clear_type() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.type_ = 0;
@@ -6088,7 +6088,7 @@ inline void Alarm::_internal_set_type(::thingspect::api::AlarmType value) {
   _impl_.type_ = value;
 }
 
-// repeated string user_tags = 7 [(.validate.rules) = {
+// repeated string user_tags = 7 [(.buf.validate.field) = {
 inline int Alarm::_internal_user_tags_size() const {
   return _internal_user_tags().size();
 }
@@ -6152,7 +6152,7 @@ Alarm::_internal_mutable_user_tags() {
   return &_impl_.user_tags_;
 }
 
-// string subject_template = 8 [(.validate.rules) = {
+// string subject_template = 8 [(.buf.validate.field) = {
 inline void Alarm::clear_subject_template() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.subject_template_.ClearToEmpty();
@@ -6217,7 +6217,7 @@ inline void Alarm::set_allocated_subject_template(::std::string* PROTOBUF_NULLAB
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.Alarm.subject_template)
 }
 
-// string body_template = 9 [(.validate.rules) = {
+// string body_template = 9 [(.buf.validate.field) = {
 inline void Alarm::clear_body_template() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.body_template_.ClearToEmpty();
@@ -6282,7 +6282,7 @@ inline void Alarm::set_allocated_body_template(::std::string* PROTOBUF_NULLABLE 
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.Alarm.body_template)
 }
 
-// int32 repeat_interval = 10 [(.validate.rules) = {
+// int32 repeat_interval = 10 [(.buf.validate.field) = {
 inline void Alarm::clear_repeat_interval() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.repeat_interval_ = 0;
@@ -6496,7 +6496,7 @@ inline void Alarm::set_allocated_updated_at(::google::protobuf::Timestamp* PROTO
 
 // CreateAlarmRequest
 
-// .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline bool CreateAlarmRequest::has_alarm() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.alarm_ != nullptr);
@@ -6598,7 +6598,7 @@ inline void CreateAlarmRequest::set_allocated_alarm(::thingspect::api::Alarm* PR
 
 // GetAlarmRequest
 
-// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void GetAlarmRequest::clear_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.id_.ClearToEmpty();
@@ -6663,7 +6663,7 @@ inline void GetAlarmRequest::set_allocated_id(::std::string* PROTOBUF_NULLABLE v
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.GetAlarmRequest.id)
 }
 
-// string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void GetAlarmRequest::clear_rule_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.rule_id_.ClearToEmpty();
@@ -6732,7 +6732,7 @@ inline void GetAlarmRequest::set_allocated_rule_id(::std::string* PROTOBUF_NULLA
 
 // UpdateAlarmRequest
 
-// .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline bool UpdateAlarmRequest::has_alarm() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.alarm_ != nullptr);
@@ -6927,7 +6927,7 @@ inline void UpdateAlarmRequest::set_allocated_update_mask(::google::protobuf::Fi
 
 // DeleteAlarmRequest
 
-// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void DeleteAlarmRequest::clear_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.id_.ClearToEmpty();
@@ -6992,7 +6992,7 @@ inline void DeleteAlarmRequest::set_allocated_id(::std::string* PROTOBUF_NULLABL
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.DeleteAlarmRequest.id)
 }
 
-// string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void DeleteAlarmRequest::clear_rule_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.rule_id_.ClearToEmpty();
@@ -7061,7 +7061,7 @@ inline void DeleteAlarmRequest::set_allocated_rule_id(::std::string* PROTOBUF_NU
 
 // ListAlarmsRequest
 
-// int32 page_size = 1 [(.validate.rules) = {
+// int32 page_size = 1 [(.buf.validate.field) = {
 inline void ListAlarmsRequest::clear_page_size() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.page_size_ = 0;
@@ -7150,7 +7150,7 @@ inline void ListAlarmsRequest::set_allocated_page_token(::std::string* PROTOBUF_
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.ListAlarmsRequest.page_token)
 }
 
-// string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {
+// string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {
 inline void ListAlarmsRequest::clear_rule_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.rule_id_.ClearToEmpty();
@@ -7362,7 +7362,7 @@ inline void ListAlarmsResponse::_internal_set_total_size(::int32_t value) {
 
 // TestAlarmRequest
 
-// .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline bool TestAlarmRequest::has_point() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.point_ != nullptr);
@@ -7455,7 +7455,7 @@ inline void TestAlarmRequest::set_allocated_point(::thingspect::common::DataPoin
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.TestAlarmRequest.point)
 }
 
-// .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline bool TestAlarmRequest::has_rule() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.rule_ != nullptr);
@@ -7553,7 +7553,7 @@ inline void TestAlarmRequest::set_allocated_rule(::thingspect::api::Rule* PROTOB
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.TestAlarmRequest.rule)
 }
 
-// .thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// .thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline bool TestAlarmRequest::has_device() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.device_ != nullptr);
@@ -7646,7 +7646,7 @@ inline void TestAlarmRequest::set_allocated_device(::thingspect::api::Device* PR
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.TestAlarmRequest.device)
 }
 
-// .thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// .thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline bool TestAlarmRequest::has_alarm() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.alarm_ != nullptr);

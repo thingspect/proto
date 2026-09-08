@@ -31,31 +31,31 @@ class Rule extends \Google\Protobuf\Internal\Message
     /**
      * Rule name.
      *
-     * Generated from protobuf field <code>string name = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 3 [(.buf.validate.field) = {</code>
      */
     protected $name = '';
     /**
      * Rule status.
      *
-     * Generated from protobuf field <code>.thingspect.api.Status status = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Status status = 4 [(.buf.validate.field) = {</code>
      */
     protected $status = 0;
     /**
      * Device tag to which the rule applies.
      *
-     * Generated from protobuf field <code>string device_tag = 5 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string device_tag = 5 [(.buf.validate.field) = {</code>
      */
     protected $device_tag = '';
     /**
      * Data point attribute to which the rule applies.
      *
-     * Generated from protobuf field <code>string attr = 6 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string attr = 6 [(.buf.validate.field) = {</code>
      */
     protected $attr = '';
     /**
      * Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://expr-lang.org/).
      *
-     * Generated from protobuf field <code>string expr = 7 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string expr = 7 [(.buf.validate.field) = {</code>
      */
     protected $expr = '';
     /**
@@ -157,7 +157,7 @@ class Rule extends \Google\Protobuf\Internal\Message
     /**
      * Rule name.
      *
-     * Generated from protobuf field <code>string name = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 3 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getName()
@@ -168,7 +168,7 @@ class Rule extends \Google\Protobuf\Internal\Message
     /**
      * Rule name.
      *
-     * Generated from protobuf field <code>string name = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 3 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -183,7 +183,7 @@ class Rule extends \Google\Protobuf\Internal\Message
     /**
      * Rule status.
      *
-     * Generated from protobuf field <code>.thingspect.api.Status status = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Status status = 4 [(.buf.validate.field) = {</code>
      * @return int
      */
     public function getStatus()
@@ -194,7 +194,7 @@ class Rule extends \Google\Protobuf\Internal\Message
     /**
      * Rule status.
      *
-     * Generated from protobuf field <code>.thingspect.api.Status status = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Status status = 4 [(.buf.validate.field) = {</code>
      * @param int $var
      * @return $this
      */
@@ -209,7 +209,7 @@ class Rule extends \Google\Protobuf\Internal\Message
     /**
      * Device tag to which the rule applies.
      *
-     * Generated from protobuf field <code>string device_tag = 5 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string device_tag = 5 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getDeviceTag()
@@ -220,7 +220,7 @@ class Rule extends \Google\Protobuf\Internal\Message
     /**
      * Device tag to which the rule applies.
      *
-     * Generated from protobuf field <code>string device_tag = 5 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string device_tag = 5 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -235,7 +235,7 @@ class Rule extends \Google\Protobuf\Internal\Message
     /**
      * Data point attribute to which the rule applies.
      *
-     * Generated from protobuf field <code>string attr = 6 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string attr = 6 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getAttr()
@@ -246,7 +246,7 @@ class Rule extends \Google\Protobuf\Internal\Message
     /**
      * Data point attribute to which the rule applies.
      *
-     * Generated from protobuf field <code>string attr = 6 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string attr = 6 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -261,7 +261,7 @@ class Rule extends \Google\Protobuf\Internal\Message
     /**
      * Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://expr-lang.org/).
      *
-     * Generated from protobuf field <code>string expr = 7 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string expr = 7 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getExpr()
@@ -272,7 +272,7 @@ class Rule extends \Google\Protobuf\Internal\Message
     /**
      * Rule expression. The rules engine evaluates a boolean expression using the [Expr language](https://expr-lang.org/).
      *
-     * Generated from protobuf field <code>string expr = 7 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string expr = 7 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */

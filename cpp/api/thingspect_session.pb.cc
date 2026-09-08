@@ -356,61 +356,61 @@ static const ::_pb::Message* PROTOBUF_NONNULL const file_default_instances[] = {
 const char descriptor_table_protodef_api_2fthingspect_5fsession_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
     "\n\034api/thingspect_session.proto\022\016thingspe"
-    "ct.api\032\031api/thingspect_role.proto\032\033googl"
-    "e/protobuf/empty.proto\032\037google/protobuf/"
-    "timestamp.proto\032\034google/api/annotations."
-    "proto\032\037google/api/field_behavior.proto\032."
-    "protoc-gen-openapiv2/options/annotations"
-    ".proto\032\027validate/validate.proto\"P\n\014Login"
-    "Request\022\022\n\005email\030\001 \001(\tB\003\340A\002\022\025\n\010org_name\030"
-    "\002 \001(\tB\003\340A\002\022\025\n\010password\030\003 \001(\tB\003\340A\002\"N\n\rLog"
-    "inResponse\022\r\n\005token\030\001 \001(\t\022.\n\nexpires_at\030"
-    "\002 \001(\0132\032.google.protobuf.Timestamp\"\276\001\n\003Ke"
-    "y\022\017\n\002id\030\001 \001(\tB\003\340A\003\022\032\n\006org_id\030\002 \001(\tB\003\340A\003R"
-    "\005orgID\022\032\n\004name\030\003 \001(\tB\014\340A\002\372B\006r\004\020\005\030P\0229\n\004ro"
-    "le\030\004 \001(\0162\024.thingspect.api.RoleB\025\340A\002\372B\017\202\001"
-    "\014\030\003\030\006\030\007\030\t\030\014\030\017\0223\n\ncreated_at\030\005 \001(\0132\032.goog"
-    "le.protobuf.TimestampB\003\340A\003\"A\n\020CreateKeyR"
-    "equest\022-\n\003key\030\001 \001(\0132\023.thingspect.api.Key"
-    "B\013\340A\002\372B\005\212\001\002\020\001\"D\n\021CreateKeyResponse\022 \n\003ke"
-    "y\030\001 \001(\0132\023.thingspect.api.Key\022\r\n\005token\030\002 "
-    "\001(\t\"+\n\020DeleteKeyRequest\022\027\n\002id\030\001 \001(\tB\013\340A\002"
-    "\372B\005r\003\260\001\001\"B\n\017ListKeysRequest\022\033\n\tpage_size"
-    "\030\001 \001(\005B\010\372B\005\032\003\030\372\001\022\022\n\npage_token\030\002 \001(\t\"b\n\020"
-    "ListKeysResponse\022!\n\004keys\030\001 \003(\0132\023.thingsp"
-    "ect.api.Key\022\027\n\017next_page_token\030\002 \001(\t\022\022\n\n"
-    "total_size\030\003 \001(\0052\260\004\n\016SessionService\022h\n\005L"
-    "ogin\022\034.thingspect.api.LoginRequest\032\035.thi"
-    "ngspect.api.LoginResponse\"\"\222A\002b\000\202\323\344\223\002\027\"\022"
-    "/v1/sessions/login:\001*\022\273\001\n\tCreateKey\022 .th"
-    "ingspect.api.CreateKeyRequest\032!.thingspe"
-    "ct.api.CreateKeyResponse\"i\222AHJF\n\003201\022\?\n\026"
-    "A successful response.\022%\n#\032!.thingspect."
-    "api.CreateKeyResponse\202\323\344\223\002\030\"\021/v1/session"
-    "s/keys:\003key\022\213\001\n\tDeleteKey\022 .thingspect.a"
-    "pi.DeleteKeyRequest\032\026.google.protobuf.Em"
-    "pty\"D\222A#J!\n\003204\022\032\n\026A successful response"
-    ".\022\000\202\323\344\223\002\030*\026/v1/sessions/keys/{id}\022h\n\010Lis"
-    "tKeys\022\037.thingspect.api.ListKeysRequest\032 "
-    ".thingspect.api.ListKeysResponse\"\031\202\323\344\223\002\023"
-    "\022\021/v1/sessions/keysB$Z\"github.com/things"
-    "pect/proto/go/apib\006proto3"
+    "ct.api\032\031api/thingspect_role.proto\032\033buf/v"
+    "alidate/validate.proto\032\034google/api/annot"
+    "ations.proto\032\037google/api/field_behavior."
+    "proto\032\033google/protobuf/empty.proto\032\037goog"
+    "le/protobuf/timestamp.proto\032.protoc-gen-"
+    "openapiv2/options/annotations.proto\"P\n\014L"
+    "oginRequest\022\022\n\005email\030\001 \001(\tB\003\340A\002\022\025\n\010org_n"
+    "ame\030\002 \001(\tB\003\340A\002\022\025\n\010password\030\003 \001(\tB\003\340A\002\"N\n"
+    "\rLoginResponse\022\r\n\005token\030\001 \001(\t\022.\n\nexpires"
+    "_at\030\002 \001(\0132\032.google.protobuf.Timestamp\"\276\001"
+    "\n\003Key\022\017\n\002id\030\001 \001(\tB\003\340A\003\022\032\n\006org_id\030\002 \001(\tB\003"
+    "\340A\003R\005orgID\022\032\n\004name\030\003 \001(\tB\014\340A\002\272H\006r\004\020\005\030P\0229"
+    "\n\004role\030\004 \001(\0162\024.thingspect.api.RoleB\025\340A\002\272"
+    "H\017\202\001\014\030\003\030\006\030\007\030\t\030\014\030\017\0223\n\ncreated_at\030\005 \001(\0132\032."
+    "google.protobuf.TimestampB\003\340A\003\"\?\n\020Create"
+    "KeyRequest\022+\n\003key\030\001 \001(\0132\023.thingspect.api"
+    ".KeyB\t\340A\002\272H\003\310\001\001\"D\n\021CreateKeyResponse\022 \n\003"
+    "key\030\001 \001(\0132\023.thingspect.api.Key\022\r\n\005token\030"
+    "\002 \001(\t\"+\n\020DeleteKeyRequest\022\027\n\002id\030\001 \001(\tB\013\340"
+    "A\002\272H\005r\003\260\001\001\"B\n\017ListKeysRequest\022\033\n\tpage_si"
+    "ze\030\001 \001(\005B\010\272H\005\032\003\030\372\001\022\022\n\npage_token\030\002 \001(\t\"b"
+    "\n\020ListKeysResponse\022!\n\004keys\030\001 \003(\0132\023.thing"
+    "spect.api.Key\022\027\n\017next_page_token\030\002 \001(\t\022\022"
+    "\n\ntotal_size\030\003 \001(\0052\260\004\n\016SessionService\022h\n"
+    "\005Login\022\034.thingspect.api.LoginRequest\032\035.t"
+    "hingspect.api.LoginResponse\"\"\222A\002b\000\202\323\344\223\002\027"
+    "\"\022/v1/sessions/login:\001*\022\273\001\n\tCreateKey\022 ."
+    "thingspect.api.CreateKeyRequest\032!.things"
+    "pect.api.CreateKeyResponse\"i\222AHJF\n\003201\022\?"
+    "\n\026A successful response.\022%\n#\032!.thingspec"
+    "t.api.CreateKeyResponse\202\323\344\223\002\030\"\021/v1/sessi"
+    "ons/keys:\003key\022\213\001\n\tDeleteKey\022 .thingspect"
+    ".api.DeleteKeyRequest\032\026.google.protobuf."
+    "Empty\"D\222A#J!\n\003204\022\032\n\026A successful respon"
+    "se.\022\000\202\323\344\223\002\030*\026/v1/sessions/keys/{id}\022h\n\010L"
+    "istKeys\022\037.thingspect.api.ListKeysRequest"
+    "\032 .thingspect.api.ListKeysResponse\"\031\202\323\344\223"
+    "\002\023\022\021/v1/sessions/keysB$Z\"github.com/thin"
+    "gspect/proto/go/apib\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_api_2fthingspect_5fsession_2eproto_deps[7] = {
         &::descriptor_table_api_2fthingspect_5frole_2eproto,
+        &::descriptor_table_buf_2fvalidate_2fvalidate_2eproto,
         &::descriptor_table_google_2fapi_2fannotations_2eproto,
         &::descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto,
         &::descriptor_table_google_2fprotobuf_2fempty_2eproto,
         &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
         &::descriptor_table_protoc_2dgen_2dopenapiv2_2foptions_2fannotations_2eproto,
-        &::descriptor_table_validate_2fvalidate_2eproto,
 };
 static ::absl::once_flag descriptor_table_api_2fthingspect_5fsession_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_api_2fthingspect_5fsession_2eproto = {
     false,
     false,
-    1585,
+    1587,
     descriptor_table_protodef_api_2fthingspect_5fsession_2eproto,
     "api/thingspect_session.proto",
     &descriptor_table_api_2fthingspect_5fsession_2eproto_once,
@@ -1242,10 +1242,10 @@ Key::_table_ = {
     // string org_id = 2 [json_name = "orgID", (.google.api.field_behavior) = OUTPUT_ONLY];
     {::_pbi::TcParser::FastUS1,
      {18, 1, 0, PROTOBUF_FIELD_OFFSET(Key, _impl_.org_id_)}},
-    // string name = 3 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string name = 3 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {26, 2, 0, PROTOBUF_FIELD_OFFSET(Key, _impl_.name_)}},
-    // .thingspect.api.Role role = 4 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Role role = 4 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Key, _impl_.role_), 4>(),
      {32, 4, 0, PROTOBUF_FIELD_OFFSET(Key, _impl_.role_)}},
     // .google.protobuf.Timestamp created_at = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -1262,10 +1262,10 @@ Key::_table_ = {
     // string org_id = 2 [json_name = "orgID", (.google.api.field_behavior) = OUTPUT_ONLY];
     {PROTOBUF_FIELD_OFFSET(Key, _impl_.org_id_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string name = 3 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string name = 3 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Key, _impl_.name_), _Internal::kHasBitsOffset + 2, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // .thingspect.api.Role role = 4 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Role role = 4 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Key, _impl_.role_), _Internal::kHasBitsOffset + 4, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
     // .google.protobuf.Timestamp created_at = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -1346,7 +1346,7 @@ PROTOBUF_NOINLINE void Key::Clear() {
     }
   }
 
-  // string name = 3 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string name = 3 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000004u) != 0) {
     if (!this_._internal_name().empty()) {
       const ::std::string& _s = this_._internal_name();
@@ -1356,7 +1356,7 @@ PROTOBUF_NOINLINE void Key::Clear() {
     }
   }
 
-  // .thingspect.api.Role role = 4 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Role role = 4 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000010u) != 0) {
     if (this_._internal_role() != 0) {
       target = stream->EnsureSpace(target);
@@ -1413,7 +1413,7 @@ PROTOBUF_NOINLINE void Key::Clear() {
                                         this_._internal_org_id());
       }
     }
-    // string name = 3 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string name = 3 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000004u) != 0) {
       if (!this_._internal_name().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -1425,7 +1425,7 @@ PROTOBUF_NOINLINE void Key::Clear() {
       total_size += 1 +
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.created_at_);
     }
-    // .thingspect.api.Role role = 4 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Role role = 4 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000010u) != 0) {
       if (this_._internal_role() != 0) {
         total_size += 1 +
@@ -1650,13 +1650,13 @@ CreateKeyRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::CreateKeyRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // .thingspect.api.Key key = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Key key = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastMtS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(CreateKeyRequest, _impl_.key_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // .thingspect.api.Key key = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Key key = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(CreateKeyRequest, _impl_.key_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
   }},
@@ -1698,7 +1698,7 @@ PROTOBUF_NOINLINE void CreateKeyRequest::Clear() {
   (void)cached_has_bits;
 
   cached_has_bits = this_._impl_._has_bits_[0];
-  // .thingspect.api.Key key = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Key key = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((cached_has_bits & 0x00000001u) != 0) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         1, *this_._impl_.key_, this_._impl_.key_->GetCachedSize(), target,
@@ -1729,7 +1729,7 @@ PROTOBUF_NOINLINE void CreateKeyRequest::Clear() {
   (void)cached_has_bits;
 
    {
-    // .thingspect.api.Key key = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Key key = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     cached_has_bits = this_._impl_._has_bits_[0];
     if ((cached_has_bits & 0x00000001u) != 0) {
       total_size += 1 +
@@ -2214,13 +2214,13 @@ DeleteKeyRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::DeleteKeyRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(DeleteKeyRequest, _impl_.id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(DeleteKeyRequest, _impl_.id_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
@@ -2261,7 +2261,7 @@ PROTOBUF_NOINLINE void DeleteKeyRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_id().empty()) {
       const ::std::string& _s = this_._internal_id();
@@ -2295,7 +2295,7 @@ PROTOBUF_NOINLINE void DeleteKeyRequest::Clear() {
   (void)cached_has_bits;
 
    {
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     cached_has_bits = this_._impl_._has_bits_[0];
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_id().empty()) {
@@ -2481,13 +2481,13 @@ ListKeysRequest::_table_ = {
     // string page_token = 2;
     {::_pbi::TcParser::FastUS1,
      {18, 0, 0, PROTOBUF_FIELD_OFFSET(ListKeysRequest, _impl_.page_token_)}},
-    // int32 page_size = 1 [(.validate.rules) = {
+    // int32 page_size = 1 [(.buf.validate.field) = {
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ListKeysRequest, _impl_.page_size_), 1>(),
      {8, 1, 0, PROTOBUF_FIELD_OFFSET(ListKeysRequest, _impl_.page_size_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int32 page_size = 1 [(.validate.rules) = {
+    // int32 page_size = 1 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(ListKeysRequest, _impl_.page_size_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kInt32)},
     // string page_token = 2;
@@ -2532,7 +2532,7 @@ PROTOBUF_NOINLINE void ListKeysRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int32 page_size = 1 [(.validate.rules) = {
+  // int32 page_size = 1 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000002u) != 0) {
     if (this_._internal_page_size() != 0) {
       target =
@@ -2584,7 +2584,7 @@ PROTOBUF_NOINLINE void ListKeysRequest::Clear() {
                                         this_._internal_page_token());
       }
     }
-    // int32 page_size = 1 [(.validate.rules) = {
+    // int32 page_size = 1 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000002u) != 0) {
       if (this_._internal_page_size() != 0) {
         total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(

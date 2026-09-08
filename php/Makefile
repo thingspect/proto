@@ -3,17 +3,19 @@
 generate: common mqtt api
 
 common:
-	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv --php_out=. \
+	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pv/proto/protovalidate \
+	--php_out=. \
 	common/thingspect_datapoint.proto
 
 mqtt:
-	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv --php_out=. \
+	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pv/proto/protovalidate \
+	--php_out=. \
 	mqtt/thingspect_payload.proto
 
 api:
 	protoc --plugin=protoc-gen-grpc=/usr/bin/grpc_php_plugin -I=../protobuf \
-	-I=/tmp/googleapis -I=/tmp/grpc-gateway -I=/tmp/pgv --php_out=. \
-	--grpc_out=. \
+	-I=/tmp/googleapis -I=/tmp/grpc-gateway -I=/tmp/pv/proto/protovalidate \
+	--php_out=. --grpc_out=. \
 	api/thingspect_alert.proto \
 	api/thingspect_datapoint.proto \
 	api/thingspect_device.proto \

@@ -23,15 +23,15 @@ _sym_db = _symbol_database.Default()
 
 
 from api import thingspect_role_pb2 as api_dot_thingspect__role__pb2
-from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
-from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from buf.validate import validate_pb2 as buf_dot_validate_dot_validate__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 from protoc_gen_openapiv2.options import annotations_pb2 as protoc__gen__openapiv2_dot_options_dot_annotations__pb2
-from validate import validate_pb2 as validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x61pi/thingspect_session.proto\x12\x0ethingspect.api\x1a\x19\x61pi/thingspect_role.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"P\n\x0cLoginRequest\x12\x12\n\x05\x65mail\x18\x01 \x01(\tB\x03\xe0\x41\x02\x12\x15\n\x08org_name\x18\x02 \x01(\tB\x03\xe0\x41\x02\x12\x15\n\x08password\x18\x03 \x01(\tB\x03\xe0\x41\x02\"N\n\rLoginResponse\x12\r\n\x05token\x18\x01 \x01(\t\x12.\n\nexpires_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\xbe\x01\n\x03Key\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x1a\n\x04name\x18\x03 \x01(\tB\x0c\xe0\x41\x02\xfa\x42\x06r\x04\x10\x05\x18P\x12\x39\n\x04role\x18\x04 \x01(\x0e\x32\x14.thingspect.api.RoleB\x15\xe0\x41\x02\xfa\x42\x0f\x82\x01\x0c\x18\x03\x18\x06\x18\x07\x18\t\x18\x0c\x18\x0f\x12\x33\n\ncreated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"A\n\x10\x43reateKeyRequest\x12-\n\x03key\x18\x01 \x01(\x0b\x32\x13.thingspect.api.KeyB\x0b\xe0\x41\x02\xfa\x42\x05\x8a\x01\x02\x10\x01\"D\n\x11\x43reateKeyResponse\x12 \n\x03key\x18\x01 \x01(\x0b\x32\x13.thingspect.api.Key\x12\r\n\x05token\x18\x02 \x01(\t\"+\n\x10\x44\x65leteKeyRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xe0\x41\x02\xfa\x42\x05r\x03\xb0\x01\x01\"B\n\x0fListKeysRequest\x12\x1b\n\tpage_size\x18\x01 \x01(\x05\x42\x08\xfa\x42\x05\x1a\x03\x18\xfa\x01\x12\x12\n\npage_token\x18\x02 \x01(\t\"b\n\x10ListKeysResponse\x12!\n\x04keys\x18\x01 \x03(\x0b\x32\x13.thingspect.api.Key\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\x32\xb0\x04\n\x0eSessionService\x12h\n\x05Login\x12\x1c.thingspect.api.LoginRequest\x1a\x1d.thingspect.api.LoginResponse\"\"\x92\x41\x02\x62\x00\x82\xd3\xe4\x93\x02\x17\"\x12/v1/sessions/login:\x01*\x12\xbb\x01\n\tCreateKey\x12 .thingspect.api.CreateKeyRequest\x1a!.thingspect.api.CreateKeyResponse\"i\x92\x41HJF\n\x03\x32\x30\x31\x12?\n\x16\x41 successful response.\x12%\n#\x1a!.thingspect.api.CreateKeyResponse\x82\xd3\xe4\x93\x02\x18\"\x11/v1/sessions/keys:\x03key\x12\x8b\x01\n\tDeleteKey\x12 .thingspect.api.DeleteKeyRequest\x1a\x16.google.protobuf.Empty\"D\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x82\xd3\xe4\x93\x02\x18*\x16/v1/sessions/keys/{id}\x12h\n\x08ListKeys\x12\x1f.thingspect.api.ListKeysRequest\x1a .thingspect.api.ListKeysResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/sessions/keysB$Z\"github.com/thingspect/proto/go/apib\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x61pi/thingspect_session.proto\x12\x0ethingspect.api\x1a\x19\x61pi/thingspect_role.proto\x1a\x1b\x62uf/validate/validate.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\"P\n\x0cLoginRequest\x12\x12\n\x05\x65mail\x18\x01 \x01(\tB\x03\xe0\x41\x02\x12\x15\n\x08org_name\x18\x02 \x01(\tB\x03\xe0\x41\x02\x12\x15\n\x08password\x18\x03 \x01(\tB\x03\xe0\x41\x02\"N\n\rLoginResponse\x12\r\n\x05token\x18\x01 \x01(\t\x12.\n\nexpires_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"\xbe\x01\n\x03Key\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\x1a\n\x04name\x18\x03 \x01(\tB\x0c\xe0\x41\x02\xbaH\x06r\x04\x10\x05\x18P\x12\x39\n\x04role\x18\x04 \x01(\x0e\x32\x14.thingspect.api.RoleB\x15\xe0\x41\x02\xbaH\x0f\x82\x01\x0c\x18\x03\x18\x06\x18\x07\x18\t\x18\x0c\x18\x0f\x12\x33\n\ncreated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"?\n\x10\x43reateKeyRequest\x12+\n\x03key\x18\x01 \x01(\x0b\x32\x13.thingspect.api.KeyB\t\xe0\x41\x02\xbaH\x03\xc8\x01\x01\"D\n\x11\x43reateKeyResponse\x12 \n\x03key\x18\x01 \x01(\x0b\x32\x13.thingspect.api.Key\x12\r\n\x05token\x18\x02 \x01(\t\"+\n\x10\x44\x65leteKeyRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xe0\x41\x02\xbaH\x05r\x03\xb0\x01\x01\"B\n\x0fListKeysRequest\x12\x1b\n\tpage_size\x18\x01 \x01(\x05\x42\x08\xbaH\x05\x1a\x03\x18\xfa\x01\x12\x12\n\npage_token\x18\x02 \x01(\t\"b\n\x10ListKeysResponse\x12!\n\x04keys\x18\x01 \x03(\x0b\x32\x13.thingspect.api.Key\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05\x32\xb0\x04\n\x0eSessionService\x12h\n\x05Login\x12\x1c.thingspect.api.LoginRequest\x1a\x1d.thingspect.api.LoginResponse\"\"\x92\x41\x02\x62\x00\x82\xd3\xe4\x93\x02\x17\"\x12/v1/sessions/login:\x01*\x12\xbb\x01\n\tCreateKey\x12 .thingspect.api.CreateKeyRequest\x1a!.thingspect.api.CreateKeyResponse\"i\x92\x41HJF\n\x03\x32\x30\x31\x12?\n\x16\x41 successful response.\x12%\n#\x1a!.thingspect.api.CreateKeyResponse\x82\xd3\xe4\x93\x02\x18\"\x11/v1/sessions/keys:\x03key\x12\x8b\x01\n\tDeleteKey\x12 .thingspect.api.DeleteKeyRequest\x1a\x16.google.protobuf.Empty\"D\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x82\xd3\xe4\x93\x02\x18*\x16/v1/sessions/keys/{id}\x12h\n\x08ListKeys\x12\x1f.thingspect.api.ListKeysRequest\x1a .thingspect.api.ListKeysResponse\"\x19\x82\xd3\xe4\x93\x02\x13\x12\x11/v1/sessions/keysB$Z\"github.com/thingspect/proto/go/apib\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -50,17 +50,17 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_KEY'].fields_by_name['org_id']._loaded_options = None
   _globals['_KEY'].fields_by_name['org_id']._serialized_options = b'\340A\003'
   _globals['_KEY'].fields_by_name['name']._loaded_options = None
-  _globals['_KEY'].fields_by_name['name']._serialized_options = b'\340A\002\372B\006r\004\020\005\030P'
+  _globals['_KEY'].fields_by_name['name']._serialized_options = b'\340A\002\272H\006r\004\020\005\030P'
   _globals['_KEY'].fields_by_name['role']._loaded_options = None
-  _globals['_KEY'].fields_by_name['role']._serialized_options = b'\340A\002\372B\017\202\001\014\030\003\030\006\030\007\030\t\030\014\030\017'
+  _globals['_KEY'].fields_by_name['role']._serialized_options = b'\340A\002\272H\017\202\001\014\030\003\030\006\030\007\030\t\030\014\030\017'
   _globals['_KEY'].fields_by_name['created_at']._loaded_options = None
   _globals['_KEY'].fields_by_name['created_at']._serialized_options = b'\340A\003'
   _globals['_CREATEKEYREQUEST'].fields_by_name['key']._loaded_options = None
-  _globals['_CREATEKEYREQUEST'].fields_by_name['key']._serialized_options = b'\340A\002\372B\005\212\001\002\020\001'
+  _globals['_CREATEKEYREQUEST'].fields_by_name['key']._serialized_options = b'\340A\002\272H\003\310\001\001'
   _globals['_DELETEKEYREQUEST'].fields_by_name['id']._loaded_options = None
-  _globals['_DELETEKEYREQUEST'].fields_by_name['id']._serialized_options = b'\340A\002\372B\005r\003\260\001\001'
+  _globals['_DELETEKEYREQUEST'].fields_by_name['id']._serialized_options = b'\340A\002\272H\005r\003\260\001\001'
   _globals['_LISTKEYSREQUEST'].fields_by_name['page_size']._loaded_options = None
-  _globals['_LISTKEYSREQUEST'].fields_by_name['page_size']._serialized_options = b'\372B\005\032\003\030\372\001'
+  _globals['_LISTKEYSREQUEST'].fields_by_name['page_size']._serialized_options = b'\272H\005\032\003\030\372\001'
   _globals['_SESSIONSERVICE'].methods_by_name['Login']._loaded_options = None
   _globals['_SESSIONSERVICE'].methods_by_name['Login']._serialized_options = b'\222A\002b\000\202\323\344\223\002\027\"\022/v1/sessions/login:\001*'
   _globals['_SESSIONSERVICE'].methods_by_name['CreateKey']._loaded_options = None
@@ -69,22 +69,22 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_SESSIONSERVICE'].methods_by_name['DeleteKey']._serialized_options = b'\222A#J!\n\003204\022\032\n\026A successful response.\022\000\202\323\344\223\002\030*\026/v1/sessions/keys/{id}'
   _globals['_SESSIONSERVICE'].methods_by_name['ListKeys']._loaded_options = None
   _globals['_SESSIONSERVICE'].methods_by_name['ListKeys']._serialized_options = b'\202\323\344\223\002\023\022\021/v1/sessions/keys'
-  _globals['_LOGINREQUEST']._serialized_start=273
-  _globals['_LOGINREQUEST']._serialized_end=353
-  _globals['_LOGINRESPONSE']._serialized_start=355
-  _globals['_LOGINRESPONSE']._serialized_end=433
-  _globals['_KEY']._serialized_start=436
-  _globals['_KEY']._serialized_end=626
-  _globals['_CREATEKEYREQUEST']._serialized_start=628
-  _globals['_CREATEKEYREQUEST']._serialized_end=693
-  _globals['_CREATEKEYRESPONSE']._serialized_start=695
-  _globals['_CREATEKEYRESPONSE']._serialized_end=763
-  _globals['_DELETEKEYREQUEST']._serialized_start=765
-  _globals['_DELETEKEYREQUEST']._serialized_end=808
-  _globals['_LISTKEYSREQUEST']._serialized_start=810
-  _globals['_LISTKEYSREQUEST']._serialized_end=876
-  _globals['_LISTKEYSRESPONSE']._serialized_start=878
-  _globals['_LISTKEYSRESPONSE']._serialized_end=976
-  _globals['_SESSIONSERVICE']._serialized_start=979
-  _globals['_SESSIONSERVICE']._serialized_end=1539
+  _globals['_LOGINREQUEST']._serialized_start=277
+  _globals['_LOGINREQUEST']._serialized_end=357
+  _globals['_LOGINRESPONSE']._serialized_start=359
+  _globals['_LOGINRESPONSE']._serialized_end=437
+  _globals['_KEY']._serialized_start=440
+  _globals['_KEY']._serialized_end=630
+  _globals['_CREATEKEYREQUEST']._serialized_start=632
+  _globals['_CREATEKEYREQUEST']._serialized_end=695
+  _globals['_CREATEKEYRESPONSE']._serialized_start=697
+  _globals['_CREATEKEYRESPONSE']._serialized_end=765
+  _globals['_DELETEKEYREQUEST']._serialized_start=767
+  _globals['_DELETEKEYREQUEST']._serialized_end=810
+  _globals['_LISTKEYSREQUEST']._serialized_start=812
+  _globals['_LISTKEYSREQUEST']._serialized_end=878
+  _globals['_LISTKEYSRESPONSE']._serialized_start=880
+  _globals['_LISTKEYSRESPONSE']._serialized_end=978
+  _globals['_SESSIONSERVICE']._serialized_start=981
+  _globals['_SESSIONSERVICE']._serialized_end=1541
 # @@protoc_insertion_point(module_scope)

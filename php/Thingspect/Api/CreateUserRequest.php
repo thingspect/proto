@@ -19,7 +19,7 @@ class CreateUserRequest extends \Google\Protobuf\Internal\Message
     /**
      * User message to create.
      *
-     * Generated from protobuf field <code>.thingspect.api.User user = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.User user = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $user = null;
 
@@ -41,7 +41,7 @@ class CreateUserRequest extends \Google\Protobuf\Internal\Message
     /**
      * User message to create.
      *
-     * Generated from protobuf field <code>.thingspect.api.User user = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.User user = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return \Thingspect\Api\User|null
      */
     public function getUser()
@@ -62,7 +62,7 @@ class CreateUserRequest extends \Google\Protobuf\Internal\Message
     /**
      * User message to create.
      *
-     * Generated from protobuf field <code>.thingspect.api.User user = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.User user = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param \Thingspect\Api\User $var
      * @return $this
      */

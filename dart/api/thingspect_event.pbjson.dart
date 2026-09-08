@@ -80,11 +80,11 @@ const ListEventsRequest$json = {
 
 /// Descriptor for `ListEventsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listEventsRequestDescriptor = $convert.base64Decode(
-    'ChFMaXN0RXZlbnRzUmVxdWVzdBIZCgd1bmlxX2lkGAEgASgJSABSBnVuaXFJRBIqCglkZXZpY2'
-    'VfaWQYAiABKAlCC/pCCHIGsAEB0AEBSABSCGRldmljZUlEEiQKB3J1bGVfaWQYAyABKAlCC/pC'
-    'CHIGsAEB0AEBUgZydWxlSUQSNQoIZW5kX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVG'
-    'ltZXN0YW1wUgdlbmRUaW1lEjkKCnN0YXJ0X3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYu'
-    'VGltZXN0YW1wUglzdGFydFRpbWVCDwoIaWRfb25lb2YSA/hCAQ==');
+    'ChFMaXN0RXZlbnRzUmVxdWVzdBIZCgd1bmlxX2lkGAEgASgJSABSBnVuaXFJRBItCglkZXZpY2'
+    'VfaWQYAiABKAlCDrpIBXIDsAEBukgD2AEBSABSCGRldmljZUlEEicKB3J1bGVfaWQYAyABKAlC'
+    'DrpIBXIDsAEBukgD2AEBUgZydWxlSUQSNQoIZW5kX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG'
+    '9idWYuVGltZXN0YW1wUgdlbmRUaW1lEjkKCnN0YXJ0X3RpbWUYBSABKAsyGi5nb29nbGUucHJv'
+    'dG9idWYuVGltZXN0YW1wUglzdGFydFRpbWVCEQoIaWRfb25lb2YSBbpIAggB');
 
 @$core.Deprecated('Use listEventsResponseDescriptor instead')
 const ListEventsResponse$json = {
@@ -116,8 +116,8 @@ const LatestEventsRequest$json = {
 
 /// Descriptor for `LatestEventsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List latestEventsRequestDescriptor = $convert.base64Decode(
-    'ChNMYXRlc3RFdmVudHNSZXF1ZXN0EiQKB3J1bGVfaWQYASABKAlCC/pCCHIGsAEB0AEBUgZydW'
-    'xlSUQ=');
+    'ChNMYXRlc3RFdmVudHNSZXF1ZXN0EicKB3J1bGVfaWQYASABKAlCDrpIBXIDsAEBukgD2AEBUg'
+    'ZydWxlSUQ=');
 
 @$core.Deprecated('Use latestEventsResponseDescriptor instead')
 const LatestEventsResponse$json = {

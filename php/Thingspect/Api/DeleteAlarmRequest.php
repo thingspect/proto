@@ -19,13 +19,13 @@ class DeleteAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Alarm ID (UUID) to delete.
      *
-     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $id = '';
     /**
      * Rule ID (UUID).
      *
-     * Generated from protobuf field <code>string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $rule_id = '';
 
@@ -49,7 +49,7 @@ class DeleteAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Alarm ID (UUID) to delete.
      *
-     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return string
      */
     public function getId()
@@ -60,7 +60,7 @@ class DeleteAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Alarm ID (UUID) to delete.
      *
-     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -75,7 +75,7 @@ class DeleteAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule ID (UUID).
      *
-     * Generated from protobuf field <code>string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return string
      */
     public function getRuleId()
@@ -86,7 +86,7 @@ class DeleteAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule ID (UUID).
      *
-     * Generated from protobuf field <code>string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */

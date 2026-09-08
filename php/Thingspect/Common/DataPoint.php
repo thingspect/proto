@@ -19,13 +19,13 @@ class DataPoint extends \Google\Protobuf\Internal\Message
     /**
      * Device unique ID. Ignored during MQTT ingest if provided as part of the topic. Required for API publish.
      *
-     * Generated from protobuf field <code>string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $uniq_id = '';
     /**
      * Device attribute.
      *
-     * Generated from protobuf field <code>string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $attr = '';
     /**
@@ -84,7 +84,7 @@ class DataPoint extends \Google\Protobuf\Internal\Message
     /**
      * Device unique ID. Ignored during MQTT ingest if provided as part of the topic. Required for API publish.
      *
-     * Generated from protobuf field <code>string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return string
      */
     public function getUniqId()
@@ -95,7 +95,7 @@ class DataPoint extends \Google\Protobuf\Internal\Message
     /**
      * Device unique ID. Ignored during MQTT ingest if provided as part of the topic. Required for API publish.
      *
-     * Generated from protobuf field <code>string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -110,7 +110,7 @@ class DataPoint extends \Google\Protobuf\Internal\Message
     /**
      * Device attribute.
      *
-     * Generated from protobuf field <code>string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return string
      */
     public function getAttr()
@@ -121,7 +121,7 @@ class DataPoint extends \Google\Protobuf\Internal\Message
     /**
      * Device attribute.
      *
-     * Generated from protobuf field <code>string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */

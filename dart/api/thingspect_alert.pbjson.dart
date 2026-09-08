@@ -107,12 +107,12 @@ const ListAlertsRequest$json = {
 
 /// Descriptor for `ListAlertsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listAlertsRequestDescriptor = $convert.base64Decode(
-    'ChFMaXN0QWxlcnRzUmVxdWVzdBIZCgd1bmlxX2lkGAEgASgJSABSBnVuaXFJRBIqCglkZXZpY2'
-    'VfaWQYAiABKAlCC/pCCHIGsAEB0AEBSABSCGRldmljZUlEEiYKCGFsYXJtX2lkGAMgASgJQgv6'
-    'QghyBrABAdABAVIHYWxhcm1JRBIkCgd1c2VyX2lkGAQgASgJQgv6QghyBrABAdABAVIGdXNlck'
-    'lEEjUKCGVuZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIHZW5kVGlt'
-    'ZRI5CgpzdGFydF90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJc3Rhcn'
-    'RUaW1lQgoKCGlkX29uZW9m');
+    'ChFMaXN0QWxlcnRzUmVxdWVzdBIZCgd1bmlxX2lkGAEgASgJSABSBnVuaXFJRBItCglkZXZpY2'
+    'VfaWQYAiABKAlCDrpIBXIDsAEBukgD2AEBSABSCGRldmljZUlEEikKCGFsYXJtX2lkGAMgASgJ'
+    'Qg66SAVyA7ABAbpIA9gBAVIHYWxhcm1JRBInCgd1c2VyX2lkGAQgASgJQg66SAVyA7ABAbpIA9'
+    'gBAVIGdXNlcklEEjUKCGVuZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt'
+    'cFIHZW5kVGltZRI5CgpzdGFydF90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdG'
+    'FtcFIJc3RhcnRUaW1lQgoKCGlkX29uZW9m');
 
 @$core.Deprecated('Use listAlertsResponseDescriptor instead')
 const ListAlertsResponse$json = {

@@ -220,56 +220,56 @@ static const ::_pb::Message* PROTOBUF_NONNULL const file_default_instances[] = {
 const char descriptor_table_protodef_api_2fthingspect_5fdatapoint_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
     "\n\036api/thingspect_datapoint.proto\022\016things"
-    "pect.api\032!common/thingspect_datapoint.pr"
-    "oto\032\033google/protobuf/empty.proto\032\037google"
-    "/protobuf/timestamp.proto\032\034google/api/an"
-    "notations.proto\032\037google/api/field_behavi"
-    "or.proto\032.protoc-gen-openapiv2/options/a"
-    "nnotations.proto\032\027validate/validate.prot"
-    "o\"U\n\030PublishDataPointsRequest\0229\n\006points\030"
-    "\001 \003(\0132\034.thingspect.common.DataPointB\013\340A\002"
-    "\372B\005\222\001\002\010\001\"\344\001\n\025ListDataPointsRequest\022\031\n\007un"
-    "iq_id\030\001 \001(\tH\000R\006uniqID\022*\n\tdevice_id\030\002 \001(\t"
-    "B\013\372B\010r\006\260\001\001\320\001\001H\000R\010deviceID\022\025\n\004attr\030\003 \001(\tB"
-    "\007\372B\004r\002\030(\022,\n\010end_time\030\004 \001(\0132\032.google.prot"
-    "obuf.Timestamp\022.\n\nstart_time\030\005 \001(\0132\032.goo"
-    "gle.protobuf.TimestampB\017\n\010id_oneof\022\003\370B\001\""
-    "F\n\026ListDataPointsResponse\022,\n\006points\030\001 \003("
-    "\0132\034.thingspect.common.DataPoint\"\241\001\n\027Late"
-    "stDataPointsRequest\022\031\n\007uniq_id\030\001 \001(\tH\000R\006"
-    "uniqID\022*\n\tdevice_id\030\002 \001(\tB\013\372B\010r\006\260\001\001\320\001\001H\000"
-    "R\010deviceID\022.\n\nstart_time\030\003 \001(\0132\032.google."
-    "protobuf.TimestampB\017\n\010id_oneof\022\003\370B\001\"H\n\030L"
-    "atestDataPointsResponse\022,\n\006points\030\001 \003(\0132"
-    "\034.thingspect.common.DataPoint2\253\003\n\020DataPo"
-    "intService\022\226\001\n\021PublishDataPoints\022(.thing"
-    "spect.api.PublishDataPointsRequest\032\026.goo"
-    "gle.protobuf.Empty\"\?\222A#J!\n\003202\022\032\n\026A succ"
-    "essful response.\022\000\202\323\344\223\002\023\"\016/v1/datapoints"
-    ":\001*\022w\n\016ListDataPoints\022%.thingspect.api.L"
-    "istDataPointsRequest\032&.thingspect.api.Li"
-    "stDataPointsResponse\"\026\202\323\344\223\002\020\022\016/v1/datapo"
-    "ints\022\204\001\n\020LatestDataPoints\022\'.thingspect.a"
-    "pi.LatestDataPointsRequest\032(.thingspect."
-    "api.LatestDataPointsResponse\"\035\202\323\344\223\002\027\022\025/v"
-    "1/datapoints/latestB$Z\"github.com/things"
-    "pect/proto/go/apib\006proto3"
+    "pect.api\032\033buf/validate/validate.proto\032!c"
+    "ommon/thingspect_datapoint.proto\032\034google"
+    "/api/annotations.proto\032\037google/api/field"
+    "_behavior.proto\032\033google/protobuf/empty.p"
+    "roto\032\037google/protobuf/timestamp.proto\032.p"
+    "rotoc-gen-openapiv2/options/annotations."
+    "proto\"U\n\030PublishDataPointsRequest\0229\n\006poi"
+    "nts\030\001 \003(\0132\034.thingspect.common.DataPointB"
+    "\013\340A\002\272H\005\222\001\002\010\001\"\346\001\n\025ListDataPointsRequest\022\031"
+    "\n\007uniq_id\030\001 \001(\tH\000R\006uniqID\022*\n\tdevice_id\030\002"
+    " \001(\tB\013\272H\010r\003\260\001\001\330\001\001H\000R\010deviceID\022\025\n\004attr\030\003 "
+    "\001(\tB\007\272H\004r\002\030(\022,\n\010end_time\030\004 \001(\0132\032.google."
+    "protobuf.Timestamp\022.\n\nstart_time\030\005 \001(\0132\032"
+    ".google.protobuf.TimestampB\021\n\010id_oneof\022\005"
+    "\272H\002\010\001\"F\n\026ListDataPointsResponse\022,\n\006point"
+    "s\030\001 \003(\0132\034.thingspect.common.DataPoint\"\243\001"
+    "\n\027LatestDataPointsRequest\022\031\n\007uniq_id\030\001 \001"
+    "(\tH\000R\006uniqID\022*\n\tdevice_id\030\002 \001(\tB\013\272H\010r\003\260\001"
+    "\001\330\001\001H\000R\010deviceID\022.\n\nstart_time\030\003 \001(\0132\032.g"
+    "oogle.protobuf.TimestampB\021\n\010id_oneof\022\005\272H"
+    "\002\010\001\"H\n\030LatestDataPointsResponse\022,\n\006point"
+    "s\030\001 \003(\0132\034.thingspect.common.DataPoint2\253\003"
+    "\n\020DataPointService\022\226\001\n\021PublishDataPoints"
+    "\022(.thingspect.api.PublishDataPointsReque"
+    "st\032\026.google.protobuf.Empty\"\?\222A#J!\n\003202\022\032"
+    "\n\026A successful response.\022\000\202\323\344\223\002\023\"\016/v1/da"
+    "tapoints:\001*\022w\n\016ListDataPoints\022%.thingspe"
+    "ct.api.ListDataPointsRequest\032&.thingspec"
+    "t.api.ListDataPointsResponse\"\026\202\323\344\223\002\020\022\016/v"
+    "1/datapoints\022\204\001\n\020LatestDataPoints\022\'.thin"
+    "gspect.api.LatestDataPointsRequest\032(.thi"
+    "ngspect.api.LatestDataPointsResponse\"\035\202\323"
+    "\344\223\002\027\022\025/v1/datapoints/latestB$Z\"github.co"
+    "m/thingspect/proto/go/apib\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_api_2fthingspect_5fdatapoint_2eproto_deps[7] = {
+        &::descriptor_table_buf_2fvalidate_2fvalidate_2eproto,
         &::descriptor_table_common_2fthingspect_5fdatapoint_2eproto,
         &::descriptor_table_google_2fapi_2fannotations_2eproto,
         &::descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto,
         &::descriptor_table_google_2fprotobuf_2fempty_2eproto,
         &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
         &::descriptor_table_protoc_2dgen_2dopenapiv2_2foptions_2fannotations_2eproto,
-        &::descriptor_table_validate_2fvalidate_2eproto,
 };
 static ::absl::once_flag descriptor_table_api_2fthingspect_5fdatapoint_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_api_2fthingspect_5fdatapoint_2eproto = {
     false,
     false,
-    1385,
+    1393,
     descriptor_table_protodef_api_2fthingspect_5fdatapoint_2eproto,
     "api/thingspect_datapoint.proto",
     &descriptor_table_api_2fthingspect_5fdatapoint_2eproto_once,
@@ -420,13 +420,13 @@ PublishDataPointsRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::PublishDataPointsRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastMtR1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(PublishDataPointsRequest, _impl_.points_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(PublishDataPointsRequest, _impl_.points_), 0, 0,
     (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
   }},
@@ -462,7 +462,7 @@ PROTOBUF_NOINLINE void PublishDataPointsRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   for (unsigned i = 0, n = static_cast<unsigned>(
                            this_._internal_points_size());
        i < n; i++) {
@@ -498,7 +498,7 @@ PROTOBUF_NOINLINE void PublishDataPointsRequest::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
    {
-    // repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {
       total_size += 1UL * this_._internal_points_size();
       for (const auto& msg : this_._internal_points()) {
@@ -737,7 +737,7 @@ ListDataPointsRequest::_table_ = {
     {::_pbi::TcParser::FastMtS1,
      {42, 2, 1, PROTOBUF_FIELD_OFFSET(ListDataPointsRequest, _impl_.start_time_)}},
     {::_pbi::TcParser::MiniParse, {}},
-    // string attr = 3 [(.validate.rules) = {
+    // string attr = 3 [(.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {26, 0, 0, PROTOBUF_FIELD_OFFSET(ListDataPointsRequest, _impl_.attr_)}},
   }}, {{
@@ -746,10 +746,10 @@ ListDataPointsRequest::_table_ = {
     // string uniq_id = 1 [json_name = "uniqID"];
     {PROTOBUF_FIELD_OFFSET(ListDataPointsRequest, _impl_.id_oneof_.uniq_id_), _Internal::kOneofCaseOffset + 0, 0,
     (0 | ::_fl::kFcOneof | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+    // string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(ListDataPointsRequest, _impl_.id_oneof_.device_id_), _Internal::kOneofCaseOffset + 0, 0,
     (0 | ::_fl::kFcOneof | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string attr = 3 [(.validate.rules) = {
+    // string attr = 3 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(ListDataPointsRequest, _impl_.attr_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // .google.protobuf.Timestamp end_time = 4;
@@ -830,7 +830,7 @@ PROTOBUF_NOINLINE void ListDataPointsRequest::Clear() {
     default:
       break;
   }
-  // string attr = 3 [(.validate.rules) = {
+  // string attr = 3 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_attr().empty()) {
       const ::std::string& _s = this_._internal_attr();
@@ -881,7 +881,7 @@ PROTOBUF_NOINLINE void ListDataPointsRequest::Clear() {
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
   if ((cached_has_bits & 0x00000007u) != 0) {
-    // string attr = 3 [(.validate.rules) = {
+    // string attr = 3 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_attr().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -906,7 +906,7 @@ PROTOBUF_NOINLINE void ListDataPointsRequest::Clear() {
                                       this_._internal_uniq_id());
       break;
     }
-    // string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+    // string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
     case kDeviceId: {
       total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                       this_._internal_device_id());
@@ -1456,7 +1456,7 @@ LatestDataPointsRequest::_table_ = {
     // string uniq_id = 1 [json_name = "uniqID"];
     {PROTOBUF_FIELD_OFFSET(LatestDataPointsRequest, _impl_.id_oneof_.uniq_id_), _Internal::kOneofCaseOffset + 0, 0,
     (0 | ::_fl::kFcOneof | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+    // string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(LatestDataPointsRequest, _impl_.id_oneof_.device_id_), _Internal::kOneofCaseOffset + 0, 0,
     (0 | ::_fl::kFcOneof | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // .google.protobuf.Timestamp start_time = 3;
@@ -1569,7 +1569,7 @@ PROTOBUF_NOINLINE void LatestDataPointsRequest::Clear() {
                                       this_._internal_uniq_id());
       break;
     }
-    // string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+    // string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
     case kDeviceId: {
       total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                       this_._internal_device_id());

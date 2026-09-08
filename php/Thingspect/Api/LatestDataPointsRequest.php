@@ -77,7 +77,7 @@ class LatestDataPointsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device ID (UUID). Either unique ID or device ID must be provided.
      *
-     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {</code>
      * @return string
      */
     public function getDeviceId()
@@ -93,7 +93,7 @@ class LatestDataPointsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device ID (UUID). Either unique ID or device ID must be provided.
      *
-     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */

@@ -29,13 +29,13 @@
 #include "google/protobuf/repeated_field.h"  // IWYU pragma: export
 #include "google/protobuf/extension_set.h"  // IWYU pragma: export
 #include "google/protobuf/unknown_field_set.h"
+#include "buf/validate/validate.pb.h"
 #include "common/thingspect_datapoint.pb.h"
-#include "google/protobuf/empty.pb.h"
-#include "google/protobuf/timestamp.pb.h"
 #include "google/api/annotations.pb.h"
 #include "google/api/field_behavior.pb.h"
+#include "google/protobuf/empty.pb.h"
+#include "google/protobuf/timestamp.pb.h"
 #include "protoc-gen-openapiv2/options/annotations.pb.h"
-#include "validate/validate.pb.h"
 // @@protoc_insertion_point(includes)
 
 // Must be included last.
@@ -250,7 +250,7 @@ class ListDataPointsRequest final : public ::google::protobuf::Message
     kUniqIdFieldNumber = 1,
     kDeviceIdFieldNumber = 2,
   };
-  // string attr = 3 [(.validate.rules) = {
+  // string attr = 3 [(.buf.validate.field) = {
   void clear_attr() ;
   const ::std::string& attr() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -311,7 +311,7 @@ class ListDataPointsRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_uniq_id();
 
   public:
-  // string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+  // string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
   bool has_device_id() const;
   void clear_device_id() ;
   const ::std::string& device_id() const;
@@ -561,7 +561,7 @@ class LatestDataPointsRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_uniq_id();
 
   public:
-  // string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+  // string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
   bool has_device_id() const;
   void clear_device_id() ;
   const ::std::string& device_id() const;
@@ -771,7 +771,7 @@ class PublishDataPointsRequest final : public ::google::protobuf::Message
   enum : int {
     kPointsFieldNumber = 1,
   };
-  // repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   int points_size() const;
   private:
   int _internal_points_size() const;
@@ -1232,7 +1232,7 @@ extern const ::google::protobuf::internal::ClassDataFull LatestDataPointsRespons
 
 // PublishDataPointsRequest
 
-// repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// repeated .thingspect.common.DataPoint points = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline int PublishDataPointsRequest::_internal_points_size() const {
   return _internal_points().size();
 }
@@ -1367,7 +1367,7 @@ inline void ListDataPointsRequest::set_allocated_uniq_id(::std::string* PROTOBUF
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.ListDataPointsRequest.uniq_id)
 }
 
-// string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+// string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
 inline bool ListDataPointsRequest::has_device_id() const {
   return id_oneof_case() == kDeviceId;
 }
@@ -1452,7 +1452,7 @@ inline void ListDataPointsRequest::set_allocated_device_id(::std::string* PROTOB
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.ListDataPointsRequest.device_id)
 }
 
-// string attr = 3 [(.validate.rules) = {
+// string attr = 3 [(.buf.validate.field) = {
 inline void ListDataPointsRequest::clear_attr() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.attr_.ClearToEmpty();
@@ -1851,7 +1851,7 @@ inline void LatestDataPointsRequest::set_allocated_uniq_id(::std::string* PROTOB
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.LatestDataPointsRequest.uniq_id)
 }
 
-// string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+// string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
 inline bool LatestDataPointsRequest::has_device_id() const {
   return id_oneof_case() == kDeviceId;
 }

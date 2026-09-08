@@ -35,7 +35,7 @@ const PublishDataPointsRequest$json = {
 final $typed_data.Uint8List publishDataPointsRequestDescriptor =
     $convert.base64Decode(
         'ChhQdWJsaXNoRGF0YVBvaW50c1JlcXVlc3QSQQoGcG9pbnRzGAEgAygLMhwudGhpbmdzcGVjdC'
-        '5jb21tb24uRGF0YVBvaW50Qgv6QgWSAQIIAeBBAlIGcG9pbnRz');
+        '5jb21tb24uRGF0YVBvaW50Qgu6SAWSAQIIAeBBAlIGcG9pbnRz');
 
 @$core.Deprecated('Use listDataPointsRequestDescriptor instead')
 const ListDataPointsRequest$json = {
@@ -76,11 +76,11 @@ const ListDataPointsRequest$json = {
 
 /// Descriptor for `ListDataPointsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listDataPointsRequestDescriptor = $convert.base64Decode(
-    'ChVMaXN0RGF0YVBvaW50c1JlcXVlc3QSGQoHdW5pcV9pZBgBIAEoCUgAUgZ1bmlxSUQSKgoJZG'
-    'V2aWNlX2lkGAIgASgJQgv6QghyBrABAdABAUgAUghkZXZpY2VJRBIbCgRhdHRyGAMgASgJQgf6'
-    'QgRyAhgoUgRhdHRyEjUKCGVuZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdG'
-    'FtcFIHZW5kVGltZRI5CgpzdGFydF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz'
-    'dGFtcFIJc3RhcnRUaW1lQg8KCGlkX29uZW9mEgP4QgE=');
+    'ChVMaXN0RGF0YVBvaW50c1JlcXVlc3QSGQoHdW5pcV9pZBgBIAEoCUgAUgZ1bmlxSUQSLQoJZG'
+    'V2aWNlX2lkGAIgASgJQg66SAVyA7ABAbpIA9gBAUgAUghkZXZpY2VJRBIbCgRhdHRyGAMgASgJ'
+    'Qge6SARyAhgoUgRhdHRyEjUKCGVuZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbW'
+    'VzdGFtcFIHZW5kVGltZRI5CgpzdGFydF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp'
+    'bWVzdGFtcFIJc3RhcnRUaW1lQhEKCGlkX29uZW9mEgW6SAIIAQ==');
 
 @$core.Deprecated('Use listDataPointsResponseDescriptor instead')
 const ListDataPointsResponse$json = {
@@ -133,10 +133,10 @@ const LatestDataPointsRequest$json = {
 
 /// Descriptor for `LatestDataPointsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List latestDataPointsRequestDescriptor = $convert.base64Decode(
-    'ChdMYXRlc3REYXRhUG9pbnRzUmVxdWVzdBIZCgd1bmlxX2lkGAEgASgJSABSBnVuaXFJRBIqCg'
-    'lkZXZpY2VfaWQYAiABKAlCC/pCCHIGsAEB0AEBSABSCGRldmljZUlEEjkKCnN0YXJ0X3RpbWUY'
-    'AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWVCDwoIaWRfb25lb2'
-    'YSA/hCAQ==');
+    'ChdMYXRlc3REYXRhUG9pbnRzUmVxdWVzdBIZCgd1bmlxX2lkGAEgASgJSABSBnVuaXFJRBItCg'
+    'lkZXZpY2VfaWQYAiABKAlCDrpIBXIDsAEBukgD2AEBSABSCGRldmljZUlEEjkKCnN0YXJ0X3Rp'
+    'bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWVCEQoIaWRfb2'
+    '5lb2YSBbpIAggB');
 
 @$core.Deprecated('Use latestDataPointsResponseDescriptor instead')
 const LatestDataPointsResponse$json = {

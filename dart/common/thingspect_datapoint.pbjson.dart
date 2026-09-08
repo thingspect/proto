@@ -44,10 +44,10 @@ const DataPoint$json = {
 
 /// Descriptor for `DataPoint`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List dataPointDescriptor = $convert.base64Decode(
-    'CglEYXRhUG9pbnQSJQoHdW5pcV9pZBgBIAEoCUIM+kIGcgQQBRgo4EECUgZ1bmlxSUQSHgoEYX'
-    'R0chgCIAEoCUIK+kIEcgIYKOBBAlIEYXR0chIZCgdpbnRfdmFsGAMgASgRSABSBmludFZhbBIb'
+    'CglEYXRhUG9pbnQSJQoHdW5pcV9pZBgBIAEoCUIMukgGcgQQBRgo4EECUgZ1bmlxSUQSHgoEYX'
+    'R0chgCIAEoCUIKukgEcgIYKOBBAlIEYXR0chIZCgdpbnRfdmFsGAMgASgRSABSBmludFZhbBIb'
     'CghmbDY0X3ZhbBgEIAEoAUgAUgdmbDY0VmFsEhkKB3N0cl92YWwYBSABKAlIAFIGc3RyVmFsEh'
     'sKCGJvb2xfdmFsGAYgASgISABSB2Jvb2xWYWwSHQoJYnl0ZXNfdmFsGBAgASgMSABSCGJ5dGVz'
     'VmFsEioKAnRzGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFICdHMSGQoFdG9rZW'
-    '4YCCABKAlCA+BBA1IFdG9rZW4SHgoIdHJhY2VfaWQYCSABKAlCA+BBA1IHdHJhY2VJZEIQCgl2'
-    'YWxfb25lb2YSA/hCAQ==');
+    '4YCCABKAlCA+BBA1IFdG9rZW4SHgoIdHJhY2VfaWQYCSABKAlCA+BBA1IHdHJhY2VJZEISCgl2'
+    'YWxfb25lb2YSBbpIAggB');

@@ -462,93 +462,94 @@ static const ::_pb::Message* PROTOBUF_NONNULL const file_default_instances[] = {
 const char descriptor_table_protodef_api_2fthingspect_5fdevice_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
     "\n\033api/thingspect_device.proto\022\016thingspec"
-    "t.api\032\033api/thingspect_status.proto\032\033goog"
-    "le/protobuf/empty.proto\032\037google/protobuf"
-    "/timestamp.proto\032 google/protobuf/field_"
-    "mask.proto\032\034google/api/annotations.proto"
-    "\032\037google/api/field_behavior.proto\032.proto"
-    "c-gen-openapiv2/options/annotations.prot"
-    "o\032\027validate/validate.proto\"\365\002\n\006Device\022\017\n"
-    "\002id\030\001 \001(\tB\003\340A\003\022\032\n\006org_id\030\002 \001(\tB\003\340A\003R\005org"
-    "ID\022\"\n\007uniq_id\030\003 \001(\tB\t\372B\006r\004\020\005\030(R\006uniqID\022\027"
-    "\n\004name\030\004 \001(\tB\t\372B\006r\004\020\005\030P\0222\n\006status\030\005 \001(\0162"
-    "\026.thingspect.api.StatusB\n\372B\007\202\001\004\030\003\030\006\022\032\n\005t"
-    "oken\030\006 \001(\tB\013\372B\010r\006\260\001\001\320\001\001\022(\n\007decoder\030\007 \001(\016"
-    "2\027.thingspect.api.Decoder\022\035\n\004tags\030\010 \003(\tB"
-    "\017\372B\014\222\001\t\030\001\"\005r\003\030\377\001\0223\n\ncreated_at\030\t \001(\0132\032.g"
-    "oogle.protobuf.TimestampB\003\340A\003\0223\n\nupdated"
-    "_at\030\n \001(\0132\032.google.protobuf.TimestampB\003\340"
-    "A\003\"J\n\023CreateDeviceRequest\0223\n\006device\030\001 \001("
-    "\0132\026.thingspect.api.DeviceB\013\340A\002\372B\005\212\001\002\020\001\"\364"
-    "\002\n\032CreateDeviceLoRaWANRequest\022\027\n\002id\030\001 \001("
-    "\tB\013\340A\003\372B\005r\003\260\001\001\022q\n\024gateway_lorawan_type\030\002"
-    " \001(\0132=.thingspect.api.CreateDeviceLoRaWA"
-    "NRequest.GatewayLoRaWANTypeH\000R\022gatewayLo"
-    "RaWANType\022n\n\023device_lorawan_type\030\003 \001(\0132<"
-    ".thingspect.api.CreateDeviceLoRaWANReque"
-    "st.DeviceLoRaWANTypeH\000R\021deviceLoRaWANTyp"
-    "e\032\024\n\022GatewayLoRaWANType\0321\n\021DeviceLoRaWAN"
-    "Type\022\034\n\007app_key\030\001 \001(\tB\013\340A\002\372B\005r\003\230\001 B\021\n\nty"
-    "pe_oneof\022\003\370B\001\"+\n\020GetDeviceRequest\022\027\n\002id\030"
-    "\001 \001(\tB\013\340A\002\372B\005r\003\260\001\001\"{\n\023UpdateDeviceReques"
-    "t\0223\n\006device\030\001 \001(\0132\026.thingspect.api.Devic"
-    "eB\013\340A\002\372B\005\212\001\002\020\001\022/\n\013update_mask\030\002 \001(\0132\032.go"
-    "ogle.protobuf.FieldMask\"5\n\032DeleteDeviceL"
-    "oRaWANRequest\022\027\n\002id\030\001 \001(\tB\013\340A\002\372B\005r\003\260\001\001\"."
-    "\n\023DeleteDeviceRequest\022\027\n\002id\030\001 \001(\tB\013\340A\002\372B"
-    "\005r\003\260\001\001\"\\\n\022ListDevicesRequest\022\033\n\tpage_siz"
-    "e\030\001 \001(\005B\010\372B\005\032\003\030\372\001\022\022\n\npage_token\030\002 \001(\t\022\025\n"
-    "\003tag\030\003 \001(\tB\010\372B\005r\003\030\377\001\"k\n\023ListDevicesRespo"
-    "nse\022\'\n\007devices\030\001 \003(\0132\026.thingspect.api.De"
-    "vice\022\027\n\017next_page_token\030\002 \001(\t\022\022\n\ntotal_s"
-    "ize\030\003 \001(\005*\237\001\n\007Decoder\022\007\n\003RAW\020\000\022\013\n\007GATEWA"
-    "Y\020\001\022\030\n\024RADIO_BRIDGE_DOOR_V1\020\002\022\030\n\024RADIO_B"
-    "RIDGE_DOOR_V2\020\003\022\021\n\rGLOBALSAT_CO2\020\004\022\020\n\014GL"
-    "OBALSAT_CO\020\005\022\022\n\016GLOBALSAT_PM25\020\006\022\021\n\rTEKT"
-    "ELIC_HOME\020\0072\373\007\n\rDeviceService\022\250\001\n\014Create"
-    "Device\022#.thingspect.api.CreateDeviceRequ"
-    "est\032\026.thingspect.api.Device\"[\222A=J;\n\003201\022"
-    "4\n\026A successful response.\022\032\n\030\032\026.thingspe"
-    "ct.api.Device\202\323\344\223\002\025\"\013/v1/devices:\006device"
-    "\022\244\001\n\023CreateDeviceLoRaWAN\022*.thingspect.ap"
-    "i.CreateDeviceLoRaWANRequest\032\026.google.pr"
-    "otobuf.Empty\"I\222A#J!\n\003204\022\032\n\026A successful"
-    " response.\022\000\202\323\344\223\002\035\"\030/v1/devices/{id}/lor"
-    "awan:\001*\022_\n\tGetDevice\022 .thingspect.api.Ge"
-    "tDeviceRequest\032\026.thingspect.api.Device\"\030"
-    "\202\323\344\223\002\022\022\020/v1/devices/{id}\022\227\001\n\014UpdateDevic"
-    "e\022#.thingspect.api.UpdateDeviceRequest\032\026"
-    ".thingspect.api.Device\"J\202\323\344\223\002D\032\027/v1/devi"
-    "ces/{device.id}:\006deviceZ!2\027/v1/devices/{"
-    "device.id}:\006device\022\241\001\n\023DeleteDeviceLoRaW"
-    "AN\022*.thingspect.api.DeleteDeviceLoRaWANR"
-    "equest\032\026.google.protobuf.Empty\"F\222A#J!\n\0032"
-    "04\022\032\n\026A successful response.\022\000\202\323\344\223\002\032*\030/v"
-    "1/devices/{id}/lorawan\022\213\001\n\014DeleteDevice\022"
-    "#.thingspect.api.DeleteDeviceRequest\032\026.g"
-    "oogle.protobuf.Empty\">\222A#J!\n\003204\022\032\n\026A su"
-    "ccessful response.\022\000\202\323\344\223\002\022*\020/v1/devices/"
-    "{id}\022k\n\013ListDevices\022\".thingspect.api.Lis"
-    "tDevicesRequest\032#.thingspect.api.ListDev"
-    "icesResponse\"\023\202\323\344\223\002\r\022\013/v1/devicesB$Z\"git"
-    "hub.com/thingspect/proto/go/apib\006proto3"
+    "t.api\032\033api/thingspect_status.proto\032\033buf/"
+    "validate/validate.proto\032\034google/api/anno"
+    "tations.proto\032\037google/api/field_behavior"
+    ".proto\032\033google/protobuf/empty.proto\032 goo"
+    "gle/protobuf/field_mask.proto\032\037google/pr"
+    "otobuf/timestamp.proto\032.protoc-gen-opena"
+    "piv2/options/annotations.proto\"\365\002\n\006Devic"
+    "e\022\017\n\002id\030\001 \001(\tB\003\340A\003\022\032\n\006org_id\030\002 \001(\tB\003\340A\003R"
+    "\005orgID\022\"\n\007uniq_id\030\003 \001(\tB\t\272H\006r\004\020\005\030(R\006uniq"
+    "ID\022\027\n\004name\030\004 \001(\tB\t\272H\006r\004\020\005\030P\0222\n\006status\030\005 "
+    "\001(\0162\026.thingspect.api.StatusB\n\272H\007\202\001\004\030\003\030\006\022"
+    "\032\n\005token\030\006 \001(\tB\013\272H\010r\003\260\001\001\330\001\001\022(\n\007decoder\030\007"
+    " \001(\0162\027.thingspect.api.Decoder\022\035\n\004tags\030\010 "
+    "\003(\tB\017\272H\014\222\001\t\030\001\"\005r\003\030\377\001\0223\n\ncreated_at\030\t \001(\013"
+    "2\032.google.protobuf.TimestampB\003\340A\003\0223\n\nupd"
+    "ated_at\030\n \001(\0132\032.google.protobuf.Timestam"
+    "pB\003\340A\003\"H\n\023CreateDeviceRequest\0221\n\006device\030"
+    "\001 \001(\0132\026.thingspect.api.DeviceB\t\340A\002\272H\003\310\001\001"
+    "\"\366\002\n\032CreateDeviceLoRaWANRequest\022\027\n\002id\030\001 "
+    "\001(\tB\013\340A\003\272H\005r\003\260\001\001\022q\n\024gateway_lorawan_type"
+    "\030\002 \001(\0132=.thingspect.api.CreateDeviceLoRa"
+    "WANRequest.GatewayLoRaWANTypeH\000R\022gateway"
+    "LoRaWANType\022n\n\023device_lorawan_type\030\003 \001(\013"
+    "2<.thingspect.api.CreateDeviceLoRaWANReq"
+    "uest.DeviceLoRaWANTypeH\000R\021deviceLoRaWANT"
+    "ype\032\024\n\022GatewayLoRaWANType\0321\n\021DeviceLoRaW"
+    "ANType\022\034\n\007app_key\030\001 \001(\tB\013\340A\002\272H\005r\003\230\001 B\023\n\n"
+    "type_oneof\022\005\272H\002\010\001\"+\n\020GetDeviceRequest\022\027\n"
+    "\002id\030\001 \001(\tB\013\340A\002\272H\005r\003\260\001\001\"y\n\023UpdateDeviceRe"
+    "quest\0221\n\006device\030\001 \001(\0132\026.thingspect.api.D"
+    "eviceB\t\340A\002\272H\003\310\001\001\022/\n\013update_mask\030\002 \001(\0132\032."
+    "google.protobuf.FieldMask\"5\n\032DeleteDevic"
+    "eLoRaWANRequest\022\027\n\002id\030\001 \001(\tB\013\340A\002\272H\005r\003\260\001\001"
+    "\".\n\023DeleteDeviceRequest\022\027\n\002id\030\001 \001(\tB\013\340A\002"
+    "\272H\005r\003\260\001\001\"\\\n\022ListDevicesRequest\022\033\n\tpage_s"
+    "ize\030\001 \001(\005B\010\272H\005\032\003\030\372\001\022\022\n\npage_token\030\002 \001(\t\022"
+    "\025\n\003tag\030\003 \001(\tB\010\272H\005r\003\030\377\001\"k\n\023ListDevicesRes"
+    "ponse\022\'\n\007devices\030\001 \003(\0132\026.thingspect.api."
+    "Device\022\027\n\017next_page_token\030\002 \001(\t\022\022\n\ntotal"
+    "_size\030\003 \001(\005*\237\001\n\007Decoder\022\007\n\003RAW\020\000\022\013\n\007GATE"
+    "WAY\020\001\022\030\n\024RADIO_BRIDGE_DOOR_V1\020\002\022\030\n\024RADIO"
+    "_BRIDGE_DOOR_V2\020\003\022\021\n\rGLOBALSAT_CO2\020\004\022\020\n\014"
+    "GLOBALSAT_CO\020\005\022\022\n\016GLOBALSAT_PM25\020\006\022\021\n\rTE"
+    "KTELIC_HOME\020\0072\373\007\n\rDeviceService\022\250\001\n\014Crea"
+    "teDevice\022#.thingspect.api.CreateDeviceRe"
+    "quest\032\026.thingspect.api.Device\"[\222A=J;\n\00320"
+    "1\0224\n\026A successful response.\022\032\n\030\032\026.things"
+    "pect.api.Device\202\323\344\223\002\025\"\013/v1/devices:\006devi"
+    "ce\022\244\001\n\023CreateDeviceLoRaWAN\022*.thingspect."
+    "api.CreateDeviceLoRaWANRequest\032\026.google."
+    "protobuf.Empty\"I\222A#J!\n\003204\022\032\n\026A successf"
+    "ul response.\022\000\202\323\344\223\002\035\"\030/v1/devices/{id}/l"
+    "orawan:\001*\022_\n\tGetDevice\022 .thingspect.api."
+    "GetDeviceRequest\032\026.thingspect.api.Device"
+    "\"\030\202\323\344\223\002\022\022\020/v1/devices/{id}\022\227\001\n\014UpdateDev"
+    "ice\022#.thingspect.api.UpdateDeviceRequest"
+    "\032\026.thingspect.api.Device\"J\202\323\344\223\002D\032\027/v1/de"
+    "vices/{device.id}:\006deviceZ!2\027/v1/devices"
+    "/{device.id}:\006device\022\241\001\n\023DeleteDeviceLoR"
+    "aWAN\022*.thingspect.api.DeleteDeviceLoRaWA"
+    "NRequest\032\026.google.protobuf.Empty\"F\222A#J!\n"
+    "\003204\022\032\n\026A successful response.\022\000\202\323\344\223\002\032*\030"
+    "/v1/devices/{id}/lorawan\022\213\001\n\014DeleteDevic"
+    "e\022#.thingspect.api.DeleteDeviceRequest\032\026"
+    ".google.protobuf.Empty\">\222A#J!\n\003204\022\032\n\026A "
+    "successful response.\022\000\202\323\344\223\002\022*\020/v1/device"
+    "s/{id}\022k\n\013ListDevices\022\".thingspect.api.L"
+    "istDevicesRequest\032#.thingspect.api.ListD"
+    "evicesResponse\"\023\202\323\344\223\002\r\022\013/v1/devicesB$Z\"g"
+    "ithub.com/thingspect/proto/go/apib\006proto"
+    "3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_api_2fthingspect_5fdevice_2eproto_deps[8] = {
         &::descriptor_table_api_2fthingspect_5fstatus_2eproto,
+        &::descriptor_table_buf_2fvalidate_2fvalidate_2eproto,
         &::descriptor_table_google_2fapi_2fannotations_2eproto,
         &::descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto,
         &::descriptor_table_google_2fprotobuf_2fempty_2eproto,
         &::descriptor_table_google_2fprotobuf_2ffield_5fmask_2eproto,
         &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
         &::descriptor_table_protoc_2dgen_2dopenapiv2_2foptions_2fannotations_2eproto,
-        &::descriptor_table_validate_2fvalidate_2eproto,
 };
 static ::absl::once_flag descriptor_table_api_2fthingspect_5fdevice_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_api_2fthingspect_5fdevice_2eproto = {
     false,
     false,
-    2839,
+    2841,
     descriptor_table_protodef_api_2fthingspect_5fdevice_2eproto,
     "api/thingspect_device.proto",
     &descriptor_table_api_2fthingspect_5fdevice_2eproto_once,
@@ -760,22 +761,22 @@ Device::_table_ = {
     // string org_id = 2 [json_name = "orgID", (.google.api.field_behavior) = OUTPUT_ONLY];
     {::_pbi::TcParser::FastUS1,
      {18, 1, 0, PROTOBUF_FIELD_OFFSET(Device, _impl_.org_id_)}},
-    // string uniq_id = 3 [json_name = "uniqID", (.validate.rules) = {
+    // string uniq_id = 3 [json_name = "uniqID", (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {26, 2, 0, PROTOBUF_FIELD_OFFSET(Device, _impl_.uniq_id_)}},
-    // string name = 4 [(.validate.rules) = {
+    // string name = 4 [(.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {34, 3, 0, PROTOBUF_FIELD_OFFSET(Device, _impl_.name_)}},
-    // .thingspect.api.Status status = 5 [(.validate.rules) = {
+    // .thingspect.api.Status status = 5 [(.buf.validate.field) = {
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Device, _impl_.status_), 7>(),
      {40, 7, 0, PROTOBUF_FIELD_OFFSET(Device, _impl_.status_)}},
-    // string token = 6 [(.validate.rules) = {
+    // string token = 6 [(.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {50, 4, 0, PROTOBUF_FIELD_OFFSET(Device, _impl_.token_)}},
     // .thingspect.api.Decoder decoder = 7;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Device, _impl_.decoder_), 8>(),
      {56, 8, 0, PROTOBUF_FIELD_OFFSET(Device, _impl_.decoder_)}},
-    // repeated string tags = 8 [(.validate.rules) = {
+    // repeated string tags = 8 [(.buf.validate.field) = {
     {::_pbi::TcParser::FastUR1,
      {66, 63, 0, PROTOBUF_FIELD_OFFSET(Device, _impl_.tags_)}},
     // .google.protobuf.Timestamp created_at = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -798,22 +799,22 @@ Device::_table_ = {
     // string org_id = 2 [json_name = "orgID", (.google.api.field_behavior) = OUTPUT_ONLY];
     {PROTOBUF_FIELD_OFFSET(Device, _impl_.org_id_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string uniq_id = 3 [json_name = "uniqID", (.validate.rules) = {
+    // string uniq_id = 3 [json_name = "uniqID", (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Device, _impl_.uniq_id_), _Internal::kHasBitsOffset + 2, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string name = 4 [(.validate.rules) = {
+    // string name = 4 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Device, _impl_.name_), _Internal::kHasBitsOffset + 3, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // .thingspect.api.Status status = 5 [(.validate.rules) = {
+    // .thingspect.api.Status status = 5 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Device, _impl_.status_), _Internal::kHasBitsOffset + 7, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
-    // string token = 6 [(.validate.rules) = {
+    // string token = 6 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Device, _impl_.token_), _Internal::kHasBitsOffset + 4, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // .thingspect.api.Decoder decoder = 7;
     {PROTOBUF_FIELD_OFFSET(Device, _impl_.decoder_), _Internal::kHasBitsOffset + 8, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
-    // repeated string tags = 8 [(.validate.rules) = {
+    // repeated string tags = 8 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Device, _impl_.tags_), -1, 0,
     (0 | ::_fl::kFcRepeated | ::_fl::kUtf8String | ::_fl::kRepSString)},
     // .google.protobuf.Timestamp created_at = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -913,7 +914,7 @@ PROTOBUF_NOINLINE void Device::Clear() {
     }
   }
 
-  // string uniq_id = 3 [json_name = "uniqID", (.validate.rules) = {
+  // string uniq_id = 3 [json_name = "uniqID", (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000004u) != 0) {
     if (!this_._internal_uniq_id().empty()) {
       const ::std::string& _s = this_._internal_uniq_id();
@@ -923,7 +924,7 @@ PROTOBUF_NOINLINE void Device::Clear() {
     }
   }
 
-  // string name = 4 [(.validate.rules) = {
+  // string name = 4 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000008u) != 0) {
     if (!this_._internal_name().empty()) {
       const ::std::string& _s = this_._internal_name();
@@ -933,7 +934,7 @@ PROTOBUF_NOINLINE void Device::Clear() {
     }
   }
 
-  // .thingspect.api.Status status = 5 [(.validate.rules) = {
+  // .thingspect.api.Status status = 5 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000080u) != 0) {
     if (this_._internal_status() != 0) {
       target = stream->EnsureSpace(target);
@@ -942,7 +943,7 @@ PROTOBUF_NOINLINE void Device::Clear() {
     }
   }
 
-  // string token = 6 [(.validate.rules) = {
+  // string token = 6 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000010u) != 0) {
     if (!this_._internal_token().empty()) {
       const ::std::string& _s = this_._internal_token();
@@ -961,7 +962,7 @@ PROTOBUF_NOINLINE void Device::Clear() {
     }
   }
 
-  // repeated string tags = 8 [(.validate.rules) = {
+  // repeated string tags = 8 [(.buf.validate.field) = {
   for (int i = 0, n = this_._internal_tags_size(); i < n; ++i) {
     const auto& s = this_._internal_tags().Get(i);
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1009,7 +1010,7 @@ PROTOBUF_NOINLINE void Device::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
    {
-    // repeated string tags = 8 [(.validate.rules) = {
+    // repeated string tags = 8 [(.buf.validate.field) = {
     {
       total_size +=
           1 * ::google::protobuf::internal::FromIntSize(this_._internal_tags().size());
@@ -1035,21 +1036,21 @@ PROTOBUF_NOINLINE void Device::Clear() {
                                         this_._internal_org_id());
       }
     }
-    // string uniq_id = 3 [json_name = "uniqID", (.validate.rules) = {
+    // string uniq_id = 3 [json_name = "uniqID", (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000004u) != 0) {
       if (!this_._internal_uniq_id().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_uniq_id());
       }
     }
-    // string name = 4 [(.validate.rules) = {
+    // string name = 4 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000008u) != 0) {
       if (!this_._internal_name().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_name());
       }
     }
-    // string token = 6 [(.validate.rules) = {
+    // string token = 6 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000010u) != 0) {
       if (!this_._internal_token().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -1066,7 +1067,7 @@ PROTOBUF_NOINLINE void Device::Clear() {
       total_size += 1 +
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.updated_at_);
     }
-    // .thingspect.api.Status status = 5 [(.validate.rules) = {
+    // .thingspect.api.Status status = 5 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000080u) != 0) {
       if (this_._internal_status() != 0) {
         total_size += 1 +
@@ -1335,13 +1336,13 @@ CreateDeviceRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::CreateDeviceRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastMtS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(CreateDeviceRequest, _impl_.device_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(CreateDeviceRequest, _impl_.device_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
   }},
@@ -1383,7 +1384,7 @@ PROTOBUF_NOINLINE void CreateDeviceRequest::Clear() {
   (void)cached_has_bits;
 
   cached_has_bits = this_._impl_._has_bits_[0];
-  // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((cached_has_bits & 0x00000001u) != 0) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         1, *this_._impl_.device_, this_._impl_.device_->GetCachedSize(), target,
@@ -1414,7 +1415,7 @@ PROTOBUF_NOINLINE void CreateDeviceRequest::Clear() {
   (void)cached_has_bits;
 
    {
-    // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     cached_has_bits = this_._impl_._has_bits_[0];
     if ((cached_has_bits & 0x00000001u) != 0) {
       total_size += 1 +
@@ -1700,13 +1701,13 @@ CreateDeviceLoRaWANRequest_DeviceLoRaWANType::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::CreateDeviceLoRaWANRequest_DeviceLoRaWANType>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(CreateDeviceLoRaWANRequest_DeviceLoRaWANType, _impl_.app_key_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(CreateDeviceLoRaWANRequest_DeviceLoRaWANType, _impl_.app_key_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
@@ -1747,7 +1748,7 @@ PROTOBUF_NOINLINE void CreateDeviceLoRaWANRequest_DeviceLoRaWANType::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_app_key().empty()) {
       const ::std::string& _s = this_._internal_app_key();
@@ -1781,7 +1782,7 @@ PROTOBUF_NOINLINE void CreateDeviceLoRaWANRequest_DeviceLoRaWANType::Clear() {
   (void)cached_has_bits;
 
    {
-    // string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     cached_has_bits = this_._impl_._has_bits_[0];
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_app_key().empty()) {
@@ -2035,13 +2036,13 @@ CreateDeviceLoRaWANRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::CreateDeviceLoRaWANRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(CreateDeviceLoRaWANRequest, _impl_.id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(CreateDeviceLoRaWANRequest, _impl_.id_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // .thingspect.api.CreateDeviceLoRaWANRequest.GatewayLoRaWANType gateway_lorawan_type = 2 [json_name = "gatewayLoRaWANType"];
@@ -2092,7 +2093,7 @@ PROTOBUF_NOINLINE void CreateDeviceLoRaWANRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_id().empty()) {
       const ::std::string& _s = this_._internal_id();
@@ -2142,7 +2143,7 @@ PROTOBUF_NOINLINE void CreateDeviceLoRaWANRequest::Clear() {
   (void)cached_has_bits;
 
    {
-    // string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.buf.validate.field) = {
     cached_has_bits = this_._impl_._has_bits_[0];
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_id().empty()) {
@@ -2374,13 +2375,13 @@ GetDeviceRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::GetDeviceRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(GetDeviceRequest, _impl_.id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(GetDeviceRequest, _impl_.id_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
@@ -2421,7 +2422,7 @@ PROTOBUF_NOINLINE void GetDeviceRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_id().empty()) {
       const ::std::string& _s = this_._internal_id();
@@ -2455,7 +2456,7 @@ PROTOBUF_NOINLINE void GetDeviceRequest::Clear() {
   (void)cached_has_bits;
 
    {
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     cached_has_bits = this_._impl_._has_bits_[0];
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_id().empty()) {
@@ -2656,13 +2657,13 @@ UpdateDeviceRequest::_table_ = {
     // .google.protobuf.FieldMask update_mask = 2;
     {::_pbi::TcParser::FastMtS1,
      {18, 1, 1, PROTOBUF_FIELD_OFFSET(UpdateDeviceRequest, _impl_.update_mask_)}},
-    // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastMtS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(UpdateDeviceRequest, _impl_.device_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(UpdateDeviceRequest, _impl_.device_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
     // .google.protobuf.FieldMask update_mask = 2;
@@ -2714,7 +2715,7 @@ PROTOBUF_NOINLINE void UpdateDeviceRequest::Clear() {
   (void)cached_has_bits;
 
   cached_has_bits = this_._impl_._has_bits_[0];
-  // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((cached_has_bits & 0x00000001u) != 0) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         1, *this_._impl_.device_, this_._impl_.device_->GetCachedSize(), target,
@@ -2754,7 +2755,7 @@ PROTOBUF_NOINLINE void UpdateDeviceRequest::Clear() {
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
   if ((cached_has_bits & 0x00000003u) != 0) {
-    // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000001u) != 0) {
       total_size += 1 +
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.device_);
@@ -2950,13 +2951,13 @@ DeleteDeviceLoRaWANRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::DeleteDeviceLoRaWANRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(DeleteDeviceLoRaWANRequest, _impl_.id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(DeleteDeviceLoRaWANRequest, _impl_.id_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
@@ -2997,7 +2998,7 @@ PROTOBUF_NOINLINE void DeleteDeviceLoRaWANRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_id().empty()) {
       const ::std::string& _s = this_._internal_id();
@@ -3031,7 +3032,7 @@ PROTOBUF_NOINLINE void DeleteDeviceLoRaWANRequest::Clear() {
   (void)cached_has_bits;
 
    {
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     cached_has_bits = this_._impl_._has_bits_[0];
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_id().empty()) {
@@ -3212,13 +3213,13 @@ DeleteDeviceRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::DeleteDeviceRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(DeleteDeviceRequest, _impl_.id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(DeleteDeviceRequest, _impl_.id_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
@@ -3259,7 +3260,7 @@ PROTOBUF_NOINLINE void DeleteDeviceRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_id().empty()) {
       const ::std::string& _s = this_._internal_id();
@@ -3293,7 +3294,7 @@ PROTOBUF_NOINLINE void DeleteDeviceRequest::Clear() {
   (void)cached_has_bits;
 
    {
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     cached_has_bits = this_._impl_._has_bits_[0];
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_id().empty()) {
@@ -3480,25 +3481,25 @@ ListDevicesRequest::_table_ = {
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // int32 page_size = 1 [(.validate.rules) = {
+    // int32 page_size = 1 [(.buf.validate.field) = {
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ListDevicesRequest, _impl_.page_size_), 2>(),
      {8, 2, 0, PROTOBUF_FIELD_OFFSET(ListDevicesRequest, _impl_.page_size_)}},
     // string page_token = 2;
     {::_pbi::TcParser::FastUS1,
      {18, 0, 0, PROTOBUF_FIELD_OFFSET(ListDevicesRequest, _impl_.page_token_)}},
-    // string tag = 3 [(.validate.rules) = {
+    // string tag = 3 [(.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {26, 1, 0, PROTOBUF_FIELD_OFFSET(ListDevicesRequest, _impl_.tag_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int32 page_size = 1 [(.validate.rules) = {
+    // int32 page_size = 1 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(ListDevicesRequest, _impl_.page_size_), _Internal::kHasBitsOffset + 2, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kInt32)},
     // string page_token = 2;
     {PROTOBUF_FIELD_OFFSET(ListDevicesRequest, _impl_.page_token_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string tag = 3 [(.validate.rules) = {
+    // string tag = 3 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(ListDevicesRequest, _impl_.tag_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
@@ -3546,7 +3547,7 @@ PROTOBUF_NOINLINE void ListDevicesRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int32 page_size = 1 [(.validate.rules) = {
+  // int32 page_size = 1 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000004u) != 0) {
     if (this_._internal_page_size() != 0) {
       target =
@@ -3565,7 +3566,7 @@ PROTOBUF_NOINLINE void ListDevicesRequest::Clear() {
     }
   }
 
-  // string tag = 3 [(.validate.rules) = {
+  // string tag = 3 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000002u) != 0) {
     if (!this_._internal_tag().empty()) {
       const ::std::string& _s = this_._internal_tag();
@@ -3608,14 +3609,14 @@ PROTOBUF_NOINLINE void ListDevicesRequest::Clear() {
                                         this_._internal_page_token());
       }
     }
-    // string tag = 3 [(.validate.rules) = {
+    // string tag = 3 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000002u) != 0) {
       if (!this_._internal_tag().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_tag());
       }
     }
-    // int32 page_size = 1 [(.validate.rules) = {
+    // int32 page_size = 1 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000004u) != 0) {
       if (this_._internal_page_size() != 0) {
         total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(

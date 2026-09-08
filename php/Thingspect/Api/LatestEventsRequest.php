@@ -19,7 +19,7 @@ class LatestEventsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule ID (UUID). If not specified, all rules are included.
      *
-     * Generated from protobuf field <code>string rule_id = 1 [json_name = "ruleID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string rule_id = 1 [json_name = "ruleID", (.buf.validate.field) = {</code>
      */
     protected $rule_id = '';
 
@@ -41,7 +41,7 @@ class LatestEventsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule ID (UUID). If not specified, all rules are included.
      *
-     * Generated from protobuf field <code>string rule_id = 1 [json_name = "ruleID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string rule_id = 1 [json_name = "ruleID", (.buf.validate.field) = {</code>
      * @return string
      */
     public function getRuleId()
@@ -52,7 +52,7 @@ class LatestEventsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule ID (UUID). If not specified, all rules are included.
      *
-     * Generated from protobuf field <code>string rule_id = 1 [json_name = "ruleID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string rule_id = 1 [json_name = "ruleID", (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */

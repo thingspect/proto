@@ -19,13 +19,13 @@ class ListAlertsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Alarm ID (UUID). If not specified, all alarms are included.
      *
-     * Generated from protobuf field <code>string alarm_id = 3 [json_name = "alarmID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string alarm_id = 3 [json_name = "alarmID", (.buf.validate.field) = {</code>
      */
     protected $alarm_id = '';
     /**
      * User ID (UUID). If not specified, all users are included.
      *
-     * Generated from protobuf field <code>string user_id = 4 [json_name = "userID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string user_id = 4 [json_name = "userID", (.buf.validate.field) = {</code>
      */
     protected $user_id = '';
     /**
@@ -101,7 +101,7 @@ class ListAlertsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device ID (UUID). If neither unique ID nor device ID are specified, all devices are included.
      *
-     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {</code>
      * @return string
      */
     public function getDeviceId()
@@ -117,7 +117,7 @@ class ListAlertsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device ID (UUID). If neither unique ID nor device ID are specified, all devices are included.
      *
-     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -132,7 +132,7 @@ class ListAlertsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Alarm ID (UUID). If not specified, all alarms are included.
      *
-     * Generated from protobuf field <code>string alarm_id = 3 [json_name = "alarmID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string alarm_id = 3 [json_name = "alarmID", (.buf.validate.field) = {</code>
      * @return string
      */
     public function getAlarmId()
@@ -143,7 +143,7 @@ class ListAlertsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Alarm ID (UUID). If not specified, all alarms are included.
      *
-     * Generated from protobuf field <code>string alarm_id = 3 [json_name = "alarmID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string alarm_id = 3 [json_name = "alarmID", (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -158,7 +158,7 @@ class ListAlertsRequest extends \Google\Protobuf\Internal\Message
     /**
      * User ID (UUID). If not specified, all users are included.
      *
-     * Generated from protobuf field <code>string user_id = 4 [json_name = "userID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string user_id = 4 [json_name = "userID", (.buf.validate.field) = {</code>
      * @return string
      */
     public function getUserId()
@@ -169,7 +169,7 @@ class ListAlertsRequest extends \Google\Protobuf\Internal\Message
     /**
      * User ID (UUID). If not specified, all users are included.
      *
-     * Generated from protobuf field <code>string user_id = 4 [json_name = "userID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string user_id = 4 [json_name = "userID", (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */

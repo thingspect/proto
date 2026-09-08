@@ -19,7 +19,7 @@ class UpdateAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Alarm message to update.
      *
-     * Generated from protobuf field <code>.thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $alarm = null;
     /**
@@ -49,7 +49,7 @@ class UpdateAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Alarm message to update.
      *
-     * Generated from protobuf field <code>.thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return \Thingspect\Api\Alarm|null
      */
     public function getAlarm()
@@ -70,7 +70,7 @@ class UpdateAlarmRequest extends \Google\Protobuf\Internal\Message
     /**
      * Alarm message to update.
      *
-     * Generated from protobuf field <code>.thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param \Thingspect\Api\Alarm $var
      * @return $this
      */

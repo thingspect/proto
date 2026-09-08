@@ -1,23 +1,24 @@
 syntax = "proto3";
+
 package thingspect.common;
 
-import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
 import "google/api/field_behavior.proto";
-import "validate/validate.proto";
+import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/thingspect/proto/go/common";
 
 // DataPoint represents a data point as stored in the database.
 message DataPoint {
   // Device unique ID. Ignored during MQTT ingest if provided as part of the topic. Required for API publish.
-  string uniq_id = 1 [json_name = "uniqID", (validate.rules).string = {min_len: 5, max_len: 40}, (google.api.field_behavior) = REQUIRED];
+  string uniq_id = 1 [json_name = "uniqID", (buf.validate.field).string = {min_len: 5, max_len: 40}, (google.api.field_behavior) = REQUIRED];
 
   // Device attribute.
-  string attr = 2 [(validate.rules).string.max_len = 40, (google.api.field_behavior) = REQUIRED];
+  string attr = 2 [(buf.validate.field).string.max_len = 40, (google.api.field_behavior) = REQUIRED];
 
   // Attribute value.
   oneof val_oneof {
-    option (validate.required) = true;
+    option (buf.validate.oneof).required = true;
 
     // Integer value, 32-bit.
     sint32 int_val = 3;

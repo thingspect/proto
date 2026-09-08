@@ -87,13 +87,13 @@ const Device$json = {
 /// Descriptor for `Device`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deviceDescriptor = $convert.base64Decode(
     'CgZEZXZpY2USEwoCaWQYASABKAlCA+BBA1ICaWQSGgoGb3JnX2lkGAIgASgJQgPgQQNSBW9yZ0'
-    'lEEiIKB3VuaXFfaWQYAyABKAlCCfpCBnIEEAUYKFIGdW5pcUlEEh0KBG5hbWUYBCABKAlCCfpC'
-    'BnIEEAUYUFIEbmFtZRI6CgZzdGF0dXMYBSABKA4yFi50aGluZ3NwZWN0LmFwaS5TdGF0dXNCCv'
-    'pCB4IBBBgDGAZSBnN0YXR1cxIhCgV0b2tlbhgGIAEoCUIL+kIIcgawAQHQAQFSBXRva2VuEjEK'
-    'B2RlY29kZXIYByABKA4yFy50aGluZ3NwZWN0LmFwaS5EZWNvZGVyUgdkZWNvZGVyEikKBHRhZ3'
-    'MYCCADKAlCFfpCBZIBAhgB+kIKkgEHIgVyAxj/AVIEdGFncxI+CgpjcmVhdGVkX2F0GAkgASgL'
-    'MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgljcmVhdGVkQXQSPgoKdXBkYXRlZF'
-    '9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IJdXBkYXRlZEF0');
+    'lEEiIKB3VuaXFfaWQYAyABKAlCCbpIBnIEEAUYKFIGdW5pcUlEEh0KBG5hbWUYBCABKAlCCbpI'
+    'BnIEEAUYUFIEbmFtZRI6CgZzdGF0dXMYBSABKA4yFi50aGluZ3NwZWN0LmFwaS5TdGF0dXNCCr'
+    'pIB4IBBBgDGAZSBnN0YXR1cxIkCgV0b2tlbhgGIAEoCUIOukgFcgOwAQG6SAPYAQFSBXRva2Vu'
+    'EjEKB2RlY29kZXIYByABKA4yFy50aGluZ3NwZWN0LmFwaS5EZWNvZGVyUgdkZWNvZGVyEikKBH'
+    'RhZ3MYCCADKAlCFbpIBZIBAhgBukgKkgEHIgVyAxj/AVIEdGFncxI+CgpjcmVhdGVkX2F0GAkg'
+    'ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgljcmVhdGVkQXQSPgoKdXBkYX'
+    'RlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IJdXBkYXRlZEF0');
 
 @$core.Deprecated('Use createDeviceRequestDescriptor instead')
 const CreateDeviceRequest$json = {
@@ -113,8 +113,8 @@ const CreateDeviceRequest$json = {
 
 /// Descriptor for `CreateDeviceRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createDeviceRequestDescriptor = $convert.base64Decode(
-    'ChNDcmVhdGVEZXZpY2VSZXF1ZXN0EjsKBmRldmljZRgBIAEoCzIWLnRoaW5nc3BlY3QuYXBpLk'
-    'RldmljZUIL+kIFigECEAHgQQJSBmRldmljZQ==');
+    'ChNDcmVhdGVEZXZpY2VSZXF1ZXN0EjkKBmRldmljZRgBIAEoCzIWLnRoaW5nc3BlY3QuYXBpLk'
+    'RldmljZUIJukgDyAEB4EECUgZkZXZpY2U=');
 
 @$core.Deprecated('Use createDeviceLoRaWANRequestDescriptor instead')
 const CreateDeviceLoRaWANRequest$json = {
@@ -164,13 +164,13 @@ const CreateDeviceLoRaWANRequest_DeviceLoRaWANType$json = {
 
 /// Descriptor for `CreateDeviceLoRaWANRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createDeviceLoRaWANRequestDescriptor = $convert.base64Decode(
-    'ChpDcmVhdGVEZXZpY2VMb1JhV0FOUmVxdWVzdBIbCgJpZBgBIAEoCUIL+kIFcgOwAQHgQQNSAm'
+    'ChpDcmVhdGVEZXZpY2VMb1JhV0FOUmVxdWVzdBIbCgJpZBgBIAEoCUILukgFcgOwAQHgQQNSAm'
     'lkEnEKFGdhdGV3YXlfbG9yYXdhbl90eXBlGAIgASgLMj0udGhpbmdzcGVjdC5hcGkuQ3JlYXRl'
     'RGV2aWNlTG9SYVdBTlJlcXVlc3QuR2F0ZXdheUxvUmFXQU5UeXBlSABSEmdhdGV3YXlMb1JhV0'
     'FOVHlwZRJuChNkZXZpY2VfbG9yYXdhbl90eXBlGAMgASgLMjwudGhpbmdzcGVjdC5hcGkuQ3Jl'
     'YXRlRGV2aWNlTG9SYVdBTlJlcXVlc3QuRGV2aWNlTG9SYVdBTlR5cGVIAFIRZGV2aWNlTG9SYV'
     'dBTlR5cGUaFAoSR2F0ZXdheUxvUmFXQU5UeXBlGjkKEURldmljZUxvUmFXQU5UeXBlEiQKB2Fw'
-    'cF9rZXkYASABKAlCC/pCBXIDmAEg4EECUgZhcHBLZXlCEQoKdHlwZV9vbmVvZhID+EIB');
+    'cF9rZXkYASABKAlCC7pIBXIDmAEg4EECUgZhcHBLZXlCEwoKdHlwZV9vbmVvZhIFukgCCAE=');
 
 @$core.Deprecated('Use getDeviceRequestDescriptor instead')
 const GetDeviceRequest$json = {
@@ -182,7 +182,7 @@ const GetDeviceRequest$json = {
 
 /// Descriptor for `GetDeviceRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getDeviceRequestDescriptor = $convert.base64Decode(
-    'ChBHZXREZXZpY2VSZXF1ZXN0EhsKAmlkGAEgASgJQgv6QgVyA7ABAeBBAlICaWQ=');
+    'ChBHZXREZXZpY2VSZXF1ZXN0EhsKAmlkGAEgASgJQgu6SAVyA7ABAeBBAlICaWQ=');
 
 @$core.Deprecated('Use updateDeviceRequestDescriptor instead')
 const UpdateDeviceRequest$json = {
@@ -210,9 +210,9 @@ const UpdateDeviceRequest$json = {
 
 /// Descriptor for `UpdateDeviceRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateDeviceRequestDescriptor = $convert.base64Decode(
-    'ChNVcGRhdGVEZXZpY2VSZXF1ZXN0EjsKBmRldmljZRgBIAEoCzIWLnRoaW5nc3BlY3QuYXBpLk'
-    'RldmljZUIL+kIFigECEAHgQQJSBmRldmljZRI7Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2ds'
-    'ZS5wcm90b2J1Zi5GaWVsZE1hc2tSCnVwZGF0ZU1hc2s=');
+    'ChNVcGRhdGVEZXZpY2VSZXF1ZXN0EjkKBmRldmljZRgBIAEoCzIWLnRoaW5nc3BlY3QuYXBpLk'
+    'RldmljZUIJukgDyAEB4EECUgZkZXZpY2USOwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUu'
+    'cHJvdG9idWYuRmllbGRNYXNrUgp1cGRhdGVNYXNr');
 
 @$core.Deprecated('Use deleteDeviceLoRaWANRequestDescriptor instead')
 const DeleteDeviceLoRaWANRequest$json = {
@@ -225,7 +225,7 @@ const DeleteDeviceLoRaWANRequest$json = {
 /// Descriptor for `DeleteDeviceLoRaWANRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteDeviceLoRaWANRequestDescriptor =
     $convert.base64Decode(
-        'ChpEZWxldGVEZXZpY2VMb1JhV0FOUmVxdWVzdBIbCgJpZBgBIAEoCUIL+kIFcgOwAQHgQQJSAm'
+        'ChpEZWxldGVEZXZpY2VMb1JhV0FOUmVxdWVzdBIbCgJpZBgBIAEoCUILukgFcgOwAQHgQQJSAm'
         'lk');
 
 @$core.Deprecated('Use deleteDeviceRequestDescriptor instead')
@@ -239,7 +239,7 @@ const DeleteDeviceRequest$json = {
 /// Descriptor for `DeleteDeviceRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteDeviceRequestDescriptor =
     $convert.base64Decode(
-        'ChNEZWxldGVEZXZpY2VSZXF1ZXN0EhsKAmlkGAEgASgJQgv6QgVyA7ABAeBBAlICaWQ=');
+        'ChNEZWxldGVEZXZpY2VSZXF1ZXN0EhsKAmlkGAEgASgJQgu6SAVyA7ABAeBBAlICaWQ=');
 
 @$core.Deprecated('Use listDevicesRequestDescriptor instead')
 const ListDevicesRequest$json = {
@@ -253,8 +253,8 @@ const ListDevicesRequest$json = {
 
 /// Descriptor for `ListDevicesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listDevicesRequestDescriptor = $convert.base64Decode(
-    'ChJMaXN0RGV2aWNlc1JlcXVlc3QSJQoJcGFnZV9zaXplGAEgASgFQgj6QgUaAxj6AVIIcGFnZV'
-    'NpemUSHQoKcGFnZV90b2tlbhgCIAEoCVIJcGFnZVRva2VuEhoKA3RhZxgDIAEoCUII+kIFcgMY'
+    'ChJMaXN0RGV2aWNlc1JlcXVlc3QSJQoJcGFnZV9zaXplGAEgASgFQgi6SAUaAxj6AVIIcGFnZV'
+    'NpemUSHQoKcGFnZV90b2tlbhgCIAEoCVIJcGFnZVRva2VuEhoKA3RhZxgDIAEoCUIIukgFcgMY'
     '/wFSA3RhZw==');
 
 @$core.Deprecated('Use listDevicesResponseDescriptor instead')

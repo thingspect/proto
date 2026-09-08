@@ -23,16 +23,16 @@ _sym_db = _symbol_database.Default()
 
 
 from api import thingspect_status_pb2 as api_dot_thingspect__status__pb2
-from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
-from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
-from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from buf.validate import validate_pb2 as buf_dot_validate_dot_validate__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 from protoc_gen_openapiv2.options import annotations_pb2 as protoc__gen__openapiv2_dot_options_dot_annotations__pb2
-from validate import validate_pb2 as validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x61pi/thingspect_device.proto\x12\x0ethingspect.api\x1a\x1b\x61pi/thingspect_status.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"\xf5\x02\n\x06\x44\x65vice\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\"\n\x07uniq_id\x18\x03 \x01(\tB\t\xfa\x42\x06r\x04\x10\x05\x18(R\x06uniqID\x12\x17\n\x04name\x18\x04 \x01(\tB\t\xfa\x42\x06r\x04\x10\x05\x18P\x12\x32\n\x06status\x18\x05 \x01(\x0e\x32\x16.thingspect.api.StatusB\n\xfa\x42\x07\x82\x01\x04\x18\x03\x18\x06\x12\x1a\n\x05token\x18\x06 \x01(\tB\x0b\xfa\x42\x08r\x06\xb0\x01\x01\xd0\x01\x01\x12(\n\x07\x64\x65\x63oder\x18\x07 \x01(\x0e\x32\x17.thingspect.api.Decoder\x12\x1d\n\x04tags\x18\x08 \x03(\tB\x0f\xfa\x42\x0c\x92\x01\t\x18\x01\"\x05r\x03\x18\xff\x01\x12\x33\n\ncreated_at\x18\t \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\n \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"J\n\x13\x43reateDeviceRequest\x12\x33\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x16.thingspect.api.DeviceB\x0b\xe0\x41\x02\xfa\x42\x05\x8a\x01\x02\x10\x01\"\xf4\x02\n\x1a\x43reateDeviceLoRaWANRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xe0\x41\x03\xfa\x42\x05r\x03\xb0\x01\x01\x12q\n\x14gateway_lorawan_type\x18\x02 \x01(\x0b\x32=.thingspect.api.CreateDeviceLoRaWANRequest.GatewayLoRaWANTypeH\x00R\x12gatewayLoRaWANType\x12n\n\x13\x64\x65vice_lorawan_type\x18\x03 \x01(\x0b\x32<.thingspect.api.CreateDeviceLoRaWANRequest.DeviceLoRaWANTypeH\x00R\x11\x64\x65viceLoRaWANType\x1a\x14\n\x12GatewayLoRaWANType\x1a\x31\n\x11\x44\x65viceLoRaWANType\x12\x1c\n\x07\x61pp_key\x18\x01 \x01(\tB\x0b\xe0\x41\x02\xfa\x42\x05r\x03\x98\x01 B\x11\n\ntype_oneof\x12\x03\xf8\x42\x01\"+\n\x10GetDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xe0\x41\x02\xfa\x42\x05r\x03\xb0\x01\x01\"{\n\x13UpdateDeviceRequest\x12\x33\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x16.thingspect.api.DeviceB\x0b\xe0\x41\x02\xfa\x42\x05\x8a\x01\x02\x10\x01\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"5\n\x1a\x44\x65leteDeviceLoRaWANRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xe0\x41\x02\xfa\x42\x05r\x03\xb0\x01\x01\".\n\x13\x44\x65leteDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xe0\x41\x02\xfa\x42\x05r\x03\xb0\x01\x01\"\\\n\x12ListDevicesRequest\x12\x1b\n\tpage_size\x18\x01 \x01(\x05\x42\x08\xfa\x42\x05\x1a\x03\x18\xfa\x01\x12\x12\n\npage_token\x18\x02 \x01(\t\x12\x15\n\x03tag\x18\x03 \x01(\tB\x08\xfa\x42\x05r\x03\x18\xff\x01\"k\n\x13ListDevicesResponse\x12\'\n\x07\x64\x65vices\x18\x01 \x03(\x0b\x32\x16.thingspect.api.Device\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05*\x9f\x01\n\x07\x44\x65\x63oder\x12\x07\n\x03RAW\x10\x00\x12\x0b\n\x07GATEWAY\x10\x01\x12\x18\n\x14RADIO_BRIDGE_DOOR_V1\x10\x02\x12\x18\n\x14RADIO_BRIDGE_DOOR_V2\x10\x03\x12\x11\n\rGLOBALSAT_CO2\x10\x04\x12\x10\n\x0cGLOBALSAT_CO\x10\x05\x12\x12\n\x0eGLOBALSAT_PM25\x10\x06\x12\x11\n\rTEKTELIC_HOME\x10\x07\x32\xfb\x07\n\rDeviceService\x12\xa8\x01\n\x0c\x43reateDevice\x12#.thingspect.api.CreateDeviceRequest\x1a\x16.thingspect.api.Device\"[\x92\x41=J;\n\x03\x32\x30\x31\x12\x34\n\x16\x41 successful response.\x12\x1a\n\x18\x1a\x16.thingspect.api.Device\x82\xd3\xe4\x93\x02\x15\"\x0b/v1/devices:\x06\x64\x65vice\x12\xa4\x01\n\x13\x43reateDeviceLoRaWAN\x12*.thingspect.api.CreateDeviceLoRaWANRequest\x1a\x16.google.protobuf.Empty\"I\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x82\xd3\xe4\x93\x02\x1d\"\x18/v1/devices/{id}/lorawan:\x01*\x12_\n\tGetDevice\x12 .thingspect.api.GetDeviceRequest\x1a\x16.thingspect.api.Device\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/devices/{id}\x12\x97\x01\n\x0cUpdateDevice\x12#.thingspect.api.UpdateDeviceRequest\x1a\x16.thingspect.api.Device\"J\x82\xd3\xe4\x93\x02\x44\x1a\x17/v1/devices/{device.id}:\x06\x64\x65viceZ!2\x17/v1/devices/{device.id}:\x06\x64\x65vice\x12\xa1\x01\n\x13\x44\x65leteDeviceLoRaWAN\x12*.thingspect.api.DeleteDeviceLoRaWANRequest\x1a\x16.google.protobuf.Empty\"F\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x82\xd3\xe4\x93\x02\x1a*\x18/v1/devices/{id}/lorawan\x12\x8b\x01\n\x0c\x44\x65leteDevice\x12#.thingspect.api.DeleteDeviceRequest\x1a\x16.google.protobuf.Empty\">\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x82\xd3\xe4\x93\x02\x12*\x10/v1/devices/{id}\x12k\n\x0bListDevices\x12\".thingspect.api.ListDevicesRequest\x1a#.thingspect.api.ListDevicesResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/devicesB$Z\"github.com/thingspect/proto/go/apib\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x61pi/thingspect_device.proto\x12\x0ethingspect.api\x1a\x1b\x61pi/thingspect_status.proto\x1a\x1b\x62uf/validate/validate.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\"\xf5\x02\n\x06\x44\x65vice\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0\x41\x03\x12\x1a\n\x06org_id\x18\x02 \x01(\tB\x03\xe0\x41\x03R\x05orgID\x12\"\n\x07uniq_id\x18\x03 \x01(\tB\t\xbaH\x06r\x04\x10\x05\x18(R\x06uniqID\x12\x17\n\x04name\x18\x04 \x01(\tB\t\xbaH\x06r\x04\x10\x05\x18P\x12\x32\n\x06status\x18\x05 \x01(\x0e\x32\x16.thingspect.api.StatusB\n\xbaH\x07\x82\x01\x04\x18\x03\x18\x06\x12\x1a\n\x05token\x18\x06 \x01(\tB\x0b\xbaH\x08r\x03\xb0\x01\x01\xd8\x01\x01\x12(\n\x07\x64\x65\x63oder\x18\x07 \x01(\x0e\x32\x17.thingspect.api.Decoder\x12\x1d\n\x04tags\x18\x08 \x03(\tB\x0f\xbaH\x0c\x92\x01\t\x18\x01\"\x05r\x03\x18\xff\x01\x12\x33\n\ncreated_at\x18\t \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x33\n\nupdated_at\x18\n \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\"H\n\x13\x43reateDeviceRequest\x12\x31\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x16.thingspect.api.DeviceB\t\xe0\x41\x02\xbaH\x03\xc8\x01\x01\"\xf6\x02\n\x1a\x43reateDeviceLoRaWANRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xe0\x41\x03\xbaH\x05r\x03\xb0\x01\x01\x12q\n\x14gateway_lorawan_type\x18\x02 \x01(\x0b\x32=.thingspect.api.CreateDeviceLoRaWANRequest.GatewayLoRaWANTypeH\x00R\x12gatewayLoRaWANType\x12n\n\x13\x64\x65vice_lorawan_type\x18\x03 \x01(\x0b\x32<.thingspect.api.CreateDeviceLoRaWANRequest.DeviceLoRaWANTypeH\x00R\x11\x64\x65viceLoRaWANType\x1a\x14\n\x12GatewayLoRaWANType\x1a\x31\n\x11\x44\x65viceLoRaWANType\x12\x1c\n\x07\x61pp_key\x18\x01 \x01(\tB\x0b\xe0\x41\x02\xbaH\x05r\x03\x98\x01 B\x13\n\ntype_oneof\x12\x05\xbaH\x02\x08\x01\"+\n\x10GetDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xe0\x41\x02\xbaH\x05r\x03\xb0\x01\x01\"y\n\x13UpdateDeviceRequest\x12\x31\n\x06\x64\x65vice\x18\x01 \x01(\x0b\x32\x16.thingspect.api.DeviceB\t\xe0\x41\x02\xbaH\x03\xc8\x01\x01\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"5\n\x1a\x44\x65leteDeviceLoRaWANRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xe0\x41\x02\xbaH\x05r\x03\xb0\x01\x01\".\n\x13\x44\x65leteDeviceRequest\x12\x17\n\x02id\x18\x01 \x01(\tB\x0b\xe0\x41\x02\xbaH\x05r\x03\xb0\x01\x01\"\\\n\x12ListDevicesRequest\x12\x1b\n\tpage_size\x18\x01 \x01(\x05\x42\x08\xbaH\x05\x1a\x03\x18\xfa\x01\x12\x12\n\npage_token\x18\x02 \x01(\t\x12\x15\n\x03tag\x18\x03 \x01(\tB\x08\xbaH\x05r\x03\x18\xff\x01\"k\n\x13ListDevicesResponse\x12\'\n\x07\x64\x65vices\x18\x01 \x03(\x0b\x32\x16.thingspect.api.Device\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05*\x9f\x01\n\x07\x44\x65\x63oder\x12\x07\n\x03RAW\x10\x00\x12\x0b\n\x07GATEWAY\x10\x01\x12\x18\n\x14RADIO_BRIDGE_DOOR_V1\x10\x02\x12\x18\n\x14RADIO_BRIDGE_DOOR_V2\x10\x03\x12\x11\n\rGLOBALSAT_CO2\x10\x04\x12\x10\n\x0cGLOBALSAT_CO\x10\x05\x12\x12\n\x0eGLOBALSAT_PM25\x10\x06\x12\x11\n\rTEKTELIC_HOME\x10\x07\x32\xfb\x07\n\rDeviceService\x12\xa8\x01\n\x0c\x43reateDevice\x12#.thingspect.api.CreateDeviceRequest\x1a\x16.thingspect.api.Device\"[\x92\x41=J;\n\x03\x32\x30\x31\x12\x34\n\x16\x41 successful response.\x12\x1a\n\x18\x1a\x16.thingspect.api.Device\x82\xd3\xe4\x93\x02\x15\"\x0b/v1/devices:\x06\x64\x65vice\x12\xa4\x01\n\x13\x43reateDeviceLoRaWAN\x12*.thingspect.api.CreateDeviceLoRaWANRequest\x1a\x16.google.protobuf.Empty\"I\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x82\xd3\xe4\x93\x02\x1d\"\x18/v1/devices/{id}/lorawan:\x01*\x12_\n\tGetDevice\x12 .thingspect.api.GetDeviceRequest\x1a\x16.thingspect.api.Device\"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1/devices/{id}\x12\x97\x01\n\x0cUpdateDevice\x12#.thingspect.api.UpdateDeviceRequest\x1a\x16.thingspect.api.Device\"J\x82\xd3\xe4\x93\x02\x44\x1a\x17/v1/devices/{device.id}:\x06\x64\x65viceZ!2\x17/v1/devices/{device.id}:\x06\x64\x65vice\x12\xa1\x01\n\x13\x44\x65leteDeviceLoRaWAN\x12*.thingspect.api.DeleteDeviceLoRaWANRequest\x1a\x16.google.protobuf.Empty\"F\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x82\xd3\xe4\x93\x02\x1a*\x18/v1/devices/{id}/lorawan\x12\x8b\x01\n\x0c\x44\x65leteDevice\x12#.thingspect.api.DeleteDeviceRequest\x1a\x16.google.protobuf.Empty\">\x92\x41#J!\n\x03\x32\x30\x34\x12\x1a\n\x16\x41 successful response.\x12\x00\x82\xd3\xe4\x93\x02\x12*\x10/v1/devices/{id}\x12k\n\x0bListDevices\x12\".thingspect.api.ListDevicesRequest\x1a#.thingspect.api.ListDevicesResponse\"\x13\x82\xd3\xe4\x93\x02\r\x12\x0b/v1/devicesB$Z\"github.com/thingspect/proto/go/apib\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -45,39 +45,39 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_DEVICE'].fields_by_name['org_id']._loaded_options = None
   _globals['_DEVICE'].fields_by_name['org_id']._serialized_options = b'\340A\003'
   _globals['_DEVICE'].fields_by_name['uniq_id']._loaded_options = None
-  _globals['_DEVICE'].fields_by_name['uniq_id']._serialized_options = b'\372B\006r\004\020\005\030('
+  _globals['_DEVICE'].fields_by_name['uniq_id']._serialized_options = b'\272H\006r\004\020\005\030('
   _globals['_DEVICE'].fields_by_name['name']._loaded_options = None
-  _globals['_DEVICE'].fields_by_name['name']._serialized_options = b'\372B\006r\004\020\005\030P'
+  _globals['_DEVICE'].fields_by_name['name']._serialized_options = b'\272H\006r\004\020\005\030P'
   _globals['_DEVICE'].fields_by_name['status']._loaded_options = None
-  _globals['_DEVICE'].fields_by_name['status']._serialized_options = b'\372B\007\202\001\004\030\003\030\006'
+  _globals['_DEVICE'].fields_by_name['status']._serialized_options = b'\272H\007\202\001\004\030\003\030\006'
   _globals['_DEVICE'].fields_by_name['token']._loaded_options = None
-  _globals['_DEVICE'].fields_by_name['token']._serialized_options = b'\372B\010r\006\260\001\001\320\001\001'
+  _globals['_DEVICE'].fields_by_name['token']._serialized_options = b'\272H\010r\003\260\001\001\330\001\001'
   _globals['_DEVICE'].fields_by_name['tags']._loaded_options = None
-  _globals['_DEVICE'].fields_by_name['tags']._serialized_options = b'\372B\014\222\001\t\030\001\"\005r\003\030\377\001'
+  _globals['_DEVICE'].fields_by_name['tags']._serialized_options = b'\272H\014\222\001\t\030\001\"\005r\003\030\377\001'
   _globals['_DEVICE'].fields_by_name['created_at']._loaded_options = None
   _globals['_DEVICE'].fields_by_name['created_at']._serialized_options = b'\340A\003'
   _globals['_DEVICE'].fields_by_name['updated_at']._loaded_options = None
   _globals['_DEVICE'].fields_by_name['updated_at']._serialized_options = b'\340A\003'
   _globals['_CREATEDEVICEREQUEST'].fields_by_name['device']._loaded_options = None
-  _globals['_CREATEDEVICEREQUEST'].fields_by_name['device']._serialized_options = b'\340A\002\372B\005\212\001\002\020\001'
+  _globals['_CREATEDEVICEREQUEST'].fields_by_name['device']._serialized_options = b'\340A\002\272H\003\310\001\001'
   _globals['_CREATEDEVICELORAWANREQUEST_DEVICELORAWANTYPE'].fields_by_name['app_key']._loaded_options = None
-  _globals['_CREATEDEVICELORAWANREQUEST_DEVICELORAWANTYPE'].fields_by_name['app_key']._serialized_options = b'\340A\002\372B\005r\003\230\001 '
+  _globals['_CREATEDEVICELORAWANREQUEST_DEVICELORAWANTYPE'].fields_by_name['app_key']._serialized_options = b'\340A\002\272H\005r\003\230\001 '
   _globals['_CREATEDEVICELORAWANREQUEST'].oneofs_by_name['type_oneof']._loaded_options = None
-  _globals['_CREATEDEVICELORAWANREQUEST'].oneofs_by_name['type_oneof']._serialized_options = b'\370B\001'
+  _globals['_CREATEDEVICELORAWANREQUEST'].oneofs_by_name['type_oneof']._serialized_options = b'\272H\002\010\001'
   _globals['_CREATEDEVICELORAWANREQUEST'].fields_by_name['id']._loaded_options = None
-  _globals['_CREATEDEVICELORAWANREQUEST'].fields_by_name['id']._serialized_options = b'\340A\003\372B\005r\003\260\001\001'
+  _globals['_CREATEDEVICELORAWANREQUEST'].fields_by_name['id']._serialized_options = b'\340A\003\272H\005r\003\260\001\001'
   _globals['_GETDEVICEREQUEST'].fields_by_name['id']._loaded_options = None
-  _globals['_GETDEVICEREQUEST'].fields_by_name['id']._serialized_options = b'\340A\002\372B\005r\003\260\001\001'
+  _globals['_GETDEVICEREQUEST'].fields_by_name['id']._serialized_options = b'\340A\002\272H\005r\003\260\001\001'
   _globals['_UPDATEDEVICEREQUEST'].fields_by_name['device']._loaded_options = None
-  _globals['_UPDATEDEVICEREQUEST'].fields_by_name['device']._serialized_options = b'\340A\002\372B\005\212\001\002\020\001'
+  _globals['_UPDATEDEVICEREQUEST'].fields_by_name['device']._serialized_options = b'\340A\002\272H\003\310\001\001'
   _globals['_DELETEDEVICELORAWANREQUEST'].fields_by_name['id']._loaded_options = None
-  _globals['_DELETEDEVICELORAWANREQUEST'].fields_by_name['id']._serialized_options = b'\340A\002\372B\005r\003\260\001\001'
+  _globals['_DELETEDEVICELORAWANREQUEST'].fields_by_name['id']._serialized_options = b'\340A\002\272H\005r\003\260\001\001'
   _globals['_DELETEDEVICEREQUEST'].fields_by_name['id']._loaded_options = None
-  _globals['_DELETEDEVICEREQUEST'].fields_by_name['id']._serialized_options = b'\340A\002\372B\005r\003\260\001\001'
+  _globals['_DELETEDEVICEREQUEST'].fields_by_name['id']._serialized_options = b'\340A\002\272H\005r\003\260\001\001'
   _globals['_LISTDEVICESREQUEST'].fields_by_name['page_size']._loaded_options = None
-  _globals['_LISTDEVICESREQUEST'].fields_by_name['page_size']._serialized_options = b'\372B\005\032\003\030\372\001'
+  _globals['_LISTDEVICESREQUEST'].fields_by_name['page_size']._serialized_options = b'\272H\005\032\003\030\372\001'
   _globals['_LISTDEVICESREQUEST'].fields_by_name['tag']._loaded_options = None
-  _globals['_LISTDEVICESREQUEST'].fields_by_name['tag']._serialized_options = b'\372B\005r\003\030\377\001'
+  _globals['_LISTDEVICESREQUEST'].fields_by_name['tag']._serialized_options = b'\272H\005r\003\030\377\001'
   _globals['_DEVICESERVICE'].methods_by_name['CreateDevice']._loaded_options = None
   _globals['_DEVICESERVICE'].methods_by_name['CreateDevice']._serialized_options = b'\222A=J;\n\003201\0224\n\026A successful response.\022\032\n\030\032\026.thingspect.api.Device\202\323\344\223\002\025\"\013/v1/devices:\006device'
   _globals['_DEVICESERVICE'].methods_by_name['CreateDeviceLoRaWAN']._loaded_options = None
@@ -92,30 +92,30 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_DEVICESERVICE'].methods_by_name['DeleteDevice']._serialized_options = b'\222A#J!\n\003204\022\032\n\026A successful response.\022\000\202\323\344\223\002\022*\020/v1/devices/{id}'
   _globals['_DEVICESERVICE'].methods_by_name['ListDevices']._loaded_options = None
   _globals['_DEVICESERVICE'].methods_by_name['ListDevices']._serialized_options = b'\202\323\344\223\002\r\022\013/v1/devices'
-  _globals['_DECODER']._serialized_start=1612
-  _globals['_DECODER']._serialized_end=1771
-  _globals['_DEVICE']._serialized_start=309
-  _globals['_DEVICE']._serialized_end=682
-  _globals['_CREATEDEVICEREQUEST']._serialized_start=684
-  _globals['_CREATEDEVICEREQUEST']._serialized_end=758
-  _globals['_CREATEDEVICELORAWANREQUEST']._serialized_start=761
-  _globals['_CREATEDEVICELORAWANREQUEST']._serialized_end=1133
-  _globals['_CREATEDEVICELORAWANREQUEST_GATEWAYLORAWANTYPE']._serialized_start=1043
-  _globals['_CREATEDEVICELORAWANREQUEST_GATEWAYLORAWANTYPE']._serialized_end=1063
-  _globals['_CREATEDEVICELORAWANREQUEST_DEVICELORAWANTYPE']._serialized_start=1065
-  _globals['_CREATEDEVICELORAWANREQUEST_DEVICELORAWANTYPE']._serialized_end=1114
-  _globals['_GETDEVICEREQUEST']._serialized_start=1135
-  _globals['_GETDEVICEREQUEST']._serialized_end=1178
-  _globals['_UPDATEDEVICEREQUEST']._serialized_start=1180
-  _globals['_UPDATEDEVICEREQUEST']._serialized_end=1303
-  _globals['_DELETEDEVICELORAWANREQUEST']._serialized_start=1305
-  _globals['_DELETEDEVICELORAWANREQUEST']._serialized_end=1358
-  _globals['_DELETEDEVICEREQUEST']._serialized_start=1360
-  _globals['_DELETEDEVICEREQUEST']._serialized_end=1406
-  _globals['_LISTDEVICESREQUEST']._serialized_start=1408
-  _globals['_LISTDEVICESREQUEST']._serialized_end=1500
-  _globals['_LISTDEVICESRESPONSE']._serialized_start=1502
-  _globals['_LISTDEVICESRESPONSE']._serialized_end=1609
-  _globals['_DEVICESERVICE']._serialized_start=1774
-  _globals['_DEVICESERVICE']._serialized_end=2793
+  _globals['_DECODER']._serialized_start=1614
+  _globals['_DECODER']._serialized_end=1773
+  _globals['_DEVICE']._serialized_start=313
+  _globals['_DEVICE']._serialized_end=686
+  _globals['_CREATEDEVICEREQUEST']._serialized_start=688
+  _globals['_CREATEDEVICEREQUEST']._serialized_end=760
+  _globals['_CREATEDEVICELORAWANREQUEST']._serialized_start=763
+  _globals['_CREATEDEVICELORAWANREQUEST']._serialized_end=1137
+  _globals['_CREATEDEVICELORAWANREQUEST_GATEWAYLORAWANTYPE']._serialized_start=1045
+  _globals['_CREATEDEVICELORAWANREQUEST_GATEWAYLORAWANTYPE']._serialized_end=1065
+  _globals['_CREATEDEVICELORAWANREQUEST_DEVICELORAWANTYPE']._serialized_start=1067
+  _globals['_CREATEDEVICELORAWANREQUEST_DEVICELORAWANTYPE']._serialized_end=1116
+  _globals['_GETDEVICEREQUEST']._serialized_start=1139
+  _globals['_GETDEVICEREQUEST']._serialized_end=1182
+  _globals['_UPDATEDEVICEREQUEST']._serialized_start=1184
+  _globals['_UPDATEDEVICEREQUEST']._serialized_end=1305
+  _globals['_DELETEDEVICELORAWANREQUEST']._serialized_start=1307
+  _globals['_DELETEDEVICELORAWANREQUEST']._serialized_end=1360
+  _globals['_DELETEDEVICEREQUEST']._serialized_start=1362
+  _globals['_DELETEDEVICEREQUEST']._serialized_end=1408
+  _globals['_LISTDEVICESREQUEST']._serialized_start=1410
+  _globals['_LISTDEVICESREQUEST']._serialized_end=1502
+  _globals['_LISTDEVICESRESPONSE']._serialized_start=1504
+  _globals['_LISTDEVICESRESPONSE']._serialized_end=1611
+  _globals['_DEVICESERVICE']._serialized_start=1776
+  _globals['_DEVICESERVICE']._serialized_end=2795
 # @@protoc_insertion_point(module_scope)

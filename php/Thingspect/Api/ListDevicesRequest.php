@@ -19,7 +19,7 @@ class ListDevicesRequest extends \Google\Protobuf\Internal\Message
     /**
      * Number of devices to retrieve in a single page. Defaults to 50 if not specified, with a maximum of 250.
      *
-     * Generated from protobuf field <code>int32 page_size = 1 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>int32 page_size = 1 [(.buf.validate.field) = {</code>
      */
     protected $page_size = 0;
     /**
@@ -31,7 +31,7 @@ class ListDevicesRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device tag. If not specified, all tags are included.
      *
-     * Generated from protobuf field <code>string tag = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string tag = 3 [(.buf.validate.field) = {</code>
      */
     protected $tag = '';
 
@@ -57,7 +57,7 @@ class ListDevicesRequest extends \Google\Protobuf\Internal\Message
     /**
      * Number of devices to retrieve in a single page. Defaults to 50 if not specified, with a maximum of 250.
      *
-     * Generated from protobuf field <code>int32 page_size = 1 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>int32 page_size = 1 [(.buf.validate.field) = {</code>
      * @return int
      */
     public function getPageSize()
@@ -68,7 +68,7 @@ class ListDevicesRequest extends \Google\Protobuf\Internal\Message
     /**
      * Number of devices to retrieve in a single page. Defaults to 50 if not specified, with a maximum of 250.
      *
-     * Generated from protobuf field <code>int32 page_size = 1 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>int32 page_size = 1 [(.buf.validate.field) = {</code>
      * @param int $var
      * @return $this
      */
@@ -109,7 +109,7 @@ class ListDevicesRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device tag. If not specified, all tags are included.
      *
-     * Generated from protobuf field <code>string tag = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string tag = 3 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getTag()
@@ -120,7 +120,7 @@ class ListDevicesRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device tag. If not specified, all tags are included.
      *
-     * Generated from protobuf field <code>string tag = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string tag = 3 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */

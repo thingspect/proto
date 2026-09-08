@@ -19,7 +19,7 @@ class UpdateDeviceRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device message to update.
      *
-     * Generated from protobuf field <code>.thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $device = null;
     /**
@@ -49,7 +49,7 @@ class UpdateDeviceRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device message to update.
      *
-     * Generated from protobuf field <code>.thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return \Thingspect\Api\Device|null
      */
     public function getDevice()
@@ -70,7 +70,7 @@ class UpdateDeviceRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device message to update.
      *
-     * Generated from protobuf field <code>.thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param \Thingspect\Api\Device $var
      * @return $this
      */
