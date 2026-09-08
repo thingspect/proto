@@ -237,42 +237,42 @@ static const ::_pb::Message* PROTOBUF_NONNULL const file_default_instances[] = {
 const char descriptor_table_protodef_api_2fthingspect_5fevent_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
     "\n\032api/thingspect_event.proto\022\016thingspect"
-    ".api\032\037google/protobuf/timestamp.proto\032\034g"
-    "oogle/api/annotations.proto\032\027validate/va"
-    "lidate.proto\"\222\001\n\005Event\022\025\n\006org_id\030\001 \001(\tR\005"
-    "orgID\022\027\n\007uniq_id\030\002 \001(\tR\006uniqID\022\027\n\007rule_i"
-    "d\030\003 \001(\tR\006ruleID\022.\n\ncreated_at\030\004 \001(\0132\032.go"
-    "ogle.protobuf.Timestamp\022\020\n\010trace_id\030\005 \001("
-    "\t\"\357\001\n\021ListEventsRequest\022\031\n\007uniq_id\030\001 \001(\t"
-    "H\000R\006uniqID\022*\n\tdevice_id\030\002 \001(\tB\013\372B\010r\006\260\001\001\320"
-    "\001\001H\000R\010deviceID\022$\n\007rule_id\030\003 \001(\tB\013\372B\010r\006\260\001"
-    "\001\320\001\001R\006ruleID\022,\n\010end_time\030\004 \001(\0132\032.google."
-    "protobuf.Timestamp\022.\n\nstart_time\030\005 \001(\0132\032"
-    ".google.protobuf.TimestampB\017\n\010id_oneof\022\003"
-    "\370B\001\";\n\022ListEventsResponse\022%\n\006events\030\001 \003("
-    "\0132\025.thingspect.api.Event\";\n\023LatestEvents"
-    "Request\022$\n\007rule_id\030\001 \001(\tB\013\372B\010r\006\260\001\001\320\001\001R\006r"
-    "uleID\"=\n\024LatestEventsResponse\022%\n\006events\030"
-    "\001 \003(\0132\025.thingspect.api.Event2\355\001\n\014EventSe"
-    "rvice\022g\n\nListEvents\022!.thingspect.api.Lis"
-    "tEventsRequest\032\".thingspect.api.ListEven"
-    "tsResponse\"\022\202\323\344\223\002\014\022\n/v1/events\022t\n\014Latest"
-    "Events\022#.thingspect.api.LatestEventsRequ"
-    "est\032$.thingspect.api.LatestEventsRespons"
-    "e\"\031\202\323\344\223\002\023\022\021/v1/events/latestB$Z\"github.c"
-    "om/thingspect/proto/go/apib\006proto3"
+    ".api\032\033buf/validate/validate.proto\032\034googl"
+    "e/api/annotations.proto\032\037google/protobuf"
+    "/timestamp.proto\"\222\001\n\005Event\022\025\n\006org_id\030\001 \001"
+    "(\tR\005orgID\022\027\n\007uniq_id\030\002 \001(\tR\006uniqID\022\027\n\007ru"
+    "le_id\030\003 \001(\tR\006ruleID\022.\n\ncreated_at\030\004 \001(\0132"
+    "\032.google.protobuf.Timestamp\022\020\n\010trace_id\030"
+    "\005 \001(\t\"\361\001\n\021ListEventsRequest\022\031\n\007uniq_id\030\001"
+    " \001(\tH\000R\006uniqID\022*\n\tdevice_id\030\002 \001(\tB\013\272H\010r\003"
+    "\260\001\001\330\001\001H\000R\010deviceID\022$\n\007rule_id\030\003 \001(\tB\013\272H\010"
+    "r\003\260\001\001\330\001\001R\006ruleID\022,\n\010end_time\030\004 \001(\0132\032.goo"
+    "gle.protobuf.Timestamp\022.\n\nstart_time\030\005 \001"
+    "(\0132\032.google.protobuf.TimestampB\021\n\010id_one"
+    "of\022\005\272H\002\010\001\";\n\022ListEventsResponse\022%\n\006event"
+    "s\030\001 \003(\0132\025.thingspect.api.Event\";\n\023Latest"
+    "EventsRequest\022$\n\007rule_id\030\001 \001(\tB\013\272H\010r\003\260\001\001"
+    "\330\001\001R\006ruleID\"=\n\024LatestEventsResponse\022%\n\006e"
+    "vents\030\001 \003(\0132\025.thingspect.api.Event2\355\001\n\014E"
+    "ventService\022g\n\nListEvents\022!.thingspect.a"
+    "pi.ListEventsRequest\032\".thingspect.api.Li"
+    "stEventsResponse\"\022\202\323\344\223\002\014\022\n/v1/events\022t\n\014"
+    "LatestEvents\022#.thingspect.api.LatestEven"
+    "tsRequest\032$.thingspect.api.LatestEventsR"
+    "esponse\"\031\202\323\344\223\002\023\022\021/v1/events/latestB$Z\"gi"
+    "thub.com/thingspect/proto/go/apib\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_api_2fthingspect_5fevent_2eproto_deps[3] = {
+        &::descriptor_table_buf_2fvalidate_2fvalidate_2eproto,
         &::descriptor_table_google_2fapi_2fannotations_2eproto,
         &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
-        &::descriptor_table_validate_2fvalidate_2eproto,
 };
 static ::absl::once_flag descriptor_table_api_2fthingspect_5fevent_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_api_2fthingspect_5fevent_2eproto = {
     false,
     false,
-    994,
+    1000,
     descriptor_table_protodef_api_2fthingspect_5fevent_2eproto,
     "api/thingspect_event.proto",
     &descriptor_table_api_2fthingspect_5fevent_2eproto_once,
@@ -920,7 +920,7 @@ ListEventsRequest::_table_ = {
     {::_pbi::TcParser::FastMtS1,
      {42, 2, 1, PROTOBUF_FIELD_OFFSET(ListEventsRequest, _impl_.start_time_)}},
     {::_pbi::TcParser::MiniParse, {}},
-    // string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {
+    // string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {26, 0, 0, PROTOBUF_FIELD_OFFSET(ListEventsRequest, _impl_.rule_id_)}},
   }}, {{
@@ -929,10 +929,10 @@ ListEventsRequest::_table_ = {
     // string uniq_id = 1 [json_name = "uniqID"];
     {PROTOBUF_FIELD_OFFSET(ListEventsRequest, _impl_.id_oneof_.uniq_id_), _Internal::kOneofCaseOffset + 0, 0,
     (0 | ::_fl::kFcOneof | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+    // string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(ListEventsRequest, _impl_.id_oneof_.device_id_), _Internal::kOneofCaseOffset + 0, 0,
     (0 | ::_fl::kFcOneof | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {
+    // string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(ListEventsRequest, _impl_.rule_id_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // .google.protobuf.Timestamp end_time = 4;
@@ -1013,7 +1013,7 @@ PROTOBUF_NOINLINE void ListEventsRequest::Clear() {
     default:
       break;
   }
-  // string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {
+  // string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_rule_id().empty()) {
       const ::std::string& _s = this_._internal_rule_id();
@@ -1064,7 +1064,7 @@ PROTOBUF_NOINLINE void ListEventsRequest::Clear() {
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
   if ((cached_has_bits & 0x00000007u) != 0) {
-    // string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {
+    // string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_rule_id().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -1089,7 +1089,7 @@ PROTOBUF_NOINLINE void ListEventsRequest::Clear() {
                                       this_._internal_uniq_id());
       break;
     }
-    // string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+    // string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
     case kDeviceId: {
       total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                       this_._internal_device_id());
@@ -1579,13 +1579,13 @@ LatestEventsRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::LatestEventsRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string rule_id = 1 [json_name = "ruleID", (.validate.rules) = {
+    // string rule_id = 1 [json_name = "ruleID", (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(LatestEventsRequest, _impl_.rule_id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string rule_id = 1 [json_name = "ruleID", (.validate.rules) = {
+    // string rule_id = 1 [json_name = "ruleID", (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(LatestEventsRequest, _impl_.rule_id_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
@@ -1626,7 +1626,7 @@ PROTOBUF_NOINLINE void LatestEventsRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string rule_id = 1 [json_name = "ruleID", (.validate.rules) = {
+  // string rule_id = 1 [json_name = "ruleID", (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_rule_id().empty()) {
       const ::std::string& _s = this_._internal_rule_id();
@@ -1660,7 +1660,7 @@ PROTOBUF_NOINLINE void LatestEventsRequest::Clear() {
   (void)cached_has_bits;
 
    {
-    // string rule_id = 1 [json_name = "ruleID", (.validate.rules) = {
+    // string rule_id = 1 [json_name = "ruleID", (.buf.validate.field) = {
     cached_has_bits = this_._impl_._has_bits_[0];
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_rule_id().empty()) {

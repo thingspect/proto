@@ -19,7 +19,7 @@ class ListDataPointsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device attribute. If not specified, all attributes are included.
      *
-     * Generated from protobuf field <code>string attr = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string attr = 3 [(.buf.validate.field) = {</code>
      */
     protected $attr = '';
     /**
@@ -93,7 +93,7 @@ class ListDataPointsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device ID (UUID). Either unique ID or device ID must be provided.
      *
-     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {</code>
      * @return string
      */
     public function getDeviceId()
@@ -109,7 +109,7 @@ class ListDataPointsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device ID (UUID). Either unique ID or device ID must be provided.
      *
-     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -124,7 +124,7 @@ class ListDataPointsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device attribute. If not specified, all attributes are included.
      *
-     * Generated from protobuf field <code>string attr = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string attr = 3 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getAttr()
@@ -135,7 +135,7 @@ class ListDataPointsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device attribute. If not specified, all attributes are included.
      *
-     * Generated from protobuf field <code>string attr = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string attr = 3 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */

@@ -19,7 +19,7 @@ class CreateDeviceLoRaWANRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device ID (UUID) to add LoRaWAN configuration.
      *
-     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.buf.validate.field) = {</code>
      */
     protected $id = '';
     protected $type_oneof;
@@ -46,7 +46,7 @@ class CreateDeviceLoRaWANRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device ID (UUID) to add LoRaWAN configuration.
      *
-     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.buf.validate.field) = {</code>
      * @return string
      */
     public function getId()
@@ -57,7 +57,7 @@ class CreateDeviceLoRaWANRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device ID (UUID) to add LoRaWAN configuration.
      *
-     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */

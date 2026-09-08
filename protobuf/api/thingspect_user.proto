@@ -1,15 +1,16 @@
 syntax = "proto3";
+
 package thingspect.api;
 
 import "api/thingspect_role.proto";
 import "api/thingspect_status.proto";
-import "google/protobuf/empty.proto";
-import "google/protobuf/timestamp.proto";
-import "google/protobuf/field_mask.proto";
+import "buf/validate/validate.proto";
 import "google/api/annotations.proto";
 import "google/api/field_behavior.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/field_mask.proto";
+import "google/protobuf/timestamp.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
-import "validate/validate.proto";
 
 option go_package = "github.com/thingspect/proto/go/api";
 
@@ -96,25 +97,25 @@ message User {
   string org_id = 2 [json_name = "orgID", (google.api.field_behavior) = OUTPUT_ONLY];
 
   // User name.
-  string name = 3 [(validate.rules).string = {min_len: 5, max_len: 80}];
+  string name = 3 [(buf.validate.field).string = {min_len: 5, max_len: 80}];
 
   // User email.
-  string email = 4 [(validate.rules).string.email = true];
+  string email = 4 [(buf.validate.field).string.email = true];
 
   // User phone number. If specified, must be in valid [E.164](https://www.twilio.com/docs/glossary/what-e164) format.
-  string phone = 5 [(validate.rules).string.max_len = 16];
+  string phone = 5 [(buf.validate.field).string.max_len = 16];
 
   // User role.
-  Role role = 6 [(validate.rules).enum = {in: [3, 6, 7, 9, 12, 15]}];
+  Role role = 6 [(buf.validate.field).enum = {in: [3, 6, 7, 9, 12, 15]}];
 
   // User status.
-  Status status = 7 [(validate.rules).enum = {in: [3, 6]}];
+  Status status = 7 [(buf.validate.field).enum = {in: [3, 6]}];
 
   // User tags. Nested tags should be delimited by '/'.
-  repeated string tags = 8 [(validate.rules).repeated.unique = true, (validate.rules).repeated.items.string.max_len = 255];
+  repeated string tags = 8 [(buf.validate.field).repeated.unique = true, (buf.validate.field).repeated.items.string.max_len = 255];
 
   // Mobile application user key.
-  string app_key = 9 [(validate.rules).string.max_len = 45];
+  string app_key = 9 [(buf.validate.field).string.max_len = 45];
 
   // User creation timestamp.
   google.protobuf.Timestamp created_at = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
@@ -126,19 +127,19 @@ message User {
 // CreateUserRequest is sent to create a user.
 message CreateUserRequest {
   // User message to create.
-  User user = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+  User user = 1 [(buf.validate.field).required = true, (google.api.field_behavior) = REQUIRED];
 }
 
 // GetUserRequest is sent to get a user.
 message GetUserRequest {
   // User ID (UUID) to get.
-  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
+  string id = 1 [(buf.validate.field).string.uuid = true, (google.api.field_behavior) = REQUIRED];
 }
 
 // UpdateUserRequest is sent to update a user.
 message UpdateUserRequest {
   // User message to update.
-  User user = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+  User user = 1 [(buf.validate.field).required = true, (google.api.field_behavior) = REQUIRED];
 
   // Fields to update. Automatically populated by a PATCH request. If not present, a full resource update is performed.
   google.protobuf.FieldMask update_mask = 2;
@@ -147,28 +148,28 @@ message UpdateUserRequest {
 // UpdateUserPasswordRequest is sent to update a user's password.
 message UpdateUserPasswordRequest {
   // User ID (UUID) to update password.
-  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = OUTPUT_ONLY];
+  string id = 1 [(buf.validate.field).string.uuid = true, (google.api.field_behavior) = OUTPUT_ONLY];
 
   // User password to update.
-  string password = 2 [(validate.rules).string = {min_len: 10, max_len: 100}, (google.api.field_behavior) = REQUIRED];
+  string password = 2 [(buf.validate.field).string = {min_len: 10, max_len: 100}, (google.api.field_behavior) = REQUIRED];
 }
 
 // DeleteUserRequest is sent to delete a user.
 message DeleteUserRequest {
   // User ID (UUID) to delete.
-  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
+  string id = 1 [(buf.validate.field).string.uuid = true, (google.api.field_behavior) = REQUIRED];
 }
 
 // ListUsersRequest is sent to list users.
 message ListUsersRequest {
   // Number of users to retrieve in a single page. Defaults to 50 if not specified, with a maximum of 250.
-  int32 page_size = 1 [(validate.rules).int32.lte = 250];
+  int32 page_size = 1 [(buf.validate.field).int32.lte = 250];
 
   // Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.
   string page_token = 2;
 
   // User tag. If not specified, all tags are included.
-  string tag = 3 [(validate.rules).string.max_len = 255];
+  string tag = 3 [(buf.validate.field).string.max_len = 255];
 }
 
 // ListUsersResponse is sent in response to a user list.

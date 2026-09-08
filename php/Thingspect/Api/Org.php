@@ -25,19 +25,19 @@ class Org extends \Google\Protobuf\Internal\Message
     /**
      * Organization name.
      *
-     * Generated from protobuf field <code>string name = 2 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 2 [(.buf.validate.field) = {</code>
      */
     protected $name = '';
     /**
      * Organization display name. Used anywhere the organization is shown to a user, including web sites and alert sender fields.
      *
-     * Generated from protobuf field <code>string display_name = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string display_name = 3 [(.buf.validate.field) = {</code>
      */
     protected $display_name = '';
     /**
      * Organization email. Used as the 'From' address in email alerts.
      *
-     * Generated from protobuf field <code>string email = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string email = 4 [(.buf.validate.field) = {</code>
      */
     protected $email = '';
     /**
@@ -107,7 +107,7 @@ class Org extends \Google\Protobuf\Internal\Message
     /**
      * Organization name.
      *
-     * Generated from protobuf field <code>string name = 2 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 2 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getName()
@@ -118,7 +118,7 @@ class Org extends \Google\Protobuf\Internal\Message
     /**
      * Organization name.
      *
-     * Generated from protobuf field <code>string name = 2 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 2 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -133,7 +133,7 @@ class Org extends \Google\Protobuf\Internal\Message
     /**
      * Organization display name. Used anywhere the organization is shown to a user, including web sites and alert sender fields.
      *
-     * Generated from protobuf field <code>string display_name = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string display_name = 3 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getDisplayName()
@@ -144,7 +144,7 @@ class Org extends \Google\Protobuf\Internal\Message
     /**
      * Organization display name. Used anywhere the organization is shown to a user, including web sites and alert sender fields.
      *
-     * Generated from protobuf field <code>string display_name = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string display_name = 3 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -159,7 +159,7 @@ class Org extends \Google\Protobuf\Internal\Message
     /**
      * Organization email. Used as the 'From' address in email alerts.
      *
-     * Generated from protobuf field <code>string email = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string email = 4 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getEmail()
@@ -170,7 +170,7 @@ class Org extends \Google\Protobuf\Internal\Message
     /**
      * Organization email. Used as the 'From' address in email alerts.
      *
-     * Generated from protobuf field <code>string email = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string email = 4 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */

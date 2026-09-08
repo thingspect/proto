@@ -19,7 +19,7 @@ class ListEventsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule ID (UUID). If not specified, all rules are included.
      *
-     * Generated from protobuf field <code>string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {</code>
      */
     protected $rule_id = '';
     /**
@@ -93,7 +93,7 @@ class ListEventsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device ID (UUID). Either unique ID or device ID must be provided.
      *
-     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {</code>
      * @return string
      */
     public function getDeviceId()
@@ -109,7 +109,7 @@ class ListEventsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Device ID (UUID). Either unique ID or device ID must be provided.
      *
-     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -124,7 +124,7 @@ class ListEventsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule ID (UUID). If not specified, all rules are included.
      *
-     * Generated from protobuf field <code>string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {</code>
      * @return string
      */
     public function getRuleId()
@@ -135,7 +135,7 @@ class ListEventsRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule ID (UUID). If not specified, all rules are included.
      *
-     * Generated from protobuf field <code>string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */

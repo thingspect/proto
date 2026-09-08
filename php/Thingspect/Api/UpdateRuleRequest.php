@@ -19,7 +19,7 @@ class UpdateRuleRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule message to update.
      *
-     * Generated from protobuf field <code>.thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $rule = null;
     /**
@@ -49,7 +49,7 @@ class UpdateRuleRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule message to update.
      *
-     * Generated from protobuf field <code>.thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return \Thingspect\Api\Rule|null
      */
     public function getRule()
@@ -70,7 +70,7 @@ class UpdateRuleRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule message to update.
      *
-     * Generated from protobuf field <code>.thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param \Thingspect\Api\Rule $var
      * @return $this
      */

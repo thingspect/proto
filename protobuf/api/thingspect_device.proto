@@ -1,14 +1,15 @@
 syntax = "proto3";
+
 package thingspect.api;
 
 import "api/thingspect_status.proto";
-import "google/protobuf/empty.proto";
-import "google/protobuf/timestamp.proto";
-import "google/protobuf/field_mask.proto";
+import "buf/validate/validate.proto";
 import "google/api/annotations.proto";
 import "google/api/field_behavior.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/field_mask.proto";
+import "google/protobuf/timestamp.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
-import "validate/validate.proto";
 
 option go_package = "github.com/thingspect/proto/go/api";
 
@@ -147,22 +148,22 @@ message Device {
   string org_id = 2 [json_name = "orgID", (google.api.field_behavior) = OUTPUT_ONLY];
 
   // Device unique ID.
-  string uniq_id = 3 [json_name = "uniqID", (validate.rules).string = {min_len: 5, max_len: 40}];
+  string uniq_id = 3 [json_name = "uniqID", (buf.validate.field).string = {min_len: 5, max_len: 40}];
 
   // Device name.
-  string name = 4 [(validate.rules).string = {min_len: 5, max_len: 80}];
+  string name = 4 [(buf.validate.field).string = {min_len: 5, max_len: 80}];
 
   // Device status.
-  Status status = 5 [(validate.rules).enum = {in: [3, 6]}];
+  Status status = 5 [(buf.validate.field).enum = {in: [3, 6]}];
 
   // Authentication token (UUID). Will be generated at creation time, but can be updated afterward.
-  string token = 6 [(validate.rules).string = {ignore_empty: true, uuid: true}];
+  string token = 6 [(buf.validate.field).string.uuid = true, (buf.validate.field).ignore = IGNORE_IF_ZERO_VALUE];
 
   // Device data payload decoder.
   Decoder decoder = 7;
 
   // Device tags. Nested tags should be delimited by '/'.
-  repeated string tags = 8 [(validate.rules).repeated.unique = true, (validate.rules).repeated.items.string.max_len = 255];
+  repeated string tags = 8 [(buf.validate.field).repeated.unique = true, (buf.validate.field).repeated.items.string.max_len = 255];
 
   // Device creation timestamp.
   google.protobuf.Timestamp created_at = 9 [(google.api.field_behavior) = OUTPUT_ONLY];
@@ -174,7 +175,7 @@ message Device {
 // CreateDeviceRequest is sent to create a device.
 message CreateDeviceRequest {
   // Device message to create.
-  Device device = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+  Device device = 1 [(buf.validate.field).required = true, (google.api.field_behavior) = REQUIRED];
 }
 
 // CreateDeviceLoRaWANRequest is sent to add LoRaWAN configuration to a device.
@@ -185,15 +186,15 @@ message CreateDeviceLoRaWANRequest {
   // DeviceLoRaWANType is sent to add LoRaWAN device configuration.
   message DeviceLoRaWANType {
     // Device LoRaWAN 1.0.x application key.
-    string app_key = 1 [(validate.rules).string.len = 32, (google.api.field_behavior) = REQUIRED];
+    string app_key = 1 [(buf.validate.field).string.len = 32, (google.api.field_behavior) = REQUIRED];
   }
 
   // Device ID (UUID) to add LoRaWAN configuration.
-  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = OUTPUT_ONLY];
+  string id = 1 [(buf.validate.field).string.uuid = true, (google.api.field_behavior) = OUTPUT_ONLY];
 
   // LoRaWAN configuration type.
   oneof type_oneof {
-    option (validate.required) = true;
+    option (buf.validate.oneof).required = true;
 
     // Gateway LoRaWAN configuration type.
     GatewayLoRaWANType gateway_lorawan_type = 2 [json_name = "gatewayLoRaWANType"];
@@ -206,13 +207,13 @@ message CreateDeviceLoRaWANRequest {
 // GetDeviceRequest is sent to get a device.
 message GetDeviceRequest {
   // Device ID (UUID) to get.
-  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
+  string id = 1 [(buf.validate.field).string.uuid = true, (google.api.field_behavior) = REQUIRED];
 }
 
 // UpdateDeviceRequest is sent to update a device.
 message UpdateDeviceRequest {
   // Device message to update.
-  Device device = 1 [(validate.rules).message.required = true, (google.api.field_behavior) = REQUIRED];
+  Device device = 1 [(buf.validate.field).required = true, (google.api.field_behavior) = REQUIRED];
 
   // Fields to update. Automatically populated by a PATCH request. If not present, a full resource update is performed.
   google.protobuf.FieldMask update_mask = 2;
@@ -221,25 +222,25 @@ message UpdateDeviceRequest {
 // DeleteDeviceLoRaWANRequest is sent to remove LoRaWAN configuration from a device.
 message DeleteDeviceLoRaWANRequest {
   // Device ID (UUID) to remove LoRaWAN configuration.
-  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
+  string id = 1 [(buf.validate.field).string.uuid = true, (google.api.field_behavior) = REQUIRED];
 }
 
 // DeleteDeviceRequest is sent to delete a device.
 message DeleteDeviceRequest {
   // Device ID (UUID) to delete.
-  string id = 1 [(validate.rules).string.uuid = true, (google.api.field_behavior) = REQUIRED];
+  string id = 1 [(buf.validate.field).string.uuid = true, (google.api.field_behavior) = REQUIRED];
 }
 
 // ListDevicesRequest is sent to list devices.
 message ListDevicesRequest {
   // Number of devices to retrieve in a single page. Defaults to 50 if not specified, with a maximum of 250.
-  int32 page_size = 1 [(validate.rules).int32.lte = 250];
+  int32 page_size = 1 [(buf.validate.field).int32.lte = 250];
 
   // Token of the page to retrieve. If not specified, the first page of results will be returned. To request the next page of results, use next_page_token from the previous response.
   string page_token = 2;
 
   // Device tag. If not specified, all tags are included.
-  string tag = 3 [(validate.rules).string.max_len = 255];
+  string tag = 3 [(buf.validate.field).string.max_len = 255];
 }
 
 // ListDevicesResponse is sent in response to a device list.

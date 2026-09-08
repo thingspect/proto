@@ -19,7 +19,7 @@ class DeviceLoRaWANType extends \Google\Protobuf\Internal\Message
     /**
      * Device LoRaWAN 1.0.x application key.
      *
-     * Generated from protobuf field <code>string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $app_key = '';
 
@@ -41,7 +41,7 @@ class DeviceLoRaWANType extends \Google\Protobuf\Internal\Message
     /**
      * Device LoRaWAN 1.0.x application key.
      *
-     * Generated from protobuf field <code>string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return string
      */
     public function getAppKey()
@@ -52,7 +52,7 @@ class DeviceLoRaWANType extends \Google\Protobuf\Internal\Message
     /**
      * Device LoRaWAN 1.0.x application key.
      *
-     * Generated from protobuf field <code>string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */

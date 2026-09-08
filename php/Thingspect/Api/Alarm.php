@@ -37,43 +37,43 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * Alarm name.
      *
-     * Generated from protobuf field <code>string name = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 4 [(.buf.validate.field) = {</code>
      */
     protected $name = '';
     /**
      * Alarm status.
      *
-     * Generated from protobuf field <code>.thingspect.api.Status status = 5 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Status status = 5 [(.buf.validate.field) = {</code>
      */
     protected $status = 0;
     /**
      * Alarm type.
      *
-     * Generated from protobuf field <code>.thingspect.api.AlarmType type = 6 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.AlarmType type = 6 [(.buf.validate.field) = {</code>
      */
     protected $type = 0;
     /**
      * User tags to whom alerts are sent.
      *
-     * Generated from protobuf field <code>repeated string user_tags = 7 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>repeated string user_tags = 7 [(.buf.validate.field) = {</code>
      */
     private $user_tags;
     /**
      * Alarm subject template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
      *
-     * Generated from protobuf field <code>string subject_template = 8 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string subject_template = 8 [(.buf.validate.field) = {</code>
      */
     protected $subject_template = '';
     /**
      * Alarm body template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
      *
-     * Generated from protobuf field <code>string body_template = 9 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string body_template = 9 [(.buf.validate.field) = {</code>
      */
     protected $body_template = '';
     /**
      * Alarm repeat interval, in minutes, per device. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
      *
-     * Generated from protobuf field <code>int32 repeat_interval = 10 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>int32 repeat_interval = 10 [(.buf.validate.field) = {</code>
      */
     protected $repeat_interval = 0;
     /**
@@ -207,7 +207,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * Alarm name.
      *
-     * Generated from protobuf field <code>string name = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 4 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getName()
@@ -218,7 +218,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * Alarm name.
      *
-     * Generated from protobuf field <code>string name = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 4 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -233,7 +233,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * Alarm status.
      *
-     * Generated from protobuf field <code>.thingspect.api.Status status = 5 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Status status = 5 [(.buf.validate.field) = {</code>
      * @return int
      */
     public function getStatus()
@@ -244,7 +244,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * Alarm status.
      *
-     * Generated from protobuf field <code>.thingspect.api.Status status = 5 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Status status = 5 [(.buf.validate.field) = {</code>
      * @param int $var
      * @return $this
      */
@@ -259,7 +259,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * Alarm type.
      *
-     * Generated from protobuf field <code>.thingspect.api.AlarmType type = 6 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.AlarmType type = 6 [(.buf.validate.field) = {</code>
      * @return int
      */
     public function getType()
@@ -270,7 +270,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * Alarm type.
      *
-     * Generated from protobuf field <code>.thingspect.api.AlarmType type = 6 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.AlarmType type = 6 [(.buf.validate.field) = {</code>
      * @param int $var
      * @return $this
      */
@@ -285,7 +285,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * User tags to whom alerts are sent.
      *
-     * Generated from protobuf field <code>repeated string user_tags = 7 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>repeated string user_tags = 7 [(.buf.validate.field) = {</code>
      * @return RepeatedField<string>
      */
     public function getUserTags()
@@ -296,7 +296,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * User tags to whom alerts are sent.
      *
-     * Generated from protobuf field <code>repeated string user_tags = 7 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>repeated string user_tags = 7 [(.buf.validate.field) = {</code>
      * @param string[] $var
      * @return $this
      */
@@ -311,7 +311,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * Alarm subject template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
      *
-     * Generated from protobuf field <code>string subject_template = 8 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string subject_template = 8 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getSubjectTemplate()
@@ -322,7 +322,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * Alarm subject template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
      *
-     * Generated from protobuf field <code>string subject_template = 8 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string subject_template = 8 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -337,7 +337,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * Alarm body template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
      *
-     * Generated from protobuf field <code>string body_template = 9 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string body_template = 9 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getBodyTemplate()
@@ -348,7 +348,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * Alarm body template. Templates generate HTML-safe output using the [Go template engine](https://golang.org/pkg/html/template/).
      *
-     * Generated from protobuf field <code>string body_template = 9 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string body_template = 9 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -363,7 +363,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * Alarm repeat interval, in minutes, per device. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
      *
-     * Generated from protobuf field <code>int32 repeat_interval = 10 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>int32 repeat_interval = 10 [(.buf.validate.field) = {</code>
      * @return int
      */
     public function getRepeatInterval()
@@ -374,7 +374,7 @@ class Alarm extends \Google\Protobuf\Internal\Message
     /**
      * Alarm repeat interval, in minutes, per device. Duration after which a duplicate event will cause an alert to be sent. Minimum is 1 minute, maximum is 14 days.
      *
-     * Generated from protobuf field <code>int32 repeat_interval = 10 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>int32 repeat_interval = 10 [(.buf.validate.field) = {</code>
      * @param int $var
      * @return $this
      */

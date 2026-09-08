@@ -19,13 +19,13 @@ class TestRuleRequest extends \Google\Protobuf\Internal\Message
     /**
      * Data point to test against a rule.
      *
-     * Generated from protobuf field <code>.thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $point = null;
     /**
      * Rule message to test.
      *
-     * Generated from protobuf field <code>.thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      */
     protected $rule = null;
 
@@ -49,7 +49,7 @@ class TestRuleRequest extends \Google\Protobuf\Internal\Message
     /**
      * Data point to test against a rule.
      *
-     * Generated from protobuf field <code>.thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return \Thingspect\Common\DataPoint|null
      */
     public function getPoint()
@@ -70,7 +70,7 @@ class TestRuleRequest extends \Google\Protobuf\Internal\Message
     /**
      * Data point to test against a rule.
      *
-     * Generated from protobuf field <code>.thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param \Thingspect\Common\DataPoint $var
      * @return $this
      */
@@ -85,7 +85,7 @@ class TestRuleRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule message to test.
      *
-     * Generated from protobuf field <code>.thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @return \Thingspect\Api\Rule|null
      */
     public function getRule()
@@ -106,7 +106,7 @@ class TestRuleRequest extends \Google\Protobuf\Internal\Message
     /**
      * Rule message to test.
      *
-     * Generated from protobuf field <code>.thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {</code>
      * @param \Thingspect\Api\Rule $var
      * @return $this
      */

@@ -29,9 +29,9 @@
 #include "google/protobuf/repeated_field.h"  // IWYU pragma: export
 #include "google/protobuf/extension_set.h"  // IWYU pragma: export
 #include "google/protobuf/unknown_field_set.h"
-#include "google/protobuf/timestamp.pb.h"
+#include "buf/validate/validate.pb.h"
 #include "google/api/field_behavior.pb.h"
-#include "validate/validate.pb.h"
+#include "google/protobuf/timestamp.pb.h"
 // @@protoc_insertion_point(includes)
 
 // Must be included last.
@@ -238,7 +238,7 @@ class DataPoint final : public ::google::protobuf::Message
     kBoolValFieldNumber = 6,
     kBytesValFieldNumber = 16,
   };
-  // string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_uniq_id() ;
   const ::std::string& uniq_id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -253,7 +253,7 @@ class DataPoint final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_uniq_id();
 
   public:
-  // string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_attr() ;
   const ::std::string& attr() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -452,7 +452,7 @@ extern const ::google::protobuf::internal::ClassDataFull DataPoint_class_data_;
 
 // DataPoint
 
-// string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void DataPoint::clear_uniq_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.uniq_id_.ClearToEmpty();
@@ -517,7 +517,7 @@ inline void DataPoint::set_allocated_uniq_id(::std::string* PROTOBUF_NULLABLE va
   // @@protoc_insertion_point(field_set_allocated:thingspect.common.DataPoint.uniq_id)
 }
 
-// string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void DataPoint::clear_attr() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.attr_.ClearToEmpty();

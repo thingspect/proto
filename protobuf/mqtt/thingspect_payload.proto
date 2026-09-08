@@ -1,4 +1,5 @@
 syntax = "proto3";
+
 package thingspect.mqtt;
 
 import "common/thingspect_datapoint.proto";

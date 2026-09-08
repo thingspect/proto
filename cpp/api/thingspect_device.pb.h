@@ -32,13 +32,13 @@
 #include "google/protobuf/generated_enum_reflection.h"
 #include "google/protobuf/unknown_field_set.h"
 #include "api/thingspect_status.pb.h"
-#include "google/protobuf/empty.pb.h"
-#include "google/protobuf/timestamp.pb.h"
-#include "google/protobuf/field_mask.pb.h"
+#include "buf/validate/validate.pb.h"
 #include "google/api/annotations.pb.h"
 #include "google/api/field_behavior.pb.h"
+#include "google/protobuf/empty.pb.h"
+#include "google/protobuf/field_mask.pb.h"
+#include "google/protobuf/timestamp.pb.h"
 #include "protoc-gen-openapiv2/options/annotations.pb.h"
-#include "validate/validate.pb.h"
 // @@protoc_insertion_point(includes)
 
 // Must be included last.
@@ -332,7 +332,7 @@ class ListDevicesRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_page_token();
 
   public:
-  // string tag = 3 [(.validate.rules) = {
+  // string tag = 3 [(.buf.validate.field) = {
   void clear_tag() ;
   const ::std::string& tag() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -347,7 +347,7 @@ class ListDevicesRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_tag();
 
   public:
-  // int32 page_size = 1 [(.validate.rules) = {
+  // int32 page_size = 1 [(.buf.validate.field) = {
   void clear_page_size() ;
   ::int32_t page_size() const;
   void set_page_size(::int32_t value);
@@ -540,7 +540,7 @@ class GetDeviceRequest final : public ::google::protobuf::Message
   enum : int {
     kIdFieldNumber = 1,
   };
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_id() ;
   const ::std::string& id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -736,7 +736,7 @@ class DeleteDeviceRequest final : public ::google::protobuf::Message
   enum : int {
     kIdFieldNumber = 1,
   };
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_id() ;
   const ::std::string& id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -932,7 +932,7 @@ class DeleteDeviceLoRaWANRequest final : public ::google::protobuf::Message
   enum : int {
     kIdFieldNumber = 1,
   };
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_id() ;
   const ::std::string& id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1274,7 +1274,7 @@ class CreateDeviceLoRaWANRequest_DeviceLoRaWANType final : public ::google::prot
   enum : int {
     kAppKeyFieldNumber = 1,
   };
-  // string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_app_key() ;
   const ::std::string& app_key() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1479,7 +1479,7 @@ class Device final : public ::google::protobuf::Message
     kStatusFieldNumber = 5,
     kDecoderFieldNumber = 7,
   };
-  // repeated string tags = 8 [(.validate.rules) = {
+  // repeated string tags = 8 [(.buf.validate.field) = {
   int tags_size() const;
   private:
   int _internal_tags_size() const;
@@ -1531,7 +1531,7 @@ class Device final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_org_id();
 
   public:
-  // string uniq_id = 3 [json_name = "uniqID", (.validate.rules) = {
+  // string uniq_id = 3 [json_name = "uniqID", (.buf.validate.field) = {
   void clear_uniq_id() ;
   const ::std::string& uniq_id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1546,7 +1546,7 @@ class Device final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_uniq_id();
 
   public:
-  // string name = 4 [(.validate.rules) = {
+  // string name = 4 [(.buf.validate.field) = {
   void clear_name() ;
   const ::std::string& name() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1561,7 +1561,7 @@ class Device final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_name();
 
   public:
-  // string token = 6 [(.validate.rules) = {
+  // string token = 6 [(.buf.validate.field) = {
   void clear_token() ;
   const ::std::string& token() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1606,7 +1606,7 @@ class Device final : public ::google::protobuf::Message
   ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_updated_at();
 
   public:
-  // .thingspect.api.Status status = 5 [(.validate.rules) = {
+  // .thingspect.api.Status status = 5 [(.buf.validate.field) = {
   void clear_status() ;
   ::thingspect::api::Status status() const;
   void set_status(::thingspect::api::Status value);
@@ -1825,7 +1825,7 @@ class CreateDeviceLoRaWANRequest final : public ::google::protobuf::Message
     kGatewayLorawanTypeFieldNumber = 2,
     kDeviceLorawanTypeFieldNumber = 3,
   };
-  // string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.buf.validate.field) = {
   void clear_id() ;
   const ::std::string& id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -2073,7 +2073,7 @@ class UpdateDeviceRequest final : public ::google::protobuf::Message
     kDeviceFieldNumber = 1,
     kUpdateMaskFieldNumber = 2,
   };
-  // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   bool has_device() const;
   void clear_device() ;
   const ::thingspect::api::Device& device() const;
@@ -2512,7 +2512,7 @@ class CreateDeviceRequest final : public ::google::protobuf::Message
   enum : int {
     kDeviceFieldNumber = 1,
   };
-  // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   bool has_device() const;
   void clear_device() ;
   const ::thingspect::api::Device& device() const;
@@ -2708,7 +2708,7 @@ inline void Device::set_allocated_org_id(::std::string* PROTOBUF_NULLABLE value)
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.Device.org_id)
 }
 
-// string uniq_id = 3 [json_name = "uniqID", (.validate.rules) = {
+// string uniq_id = 3 [json_name = "uniqID", (.buf.validate.field) = {
 inline void Device::clear_uniq_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.uniq_id_.ClearToEmpty();
@@ -2773,7 +2773,7 @@ inline void Device::set_allocated_uniq_id(::std::string* PROTOBUF_NULLABLE value
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.Device.uniq_id)
 }
 
-// string name = 4 [(.validate.rules) = {
+// string name = 4 [(.buf.validate.field) = {
 inline void Device::clear_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.name_.ClearToEmpty();
@@ -2838,7 +2838,7 @@ inline void Device::set_allocated_name(::std::string* PROTOBUF_NULLABLE value) {
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.Device.name)
 }
 
-// .thingspect.api.Status status = 5 [(.validate.rules) = {
+// .thingspect.api.Status status = 5 [(.buf.validate.field) = {
 inline void Device::clear_status() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.status_ = 0;
@@ -2862,7 +2862,7 @@ inline void Device::_internal_set_status(::thingspect::api::Status value) {
   _impl_.status_ = value;
 }
 
-// string token = 6 [(.validate.rules) = {
+// string token = 6 [(.buf.validate.field) = {
 inline void Device::clear_token() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.token_.ClearToEmpty();
@@ -2951,7 +2951,7 @@ inline void Device::_internal_set_decoder(::thingspect::api::Decoder value) {
   _impl_.decoder_ = value;
 }
 
-// repeated string tags = 8 [(.validate.rules) = {
+// repeated string tags = 8 [(.buf.validate.field) = {
 inline int Device::_internal_tags_size() const {
   return _internal_tags().size();
 }
@@ -3205,7 +3205,7 @@ inline void Device::set_allocated_updated_at(::google::protobuf::Timestamp* PROT
 
 // CreateDeviceRequest
 
-// .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline bool CreateDeviceRequest::has_device() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.device_ != nullptr);
@@ -3311,7 +3311,7 @@ inline void CreateDeviceRequest::set_allocated_device(::thingspect::api::Device*
 
 // CreateDeviceLoRaWANRequest_DeviceLoRaWANType
 
-// string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string app_key = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void CreateDeviceLoRaWANRequest_DeviceLoRaWANType::clear_app_key() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.app_key_.ClearToEmpty();
@@ -3380,7 +3380,7 @@ inline void CreateDeviceLoRaWANRequest_DeviceLoRaWANType::set_allocated_app_key(
 
 // CreateDeviceLoRaWANRequest
 
-// string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.validate.rules) = {
+// string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.buf.validate.field) = {
 inline void CreateDeviceLoRaWANRequest::clear_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.id_.ClearToEmpty();
@@ -3620,7 +3620,7 @@ inline CreateDeviceLoRaWANRequest::TypeOneofCase CreateDeviceLoRaWANRequest::typ
 
 // GetDeviceRequest
 
-// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void GetDeviceRequest::clear_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.id_.ClearToEmpty();
@@ -3689,7 +3689,7 @@ inline void GetDeviceRequest::set_allocated_id(::std::string* PROTOBUF_NULLABLE 
 
 // UpdateDeviceRequest
 
-// .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// .thingspect.api.Device device = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline bool UpdateDeviceRequest::has_device() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.device_ != nullptr);
@@ -3884,7 +3884,7 @@ inline void UpdateDeviceRequest::set_allocated_update_mask(::google::protobuf::F
 
 // DeleteDeviceLoRaWANRequest
 
-// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void DeleteDeviceLoRaWANRequest::clear_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.id_.ClearToEmpty();
@@ -3953,7 +3953,7 @@ inline void DeleteDeviceLoRaWANRequest::set_allocated_id(::std::string* PROTOBUF
 
 // DeleteDeviceRequest
 
-// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void DeleteDeviceRequest::clear_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.id_.ClearToEmpty();
@@ -4022,7 +4022,7 @@ inline void DeleteDeviceRequest::set_allocated_id(::std::string* PROTOBUF_NULLAB
 
 // ListDevicesRequest
 
-// int32 page_size = 1 [(.validate.rules) = {
+// int32 page_size = 1 [(.buf.validate.field) = {
 inline void ListDevicesRequest::clear_page_size() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.page_size_ = 0;
@@ -4111,7 +4111,7 @@ inline void ListDevicesRequest::set_allocated_page_token(::std::string* PROTOBUF
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.ListDevicesRequest.page_token)
 }
 
-// string tag = 3 [(.validate.rules) = {
+// string tag = 3 [(.buf.validate.field) = {
 inline void ListDevicesRequest::clear_tag() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.tag_.ClearToEmpty();

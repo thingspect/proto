@@ -192,41 +192,41 @@ static const ::_pb::Message* PROTOBUF_NONNULL const file_default_instances[] = {
 const char descriptor_table_protodef_api_2fthingspect_5falert_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
     "\n\032api/thingspect_alert.proto\022\016thingspect"
-    ".api\032\037google/protobuf/timestamp.proto\032\034g"
-    "oogle/api/annotations.proto\032\027validate/va"
-    "lidate.proto\"\351\001\n\005Alert\022\025\n\006org_id\030\001 \001(\tR\005"
-    "orgID\022\027\n\007uniq_id\030\002 \001(\tR\006uniqID\022\031\n\010alarm_"
-    "id\030\003 \001(\tR\007alarmID\022\027\n\007user_id\030\004 \001(\tR\006user"
-    "ID\022+\n\006status\030\005 \001(\0162\033.thingspect.api.Aler"
-    "tStatus\022\r\n\005error\030\006 \001(\t\022.\n\ncreated_at\030\007 \001"
-    "(\0132\032.google.protobuf.Timestamp\022\020\n\010trace_"
-    "id\030\010 \001(\t\"\222\002\n\021ListAlertsRequest\022\031\n\007uniq_i"
-    "d\030\001 \001(\tH\000R\006uniqID\022*\n\tdevice_id\030\002 \001(\tB\013\372B"
-    "\010r\006\260\001\001\320\001\001H\000R\010deviceID\022&\n\010alarm_id\030\003 \001(\tB"
-    "\013\372B\010r\006\260\001\001\320\001\001R\007alarmID\022$\n\007user_id\030\004 \001(\tB\013"
-    "\372B\010r\006\260\001\001\320\001\001R\006userID\022,\n\010end_time\030\005 \001(\0132\032."
-    "google.protobuf.Timestamp\022.\n\nstart_time\030"
-    "\006 \001(\0132\032.google.protobuf.TimestampB\n\n\010id_"
-    "oneof\";\n\022ListAlertsResponse\022%\n\006alerts\030\001 "
-    "\003(\0132\025.thingspect.api.Alert*@\n\013AlertStatu"
-    "s\022\034\n\030ALERT_STATUS_UNSPECIFIED\020\000\022\010\n\004SENT\020"
-    "\001\022\t\n\005ERROR\020\0022w\n\014AlertService\022g\n\nListAler"
-    "ts\022!.thingspect.api.ListAlertsRequest\032\"."
-    "thingspect.api.ListAlertsResponse\"\022\202\323\344\223\002"
-    "\014\022\n/v1/alertsB$Z\"github.com/thingspect/p"
-    "roto/go/apib\006proto3"
+    ".api\032\033buf/validate/validate.proto\032\034googl"
+    "e/api/annotations.proto\032\037google/protobuf"
+    "/timestamp.proto\"\351\001\n\005Alert\022\025\n\006org_id\030\001 \001"
+    "(\tR\005orgID\022\027\n\007uniq_id\030\002 \001(\tR\006uniqID\022\031\n\010al"
+    "arm_id\030\003 \001(\tR\007alarmID\022\027\n\007user_id\030\004 \001(\tR\006"
+    "userID\022+\n\006status\030\005 \001(\0162\033.thingspect.api."
+    "AlertStatus\022\r\n\005error\030\006 \001(\t\022.\n\ncreated_at"
+    "\030\007 \001(\0132\032.google.protobuf.Timestamp\022\020\n\010tr"
+    "ace_id\030\010 \001(\t\"\222\002\n\021ListAlertsRequest\022\031\n\007un"
+    "iq_id\030\001 \001(\tH\000R\006uniqID\022*\n\tdevice_id\030\002 \001(\t"
+    "B\013\272H\010r\003\260\001\001\330\001\001H\000R\010deviceID\022&\n\010alarm_id\030\003 "
+    "\001(\tB\013\272H\010r\003\260\001\001\330\001\001R\007alarmID\022$\n\007user_id\030\004 \001"
+    "(\tB\013\272H\010r\003\260\001\001\330\001\001R\006userID\022,\n\010end_time\030\005 \001("
+    "\0132\032.google.protobuf.Timestamp\022.\n\nstart_t"
+    "ime\030\006 \001(\0132\032.google.protobuf.TimestampB\n\n"
+    "\010id_oneof\";\n\022ListAlertsResponse\022%\n\006alert"
+    "s\030\001 \003(\0132\025.thingspect.api.Alert*@\n\013AlertS"
+    "tatus\022\034\n\030ALERT_STATUS_UNSPECIFIED\020\000\022\010\n\004S"
+    "ENT\020\001\022\t\n\005ERROR\020\0022w\n\014AlertService\022g\n\nList"
+    "Alerts\022!.thingspect.api.ListAlertsReques"
+    "t\032\".thingspect.api.ListAlertsResponse\"\022\202"
+    "\323\344\223\002\014\022\n/v1/alertsB$Z\"github.com/thingspe"
+    "ct/proto/go/apib\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_api_2fthingspect_5falert_2eproto_deps[3] = {
+        &::descriptor_table_buf_2fvalidate_2fvalidate_2eproto,
         &::descriptor_table_google_2fapi_2fannotations_2eproto,
         &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
-        &::descriptor_table_validate_2fvalidate_2eproto,
 };
 static ::absl::once_flag descriptor_table_api_2fthingspect_5falert_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_api_2fthingspect_5falert_2eproto = {
     false,
     false,
-    939,
+    943,
     descriptor_table_protodef_api_2fthingspect_5falert_2eproto,
     "api/thingspect_alert.proto",
     &descriptor_table_api_2fthingspect_5falert_2eproto_once,
@@ -992,7 +992,7 @@ ListAlertsRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::ListAlertsRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string user_id = 4 [json_name = "userID", (.validate.rules) = {
+    // string user_id = 4 [json_name = "userID", (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {34, 1, 0, PROTOBUF_FIELD_OFFSET(ListAlertsRequest, _impl_.user_id_)}},
     // .google.protobuf.Timestamp end_time = 5;
@@ -1001,7 +1001,7 @@ ListAlertsRequest::_table_ = {
     // .google.protobuf.Timestamp start_time = 6;
     {::_pbi::TcParser::FastMtS1,
      {50, 3, 1, PROTOBUF_FIELD_OFFSET(ListAlertsRequest, _impl_.start_time_)}},
-    // string alarm_id = 3 [json_name = "alarmID", (.validate.rules) = {
+    // string alarm_id = 3 [json_name = "alarmID", (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {26, 0, 0, PROTOBUF_FIELD_OFFSET(ListAlertsRequest, _impl_.alarm_id_)}},
   }}, {{
@@ -1010,13 +1010,13 @@ ListAlertsRequest::_table_ = {
     // string uniq_id = 1 [json_name = "uniqID"];
     {PROTOBUF_FIELD_OFFSET(ListAlertsRequest, _impl_.id_oneof_.uniq_id_), _Internal::kOneofCaseOffset + 0, 0,
     (0 | ::_fl::kFcOneof | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+    // string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(ListAlertsRequest, _impl_.id_oneof_.device_id_), _Internal::kOneofCaseOffset + 0, 0,
     (0 | ::_fl::kFcOneof | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string alarm_id = 3 [json_name = "alarmID", (.validate.rules) = {
+    // string alarm_id = 3 [json_name = "alarmID", (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(ListAlertsRequest, _impl_.alarm_id_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string user_id = 4 [json_name = "userID", (.validate.rules) = {
+    // string user_id = 4 [json_name = "userID", (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(ListAlertsRequest, _impl_.user_id_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // .google.protobuf.Timestamp end_time = 5;
@@ -1101,7 +1101,7 @@ PROTOBUF_NOINLINE void ListAlertsRequest::Clear() {
     default:
       break;
   }
-  // string alarm_id = 3 [json_name = "alarmID", (.validate.rules) = {
+  // string alarm_id = 3 [json_name = "alarmID", (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_alarm_id().empty()) {
       const ::std::string& _s = this_._internal_alarm_id();
@@ -1111,7 +1111,7 @@ PROTOBUF_NOINLINE void ListAlertsRequest::Clear() {
     }
   }
 
-  // string user_id = 4 [json_name = "userID", (.validate.rules) = {
+  // string user_id = 4 [json_name = "userID", (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000002u) != 0) {
     if (!this_._internal_user_id().empty()) {
       const ::std::string& _s = this_._internal_user_id();
@@ -1162,14 +1162,14 @@ PROTOBUF_NOINLINE void ListAlertsRequest::Clear() {
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
   if ((cached_has_bits & 0x0000000fu) != 0) {
-    // string alarm_id = 3 [json_name = "alarmID", (.validate.rules) = {
+    // string alarm_id = 3 [json_name = "alarmID", (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_alarm_id().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_alarm_id());
       }
     }
-    // string user_id = 4 [json_name = "userID", (.validate.rules) = {
+    // string user_id = 4 [json_name = "userID", (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000002u) != 0) {
       if (!this_._internal_user_id().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -1194,7 +1194,7 @@ PROTOBUF_NOINLINE void ListAlertsRequest::Clear() {
                                       this_._internal_uniq_id());
       break;
     }
-    // string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+    // string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
     case kDeviceId: {
       total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                       this_._internal_device_id());

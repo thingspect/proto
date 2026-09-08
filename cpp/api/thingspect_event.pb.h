@@ -29,9 +29,9 @@
 #include "google/protobuf/repeated_field.h"  // IWYU pragma: export
 #include "google/protobuf/extension_set.h"  // IWYU pragma: export
 #include "google/protobuf/unknown_field_set.h"
-#include "google/protobuf/timestamp.pb.h"
+#include "buf/validate/validate.pb.h"
 #include "google/api/annotations.pb.h"
-#include "validate/validate.pb.h"
+#include "google/protobuf/timestamp.pb.h"
 // @@protoc_insertion_point(includes)
 
 // Must be included last.
@@ -237,7 +237,7 @@ class LatestEventsRequest final : public ::google::protobuf::Message
   enum : int {
     kRuleIdFieldNumber = 1,
   };
-  // string rule_id = 1 [json_name = "ruleID", (.validate.rules) = {
+  // string rule_id = 1 [json_name = "ruleID", (.buf.validate.field) = {
   void clear_rule_id() ;
   const ::std::string& rule_id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -442,7 +442,7 @@ class ListEventsRequest final : public ::google::protobuf::Message
     kUniqIdFieldNumber = 1,
     kDeviceIdFieldNumber = 2,
   };
-  // string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {
+  // string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {
   void clear_rule_id() ;
   const ::std::string& rule_id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -503,7 +503,7 @@ class ListEventsRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_uniq_id();
 
   public:
-  // string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+  // string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
   bool has_device_id() const;
   void clear_device_id() ;
   const ::std::string& device_id() const;
@@ -1685,7 +1685,7 @@ inline void ListEventsRequest::set_allocated_uniq_id(::std::string* PROTOBUF_NUL
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.ListEventsRequest.uniq_id)
 }
 
-// string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+// string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
 inline bool ListEventsRequest::has_device_id() const {
   return id_oneof_case() == kDeviceId;
 }
@@ -1770,7 +1770,7 @@ inline void ListEventsRequest::set_allocated_device_id(::std::string* PROTOBUF_N
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.ListEventsRequest.device_id)
 }
 
-// string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {
+// string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {
 inline void ListEventsRequest::clear_rule_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.rule_id_.ClearToEmpty();
@@ -2088,7 +2088,7 @@ ListEventsResponse::_internal_mutable_events() {
 
 // LatestEventsRequest
 
-// string rule_id = 1 [json_name = "ruleID", (.validate.rules) = {
+// string rule_id = 1 [json_name = "ruleID", (.buf.validate.field) = {
 inline void LatestEventsRequest::clear_rule_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.rule_id_.ClearToEmpty();

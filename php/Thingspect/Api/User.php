@@ -31,43 +31,43 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * User name.
      *
-     * Generated from protobuf field <code>string name = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 3 [(.buf.validate.field) = {</code>
      */
     protected $name = '';
     /**
      * User email.
      *
-     * Generated from protobuf field <code>string email = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string email = 4 [(.buf.validate.field) = {</code>
      */
     protected $email = '';
     /**
      * User phone number. If specified, must be in valid [E.164](https://www.twilio.com/docs/glossary/what-e164) format.
      *
-     * Generated from protobuf field <code>string phone = 5 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string phone = 5 [(.buf.validate.field) = {</code>
      */
     protected $phone = '';
     /**
      * User role.
      *
-     * Generated from protobuf field <code>.thingspect.api.Role role = 6 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Role role = 6 [(.buf.validate.field) = {</code>
      */
     protected $role = 0;
     /**
      * User status.
      *
-     * Generated from protobuf field <code>.thingspect.api.Status status = 7 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Status status = 7 [(.buf.validate.field) = {</code>
      */
     protected $status = 0;
     /**
      * User tags. Nested tags should be delimited by '/'.
      *
-     * Generated from protobuf field <code>repeated string tags = 8 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>repeated string tags = 8 [(.buf.validate.field) = {</code>
      */
     private $tags;
     /**
      * Mobile application user key.
      *
-     * Generated from protobuf field <code>string app_key = 9 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string app_key = 9 [(.buf.validate.field) = {</code>
      */
     protected $app_key = '';
     /**
@@ -173,7 +173,7 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * User name.
      *
-     * Generated from protobuf field <code>string name = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 3 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getName()
@@ -184,7 +184,7 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * User name.
      *
-     * Generated from protobuf field <code>string name = 3 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string name = 3 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -199,7 +199,7 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * User email.
      *
-     * Generated from protobuf field <code>string email = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string email = 4 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getEmail()
@@ -210,7 +210,7 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * User email.
      *
-     * Generated from protobuf field <code>string email = 4 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string email = 4 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -225,7 +225,7 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * User phone number. If specified, must be in valid [E.164](https://www.twilio.com/docs/glossary/what-e164) format.
      *
-     * Generated from protobuf field <code>string phone = 5 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string phone = 5 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getPhone()
@@ -236,7 +236,7 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * User phone number. If specified, must be in valid [E.164](https://www.twilio.com/docs/glossary/what-e164) format.
      *
-     * Generated from protobuf field <code>string phone = 5 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string phone = 5 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */
@@ -251,7 +251,7 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * User role.
      *
-     * Generated from protobuf field <code>.thingspect.api.Role role = 6 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Role role = 6 [(.buf.validate.field) = {</code>
      * @return int
      */
     public function getRole()
@@ -262,7 +262,7 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * User role.
      *
-     * Generated from protobuf field <code>.thingspect.api.Role role = 6 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Role role = 6 [(.buf.validate.field) = {</code>
      * @param int $var
      * @return $this
      */
@@ -277,7 +277,7 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * User status.
      *
-     * Generated from protobuf field <code>.thingspect.api.Status status = 7 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Status status = 7 [(.buf.validate.field) = {</code>
      * @return int
      */
     public function getStatus()
@@ -288,7 +288,7 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * User status.
      *
-     * Generated from protobuf field <code>.thingspect.api.Status status = 7 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>.thingspect.api.Status status = 7 [(.buf.validate.field) = {</code>
      * @param int $var
      * @return $this
      */
@@ -303,7 +303,7 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * User tags. Nested tags should be delimited by '/'.
      *
-     * Generated from protobuf field <code>repeated string tags = 8 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>repeated string tags = 8 [(.buf.validate.field) = {</code>
      * @return RepeatedField<string>
      */
     public function getTags()
@@ -314,7 +314,7 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * User tags. Nested tags should be delimited by '/'.
      *
-     * Generated from protobuf field <code>repeated string tags = 8 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>repeated string tags = 8 [(.buf.validate.field) = {</code>
      * @param string[] $var
      * @return $this
      */
@@ -329,7 +329,7 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * Mobile application user key.
      *
-     * Generated from protobuf field <code>string app_key = 9 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string app_key = 9 [(.buf.validate.field) = {</code>
      * @return string
      */
     public function getAppKey()
@@ -340,7 +340,7 @@ class User extends \Google\Protobuf\Internal\Message
     /**
      * Mobile application user key.
      *
-     * Generated from protobuf field <code>string app_key = 9 [(.validate.rules) = {</code>
+     * Generated from protobuf field <code>string app_key = 9 [(.buf.validate.field) = {</code>
      * @param string $var
      * @return $this
      */

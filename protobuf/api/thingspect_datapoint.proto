@@ -1,13 +1,14 @@
 syntax = "proto3";
+
 package thingspect.api;
 
+import "buf/validate/validate.proto";
 import "common/thingspect_datapoint.proto";
-import "google/protobuf/empty.proto";
-import "google/protobuf/timestamp.proto";
 import "google/api/annotations.proto";
 import "google/api/field_behavior.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
-import "validate/validate.proto";
 
 option go_package = "github.com/thingspect/proto/go/api";
 
@@ -48,24 +49,24 @@ service DataPointService {
 // PublishDataPointsRequest is sent to publish data points. The publisher role is recommended for programmatic use of this endpoint.
 message PublishDataPointsRequest {
   // Data point array to publish.
-  repeated common.DataPoint points = 1 [(validate.rules).repeated.min_items = 1, (google.api.field_behavior) = REQUIRED];
+  repeated common.DataPoint points = 1 [(buf.validate.field).repeated.min_items = 1, (google.api.field_behavior) = REQUIRED];
 }
 
 // ListDataPointsRequest is sent to list device data points in an [end, start) time range, in descending timestamp order.
 message ListDataPointsRequest {
   // Device identifier.
   oneof id_oneof {
-    option (validate.required) = true;
+    option (buf.validate.oneof).required = true;
 
     // Device unique ID. Either unique ID or device ID must be provided.
     string uniq_id = 1 [json_name = "uniqID"];
 
     // Device ID (UUID). Either unique ID or device ID must be provided.
-    string device_id = 2 [json_name = "deviceID", (validate.rules).string = {ignore_empty: true, uuid: true}];
+    string device_id = 2 [json_name = "deviceID", (buf.validate.field).string.uuid = true, (buf.validate.field).ignore = IGNORE_IF_ZERO_VALUE];
   }
 
   // Device attribute. If not specified, all attributes are included.
-  string attr = 3 [(validate.rules).string.max_len = 40];
+  string attr = 3 [(buf.validate.field).string.max_len = 40];
 
   // Data points range end time. Defaults to current time if not specified. Maximum supported time range is 90 days.
   google.protobuf.Timestamp end_time = 4;
@@ -84,13 +85,13 @@ message ListDataPointsResponse {
 message LatestDataPointsRequest {
   // Device identifier.
   oneof id_oneof {
-    option (validate.required) = true;
+    option (buf.validate.oneof).required = true;
 
     // Device unique ID. Either unique ID or device ID must be provided.
     string uniq_id = 1 [json_name = "uniqID"];
 
     // Device ID (UUID). Either unique ID or device ID must be provided.
-    string device_id = 2 [json_name = "deviceID", (validate.rules).string = {ignore_empty: true, uuid: true}];
+    string device_id = 2 [json_name = "deviceID", (buf.validate.field).string.uuid = true, (buf.validate.field).ignore = IGNORE_IF_ZERO_VALUE];
   }
 
   // Data points range start time. Defaults to now - 30 days if not specified. Maximum supported time range is 90 days.

@@ -1,9 +1,10 @@
 syntax = "proto3";
+
 package thingspect.api;
 
-import "google/protobuf/timestamp.proto";
+import "buf/validate/validate.proto";
 import "google/api/annotations.proto";
-import "validate/validate.proto";
+import "google/protobuf/timestamp.proto";
 
 option go_package = "github.com/thingspect/proto/go/api";
 
@@ -64,14 +65,14 @@ message ListAlertsRequest {
     string uniq_id = 1 [json_name = "uniqID"];
 
     // Device ID (UUID). If neither unique ID nor device ID are specified, all devices are included.
-    string device_id = 2 [json_name = "deviceID", (validate.rules).string = {ignore_empty: true, uuid: true}];
+    string device_id = 2 [json_name = "deviceID", (buf.validate.field).string.uuid = true, (buf.validate.field).ignore = IGNORE_IF_ZERO_VALUE];
   }
 
   // Alarm ID (UUID). If not specified, all alarms are included.
-  string alarm_id = 3 [json_name = "alarmID", (validate.rules).string = {ignore_empty: true, uuid: true}];
+  string alarm_id = 3 [json_name = "alarmID", (buf.validate.field).string.uuid = true, (buf.validate.field).ignore = IGNORE_IF_ZERO_VALUE];
 
   // User ID (UUID). If not specified, all users are included.
-  string user_id = 4 [json_name = "userID", (validate.rules).string = {ignore_empty: true, uuid: true}];
+  string user_id = 4 [json_name = "userID", (buf.validate.field).string.uuid = true, (buf.validate.field).ignore = IGNORE_IF_ZERO_VALUE];
 
   // Alerts range end time. Defaults to current time if not specified. Maximum supported time range is 90 days.
   google.protobuf.Timestamp end_time = 5;

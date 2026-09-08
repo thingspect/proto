@@ -772,119 +772,119 @@ const char descriptor_table_protodef_api_2fthingspect_5frule_5falarm_2eproto[] A
     protodesc_cold) = {
     "\n\037api/thingspect_rule_alarm.proto\022\016thing"
     "spect.api\032\033api/thingspect_device.proto\032\033"
-    "api/thingspect_status.proto\032!common/thin"
-    "gspect_datapoint.proto\032\033google/protobuf/"
-    "empty.proto\032\037google/protobuf/timestamp.p"
-    "roto\032 google/protobuf/field_mask.proto\032\034"
-    "google/api/annotations.proto\032\037google/api"
-    "/field_behavior.proto\032.protoc-gen-openap"
-    "iv2/options/annotations.proto\032\027validate/"
-    "validate.proto\"\267\002\n\004Rule\022\017\n\002id\030\001 \001(\tB\003\340A\003"
-    "\022\032\n\006org_id\030\002 \001(\tB\003\340A\003R\005orgID\022\027\n\004name\030\003 \001"
-    "(\tB\t\372B\006r\004\020\005\030P\0222\n\006status\030\004 \001(\0162\026.thingspe"
-    "ct.api.StatusB\n\372B\007\202\001\004\030\003\030\006\022\034\n\ndevice_tag\030"
-    "\005 \001(\tB\010\372B\005r\003\030\377\001\022\025\n\004attr\030\006 \001(\tB\007\372B\004r\002\030(\022\026"
-    "\n\004expr\030\007 \001(\tB\010\372B\005r\003\030\200\010\0223\n\ncreated_at\030\010 \001"
-    "(\0132\032.google.protobuf.TimestampB\003\340A\003\0223\n\nu"
-    "pdated_at\030\t \001(\0132\032.google.protobuf.Timest"
-    "ampB\003\340A\003\"D\n\021CreateRuleRequest\022/\n\004rule\030\001 "
-    "\001(\0132\024.thingspect.api.RuleB\013\340A\002\372B\005\212\001\002\020\001\")"
-    "\n\016GetRuleRequest\022\027\n\002id\030\001 \001(\tB\013\340A\002\372B\005r\003\260\001"
-    "\001\"u\n\021UpdateRuleRequest\022/\n\004rule\030\001 \001(\0132\024.t"
-    "hingspect.api.RuleB\013\340A\002\372B\005\212\001\002\020\001\022/\n\013updat"
+    "api/thingspect_status.proto\032\033buf/validat"
+    "e/validate.proto\032!common/thingspect_data"
+    "point.proto\032\034google/api/annotations.prot"
+    "o\032\037google/api/field_behavior.proto\032\033goog"
+    "le/protobuf/empty.proto\032 google/protobuf"
+    "/field_mask.proto\032\037google/protobuf/times"
+    "tamp.proto\032.protoc-gen-openapiv2/options"
+    "/annotations.proto\"\267\002\n\004Rule\022\017\n\002id\030\001 \001(\tB"
+    "\003\340A\003\022\032\n\006org_id\030\002 \001(\tB\003\340A\003R\005orgID\022\027\n\004name"
+    "\030\003 \001(\tB\t\272H\006r\004\020\005\030P\0222\n\006status\030\004 \001(\0162\026.thin"
+    "gspect.api.StatusB\n\272H\007\202\001\004\030\003\030\006\022\034\n\ndevice_"
+    "tag\030\005 \001(\tB\010\272H\005r\003\030\377\001\022\025\n\004attr\030\006 \001(\tB\007\272H\004r\002"
+    "\030(\022\026\n\004expr\030\007 \001(\tB\010\272H\005r\003\030\200\010\0223\n\ncreated_at"
+    "\030\010 \001(\0132\032.google.protobuf.TimestampB\003\340A\003\022"
+    "3\n\nupdated_at\030\t \001(\0132\032.google.protobuf.Ti"
+    "mestampB\003\340A\003\"B\n\021CreateRuleRequest\022-\n\004rul"
+    "e\030\001 \001(\0132\024.thingspect.api.RuleB\t\340A\002\272H\003\310\001\001"
+    "\")\n\016GetRuleRequest\022\027\n\002id\030\001 \001(\tB\013\340A\002\272H\005r\003"
+    "\260\001\001\"s\n\021UpdateRuleRequest\022-\n\004rule\030\001 \001(\0132\024"
+    ".thingspect.api.RuleB\t\340A\002\272H\003\310\001\001\022/\n\013updat"
     "e_mask\030\002 \001(\0132\032.google.protobuf.FieldMask"
-    "\",\n\021DeleteRuleRequest\022\027\n\002id\030\001 \001(\tB\013\340A\002\372B"
+    "\",\n\021DeleteRuleRequest\022\027\n\002id\030\001 \001(\tB\013\340A\002\272H"
     "\005r\003\260\001\001\"C\n\020ListRulesRequest\022\033\n\tpage_size\030"
-    "\001 \001(\005B\010\372B\005\032\003\030\372\001\022\022\n\npage_token\030\002 \001(\t\"e\n\021L"
+    "\001 \001(\005B\010\272H\005\032\003\030\372\001\022\022\n\npage_token\030\002 \001(\t\"e\n\021L"
     "istRulesResponse\022#\n\005rules\030\001 \003(\0132\024.things"
     "pect.api.Rule\022\027\n\017next_page_token\030\002 \001(\t\022\022"
-    "\n\ntotal_size\030\003 \001(\005\"|\n\017TestRuleRequest\0228\n"
+    "\n\ntotal_size\030\003 \001(\005\"x\n\017TestRuleRequest\0226\n"
     "\005point\030\001 \001(\0132\034.thingspect.common.DataPoi"
-    "ntB\013\340A\002\372B\005\212\001\002\020\001\022/\n\004rule\030\002 \001(\0132\024.thingspe"
-    "ct.api.RuleB\013\340A\002\372B\005\212\001\002\020\001\"\"\n\020TestRuleResp"
-    "onse\022\016\n\006result\030\001 \001(\010\"\321\003\n\005Alarm\022\017\n\002id\030\001 \001"
-    "(\tB\003\340A\003\022\032\n\006org_id\030\002 \001(\tB\003\340A\003R\005orgID\022\034\n\007r"
-    "ule_id\030\003 \001(\tB\003\340A\003R\006ruleID\022\027\n\004name\030\004 \001(\tB"
-    "\t\372B\006r\004\020\005\030P\0222\n\006status\030\005 \001(\0162\026.thingspect."
-    "api.StatusB\n\372B\007\202\001\004\030\003\030\006\0225\n\004type\030\006 \001(\0162\031.t"
-    "hingspect.api.AlarmTypeB\014\372B\t\202\001\006\030\001\030\002\030\003\022$\n"
-    "\tuser_tags\030\007 \003(\tB\021\372B\016\222\001\013\010\001\030\001\"\005r\003\030\377\001\022\"\n\020s"
-    "ubject_template\030\010 \001(\tB\010\372B\005r\003\030\200\010\022\037\n\rbody_"
-    "template\030\t \001(\tB\010\372B\005r\003\030\200 \022$\n\017repeat_inter"
-    "val\030\n \001(\005B\013\372B\010\032\006\030\300\235\001(\001\0223\n\ncreated_at\030\013 \001"
-    "(\0132\032.google.protobuf.TimestampB\003\340A\003\0223\n\nu"
-    "pdated_at\030\014 \001(\0132\032.google.protobuf.Timest"
-    "ampB\003\340A\003\"G\n\022CreateAlarmRequest\0221\n\005alarm\030"
-    "\001 \001(\0132\025.thingspect.api.AlarmB\013\340A\002\372B\005\212\001\002\020"
-    "\001\"P\n\017GetAlarmRequest\022\027\n\002id\030\001 \001(\tB\013\340A\002\372B\005"
-    "r\003\260\001\001\022$\n\007rule_id\030\002 \001(\tB\013\340A\002\372B\005r\003\260\001\001R\006rul"
-    "eID\"x\n\022UpdateAlarmRequest\0221\n\005alarm\030\001 \001(\013"
-    "2\025.thingspect.api.AlarmB\013\340A\002\372B\005\212\001\002\020\001\022/\n\013"
-    "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel"
-    "dMask\"S\n\022DeleteAlarmRequest\022\027\n\002id\030\001 \001(\tB"
-    "\013\340A\002\372B\005r\003\260\001\001\022$\n\007rule_id\030\002 \001(\tB\013\340A\002\372B\005r\003\260"
-    "\001\001R\006ruleID\"j\n\021ListAlarmsRequest\022\033\n\tpage_"
-    "size\030\001 \001(\005B\010\372B\005\032\003\030\372\001\022\022\n\npage_token\030\002 \001(\t"
-    "\022$\n\007rule_id\030\003 \001(\tB\013\372B\010r\006\260\001\001\320\001\001R\006ruleID\"h"
-    "\n\022ListAlarmsResponse\022%\n\006alarms\030\001 \003(\0132\025.t"
-    "hingspect.api.Alarm\022\027\n\017next_page_token\030\002"
-    " \001(\t\022\022\n\ntotal_size\030\003 \001(\005\"\345\001\n\020TestAlarmRe"
-    "quest\0228\n\005point\030\001 \001(\0132\034.thingspect.common"
-    ".DataPointB\013\340A\002\372B\005\212\001\002\020\001\022/\n\004rule\030\002 \001(\0132\024."
-    "thingspect.api.RuleB\013\340A\002\372B\005\212\001\002\020\001\0223\n\006devi"
-    "ce\030\003 \001(\0132\026.thingspect.api.DeviceB\013\340A\002\372B\005"
-    "\212\001\002\020\001\0221\n\005alarm\030\004 \001(\0132\025.thingspect.api.Al"
-    "armB\013\340A\002\372B\005\212\001\002\020\001\"#\n\021TestAlarmResponse\022\016\n"
-    "\006result\030\001 \001(\t*D\n\tAlarmType\022\032\n\026ALARM_TYPE"
-    "_UNSPECIFIED\020\000\022\007\n\003APP\020\001\022\007\n\003SMS\020\002\022\t\n\005EMAI"
-    "L\020\0032\353\014\n\020RuleAlarmService\022\234\001\n\nCreateRule\022"
-    "!.thingspect.api.CreateRuleRequest\032\024.thi"
-    "ngspect.api.Rule\"U\222A;J9\n\003201\0222\n\026A succes"
-    "sful response.\022\030\n\026\032\024.thingspect.api.Rule"
-    "\202\323\344\223\002\021\"\t/v1/rules:\004rule\022\270\001\n\013CreateAlarm\022"
-    "\".thingspect.api.CreateAlarmRequest\032\025.th"
-    "ingspect.api.Alarm\"n\222A<J:\n\003201\0223\n\026A succ"
-    "essful response.\022\031\n\027\032\025.thingspect.api.Al"
-    "arm\202\323\344\223\002)\" /v1/rules/{alarm.rule_id}/ala"
-    "rms:\005alarm\022W\n\007GetRule\022\036.thingspect.api.G"
-    "etRuleRequest\032\024.thingspect.api.Rule\"\026\202\323\344"
-    "\223\002\020\022\016/v1/rules/{id}\022k\n\010GetAlarm\022\037.things"
-    "pect.api.GetAlarmRequest\032\025.thingspect.ap"
-    "i.Alarm\"\'\202\323\344\223\002!\022\037/v1/rules/{rule_id}/ala"
-    "rms/{id}\022\205\001\n\nUpdateRule\022!.thingspect.api"
-    ".UpdateRuleRequest\032\024.thingspect.api.Rule"
-    "\">\202\323\344\223\0028\032\023/v1/rules/{rule.id}:\004ruleZ\0332\023/"
-    "v1/rules/{rule.id}:\004rule\022\272\001\n\013UpdateAlarm"
-    "\022\".thingspect.api.UpdateAlarmRequest\032\025.t"
-    "hingspect.api.Alarm\"p\202\323\344\223\002j\032+/v1/rules/{"
-    "alarm.rule_id}/alarms/{alarm.id}:\005alarmZ"
-    "42+/v1/rules/{alarm.rule_id}/alarms/{ala"
-    "rm.id}:\005alarm\022\205\001\n\nDeleteRule\022!.thingspec"
-    "t.api.DeleteRuleRequest\032\026.google.protobu"
-    "f.Empty\"<\222A#J!\n\003204\022\032\n\026A successful resp"
-    "onse.\022\000\202\323\344\223\002\020*\016/v1/rules/{id}\022\230\001\n\013Delete"
-    "Alarm\022\".thingspect.api.DeleteAlarmReques"
-    "t\032\026.google.protobuf.Empty\"M\222A#J!\n\003204\022\032\n"
-    "\026A successful response.\022\000\202\323\344\223\002!*\037/v1/rul"
-    "es/{rule_id}/alarms/{id}\022c\n\tListRules\022 ."
-    "thingspect.api.ListRulesRequest\032!.things"
-    "pect.api.ListRulesResponse\"\021\202\323\344\223\002\013\022\t/v1/"
-    "rules\022\213\001\n\nListAlarms\022!.thingspect.api.Li"
-    "stAlarmsRequest\032\".thingspect.api.ListAla"
-    "rmsResponse\"6\202\323\344\223\0020\022\032/v1/rules/{rule_id}"
-    "/alarmsZ\022\022\020/v1/rules/alarms\022h\n\010TestRule\022"
-    "\037.thingspect.api.TestRuleRequest\032 .thing"
-    "spect.api.TestRuleResponse\"\031\202\323\344\223\002\023\"\016/v1/"
-    "rules/test:\001*\022r\n\tTestAlarm\022 .thingspect."
-    "api.TestAlarmRequest\032!.thingspect.api.Te"
-    "stAlarmResponse\" \202\323\344\223\002\032\"\025/v1/rules/alarm"
-    "s/test:\001*B$Z\"github.com/thingspect/proto"
-    "/go/apib\006proto3"
+    "ntB\t\340A\002\272H\003\310\001\001\022-\n\004rule\030\002 \001(\0132\024.thingspect"
+    ".api.RuleB\t\340A\002\272H\003\310\001\001\"\"\n\020TestRuleResponse"
+    "\022\016\n\006result\030\001 \001(\010\"\321\003\n\005Alarm\022\017\n\002id\030\001 \001(\tB\003"
+    "\340A\003\022\032\n\006org_id\030\002 \001(\tB\003\340A\003R\005orgID\022\034\n\007rule_"
+    "id\030\003 \001(\tB\003\340A\003R\006ruleID\022\027\n\004name\030\004 \001(\tB\t\272H\006"
+    "r\004\020\005\030P\0222\n\006status\030\005 \001(\0162\026.thingspect.api."
+    "StatusB\n\272H\007\202\001\004\030\003\030\006\0225\n\004type\030\006 \001(\0162\031.thing"
+    "spect.api.AlarmTypeB\014\272H\t\202\001\006\030\001\030\002\030\003\022$\n\tuse"
+    "r_tags\030\007 \003(\tB\021\272H\016\222\001\013\010\001\030\001\"\005r\003\030\377\001\022\"\n\020subje"
+    "ct_template\030\010 \001(\tB\010\272H\005r\003\030\200\010\022\037\n\rbody_temp"
+    "late\030\t \001(\tB\010\272H\005r\003\030\200 \022$\n\017repeat_interval\030"
+    "\n \001(\005B\013\272H\010\032\006\030\300\235\001(\001\0223\n\ncreated_at\030\013 \001(\0132\032"
+    ".google.protobuf.TimestampB\003\340A\003\0223\n\nupdat"
+    "ed_at\030\014 \001(\0132\032.google.protobuf.TimestampB"
+    "\003\340A\003\"E\n\022CreateAlarmRequest\022/\n\005alarm\030\001 \001("
+    "\0132\025.thingspect.api.AlarmB\t\340A\002\272H\003\310\001\001\"P\n\017G"
+    "etAlarmRequest\022\027\n\002id\030\001 \001(\tB\013\340A\002\272H\005r\003\260\001\001\022"
+    "$\n\007rule_id\030\002 \001(\tB\013\340A\002\272H\005r\003\260\001\001R\006ruleID\"v\n"
+    "\022UpdateAlarmRequest\022/\n\005alarm\030\001 \001(\0132\025.thi"
+    "ngspect.api.AlarmB\t\340A\002\272H\003\310\001\001\022/\n\013update_m"
+    "ask\030\002 \001(\0132\032.google.protobuf.FieldMask\"S\n"
+    "\022DeleteAlarmRequest\022\027\n\002id\030\001 \001(\tB\013\340A\002\272H\005r"
+    "\003\260\001\001\022$\n\007rule_id\030\002 \001(\tB\013\340A\002\272H\005r\003\260\001\001R\006rule"
+    "ID\"j\n\021ListAlarmsRequest\022\033\n\tpage_size\030\001 \001"
+    "(\005B\010\272H\005\032\003\030\372\001\022\022\n\npage_token\030\002 \001(\t\022$\n\007rule"
+    "_id\030\003 \001(\tB\013\272H\010r\003\260\001\001\330\001\001R\006ruleID\"h\n\022ListAl"
+    "armsResponse\022%\n\006alarms\030\001 \003(\0132\025.thingspec"
+    "t.api.Alarm\022\027\n\017next_page_token\030\002 \001(\t\022\022\n\n"
+    "total_size\030\003 \001(\005\"\335\001\n\020TestAlarmRequest\0226\n"
+    "\005point\030\001 \001(\0132\034.thingspect.common.DataPoi"
+    "ntB\t\340A\002\272H\003\310\001\001\022-\n\004rule\030\002 \001(\0132\024.thingspect"
+    ".api.RuleB\t\340A\002\272H\003\310\001\001\0221\n\006device\030\003 \001(\0132\026.t"
+    "hingspect.api.DeviceB\t\340A\002\272H\003\310\001\001\022/\n\005alarm"
+    "\030\004 \001(\0132\025.thingspect.api.AlarmB\t\340A\002\272H\003\310\001\001"
+    "\"#\n\021TestAlarmResponse\022\016\n\006result\030\001 \001(\t*D\n"
+    "\tAlarmType\022\032\n\026ALARM_TYPE_UNSPECIFIED\020\000\022\007"
+    "\n\003APP\020\001\022\007\n\003SMS\020\002\022\t\n\005EMAIL\020\0032\353\014\n\020RuleAlar"
+    "mService\022\234\001\n\nCreateRule\022!.thingspect.api"
+    ".CreateRuleRequest\032\024.thingspect.api.Rule"
+    "\"U\222A;J9\n\003201\0222\n\026A successful response.\022\030"
+    "\n\026\032\024.thingspect.api.Rule\202\323\344\223\002\021\"\t/v1/rule"
+    "s:\004rule\022\270\001\n\013CreateAlarm\022\".thingspect.api"
+    ".CreateAlarmRequest\032\025.thingspect.api.Ala"
+    "rm\"n\222A<J:\n\003201\0223\n\026A successful response."
+    "\022\031\n\027\032\025.thingspect.api.Alarm\202\323\344\223\002)\" /v1/r"
+    "ules/{alarm.rule_id}/alarms:\005alarm\022W\n\007Ge"
+    "tRule\022\036.thingspect.api.GetRuleRequest\032\024."
+    "thingspect.api.Rule\"\026\202\323\344\223\002\020\022\016/v1/rules/{"
+    "id}\022k\n\010GetAlarm\022\037.thingspect.api.GetAlar"
+    "mRequest\032\025.thingspect.api.Alarm\"\'\202\323\344\223\002!\022"
+    "\037/v1/rules/{rule_id}/alarms/{id}\022\205\001\n\nUpd"
+    "ateRule\022!.thingspect.api.UpdateRuleReque"
+    "st\032\024.thingspect.api.Rule\">\202\323\344\223\0028\032\023/v1/ru"
+    "les/{rule.id}:\004ruleZ\0332\023/v1/rules/{rule.i"
+    "d}:\004rule\022\272\001\n\013UpdateAlarm\022\".thingspect.ap"
+    "i.UpdateAlarmRequest\032\025.thingspect.api.Al"
+    "arm\"p\202\323\344\223\002j\032+/v1/rules/{alarm.rule_id}/a"
+    "larms/{alarm.id}:\005alarmZ42+/v1/rules/{al"
+    "arm.rule_id}/alarms/{alarm.id}:\005alarm\022\205\001"
+    "\n\nDeleteRule\022!.thingspect.api.DeleteRule"
+    "Request\032\026.google.protobuf.Empty\"<\222A#J!\n\003"
+    "204\022\032\n\026A successful response.\022\000\202\323\344\223\002\020*\016/"
+    "v1/rules/{id}\022\230\001\n\013DeleteAlarm\022\".thingspe"
+    "ct.api.DeleteAlarmRequest\032\026.google.proto"
+    "buf.Empty\"M\222A#J!\n\003204\022\032\n\026A successful re"
+    "sponse.\022\000\202\323\344\223\002!*\037/v1/rules/{rule_id}/ala"
+    "rms/{id}\022c\n\tListRules\022 .thingspect.api.L"
+    "istRulesRequest\032!.thingspect.api.ListRul"
+    "esResponse\"\021\202\323\344\223\002\013\022\t/v1/rules\022\213\001\n\nListAl"
+    "arms\022!.thingspect.api.ListAlarmsRequest\032"
+    "\".thingspect.api.ListAlarmsResponse\"6\202\323\344"
+    "\223\0020\022\032/v1/rules/{rule_id}/alarmsZ\022\022\020/v1/r"
+    "ules/alarms\022h\n\010TestRule\022\037.thingspect.api"
+    ".TestRuleRequest\032 .thingspect.api.TestRu"
+    "leResponse\"\031\202\323\344\223\002\023\"\016/v1/rules/test:\001*\022r\n"
+    "\tTestAlarm\022 .thingspect.api.TestAlarmReq"
+    "uest\032!.thingspect.api.TestAlarmResponse\""
+    " \202\323\344\223\002\032\"\025/v1/rules/alarms/test:\001*B$Z\"git"
+    "hub.com/thingspect/proto/go/apib\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_api_2fthingspect_5frule_5falarm_2eproto_deps[10] = {
         &::descriptor_table_api_2fthingspect_5fdevice_2eproto,
         &::descriptor_table_api_2fthingspect_5fstatus_2eproto,
+        &::descriptor_table_buf_2fvalidate_2fvalidate_2eproto,
         &::descriptor_table_common_2fthingspect_5fdatapoint_2eproto,
         &::descriptor_table_google_2fapi_2fannotations_2eproto,
         &::descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto,
@@ -892,13 +892,12 @@ static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
         &::descriptor_table_google_2fprotobuf_2ffield_5fmask_2eproto,
         &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
         &::descriptor_table_protoc_2dgen_2dopenapiv2_2foptions_2fannotations_2eproto,
-        &::descriptor_table_validate_2fvalidate_2eproto,
 };
 static ::absl::once_flag descriptor_table_api_2fthingspect_5frule_5falarm_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_api_2fthingspect_5frule_5falarm_2eproto = {
     false,
     false,
-    4375,
+    4359,
     descriptor_table_protodef_api_2fthingspect_5frule_5falarm_2eproto,
     "api/thingspect_rule_alarm.proto",
     &descriptor_table_api_2fthingspect_5frule_5falarm_2eproto_once,
@@ -1093,19 +1092,19 @@ Rule::_table_ = {
     // string org_id = 2 [json_name = "orgID", (.google.api.field_behavior) = OUTPUT_ONLY];
     {::_pbi::TcParser::FastUS1,
      {18, 1, 0, PROTOBUF_FIELD_OFFSET(Rule, _impl_.org_id_)}},
-    // string name = 3 [(.validate.rules) = {
+    // string name = 3 [(.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {26, 2, 0, PROTOBUF_FIELD_OFFSET(Rule, _impl_.name_)}},
-    // .thingspect.api.Status status = 4 [(.validate.rules) = {
+    // .thingspect.api.Status status = 4 [(.buf.validate.field) = {
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Rule, _impl_.status_), 8>(),
      {32, 8, 0, PROTOBUF_FIELD_OFFSET(Rule, _impl_.status_)}},
-    // string device_tag = 5 [(.validate.rules) = {
+    // string device_tag = 5 [(.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {42, 3, 0, PROTOBUF_FIELD_OFFSET(Rule, _impl_.device_tag_)}},
-    // string attr = 6 [(.validate.rules) = {
+    // string attr = 6 [(.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {50, 4, 0, PROTOBUF_FIELD_OFFSET(Rule, _impl_.attr_)}},
-    // string expr = 7 [(.validate.rules) = {
+    // string expr = 7 [(.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {58, 5, 0, PROTOBUF_FIELD_OFFSET(Rule, _impl_.expr_)}},
     // .google.protobuf.Timestamp created_at = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -1129,19 +1128,19 @@ Rule::_table_ = {
     // string org_id = 2 [json_name = "orgID", (.google.api.field_behavior) = OUTPUT_ONLY];
     {PROTOBUF_FIELD_OFFSET(Rule, _impl_.org_id_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string name = 3 [(.validate.rules) = {
+    // string name = 3 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Rule, _impl_.name_), _Internal::kHasBitsOffset + 2, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // .thingspect.api.Status status = 4 [(.validate.rules) = {
+    // .thingspect.api.Status status = 4 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Rule, _impl_.status_), _Internal::kHasBitsOffset + 8, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
-    // string device_tag = 5 [(.validate.rules) = {
+    // string device_tag = 5 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Rule, _impl_.device_tag_), _Internal::kHasBitsOffset + 3, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string attr = 6 [(.validate.rules) = {
+    // string attr = 6 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Rule, _impl_.attr_), _Internal::kHasBitsOffset + 4, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string expr = 7 [(.validate.rules) = {
+    // string expr = 7 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Rule, _impl_.expr_), _Internal::kHasBitsOffset + 5, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // .google.protobuf.Timestamp created_at = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -1242,7 +1241,7 @@ PROTOBUF_NOINLINE void Rule::Clear() {
     }
   }
 
-  // string name = 3 [(.validate.rules) = {
+  // string name = 3 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000004u) != 0) {
     if (!this_._internal_name().empty()) {
       const ::std::string& _s = this_._internal_name();
@@ -1252,7 +1251,7 @@ PROTOBUF_NOINLINE void Rule::Clear() {
     }
   }
 
-  // .thingspect.api.Status status = 4 [(.validate.rules) = {
+  // .thingspect.api.Status status = 4 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000100u) != 0) {
     if (this_._internal_status() != 0) {
       target = stream->EnsureSpace(target);
@@ -1261,7 +1260,7 @@ PROTOBUF_NOINLINE void Rule::Clear() {
     }
   }
 
-  // string device_tag = 5 [(.validate.rules) = {
+  // string device_tag = 5 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000008u) != 0) {
     if (!this_._internal_device_tag().empty()) {
       const ::std::string& _s = this_._internal_device_tag();
@@ -1271,7 +1270,7 @@ PROTOBUF_NOINLINE void Rule::Clear() {
     }
   }
 
-  // string attr = 6 [(.validate.rules) = {
+  // string attr = 6 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000010u) != 0) {
     if (!this_._internal_attr().empty()) {
       const ::std::string& _s = this_._internal_attr();
@@ -1281,7 +1280,7 @@ PROTOBUF_NOINLINE void Rule::Clear() {
     }
   }
 
-  // string expr = 7 [(.validate.rules) = {
+  // string expr = 7 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000020u) != 0) {
     if (!this_._internal_expr().empty()) {
       const ::std::string& _s = this_._internal_expr();
@@ -1346,28 +1345,28 @@ PROTOBUF_NOINLINE void Rule::Clear() {
                                         this_._internal_org_id());
       }
     }
-    // string name = 3 [(.validate.rules) = {
+    // string name = 3 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000004u) != 0) {
       if (!this_._internal_name().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_name());
       }
     }
-    // string device_tag = 5 [(.validate.rules) = {
+    // string device_tag = 5 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000008u) != 0) {
       if (!this_._internal_device_tag().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_device_tag());
       }
     }
-    // string attr = 6 [(.validate.rules) = {
+    // string attr = 6 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000010u) != 0) {
       if (!this_._internal_attr().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_attr());
       }
     }
-    // string expr = 7 [(.validate.rules) = {
+    // string expr = 7 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000020u) != 0) {
       if (!this_._internal_expr().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -1386,7 +1385,7 @@ PROTOBUF_NOINLINE void Rule::Clear() {
     }
   }
    {
-    // .thingspect.api.Status status = 4 [(.validate.rules) = {
+    // .thingspect.api.Status status = 4 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000100u) != 0) {
       if (this_._internal_status() != 0) {
         total_size += 1 +
@@ -1649,13 +1648,13 @@ CreateRuleRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::CreateRuleRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastMtS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(CreateRuleRequest, _impl_.rule_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(CreateRuleRequest, _impl_.rule_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
   }},
@@ -1697,7 +1696,7 @@ PROTOBUF_NOINLINE void CreateRuleRequest::Clear() {
   (void)cached_has_bits;
 
   cached_has_bits = this_._impl_._has_bits_[0];
-  // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((cached_has_bits & 0x00000001u) != 0) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         1, *this_._impl_.rule_, this_._impl_.rule_->GetCachedSize(), target,
@@ -1728,7 +1727,7 @@ PROTOBUF_NOINLINE void CreateRuleRequest::Clear() {
   (void)cached_has_bits;
 
    {
-    // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     cached_has_bits = this_._impl_._has_bits_[0];
     if ((cached_has_bits & 0x00000001u) != 0) {
       total_size += 1 +
@@ -1905,13 +1904,13 @@ GetRuleRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::GetRuleRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(GetRuleRequest, _impl_.id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(GetRuleRequest, _impl_.id_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
@@ -1952,7 +1951,7 @@ PROTOBUF_NOINLINE void GetRuleRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_id().empty()) {
       const ::std::string& _s = this_._internal_id();
@@ -1986,7 +1985,7 @@ PROTOBUF_NOINLINE void GetRuleRequest::Clear() {
   (void)cached_has_bits;
 
    {
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     cached_has_bits = this_._impl_._has_bits_[0];
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_id().empty()) {
@@ -2187,13 +2186,13 @@ UpdateRuleRequest::_table_ = {
     // .google.protobuf.FieldMask update_mask = 2;
     {::_pbi::TcParser::FastMtS1,
      {18, 1, 1, PROTOBUF_FIELD_OFFSET(UpdateRuleRequest, _impl_.update_mask_)}},
-    // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastMtS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(UpdateRuleRequest, _impl_.rule_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(UpdateRuleRequest, _impl_.rule_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
     // .google.protobuf.FieldMask update_mask = 2;
@@ -2245,7 +2244,7 @@ PROTOBUF_NOINLINE void UpdateRuleRequest::Clear() {
   (void)cached_has_bits;
 
   cached_has_bits = this_._impl_._has_bits_[0];
-  // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((cached_has_bits & 0x00000001u) != 0) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         1, *this_._impl_.rule_, this_._impl_.rule_->GetCachedSize(), target,
@@ -2285,7 +2284,7 @@ PROTOBUF_NOINLINE void UpdateRuleRequest::Clear() {
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
   if ((cached_has_bits & 0x00000003u) != 0) {
-    // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Rule rule = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000001u) != 0) {
       total_size += 1 +
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.rule_);
@@ -2481,13 +2480,13 @@ DeleteRuleRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::DeleteRuleRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(DeleteRuleRequest, _impl_.id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(DeleteRuleRequest, _impl_.id_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
@@ -2528,7 +2527,7 @@ PROTOBUF_NOINLINE void DeleteRuleRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_id().empty()) {
       const ::std::string& _s = this_._internal_id();
@@ -2562,7 +2561,7 @@ PROTOBUF_NOINLINE void DeleteRuleRequest::Clear() {
   (void)cached_has_bits;
 
    {
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     cached_has_bits = this_._impl_._has_bits_[0];
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_id().empty()) {
@@ -2748,13 +2747,13 @@ ListRulesRequest::_table_ = {
     // string page_token = 2;
     {::_pbi::TcParser::FastUS1,
      {18, 0, 0, PROTOBUF_FIELD_OFFSET(ListRulesRequest, _impl_.page_token_)}},
-    // int32 page_size = 1 [(.validate.rules) = {
+    // int32 page_size = 1 [(.buf.validate.field) = {
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ListRulesRequest, _impl_.page_size_), 1>(),
      {8, 1, 0, PROTOBUF_FIELD_OFFSET(ListRulesRequest, _impl_.page_size_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int32 page_size = 1 [(.validate.rules) = {
+    // int32 page_size = 1 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(ListRulesRequest, _impl_.page_size_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kInt32)},
     // string page_token = 2;
@@ -2799,7 +2798,7 @@ PROTOBUF_NOINLINE void ListRulesRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int32 page_size = 1 [(.validate.rules) = {
+  // int32 page_size = 1 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000002u) != 0) {
     if (this_._internal_page_size() != 0) {
       target =
@@ -2851,7 +2850,7 @@ PROTOBUF_NOINLINE void ListRulesRequest::Clear() {
                                         this_._internal_page_token());
       }
     }
-    // int32 page_size = 1 [(.validate.rules) = {
+    // int32 page_size = 1 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000002u) != 0) {
       if (this_._internal_page_size() != 0) {
         total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
@@ -3399,19 +3398,19 @@ TestRuleRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::TestRuleRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastMtS1,
      {18, 1, 1, PROTOBUF_FIELD_OFFSET(TestRuleRequest, _impl_.rule_)}},
-    // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastMtS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(TestRuleRequest, _impl_.point_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(TestRuleRequest, _impl_.point_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(TestRuleRequest, _impl_.rule_), _Internal::kHasBitsOffset + 1, 1,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
   }},
@@ -3460,14 +3459,14 @@ PROTOBUF_NOINLINE void TestRuleRequest::Clear() {
   (void)cached_has_bits;
 
   cached_has_bits = this_._impl_._has_bits_[0];
-  // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((cached_has_bits & 0x00000001u) != 0) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         1, *this_._impl_.point_, this_._impl_.point_->GetCachedSize(), target,
         stream);
   }
 
-  // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((cached_has_bits & 0x00000002u) != 0) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         2, *this_._impl_.rule_, this_._impl_.rule_->GetCachedSize(), target,
@@ -3500,12 +3499,12 @@ PROTOBUF_NOINLINE void TestRuleRequest::Clear() {
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
   if ((cached_has_bits & 0x00000003u) != 0) {
-    // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000001u) != 0) {
       total_size += 1 +
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.point_);
     }
-    // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000002u) != 0) {
       total_size += 1 +
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.rule_);
@@ -4001,25 +4000,25 @@ Alarm::_table_ = {
     // string rule_id = 3 [json_name = "ruleID", (.google.api.field_behavior) = OUTPUT_ONLY];
     {::_pbi::TcParser::FastUS1,
      {26, 2, 0, PROTOBUF_FIELD_OFFSET(Alarm, _impl_.rule_id_)}},
-    // string name = 4 [(.validate.rules) = {
+    // string name = 4 [(.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {34, 3, 0, PROTOBUF_FIELD_OFFSET(Alarm, _impl_.name_)}},
-    // .thingspect.api.Status status = 5 [(.validate.rules) = {
+    // .thingspect.api.Status status = 5 [(.buf.validate.field) = {
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Alarm, _impl_.status_), 8>(),
      {40, 8, 0, PROTOBUF_FIELD_OFFSET(Alarm, _impl_.status_)}},
-    // .thingspect.api.AlarmType type = 6 [(.validate.rules) = {
+    // .thingspect.api.AlarmType type = 6 [(.buf.validate.field) = {
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Alarm, _impl_.type_), 9>(),
      {48, 9, 0, PROTOBUF_FIELD_OFFSET(Alarm, _impl_.type_)}},
-    // repeated string user_tags = 7 [(.validate.rules) = {
+    // repeated string user_tags = 7 [(.buf.validate.field) = {
     {::_pbi::TcParser::FastUR1,
      {58, 63, 0, PROTOBUF_FIELD_OFFSET(Alarm, _impl_.user_tags_)}},
-    // string subject_template = 8 [(.validate.rules) = {
+    // string subject_template = 8 [(.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {66, 4, 0, PROTOBUF_FIELD_OFFSET(Alarm, _impl_.subject_template_)}},
-    // string body_template = 9 [(.validate.rules) = {
+    // string body_template = 9 [(.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {74, 5, 0, PROTOBUF_FIELD_OFFSET(Alarm, _impl_.body_template_)}},
-    // int32 repeat_interval = 10 [(.validate.rules) = {
+    // int32 repeat_interval = 10 [(.buf.validate.field) = {
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Alarm, _impl_.repeat_interval_), 10>(),
      {80, 10, 0, PROTOBUF_FIELD_OFFSET(Alarm, _impl_.repeat_interval_)}},
     // .google.protobuf.Timestamp created_at = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -4043,25 +4042,25 @@ Alarm::_table_ = {
     // string rule_id = 3 [json_name = "ruleID", (.google.api.field_behavior) = OUTPUT_ONLY];
     {PROTOBUF_FIELD_OFFSET(Alarm, _impl_.rule_id_), _Internal::kHasBitsOffset + 2, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string name = 4 [(.validate.rules) = {
+    // string name = 4 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Alarm, _impl_.name_), _Internal::kHasBitsOffset + 3, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // .thingspect.api.Status status = 5 [(.validate.rules) = {
+    // .thingspect.api.Status status = 5 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Alarm, _impl_.status_), _Internal::kHasBitsOffset + 8, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
-    // .thingspect.api.AlarmType type = 6 [(.validate.rules) = {
+    // .thingspect.api.AlarmType type = 6 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Alarm, _impl_.type_), _Internal::kHasBitsOffset + 9, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kOpenEnum)},
-    // repeated string user_tags = 7 [(.validate.rules) = {
+    // repeated string user_tags = 7 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Alarm, _impl_.user_tags_), -1, 0,
     (0 | ::_fl::kFcRepeated | ::_fl::kUtf8String | ::_fl::kRepSString)},
-    // string subject_template = 8 [(.validate.rules) = {
+    // string subject_template = 8 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Alarm, _impl_.subject_template_), _Internal::kHasBitsOffset + 4, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string body_template = 9 [(.validate.rules) = {
+    // string body_template = 9 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Alarm, _impl_.body_template_), _Internal::kHasBitsOffset + 5, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // int32 repeat_interval = 10 [(.validate.rules) = {
+    // int32 repeat_interval = 10 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(Alarm, _impl_.repeat_interval_), _Internal::kHasBitsOffset + 10, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kInt32)},
     // .google.protobuf.Timestamp created_at = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];
@@ -4178,7 +4177,7 @@ PROTOBUF_NOINLINE void Alarm::Clear() {
     }
   }
 
-  // string name = 4 [(.validate.rules) = {
+  // string name = 4 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000008u) != 0) {
     if (!this_._internal_name().empty()) {
       const ::std::string& _s = this_._internal_name();
@@ -4188,7 +4187,7 @@ PROTOBUF_NOINLINE void Alarm::Clear() {
     }
   }
 
-  // .thingspect.api.Status status = 5 [(.validate.rules) = {
+  // .thingspect.api.Status status = 5 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000100u) != 0) {
     if (this_._internal_status() != 0) {
       target = stream->EnsureSpace(target);
@@ -4197,7 +4196,7 @@ PROTOBUF_NOINLINE void Alarm::Clear() {
     }
   }
 
-  // .thingspect.api.AlarmType type = 6 [(.validate.rules) = {
+  // .thingspect.api.AlarmType type = 6 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000200u) != 0) {
     if (this_._internal_type() != 0) {
       target = stream->EnsureSpace(target);
@@ -4206,7 +4205,7 @@ PROTOBUF_NOINLINE void Alarm::Clear() {
     }
   }
 
-  // repeated string user_tags = 7 [(.validate.rules) = {
+  // repeated string user_tags = 7 [(.buf.validate.field) = {
   for (int i = 0, n = this_._internal_user_tags_size(); i < n; ++i) {
     const auto& s = this_._internal_user_tags().Get(i);
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -4214,7 +4213,7 @@ PROTOBUF_NOINLINE void Alarm::Clear() {
     target = stream->WriteString(7, s, target);
   }
 
-  // string subject_template = 8 [(.validate.rules) = {
+  // string subject_template = 8 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000010u) != 0) {
     if (!this_._internal_subject_template().empty()) {
       const ::std::string& _s = this_._internal_subject_template();
@@ -4224,7 +4223,7 @@ PROTOBUF_NOINLINE void Alarm::Clear() {
     }
   }
 
-  // string body_template = 9 [(.validate.rules) = {
+  // string body_template = 9 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000020u) != 0) {
     if (!this_._internal_body_template().empty()) {
       const ::std::string& _s = this_._internal_body_template();
@@ -4234,7 +4233,7 @@ PROTOBUF_NOINLINE void Alarm::Clear() {
     }
   }
 
-  // int32 repeat_interval = 10 [(.validate.rules) = {
+  // int32 repeat_interval = 10 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000400u) != 0) {
     if (this_._internal_repeat_interval() != 0) {
       target =
@@ -4283,7 +4282,7 @@ PROTOBUF_NOINLINE void Alarm::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
    {
-    // repeated string user_tags = 7 [(.validate.rules) = {
+    // repeated string user_tags = 7 [(.buf.validate.field) = {
     {
       total_size +=
           1 * ::google::protobuf::internal::FromIntSize(this_._internal_user_tags().size());
@@ -4316,21 +4315,21 @@ PROTOBUF_NOINLINE void Alarm::Clear() {
                                         this_._internal_rule_id());
       }
     }
-    // string name = 4 [(.validate.rules) = {
+    // string name = 4 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000008u) != 0) {
       if (!this_._internal_name().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_name());
       }
     }
-    // string subject_template = 8 [(.validate.rules) = {
+    // string subject_template = 8 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000010u) != 0) {
       if (!this_._internal_subject_template().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_subject_template());
       }
     }
-    // string body_template = 9 [(.validate.rules) = {
+    // string body_template = 9 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000020u) != 0) {
       if (!this_._internal_body_template().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -4349,21 +4348,21 @@ PROTOBUF_NOINLINE void Alarm::Clear() {
     }
   }
   if ((cached_has_bits & 0x00000700u) != 0) {
-    // .thingspect.api.Status status = 5 [(.validate.rules) = {
+    // .thingspect.api.Status status = 5 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000100u) != 0) {
       if (this_._internal_status() != 0) {
         total_size += 1 +
                       ::_pbi::WireFormatLite::EnumSize(this_._internal_status());
       }
     }
-    // .thingspect.api.AlarmType type = 6 [(.validate.rules) = {
+    // .thingspect.api.AlarmType type = 6 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000200u) != 0) {
       if (this_._internal_type() != 0) {
         total_size += 1 +
                       ::_pbi::WireFormatLite::EnumSize(this_._internal_type());
       }
     }
-    // int32 repeat_interval = 10 [(.validate.rules) = {
+    // int32 repeat_interval = 10 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000400u) != 0) {
       if (this_._internal_repeat_interval() != 0) {
         total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
@@ -4640,13 +4639,13 @@ CreateAlarmRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::CreateAlarmRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastMtS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(CreateAlarmRequest, _impl_.alarm_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(CreateAlarmRequest, _impl_.alarm_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
   }},
@@ -4688,7 +4687,7 @@ PROTOBUF_NOINLINE void CreateAlarmRequest::Clear() {
   (void)cached_has_bits;
 
   cached_has_bits = this_._impl_._has_bits_[0];
-  // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((cached_has_bits & 0x00000001u) != 0) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         1, *this_._impl_.alarm_, this_._impl_.alarm_->GetCachedSize(), target,
@@ -4719,7 +4718,7 @@ PROTOBUF_NOINLINE void CreateAlarmRequest::Clear() {
   (void)cached_has_bits;
 
    {
-    // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     cached_has_bits = this_._impl_._has_bits_[0];
     if ((cached_has_bits & 0x00000001u) != 0) {
       total_size += 1 +
@@ -4899,19 +4898,19 @@ GetAlarmRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::GetAlarmRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {18, 1, 0, PROTOBUF_FIELD_OFFSET(GetAlarmRequest, _impl_.rule_id_)}},
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(GetAlarmRequest, _impl_.id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(GetAlarmRequest, _impl_.id_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(GetAlarmRequest, _impl_.rule_id_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
@@ -4958,7 +4957,7 @@ PROTOBUF_NOINLINE void GetAlarmRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_id().empty()) {
       const ::std::string& _s = this_._internal_id();
@@ -4968,7 +4967,7 @@ PROTOBUF_NOINLINE void GetAlarmRequest::Clear() {
     }
   }
 
-  // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000002u) != 0) {
     if (!this_._internal_rule_id().empty()) {
       const ::std::string& _s = this_._internal_rule_id();
@@ -5004,14 +5003,14 @@ PROTOBUF_NOINLINE void GetAlarmRequest::Clear() {
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
   if ((cached_has_bits & 0x00000003u) != 0) {
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_id().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_id());
       }
     }
-    // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000002u) != 0) {
       if (!this_._internal_rule_id().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -5223,13 +5222,13 @@ UpdateAlarmRequest::_table_ = {
     // .google.protobuf.FieldMask update_mask = 2;
     {::_pbi::TcParser::FastMtS1,
      {18, 1, 1, PROTOBUF_FIELD_OFFSET(UpdateAlarmRequest, _impl_.update_mask_)}},
-    // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastMtS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(UpdateAlarmRequest, _impl_.alarm_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(UpdateAlarmRequest, _impl_.alarm_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
     // .google.protobuf.FieldMask update_mask = 2;
@@ -5281,7 +5280,7 @@ PROTOBUF_NOINLINE void UpdateAlarmRequest::Clear() {
   (void)cached_has_bits;
 
   cached_has_bits = this_._impl_._has_bits_[0];
-  // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((cached_has_bits & 0x00000001u) != 0) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         1, *this_._impl_.alarm_, this_._impl_.alarm_->GetCachedSize(), target,
@@ -5321,7 +5320,7 @@ PROTOBUF_NOINLINE void UpdateAlarmRequest::Clear() {
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
   if ((cached_has_bits & 0x00000003u) != 0) {
-    // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Alarm alarm = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000001u) != 0) {
       total_size += 1 +
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.alarm_);
@@ -5520,19 +5519,19 @@ DeleteAlarmRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::DeleteAlarmRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {18, 1, 0, PROTOBUF_FIELD_OFFSET(DeleteAlarmRequest, _impl_.rule_id_)}},
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(DeleteAlarmRequest, _impl_.id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(DeleteAlarmRequest, _impl_.id_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(DeleteAlarmRequest, _impl_.rule_id_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
@@ -5579,7 +5578,7 @@ PROTOBUF_NOINLINE void DeleteAlarmRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_id().empty()) {
       const ::std::string& _s = this_._internal_id();
@@ -5589,7 +5588,7 @@ PROTOBUF_NOINLINE void DeleteAlarmRequest::Clear() {
     }
   }
 
-  // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000002u) != 0) {
     if (!this_._internal_rule_id().empty()) {
       const ::std::string& _s = this_._internal_rule_id();
@@ -5625,14 +5624,14 @@ PROTOBUF_NOINLINE void DeleteAlarmRequest::Clear() {
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
   if ((cached_has_bits & 0x00000003u) != 0) {
-    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_id().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_id());
       }
     }
-    // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string rule_id = 2 [json_name = "ruleID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000002u) != 0) {
       if (!this_._internal_rule_id().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -5830,25 +5829,25 @@ ListAlarmsRequest::_table_ = {
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // int32 page_size = 1 [(.validate.rules) = {
+    // int32 page_size = 1 [(.buf.validate.field) = {
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ListAlarmsRequest, _impl_.page_size_), 2>(),
      {8, 2, 0, PROTOBUF_FIELD_OFFSET(ListAlarmsRequest, _impl_.page_size_)}},
     // string page_token = 2;
     {::_pbi::TcParser::FastUS1,
      {18, 0, 0, PROTOBUF_FIELD_OFFSET(ListAlarmsRequest, _impl_.page_token_)}},
-    // string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {
+    // string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {26, 1, 0, PROTOBUF_FIELD_OFFSET(ListAlarmsRequest, _impl_.rule_id_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int32 page_size = 1 [(.validate.rules) = {
+    // int32 page_size = 1 [(.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(ListAlarmsRequest, _impl_.page_size_), _Internal::kHasBitsOffset + 2, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kInt32)},
     // string page_token = 2;
     {PROTOBUF_FIELD_OFFSET(ListAlarmsRequest, _impl_.page_token_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {
+    // string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(ListAlarmsRequest, _impl_.rule_id_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
@@ -5896,7 +5895,7 @@ PROTOBUF_NOINLINE void ListAlarmsRequest::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int32 page_size = 1 [(.validate.rules) = {
+  // int32 page_size = 1 [(.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000004u) != 0) {
     if (this_._internal_page_size() != 0) {
       target =
@@ -5915,7 +5914,7 @@ PROTOBUF_NOINLINE void ListAlarmsRequest::Clear() {
     }
   }
 
-  // string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {
+  // string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000002u) != 0) {
     if (!this_._internal_rule_id().empty()) {
       const ::std::string& _s = this_._internal_rule_id();
@@ -5958,14 +5957,14 @@ PROTOBUF_NOINLINE void ListAlarmsRequest::Clear() {
                                         this_._internal_page_token());
       }
     }
-    // string rule_id = 3 [json_name = "ruleID", (.validate.rules) = {
+    // string rule_id = 3 [json_name = "ruleID", (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000002u) != 0) {
       if (!this_._internal_rule_id().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_rule_id());
       }
     }
-    // int32 page_size = 1 [(.validate.rules) = {
+    // int32 page_size = 1 [(.buf.validate.field) = {
     if ((cached_has_bits & 0x00000004u) != 0) {
       if (this_._internal_page_size() != 0) {
         total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
@@ -6536,31 +6535,31 @@ TestAlarmRequest::_table_ = {
     ::_pbi::TcParser::GetTable<::thingspect::api::TestAlarmRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // .thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastMtS1,
      {34, 3, 3, PROTOBUF_FIELD_OFFSET(TestAlarmRequest, _impl_.alarm_)}},
-    // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastMtS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(TestAlarmRequest, _impl_.point_)}},
-    // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastMtS1,
      {18, 1, 1, PROTOBUF_FIELD_OFFSET(TestAlarmRequest, _impl_.rule_)}},
-    // .thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastMtS1,
      {26, 2, 2, PROTOBUF_FIELD_OFFSET(TestAlarmRequest, _impl_.device_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(TestAlarmRequest, _impl_.point_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(TestAlarmRequest, _impl_.rule_), _Internal::kHasBitsOffset + 1, 1,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(TestAlarmRequest, _impl_.device_), _Internal::kHasBitsOffset + 2, 2,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(TestAlarmRequest, _impl_.alarm_), _Internal::kHasBitsOffset + 3, 3,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
   }},
@@ -6619,28 +6618,28 @@ PROTOBUF_NOINLINE void TestAlarmRequest::Clear() {
   (void)cached_has_bits;
 
   cached_has_bits = this_._impl_._has_bits_[0];
-  // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((cached_has_bits & 0x00000001u) != 0) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         1, *this_._impl_.point_, this_._impl_.point_->GetCachedSize(), target,
         stream);
   }
 
-  // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((cached_has_bits & 0x00000002u) != 0) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         2, *this_._impl_.rule_, this_._impl_.rule_->GetCachedSize(), target,
         stream);
   }
 
-  // .thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((cached_has_bits & 0x00000004u) != 0) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         3, *this_._impl_.device_, this_._impl_.device_->GetCachedSize(), target,
         stream);
   }
 
-  // .thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((cached_has_bits & 0x00000008u) != 0) {
     target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
         4, *this_._impl_.alarm_, this_._impl_.alarm_->GetCachedSize(), target,
@@ -6673,22 +6672,22 @@ PROTOBUF_NOINLINE void TestAlarmRequest::Clear() {
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
   if ((cached_has_bits & 0x0000000fu) != 0) {
-    // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.common.DataPoint point = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000001u) != 0) {
       total_size += 1 +
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.point_);
     }
-    // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Rule rule = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000002u) != 0) {
       total_size += 1 +
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.rule_);
     }
-    // .thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Device device = 3 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000004u) != 0) {
       total_size += 1 +
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.device_);
     }
-    // .thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // .thingspect.api.Alarm alarm = 4 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000008u) != 0) {
       total_size += 1 +
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.alarm_);

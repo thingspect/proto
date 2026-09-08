@@ -7,18 +7,20 @@ deps:
 
 common:
 	protoc --plugin=protoc-gen-dart=/root/.pub-cache/bin/protoc-gen-dart \
-	-I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv --dart_out=. \
+	-I=../protobuf -I=/tmp/googleapis -I=/tmp/pv/proto/protovalidate \
+	--dart_out=. \
 	common/thingspect_datapoint.proto
 
 mqtt:
 	protoc --plugin=protoc-gen-dart=/root/.pub-cache/bin/protoc-gen-dart \
-	-I=../protobuf -I=/tmp/googleapis -I=/tmp/pgv --dart_out=. \
+	-I=../protobuf -I=/tmp/googleapis -I=/tmp/pv/proto/protovalidate \
+	--dart_out=. \
 	mqtt/thingspect_payload.proto
 
 api:
 	protoc --plugin=protoc-gen-dart=/root/.pub-cache/bin/protoc-gen-dart \
-	-I=../protobuf -I=/tmp/googleapis -I=/tmp/grpc-gateway -I=/tmp/pgv \
-	--dart_out=grpc:. \
+	-I=../protobuf -I=/tmp/googleapis -I=/tmp/grpc-gateway \
+	-I=/tmp/pv/proto/protovalidate --dart_out=grpc:. \
 	api/thingspect_alert.proto \
 	api/thingspect_datapoint.proto \
 	api/thingspect_device.proto \

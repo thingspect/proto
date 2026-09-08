@@ -1,4 +1,5 @@
 syntax = "proto3";
+
 package thingspect.api;
 
 option go_package = "github.com/thingspect/proto/go/api";

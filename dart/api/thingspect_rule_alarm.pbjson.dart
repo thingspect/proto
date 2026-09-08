@@ -74,10 +74,10 @@ const Rule$json = {
 /// Descriptor for `Rule`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List ruleDescriptor = $convert.base64Decode(
     'CgRSdWxlEhMKAmlkGAEgASgJQgPgQQNSAmlkEhoKBm9yZ19pZBgCIAEoCUID4EEDUgVvcmdJRB'
-    'IdCgRuYW1lGAMgASgJQgn6QgZyBBAFGFBSBG5hbWUSOgoGc3RhdHVzGAQgASgOMhYudGhpbmdz'
-    'cGVjdC5hcGkuU3RhdHVzQgr6QgeCAQQYAxgGUgZzdGF0dXMSJwoKZGV2aWNlX3RhZxgFIAEoCU'
-    'II+kIFcgMY/wFSCWRldmljZVRhZxIbCgRhdHRyGAYgASgJQgf6QgRyAhgoUgRhdHRyEhwKBGV4'
-    'cHIYByABKAlCCPpCBXIDGIAIUgRleHByEj4KCmNyZWF0ZWRfYXQYCCABKAsyGi5nb29nbGUucH'
+    'IdCgRuYW1lGAMgASgJQgm6SAZyBBAFGFBSBG5hbWUSOgoGc3RhdHVzGAQgASgOMhYudGhpbmdz'
+    'cGVjdC5hcGkuU3RhdHVzQgq6SAeCAQQYAxgGUgZzdGF0dXMSJwoKZGV2aWNlX3RhZxgFIAEoCU'
+    'IIukgFcgMY/wFSCWRldmljZVRhZxIbCgRhdHRyGAYgASgJQge6SARyAhgoUgRhdHRyEhwKBGV4'
+    'cHIYByABKAlCCLpIBXIDGIAIUgRleHByEj4KCmNyZWF0ZWRfYXQYCCABKAsyGi5nb29nbGUucH'
     'JvdG9idWYuVGltZXN0YW1wQgPgQQNSCWNyZWF0ZWRBdBI+Cgp1cGRhdGVkX2F0GAkgASgLMhou'
     'Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDUgl1cGRhdGVkQXQ=');
 
@@ -99,8 +99,8 @@ const CreateRuleRequest$json = {
 
 /// Descriptor for `CreateRuleRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createRuleRequestDescriptor = $convert.base64Decode(
-    'ChFDcmVhdGVSdWxlUmVxdWVzdBI1CgRydWxlGAEgASgLMhQudGhpbmdzcGVjdC5hcGkuUnVsZU'
-    'IL+kIFigECEAHgQQJSBHJ1bGU=');
+    'ChFDcmVhdGVSdWxlUmVxdWVzdBIzCgRydWxlGAEgASgLMhQudGhpbmdzcGVjdC5hcGkuUnVsZU'
+    'IJukgDyAEB4EECUgRydWxl');
 
 @$core.Deprecated('Use getRuleRequestDescriptor instead')
 const GetRuleRequest$json = {
@@ -112,7 +112,7 @@ const GetRuleRequest$json = {
 
 /// Descriptor for `GetRuleRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getRuleRequestDescriptor = $convert.base64Decode(
-    'Cg5HZXRSdWxlUmVxdWVzdBIbCgJpZBgBIAEoCUIL+kIFcgOwAQHgQQJSAmlk');
+    'Cg5HZXRSdWxlUmVxdWVzdBIbCgJpZBgBIAEoCUILukgFcgOwAQHgQQJSAmlk');
 
 @$core.Deprecated('Use updateRuleRequestDescriptor instead')
 const UpdateRuleRequest$json = {
@@ -140,9 +140,9 @@ const UpdateRuleRequest$json = {
 
 /// Descriptor for `UpdateRuleRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateRuleRequestDescriptor = $convert.base64Decode(
-    'ChFVcGRhdGVSdWxlUmVxdWVzdBI1CgRydWxlGAEgASgLMhQudGhpbmdzcGVjdC5hcGkuUnVsZU'
-    'IL+kIFigECEAHgQQJSBHJ1bGUSOwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9i'
-    'dWYuRmllbGRNYXNrUgp1cGRhdGVNYXNr');
+    'ChFVcGRhdGVSdWxlUmVxdWVzdBIzCgRydWxlGAEgASgLMhQudGhpbmdzcGVjdC5hcGkuUnVsZU'
+    'IJukgDyAEB4EECUgRydWxlEjsKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm'
+    'LkZpZWxkTWFza1IKdXBkYXRlTWFzaw==');
 
 @$core.Deprecated('Use deleteRuleRequestDescriptor instead')
 const DeleteRuleRequest$json = {
@@ -154,7 +154,7 @@ const DeleteRuleRequest$json = {
 
 /// Descriptor for `DeleteRuleRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteRuleRequestDescriptor = $convert.base64Decode(
-    'ChFEZWxldGVSdWxlUmVxdWVzdBIbCgJpZBgBIAEoCUIL+kIFcgOwAQHgQQJSAmlk');
+    'ChFEZWxldGVSdWxlUmVxdWVzdBIbCgJpZBgBIAEoCUILukgFcgOwAQHgQQJSAmlk');
 
 @$core.Deprecated('Use listRulesRequestDescriptor instead')
 const ListRulesRequest$json = {
@@ -167,7 +167,7 @@ const ListRulesRequest$json = {
 
 /// Descriptor for `ListRulesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listRulesRequestDescriptor = $convert.base64Decode(
-    'ChBMaXN0UnVsZXNSZXF1ZXN0EiUKCXBhZ2Vfc2l6ZRgBIAEoBUII+kIFGgMY+gFSCHBhZ2VTaX'
+    'ChBMaXN0UnVsZXNSZXF1ZXN0EiUKCXBhZ2Vfc2l6ZRgBIAEoBUIIukgFGgMY+gFSCHBhZ2VTaX'
     'plEh0KCnBhZ2VfdG9rZW4YAiABKAlSCXBhZ2VUb2tlbg==');
 
 @$core.Deprecated('Use listRulesResponseDescriptor instead')
@@ -220,9 +220,9 @@ const TestRuleRequest$json = {
 
 /// Descriptor for `TestRuleRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List testRuleRequestDescriptor = $convert.base64Decode(
-    'Cg9UZXN0UnVsZVJlcXVlc3QSPwoFcG9pbnQYASABKAsyHC50aGluZ3NwZWN0LmNvbW1vbi5EYX'
-    'RhUG9pbnRCC/pCBYoBAhAB4EECUgVwb2ludBI1CgRydWxlGAIgASgLMhQudGhpbmdzcGVjdC5h'
-    'cGkuUnVsZUIL+kIFigECEAHgQQJSBHJ1bGU=');
+    'Cg9UZXN0UnVsZVJlcXVlc3QSPQoFcG9pbnQYASABKAsyHC50aGluZ3NwZWN0LmNvbW1vbi5EYX'
+    'RhUG9pbnRCCbpIA8gBAeBBAlIFcG9pbnQSMwoEcnVsZRgCIAEoCzIULnRoaW5nc3BlY3QuYXBp'
+    'LlJ1bGVCCbpIA8gBAeBBAlIEcnVsZQ==');
 
 @$core.Deprecated('Use testRuleResponseDescriptor instead')
 const TestRuleResponse$json = {
@@ -311,13 +311,13 @@ const Alarm$json = {
 /// Descriptor for `Alarm`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List alarmDescriptor = $convert.base64Decode(
     'CgVBbGFybRITCgJpZBgBIAEoCUID4EEDUgJpZBIaCgZvcmdfaWQYAiABKAlCA+BBA1IFb3JnSU'
-    'QSHAoHcnVsZV9pZBgDIAEoCUID4EEDUgZydWxlSUQSHQoEbmFtZRgEIAEoCUIJ+kIGcgQQBRhQ'
-    'UgRuYW1lEjoKBnN0YXR1cxgFIAEoDjIWLnRoaW5nc3BlY3QuYXBpLlN0YXR1c0IK+kIHggEEGA'
-    'MYBlIGc3RhdHVzEjsKBHR5cGUYBiABKA4yGS50aGluZ3NwZWN0LmFwaS5BbGFybVR5cGVCDPpC'
-    'CYIBBhgBGAIYA1IEdHlwZRI0Cgl1c2VyX3RhZ3MYByADKAlCF/pCB5IBBAgBGAH6QgqSAQciBX'
-    'IDGP8BUgh1c2VyVGFncxIzChBzdWJqZWN0X3RlbXBsYXRlGAggASgJQgj6QgVyAxiACFIPc3Vi'
-    'amVjdFRlbXBsYXRlEi0KDWJvZHlfdGVtcGxhdGUYCSABKAlCCPpCBXIDGIAgUgxib2R5VGVtcG'
-    'xhdGUSNAoPcmVwZWF0X2ludGVydmFsGAogASgFQgv6QggaBhjAnQEoAVIOcmVwZWF0SW50ZXJ2'
+    'QSHAoHcnVsZV9pZBgDIAEoCUID4EEDUgZydWxlSUQSHQoEbmFtZRgEIAEoCUIJukgGcgQQBRhQ'
+    'UgRuYW1lEjoKBnN0YXR1cxgFIAEoDjIWLnRoaW5nc3BlY3QuYXBpLlN0YXR1c0IKukgHggEEGA'
+    'MYBlIGc3RhdHVzEjsKBHR5cGUYBiABKA4yGS50aGluZ3NwZWN0LmFwaS5BbGFybVR5cGVCDLpI'
+    'CYIBBhgBGAIYA1IEdHlwZRI0Cgl1c2VyX3RhZ3MYByADKAlCF7pIB5IBBAgBGAG6SAqSAQciBX'
+    'IDGP8BUgh1c2VyVGFncxIzChBzdWJqZWN0X3RlbXBsYXRlGAggASgJQgi6SAVyAxiACFIPc3Vi'
+    'amVjdFRlbXBsYXRlEi0KDWJvZHlfdGVtcGxhdGUYCSABKAlCCLpIBXIDGIAgUgxib2R5VGVtcG'
+    'xhdGUSNAoPcmVwZWF0X2ludGVydmFsGAogASgFQgu6SAgaBhjAnQEoAVIOcmVwZWF0SW50ZXJ2'
     'YWwSPgoKY3JlYXRlZF9hdBgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1'
     'IJY3JlYXRlZEF0Ej4KCnVwZGF0ZWRfYXQYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0'
     'YW1wQgPgQQNSCXVwZGF0ZWRBdA==');
@@ -340,8 +340,8 @@ const CreateAlarmRequest$json = {
 
 /// Descriptor for `CreateAlarmRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createAlarmRequestDescriptor = $convert.base64Decode(
-    'ChJDcmVhdGVBbGFybVJlcXVlc3QSOAoFYWxhcm0YASABKAsyFS50aGluZ3NwZWN0LmFwaS5BbG'
-    'FybUIL+kIFigECEAHgQQJSBWFsYXJt');
+    'ChJDcmVhdGVBbGFybVJlcXVlc3QSNgoFYWxhcm0YASABKAsyFS50aGluZ3NwZWN0LmFwaS5BbG'
+    'FybUIJukgDyAEB4EECUgVhbGFybQ==');
 
 @$core.Deprecated('Use getAlarmRequestDescriptor instead')
 const GetAlarmRequest$json = {
@@ -354,8 +354,8 @@ const GetAlarmRequest$json = {
 
 /// Descriptor for `GetAlarmRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getAlarmRequestDescriptor = $convert.base64Decode(
-    'Cg9HZXRBbGFybVJlcXVlc3QSGwoCaWQYASABKAlCC/pCBXIDsAEB4EECUgJpZBIkCgdydWxlX2'
-    'lkGAIgASgJQgv6QgVyA7ABAeBBAlIGcnVsZUlE');
+    'Cg9HZXRBbGFybVJlcXVlc3QSGwoCaWQYASABKAlCC7pIBXIDsAEB4EECUgJpZBIkCgdydWxlX2'
+    'lkGAIgASgJQgu6SAVyA7ABAeBBAlIGcnVsZUlE');
 
 @$core.Deprecated('Use updateAlarmRequestDescriptor instead')
 const UpdateAlarmRequest$json = {
@@ -383,9 +383,9 @@ const UpdateAlarmRequest$json = {
 
 /// Descriptor for `UpdateAlarmRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateAlarmRequestDescriptor = $convert.base64Decode(
-    'ChJVcGRhdGVBbGFybVJlcXVlc3QSOAoFYWxhcm0YASABKAsyFS50aGluZ3NwZWN0LmFwaS5BbG'
-    'FybUIL+kIFigECEAHgQQJSBWFsYXJtEjsKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnBy'
-    'b3RvYnVmLkZpZWxkTWFza1IKdXBkYXRlTWFzaw==');
+    'ChJVcGRhdGVBbGFybVJlcXVlc3QSNgoFYWxhcm0YASABKAsyFS50aGluZ3NwZWN0LmFwaS5BbG'
+    'FybUIJukgDyAEB4EECUgVhbGFybRI7Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90'
+    'b2J1Zi5GaWVsZE1hc2tSCnVwZGF0ZU1hc2s=');
 
 @$core.Deprecated('Use deleteAlarmRequestDescriptor instead')
 const DeleteAlarmRequest$json = {
@@ -398,8 +398,8 @@ const DeleteAlarmRequest$json = {
 
 /// Descriptor for `DeleteAlarmRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteAlarmRequestDescriptor = $convert.base64Decode(
-    'ChJEZWxldGVBbGFybVJlcXVlc3QSGwoCaWQYASABKAlCC/pCBXIDsAEB4EECUgJpZBIkCgdydW'
-    'xlX2lkGAIgASgJQgv6QgVyA7ABAeBBAlIGcnVsZUlE');
+    'ChJEZWxldGVBbGFybVJlcXVlc3QSGwoCaWQYASABKAlCC7pIBXIDsAEB4EECUgJpZBIkCgdydW'
+    'xlX2lkGAIgASgJQgu6SAVyA7ABAeBBAlIGcnVsZUlE');
 
 @$core.Deprecated('Use listAlarmsRequestDescriptor instead')
 const ListAlarmsRequest$json = {
@@ -413,9 +413,9 @@ const ListAlarmsRequest$json = {
 
 /// Descriptor for `ListAlarmsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listAlarmsRequestDescriptor = $convert.base64Decode(
-    'ChFMaXN0QWxhcm1zUmVxdWVzdBIlCglwYWdlX3NpemUYASABKAVCCPpCBRoDGPoBUghwYWdlU2'
-    'l6ZRIdCgpwYWdlX3Rva2VuGAIgASgJUglwYWdlVG9rZW4SJAoHcnVsZV9pZBgDIAEoCUIL+kII'
-    'cgawAQHQAQFSBnJ1bGVJRA==');
+    'ChFMaXN0QWxhcm1zUmVxdWVzdBIlCglwYWdlX3NpemUYASABKAVCCLpIBRoDGPoBUghwYWdlU2'
+    'l6ZRIdCgpwYWdlX3Rva2VuGAIgASgJUglwYWdlVG9rZW4SJwoHcnVsZV9pZBgDIAEoCUIOukgF'
+    'cgOwAQG6SAPYAQFSBnJ1bGVJRA==');
 
 @$core.Deprecated('Use listAlarmsResponseDescriptor instead')
 const ListAlarmsResponse$json = {
@@ -485,11 +485,11 @@ const TestAlarmRequest$json = {
 
 /// Descriptor for `TestAlarmRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List testAlarmRequestDescriptor = $convert.base64Decode(
-    'ChBUZXN0QWxhcm1SZXF1ZXN0Ej8KBXBvaW50GAEgASgLMhwudGhpbmdzcGVjdC5jb21tb24uRG'
-    'F0YVBvaW50Qgv6QgWKAQIQAeBBAlIFcG9pbnQSNQoEcnVsZRgCIAEoCzIULnRoaW5nc3BlY3Qu'
-    'YXBpLlJ1bGVCC/pCBYoBAhAB4EECUgRydWxlEjsKBmRldmljZRgDIAEoCzIWLnRoaW5nc3BlY3'
-    'QuYXBpLkRldmljZUIL+kIFigECEAHgQQJSBmRldmljZRI4CgVhbGFybRgEIAEoCzIVLnRoaW5n'
-    'c3BlY3QuYXBpLkFsYXJtQgv6QgWKAQIQAeBBAlIFYWxhcm0=');
+    'ChBUZXN0QWxhcm1SZXF1ZXN0Ej0KBXBvaW50GAEgASgLMhwudGhpbmdzcGVjdC5jb21tb24uRG'
+    'F0YVBvaW50Qgm6SAPIAQHgQQJSBXBvaW50EjMKBHJ1bGUYAiABKAsyFC50aGluZ3NwZWN0LmFw'
+    'aS5SdWxlQgm6SAPIAQHgQQJSBHJ1bGUSOQoGZGV2aWNlGAMgASgLMhYudGhpbmdzcGVjdC5hcG'
+    'kuRGV2aWNlQgm6SAPIAQHgQQJSBmRldmljZRI2CgVhbGFybRgEIAEoCzIVLnRoaW5nc3BlY3Qu'
+    'YXBpLkFsYXJtQgm6SAPIAQHgQQJSBWFsYXJt');
 
 @$core.Deprecated('Use testAlarmResponseDescriptor instead')
 const TestAlarmResponse$json = {

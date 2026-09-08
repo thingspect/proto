@@ -30,9 +30,9 @@
 #include "google/protobuf/extension_set.h"  // IWYU pragma: export
 #include "google/protobuf/generated_enum_reflection.h"
 #include "google/protobuf/unknown_field_set.h"
-#include "google/protobuf/timestamp.pb.h"
+#include "buf/validate/validate.pb.h"
 #include "google/api/annotations.pb.h"
-#include "validate/validate.pb.h"
+#include "google/protobuf/timestamp.pb.h"
 // @@protoc_insertion_point(includes)
 
 // Must be included last.
@@ -282,7 +282,7 @@ class ListAlertsRequest final : public ::google::protobuf::Message
     kUniqIdFieldNumber = 1,
     kDeviceIdFieldNumber = 2,
   };
-  // string alarm_id = 3 [json_name = "alarmID", (.validate.rules) = {
+  // string alarm_id = 3 [json_name = "alarmID", (.buf.validate.field) = {
   void clear_alarm_id() ;
   const ::std::string& alarm_id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -297,7 +297,7 @@ class ListAlertsRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_alarm_id();
 
   public:
-  // string user_id = 4 [json_name = "userID", (.validate.rules) = {
+  // string user_id = 4 [json_name = "userID", (.buf.validate.field) = {
   void clear_user_id() ;
   const ::std::string& user_id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -358,7 +358,7 @@ class ListAlertsRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_uniq_id();
 
   public:
-  // string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+  // string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
   bool has_device_id() const;
   void clear_device_id() ;
   const ::std::string& device_id() const;
@@ -1544,7 +1544,7 @@ inline void ListAlertsRequest::set_allocated_uniq_id(::std::string* PROTOBUF_NUL
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.ListAlertsRequest.uniq_id)
 }
 
-// string device_id = 2 [json_name = "deviceID", (.validate.rules) = {
+// string device_id = 2 [json_name = "deviceID", (.buf.validate.field) = {
 inline bool ListAlertsRequest::has_device_id() const {
   return id_oneof_case() == kDeviceId;
 }
@@ -1629,7 +1629,7 @@ inline void ListAlertsRequest::set_allocated_device_id(::std::string* PROTOBUF_N
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.ListAlertsRequest.device_id)
 }
 
-// string alarm_id = 3 [json_name = "alarmID", (.validate.rules) = {
+// string alarm_id = 3 [json_name = "alarmID", (.buf.validate.field) = {
 inline void ListAlertsRequest::clear_alarm_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.alarm_id_.ClearToEmpty();
@@ -1694,7 +1694,7 @@ inline void ListAlertsRequest::set_allocated_alarm_id(::std::string* PROTOBUF_NU
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.ListAlertsRequest.alarm_id)
 }
 
-// string user_id = 4 [json_name = "userID", (.validate.rules) = {
+// string user_id = 4 [json_name = "userID", (.buf.validate.field) = {
 inline void ListAlertsRequest::clear_user_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.user_id_.ClearToEmpty();

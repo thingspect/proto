@@ -31,13 +31,13 @@
 #include "google/protobuf/unknown_field_set.h"
 #include "api/thingspect_role.pb.h"
 #include "api/thingspect_status.pb.h"
-#include "google/protobuf/empty.pb.h"
-#include "google/protobuf/timestamp.pb.h"
-#include "google/protobuf/field_mask.pb.h"
+#include "buf/validate/validate.pb.h"
 #include "google/api/annotations.pb.h"
 #include "google/api/field_behavior.pb.h"
+#include "google/protobuf/empty.pb.h"
+#include "google/protobuf/field_mask.pb.h"
+#include "google/protobuf/timestamp.pb.h"
 #include "protoc-gen-openapiv2/options/annotations.pb.h"
-#include "validate/validate.pb.h"
 // @@protoc_insertion_point(includes)
 
 // Must be included last.
@@ -256,7 +256,7 @@ class UpdateUserPasswordRequest final : public ::google::protobuf::Message
     kIdFieldNumber = 1,
     kPasswordFieldNumber = 2,
   };
-  // string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.buf.validate.field) = {
   void clear_id() ;
   const ::std::string& id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -271,7 +271,7 @@ class UpdateUserPasswordRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_id();
 
   public:
-  // string password = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string password = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_password() ;
   const ::std::string& password() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -485,7 +485,7 @@ class ListUsersRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_page_token();
 
   public:
-  // string tag = 3 [(.validate.rules) = {
+  // string tag = 3 [(.buf.validate.field) = {
   void clear_tag() ;
   const ::std::string& tag() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -500,7 +500,7 @@ class ListUsersRequest final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_tag();
 
   public:
-  // int32 page_size = 1 [(.validate.rules) = {
+  // int32 page_size = 1 [(.buf.validate.field) = {
   void clear_page_size() ;
   ::int32_t page_size() const;
   void set_page_size(::int32_t value);
@@ -693,7 +693,7 @@ class GetUserRequest final : public ::google::protobuf::Message
   enum : int {
     kIdFieldNumber = 1,
   };
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_id() ;
   const ::std::string& id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -889,7 +889,7 @@ class DeleteUserRequest final : public ::google::protobuf::Message
   enum : int {
     kIdFieldNumber = 1,
   };
-  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   void clear_id() ;
   const ::std::string& id() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1095,7 +1095,7 @@ class User final : public ::google::protobuf::Message
     kRoleFieldNumber = 6,
     kStatusFieldNumber = 7,
   };
-  // repeated string tags = 8 [(.validate.rules) = {
+  // repeated string tags = 8 [(.buf.validate.field) = {
   int tags_size() const;
   private:
   int _internal_tags_size() const;
@@ -1147,7 +1147,7 @@ class User final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_org_id();
 
   public:
-  // string name = 3 [(.validate.rules) = {
+  // string name = 3 [(.buf.validate.field) = {
   void clear_name() ;
   const ::std::string& name() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1162,7 +1162,7 @@ class User final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_name();
 
   public:
-  // string email = 4 [(.validate.rules) = {
+  // string email = 4 [(.buf.validate.field) = {
   void clear_email() ;
   const ::std::string& email() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1177,7 +1177,7 @@ class User final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_email();
 
   public:
-  // string phone = 5 [(.validate.rules) = {
+  // string phone = 5 [(.buf.validate.field) = {
   void clear_phone() ;
   const ::std::string& phone() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1192,7 +1192,7 @@ class User final : public ::google::protobuf::Message
   ::std::string* PROTOBUF_NONNULL _internal_mutable_phone();
 
   public:
-  // string app_key = 9 [(.validate.rules) = {
+  // string app_key = 9 [(.buf.validate.field) = {
   void clear_app_key() ;
   const ::std::string& app_key() const;
   template <typename Arg_ = const ::std::string&, typename... Args_>
@@ -1237,7 +1237,7 @@ class User final : public ::google::protobuf::Message
   ::google::protobuf::Timestamp* PROTOBUF_NONNULL _internal_mutable_updated_at();
 
   public:
-  // .thingspect.api.Role role = 6 [(.validate.rules) = {
+  // .thingspect.api.Role role = 6 [(.buf.validate.field) = {
   void clear_role() ;
   ::thingspect::api::Role role() const;
   void set_role(::thingspect::api::Role value);
@@ -1247,7 +1247,7 @@ class User final : public ::google::protobuf::Message
   void _internal_set_role(::thingspect::api::Role value);
 
   public:
-  // .thingspect.api.Status status = 7 [(.validate.rules) = {
+  // .thingspect.api.Status status = 7 [(.buf.validate.field) = {
   void clear_status() ;
   ::thingspect::api::Status status() const;
   void set_status(::thingspect::api::Status value);
@@ -1449,7 +1449,7 @@ class UpdateUserRequest final : public ::google::protobuf::Message
     kUserFieldNumber = 1,
     kUpdateMaskFieldNumber = 2,
   };
-  // .thingspect.api.User user = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.User user = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   bool has_user() const;
   void clear_user() ;
   const ::thingspect::api::User& user() const;
@@ -1888,7 +1888,7 @@ class CreateUserRequest final : public ::google::protobuf::Message
   enum : int {
     kUserFieldNumber = 1,
   };
-  // .thingspect.api.User user = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // .thingspect.api.User user = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   bool has_user() const;
   void clear_user() ;
   const ::thingspect::api::User& user() const;
@@ -2084,7 +2084,7 @@ inline void User::set_allocated_org_id(::std::string* PROTOBUF_NULLABLE value) {
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.User.org_id)
 }
 
-// string name = 3 [(.validate.rules) = {
+// string name = 3 [(.buf.validate.field) = {
 inline void User::clear_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.name_.ClearToEmpty();
@@ -2149,7 +2149,7 @@ inline void User::set_allocated_name(::std::string* PROTOBUF_NULLABLE value) {
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.User.name)
 }
 
-// string email = 4 [(.validate.rules) = {
+// string email = 4 [(.buf.validate.field) = {
 inline void User::clear_email() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.email_.ClearToEmpty();
@@ -2214,7 +2214,7 @@ inline void User::set_allocated_email(::std::string* PROTOBUF_NULLABLE value) {
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.User.email)
 }
 
-// string phone = 5 [(.validate.rules) = {
+// string phone = 5 [(.buf.validate.field) = {
 inline void User::clear_phone() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.phone_.ClearToEmpty();
@@ -2279,7 +2279,7 @@ inline void User::set_allocated_phone(::std::string* PROTOBUF_NULLABLE value) {
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.User.phone)
 }
 
-// .thingspect.api.Role role = 6 [(.validate.rules) = {
+// .thingspect.api.Role role = 6 [(.buf.validate.field) = {
 inline void User::clear_role() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.role_ = 0;
@@ -2303,7 +2303,7 @@ inline void User::_internal_set_role(::thingspect::api::Role value) {
   _impl_.role_ = value;
 }
 
-// .thingspect.api.Status status = 7 [(.validate.rules) = {
+// .thingspect.api.Status status = 7 [(.buf.validate.field) = {
 inline void User::clear_status() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.status_ = 0;
@@ -2327,7 +2327,7 @@ inline void User::_internal_set_status(::thingspect::api::Status value) {
   _impl_.status_ = value;
 }
 
-// repeated string tags = 8 [(.validate.rules) = {
+// repeated string tags = 8 [(.buf.validate.field) = {
 inline int User::_internal_tags_size() const {
   return _internal_tags().size();
 }
@@ -2391,7 +2391,7 @@ User::_internal_mutable_tags() {
   return &_impl_.tags_;
 }
 
-// string app_key = 9 [(.validate.rules) = {
+// string app_key = 9 [(.buf.validate.field) = {
 inline void User::clear_app_key() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.app_key_.ClearToEmpty();
@@ -2646,7 +2646,7 @@ inline void User::set_allocated_updated_at(::google::protobuf::Timestamp* PROTOB
 
 // CreateUserRequest
 
-// .thingspect.api.User user = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// .thingspect.api.User user = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline bool CreateUserRequest::has_user() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.user_ != nullptr);
@@ -2748,7 +2748,7 @@ inline void CreateUserRequest::set_allocated_user(::thingspect::api::User* PROTO
 
 // GetUserRequest
 
-// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void GetUserRequest::clear_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.id_.ClearToEmpty();
@@ -2817,7 +2817,7 @@ inline void GetUserRequest::set_allocated_id(::std::string* PROTOBUF_NULLABLE va
 
 // UpdateUserRequest
 
-// .thingspect.api.User user = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// .thingspect.api.User user = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline bool UpdateUserRequest::has_user() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.user_ != nullptr);
@@ -3012,7 +3012,7 @@ inline void UpdateUserRequest::set_allocated_update_mask(::google::protobuf::Fie
 
 // UpdateUserPasswordRequest
 
-// string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.validate.rules) = {
+// string id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.buf.validate.field) = {
 inline void UpdateUserPasswordRequest::clear_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.id_.ClearToEmpty();
@@ -3077,7 +3077,7 @@ inline void UpdateUserPasswordRequest::set_allocated_id(::std::string* PROTOBUF_
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.UpdateUserPasswordRequest.id)
 }
 
-// string password = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string password = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void UpdateUserPasswordRequest::clear_password() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.password_.ClearToEmpty();
@@ -3146,7 +3146,7 @@ inline void UpdateUserPasswordRequest::set_allocated_password(::std::string* PRO
 
 // DeleteUserRequest
 
-// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+// string id = 1 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
 inline void DeleteUserRequest::clear_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.id_.ClearToEmpty();
@@ -3215,7 +3215,7 @@ inline void DeleteUserRequest::set_allocated_id(::std::string* PROTOBUF_NULLABLE
 
 // ListUsersRequest
 
-// int32 page_size = 1 [(.validate.rules) = {
+// int32 page_size = 1 [(.buf.validate.field) = {
 inline void ListUsersRequest::clear_page_size() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.page_size_ = 0;
@@ -3304,7 +3304,7 @@ inline void ListUsersRequest::set_allocated_page_token(::std::string* PROTOBUF_N
   // @@protoc_insertion_point(field_set_allocated:thingspect.api.ListUsersRequest.page_token)
 }
 
-// string tag = 3 [(.validate.rules) = {
+// string tag = 3 [(.buf.validate.field) = {
 inline void ListUsersRequest::clear_tag() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.tag_.ClearToEmpty();

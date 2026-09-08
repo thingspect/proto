@@ -111,29 +111,29 @@ static const ::_pb::Message* PROTOBUF_NONNULL const file_default_instances[] = {
 const char descriptor_table_protodef_common_2fthingspect_5fdatapoint_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
     "\n!common/thingspect_datapoint.proto\022\021thi"
-    "ngspect.common\032\037google/protobuf/timestam"
-    "p.proto\032\037google/api/field_behavior.proto"
-    "\032\027validate/validate.proto\"\224\002\n\tDataPoint\022"
-    "%\n\007uniq_id\030\001 \001(\tB\014\340A\002\372B\006r\004\020\005\030(R\006uniqID\022\030"
-    "\n\004attr\030\002 \001(\tB\n\340A\002\372B\004r\002\030(\022\021\n\007int_val\030\003 \001("
-    "\021H\000\022\022\n\010fl64_val\030\004 \001(\001H\000\022\021\n\007str_val\030\005 \001(\t"
-    "H\000\022\022\n\010bool_val\030\006 \001(\010H\000\022\023\n\tbytes_val\030\020 \001("
-    "\014H\000\022&\n\002ts\030\007 \001(\0132\032.google.protobuf.Timest"
-    "amp\022\022\n\005token\030\010 \001(\tB\003\340A\003\022\025\n\010trace_id\030\t \001("
-    "\tB\003\340A\003B\020\n\tval_oneof\022\003\370B\001B\'Z%github.com/t"
-    "hingspect/proto/go/commonb\006proto3"
+    "ngspect.common\032\033buf/validate/validate.pr"
+    "oto\032\037google/api/field_behavior.proto\032\037go"
+    "ogle/protobuf/timestamp.proto\"\226\002\n\tDataPo"
+    "int\022%\n\007uniq_id\030\001 \001(\tB\014\340A\002\272H\006r\004\020\005\030(R\006uniq"
+    "ID\022\030\n\004attr\030\002 \001(\tB\n\340A\002\272H\004r\002\030(\022\021\n\007int_val\030"
+    "\003 \001(\021H\000\022\022\n\010fl64_val\030\004 \001(\001H\000\022\021\n\007str_val\030\005"
+    " \001(\tH\000\022\022\n\010bool_val\030\006 \001(\010H\000\022\023\n\tbytes_val\030"
+    "\020 \001(\014H\000\022&\n\002ts\030\007 \001(\0132\032.google.protobuf.Ti"
+    "mestamp\022\022\n\005token\030\010 \001(\tB\003\340A\003\022\025\n\010trace_id\030"
+    "\t \001(\tB\003\340A\003B\022\n\tval_oneof\022\005\272H\002\010\001B\'Z%github"
+    ".com/thingspect/proto/go/commonb\006proto3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_common_2fthingspect_5fdatapoint_2eproto_deps[3] = {
+        &::descriptor_table_buf_2fvalidate_2fvalidate_2eproto,
         &::descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto,
         &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
-        &::descriptor_table_validate_2fvalidate_2eproto,
 };
 static ::absl::once_flag descriptor_table_common_2fthingspect_5fdatapoint_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_common_2fthingspect_5fdatapoint_2eproto = {
     false,
     false,
-    473,
+    479,
     descriptor_table_protodef_common_2fthingspect_5fdatapoint_2eproto,
     "common/thingspect_datapoint.proto",
     &descriptor_table_common_2fthingspect_5fdatapoint_2eproto_once,
@@ -355,10 +355,10 @@ DataPoint::_table_ = {
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {10, 0, 0, PROTOBUF_FIELD_OFFSET(DataPoint, _impl_.uniq_id_)}},
-    // string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {::_pbi::TcParser::FastUS1,
      {18, 1, 0, PROTOBUF_FIELD_OFFSET(DataPoint, _impl_.attr_)}},
     {::_pbi::TcParser::MiniParse, {}},
@@ -383,10 +383,10 @@ DataPoint::_table_ = {
   }}, {{
     65535, 65535
   }}, {{
-    // string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(DataPoint, _impl_.uniq_id_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     {PROTOBUF_FIELD_OFFSET(DataPoint, _impl_.attr_), _Internal::kHasBitsOffset + 1, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // sint32 int_val = 3;
@@ -473,7 +473,7 @@ PROTOBUF_NOINLINE void DataPoint::Clear() {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000001u) != 0) {
     if (!this_._internal_uniq_id().empty()) {
       const ::std::string& _s = this_._internal_uniq_id();
@@ -483,7 +483,7 @@ PROTOBUF_NOINLINE void DataPoint::Clear() {
     }
   }
 
-  // string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+  // string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
   if ((this_._impl_._has_bits_[0] & 0x00000002u) != 0) {
     if (!this_._internal_attr().empty()) {
       const ::std::string& _s = this_._internal_attr();
@@ -582,14 +582,14 @@ PROTOBUF_NOINLINE void DataPoint::Clear() {
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
   if ((cached_has_bits & 0x0000001fu) != 0) {
-    // string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string uniq_id = 1 [json_name = "uniqID", (.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000001u) != 0) {
       if (!this_._internal_uniq_id().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                         this_._internal_uniq_id());
       }
     }
-    // string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.validate.rules) = {
+    // string attr = 2 [(.google.api.field_behavior) = REQUIRED, (.buf.validate.field) = {
     if ((cached_has_bits & 0x00000002u) != 0) {
       if (!this_._internal_attr().empty()) {
         total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
