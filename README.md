@@ -22,10 +22,6 @@ The Python package can be copied locally from this repository or regenerated usi
 
 The C++ package can be copied locally from this repository or regenerated using the Protobuf definitions. See the [gRPC C++ quick start](https://grpc.io/docs/languages/cpp/quickstart/) for more information.
 
-### Dart
-
-The Dart package can be copied locally from this repository or regenerated using the Protobuf definitions. See the [gRPC Dart quick start](https://grpc.io/docs/languages/dart/quickstart/) for more information.
-
 ### Ruby
 
 The Ruby package can be copied locally from this repository or regenerated using the Protobuf definitions. See the [gRPC Ruby quick start](https://grpc.io/docs/languages/ruby/quickstart/) for more information.
