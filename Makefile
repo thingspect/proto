@@ -1,4 +1,4 @@
-.PHONY: generate version go python cpp dart ruby php tag clean
+.PHONY: generate version go python cpp ruby php tag clean
 
 VERSION = 1.1.22
 
@@ -27,11 +27,6 @@ cpp: version
 	docker compose up cpp --menu=false
 	docker compose down
 
-dart: version
-	docker compose --progress=plain build --no-cache --pull dart
-	docker compose up dart --menu=false
-	docker compose down
-
 ruby: version
 	docker compose --progress=plain build --no-cache --pull ruby
 	docker compose up ruby --menu=false
@@ -54,7 +49,6 @@ clean:
 	find . -name '*_pb2*.py*' -type f|xargs rm -v
 	find . -name '*.pb.h' -type f|xargs rm -v
 	find . -name '*.pb.cc' -type f|xargs rm -v
-	find . -name '*.pb*.dart' -type f|xargs rm -v
 	find . -name '*_pb.rb' -type f|xargs rm -v
 	find . -name '*.php' -type f|xargs rm -v
 	rm -fv openapi/atlas.*.json
