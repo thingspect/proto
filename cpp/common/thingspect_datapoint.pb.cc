@@ -113,15 +113,16 @@ const char descriptor_table_protodef_common_2fthingspect_5fdatapoint_2eproto[] A
     "\n!common/thingspect_datapoint.proto\022\021thi"
     "ngspect.common\032\033buf/validate/validate.pr"
     "oto\032\037google/api/field_behavior.proto\032\037go"
-    "ogle/protobuf/timestamp.proto\"\226\002\n\tDataPo"
-    "int\022%\n\007uniq_id\030\001 \001(\tB\014\340A\002\272H\006r\004\020\005\030(R\006uniq"
-    "ID\022\030\n\004attr\030\002 \001(\tB\n\340A\002\272H\004r\002\030(\022\021\n\007int_val\030"
-    "\003 \001(\021H\000\022\022\n\010fl64_val\030\004 \001(\001H\000\022\021\n\007str_val\030\005"
-    " \001(\tH\000\022\022\n\010bool_val\030\006 \001(\010H\000\022\023\n\tbytes_val\030"
-    "\020 \001(\014H\000\022&\n\002ts\030\007 \001(\0132\032.google.protobuf.Ti"
-    "mestamp\022\022\n\005token\030\010 \001(\tB\003\340A\003\022\025\n\010trace_id\030"
-    "\t \001(\tB\003\340A\003B\022\n\tval_oneof\022\005\272H\002\010\001B\'Z%github"
-    ".com/thingspect/proto/go/commonb\006proto3"
+    "ogle/protobuf/timestamp.proto\"\232\002\n\tDataPo"
+    "int\022&\n\007uniq_id\030\001 \001(\tB\r\342A\001\002\272H\006r\004\020\005\030(R\006uni"
+    "qID\022\031\n\004attr\030\002 \001(\tB\013\342A\001\002\272H\004r\002\030(\022\021\n\007int_va"
+    "l\030\003 \001(\021H\000\022\022\n\010fl64_val\030\004 \001(\001H\000\022\021\n\007str_val"
+    "\030\005 \001(\tH\000\022\022\n\010bool_val\030\006 \001(\010H\000\022\023\n\tbytes_va"
+    "l\030\020 \001(\014H\000\022&\n\002ts\030\007 \001(\0132\032.google.protobuf."
+    "Timestamp\022\023\n\005token\030\010 \001(\tB\004\342A\001\003\022\026\n\010trace_"
+    "id\030\t \001(\tB\004\342A\001\003B\022\n\tval_oneof\022\005\272H\002\010\001B\'Z%gi"
+    "thub.com/thingspect/proto/go/commonb\006pro"
+    "to3"
 };
 static const ::_pbi::DescriptorTable* PROTOBUF_NONNULL const
     descriptor_table_common_2fthingspect_5fdatapoint_2eproto_deps[3] = {
@@ -133,7 +134,7 @@ static ::absl::once_flag descriptor_table_common_2fthingspect_5fdatapoint_2eprot
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_common_2fthingspect_5fdatapoint_2eproto = {
     false,
     false,
-    479,
+    483,
     descriptor_table_protodef_common_2fthingspect_5fdatapoint_2eproto,
     "common/thingspect_datapoint.proto",
     &descriptor_table_common_2fthingspect_5fdatapoint_2eproto_once,
