@@ -12,17 +12,18 @@ deps:
 
 common:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pv/proto/protovalidate \
-	--go_out=. --go_opt=paths=source_relative \
+	--go_out=. --go_opt=paths=source_relative,default_api_level=API_HYBRID \
 	common/thingspect_datapoint.proto
 
 mqtt:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/pv/proto/protovalidate \
-	--go_out=. --go_opt=paths=source_relative \
+	--go_out=. --go_opt=paths=source_relative,default_api_level=API_HYBRID \
 	mqtt/thingspect_payload.proto
 
 api:
 	protoc -I=../protobuf -I=/tmp/googleapis -I=/tmp/grpc-gateway \
-	-I=/tmp/pv/proto/protovalidate --go_out=. --go_opt=paths=source_relative \
+	-I=/tmp/pv/proto/protovalidate --go_out=. \
+	--go_opt=paths=source_relative,default_api_level=API_HYBRID \
 	--go-grpc_out=. --go-grpc_opt=paths=source_relative \
 	--grpc-gateway_out=. --grpc-gateway_opt=paths=source_relative \
 	api/thingspect_alert.proto \
